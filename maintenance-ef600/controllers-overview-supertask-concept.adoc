@@ -1,0 +1,39 @@
+---
+permalink: maintenance-ef600/controllers-overview-supertask-concept.html 
+sidebar: sidebar 
+keywords: replace EF300 controller, replace EF600 controller, 
+summary: Requisiti e considerazioni per la sostituzione del controller EF300 o EF600 
+---
+= Requisiti per la sostituzione del controller EF300 o EF600
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di sostituire un controller EF300 o EF600, esaminare i requisiti e le considerazioni.
+
+Un controller è costituito da una scheda, firmware e software. Controlla i dischi e implementa le funzioni di Gestore di sistema di SANtricity.
+
+
+
+== Requisiti per la sostituzione del controller
+
+Prima di sostituire un controller, è necessario disporre di:
+
+* Un contenitore del controller sostitutivo con lo stesso numero di parte del contenitore del controller che si sta sostituendo.
+* Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
+* Etichette per identificare ciascun cavo collegato al contenitore del controller.
+* Un cacciavite Phillips n. 1.
+* Stazione di gestione con un browser che può accedere a Gestione di sistema SANtricity per il controller. Per aprire l'interfaccia di System Manager, puntare il browser sul nome di dominio o sull'indirizzo IP del controller.
+
+
+
+
+== Sostituzione all'accensione
+
+È possibile sostituire un contenitore di controller mentre lo storage array è acceso ed esegue operazioni di i/o host, se sono soddisfatte le seguenti condizioni:
+
+* Il secondo contenitore del controller nello shelf ha uno stato ottimale.
+* Il campo *OK per rimuovere* nell'area Dettagli del guru del ripristino in Gestione sistema di SANtricity visualizza *Sì*, a indicare che è possibile rimuovere questo componente in tutta sicurezza.
+

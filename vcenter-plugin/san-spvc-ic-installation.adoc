@@ -1,0 +1,96 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/san-spvc-ic-installation.html 
+keywords: install vCenter plugin, installing vCenter plugin, vCenter plugin, 
+summary: Installare o aggiornare il plug-in di storage SANtricity per vCenter. 
+---
+= Installare o aggiornare il plug-in di storage per vCenter
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Per installare Storage Plugin per vCenter e verificare la registrazione del plug-in, procedere come segue. È anche possibile aggiornare il plug-in seguendo queste istruzioni.
+
+
+
+== Verificare i prerequisiti per l'installazione
+
+Assicurarsi che i sistemi soddisfino i requisiti di link:san-spvc-ic-reqs.html["Verifica dei requisiti di installazione e aggiornamento"].
+
+
+NOTE: Il processo di aggiornamento non conserva i file *vcenter.properties*. Se si esegue l'aggiornamento, è necessario annullare la registrazione del plug-in prima dell'aggiornamento. Una volta completato l'aggiornamento, è possibile registrare nuovamente il plug-in nella vCSA.
+
+
+
+== Installare il software del plug-in
+
+Per installare il software del plug-in:
+
+. Copiare il file del programma di installazione nell'host che verrà utilizzato come server applicazioni, quindi accedere alla cartella in cui è stato scaricato il programma di installazione.
+. Fare doppio clic sul file di installazione:
++
+`santricity_storage_vcenterplugin-windows_x64-- nn.nn.nn.nnnn.exe`
+
++
+Nel nome file sopra indicato, `nn.nn.nn.nnnn` rappresenta il numero di versione.
+
+. All'avvio dell'installazione, seguire le istruzioni visualizzate sullo schermo per attivare diverse funzioni e immettere alcuni parametri di configurazione. Se necessario, è possibile modificare una di queste selezioni in un secondo momento nei file di configurazione.
++
+
+NOTE: Durante un aggiornamento, non vengono richiesti i parametri di configurazione.
+
++
+
+NOTE: Durante l'installazione, viene richiesto di eseguire la convalida del certificato. Mantenere la casella di controllo selezionata se si desidera applicare la convalida del certificato tra il plug-in e gli array di storage. Con questa applicazione, i certificati dell'array di storage vengono verificati per essere considerati attendibili rispetto al plug-in. Se i certificati non sono attendibili, non è consentito aggiungerli al plug-in. Se si desidera eseguire l'override della convalida del certificato, deselezionare la casella di controllo in modo che tutti gli array di storage possano essere aggiunti al plug-in utilizzando certificati autofirmati. Per ulteriori informazioni sui certificati, consultare la guida in linea disponibile nell'interfaccia del plug-in.
+
+. Quando viene visualizzato il messaggio Webserver Started (Server Web avviato), fare clic su *OK* per completare l'installazione, quindi fare clic su *Done* (fine).
+. Verificare che il server applicazioni sia stato installato correttamente eseguendo il comando *Services.msc*.
+. Verificare che il servizio del server applicazioni (VCP), *plug-in storage NetApp SANtricity per vCenter*, sia stato installato e che il servizio sia stato avviato.
++
+
+NOTE: Se necessario, è possibile modificare le impostazioni di convalida certificato e porta servizio Web dopo l'installazione. Dalla directory di installazione, aprire il file wsconfig.xml. Per rimuovere la convalida del certificato sugli array di storage, modificare `env` chiave, `trust.all.arrays`, a. `true`. Per modificare la porta dei servizi Web, modificare `sslport` valore sul valore della porta desiderato compreso tra 0 e 65535. Assicurarsi che il numero di porta utilizzato non sia vincolante per un altro processo. Al termine, salvare le modifiche e riavviare il server Web del plug-in. Se il valore della porta del webserver del plug-in viene modificato dopo la registrazione del plug-in in vCSA, è necessario annullare la registrazione e registrare nuovamente il plug-in in modo che vCSA stia comunicando al webserver del plug-in sulla porta modificata.
+
+
+
+
+
+== Registrare il plug-in con un'appliance vCenter Server
+
+Una volta installato il software del plug-in, registrare il plug-in con un vCSA.
+
+
+NOTE: Il plug-in può essere registrato solo su una vCSA alla volta. Per effettuare la registrazione a un vCSA diverso, è necessario annullare la registrazione del plug-in dal vCSA corrente e disinstallarlo dall'host dell'applicazione. È quindi possibile reinstallare il plug-in e registrarlo sull'altro vCSA.
+
+. Aprire un prompt dalla riga di comando e accedere alla seguente directory:
++
+`<install directory>\vcenter-register\bin`
+
+. Eseguire il file *vcenter-register.bat*:
+`vcenter-register.bat ^
+    -action registerPlugin ^
+    -vcenterHostname <vCenter FQDN> ^
+    -username <Administrator username> ^`
+. Verificare che lo script sia stato eseguito correttamente.
+
+
+I registri vengono salvati in `%install_dir%/working/logs/vc-registration.log`.
+
+
+
+== Verificare la registrazione del plug-in
+
+Dopo aver installato il plug-in e aver eseguito lo script di registrazione, verificare che il plug-in sia stato registrato correttamente con vCenter Server Appliance.
+
+. Aprire il client vSphere sull'appliance vCenter Server.
+. Nella barra dei menu, selezionare menu:Administrator[Client Plugin].
+. Assicurarsi che Storage Plugin per vCenter sia elencato come *Enabled*.
++
+Se il plug-in è elencato come Disabled (Disattivato) e viene visualizzato un messaggio di errore che indica che non è possibile comunicare con l'application server, verificare che il numero di porta definito per l'application server sia abilitato a passare attraverso eventuali firewall in uso. Il numero di porta TCP (Transmission Control Protocol) del server applicazioni predefinito è 8445.
+
+

@@ -1,0 +1,129 @@
+---
+permalink: config-linux/iscsi-configure-array-side-network-task.html 
+sidebar: sidebar 
+keywords: configure iSCSI networking, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Configurare il networking iSCSI sul lato array. 
+---
+= Configurare il networking lato array
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La GUI di Gestione di sistema di SANtricity consente di configurare il collegamento in rete iSCSI sul lato array.
+
+.Di cosa hai bisogno
+* L'indirizzo IP o il nome di dominio di uno dei controller degli array di storage.
+* Una password per la GUI di System Manager, RBAC (Role-Based Access Control) o LDAP e un servizio di directory configurato per l'accesso di sicurezza appropriato allo storage array. Per ulteriori informazioni sulla gestione degli accessi, consultare la guida in linea di Gestione di sistema SANtricity.
+
+
+.A proposito di questa attività
+Questa attività descrive come accedere alla configurazione della porta iSCSI dalla pagina hardware di System Manager. È inoltre possibile accedere alla configurazione dal menu:sistema[Impostazioni > Configura porte iSCSI].
+
+.Fasi
+. Dal browser, immettere il seguente URL: `+https://<DomainNameOrIPAddress>+`
++
+`IPAddress` è l'indirizzo di uno dei controller degli array di storage.
+
++
+La prima volta che si apre Gestore di sistema di SANtricity su un array non configurato, viene visualizzato il prompt Set Administrator Password (Imposta password amministratore). La gestione degli accessi basata sui ruoli configura quattro ruoli locali: amministrazione, supporto, sicurezza e monitoraggio. Gli ultimi tre ruoli hanno password casuali che non possono essere indovinate. Dopo aver impostato una password per il ruolo di amministratore, è possibile modificare tutte le password utilizzando le credenziali di amministratore. Per ulteriori informazioni sui quattro ruoli utente locali, consultare la guida in linea disponibile nell'interfaccia utente di Gestore di sistema di SANtricity.
+
+. Immettere la password di System Manager per il ruolo di amministratore nei campi Set Administrator Password (Imposta password amministratore) e Confirm Password (Conferma password), quindi fare clic su *Set Password* (Imposta password).
++
+L'installazione guidata viene avviata se non sono configurati pool, gruppi di volumi, carichi di lavoro o notifiche.
+
+. Chiudere l'installazione guidata.
++
+La procedura guidata verrà utilizzata in seguito per completare ulteriori attività di installazione.
+
+. Selezionare *hardware*.
+. Se la figura mostra i dischi, fare clic su *Mostra retro dello shelf*.
++
+Il grafico cambia per mostrare i controller invece dei dischi.
+
+. Fare clic sul controller con le porte iSCSI che si desidera configurare.
++
+Viene visualizzato il menu di scelta rapida del controller.
+
+. Selezionare *Configure iSCSI ports* (Configura porte iSCSI).
++
+Viene visualizzata la finestra di dialogo Configure iSCSI Ports (Configura porte iSCSI).
+
+. Nell'elenco a discesa, selezionare la porta che si desidera configurare, quindi fare clic su *Avanti*.
+. Selezionare le impostazioni della porta di configurazione, quindi fare clic su *Avanti*.
++
+Per visualizzare tutte le impostazioni della porta, fare clic sul collegamento *Mostra altre impostazioni della porta* a destra della finestra di dialogo.
+
++
+|===
+| Impostazione della porta | Descrizione 
+
+
+ a| 
+Velocità della porta ethernet configurata
+ a| 
+Selezionare la velocità desiderata. Le opzioni visualizzate nell'elenco a discesa dipendono dalla velocità massima supportata dalla rete (ad esempio, 10 Gbps).
+
+
+NOTE: Le schede di interfaccia host iSCSI da 25 GB opzionali disponibili sui controller non consentono la negoziazione automatica delle velocità. È necessario impostare la velocità di ciascuna porta su 10 GB o 25 GB. Tutte le porte devono essere impostate alla stessa velocità.
+
+
+
+ a| 
+Attiva IPv4 / attiva IPv6
+ a| 
+Selezionare una o entrambe le opzioni per abilitare il supporto per le reti IPv4 e IPv6.
+
+
+
+ a| 
+Porta TCP in ascolto (disponibile facendo clic su *Mostra altre impostazioni della porta*).
+ a| 
+Se necessario, inserire un nuovo numero di porta.
+
+La porta di ascolto è il numero di porta TCP utilizzato dal controller per rilevare gli accessi iSCSI dagli iniziatori iSCSI host. La porta di ascolto predefinita è 3260. Immettere 3260 o un valore compreso tra 49152 e 65535.
+
+
+
+ a| 
+Dimensione MTU (disponibile facendo clic su *Mostra altre impostazioni della porta*).
+ a| 
+Se necessario, inserire una nuova dimensione in byte per l'unità di trasmissione massima (MTU).
+
+La dimensione massima predefinita dell'unità di trasmissione (MTU) è di 1500 byte per frame. Immettere un valore compreso tra 1500 e 9000.
+
+
+
+ a| 
+Abilitare le risposte PING ICMP
+ a| 
+Selezionare questa opzione per attivare il protocollo ICMP (Internet Control message Protocol). I sistemi operativi dei computer collegati in rete utilizzano questo protocollo per inviare messaggi. Questi messaggi ICMP determinano se un host è raggiungibile e quanto tempo occorre per ottenere i pacchetti da e verso tale host.
+
+|===
++
+Se si seleziona *Enable IPv4* (attiva IPv4), dopo aver fatto clic su *Next* (Avanti) viene visualizzata una finestra di dialogo per la selezione delle impostazioni IPv4. Se si seleziona *Enable IPv6* (attiva IPv6*), dopo aver fatto clic su *Next* (Avanti) viene visualizzata una finestra di dialogo per la selezione delle impostazioni IPv6. Se sono state selezionate entrambe le opzioni, viene visualizzata prima la finestra di dialogo per le impostazioni IPv4, quindi dopo aver fatto clic su *Avanti*, viene visualizzata la finestra di dialogo per le impostazioni IPv6.
+
+. Configurare le impostazioni IPv4 e/o IPv6, automaticamente o manualmente. Per visualizzare tutte le impostazioni delle porte, fare clic sul collegamento *Mostra altre impostazioni* a destra della finestra di dialogo.
++
+|===
+| Impostazione della porta | Descrizione 
+
+
+ a| 
+Ottenere automaticamente la configurazione
+ a| 
+Selezionare questa opzione per ottenere la configurazione automaticamente.
+
+
+
+ a| 
+Specificare manualmente la configurazione statica
+ a| 
+Selezionare questa opzione, quindi inserire un indirizzo statico nei campi. Per IPv4, includere la subnet mask di rete e il gateway. Per IPv6, includere l'indirizzo IP instradabile e l'indirizzo IP del router.
+
+|===
+. Fare clic su *fine*.
+. Chiudere System Manager.
+

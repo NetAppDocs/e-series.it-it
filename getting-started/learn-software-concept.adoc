@@ -1,0 +1,173 @@
+---
+permalink: getting-started/learn-software-concept.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, SANtricity, E-Series software, E-Series user interface 
+summary: I sistemi e-Series includono il software SANtricity per il provisioning dello storage e altre attività. 
+---
+= Panoramica del software SANtricity
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+I sistemi e-Series includono il software SANtricity per il provisioning dello storage e altre attività.
+
+Il software SANtricity è costituito da queste interfacce di gestione:
+
+* System Manager -- interfaccia basata su web utilizzata per gestire un controller in un array di storage.
+* Unified Manager: Interfaccia basata su web utilizzata per visualizzare e gestire tutti gli array di storage della rete.
+* Proxy dei servizi Web - API REST utilizzata per visualizzare e gestire tutti gli array di storage nella rete.
+* Command line Interface (CLI) - un'applicazione software per la configurazione e il monitoraggio degli array di storage.
+
+
+
+NOTE: Gli storage array EF600 e EF300 non supportano funzionalità di mirroring, thin volumi o SSD cache.
+
+
+
+== Gestore di sistema di SANtricity
+
+System Manager è un software di gestione basato su web integrato in ciascun controller. Per accedere all'interfaccia utente, puntare un browser verso l'indirizzo IP del controller. L'installazione guidata consente di iniziare a configurare il sistema.
+
+System Manager offre una vasta gamma di funzionalità di gestione, tra cui:
+
+|===
+
+
+ a| 
+image:../media/sam1130_icon_performance.gif[""] *Prestazioni*
+ a| 
+Visualizza fino a 30 giorni di dati sulle performance, tra cui latenza di i/o, IOPS, utilizzo della CPU e throughput.
+
+
+
+ a| 
+image:../media/sam1130_icon_volumes.gif[""] *Storage*
+ a| 
+Eseguire il provisioning dello storage utilizzando pool o gruppi di volumi e creare carichi di lavoro delle applicazioni.
+
+
+
+ a| 
+image:../media/sam1130_icon_async_mirroring.gif[""] *Protezione dei dati*
+ a| 
+Eseguire backup e disaster recovery utilizzando snapshot, copia del volume e mirroring remoto.
+
+
+
+ a| 
+image:../media/sam1130_icon_controllers.gif[""] *Hardware*
+ a| 
+Controllare lo stato dei componenti ed eseguire alcune funzioni correlate a tali componenti, ad esempio l'assegnazione di dischi hot spare.
+
+
+
+ a| 
+image:../media/sam1130_icon_alerts.gif[""] *Avvisi*
+ a| 
+Avvisare gli amministratori degli eventi importanti che si verificano sullo storage array. Gli avvisi possono essere inviati tramite e-mail, trap SNMP e syslog.
+
+
+
+ a| 
+image:../media/sam1140_icon_active_directory.gif[""] *Gestione degli accessi*
+ a| 
+Configurare l'autenticazione dell'utente che richiede agli utenti di accedere al sistema con le credenziali assegnate.
+
+
+
+ a| 
+image:../media/sam1130_icon_settings.gif[""] *Impostazioni di sistema*
+ a| 
+Configurare altre funzionalità delle performance di sistema, come la cache SSD e il bilanciamento del carico automatico.
+
+
+
+ a| 
+image:../media/sam1130_icon_support.gif[""] *Supporto*
+ a| 
+Visualizza i dati diagnostici, gestisci gli aggiornamenti e configura AutoSupport, che monitora lo stato di salute di uno storage array e invia automaticamente i dispatches al supporto tecnico.
+
+|===
+
+
+== Gestore unificato SANtricity
+
+Unified Manager è un software basato sul web utilizzato per gestire l'intero dominio. Da una vista centrale, è possibile visualizzare lo stato di tutti gli array e-Series ed EF-Series più recenti, come E2800, EF280, EF300, E5700, EF570, E EF600. È inoltre possibile eseguire operazioni batch su array di storage selezionati.
+
+Unified Manager viene installato su un server di gestione insieme al proxy dei servizi Web. Per accedere a Unified Manager, aprire un browser e immettere l'URL che punta al server in cui è installato il proxy dei servizi Web.
+
+Unified Manager offre una vasta gamma di funzionalità di gestione, tra cui:
+
+|===
+
+
+ a| 
+image:../media/artboard_9.png[""] *Rilevare gli array di storage*
+ a| 
+Trova e Aggiungi gli array di storage che desideri gestire nella rete aziendale. È quindi possibile visualizzare lo stato di tutti gli array di storage da una singola pagina.
+
+
+
+ a| 
+image:../media/artboard_11.png[""] *Lancio*
+ a| 
+Aprire un'istanza di System Manager per eseguire singole operazioni di gestione su un determinato array di storage.
+
+
+
+ a| 
+image:../media/sam1130_icon_system.gif[""] *Impostazioni di importazione*
+ a| 
+Eseguire un'importazione in batch da uno storage array a più array, incluse le impostazioni per gli avvisi, AutoSupport e i servizi di directory.
+
+
+
+ a| 
+image:../media/sam1130_icon_async_mirroring.gif[""] *Mirroring*
+ a| 
+Configurare coppie di mirroring asincrone o sincrono tra due array di storage.
+
+
+
+ a| 
+image:../media/artboard_10.png[""] *Gestisci gruppi*
+ a| 
+Organizza gli array di storage in gruppi per una gestione più semplice.
+
+
+
+ a| 
+image:../media/sam1130_icon_upgrade_center.gif[""] *Upgrade Center*
+ a| 
+Aggiornare il software del sistema operativo SANtricity su più array di storage.
+
+
+
+ a| 
+image:../media/sam1140_icon_certs.gif[""] *Certificati*
+ a| 
+Creare richieste di firma del certificato (CSR), importare certificati e gestire i certificati esistenti per più array di storage.
+
+
+
+ a| 
+image:../media/sam1140_icon_active_directory.gif[""] *Gestione degli accessi*
+ a| 
+Configurare l'autenticazione dell'utente che richiede agli utenti di accedere a Unified Manager con le credenziali assegnate.
+
+|===
+
+
+== Proxy dei servizi web SANtricity
+
+Web Services Proxy è un server API RESTful in grado di gestire centinaia di array e-Series nuovi e legacy. Il proxy viene installato separatamente su un server Windows o Linux.
+
+I servizi Web includono la documentazione API che consente di interagire direttamente con L'API REST. Per accedere alla documentazione API dei servizi Web, aprire un browser e immettere l'URL che punta al server in cui è installato il proxy dei servizi Web.
+
+
+
+== Interfaccia a riga di comando (CLI)
+
+L'interfaccia a riga di comando (CLI) è un'applicazione software che consente di configurare e monitorare gli array di storage. Utilizzando la CLI, è possibile eseguire i comandi da un prompt del sistema operativo, ad esempio il prompt di DOS C:, un percorso del sistema operativo Linux o un percorso del sistema operativo Solaris.

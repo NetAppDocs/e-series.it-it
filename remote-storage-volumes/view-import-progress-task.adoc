@@ -1,0 +1,37 @@
+---
+permalink: remote-storage-volumes/view-import-progress-task.html 
+sidebar: sidebar 
+keywords: Remote Storage Volumes, RTV, remote volumes, remote storage E-Series 
+summary: 'È possibile visualizzare lo stato di ogni importazione di storage remoto dalla sezione Result list (elenco risultati) della schermata Remote Storage (archiviazione remota) di Gestione sistema SANtricity.' 
+---
+= Gestire l'avanzamento dell'importazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Una volta avviato il processo di importazione, è possibile visualizzare e intraprendere azioni in merito.
+
+Per ogni operazione di importazione, la pagina Operations in Progress (operazioni in corso) visualizza una percentuale di completamento e il tempo rimanente stimato. Le azioni includono la modifica della priorità di importazione, l'interruzione e la ripresa delle operazioni e la disconnessione dall'operazione.
+
+
+NOTE: È inoltre possibile visualizzare le operazioni in corso dalla home page (*Home > Mostra operazioni in corso*).
+
+.Fasi
+. In Gestore di sistema di SANtricity, accedere alla pagina Storage remoto e selezionare *Visualizza operazioni*.
++
+Viene visualizzata la finestra di dialogo Operations in Progress (operazioni in corso).
+
+. Se lo si desidera, utilizzare i collegamenti nella colonna Actions (azioni) per interrompere e riprendere, modificare la priorità o disconnettersi da un'operazione.
++
+** *Cambia priorità* – selezionare *Cambia priorità* per modificare la priorità di elaborazione di un'operazione in corso o in sospeso. Applicare una priorità all'operazione, quindi fare clic su *OK*.
+** *Stop* – selezionare *Stop* per sospendere la copia dei dati dal dispositivo di storage remoto. La relazione tra la coppia di importazione è ancora intatta ed è possibile selezionare *Riprendi* quando si è pronti per continuare l'operazione di importazione.
+** *Riprendi* – selezionare *Riprendi* per avviare un processo interrotto o non riuscito da dove è stato interrotto. Quindi, applicare una priorità all'operazione di ripresa, quindi fare clic su *OK*.
++
+L'operazione di ripresa *non* riavvia l'importazione dall'inizio. Se si desidera riavviare il processo dall'inizio, selezionare *Disconnect* (Disconnetti), quindi ricreare l'importazione mediante la procedura guidata di importazione dello storage remoto.
+
+** *Disconnect* – selezionare *Disconnect* per interrompere la relazione tra i volumi di origine e di destinazione per un'operazione di importazione interrotta, completata o non riuscita.
+
+
+

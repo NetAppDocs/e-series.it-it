@@ -1,0 +1,265 @@
+---
+permalink: maintenance-ef600/dimms-replace-supertask-task.html 
+sidebar: sidebar 
+keywords: replace EF300 DIMM, replace EF600 DIMM 
+summary: Sostituire un DIMM in un array EF300 o EF600. 
+---
+= Sostituire i DIMM in EF300 o EF600
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile sostituire un DIMM in un array EF300 o EF600.
+
+.A proposito di questa attività
+Per sostituire un DIMM, verificare le dimensioni della cache del controller, posizionare il controller offline, rimuovere il controller, rimuovere i DIMM e installare i nuovi DIMM nel controller. Quindi, è possibile riportare il controller online e verificare che lo storage array funzioni correttamente.
+
+.Prima di iniziare
+* Revisione link:dimms-overview-supertask-concept.html["Requisiti per la sostituzione di un modulo DIMM EF300 o EF600"].
+* Assicurarsi che non siano in uso volumi o che su tutti gli host che utilizzano questi volumi sia installato un driver multipath.
+
+
+.Di cosa hai bisogno
+* Un DIMM sostitutivo.
+* Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
+* Un'area di lavoro piana e priva di elettricità statica.
+* Etichette per identificare ciascun cavo collegato al contenitore del controller.
+* Stazione di gestione con un browser che può accedere a Gestione di sistema SANtricity per il controller. Per aprire l'interfaccia di System Manager, puntare il browser sul nome di dominio o sull'indirizzo IP del controller.
+
+
+
+
+== Fase 1: Determinare se è necessario sostituire un DIMM
+
+Verificare le dimensioni della cache del controller prima di sostituire i DIMM.
+
+.Fasi
+. Accedere al profilo Storage Array per il controller. Da Gestore di sistema di SANtricity, andare al menu:supporto[Centro di supporto]. Dalla pagina Support Resources (risorse di supporto), selezionare *Storage Array Profile* (Profilo array di storage).
+. Scorrere verso il basso o utilizzare il campo Search (Cerca) per individuare le informazioni *Data cache Module* (modulo cache dati).
+. Se è presente una delle seguenti opzioni, prendere nota della posizione del DIMM e continuare con le altre procedure descritte in questa sezione per sostituire i DIMM sul controller:
++
+** Un modulo DIMM guasto o un modulo DIMM che segnala *Data cache Module* come non ottimale.
+** Un DIMM con capacità *Data cache Module* non corrispondente.
+
+
+
+
+
+
+== Fase 2: Posizionare il controller offline
+
+Posizionare il controller offline in modo da poter rimuovere e sostituire i DIMM in modo sicuro.
+
+.Fasi
+. Da Gestore di sistema di SANtricity, esaminare i dettagli nel guru del ripristino per confermare che si è verificato un problema con una memoria non corrispondente e per assicurarsi che non siano prima necessari altri elementi.
+. Nell'area Details (Dettagli) del Recovery Guru, determinare quale DIMM sostituire.
+. Eseguire il backup del database di configurazione dello storage array utilizzando Gestione di sistema di SANtricity.
++
+Se si verifica un problema durante la rimozione di un controller, è possibile utilizzare il file salvato per ripristinare la configurazione. Il sistema salva lo stato corrente del database di configurazione RAID, che include tutti i dati per i gruppi di volumi e i pool di dischi sul controller.
+
++
+** Da System Manager:
++
+... Selezionare menu:Support[Support Center > Diagnostics] (supporto tecnico > Diagnostica).
+... Selezionare *Collect Configuration Data* (raccolta dati di configurazione).
+... Fare clic su *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+
+
+. Se il controller non è già offline, portalo offline usando Gestione di sistema di SANtricity.
++
+.. Selezionare *hardware*.
+.. Se la figura mostra i dischi, selezionare *Mostra retro dello shelf* per visualizzare i controller.
+.. Selezionare il controller che si desidera mettere offline.
+.. Dal menu di scelta rapida, selezionare *posiziona offline* e confermare che si desidera eseguire l'operazione.
++
+
+NOTE: Se si accede a Gestore di sistema di SANtricity utilizzando il controller che si sta tentando di mettere offline, viene visualizzato il messaggio Gestione di sistema di SANtricity non disponibile. Selezionare *connessione a una connessione di rete alternativa* per accedere automaticamente a Gestione di sistema SANtricity utilizzando l'altro controller.
+
+
+
+. Attendere che Gestore di sistema di SANtricity aggiorni lo stato del controller su offline.
++
+
+NOTE: Non iniziare altre operazioni fino a quando lo stato non è stato aggiornato.
+
+. Selezionare *ricontrollare* dal Recovery Guru e confermare che il campo OK per rimuovere nell'area Dettagli visualizza Sì, a indicare che è possibile rimuovere questo componente in tutta sicurezza.
+
+
+
+
+== Fase 3: Rimuovere il contenitore del controller
+
+Rimuovere il contenitore del controller guasto in modo da poter sostituire i DIMM con altri nuovi.
+
+.Fasi
+. Indossare un braccialetto ESD o adottare altre precauzioni antistatiche.
+. Etichettare ciascun cavo collegato al contenitore del controller.
+. Scollegare tutti i cavi dal contenitore del controller.
++
+
+CAUTION: Per evitare prestazioni degradate, non attorcigliare, piegare, pizzicare o salire sui cavi.
+
+. Verificare che il LED cache Active (cache attiva) sul retro del controller sia spento.
+. Premere le maniglie su entrambi i lati del controller e tirare indietro fino a quando non si sgancia dallo shelf.
++
+image::../media/remove_controller_5.png[rimuovere il controller 5]
+
+. Utilizzando due mani e le maniglie, estrarre il contenitore del controller dallo scaffale. Quando la parte anteriore del controller è libera dal contenitore, estrarlo completamente con due mani.
++
+
+CAUTION: Utilizzare sempre due mani per sostenere il peso di un contenitore del controller.
+
++
+image::../media/remove_controller_6.png[rimuovere il controller 6]
+
+. Posizionare il contenitore del controller su una superficie piana e priva di elettricità statica.
+
+
+
+
+== Fase 4: Rimuovere i DIMM
+
+Se la memoria non corrisponde, sostituire i DIMM nel controller.
+
+.Fasi
+. Rimuovere il coperchio del contenitore del controller svitando la singola vite a testa zigrinata e sollevando il coperchio.
+. Verificare che il LED verde all'interno del controller sia spento.
++
+Se questo LED verde è acceso, il controller sta ancora utilizzando l'alimentazione a batteria. Prima di rimuovere qualsiasi componente, è necessario attendere che il LED si spenga.
+
+. Individuare i DIMM sul controller.
+. Prendere nota dell'orientamento del DIMM nello zoccolo in modo da poter inserire il DIMM sostitutivo nell'orientamento corretto.
++
+
+NOTE: Una tacca nella parte inferiore del DIMM consente di allineare il DIMM durante l'installazione.
+
+. Spingere lentamente verso l'esterno le due linguette di espulsione dei moduli DIMM su entrambi i lati del modulo DIMM per estrarlo dal relativo slot, quindi farlo scorrere verso l'esterno.
++
+image::../media/dimm_2.png[dimm 2]
+
++
+image::../media/dimim_3.png[dimim 3]
+
++
+
+CAUTION: Tenere il modulo DIMM per i bordi in modo da evitare di esercitare pressione sui componenti della scheda a circuiti stampati del modulo DIMM.
+
++
+Il numero e la posizione dei DIMM di sistema dipendono dal modello del sistema.
+
+
+
+
+
+== Fase 5: Installare nuovi DIMM
+
+Installare un nuovo DIMM per sostituire quello vecchio.
+
+.Fasi
+. Tenere il modulo DIMM per gli angoli e allinearlo allo slot.
++
+La tacca tra i pin del DIMM deve allinearsi con la linguetta dello zoccolo.
+
+. Inserire il DIMM nello slot.
++
+Il DIMM si inserisce saldamente nello slot, ma dovrebbe essere inserito facilmente. In caso contrario, riallineare il DIMM con lo slot e reinserirlo.
+
++
+
+NOTE: Esaminare visivamente il DIMM per verificare che sia allineato in modo uniforme e inserito completamente nello slot.
+
+. Spingere con cautela, ma con decisione, sul bordo superiore del DIMM fino a quando i fermi non scattano in posizione sulle tacche alle estremità del DIMM.
++
+
+NOTE: I DIMM si inseriscono saldamente. Potrebbe essere necessario premere delicatamente su un lato alla volta e fissare ciascuna linguetta singolarmente.
+
++
+image::../media/dimm_5.png[dimm 5]
+
+
+
+
+
+== Fase 6: Reinstallare il contenitore del controller
+
+Dopo aver installato i nuovi DIMM, reinstallare il contenitore del controller nello shelf del controller.
+
+.Fasi
+. Abbassare il coperchio sul contenitore del controller e fissare la vite a testa zigrinata.
+. Mentre si stringono le maniglie del controller, far scorrere delicatamente il contenitore del controller fino in fondo nello shelf del controller.
++
+
+NOTE: Il controller scatta in maniera udibile quando viene installato correttamente nello shelf.
+
++
+image::../media/remove_controller_7.png[rimuovere il controller 7]
+
+. Ricollegare tutti i cavi.
+
+
+
+
+== Fase 7: Completare la sostituzione dei moduli DIMM
+
+Posizionare il controller online, raccogliere i dati di supporto e riprendere le operazioni.
+
+.Fasi
+. Posizionare il controller online.
++
+.. In System Manager, accedere alla pagina hardware.
+.. Selezionare *Mostra retro del controller*.
+.. Selezionare il controller con i DIMM sostituiti.
+.. Selezionare *Place online* dall'elenco a discesa.
+
+
+. All'avvio del controller, controllare i LED del controller.
++
+Quando la comunicazione con l'altro controller viene ristabilita:
+
++
+** Il LED di attenzione di colore ambra rimane acceso.
+** I LED del collegamento host potrebbero essere accesi, lampeggianti o spenti, a seconda dell'interfaccia host.
+
+
+. Quando il controller torna in linea, verificare che lo stato sia ottimale e controllare i LED di attenzione dello shelf di controller.
++
+Se lo stato non è ottimale o se uno dei LED attenzione è acceso, verificare che tutti i cavi siano inseriti correttamente e che il contenitore del controller sia installato correttamente. Se necessario, rimuovere e reinstallare il contenitore del controller.
+
++
+
+NOTE: Se non si riesce a risolvere il problema, contattare il supporto tecnico.
+
+. Fare clic su menu:hardware[supporto > Centro aggiornamenti] per verificare che sia installata la versione più recente di SANtricity OS.
++
+Se necessario, installare la versione più recente.
+
+. Verificare che tutti i volumi siano stati restituiti al proprietario preferito.
++
+.. Selezionare menu:Storage[Volumes] (Storage[volumi]). Dalla pagina *tutti i volumi*, verificare che i volumi siano distribuiti ai proprietari preferiti. Selezionare menu:More[Change ownership] (Altro[Cambia proprietà]) per visualizzare i proprietari dei volumi.
+.. Se tutti i volumi sono di proprietà del proprietario preferito, passare alla fase 6.
+.. Se nessuno dei volumi viene restituito, è necessario restituire manualmente i volumi. Vai al menu:More[redistribuisci volumi].
+.. Se non è presente un Recovery Guru o se si seguono le fasi del Recovery Guru, i volumi non vengono ancora restituiti ai proprietari preferiti, contattare il supporto.
+
+
+. Raccogliere i dati di supporto per lo storage array utilizzando Gestione di sistema di SANtricity.
++
+.. Selezionare menu:Support[Support Center > Diagnostics] (supporto tecnico > Diagnostica).
+.. Selezionare *Collect Support Data*.
+.. Fare clic su *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *support-data.7z*.
+
+
+
+
+
+.Quali sono le prossime novità?
+La sostituzione del modulo DIMM è completata. È possibile riprendere le normali operazioni.

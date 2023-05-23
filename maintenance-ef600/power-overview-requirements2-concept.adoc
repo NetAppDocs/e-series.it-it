@@ -1,0 +1,23 @@
+---
+permalink: maintenance-ef600/power-overview-requirements2-concept.html 
+sidebar: sidebar 
+keywords: replace EF300 power supply, replace EF600 power supply, 
+summary: Esaminare i requisiti e le considerazioni prima di sostituire un alimentatore EF300 o EF600. 
+---
+= Requisiti per la sostituzione dell'alimentatore EF300 o EF600
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di sostituire un alimentatore in un array EF300 o EF600, esaminare i seguenti requisiti.
+
+* È necessario disporre di un alimentatore sostitutivo supportato per il modello di shelf di controller o di dischi.
+
+
+
+NOTE: Non mischiare alimentatori di diversi tipi di tensione. Sostituire sempre come per come.
+
+* È necessario disporre di un braccialetto antistatico o adottare altre precauzioni antistatiche.
+

@@ -1,0 +1,36 @@
+---
+permalink: install-hw-cabinet/move-cabinet-task.html 
+sidebar: sidebar 
+keywords: 3040 40U cabinet, cabinet installation, drive tray installation, controller installation, shelf installation, E2800, E5700, EF300, EF600 
+summary: Spostare il cabinet nella posizione permanente. 
+---
+= Spostare il cabinet nella posizione permanente
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'armadio 3040 40U è dotato di rotelle per impieghi pesanti che consentono di spostare l'armadio nella sua posizione permanente.
+
+.Prima di iniziare
+* Leggere le istruzioni per rimuovere il cabinet dal pallet senza utilizzare un carrello elevatore a forche.
++
+Le casse di spedizione forniscono rampe e istruzioni integrate. Fare riferimento alle istruzioni di disimballaggio riportate sul lato anteriore della cassa di spedizione.
+
+* Valutare tutte le rampe tra il dock di caricamento e la destinazione finale del cabinet.
++
+È necessario valutare tutte le rampe per assicurarsi che il baricentro del cabinet (quando il cabinet si trova su una rampa e si trova ad angolo) non si estenda oltre l'ingombro del cabinet.
+
+
+
+.A proposito di questa attività
+Molti cabinet sono popolati con i vassoi delle unità. Questa situazione comporta la maggior parte del peso nella parte anteriore dell'armadio, rendendo il baricentro più vicino alla parte anteriore.
+
+.Fasi
+. Rimuovere i dispositivi più in alto nel cabinet per assicurarsi che il cabinet venga trasportato in modo sicuro nella posizione finale. Ciò è particolarmente importante se una rampa presenta un'inclinazione o un calo superiore a 10 gradi.
+. Spostare il cabinet nella sua posizione permanente utilizzando il metodo corretto mostrato nella figura seguente. Assicurarsi di premere la parte anteriore del cabinet e non la parte posteriore.
++
+image::../media/83004_01.gif[83004 01]
+
+

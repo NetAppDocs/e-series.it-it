@@ -1,0 +1,163 @@
+---
+permalink: upgrade-controllers/prepare-upgrade-controllers-task.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, upgrade controller requirements, upgrade controller key management, prepare upgrade controller, upgrade controller preparation, preparing controller upgrade 
+summary: 'Preparare l"aggiornamento dei controller salvando la chiave di sicurezza del disco, raccogliendo i dati di supporto e portando il controller offline.' 
+---
+= Preparazione per l'aggiornamento dei controller
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Preparare l'aggiornamento dei controller salvando la chiave Drive Security (se utilizzata), registrando il numero di serie, raccogliendo i dati di supporto, disattivando alcune funzioni (se utilizzate) e portando il controller offline.
+
+
+NOTE: La raccolta dei dati di supporto può influire temporaneamente sulle performance dello storage array.
+
+.Fasi
+. Assicurarsi che lo storage array esistente sia aggiornato alla versione più recente del sistema operativo (firmware del controller) disponibile per i controller correnti. Da Gestore di sistema di SANtricity, andare al menu:supporto[Centro di aggiornamento] per visualizzare l'inventario di software e firmware.
++
+
+NOTE: Se si esegue l'aggiornamento a controller che supportano SANtricity OS versione 8.50, è necessario installare le versioni più recenti di SANtricity OS e L'ultima VERSIONE DI NVSRAM dopo aver installato e acceso i nuovi controller. Se non si esegue questo aggiornamento, potrebbe non essere possibile configurare lo storage array per il bilanciamento automatico del carico (ALB).
+
+. Se si dispone di dischi abilitati alla protezione installati e si prevede di eseguire una sostituzione completa del controller, fare riferimento alla tabella seguente per completare i passaggi appropriati per il tipo di sicurezza (interno o esterno) e lo stato del disco. Se si dispone di unità abilitate per la protezione * installate, saltare questo passaggio e passare al punto 3 sotto la tabella.
++
+
+NOTE: Alcuni passaggi della tabella richiedono i comandi dell'interfaccia a riga di comando (CLI). Per informazioni sull'utilizzo di questi comandi, vedere https://docs.netapp.com/us-en/e-series-cli/index.html["Riferimento all'interfaccia della riga di comando"].
+
++
+|===
+| Tipo di sicurezza e contesto | Fasi 
+
+
+ a| 
+Gestione interna delle chiavi, uno o più dischi bloccati
+ a| 
+Esportare il file della chiave di sicurezza interna in una posizione nota sul client di gestione (il sistema con un browser utilizzato per accedere a System Manager). Utilizzare `export storageArray securityKey` Comando CLI. Specificare la password associata alla chiave di sicurezza e la posizione in cui si desidera salvarla.
+
+
+
+ a| 
+Gestione esterna delle chiavi, tutti i dischi bloccati, è possibile passare temporaneamente alla gestione interna delle chiavi per la sostituzione del controller (scelta consigliata).
+ a| 
+Eseguire le seguenti operazioni nell'ordine indicato:
+
+.. Registrare l'indirizzo del server KMS esterno e il numero di porta. Da System Manager, andare a menu:Impostazioni[sistema > Gestione chiavi di sicurezza > Visualizza/Modifica impostazioni server di gestione chiavi].
+.. Assicurarsi che i certificati del client e del server siano disponibili sull'host locale in modo che l'array di storage e il server di gestione delle chiavi possano autenticarsi una volta terminata la sostituzione del controller. Utilizzare `save storageArray keyManagementCertificate` Comando CLI per salvare i certificati. Eseguire il comando due volte, una volta con il `certificateType` parametro impostato su `client`e l'altro con il parametro impostato su `server`.
+.. Transizione alla gestione interna delle chiavi mediante l'esecuzione di `disable storageArray externalKeyManagement` Comando CLI.
+.. Esportare il file della chiave di sicurezza interna in una posizione nota sul client di gestione (il sistema con un browser utilizzato per accedere a System Manager). Utilizzare `export storageArray securityKey` Comando CLI. Specificare la password associata alla chiave di sicurezza e la posizione in cui si desidera salvarla.
+
+
+
+
+ a| 
+Gestione esterna delle chiavi, tutti i dischi bloccati, *non* è possibile passare temporaneamente alla gestione interna delle chiavi per la sostituzione del controller.
+ a| 
+Eseguire le seguenti operazioni nell'ordine indicato:
+
+.. Registrare l'indirizzo del server KMS esterno e il numero di porta. Da System Manager, andare a menu:Impostazioni[sistema > Gestione chiavi di sicurezza > Visualizza/Modifica impostazioni server di gestione chiavi].
+.. Assicurarsi che i certificati del client e del server siano disponibili sull'host locale in modo che l'array di storage e il server di gestione delle chiavi possano autenticarsi una volta terminata la sostituzione del controller. Utilizzare `save storageArray keyManagementCertificate` Comando CLI per salvare i certificati. Eseguire il comando due volte, una volta con il `certificateType` parametro impostato su `client`e l'altro con il parametro impostato su `server`.
+.. Esportare il file della chiave di sicurezza interna in una posizione nota sul client di gestione (il sistema con un browser utilizzato per accedere a System Manager). Utilizzare `export storageArray securityKey` Comando CLI. Specificare la password associata alla chiave di sicurezza e la posizione in cui si desidera salvarla.
+
+
+
+
+ a| 
+Gestione esterna delle chiavi, dischi parziali bloccati
+ a| 
+Non sono necessari ulteriori passaggi.
+
+|===
++
+
+NOTE: Lo storage array deve essere in uno stato ottimale per recuperare i certificati client e server. Se i certificati non sono recuperabili, è necessario creare una nuova CSR, ottenere la firma CSR e scaricare il certificato del server dal server di gestione delle chiavi esterno (EKMS).
+
+. Annotare il numero di serie dell'array di storage:
++
+.. Da System Manager, selezionare menu:Support[Support Center > scheda Support Resources].
+.. Scorrere fino a *Launch Detailed storage array information*, quindi selezionare *Storage Array Profile*.
++
+Il report viene visualizzato sullo schermo.
+
+.. Per individuare il numero di serie dello chassis sotto il profilo dello storage array, digitare *numero di serie* nella casella di testo *trova*, quindi fare clic su *trova*.
++
+Vengono evidenziati tutti i termini corrispondenti. Per scorrere tutti i risultati uno alla volta, continuare a fare clic su *Find* (trova).
+
+.. Annotare il `Chassis Serial Number`.
++
+Questo numero di serie è necessario per eseguire le operazioni descritte in link:complete-upgrade-controllers-task.html["Aggiornamento completo del controller"].
+
+
+
+. Raccogliere i dati di supporto relativi allo storage array utilizzando la GUI o la CLI:
++
+** Utilizzare System Manager o Array Management Window in Storage Manager per raccogliere e salvare un bundle di supporto dello storage array.
++
+*** Da System Manager, selezionare menu:Support[Support Center > scheda Diagnostics]. Quindi selezionare *Collect Support Data* e fare clic su *Collect*.
+*** Dalla barra degli strumenti della finestra Array Management (Gestione array), selezionare menu:Monitor[Health > Collect Support Data Manually] (Monitor[Salute > Collect Support Data Manually]). Quindi, immettere un nome e specificare una posizione nel sistema in cui si desidera memorizzare il bundle di supporto.
++
+Il file viene salvato nella cartella Download del browser con il nome `support-data.7z`.
+
++
+Se lo shelf contiene cassetti, i dati di diagnostica per lo shelf vengono archiviati in un file separato con zip denominato `tray-component-state-capture.7z`.
+
+
+
+** Utilizzare l'interfaccia CLI per eseguire `save storageArray supportData` per raccogliere dati di supporto completi sull'array di storage.
+
+
+. Assicurarsi che non si verifichino operazioni di i/o tra lo storage array e tutti gli host connessi:
++
+.. Arrestare tutti i processi che coinvolgono le LUN mappate dallo storage agli host.
+.. Assicurarsi che nessuna applicazione stia scrivendo dati su tutte le LUN mappate dallo storage agli host.
+.. Smontare tutti i file system associati ai volumi sull'array.
++
+
+NOTE: I passaggi esatti per interrompere le operazioni di i/o dell'host dipendono dal sistema operativo dell'host e dalla configurazione, che esulano dall'ambito di queste istruzioni. Se non si è sicuri di come interrompere le operazioni di i/o host nell'ambiente, è consigliabile arrestare l'host.
+
++
+
+CAUTION: *Possibile perdita di dati* -- se si continua questa procedura mentre si verificano le operazioni di i/o, si potrebbero perdere i dati.
+
+
+
+. Se l'array di storage partecipa a una relazione di mirroring, interrompere tutte le operazioni di i/o dell'host sull'array di storage secondario.
+. Se si utilizza il mirroring asincrono o sincrono, eliminare le coppie mirrorate e disattivare le relazioni di mirroring tramite System Manager o la finestra Array Management.
+. Se un volume con thin provisioning viene segnalato all'host come un thin volume e il vecchio array esegue un firmware (firmware 8.25 o superiore) che supporta la funzione UNMAP, disattivare Write Back Caching per tutti i thin volumi:
++
+.. Da System Manager, selezionare menu:Storage[Volumes] (Storage[volumi]).
+.. Selezionare un volume qualsiasi, quindi menu:More[Change cache settings] (Altro[Modifica impostazioni cache]).
++
+Viene visualizzata la finestra di dialogo Change cache Setting (Modifica impostazioni cache). In questa finestra di dialogo vengono visualizzati tutti i volumi dell'array di storage.
+
+.. Selezionare la scheda *Basic* e modificare le impostazioni per il caching in lettura e il caching in scrittura.
+.. Fare clic su *Save* (Salva).
+.. Attendere cinque minuti per consentire il trasferimento dei dati presenti nella memoria cache sul disco.
+
+
+. Se il linguaggio SAML (Security Assertion Markup Language) è attivato sul controller, contattare il supporto tecnico per disattivare l'autenticazione SAML.
++
+
+NOTE: Una volta attivato, SAML non può essere disattivato tramite l'interfaccia di Gestione di sistema di SANtricity. Per disattivare la configurazione SAML, contattare il supporto tecnico per assistenza.
+
+. Attendere il completamento di tutte le operazioni in corso prima di passare alla fase successiva.
++
+.. Dalla pagina *Home* di System Manager, selezionare *View Operations in Progress* (Visualizza operazioni in corso).
+.. Prima di continuare, assicurarsi che tutte le operazioni visualizzate nella finestra *operazioni in corso* siano state completate.
+
+
+. Spegnere il vassoio del disco del controller
++
+Attendere che tutti i LED sul vassoio del disco del controller si spenano.
+
+. Spegnere tutti i vassoi delle unità collegati al vassoio del disco del controller
++
+Attendere due minuti affinché tutti i dischi si rallentino.
+
+
+
+.Quali sono le prossime novità?
+Passare a. link:remove-controllers-task.html["Rimuovere i controller"].

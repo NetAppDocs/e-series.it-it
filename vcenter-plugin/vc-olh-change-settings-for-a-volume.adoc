@@ -1,0 +1,158 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-change-settings-for-a-volume.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Modificare le impostazioni di un volume, ad esempio il nome, l"assegnazione dell"host, la dimensione del segmento, la priorità di modifica, il caching, e così via.' 
+---
+= Modificare le impostazioni di un volume
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile modificare le impostazioni di un volume, ad esempio il nome, l'assegnazione dell'host, la dimensione del segmento, la priorità di modifica, la memorizzazione nella cache, e così via.
+
+.Prima di iniziare
+Assicurarsi che il volume che si desidera modificare sia nello stato ottimale.
+
+.Fasi
+. Nella pagina Manage (Gestione), selezionare l'array di storage che contiene i volumi che si desidera modificare.
+. Selezionare menu:Provisioning[Manage Volumes] (Gestione volumi).
+. Selezionare il volume che si desidera modificare, quindi selezionare *Visualizza/Modifica impostazioni*.
++
+Viene visualizzata la finestra di dialogo Volume Settings (Impostazioni volume). Le impostazioni di configurazione del volume selezionato vengono visualizzate in questa finestra di dialogo.
+
+. Selezionare la scheda *Basic* per modificare il nome del volume e l'assegnazione dell'host.
++
+.Dettagli campo
+[%collapsible]
+====
+[cols="25h,~"]
+|===
+| Impostazione | Descrizione 
+
+
+ a| 
+Nome
+ a| 
+Visualizza il nome del volume. Modificare il nome di un volume quando il nome corrente non è più significativo o applicabile.
+
+
+
+ a| 
+Capacità
+ a| 
+Visualizza la capacità riportata e allocata per il volume selezionato.
+
+
+
+ a| 
+Gruppo pool/Volume
+ a| 
+Visualizza il nome e il livello RAID del pool o del gruppo di volumi. Indica se il pool o il gruppo di volumi sono abilitati per la protezione e la protezione.
+
+
+
+ a| 
+Host
+ a| 
+Visualizza l'assegnazione del volume. Si assegna un volume a un cluster host o host in modo che sia possibile accedervi per le operazioni di i/O. Questa assegnazione consente a un host o a un cluster di host di accedere a un determinato volume o a una serie di volumi in un array di storage.
+
+** *Assegnato a* -- identifica l'host o il cluster di host che ha accesso al volume selezionato.
+** *LUN* -- Un numero di unità logica (LUN) è il numero assegnato allo spazio degli indirizzi utilizzato da un host per accedere a un volume. Il volume viene presentato all'host come capacità sotto forma di LUN. Ogni host dispone di un proprio spazio di indirizzi LUN. Pertanto, lo stesso LUN può essere utilizzato da host diversi per accedere a volumi diversi.
+
+
+Per le interfacce NVMe, questa colonna visualizza l'ID dello spazio dei nomi. Uno spazio dei nomi è uno storage NVM formattato per l'accesso a blocchi. È analogo a un'unità logica in SCSI, che si riferisce a un volume nell'array di storage. L'ID dello spazio dei nomi è l'identificatore univoco del controller NVMe per lo spazio dei nomi e può essere impostato su un valore compreso tra 1 e 255. È analogo a un numero di unità logica (LUN) in SCSI.
+
+
+
+ a| 
+Identificatori
+ a| 
+Visualizza gli identificatori del volume selezionato.
+
+** WWID (World-wide identifier). Identificatore esadecimale univoco del volume.
+** Extended Unique Identifier (EUI). Un identificatore EUI-64 per il volume.
+** SSID (Subsystem Identifier). L'identificatore del sottosistema dell'array di storage di un volume.
+
+
+|===
+====
+. Selezionare la scheda *Avanzate* per modificare le impostazioni di configurazione aggiuntive per un volume in un pool o in un gruppo di volumi.
++
+.Dettagli campo
+[%collapsible]
+====
+[cols="25h,~"]
+|===
+| Impostazione | Descrizione 
+
+
+ a| 
+Informazioni su applicazioni e carichi di lavoro
+ a| 
+Durante la creazione dei volumi, è possibile creare carichi di lavoro specifici dell'applicazione o altri carichi di lavoro. Se applicabile, il nome del carico di lavoro, il tipo di applicazione e il tipo di volume vengono visualizzati per il volume selezionato. Se lo si desidera, è possibile modificare il nome del carico di lavoro.
+
+
+
+ a| 
+Impostazioni della qualità del servizio
+ a| 
+*Disable data assurance (Disattiva data assurance) in modo permanente* -- questa impostazione viene visualizzata solo se il volume è abilitato per Data Assurance (da). DA controlla e corregge gli errori che potrebbero verificarsi durante il trasferimento dei dati attraverso i controller fino ai dischi. Utilizzare questa opzione per disattivare in modo permanente il da sul volume selezionato. Se disattivato, il da non può essere riattivato su questo volume. *Enable pre-Read Redundancy check* -- questa impostazione viene visualizzata solo se il volume è un volume spesso. I controlli di ridondanza di pre-lettura determinano se i dati su un volume sono coerenti ogni volta che viene eseguita una lettura. Un volume con questa funzione attivata restituisce errori di lettura se i dati risultano incoerenti dal firmware del controller.
+
+
+
+ a| 
+Proprietà del controller
+ a| 
+Definisce il controller designato come controller principale o proprietario del volume. La proprietà del controller è molto importante e deve essere pianificata con attenzione. I controller devono essere bilanciati il più possibile per l'i/o totale.
+
+
+
+ a| 
+Dimensionamento dei segmenti
+ a| 
+Mostra l'impostazione per il dimensionamento dei segmenti, che viene visualizzata solo per i volumi in un gruppo di volumi. È possibile modificare le dimensioni del segmento per ottimizzare le prestazioni. *Transizioni consentite per le dimensioni dei segmenti* -- il sistema determina le transizioni consentite per le dimensioni dei segmenti. Le dimensioni dei segmenti che sono transizioni inappropriate dalla dimensione corrente dei segmenti non sono disponibili nell'elenco a discesa. Le transizioni consentite solitamente sono il doppio o la metà delle dimensioni correnti del segmento. Ad esempio, se la dimensione attuale del segmento di volume è 32 KiB, è consentita una nuova dimensione del segmento di volume di 16 KiB o 64 KiB. *Volumi SSD abilitati per la cache* -- è possibile specificare una dimensione di segmento 4 KiB per i volumi SSD abilitati per la cache. Assicurarsi di selezionare le dimensioni dei segmenti 4 KiB solo per i volumi con funzionalità SSD cache che gestiscono operazioni i/o a piccoli blocchi (ad esempio, blocchi i/o di dimensioni pari o inferiori a 16 KiB). Le performance potrebbero risentire se si seleziona 4 KiB come dimensione del segmento per i volumi abilitati per la cache SSD che gestiscono grandi operazioni sequenziali a blocchi. *Tempo necessario per modificare le dimensioni dei segmenti.* il tempo necessario per modificare le dimensioni dei segmenti di un volume dipende dalle seguenti variabili:
+
+** Il carico di i/o dall'host
+** La priorità di modifica del volume
+** Il numero di dischi nel gruppo di volumi
+** Il numero di canali del disco
+** La potenza di elaborazione dei controller degli array di storage
+
+
+Quando si modificano le dimensioni dei segmenti di un volume, le prestazioni i/o vengono compromesse, ma i dati rimangono disponibili.
+
+
+
+ a| 
+Priorità di modifica
+ a| 
+Mostra l'impostazione della priorità di modifica, che viene visualizzata solo per i volumi in un gruppo di volumi. La priorità di modifica definisce il tempo di elaborazione allocato per le operazioni di modifica del volume in relazione alle prestazioni del sistema. È possibile aumentare la priorità di modifica del volume, anche se ciò potrebbe influire sulle prestazioni del sistema. Spostare le barre di scorrimento per selezionare un livello di priorità. *Modifica dei tassi di priorità* -- il tasso di priorità più basso offre benefici alle prestazioni del sistema, ma l'operazione di modifica richiede più tempo. Il tasso di priorità più elevato è utile per l'operazione di modifica, ma le prestazioni del sistema potrebbero essere compromesse.
+
+
+
+ a| 
+Caching
+ a| 
+Mostra l'impostazione del caching, che è possibile modificare per influire sulle prestazioni i/o complessive di un volume.
+
+
+
+ a| 
+Cache SSD
+ a| 
+(Questa funzione non è disponibile sui sistemi storage EF600 o EF300). Mostra l'impostazione della cache SSD, che è possibile attivare sui volumi compatibili per migliorare le prestazioni di sola lettura. I volumi sono compatibili se condividono le stesse funzionalità di sicurezza del disco e di data assurance. La funzione SSD cache utilizza uno o più dischi a stato solido (SSD) per implementare una cache di lettura. Le performance applicative sono migliorate grazie ai tempi di lettura più rapidi per gli SSD. Poiché la cache di lettura si trova nell'array di storage, il caching viene condiviso tra tutte le applicazioni che utilizzano l'array di storage. È sufficiente selezionare il volume che si desidera memorizzare nella cache, quindi il caching è automatico e dinamico.
+
+|===
+====
+. Fare clic su *Save* (Salva).
+
+
+.Risultato
+Le impostazioni del volume vengono modificate in base alle selezioni effettuate.

@@ -1,0 +1,60 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-initialize-volumes.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Inizializzare manualmente un volume per eseguire il ripristino in caso di determinate condizioni di errore. 
+---
+= Inizializzare i volumi
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Un volume viene inizializzato automaticamente quando viene creato per la prima volta. Tuttavia, il Recovery Guru potrebbe consigliare di inizializzare manualmente un volume per eseguire il ripristino in seguito a determinate condizioni di errore.
+
+Utilizzare questa opzione solo sotto la guida del supporto tecnico. È possibile selezionare uno o più volumi da inizializzare.
+
+.Prima di iniziare
+* Tutte le operazioni di i/o sono state interrotte.
+* Tutti i dispositivi o i file system sui volumi che si desidera inizializzare devono essere smontati.
+* Il volume si trova in uno stato ottimale e non sono in corso operazioni di modifica sul volume.*attenzione: *Non è possibile annullare l'operazione dopo l'avvio. Tutti i dati del volume vengono cancellati. Non provare a eseguire questa operazione a meno che il Recovery Guru non lo suggerisca. Prima di iniziare questa procedura, contattare il supporto tecnico.
+
+
+.A proposito di questa attività
+Quando si inizializza un volume, il volume mantiene le impostazioni relative a WWN, assegnazioni host, capacità allocata e capacità riservata. Inoltre, mantiene le stesse impostazioni di sicurezza e di Data Assurance (da).
+
+Non è possibile inizializzare i seguenti tipi di volumi:
+
+* Volume di base di un volume di snapshot
+* Volume primario in una relazione mirror
+* Volume secondario in relazione mirror
+* Volume di origine in una copia del volume
+* Volume di destinazione in una copia del volume
+* Volume che ha già un'inizializzazione in corso
+
+
+Questa procedura si applica solo ai volumi standard creati da pool o gruppi di volumi.
+
+.Fasi
+. Nella pagina Manage (Gestione), selezionare l'array di storage che contiene i volumi che si desidera inizializzare.
+. Selezionare menu:Provisioning[Manage Volumes] (Gestione volumi).
+. Selezionare un volume qualsiasi, quindi menu:More[Initialize Volumes] (Altro[Inizializza volumi]).
++
+Viene visualizzata la finestra di dialogo Inizializza volumi. In questa finestra di dialogo vengono visualizzati tutti i volumi dell'array di storage.
+
+. Selezionare uno o più volumi da inizializzare e confermare che si desidera eseguire l'operazione.
+
+
+.Risultati
+Il sistema esegue le seguenti operazioni:
+
+* Cancella tutti i dati dai volumi inizializzati.
+* Cancella gli indici dei blocchi, il che fa sì che i blocchi non scritti vengano letti come se fossero riempiti a zero (il volume sembra essere completamente vuoto).
+
+
+Questa operazione può essere lunga e può influire sulle prestazioni del sistema.

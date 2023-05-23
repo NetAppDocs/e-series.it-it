@@ -1,0 +1,285 @@
+---
+permalink: cloud-connector/config-intro-concept.html 
+sidebar: sidebar 
+keywords: Cloud Connector configuration 
+summary: 'Una volta completata l"installazione, è possibile configurare l"applicazione SANtricity Cloud Connector tramite la configurazione guidata. La configurazione guidata viene visualizzata dopo l"accesso iniziale a SANtricity Cloud Connector.' 
+---
+= Configurare SANtricity Cloud Connector per la prima volta
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Una volta completata l'installazione, è possibile configurare l'applicazione SANtricity Cloud Connector tramite la configurazione guidata. La configurazione guidata viene visualizzata dopo l'accesso iniziale a SANtricity Cloud Connector.
+
+
+
+== Accedere a SANtricity Cloud Connector per la prima volta
+
+Quando si inizializza SANtricity Cloud Connector per la prima volta, è necessario immettere una password predefinita per accedere all'applicazione.
+
+.Prima di iniziare
+Assicurarsi di avere accesso a un browser connesso a Internet.
+
+.Fasi
+. Aprire un browser supportato.
+. Connettersi al server SANtricity Connector configurato (ad es. `+http://localhost:8080/+`).
++
+Viene visualizzata la pagina di accesso iniziale per l'applicazione SANtricity Cloud Connector.
+
+. Nel campo Password amministratore, immettere la password predefinita di `password`.
+. Fare clic su *Log in* (Accedi).
++
+Viene visualizzata la Configurazione guidata di SANtricity Cloud Connector.
+
+
+
+
+
+== Utilizzando la Configurazione guidata
+
+La configurazione guidata viene visualizzata dopo aver eseguito correttamente l'accesso iniziale a SANtricity Cloud Connector.
+
+La configurazione guidata consente di impostare la password dell'amministratore, le credenziali di gestione dell'accesso proxy dei servizi Web, il tipo di destinazione di backup desiderato e la password di crittografia per SANtricity Cloud Connector.
+
+
+
+=== Fase 1: Impostare la password dell'amministratore
+
+È possibile personalizzare la password utilizzata per gli accessi successivi a SANtricity Cloud Connector attraverso la pagina Imposta password amministratore.
+
+La creazione di una password tramite la pagina Imposta password amministratore sostituisce effettivamente la password predefinita utilizzata durante l'accesso iniziale per l'applicazione SANtricity Cloud Connector.
+
+.Fasi
+. Nella pagina Set Administrator Password (Imposta password amministratore), inserire la password di accesso desiderata per SANtricity Cloud Connector nel campo *Enter the new Administrator password* (immettere la nuova password amministratore).
+. Nel campo *immettere nuovamente la nuova password amministratore*, immettere nuovamente la password dal primo campo.
+. Fare clic su *Avanti*.
++
+La password impostata per SANtricity Cloud Connector viene accettata e la pagina Imposta password viene visualizzata nella Configurazione guidata.
+
++
+
+NOTE: La password dell'amministratore definita dall'utente non viene impostata fino al completamento della configurazione guidata.
+
+
+
+
+
+=== Fase 2: Impostare la password
+
+Nella pagina Enter the Encryption Pass phrase (immettere la password di crittografia), è possibile specificare una password alfanumerica compresa tra 8 e 32 caratteri.
+
+Una password specificata dall'utente è richiesta come parte della chiave di crittografia dei dati utilizzata dall'applicazione Cloud Connector di SANtricity.
+
+.Fasi
+. Nel campo *definisci una password*, immettere la password desiderata.
+. Nel campo *Re-Enter your pass phrase* (immettere nuovamente la password), immettere nuovamente la password nel primo campo.
+. Fare clic su *Avanti*.
++
+La password immessa per l'applicazione SANtricity Cloud Connector viene accettata e viene visualizzata la pagina Seleziona tipo di destinazione per la configurazione guidata.
+
+
+
+
+
+=== Fase 3: Selezionare il tipo di destinazione
+
+Le funzionalità di backup e ripristino sono disponibili per i tipi di destinazione Amazon S3, AltaVault e StorageGRID tramite SANtricity Cloud Connector. È possibile specificare il tipo di destinazione dello storage desiderato per l'applicazione SANtricity Cloud Connector nella pagina selezionare il tipo di destinazione.
+
+.Prima di iniziare
+Assicurarsi di disporre di uno dei seguenti elementi: Punto di montaggio AltaVault, account Amazon AWS o account StorageGRID.
+
+.Fasi
+. Nel menu a discesa, selezionare una delle seguenti opzioni:
++
+** Amazon AWS
+** AltaVault
+** StorageGRID
++
+Nella Configurazione guidata viene visualizzata la pagina Target Type (tipo di destinazione) per l'opzione selezionata.
+
+
+
+. Fare riferimento alle istruzioni di configurazione appropriate per AltaVault, Amazon AWS o StorageGRID.
+
+
+
+
+==== Configurare l'appliance AltaVault
+
+Dopo aver selezionato l'opzione AltaVault appliance nella pagina selezionare il tipo di destinazione, vengono visualizzate le opzioni di configurazione per il tipo di destinazione AltaVault.
+
+.Prima di iniziare
+* Si dispone del percorso di montaggio NFS per un'appliance AltaVault.
+* Hai specificato l'appliance AltaVault come tipo di destinazione.
+
+
+.Fasi
+. Nel campo *percorso di montaggio NFS*, inserire il punto di montaggio per il tipo di destinazione AltaVault.
++
+
+NOTE: I valori nel campo *NFS Mount Path* devono seguire il formato del percorso Linux.
+
+. Selezionare la casella di controllo *Salva un backup del database di configurazione su questa destinazione* per creare un backup del database di configurazione sul tipo di destinazione selezionato.
++
+
+NOTE: Se durante il test della connessione viene rilevata una configurazione del database esistente sul tipo di destinazione specificato, è possibile sostituire le informazioni di configurazione del database esistente sull'host di SANtricity Cloud Connector con le nuove informazioni di backup inserite nella configurazione guidata.
+
+. Fare clic su *Test connessione* per verificare la connessione per le impostazioni AltaVault specificate.
+. Fare clic su *Avanti*.
++
+Il tipo di destinazione specificato per il connettore cloud di SANtricity viene accettato e la pagina Proxy dei servizi web viene visualizzata nella Configurazione guidata.
+
+. Passare alla "fase 4: Connessione al proxy dei servizi Web".
+
+
+
+
+==== Configurare l'account Amazon AWS
+
+Dopo aver selezionato l'opzione Amazon AWS nella pagina Select the Target Type (Seleziona tipo di destinazione), vengono visualizzate le opzioni di configurazione per il tipo di destinazione Amazon AWS.
+
+.Prima di iniziare
+* Hai un account Amazon AWS stabilito.
+* Hai specificato Amazon AWS come tipo di destinazione.
+
+
+.Fasi
+. Nel campo *Access Key ID* (ID chiave di accesso), immettere l'ID di accesso per la destinazione Amazon AWS.
+. Nel campo *Secret Access Key* (chiave di accesso segreta), immettere la chiave di accesso segreta per la destinazione.
+. Nel campo *Nome bucket*, immettere il nome del bucket per la destinazione.
+. Selezionare la casella di controllo *Salva un backup del database di configurazione su questa destinazione* per creare un backup del database di configurazione sul tipo di destinazione selezionato.
++
+
+NOTE: Si consiglia di attivare questa impostazione per garantire che i dati della destinazione di backup possano essere ripristinati in caso di perdita del database.
+
++
+
+NOTE: Se durante il test della connessione viene rilevata una configurazione del database esistente sul tipo di destinazione specificato, è possibile sostituire le informazioni di configurazione del database esistente sull'host di SANtricity Cloud Connector con le nuove informazioni di backup inserite nella configurazione guidata.
+
+. Fare clic su *Test Connection* (verifica connessione) per verificare le credenziali Amazon AWS immesse.
+. Fare clic su *Avanti*.
++
+Il tipo di destinazione specificato per il connettore cloud SANtricity viene accettato e la pagina Proxy dei servizi Web viene visualizzata nella Configurazione guidata.
+
+. Passare alla "fase 4: Connessione al proxy dei servizi Web".
+
+
+
+
+==== Configurare l'account StorageGRID
+
+Dopo aver selezionato l'opzione StorageGRID nella pagina selezionare il tipo di destinazione, vengono visualizzate le opzioni di configurazione per il tipo di destinazione StorageGRID.
+
+.Prima di iniziare
+* Hai un account StorageGRID stabilito.
+* Hai un certificato StorageGRID firmato nel keystore di SANtricity Cloud Connector.
+* È stato specificato StorageGRID come tipo di destinazione.
+
+
+.Fasi
+. Nel campo *URL*, immettere l'URL del servizio cloud Amazon S3
+. Nel campo *Access Key ID* (ID chiave di accesso), inserire l'ID di accesso per la destinazione S3.
+. Nel campo *Secret Access Key* (chiave di accesso segreta), inserire la chiave di accesso segreta per la destinazione S3.
+. Nel campo *Nome bucket*, immettere il nome del bucket per la destinazione S3.
+. Per utilizzare l'accesso in stile tracciato, selezionare la casella di controllo *Usa accesso in stile tracciato*.
++
+
+NOTE: Se deselezionata, viene utilizzato l'accesso in stile host virtuale.
+
+. Selezionare la casella di controllo *Salva un backup del database di configurazione su questa destinazione* per creare un backup del database di configurazione sul tipo di destinazione selezionato.
++
+
+NOTE: Si consiglia di attivare questa impostazione per garantire che i dati della destinazione di backup possano essere ripristinati in caso di perdita del database.
+
++
+
+NOTE: Se durante il test della connessione viene rilevata una configurazione del database esistente sul tipo di destinazione specificato, è possibile sostituire le informazioni di configurazione del database esistente sull'host di SANtricity Cloud Connector con le nuove informazioni di backup inserite nella configurazione guidata.
+
+. Fare clic su *Test Connection* (verifica connessione) per verificare le credenziali S3 immesse.
++
+
+NOTE: Alcuni account compatibili con S3 potrebbero richiedere connessioni HTTP protette. Per informazioni sull'inserimento di un certificato StorageGRID nell'archivio chiavi, vedere link:install-intro-concept.html#add-storagegrid-certificate-into-a-keystore["Aggiungere il certificato StorageGRID in un keystore"].
+
+. Fare clic su *Avanti*.
++
+Il tipo di destinazione specificato per il connettore cloud SANtricity viene accettato e la pagina Proxy servizi web viene visualizzata nella Configurazione guidata.
+
+. Passare alla "fase 4: Connessione al proxy dei servizi Web".
+
+
+
+
+=== Fase 4: Connessione al proxy dei servizi Web
+
+Le informazioni di accesso e di connessione per il proxy dei servizi Web utilizzato insieme a SANtricity Cloud Connector vengono inserite nella pagina Immetti credenziali e URL proxy dei servizi Web.
+
+.Prima di iniziare
+Assicurarsi di disporre di una connessione stabilita con il proxy dei servizi Web di SANtricity.
+
+.Fasi
+. Nel campo *URL*, immettere l'URL del proxy dei servizi Web utilizzato per SANtricity Cloud Connector.
+. Nel campo *Nome utente*, immettere il nome utente per la connessione proxy dei servizi Web.
+. Nel campo *Password*, immettere la password per la connessione proxy dei servizi Web.
+. Fare clic su *Test Connection* (verifica connessione) per verificare la connessione per le credenziali proxy dei servizi Web immesse.
+. Dopo aver verificato le credenziali di Web Services Proxy immesse tramite la connessione di prova.
+. Fare clic su *Avanti*
++
+Le credenziali del proxy dei servizi Web per il connettore cloud di SANtricity vengono accettate e la pagina Seleziona array di storage viene visualizzata nella Configurazione guidata.
+
+
+
+
+
+=== Fase 5: Selezionare gli array di storage
+
+In base alle credenziali del proxy dei servizi Web di SANtricity immesse tramite la Configurazione guidata, viene visualizzato un elenco degli array di storage disponibili nella pagina Seleziona array di storage. In questa pagina è possibile selezionare gli array di storage utilizzati da SANtricity Cloud Connector per i processi di backup e ripristino.
+
+.Prima di iniziare
+Assicurarsi che gli array di storage siano configurati per l'applicazione proxy dei servizi Web di SANtricity.
+
+
+NOTE: Gli array di storage non raggiungibili osservati dall'applicazione SANtricity Cloud Connector causeranno eccezioni API nel file di log. Questo è il comportamento previsto dell'applicazione SANtricity Cloud Connector ogni volta che un elenco di volumi viene estratto da un array irraggiungibile. Per evitare queste eccezioni API nel file di log, è possibile risolvere il problema principale direttamente con l'array di storage o rimuovere l'array di storage interessato dall'applicazione proxy dei servizi Web di SANtricity.
+
+.Fasi
+. Selezionare ciascuna casella di controllo accanto all'array di storage che si desidera assegnare all'applicazione SANtricity Cloud Connector per le operazioni di backup e ripristino.
+. Fare clic su *Avanti*.
++
+Gli array di storage selezionati vengono accettati e viene visualizzata la pagina Select hosts (Seleziona host) nella Configurazione guidata.
+
++
+
+NOTE: È necessario configurare una password valida per qualsiasi array di storage selezionato nella pagina Select Storage Array (Seleziona array di storage). È possibile configurare le password degli array di storage attraverso la documentazione dell'API proxy dei servizi Web di SANtricity.
+
+
+
+
+
+=== Fase 6: Selezionare gli host
+
+In base agli array di storage ospitati dal proxy dei servizi Web selezionati tramite la Configurazione guidata, è possibile selezionare un host disponibile per mappare i volumi di backup e ripristinare i volumi candidati all'applicazione SANtricity Cloud Connector attraverso la pagina Seleziona host.
+
+.Prima di iniziare
+Assicurarsi di disporre di un host tramite il proxy dei servizi Web di SANtricity.
+
+.Fasi
+. Nel menu a discesa dello storage array elencato, selezionare l'host desiderato.
+. Ripetere il passaggio 1 per tutti gli array di storage aggiuntivi elencati nella pagina Select host (Seleziona host).
+. Fare clic su *Avanti*.
++
+L'host selezionato per SANtricity Cloud Connector viene accettato e la pagina di revisione viene visualizzata nella Configurazione guidata.
+
+
+
+
+
+=== Fase 7: Esaminare la configurazione iniziale
+
+L'ultima pagina della configurazione guidata di SANtricity Cloud Connector fornisce un riepilogo dei risultati immessi per la revisione.
+
+Esaminare i risultati dei dati di configurazione validati.
+
+* Se tutti i dati di configurazione sono stati validati e stabiliti correttamente, fare clic su *fine* per completare il processo di configurazione.
+* Se non è possibile validare una sezione dei dati di configurazione, fare clic su *Back* (Indietro) per accedere alla pagina appropriata della configurazione guidata e rivedere i dati inviati.
+

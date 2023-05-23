@@ -1,0 +1,94 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-change-ssd-cache-settings.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Modificare il nome della cache SSD e visualizzarne lo stato, la capacità massima e corrente, lo stato di Drive Security e Data Assurance e i volumi e i dischi associati. 
+---
+= Modificare le impostazioni della cache SSD
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile modificare il nome della cache SSD e visualizzarne lo stato, la capacità massima e corrente, lo stato di Drive Security e Data Assurance e i volumi e i dischi associati.
+
+
+NOTE: Questa funzione non è disponibile sui sistemi storage EF600 o EF300.
+
+.Fasi
+. Dalla pagina Manage (Gestione), selezionare l'array di storage con la cache SSD.
+. Selezionare menu:Provisioning[Configure Pools and Volume Groups] (Configura pool e gruppi di volumi).
+. Selezionare la cache SSD che si desidera modificare, quindi fare clic su *View/Edit Settings* (Visualizza/Modifica impostazioni).
++
+Viene visualizzata la finestra di dialogo SSD cache Settings (Impostazioni cache SSD).
+
+. Rivedere o modificare le impostazioni della cache SSD in base alle esigenze.
++
+.Dettagli campo
+[%collapsible]
+====
+[cols="25h,~"]
+|===
+| Impostazione | Descrizione 
+
+
+ a| 
+Nome
+ a| 
+Visualizza il nome della cache SSD, che è possibile modificare. È necessario specificare un nome per la cache SSD.
+
+
+
+ a| 
+Caratteristiche
+ a| 
+Mostra lo stato della cache SSD. Gli stati possibili includono:
+
+** Ottimale
+** Sconosciuto
+** Degradato
+** Non riuscito (Uno stato di errore determina un evento MEL critico).
+** Sospeso
+
+
+
+
+ a| 
+Capacità
+ a| 
+Mostra la capacità corrente e la capacità massima consentita per la cache SSD. La capacità massima consentita per la cache SSD dipende dalle dimensioni della cache principale del controller:
+
+** Fino a 1 GiB
+** Da 1 GiB a 2 GiB
+** Da 2 GiB a 4 GiB
+** Più di 4 GiB
+
+
+
+
+ a| 
+Sicurezza e da
+ a| 
+Mostra lo stato di Drive Security e Data Assurance per la cache SSD.
+
+** *Secure-capable* - indica se la cache SSD è composta interamente da dischi sicuri. Un disco sicuro è un disco con crittografia automatica in grado di proteggere i propri dati da accessi non autorizzati.
+** *Secure-enabled* -- indica se la sicurezza è attivata nella cache SSD.
+** *Da Capable* -- indica se la cache SSD è composta interamente da dischi compatibili con da. Un disco con funzionalità da può controllare e correggere gli errori che potrebbero verificarsi quando i dati vengono comunicati tra l'host e lo storage array.
+
+
+
+
+ a| 
+Oggetti associati
+ a| 
+Mostra i volumi e i dischi associati alla cache SSD.
+
+|===
+====
+. Fare clic su *Save* (Salva).
+

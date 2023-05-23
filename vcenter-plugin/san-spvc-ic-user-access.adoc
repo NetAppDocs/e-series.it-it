@@ -1,0 +1,131 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/san-spvc-ic-user-access.html 
+keywords: user access vCenter plugin, user roles vCenter plugin, privileges vCenter plugin, access permissions vCenter plugin 
+summary: Configurare i permessi di accesso per Storage Plugin per vCenter. 
+---
+= Configurare i permessi di accesso al plug-in
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile configurare le autorizzazioni di accesso per lo Storage Plugin per vCenter, che include utenti, ruoli e privilegi.
+
+
+
+== Esaminare i privilegi vSphere richiesti
+
+Per accedere al plug-in nel client vSphere, è necessario assegnare un ruolo con i privilegi vSphere appropriati. Gli utenti con il privilegio vSphere "Configura datastore" hanno accesso in lettura/scrittura al plug-in, mentre gli utenti con il privilegio "Sfoglia datastore" hanno accesso in sola lettura. Se un utente non dispone di questi privilegi, il plug-in visualizza il messaggio "privilegi insufficienti".
+
+|===
+| Tipo di accesso al plug-in | È richiesto il privilegio vSphere 
+
+
+| Lettura/scrittura (configurazione) | Datastore.Configure 
+
+
+| Sola lettura (visualizzazione) | Datastore.Browse 
+|===
+
+
+== Configurare i ruoli di Storage Administrator
+
+Per fornire privilegi di lettura/scrittura agli utenti dei plug-in, è possibile creare, clonare o modificare un ruolo. Per ulteriori informazioni sulla configurazione dei ruoli nel client vSphere, consultare il seguente argomento nel VMware Doc Center:
+
+* https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.security.doc/GUID-41E5E52E-A95B-4E81-9724-6AD6800BEF78.html["Creare un ruolo personalizzato"^]
+
+
+
+
+=== Accedere alle azioni dei ruoli
+
+. Dalla home page di vSphere Client, selezionare *Administrator* dall'area di controllo degli accessi.
+. Fare clic su *Roles* nell'area di controllo degli accessi.
+. Eseguire una delle seguenti operazioni:
++
+** *Crea nuovo ruolo*: Fare clic sull'icona dell'azione *Crea ruolo*.
+** *Clone role*: Selezionare un ruolo esistente e fare clic sull'icona dell'azione *Clone role*.
+** *Modifica ruolo esistente*: Selezionare un ruolo esistente e fare clic sull'icona dell'azione *Modifica ruolo*.
+
+
+
+
+
+NOTE: Il ruolo di amministratore non è modificabile.
+
+Viene visualizzata la procedura guidata appropriata, a seconda della selezione precedente.
+
+
+
+=== Creare un nuovo ruolo
+
+. Nell'elenco dei privilegi, selezionare le autorizzazioni di accesso da assegnare a questo ruolo.
++
+Per consentire l'accesso in sola lettura al plug-in, selezionare menu:Archivio dati[Sfoglia archivio dati]. Per consentire l'accesso in lettura/scrittura, selezionare menu:datastore[Configure datastore].
+
+. Assegnare altri privilegi all'elenco, se necessario, quindi fare clic su *Avanti*.
+. Assegnare un nome al ruolo e fornire una descrizione.
+. Fare clic su *fine*.
+
+
+
+
+=== Clonare un ruolo
+
+. Assegnare un nome al ruolo e fornire una descrizione.
+. Fare clic su *OK* per terminare la procedura guidata.
+. Selezionare il ruolo clonato dall'elenco, quindi fare clic su *Edit role* (Modifica ruolo).
+. Nell'elenco dei privilegi, selezionare le autorizzazioni di accesso da assegnare a questo ruolo.
++
+Per consentire l'accesso in sola lettura al plug-in, selezionare menu:Archivio dati[Sfoglia archivio dati]. Per consentire l'accesso in lettura/scrittura, selezionare menu:datastore[Configure datastore].
+
+. Fare clic su *Avanti*.
+. Aggiornare il nome e la descrizione, se necessario.
+. Fare clic su *fine*.
+
+
+
+
+=== Modificare un ruolo esistente
+
+. Nell'elenco dei privilegi, selezionare le autorizzazioni di accesso da assegnare a questo ruolo.
++
+Per consentire l'accesso in sola lettura al plug-in, selezionare menu:Archivio dati[Sfoglia archivio dati]. Per consentire l'accesso in lettura/scrittura, selezionare menu:datastore[Configure datastore].
+
+. Fare clic su *Avanti*.
+. Aggiornare il nome o la descrizione, se necessario.
+. Fare clic su *fine*.
+
+
+
+
+== Impostare le autorizzazioni per vCenter Server Appliance
+
+Dopo aver impostato i privilegi per un ruolo, è necessario aggiungere un'autorizzazione all'appliance vCenter Server. Questa autorizzazione consente a un determinato utente o gruppo di accedere al plug-in.
+
+. Dall'elenco a discesa del menu, selezionare *hosts and Clusters* (host e cluster).
+. Selezionare *vCenter Server Appliance* dall'area di controllo degli accessi.
+. Fare clic sulla scheda *Permissions*.
+. Fare clic sull'icona dell'azione *Add Permission*.
+. Selezionare il dominio e l'utente/gruppo appropriati.
+. Selezionare il ruolo creato che consente il privilegio del plug-in di lettura/scrittura.
+. Attivare l'opzione *propaga ai figli*, se necessario.
+. Fare clic su *OK*.
+
+
+
+NOTE: È possibile selezionare un'autorizzazione esistente e modificarla per utilizzare il ruolo creato. *Tuttavia, tenere presente che il ruolo deve avere gli stessi privilegi insieme ai privilegi del plug-in di lettura/scrittura per evitare una regressione dei permessi.*
+
+Per accedere al plug-in, è necessario accedere a vSphere Client con l'account utente che dispone dei privilegi di lettura/scrittura per il plug-in.
+
+Per ulteriori informazioni sulla gestione delle autorizzazioni, consultare i seguenti argomenti in VMware Doc Center:
+
+* https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.security.doc/GUID-3B78EEB3-23E2-4CEB-9FBD-E432B606011A.html["Gestione delle autorizzazioni per i componenti vCenter"^]
+* https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.security.doc/GUID-FAA074CC-E8C9-4F13-ABCF-6CF7F15F04EE.html["Best practice per ruoli e autorizzazioni"^]
+

@@ -1,0 +1,27 @@
+---
+permalink: remote-storage-volumes/remove-remote-storage-task.html 
+sidebar: sidebar 
+keywords: remove storage object, disconnect remote storage 
+summary: È possibile rimuovere qualsiasi oggetto di storage remoto configurato tramite Gestione di sistema di SANtricity. 
+---
+= Rimuovere l'oggetto storage remoto
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Una volta completata l'importazione, è possibile rimuovere un oggetto di storage remoto se non si desidera più copiare i dati tra i dispositivi locali e remoti.
+
+.Fasi
+. Assicurarsi che nessuna importazione sia associata all'oggetto di storage remoto che si intende rimuovere.
+. Dalla schermata archiviazione remota di Gestione sistema SANtricity, selezionare l'oggetto di archiviazione remota desiderato nella sezione Result list (elenco risultati).
+. Fare clic su *Rimuovi*.
++
+Viene visualizzata la finestra di dialogo Conferma rimozione connessione storage remoto.
+
+. Confermare l'operazione digitando `remove` Quindi fare clic su *Rimuovi*.
++
+L'oggetto Remote Storage selezionato viene rimosso.
+
+

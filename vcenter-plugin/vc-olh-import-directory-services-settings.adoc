@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-import-directory-services-settings.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Importare una configurazione di servizi di directory da un array di storage ad altri array di storage. 
+---
+= Importare le impostazioni dei servizi di directory
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile importare una configurazione di servizi di directory da un array di storage ad altri array di storage. Questa operazione batch consente di risparmiare tempo quando è necessario configurare più array nella rete.
+
+.Prima di iniziare
+Assicurarsi che:
+
+* I servizi di directory sono configurati in System Manager (menu:Impostazioni[Gestione accessi]) per lo storage array che si desidera utilizzare come origine.
+* Il backup della configurazione esistente per gli array di storage di destinazione viene eseguito in System Manager (menu:Impostazioni[sistema > Salva configurazione array di storage]).
+* Sono stati esaminati i requisiti per la replica delle configurazioni di storage in link:vc-olh-import-settings-overview.html["Panoramica delle impostazioni di importazione"].
+
+
+.A proposito di questa attività
+Le impostazioni importate includono il nome di dominio e l'URL di un server LDAP (Lightweight Directory Access Protocol), oltre ai mapping dei gruppi di utenti del server LDAP ai ruoli predefiniti dell'array di storage.
+
+.Fasi
+. Dalla pagina Manage (Gestione), fare clic su menu:Actions[Import Settings] (azioni[Impostazioni importazione]).
++
+Viene visualizzata la procedura guidata Import Settings (Impostazioni importazione).
+
+. Nella finestra di dialogo Select Settings (Seleziona impostazioni), selezionare *Directory Services* (servizi directory), quindi fare clic su *Next* (Avanti).
++
+Viene visualizzata una finestra di dialogo per la selezione dell'array di origine.
+
+. Nella finestra di dialogo Select Source (Seleziona origine), selezionare l'array con le impostazioni che si desidera importare, quindi fare clic su *Next* (Avanti).
+. Nella finestra di dialogo Select targets (Seleziona destinazioni), selezionare uno o più array per ricevere le nuove impostazioni.
++
+
+NOTE: Gli array di storage con firmware inferiore a 8.50 non sono disponibili per la selezione. Inoltre, un array non viene visualizzato in questa finestra di dialogo se il plug-in non è in grado di comunicare con tale array (ad esempio, se non è in linea o se presenta problemi di certificato, password o rete).
+
+. Fare clic su *fine*.
++
+La pagina Operations (operazioni) visualizza i risultati dell'operazione di importazione. Se l'operazione non riesce, fare clic sulla relativa riga per visualizzare ulteriori informazioni.
+
+
+
+.Risultato
+Gli array di storage di destinazione sono ora configurati con gli stessi servizi di directory dell'array di origine.

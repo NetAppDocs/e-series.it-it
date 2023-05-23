@@ -1,0 +1,100 @@
+---
+permalink: web-services-proxy/install-uninstall-task.html 
+sidebar: sidebar 
+keywords: uninstall Web Services Proxy, remove WSP, 
+summary: 'Per rimuovere Web Services Proxy e Unified Manager, è possibile utilizzare qualsiasi modalità (file grafico, console, silenzioso o RPM), indipendentemente dal metodo utilizzato per installare il proxy.' 
+---
+= Disinstallare il proxy dei servizi Web
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per rimuovere Web Services Proxy e Unified Manager, è possibile utilizzare qualsiasi modalità (file grafico, console, silenzioso o RPM), indipendentemente dal metodo utilizzato per installare il proxy.
+
+
+
+== Disinstallazione della modalità grafica
+
+È possibile eseguire la disinstallazione in modalità grafica per Windows o Linux. In modalità grafica, i prompt vengono visualizzati in un'interfaccia di tipo Windows.
+
+.Fasi
+. Avviare la disinstallazione per Windows o Linux, come indicato di seguito:
++
+** Windows -- accedere alla directory che contiene il file di disinstallazione uninstall_web_Services_proxy. La directory predefinita si trova nel seguente percorso: C:/Program Files/NetApp/SANtricity Web Services Proxy/. Fare doppio clic `uninstall_web_services_proxy.exe`.
++
+
+NOTE: In alternativa, è possibile accedere a menu:pannello di controllo[programmi > Disinstalla un programma], quindi selezionare "Proxy dei servizi web NetApp SANtricity".
+
+** Linux -- accedere alla directory che contiene il file di disinstallazione di Web Services Proxy. La directory predefinita si trova nella seguente posizione: +
+`/opt/netapp/santricity_web_services_proxy/uninstall_web_services_proxy`
+
+
+. Eseguire il seguente comando:
++
+`uninstall_web_services_proxy -i gui`
+
++
+Viene visualizzata la schermata iniziale del proxy dei servizi Web di SANtricity.
+
+. Nella finestra di dialogo Disinstalla, fare clic su *Disinstalla*.
++
+Viene visualizzata la barra di avanzamento del programma di disinstallazione che mostra lo stato di avanzamento.
+
+. Quando viene visualizzato il messaggio Uninstall complete (disinstallazione completata), fare clic su *Done* (fine).
+
+
+
+
+== Disinstallazione della modalità console
+
+È possibile eseguire la disinstallazione in modalità Console per Windows o Linux. In modalità Console, i prompt vengono visualizzati nella finestra del terminale.
+
+.Fasi
+. Accedere alla directory uninstall_web_Services_proxy.
+. Eseguire il seguente comando:
++
+`uninstall_web_services_proxy -i console`
+
++
+Viene avviato il processo di disinstallazione.
+
+. Una volta completata la disinstallazione, premere *Invio* per uscire dal programma di installazione.
+
+
+
+
+== Disinstallazione in modalità silenziosa
+
+È possibile eseguire la disinstallazione in modalità silenziosa per Windows o Linux. In modalità silenziosa, nella finestra del terminale non vengono visualizzati messaggi o script di ritorno.
+
+.Fasi
+. Accedere alla directory uninstall_web_Services_proxy.
+. Eseguire il seguente comando:
++
+`uninstall_web_services_proxy -i silent`
+
++
+Il processo di disinstallazione viene eseguito, ma nella finestra del terminale non vengono visualizzati messaggi o script di ritorno. Una volta disinstallato Web Services Proxy, viene visualizzato un prompt dei comandi nella finestra del terminale.
+
+
+
+
+
+== Disinstallazione del comando RPM (solo Linux)
+
+È possibile utilizzare un comando RPM per disinstallare il proxy dei servizi Web da un sistema Linux.
+
+.Fasi
+. Aprire una finestra terminale.
+. Immettere la seguente riga di comando:
++
+`rpm -e santricity_webservices`
+
++
+
+NOTE: Il processo di disinstallazione potrebbe lasciare file che non facevano parte dell'installazione originale. Eliminare manualmente questi file per rimuovere completamente il proxy dei servizi Web.
+
+

@@ -1,0 +1,14 @@
+---
+permalink: maintenance-ef600/concept-host-interface-cards-wombat.html 
+sidebar: sidebar 
+keywords: host, interface, card, hic, install, controller, canister, ef600, port 
+summary: 'Una scheda di interfaccia host (HIC) deve essere installata all"interno di un contenitore di controller. Il controller EF600 include porte host sull"HIC opzionale. Le porte host integrate nell"HIC sono chiamate porte HIC.' 
+---
+= Schede di interfaccia host
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Una scheda di interfaccia host (HIC) deve essere installata all'interno di un contenitore del controller. Il controller EF600 include porte host sull'HIC opzionale. Le porte host integrate nell'HIC sono chiamate porte HIC.

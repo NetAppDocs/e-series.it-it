@@ -1,0 +1,520 @@
+---
+permalink: maintenance-e2800/controllers-simplex-supertask-task.html 
+sidebar: sidebar 
+keywords: replace E2800 controller, replacing E2800 controller, simplex controller replacement, E2800, E-Series, eseries 
+summary: È possibile sostituire un contenitore del controller guasto in una configurazione simplex. 
+---
+= Sostituire il controller nella configurazione simplex E2800
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile sostituire un contenitore di controller guasto in una configurazione simplex (controller singolo) per i seguenti shelf di controller:
+
+* Shelf di controller E2812
+* Shelf di controller E2824
+
+
+.A proposito di questa attività
+Il contenitore del controller contiene una scheda controller, una batteria e una scheda di interfaccia host (HIC) opzionale. Quando si sostituisce un contenitore del controller guasto, rimuovere la batteria e l'HIC, se installato, dal contenitore del controller originale e installarli nel contenitore del controller sostitutivo.
+
+.Di cosa hai bisogno
+* Un contenitore del controller sostitutivo con lo stesso numero di parte del contenitore del controller che si sta sostituendo.
+* Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
+* Etichette per identificare ciascun cavo collegato al contenitore del controller.
+* Cacciavite Phillips n. 1.
+* Stazione di gestione con un browser che può accedere a Gestione di sistema SANtricity per il controller. Per aprire l'interfaccia di System Manager, puntare il browser sul nome di dominio o sull'indirizzo IP del controller.
+
+
+
+
+== Fase 1: Preparazione alla sostituzione del controller (simplex)
+
+Preparare la sostituzione di un contenitore di controller salvando la chiave di sicurezza del disco, eseguendo il backup della configurazione e raccogliendo i dati di supporto. Quindi, è possibile interrompere le operazioni di i/o dell'host e spegnere lo shelf del controller.
+
+.Fasi
+. Se possibile, prendere nota della versione del software SANtricity OS attualmente installata sul controller. Aprire Gestione sistemi SANtricity e selezionare menu:supporto[Centro aggiornamento > Visualizza inventario software e firmware].
+. Se la funzione Drive Security è attivata, assicurarsi che esista una chiave salvata e di conoscere la password richiesta per l'installazione.
++
+
+CAUTION: *Possibile perdita di accesso ai dati* -- se tutte le unità dello storage array sono abilitate per la sicurezza, il nuovo controller non sarà in grado di accedere allo storage array fino a quando non si sbloccano le unità protette utilizzando la finestra di gestione aziendale in Gestione storage di SANtricity.
+
++
+Per salvare la chiave (potrebbe non essere possibile, a seconda dello stato del controller):
+
++
+.. Da Gestore di sistema di SANtricity, selezionare menu:Impostazioni[sistema].
+.. In *Drive Security key management* (Gestione chiavi di sicurezza unità), selezionare *Backup Key* (chiave di backup).
+.. Nei campi *Definisci password/Inserisci nuova password*, immettere e confermare una password per questa copia di backup.
+.. Fare clic su *Backup*.
+.. Registrare le informazioni sulla chiave in una posizione sicura, quindi fare clic su *Chiudi*.
+
+
+. Eseguire il backup del database di configurazione dello storage array utilizzando Gestione di sistema di SANtricity.
++
+Se si verifica un problema durante la rimozione di un controller, è possibile utilizzare il file salvato per ripristinare la configurazione. Il sistema salva lo stato corrente del database di configurazione RAID, che include tutti i dati per i gruppi di volumi e i pool di dischi sul controller.
+
++
+** Da System Manager:
++
+... Selezionare menu:Support[Support Center > Diagnostics] (supporto tecnico > Diagnostica).
+... Selezionare *Collect Configuration Data* (raccolta dati di configurazione).
+... Fare clic su *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+** In alternativa, è possibile eseguire il backup del database di configurazione utilizzando il seguente comando CLI:
++
+`save storageArray dbmDatabase sourceLocation=onboard contentType=all file="filename";`
+
+
+
+. Raccogliere i dati di supporto per lo storage array utilizzando Gestione di sistema di SANtricity.
++
+Se si verifica un problema durante la rimozione di un controller, è possibile utilizzare il file salvato per risolvere il problema. Il sistema salva i dati di inventario, stato e performance relativi all'array di storage in un singolo file.
+
++
+.. Selezionare menu:Support[Support Center > Diagnostics] (supporto tecnico > Diagnostica).
+.. Selezionare *Collect Support Data*.
+.. Fare clic su *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *support-data.7z*.
+
+
+
+. Assicurarsi che non si verifichino operazioni di i/o tra lo storage array e tutti gli host connessi. Ad esempio, è possibile eseguire le seguenti operazioni:
++
+** Arrestare tutti i processi che coinvolgono le LUN mappate dallo storage agli host.
+** Assicurarsi che nessuna applicazione stia scrivendo dati su tutte le LUN mappate dallo storage agli host.
+** Smontare tutti i file system associati ai volumi sull'array.
++
+
+NOTE: I passaggi esatti per interrompere le operazioni di i/o dell'host dipendono dal sistema operativo dell'host e dalla configurazione, che esulano dall'ambito di queste istruzioni. Se non si è sicuri di come interrompere le operazioni di i/o host nell'ambiente, è consigliabile arrestare l'host.
+
++
+
+CAUTION: *Possibile perdita di dati* -- se si continua questa procedura mentre si verificano le operazioni di i/o, si potrebbero perdere i dati.
+
+
+
+. Attendere che i dati presenti nella memoria cache vengano scritti sui dischi.
++
+Il LED verde cache Active (cache attiva) sul retro del controller è acceso quando i dati memorizzati nella cache devono essere scritti sui dischi. Attendere che il LED si spenga.
+
+. Dalla home page di Gestione sistema SANtricity, selezionare *Visualizza operazioni in corso*.
+. Confermare che tutte le operazioni sono state completate prima di passare alla fase successiva.
+. Spegnere entrambi gli interruttori di alimentazione sullo shelf del controller.
+. Attendere che tutti i LED sullo shelf del controller si spenga.
+. Selezionare *ricontrollare* dal Recovery Guru e confermare che nel campo *OK per rimuovere* nell'area Dettagli sia visualizzato *Sì*, a indicare che è possibile rimuovere questo componente in tutta sicurezza.
++
+I dati sullo storage array non saranno accessibili fino a quando non si sostituisce il contenitore del controller.
+
+
+
+
+
+== Fase 2: Rimozione del controller guasto (simplex)
+
+Sostituire il filtro a carboni attivi guasto con uno nuovo.
+
+
+
+=== Fase 2a: Rimozione del contenitore del controller (simplex)
+
+Rimuovere un contenitore del controller.
+
+.Fasi
+. Indossare un braccialetto ESD o adottare altre precauzioni antistatiche.
+. Etichettare ciascun cavo collegato al contenitore del controller.
+. Scollegare tutti i cavi dal contenitore del controller.
++
+
+CAUTION: Per evitare prestazioni degradate, non attorcigliare, piegare, pizzicare o salire sui cavi.
+
+. Se le porte HIC sul contenitore del controller utilizzano ricetrasmettitori SFP+, rimuovere gli SFP.
++
+Poiché è necessario rimuovere l'HIC dal contenitore del controller guasto, è necessario rimuovere eventuali SFP dalle porte HIC. Tuttavia, è possibile lasciare qualsiasi SFP installato nelle porte host della scheda base. Quando si è pronti a collegare il nuovo controller, è sufficiente spostare questi SFP nel nuovo contenitore del controller. Questo approccio è particolarmente utile se si dispone di più tipi di SFP.
+
+. Verificare che il LED cache Active (cache attiva) sul retro del controller sia spento.
++
+Il LED verde cache Active (cache attiva) sul retro del controller è acceso quando i dati memorizzati nella cache devono essere scritti sui dischi. Prima di rimuovere il contenitore del controller, è necessario attendere che questo LED si spenga.
+
++
+
+NOTE: La figura mostra un esempio di contenitore del controller. Il controller potrebbe avere un numero diverso e un tipo diverso di porte host.
+
++
+image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[28 controller dwg 2800 attn led maintt e2800]
+
++
+*(1)* _LED cache attiva_
+
+. Premere il fermo sull'impugnatura della camma fino a quando non si rilascia, quindi aprire l'impugnatura della camma a destra per rilasciare l'elemento filtrante del controller dalla scheda intermedia.
++
+image::../media/28_dwg_e2824_remove_controller_canister_simplex_maint-e2800.gif[28 dwg e2824 rimuovere il controller canister simplex maintt e2800]
+
++
+*(1)* _contenitore controller_
+
++
+*(2)* _maniglia della camma_
+
+. Utilizzando due mani e l'impugnatura della camma, estrarre il contenitore del controller dallo scaffale.
++
+
+CAUTION: Utilizzare sempre due mani per sostenere il peso di un contenitore del controller.
+
++
+Quando si rimuove il contenitore del controller, un'aletta oscilla in posizione per bloccare l'alloggiamento vuoto, contribuendo a mantenere il flusso d'aria e il raffreddamento.
+
+. Capovolgere il contenitore del controller, in modo che il coperchio rimovibile sia rivolto verso l'alto.
+. Posizionare il contenitore del controller su una superficie piana e priva di elettricità statica.
+
+
+
+
+=== Fase 2b: Rimuovere la batteria (simplex)
+
+Dopo aver rimosso il contenitore del controller dallo shelf del controller, rimuovere la batteria.
+
+.Fasi
+. Rimuovere il coperchio del contenitore del controller premendo il pulsante e facendo scorrere il coperchio.
+. Verificare che il LED verde all'interno del controller (tra la batteria e i DIMM) sia spento.
++
+Se questo LED verde è acceso, il controller sta ancora utilizzando l'alimentazione a batteria. Prima di rimuovere qualsiasi componente, è necessario attendere che il LED si spenga.
+
++
+image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[28 dwg e2800 cache interna active led maintt e2800]
+
++
+*(1)* _cache interna attiva_
+
++
+*(2)* _batteria_
+
+. Individuare il dispositivo di chiusura blu della batteria.
+. Sbloccare la batteria spingendo il dispositivo di chiusura verso il basso e lontano dal contenitore del controller.
++
+image::../media/28_dwg_e2800_remove_battery_maint-e2800.gif[28 dwg e2800 rimuovere la batteria principale e2800]
+
++
+*(1)* _dispositivo di chiusura a scatto della batteria_
+
++
+*(2)* _batteria_
+
+. Sollevare la batteria ed estrarla dal contenitore del controller.
+
+
+
+
+=== Fase 2c: Rimozione della scheda di interfaccia host (simplex)
+
+Se il contenitore del controller include una scheda di interfaccia host (HIC), rimuovere l'HIC dal contenitore del controller originale in modo da poterlo riutilizzare nel nuovo contenitore del controller.
+
+.Fasi
+. Utilizzando un cacciavite Phillips n. 1, rimuovere le viti che fissano la mascherina HIC al contenitore del controller.
++
+Sono presenti quattro viti: Una sulla parte superiore, una laterale e due sulla parte anteriore.
+
++
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[28 viti hic faceplace dwg e2800 per la manutenzione e2800]
+
+. Rimuovere la piastra anteriore dell'HIC.
+. Utilizzando le dita o un cacciavite Phillips, allentare le tre viti a testa zigrinata che fissano l'HIC alla scheda del controller.
+. Scollegare con cautela l'HIC dalla scheda del controller sollevandola e facendola scorrere all'indietro.
++
+
+CAUTION: Fare attenzione a non graffiare o urtare i componenti sul fondo dell'HIC o sulla parte superiore della scheda del controller.
+
++
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[28 dwg e2800 hic thumbwaves mainten e2800]
+
++
+*(1)* _scheda di interfaccia host_
+
++
+*(2)* _viti a testa zigrinata_
+
+. Posizionare l'HIC su una superficie priva di elettricità statica.
+
+
+
+
+== Fase 3: Installazione di un nuovo controller (simplex)
+
+Installare un nuovo elemento filtrante del controller per sostituire quello guasto.
+
+
+
+=== Fase 3a: Installazione della batteria (simplex)
+
+Installare la batteria nel contenitore del controller di ricambio. È possibile installare la batteria rimossa dal contenitore del controller originale o installare una nuova batteria ordinata.
+
+.Fasi
+. Disimballare il contenitore del controller di ricambio e riutilizzarlo su una superficie piana e priva di cariche elettrostatiche, in modo che il coperchio rimovibile sia rivolto verso l'alto.
++
+Conservare il materiale di imballaggio da utilizzare per la spedizione del contenitore del controller guasto.
+
+. Premere il pulsante del coperchio verso il basso ed estrarre il coperchio.
+. Orientare il contenitore del controller in modo che lo slot della batteria sia rivolto verso di sé.
+. Inserire la batteria nel contenitore del controller inclinandola leggermente verso il basso.
++
+Inserire la flangia metallica nella parte anteriore della batteria nello slot sul fondo del contenitore del controller e far scorrere la parte superiore della batteria sotto il piccolo perno di allineamento sul lato sinistro del contenitore.
+
+. Spostare il dispositivo di chiusura della batteria verso l'alto per fissare la batteria.
++
+Quando il dispositivo di chiusura scatta in posizione, la parte inferiore del dispositivo di chiusura si aggancia in uno slot metallico sul telaio.
+
++
+image::../media/28_dwg_e2800_insert_battery_maint-e2800.gif[28 dwg e2800 inserire la manutenzione della batteria e2800]
+
++
+*(1)* _dispositivo di chiusura a scatto della batteria_
+
++
+*(2)* _batteria_
+
+. Capovolgere il contenitore del controller per verificare che la batteria sia installata correttamente.
++
+
+CAUTION: *Possibili danni all'hardware* -- la flangia metallica sulla parte anteriore della batteria deve essere inserita completamente nello slot sul contenitore del controller (come mostrato nella prima figura). Se la batteria non è installata correttamente (come mostrato nella seconda figura), la flangia metallica potrebbe entrare in contatto con la scheda del controller, danneggiando il controller quando si applica l'alimentazione.
+
++
+** *Corretto* -- la flangia metallica della batteria è completamente inserita nello slot del controller:
++
+image:../media/28_dwg_e2800_battery_flange_ok_maint-e2800.gif[""]
+
+** *Errato* -- la flangia metallica della batteria non è inserita nello slot del controller:
++
+image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e2800.gif[""]
+
+
+
+
+
+
+
+=== Fase 3b: Installazione della scheda di interfaccia host (simplex)
+
+Se è stata rimossa una scheda di interfaccia host (HIC) dal contenitore del controller originale, installarla nel nuovo contenitore del controller.
+
+.Fasi
+. Utilizzando un cacciavite Phillips n. 1, rimuovere le quattro viti che fissano la mascherina vuota al contenitore del controller sostitutivo, quindi rimuovere la piastra frontale.
+. Allineare le tre viti a testa zigrinata sull'HIC con i fori corrispondenti sul controller e allineare il connettore sulla parte inferiore dell'HIC con il connettore di interfaccia HIC sulla scheda del controller.
++
+Fare attenzione a non graffiare o urtare i componenti sul fondo dell'HIC o sulla parte superiore della scheda del controller.
+
+. Abbassare con cautela l'HIC in posizione e inserire il connettore HIC premendo delicatamente sull'HIC.
++
+
+CAUTION: *Possibili danni alle apparecchiature* -- fare molta attenzione a non stringere il connettore a nastro dorato dei LED del controller tra l'HIC e le viti a testa zigrinata.
+
++
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[28 dwg e2800 hic thumbwaves mainten e2800]
+
++
+*(1)* _scheda di interfaccia host_
+
++
+*(2)* _viti a testa zigrinata_
+
+. Serrare manualmente le viti a testa zigrinata HIC.
++
+Non utilizzare un cacciavite per evitare di serrare eccessivamente le viti.
+
+. Utilizzando un cacciavite Phillips n. 1, fissare la piastra anteriore HIC rimossa dal contenitore del controller originale al nuovo contenitore del controller con quattro viti.
++
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[28 viti hic faceplace dwg e2800 per la manutenzione e2800]
+
+
+
+
+
+=== Fase 3c: Installare il nuovo contenitore del controller (simplex)
+
+Dopo aver installato la batteria e l'HIC, se ne è stata inizialmente installata una, è possibile installare il nuovo contenitore del controller nello shelf del controller.
+
+.Fasi
+. Reinstallare il coperchio sul contenitore del controller facendo scorrere il coperchio dal retro verso la parte anteriore fino a quando il pulsante non scatta in posizione.
+. Capovolgere il contenitore del controller, in modo che il coperchio rimovibile sia rivolto verso il basso.
+. Con la maniglia della camma in posizione aperta, far scorrere il contenitore del controller fino in fondo nello shelf del controller.
++
+image::../media/28_dwg_e2824_remove_controller_canister_simplex_maint-e2800.gif[28 dwg e2824 rimuovere il controller canister simplex maintt e2800]
+
++
+*(1)* _contenitore controller_
+
++
+*(2)* _maniglia della camma_
+
+. Spostare la maniglia della camma verso sinistra per bloccare il contenitore del controller in posizione.
+. Installare gli SFP dal controller originale nelle porte host del nuovo controller e ricollegare tutti i cavi.
++
+Se si utilizzano più protocolli host, assicurarsi di installare gli SFP nelle porte host corrette.
+
+. Determinare come assegnare un indirizzo IP al controller sostitutivo, in base al fatto che la porta Ethernet 1 (indicata con P1) sia collegata a una rete con un server DHCP e che tutti i dischi siano protetti.
++
+|===
+| Utilizzo del server DHCP | Tutti i dischi sono protetti? | Fasi 
+
+
+ a| 
+Sì
+ a| 
+No
+ a| 
+Il nuovo controller ottiene l'indirizzo IP dal server DHCP. Questo valore potrebbe essere diverso dall'indirizzo IP del controller originale. Individuare l'indirizzo MAC sull'etichetta sul retro del controller sostitutivo e contattare l'amministratore di rete per ottenere l'indirizzo IP assegnato dal server DHCP.
+
+
+
+ a| 
+Sì
+ a| 
+Sì
+ a| 
+Il nuovo controller ottiene l'indirizzo IP dal server DHCP. Questo valore potrebbe essere diverso dall'indirizzo IP del controller originale. Individuare l'indirizzo MAC sull'etichetta sul retro del controller sostitutivo e contattare l'amministratore di rete per ottenere l'indirizzo IP assegnato dal server DHCP. È quindi possibile sbloccare i dischi utilizzando l'interfaccia della riga di comando.
+
+
+
+ a| 
+No
+ a| 
+No
+ a| 
+Il nuovo controller adotta l'indirizzo IP del controller rimosso.
+
+
+
+ a| 
+No
+ a| 
+Sì
+ a| 
+È necessario impostare manualmente l'indirizzo IP del nuovo controller. È possibile riutilizzare l'indirizzo IP del vecchio controller o utilizzare un nuovo indirizzo IP. Quando il controller dispone di un indirizzo IP, è possibile sbloccare i dischi utilizzando l'interfaccia della riga di comando. Una volta sbloccati i dischi, il nuovo controller riutilizza automaticamente l'indirizzo IP del controller originale.
+
+|===
+
+
+
+
+== Fase 4: Sostituzione completa del controller (simplex)
+
+Accendere lo shelf del controller, raccogliere i dati di supporto e riprendere le operazioni.
+
+.Fasi
+. Accendere i due interruttori di alimentazione sul retro dello shelf del controller.
++
+** Non spegnere gli interruttori di alimentazione durante il processo di accensione, che in genere richiede 90 secondi o meno.
+** Le ventole di ogni shelf sono molto rumorose al primo avvio. Il rumore forte durante l'avvio è normale.
+
+
+. All'avvio del controller, controllare i LED del controller e il display a sette segmenti.
++
+** Il display a sette segmenti mostra la sequenza ripetuta *OS*, *SD*, *_blank_* per indicare che il controller sta eseguendo l'elaborazione SOD (Start-of-day). Una volta avviato correttamente un controller, il display a sette segmenti dovrebbe visualizzare l'ID del vassoio.
+** Il LED di attenzione ambra sul controller si accende e poi si spegne, a meno che non si verifichi un errore.
+** I LED verdi del collegamento host si accendono.
++
+
+NOTE: La figura mostra un esempio di contenitore del controller. Il controller potrebbe avere un numero diverso e un tipo diverso di porte host.
+
++
+image::../media/28_dwg_attn_led_7s_display_maint-e2800.gif[28 dwg attn led 7s display maintt e2800]
+
++
+*(1)* _LED di attenzione (ambra)_
+
++
+*(2)* _Display a sette segmenti_
+
++
+*(3)* _LED collegamento host_
+
+
+
+. Se uno dei LED attenzione dello shelf di controller rimane acceso, verificare che il contenitore del controller sia stato installato correttamente e che tutti i cavi siano inseriti correttamente. Reinstallare il contenitore del controller, se necessario.
++
+
+NOTE: Se non si riesce a risolvere il problema, contattare il supporto tecnico.
+
+. Se lo storage array dispone di dischi sicuri, importare la chiave di sicurezza del disco; in caso contrario, passare alla fase successiva. Seguire la procedura appropriata riportata di seguito per un array di storage con tutti i dischi sicuri o una combinazione di dischi sicuri e non sicuri.
++
+
+NOTE: _Dischi non sicuri_ sono dischi non assegnati, dischi hot spare globali o dischi che fanno parte di un gruppo di volumi o di un pool non protetti dalla funzione Drive Security. _Dischi sicuri_ sono dischi assegnati che fanno parte di un gruppo di volumi o di un pool di dischi protetti mediante Drive Security.
+
++
+** *Solo dischi protetti (non dischi non sicuri)*:
++
+... Accedere all'interfaccia a riga di comando (CLI) dello storage array.
+... Immettere il seguente comando per importare la chiave di sicurezza:
++
+[listing]
+----
+import storageArray securityKey file="C:/file.slk"
+passPhrase="passPhrase";
+----
++
+dove:
+
++
+**** `C:/file.slk` rappresenta il percorso della directory e il nome della chiave di sicurezza del disco
+**** `passPhrase` È la password necessaria per sbloccare il file dopo l'importazione della chiave di sicurezza, il controller si riavvia e il nuovo controller adotta le impostazioni salvate per l'array di storage.
+
+
+... Passare alla fase successiva per verificare che il nuovo controller sia ottimale.
+
+
+** *Combinazione di dischi sicuri e non sicuri*:
++
+... Raccogliere il bundle di supporto e aprire il profilo dello storage array.
+... Individuare e registrare tutte le posizioni delle unità non sicure, che si trovano nel pacchetto di supporto.
+... Spegnere il sistema.
+... Rimuovere le unità non sicure.
+... Sostituire il controller.
+... Accendere il sistema e attendere che il display a sette segmenti visualizzi il numero del vassoio.
+... Da Gestore di sistema di SANtricity, selezionare menu:Impostazioni[sistema].
+... Nella sezione Security Key Management (Gestione chiave di sicurezza), selezionare *Create/Change Key* (Crea/Cambia chiave) per creare una nuova chiave di sicurezza.
+... Selezionare *Unlock Secure Drives* per importare la chiave di sicurezza salvata.
+... Eseguire `set allDrives nativeState` Comando CLI.
++
+Il controller si riavvia automaticamente.
+
+... Attendere che il controller si avvii e che il display a sette segmenti visualizzi il numero del vassoio o un L5 lampeggiante.
+... Spegnere il sistema.
+... Reinstallare le unità non sicure.
+... Ripristinare il controller utilizzando Gestione di sistema di SANtricity.
+... Accendere il sistema e attendere che il display a sette segmenti visualizzi il numero del vassoio.
+... Passare alla fase successiva per verificare che il nuovo controller sia ottimale.
+
+
+
+
+. Da Gestore di sistema di SANtricity, verificare che il nuovo controller sia ottimale.
++
+.. Selezionare *hardware*.
+.. Per lo shelf del controller, selezionare *Mostra retro dello shelf*.
+.. Selezionare il contenitore del controller sostituito.
+.. Selezionare *Visualizza impostazioni*.
+.. Verificare che lo stato * del controller sia ottimale.
+.. Se lo stato non è ottimale, evidenziare il controller e selezionare *posiziona online*.
+
+
+. Raccogliere i dati di supporto per lo storage array utilizzando Gestione di sistema di SANtricity.
++
+.. Selezionare menu:Support[Support Center > *Diagnostics].
+.. Selezionare *Collect Support Data*.
+.. Fare clic su *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *support-data.7z*.
+
+
+
+
+
+.Quali sono le prossime novità?
+La sostituzione del controller è completata. È possibile riprendere le normali operazioni.

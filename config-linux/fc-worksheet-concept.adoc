@@ -1,0 +1,126 @@
+---
+permalink: config-linux/fc-worksheet-concept.html 
+sidebar: sidebar 
+keywords: FC worksheet Linux, express linux configuration, software configuration, linux host, 
+summary: Utilizzare questo foglio di lavoro per registrare le informazioni di configurazione dello storage FC. 
+---
+= Registrare la configurazione FC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile generare e stampare un PDF di questa pagina, quindi utilizzare il seguente foglio di lavoro per registrare le informazioni di configurazione dello storage FC. Queste informazioni sono necessarie per eseguire le attività di provisioning.
+
+La figura mostra un host collegato a un array di storage e-Series in due zone. Una zona è indicata dalla linea blu, mentre l'altra è indicata dalla linea rossa. Ogni singola porta ha due percorsi per lo storage (uno per ciascun controller).
+
+image::../media/port_identifiers_host_and_target_conf-lin.gif[identificatori di porta host e lin di configurazione di destinazione]
+
+
+
+== Identificatori host
+
+|===
+| N. didascalia | Connessioni porta host (iniziatore) | PN. WWN 
+
+
+ a| 
+1
+ a| 
+Host
+ a| 
+_non applicabile_
+
+
+
+ a| 
+2
+ a| 
+Porta host 0 a switch FC zona 0
+ a| 
+
+
+
+ a| 
+7
+ a| 
+Dalla porta host 1 allo switch FC zona 1
+ a| 
+
+|===
+
+
+== Identificatori di destinazione
+
+|===
+| N. didascalia | Connessioni delle porte (di destinazione) degli array controller | PN. WWN 
+
+
+ a| 
+3
+ a| 
+Switch
+ a| 
+_non applicabile_
+
+
+
+ a| 
+6
+ a| 
+Controller di array (destinazione)
+ a| 
+_non applicabile_
+
+
+
+ a| 
+5
+ a| 
+Dal controller A, dalla porta 1 allo switch FC 1
+ a| 
+
+
+
+ a| 
+9
+ a| 
+Dal controller A, dalla porta 2 allo switch FC 2
+ a| 
+
+
+
+ a| 
+4
+ a| 
+Dal controller B, porta 1 allo switch FC 1
+ a| 
+
+
+
+ a| 
+8
+ a| 
+Controller B, dalla porta 2 allo switch FC 2
+ a| 
+
+|===
+
+
+== Host di mappatura
+
+|===
+
+
+ a| 
+Nome host di mapping
+ a| 
+
+
+
+ a| 
+Tipo di sistema operativo host
+ a| 
+
+|===

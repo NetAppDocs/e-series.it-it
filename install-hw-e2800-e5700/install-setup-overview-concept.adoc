@@ -1,0 +1,16 @@
+---
+permalink: install-hw-e2800-e5700/install-setup-overview-concept.html 
+sidebar: sidebar 
+keywords: E2800, E5700, installation process overview 
+summary: 'Esaminare la procedura per l"installazione e la configurazione di E2800 e E5700.' 
+---
+= Panoramica
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di installare e configurare il nuovo sistema storage, acquisire familiarità con il processo di installazione:
+
+image::../media/ef600_isi_workflow_v_2_inst-hw-e2800-e5700.bmp[ef600 isi workflow v 2 inst hw e2800 e5700]

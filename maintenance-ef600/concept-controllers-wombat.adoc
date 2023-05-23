@@ -1,0 +1,14 @@
+---
+permalink: maintenance-ef600/concept-controllers-wombat.html 
+sidebar: sidebar 
+keywords: controller, board, firmware, software, control, drive, implement, system, manager, function, ef300, ef600, shelf 
+summary: Un controller è costituito da una scheda, firmware e software. Controlla i dischi e implementa le funzioni di System Manager. Questa sezione descrive come sostituire un singolo controller o entrambi i controller nello shelf di controller EF300 o EF600. 
+---
+= Controller
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un controller è costituito da una scheda, firmware e software. Controlla i dischi e implementa le funzioni di System Manager. Questa sezione descrive come sostituire un singolo controller o entrambi i controller nello shelf di controller EF300 o EF600.

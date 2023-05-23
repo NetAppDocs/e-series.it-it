@@ -1,0 +1,68 @@
+---
+permalink: maintenance-ef600/index.html 
+sidebar: sidebar 
+keywords: EF300 maintenance, EF600 maintenance, repairing EF300, repairing EF600, replace EF300 components, replace EF600 components 
+summary: 'Manutenzione dell"hardware EF300 ed EF600' 
+---
+= Manutenzione dell'hardware EF300 e EF600
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per i sistemi storage EF300 ed EF600, è possibile eseguire procedure di manutenzione sui seguenti componenti.
+
+
+
+== Batterie
+
+Una batteria è inclusa in un controller e conserva i dati memorizzati nella cache in caso di interruzione dell'alimentazione CA.
+
+
+
+== Controller
+
+Un controller è costituito da una scheda, firmware e software. Controlla i dischi e implementa le funzioni di Gestore di sistema di SANtricity.
+
+
+
+== DIMM
+
+È necessario sostituire un modulo DIMM (Dual in-line Memory Module) quando è presente una mancata corrispondenza di memoria o se si verifica un guasto al modulo DIMM.
+
+
+
+== Dischi
+
+Un disco è un dispositivo che fornisce i supporti di storage fisici per i dati.
+
+
+
+== Ventole
+
+Ogni shelf o shelf di controller EF300 o EF600 include cinque ventole per il raffreddamento del controller.
+
+
+
+== HICS (host Interface Card)
+
+Una scheda di interfaccia host (HIC) deve essere installata all'interno di un contenitore del controller. Il controller EF600 include porte host sull'HIC opzionale. Le porte host integrate nell'HIC sono chiamate porte HIC.
+
+
+
+== Protocollo della porta host
+
+È possibile convertire il protocollo di un host in un protocollo diverso in modo da stabilire compatibilità e comunicazione.
+
+
+
+== Alimentatori
+
+Un alimentatore fornisce una fonte di alimentazione ridondante in uno shelf di controller.
+
+
+
+== Schede di espansione SAS
+
+È possibile installare una scheda di espansione SAS all'interno di un contenitore di controller. Il controller EF300 supporta l'espansione SAS.

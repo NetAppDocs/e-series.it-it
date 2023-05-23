@@ -1,0 +1,464 @@
+---
+permalink: maintenance-e2800/controllers-duplex-supertask-task.html 
+sidebar: sidebar 
+keywords: replace E2800 controller, replacing E2800 controller, duplex controller replacement, E2800, E2824, E2860, EF280, E-Series, eseries 
+summary: Sostituire un contenitore del controller in una configurazione duplex. 
+---
+= Sostituire il controller nella configurazione duplex E2800
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile sostituire un contenitore di controller in una configurazione duplex (a due controller) per i seguenti shelf di controller:
+
+* Shelf di controller E2812
+* Shelf di controller E2824
+* Shelf di controller E2860
+* Flash array EF280
+
+
+.A proposito di questa attività
+Ogni contenitore di controller contiene una scheda controller, una batteria e una scheda di interfaccia host (HIC) opzionale. Quando si sostituisce un contenitore del controller, è necessario rimuovere la batteria e l'HIC, se installato, dal contenitore del controller originale e installarli nel contenitore del controller sostitutivo.
+
+.Di cosa hai bisogno
+* Un contenitore del controller sostitutivo con lo stesso numero di parte del contenitore del controller che si sta sostituendo. (Vedere il passaggio 1 per verificare il codice del ricambio).
+* Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
+* Cacciavite Phillips n. 1.
+* Etichette per identificare ciascun cavo collegato al contenitore del controller.
+* Stazione di gestione con un browser che può accedere a Gestione di sistema SANtricity per il controller. Per aprire l'interfaccia di System Manager, puntare il browser sul nome di dominio o sull'indirizzo IP del controller.
+
+
+
+
+== Fase 1: Preparazione alla sostituzione del controller (duplex)
+
+Preparare la sostituzione del controller verificando che il contenitore del controller sostitutivo disponga del codice FRU corretto, eseguendo il backup della configurazione e raccogliendo i dati di supporto. Se il controller è ancora online, è necessario portarlo offline.
+
+.Fasi
+. Disimballare il nuovo contenitore del controller e riutilizzarlo su una superficie piana e priva di elettricità statica.
++
+Conservare il materiale di imballaggio da utilizzare per la spedizione del contenitore del controller guasto.
+
+. Individuare le etichette dell'indirizzo MAC e del numero di parte della FRU sul retro del contenitore del controller.
++
+image::../media/28_dwg_e2800_labels_maint-e2800.gif[28 etichette dwg e2800 principali e2800]
+
++
+*(1)* _MAC address:_ Indirizzo MAC per la porta di gestione 1 ("`P1`"). Se si è utilizzato DHCP per ottenere l'indirizzo IP del controller originale, è necessario questo indirizzo per connettersi al nuovo controller.
+
++
+*(2)* _numero di parte FRU:_ questo numero deve corrispondere al numero di parte di ricambio per il controller attualmente installato.
+
+. Da Gestore di sistema di SANtricity, individuare il numero di parte di ricambio del contenitore del controller che si sta sostituendo.
++
+Quando un controller presenta un guasto e deve essere sostituito, il codice del ricambio viene visualizzato nell'area Details (Dettagli) del Recovery Guru. Se è necessario trovare questo numero manualmente, attenersi alla seguente procedura:
+
++
+.. Selezionare *hardware*.
+.. Individuare lo shelf del controller, contrassegnato dall'icona del controller image:../media/sam1130_ss_hardware_controller_icon_maint-e2800.gif[""].
+.. Fare clic sull'icona del controller.
+.. Selezionare il controller e fare clic su *Avanti*.
+.. Nella scheda *base*, annotare il *numero di parte di ricambio* del controller.
+
+
+. Verificare che il numero di parte sostitutivo del controller guasto sia lo stesso del numero di parte FRU del controller sostitutivo.
++
+
+CAUTION: *Possibile perdita di accesso ai dati* -- se i due numeri di parte non sono gli stessi, non tentare questa procedura. Inoltre, se il contenitore del controller guasto include una scheda di interfaccia host (HIC), è necessario installare tale HIC nel nuovo contenitore del controller. La presenza di controller non corrispondenti o HICS causerà il blocco del nuovo controller quando lo si porta online.
+
+. Eseguire il backup del database di configurazione dello storage array utilizzando Gestione di sistema di SANtricity.
++
+Se si verifica un problema durante la rimozione di un controller, è possibile utilizzare il file salvato per ripristinare la configurazione. Il sistema salva lo stato corrente del database di configurazione RAID, che include tutti i dati per i gruppi di volumi e i pool di dischi sul controller.
+
++
+** Da System Manager:
++
+... Selezionare menu:Support[Support Center > Diagnostics] (supporto tecnico > Diagnostica).
+... Selezionare *Collect Configuration Data* (raccolta dati di configurazione).
+... Fare clic su *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+** In alternativa, è possibile eseguire il backup del database di configurazione utilizzando il seguente comando CLI:
++
+`save storageArray dbmDatabase sourceLocation=onboard contentType=all file="filename";`
+
+
+
+. Raccogliere i dati di supporto per lo storage array utilizzando Gestione di sistema di SANtricity.
++
+Se si verifica un problema durante la rimozione di un controller, è possibile utilizzare il file salvato per risolvere il problema. Il sistema salva i dati di inventario, stato e performance relativi all'array di storage in un singolo file.
+
++
+.. Selezionare menu:Support[Support Center > Diagnostics] (supporto tecnico > Diagnostica).
+.. Selezionare *Collect Support Data*.
+.. Fare clic su *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *support-data.7z*.
+
+
+
+. Se il controller non è già offline, portalo offline usando Gestione di sistema di SANtricity.
++
+** Da Gestore di sistema di SANtricity:
++
+... Selezionare *hardware*.
+... Se la figura mostra i dischi, selezionare *Mostra retro dello shelf* per visualizzare i controller.
+... Selezionare il controller che si desidera mettere offline.
+... Dal menu di scelta rapida, selezionare *posiziona offline* e confermare che si desidera eseguire l'operazione.
++
+
+NOTE: Se si accede a Gestore di sistema di SANtricity utilizzando il controller che si sta tentando di mettere offline, viene visualizzato il messaggio Gestione di sistema di SANtricity non disponibile. Selezionare *connessione a una connessione di rete alternativa* per accedere automaticamente a Gestione di sistema SANtricity utilizzando l'altro controller.
+
+
+
+** In alternativa, è possibile disattivare i controller utilizzando i seguenti comandi CLI:
++
+*Per il controller A:* `set controller [a] availability=offline`
+
++
+*Per il controller B:* `set controller [b] availability=offline`
+
+
+
+. Attendere che Gestore di sistema di SANtricity aggiorni lo stato del controller su offline.
++
+
+CAUTION: Non iniziare altre operazioni fino a quando lo stato non è stato aggiornato.
+
+. Selezionare *ricontrollare* dal Recovery Guru e confermare che nel campo *OK per rimuovere* nell'area Dettagli sia visualizzato *Sì*, a indicare che è possibile rimuovere questo componente in tutta sicurezza.
+
+
+
+
+== Fase 2: Rimozione del controller guasto (duplex)
+
+Sostituire il filtro a carboni attivi guasto con uno nuovo.
+
+
+
+=== Fase 2a: Rimozione del contenitore del controller (duplex)
+
+Rimuovere il contenitore del controller guasto in modo da poterlo sostituire con uno nuovo.
+
+.Fasi
+. Indossare un braccialetto ESD o adottare altre precauzioni antistatiche.
+. Etichettare ciascun cavo collegato al contenitore del controller.
+. Scollegare tutti i cavi dal contenitore del controller.
++
+
+CAUTION: Per evitare prestazioni degradate, non attorcigliare, piegare, pizzicare o salire sui cavi.
+
+. Se il contenitore del controller dispone di un HIC che utilizza ricetrasmettitori SFP+, rimuovere gli SFP.
++
+Poiché è necessario rimuovere l'HIC dal contenitore del controller guasto, è necessario rimuovere eventuali SFP dalle porte HIC. Tuttavia, è possibile lasciare qualsiasi SFP installato nelle porte host della scheda base. Quando si ricollegano i cavi, è possibile spostare questi SFP nel nuovo contenitore del controller.
+
+. Verificare che il LED cache Active (cache attiva) sul retro del controller sia spento.
+. Premere il fermo sull'impugnatura della camma fino a quando non si rilascia, quindi aprire l'impugnatura della camma a destra per rilasciare l'elemento filtrante del controller dallo scaffale.
++
+La figura seguente è un esempio di shelf di controller E2812, shelf di controller E2824 o array flash EF280:
+
++
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e2824 rimuovere la manutenzione del contenitore del controller e2800]
+
++
+*(1)* _contenitore controller_
+
++
+*(2)* _maniglia della camma_
+
++
+La figura seguente è un esempio di shelf di controller E2860:
+
++
+image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[28 dwg e2860 add controller canister maintt e2800]
+
++
+*(1)* _contenitore controller_
+
++
+*(2)* _maniglia della camma_
+
+. Utilizzando due mani e l'impugnatura della camma, estrarre il contenitore del controller dallo scaffale.
++
+
+CAUTION: Utilizzare sempre due mani per sostenere il peso di un contenitore del controller.
+
++
+Se si rimuove il contenitore del controller da uno shelf di controller E2812, uno shelf di controller E2824 o un array flash EF280, un'aletta si sposta in posizione per bloccare l'alloggiamento vuoto, contribuendo a mantenere il flusso d'aria e il raffreddamento.
+
+. Capovolgere il contenitore del controller, in modo che il coperchio rimovibile sia rivolto verso l'alto.
+. Posizionare il contenitore del controller su una superficie piana e priva di elettricità statica.
+
+
+
+
+=== Fase 2b: Rimozione della batteria (duplex)
+
+Rimuovere la batteria per installare il nuovo controller.
+
+.Fasi
+. Rimuovere il coperchio del contenitore del controller premendo il pulsante e facendo scorrere il coperchio.
+. Verificare che il LED verde all'interno del controller (tra la batteria e i DIMM) sia spento.
++
+Se questo LED verde è acceso, il controller sta ancora utilizzando l'alimentazione a batteria. Prima di rimuovere qualsiasi componente, è necessario attendere che il LED si spenga.
+
++
+image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[28 dwg e2800 cache interna active led maintt e2800]
+
++
+*(1)* _LED cache interna attiva_
+
++
+*(2)* _batteria_
+
+. Individuare il dispositivo di chiusura blu della batteria.
+. Sbloccare la batteria spingendo il dispositivo di chiusura verso il basso e lontano dal contenitore del controller.
++
+image::../media/28_dwg_e2800_remove_battery_maint-e2800.gif[28 dwg e2800 rimuovere la batteria principale e2800]
+
++
+*(1)* _dispositivo di chiusura a scatto della batteria_
+
++
+*(2)* _batteria_
+
+. Sollevare la batteria ed estrarla dal contenitore del controller.
+
+
+
+
+=== Fase 2c: Rimozione della scheda di interfaccia host (duplex)
+
+Se il contenitore del controller include una scheda di interfaccia host (HIC), è necessario rimuovere l'HIC dal contenitore del controller originale, in modo da poterlo riutilizzare nel nuovo contenitore del controller.
+
+.Fasi
+. Utilizzando un cacciavite Phillips n. 1, rimuovere le viti che fissano la mascherina HIC al contenitore del controller.
++
+Sono presenti quattro viti: Una sulla parte superiore, una laterale e due sulla parte anteriore.
+
++
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[28 viti hic faceplace dwg e2800 per la manutenzione e2800]
+
+. Rimuovere la piastra anteriore dell'HIC.
+. Utilizzando le dita o un cacciavite Phillips, allentare le tre viti a testa zigrinata che fissano l'HIC alla scheda del controller.
+. Scollegare con cautela l'HIC dalla scheda del controller sollevandola e facendola scorrere all'indietro.
++
+
+CAUTION: Fare attenzione a non graffiare o urtare i componenti sul fondo dell'HIC o sulla parte superiore della scheda del controller.
+
++
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[28 dwg e2800 hic thumbwaves mainten e2800]
+
++
+*(1)* _scheda di interfaccia host (HIC)_
+
++
+*(2)* _viti a testa zigrinata_
+
+. Posizionare l'HIC su una superficie priva di elettricità statica.
+
+
+
+
+== Fase 3: Installazione di un nuovo controller (duplex)
+
+Installare un nuovo elemento filtrante del controller per sostituire quello guasto. Eseguire questa operazione solo se lo storage array dispone di due controller (configurazione duplex).
+
+
+
+=== Fase 3a: Installazione della batteria (duplex)
+
+È necessario installare la batteria nel contenitore del controller sostitutivo. È possibile installare la batteria rimossa dal contenitore del controller originale o installare una nuova batteria ordinata.
+
+.Fasi
+. Capovolgere il contenitore del controller sostitutivo, in modo che il coperchio rimovibile sia rivolto verso l'alto.
+. Premere il pulsante del coperchio verso il basso ed estrarre il coperchio.
+. Orientare il contenitore del controller in modo che lo slot della batteria sia rivolto verso di sé.
+. Inserire la batteria nel contenitore del controller inclinandola leggermente verso il basso.
++
+Inserire la flangia metallica nella parte anteriore della batteria nello slot sul fondo del contenitore del controller e far scorrere la parte superiore della batteria sotto il piccolo perno di allineamento sul lato sinistro del contenitore.
+
+. Spostare il dispositivo di chiusura della batteria verso l'alto per fissare la batteria.
++
+Quando il dispositivo di chiusura scatta in posizione, la parte inferiore del dispositivo di chiusura si aggancia in uno slot metallico sul telaio.
+
++
+image::../media/28_dwg_e2800_insert_battery_maint-e2800.gif[28 dwg e2800 inserire la manutenzione della batteria e2800]
+
++
+*(1)* _dispositivo di chiusura a scatto della batteria_
+
++
+*(2)* _batteria_
+
+. Capovolgere il contenitore del controller per verificare che la batteria sia installata correttamente.
++
+
+CAUTION: *Possibili danni all'hardware* -- la flangia metallica sulla parte anteriore della batteria deve essere inserita completamente nello slot sul contenitore del controller (come mostrato nella prima figura). Se la batteria non è installata correttamente (come mostrato nella seconda figura), la flangia metallica potrebbe entrare in contatto con la scheda del controller, danneggiando il controller quando si applica l'alimentazione.
+
++
+** *Corretto* -- la flangia metallica della batteria è completamente inserita nello slot del controller:
+
+
++
+image:../media/28_dwg_e2800_battery_flange_ok_maint-e2800.gif[""]
+
++
+** *Errato* -- la flangia metallica della batteria non è inserita nello slot del controller:
+
+
++
+image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e2800.gif[""]
+
+
+
+
+
+=== Fase 3b: Installazione della scheda di interfaccia host (duplex)
+
+Se è stato rimosso un HIC dal contenitore del controller originale, è necessario installarlo nel nuovo contenitore del controller.
+
+.Fasi
+. Utilizzando un cacciavite Phillips n. 1, rimuovere le quattro viti che fissano la mascherina vuota al contenitore del controller sostitutivo, quindi rimuovere la piastra frontale.
+. Allineare le tre viti a testa zigrinata sull'HIC con i fori corrispondenti sul controller e allineare il connettore sulla parte inferiore dell'HIC con il connettore di interfaccia HIC sulla scheda del controller.
++
+Fare attenzione a non graffiare o urtare i componenti sul fondo dell'HIC o sulla parte superiore della scheda del controller.
+
+. Abbassare con cautela l'HIC in posizione e inserire il connettore HIC premendo delicatamente sull'HIC.
++
+
+CAUTION: *Possibili danni alle apparecchiature* -- fare molta attenzione a non stringere il connettore a nastro dorato dei LED del controller tra l'HIC e le viti a testa zigrinata.
+
++
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[28 dwg e2800 hic thumbwaves mainten e2800]
+
++
+*(1)* _scheda di interfaccia host (HIC)_
+
++
+*(2)* _viti a testa zigrinata_
+
+. Serrare manualmente le viti a testa zigrinata HIC.
++
+Non utilizzare un cacciavite per evitare di serrare eccessivamente le viti.
+
+. Utilizzando un cacciavite Phillips n. 1, fissare la piastra anteriore HIC rimossa dal contenitore del controller originale al nuovo contenitore del controller con quattro viti.
++
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[28 viti hic faceplace dwg e2800 per la manutenzione e2800]
+
+
+
+
+
+=== Fase 3c: Installare il nuovo contenitore del controller (duplex)
+
+Dopo aver installato la batteria e la scheda di interfaccia host (HIC), se inizialmente installata, è possibile installare il nuovo contenitore del controller nello shelf del controller.
+
+.Fasi
+. Reinstallare il coperchio sul contenitore del controller facendo scorrere il coperchio dal retro verso la parte anteriore fino a quando il pulsante non scatta in posizione.
+. Capovolgere il contenitore del controller, in modo che il coperchio rimovibile sia rivolto verso il basso.
+. Con la maniglia della camma in posizione aperta, far scorrere il contenitore del controller fino in fondo nello shelf del controller.
++
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e2824 rimuovere la manutenzione del contenitore del controller e2800]
+
++
+*(1)* _contenitore controller_
+
++
+*(2)* _maniglia della camma_
+
++
+image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[28 dwg e2860 add controller canister maintt e2800]
+
++
+*(1)* _contenitore controller_
+
++
+*(2)* _maniglia della camma_
+
+. Spostare la maniglia della camma verso sinistra per bloccare il contenitore del controller in posizione.
+. Installare gli SFP dal controller originale nelle porte host del nuovo controller e ricollegare tutti i cavi.
++
+Se si utilizzano più protocolli host, assicurarsi di installare gli SFP nelle porte host corrette.
+
+. Se il controller originale utilizzava DHCP per l'indirizzo IP, individuare l'indirizzo MAC sull'etichetta sul retro del controller sostitutivo. Chiedere all'amministratore di rete di associare il DNS/rete e l'indirizzo IP del controller rimosso con l'indirizzo MAC del controller sostitutivo.
++
+
+NOTE: Se il controller originale non ha utilizzato DHCP per l'indirizzo IP, il nuovo controller adotterà l'indirizzo IP del controller rimosso.
+
+
+
+
+
+== Fase 4: Sostituzione completa del controller (duplex)
+
+Posizionare il controller online, raccogliere i dati di supporto e riprendere le operazioni.
+
+.Fasi
+. All'avvio del controller, controllare i LED del controller e il display a sette segmenti.
++
+Quando la comunicazione con l'altro controller viene ristabilita:
+
++
+** Il display a sette segmenti mostra la sequenza ripetuta *OS*, *OL*, *_blank_* per indicare che il controller è offline.
+** Il LED di attenzione di colore ambra rimane acceso.
+** I LED del collegamento host potrebbero essere accesi, lampeggianti o spenti, a seconda dell'interfaccia host.image:../media/28_dwg_attn_led_7s_display_maint-e2800.gif[""]
++
+*(1)* _LED di attenzione (ambra)_
+
++
+*(2)* _Display a sette segmenti_
+
++
+*(3)* _LED collegamento host_
+
+
+
+. Controllare i codici sul display a sette segmenti del controller quando torna online. Se sul display viene visualizzata una delle seguenti sequenze di ripetizione, rimuovere immediatamente il controller.
++
+** *OE*, *L0*, *_blank_* (controller non corrispondenti)
+** *OE*, *L6*, *_blank_* (HIC non supportato)
++
+
+CAUTION: *Possibile perdita di accesso ai dati* -- se il controller appena installato mostra uno di questi codici e l'altro controller viene resettato per qualsiasi motivo, anche il secondo controller potrebbe bloccarsi.
+
+
+
+. Quando il controller torna in linea, verificare che lo stato sia ottimale e controllare i LED di attenzione dello shelf di controller.
++
+Se lo stato non è ottimale o se uno dei LED attenzione è acceso, verificare che tutti i cavi siano inseriti correttamente e che il contenitore del controller sia installato correttamente. Se necessario, rimuovere e reinstallare il contenitore del controller.
+
++
+
+NOTE: Se non si riesce a risolvere il problema, contattare il supporto tecnico.
+
+. Se necessario, ridistribuire tutti i volumi al proprietario preferito utilizzando Gestione di sistema di SANtricity.
++
+.. Selezionare menu:Storage[Volumes] (Storage[volumi]).
+.. Selezionare il menu:More[redistribuisci volumi].
+
+
+. Fare clic su menu:hardware[supporto > Centro aggiornamenti] per verificare che sia installata la versione più recente del software SANtricity OS (firmware del controller).
++
+Se necessario, installare la versione più recente.
+
+. Raccogliere i dati di supporto per lo storage array utilizzando Gestione di sistema di SANtricity.
++
+.. Selezionare menu:Support[Support Center > Diagnostics] (supporto tecnico > Diagnostica).
+.. Selezionare *Collect Support Data*.
+.. Fare clic su *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *support-data.7z*.
+
+
+
+
+
+.Quali sono le prossime novità?
+La sostituzione del controller è completata. È possibile riprendere le normali operazioni.

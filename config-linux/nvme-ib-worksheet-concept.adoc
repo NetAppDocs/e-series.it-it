@@ -1,0 +1,237 @@
+---
+permalink: config-linux/nvme-ib-worksheet-concept.html 
+sidebar: sidebar 
+keywords: NVMe over Infiniband worksheet Linux, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Utilizzare questo foglio di lavoro per registrare le informazioni di configurazione dello storage NVMe su Infiniband. 
+---
+= Registra la tua configurazione NVMe over IB
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile generare e stampare un PDF di questa pagina, quindi utilizzare il seguente foglio di lavoro per registrare le informazioni di configurazione dello storage NVMe su InfiniBand. Queste informazioni sono necessarie per eseguire le attività di provisioning.
+
+
+
+== Identificatori host
+
+
+NOTE: L'iniziatore software NQN viene determinato durante l'attività.
+
+Individuare e documentare l'NQN iniziatore da ciascun host. L'NQN si trova generalmente nel file /etc/nvme/hostnqn.
+
+|===
+| N. didascalia | Connessioni alla porta host | NQN host 
+
+
+ a| 
+1
+ a| 
+Host (iniziatore) 1
+ a| 
+
+
+
+ a| 
+n/a.
+ a| 
+ a| 
+
+
+
+ a| 
+n/a.
+ a| 
+ a| 
+
+
+
+ a| 
+n/a.
+ a| 
+ a| 
+
+
+
+ a| 
+n/a.
+ a| 
+ a| 
+
+|===
+
+
+== Configurazione consigliata
+
+In una topologia a connessione diretta, uno o più host sono collegati direttamente al sottosistema. Nella versione SANtricity OS 11.50, supportiamo una singola connessione da ciascun host a un controller del sottosistema, come mostrato di seguito. In questa configurazione, una porta HCA (host Channel Adapter) di ciascun host deve trovarsi sulla stessa subnet della porta del controller e-Series a cui è collegato, ma su una subnet diversa dall'altra porta HCA.
+
+image::../media/nvmeof_direct_connect.gif[nvmeof direct connect]
+
+
+
+== NQN di destinazione
+
+Documentare l'NQN di destinazione per lo storage array. Queste informazioni verranno utilizzate in xref:nvme-ib-configure-storage-connections-task.adoc[Configurare le connessioni NVMe dell'array di storage su InfiniBand].
+
+Individuare il nome NQN dell'array di storage utilizzando SANtricity: *Array di storage* > *NVMe su Infiniband* > *Gestisci impostazioni*. Queste informazioni potrebbero essere necessarie quando si creano sessioni NVMe su InfiniBand da sistemi operativi che non supportano il rilevamento delle destinazioni di invio.
+
+|===
+| N. didascalia | Nome array | IQN di destinazione 
+
+
+ a| 
+6
+ a| 
+Controller di array (destinazione)
+ a| 
+
+|===
+
+
+== Configurazione di rete
+
+Documentare la configurazione di rete che verrà utilizzata per gli host e lo storage sul fabric InfiniBand. Queste istruzioni presuppongono che vengano utilizzate due subnet per la ridondanza completa.
+
+L'amministratore di rete può fornire le seguenti informazioni. Queste informazioni vengono utilizzate nell'argomento, xref:nvme-ib-configure-storage-connections-task.adoc[Configurare le connessioni NVMe dell'array di storage su InfiniBand].
+
+
+
+=== Subnet A
+
+Definire la subnet da utilizzare.
+
+|===
+| Indirizzo di rete | Netmask 
+
+
+ a| 
+ a| 
+
+|===
+Documentare gli NQN che devono essere utilizzati dalle porte dell'array e da ciascuna porta host.
+
+|===
+| N. didascalia | Connessioni delle porte (di destinazione) degli array controller | NQN 
+
+
+ a| 
+3
+ a| 
+Switch
+ a| 
+_non applicabile_
+
+
+
+ a| 
+5
+ a| 
+Controller A, porta 1
+ a| 
+
+
+
+ a| 
+4
+ a| 
+Controller B, porta 1
+ a| 
+
+
+
+ a| 
+2
+ a| 
+Host 1, porta 1
+ a| 
+
+
+
+ a| 
+ a| 
+(Opzionale) host 2, porta 1
+ a| 
+
+|===
+
+
+=== Subnet B
+
+Definire la subnet da utilizzare.
+
+|===
+| Indirizzo di rete | Netmask 
+
+
+ a| 
+ a| 
+
+|===
+Documentare gli IQN che devono essere utilizzati dalle porte dell'array e da ciascuna porta host.
+
+|===
+| N. didascalia | Connessioni delle porte (di destinazione) degli array controller | NQN 
+
+
+ a| 
+8
+ a| 
+Switch
+ a| 
+_non applicabile_
+
+
+
+ a| 
+10
+ a| 
+Controller A, porta 2
+ a| 
+
+
+
+ a| 
+9
+ a| 
+Controller B, porta 2
+ a| 
+
+
+
+ a| 
+7
+ a| 
+Host 1, porta 2
+ a| 
+
+
+
+ a| 
+ a| 
+(Opzionale) host 2, porta 2
+ a| 
+
+|===
+
+
+== Nome host di mapping
+
+
+NOTE: Il nome host del mapping viene creato durante il flusso di lavoro.
+
+|===
+
+
+ a| 
+Nome host di mapping
+ a| 
+
+
+
+ a| 
+Tipo di sistema operativo host
+ a| 
+
+|===

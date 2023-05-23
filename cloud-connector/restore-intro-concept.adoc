@@ -1,0 +1,116 @@
+---
+permalink: cloud-connector/restore-intro-concept.html 
+sidebar: sidebar 
+keywords: Cloud Connector restore, 
+summary: 'È possibile accedere all"opzione Ripristina nel pannello di navigazione a sinistra dell"applicazione SANtricity Cloud Connector. L"opzione Restore (Ripristina) visualizza la pagina Restore (Ripristina), che consente di creare nuovi processi di ripristino basati su immagine o file.' 
+---
+= Ripristini
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile accedere all'opzione Ripristina nel pannello di navigazione a sinistra dell'applicazione SANtricity Cloud Connector. L'opzione Restore (Ripristina) visualizza la pagina Restore (Ripristina), che consente di creare nuovi processi di ripristino basati su immagine o file.
+
+Il connettore cloud di SANtricity utilizza il concetto di job per eseguire il ripristino effettivo di un volume e-Series. Prima di eseguire un ripristino, è necessario identificare il volume e-Series da utilizzare per l'operazione. Dopo aver aggiunto un volume e-Series per il ripristino all'host di SANtricity Cloud Connector, è possibile utilizzare `Restore` Dell'applicazione SANtricity Cloud Connector per creare ed elaborare i ripristini.
+
+
+NOTE: Tutti i timestamp per i processi di backup e ripristino elencati nell'applicazione SANtricity Cloud Connector utilizzano l'ora locale.
+
+
+
+== Creare un nuovo ripristino basato su immagine
+
+È possibile creare nuovi ripristini basati su immagine tramite la funzione Crea nella pagina di ripristino dell'applicazione SANtricity Cloud Connector.
+
+.Prima di iniziare
+Assicurati di avere a disposizione un backup basato su immagine tramite SANtricity Cloud Connector.
+
+.Fasi
+. Nella pagina di ripristino dell'applicazione SANtricity Cloud Connector, fare clic su *Crea*.
++
+Viene visualizzata la finestra Restore (Ripristino).
+
+. Selezionare il backup desiderato.
+. Fare clic su *Avanti*.
++
+La pagina Select Backup Point (Seleziona punto di backup) viene visualizzata nella finestra Restore (Ripristino).
+
+. Selezionare il backup completo desiderato.
+. Fare clic su *Avanti*.
++
+La pagina Select Restore Target (Seleziona destinazione ripristino) viene visualizzata nella finestra Restore (Ripristino).
+
+. Selezionare il volume di ripristino e fare clic su *Avanti*.
++
+La pagina Review (Revisione) viene visualizzata nella finestra Restore (Ripristino).
+
+. Esaminare l'operazione di ripristino selezionata e fare clic su *fine*.
++
+Il ripristino per il volume host di destinazione selezionato viene avviato e lo stato dell'attività viene visualizzato nella sezione Result list (elenco risultati) della pagina Restore (Ripristino).
+
+
+
+
+
+== Creare un nuovo ripristino basato su file
+
+È possibile creare nuovi ripristini basati su file tramite la funzione Crea nella pagina Ripristino dell'applicazione SANtricity Cloud Connector.
+
+.Prima di iniziare
+Assicurati di avere a disposizione un backup basato su file tramite SANtricity Cloud Connector.
+
+.Fasi
+. Nella pagina di ripristino dell'applicazione SANtricity Cloud Connector, fare clic su *Crea*.
++
+Viene visualizzata la finestra Restore (Ripristino).
+
+. Nella finestra Restore (Ripristino), selezionare il backup basato su file desiderato.
+. Fare clic su *Avanti*.
++
+La pagina Select Backup Point (Seleziona punto di backup) viene visualizzata nella finestra Create Restore Job (Crea processo di ripristino).
+
+. Nella pagina Select Backup Point (Seleziona punto di backup), selezionare il backup completo desiderato.
+. Fare clic su *Avanti*.
++
+Nella finestra Restore (Ripristino) viene visualizzato un elenco dei file system o delle cartelle/file disponibili.
+
+. Selezionare le cartelle o i file da ripristinare e fare clic su *Avanti*.
++
+La pagina Select Restore Target (Seleziona destinazione ripristino) viene visualizzata nella finestra Restore (Ripristino).
+
+. Selezionare il volume di ripristino e fare clic su *Avanti*.
++
+La pagina Review (Revisione) viene visualizzata nella finestra Restore (Ripristino).
+
+. Esaminare l'operazione di ripristino selezionata e fare clic su *fine*.
++
+Il ripristino per il volume host di destinazione selezionato viene avviato e lo stato dell'attività viene visualizzato nella sezione Result list (elenco risultati) della pagina Restore (Ripristino).
+
+
+
+
+
+== Eliminare un ripristino
+
+È possibile utilizzare la funzione Delete (Elimina) per eliminare un elemento di ripristino selezionato dalla sezione Result list (elenco risultati) della pagina Restore (Ripristino).
+
+.Prima di iniziare
+Assicurarsi che sia presente un processo di ripristino con lo stato completato, non riuscito o annullato.
+
+.Fasi
+. Nella pagina Restore (Ripristino), fare clic su *Delete* (Elimina).
++
+Viene visualizzata la finestra Confirm Delete (Conferma eliminazione).
+
+. Nel campo *Type delete*, digitare `delete` per confermare l'azione di eliminazione.
+. Fare clic su *Delete* (Elimina).
++
+
+NOTE: Non è possibile eliminare un ripristino sospeso.
+
++
+Il ripristino selezionato viene eliminato.
+
+

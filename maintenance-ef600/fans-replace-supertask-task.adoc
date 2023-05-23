@@ -1,0 +1,213 @@
+---
+permalink: maintenance-ef600/fans-replace-supertask-task.html 
+sidebar: sidebar 
+keywords: replace EF300 fan, replace EF600 fan, fan fail 
+summary: Sostituire una ventola in un EF300 o EF600. 
+---
+= Sostituire una ventola EF300 o EF600
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile sostituire una ventola in un array EF300 o EF600.
+
+.A proposito di questa attività
+Ogni shelf o shelf di controller EF300 e EF600 include cinque ventole. In caso di guasto di una ventola, è necessario sostituirla il prima possibile per assicurarsi che lo shelf abbia un raffreddamento adeguato.
+
+.Di cosa hai bisogno
+* Una ventola sostitutiva.
+* Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
+* Un'area di lavoro piana e priva di elettricità statica.
+* Etichette per identificare ciascun cavo collegato al contenitore del controller.
+* Stazione di gestione con un browser che può accedere a Gestione di sistema SANtricity per il controller. Per aprire l'interfaccia di System Manager, puntare il browser sul nome di dominio o sull'indirizzo IP del controller.
+
+
+
+
+== Fase 1: Posizionare il controller offline
+
+Posizionare il contenitore del controller offline in modo da poter sostituire in sicurezza la ventola guasta.
+
+.Fasi
+. Da Gestore di sistema di SANtricity, esaminare i dettagli nel guru del ripristino per confermare che si è verificato un problema con una ventola e per assicurarsi che non siano prima necessari altri elementi da risolvere.
+. Dall'area Details (Dettagli) del Recovery Guru, determinare quale ventola sostituire.
+. Eseguire il backup del database di configurazione dello storage array utilizzando Gestione di sistema di SANtricity.
++
+Se si verifica un problema durante la rimozione di un controller, è possibile utilizzare il file salvato per ripristinare la configurazione. Il sistema salva lo stato corrente del database di configurazione RAID, che include tutti i dati per i gruppi di volumi e i pool di dischi sul controller.
+
++
+** Da System Manager:
++
+... Selezionare menu:Support[Support Center > Diagnostics] (supporto tecnico > Diagnostica).
+... Selezionare *Collect Configuration Data* (raccolta dati di configurazione).
+... Fare clic su *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+
+
+. Se il controller non è già offline, portalo offline usando Gestione di sistema di SANtricity.
++
+.. Selezionare *hardware*.
+.. Se la figura mostra i dischi, selezionare *Mostra retro dello shelf* per visualizzare i controller.
+.. Selezionare il controller che si desidera mettere offline.
+.. Dal menu di scelta rapida, selezionare *posiziona offline* e confermare che si desidera eseguire l'operazione.
+
+
++
+
+NOTE: Se si accede a Gestore di sistema di SANtricity utilizzando il controller che si sta tentando di mettere offline, viene visualizzato il messaggio Gestione di sistema di SANtricity non disponibile. Selezionare *connessione a una connessione di rete alternativa* per accedere automaticamente a Gestione di sistema SANtricity utilizzando l'altro controller.
+
+. Attendere che Gestore di sistema di SANtricity aggiorni lo stato del controller su offline.
++
+
+NOTE: Non iniziare altre operazioni fino a quando lo stato non è stato aggiornato.
+
+. Selezionare *ricontrollare* dal Recovery Guru e confermare che il campo *OK per rimuovere* nell'area Dettagli sia Sì, a indicare che è possibile rimuovere questo componente in tutta sicurezza.
+
+
+
+
+== Fase 2: Rimuovere il contenitore del controller
+
+Rimuovere il contenitore del controller in modo da poter sostituire la ventola guasta con una nuova.
+
+.Fasi
+. Indossare un braccialetto ESD o adottare altre precauzioni antistatiche.
+. Etichettare ciascun cavo collegato al contenitore del controller.
+. Scollegare tutti i cavi dal contenitore del controller.
++
+
+CAUTION: Per evitare prestazioni degradate, non attorcigliare, piegare, pizzicare o salire sui cavi.
+
+. Verificare che il LED cache Active (cache attiva) sul retro del controller sia spento.
+. Premere le maniglie su entrambi i lati del controller e tirare indietro fino a quando non si sgancia dallo shelf.
++
+image::../media/remove_controller_5.png[rimuovere il controller 5]
+
+. Utilizzando due mani e le maniglie, estrarre il contenitore del controller dallo scaffale. Quando la parte anteriore del controller è libera dal contenitore, estrarlo completamente con due mani.
++
+
+CAUTION: Utilizzare sempre due mani per sostenere il peso di un contenitore del controller.
+
++
+image::../media/remove_controller_6.png[rimuovere il controller 6]
+
+. Posizionare il contenitore del controller su una superficie piana e priva di elettricità statica.
+
+
+
+
+== Fase 3: Rimuovere la ventola guasta
+
+Rimuovere una ventola guasta per poterla sostituire con una nuova.
+
+.Fasi
+. Rimuovere il coperchio del contenitore del controller svitando la singola vite a testa zigrinata e sollevando il coperchio.
+. Verificare che il LED verde all'interno del controller sia spento.
++
+Se questo LED verde è acceso, il controller sta ancora utilizzando l'alimentazione a batteria. Prima di rimuovere qualsiasi componente, è necessario attendere che il LED si spenga.
+
+. Sollevare delicatamente la ventola guasta dal controller.
++
+image::../media/fan_2.png[ventola 2]
+
+
+
+
+
+== Fase 4: Installare una nuova ventola
+
+Installare una nuova ventola per sostituire quella guasta.
+
+.Fasi
+. Far scorrere la ventola di ricambio fino in fondo nello scaffale.
++
+image::../media/fan_3.png[ventola 3]
+
++
+image::../media/fan_3_a.png[ventola 3 a]
+
+
+
+
+
+== Fase 5: Reinstallare il contenitore del controller
+
+Dopo aver installato la nuova ventola, reinstallare il contenitore del controller nello shelf del controller.
+
+.Fasi
+. Abbassare il coperchio sul contenitore del controller e fissare la vite a testa zigrinata.
+. Mentre si stringono le maniglie del controller, far scorrere delicatamente il contenitore del controller fino in fondo nello shelf del controller.
++
+
+NOTE: Il controller scatta in maniera udibile quando viene installato correttamente nello shelf.
+
++
+image::../media/remove_controller_7.png[rimuovere il controller 7]
+
+
+
+
+
+== Fase 6: Sostituzione completa della ventola
+
+Posizionare il controller online, raccogliere i dati di supporto e riprendere le operazioni.
+
+. Posizionare il controller online.
++
+.. In System Manager, accedere alla pagina hardware.
+.. Selezionare *Mostra retro del controller*.
+.. Selezionare il controller con la ventola sostituita.
+.. Selezionare *Place online* dall'elenco a discesa.
+
+
+. All'avvio del controller, controllare i LED del controller.
++
+Quando la comunicazione con l'altro controller viene ristabilita:
+
++
+** Il LED di attenzione di colore ambra rimane acceso.
+** I LED del collegamento host potrebbero essere accesi, lampeggianti o spenti, a seconda dell'interfaccia host.
+
+
+. Quando il controller torna in linea, verificare che lo stato sia ottimale e controllare i LED di attenzione dello shelf di controller.
++
+Se lo stato non è ottimale o se uno dei LED attenzione è acceso, verificare che tutti i cavi siano inseriti correttamente e che il contenitore del controller sia installato correttamente. Se necessario, rimuovere e reinstallare il contenitore del controller.
+
++
+
+NOTE: Se non si riesce a risolvere il problema, contattare il supporto tecnico.
+
+. Fare clic su menu:hardware[supporto > Centro aggiornamenti] per verificare che sia installata la versione più recente di SANtricity OS.
++
+Se necessario, installare la versione più recente.
+
+. Verificare che tutti i volumi siano stati restituiti al proprietario preferito.
++
+.. Selezionare menu:Storage[Volumes] (Storage[volumi]). Dalla pagina *tutti i volumi*, verificare che i volumi siano distribuiti ai proprietari preferiti. Selezionare menu:More[Change ownership] (Altro[Cambia proprietà]) per visualizzare i proprietari dei volumi.
+.. Se tutti i volumi sono di proprietà del proprietario preferito, passare alla fase 6.
+.. Se nessuno dei volumi viene restituito, è necessario restituire manualmente i volumi. Vai al menu:More[redistribuisci volumi].
+.. Se solo alcuni dei volumi vengono restituiti ai proprietari preferiti dopo la distribuzione automatica o manuale, è necessario controllare il Recovery Guru per verificare la presenza di problemi di connettività host.
+.. Se non è presente un Recovery Guru o se si seguono le fasi del guru del recovery, i volumi non vengono ancora restituiti ai proprietari preferiti, contattare il supporto.
+
+
+. Raccogliere i dati di supporto per lo storage array utilizzando Gestione di sistema di SANtricity.
++
+.. Selezionare menu:Support[Support Center > Diagnostics] (supporto tecnico > Diagnostica).
+.. Selezionare *Collect Support Data*.
+.. Fare clic su *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *support-data.7z*.
+
+
+
+
+
+.Quali sono le prossime novità?
+La sostituzione della ventola è completata. È possibile riprendere le normali operazioni.

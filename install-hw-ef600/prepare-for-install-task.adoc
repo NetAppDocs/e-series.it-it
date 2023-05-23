@@ -1,0 +1,136 @@
+---
+permalink: install-hw-ef600/prepare-for-install-task.html 
+sidebar: sidebar 
+keywords: EF300, EF600, installation, create account, register hardware 
+summary: 'Per installare EF300 o EF600, creare un account e registrare l"hardware.' 
+---
+= Preparazione per l'installazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Scopri come prepararti per l'installazione del tuo sistema storage EF300 o EF600.
+
+.Prima di iniziare
+Se si sta cablando EF300 per l'espansione SAS, consultare le seguenti informazioni:
+
+* link:../maintenance-ef600/sas-add-supertask-task.html["Aggiungere schede di espansione SAS"^] Per l'installazione della scheda di espansione SAS.
+* link:../install-hw-cabling/index.html["Panoramica dei cavi"] Per il cablaggio di espansione SAS.
+
+
+.Fasi
+. Creare un account e registrare l'hardware all'indirizzo http://mysupport.netapp.com/["mysupport.netapp.com"^].
+. Assicurarsi che nella confezione ricevuta siano presenti i seguenti elementi.
++
+|===
+
+
+ a| 
+image:../media/ef600_w_faceplate.png[""]
+ a| 
+Shelf con dischi installati (pannello e cappucci terminali confezionati separatamente)
+
+
+
+ a| 
+image:../media/superrails_inst-hw-ef600.png[""]
+ a| 
+Hardware per il montaggio in rack
+
+|===
++
+La seguente tabella identifica i tipi di cavi che potrebbero essere ricevuti. Se si riceve un cavo non elencato nella tabella, vedere https://hwu.netapp.com/["Hardware Universe"] individuare il cavo e identificarne l'utilizzo.
+
++
+|===
+| Tipo di connettore | Tipo di cavo | Utilizzare 
+
+
+ a| 
+image:../media/cable_ethernet_inst-hw-ef600.png[""]
+ a| 
+Cavi Ethernet RJ-45 (se ordinati)
+ a| 
+Connessione di gestione
+
+
+
+ a| 
+image:../media/cable_io_inst-hw-ef600.png[""]
+ a| 
+Cavi i/o (se ordinati)
+ a| 
+Cablaggio degli host di dati
+
+
+
+ a| 
+image:../media/cable_power_inst-hw-ef600.png[""]
+ a| 
+Cavi di alimentazione (se ordinati)
+ a| 
+Accensione del sistema storage
+
+|===
+. Assicurarsi di fornire i seguenti elementi.
++
+|===
+
+
+ a| 
+image:../media/screwdriver_inst-hw-ef600.png[""]
+ a| 
+Cacciavite Phillips n. 2
+
+
+
+ a| 
+image:../media/flashlight_inst-hw-ef600.png[""]
+ a| 
+Torcia
+
+
+
+ a| 
+image:../media/wrist_strap_inst-hw-ef600.png[""]
+ a| 
+Braccialetto ESD
+
+
+
+ a| 
+image:../media/2u_rackspace_inst-hw-ef600.png[""]
+ a| 
+Spazio rack 2U: Uno standard da 19" Rack da 48.30 cm per rack 2U delle seguenti dimensioni.
+
+*Profondità*: 19.0" (48.3 cm)
+
+*Larghezza*: 17.6" (44.7 cm)
+
+*Altezza*: 3.34" (8.48 cm)
+
+*Shelf*: 24 dischi
+
+*Peso massimo*: 27.4 kg (60.5 lb)
+
+
+NOTE: L'utilizzo di cabinet di terze parti potrebbe causare la limitazione dell'accesso al controller da parte dei cavi di alimentazione.
+
+
+
+ a| 
+image:../media/management_station_inst-hw-ef600_g60b3.png[""]
+ a| 
+Un browser supportato per il software di gestione:
+
+** Google Chrome (versione 78 e successive)
+** Microsoft Internet Explorer (versione 11 e successive)
+** Microsoft Edge (88 e versioni successive)
+** Mozilla Firefox (versione 70 e successive)
+** Safari (versione 12 e successive)
+
+
+|===
+

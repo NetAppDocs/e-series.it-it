@@ -1,0 +1,116 @@
+---
+permalink: config-linux/srp-ib-configure-network-connections-task.html 
+sidebar: sidebar 
+keywords: configure network SRP over IB, configure Linux network, OFED, RDMA, express linux configuration, linux host, 
+summary: Se la configurazione utilizza il protocollo SRP su Infiniband, attenersi alla procedura descritta in questa sezione. 
+---
+= Configurazione delle connessioni di rete: ​SRP su Infiniband
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se la configurazione utilizza il protocollo SRP su Infiniband, attenersi alla procedura descritta in questa sezione.
+
+.Di cosa hai bisogno
+Per collegare l'host Linux allo storage array, è necessario attivare lo stack di driver InfiniBand con le opzioni appropriate. Impostazioni specifiche possono variare a seconda delle distribuzioni Linux. Controllare https://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"^] per istruzioni specifiche e impostazioni aggiuntive consigliate specifiche per la soluzione.
+
+.Fasi
+. Installare lo stack di driver OFED/RDMA per il sistema operativo in uso.
++
+*SLES*
+
++
+[listing]
+----
+zypper install rdma-core
+----
++
+*RHEL*
+
++
+[listing]
+----
+yum install rdma-core
+----
+. Configurare OFED/RDMA per caricare il modulo SRP.
++
+*SLES*
+
++
+[listing]
+----
+zypper install srp_daemon
+----
++
+*RHEL*
+
++
+[listing]
+----
+ yum install srp_daemon
+----
+. Nel file di configurazione OFED/RDMA, impostare `SRP_LOAD=yes` e. `SRP_DAEMON_ENABLE=yes`.
++
+Il file di configurazione RDMA si trova nella seguente posizione:
+
++
+[listing]
+----
+/etc/rdma/rdma.conf
+----
+. Attivare e avviare il servizio OFED/RDMA.
++
+*RHEL 7.x e SLES 12.x o superiore*
+
++
+** Per abilitare il caricamento dei moduli InfiniBand all'avvio:
++
+[listing]
+----
+systemctl enable rdma
+----
+** Per caricare immediatamente i moduli InfiniBand:
++
+[listing]
+----
+systemctl start rdma
+----
+
+
+. Attivare il daemon SRP.
++
+*RHEL 7.x e SLES 12 o superiore*
+
++
+** Per abilitare il daemon SRP all'avvio:
++
+[listing]
+----
+systemctl enable srp_daemon
+----
+** Per avviare immediatamente il daemon SRP:
++
+[listing]
+----
+systemctl start srp_daemon
+----
+
+
+. Se si desidera modificare la configurazione SRP, immettere il seguente comando per creare `/etc/modprobe.d/ib_srp.conf` .
++
+[listing]
+----
+options ib_srp cmd_sg_entries=255 allow_ext_sg=y indirect_sg_entries=2048
+----
++
+.. Sotto il `/etc/srp_daemon.conf`, aggiungere la seguente riga.
++
+[listing]
+----
+a    max_sect=4096
+----
+
+
+

@@ -1,0 +1,68 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-create-host-cluster.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Quando due o più host richiedono l"accesso i/o agli stessi volumi, è possibile creare un cluster host.' 
+---
+= Creare un cluster host
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Quando due o più host richiedono l'accesso i/o agli stessi volumi, è possibile creare un cluster host.
+
+.A proposito di questa attività
+Tenere presenti queste linee guida quando si crea un cluster host:
+
+* Questa operazione non viene avviata a meno che non siano disponibili due o più host per la creazione del cluster.
+* Gli host nei cluster di host possono avere sistemi operativi diversi (eterogenei).
+* Gli host NVMe nei cluster di host non possono essere misti con host non NVMe.
+* Per creare un volume abilitato per Data Assurance (da), la connessione host che si intende utilizzare deve supportare da.
++
+Se una delle connessioni host sui controller dello storage array non supporta il da, gli host associati non possono accedere ai dati sui volumi abilitati da.
+
+* Questa operazione non riesce se il nome scelto è già in uso.
+* La lunghezza del nome non può superare i 30 caratteri.
+
+
+.Fasi
+. Dalla pagina Manage (Gestione), selezionare lo storage array con la connessione host.
+. Selezionare menu:Provisioning[Configure hosts] (Configura host).
++
+Viene visualizzata la pagina Configure hosts (Configura host).
+
+. Selezionare menu:Create[host cluster] (Crea[cluster host]).
++
+Viene visualizzata la finestra di dialogo Create host Cluster (Crea cluster host).
+
+. Selezionare le impostazioni appropriate per il cluster host.
++
+|===
+| Impostazione | Descrizione 
+
+
+| Nome | Digitare il nome del nuovo cluster host. 
+
+
+| Selezionare gli host per condividere l'accesso al volume | Selezionare due o più host dall'elenco a discesa. Vengono visualizzati nell'elenco solo gli host che non fanno già parte di un cluster di host. 
+|===
+. Fare clic su *Create* (Crea).
++
+Se gli host selezionati sono collegati a tipi di interfaccia che hanno diverse funzionalità di Data Assurance (da), viene visualizzata una finestra di dialogo con il messaggio che da non sarà disponibile sul cluster host. Questa non disponibilità impedisce l'aggiunta di volumi abilitati da al cluster host. Selezionare *Sì* per continuare o *No* per annullare.
+
++
+DA aumenta l'integrità dei dati nell'intero sistema storage. DA consente all'array di storage di verificare la presenza di errori che potrebbero verificarsi quando i dati vengono spostati tra gli host e i dischi. L'utilizzo di da per il nuovo volume garantisce il rilevamento di eventuali errori.
+
+
+
+.Risultato
+Il nuovo cluster di host viene visualizzato nella tabella con gli host assegnati nelle righe sottostanti.
+
+.Al termine
+È necessario assegnare un volume a un cluster host in modo che possa essere utilizzato per le operazioni di i/O. Passare a. link:vc-olh-assign-volumes-to-hosts.html["Assegnare volumi agli host"].

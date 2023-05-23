@@ -1,0 +1,180 @@
+---
+permalink: config-windows/fc-perform-specific-task.html 
+sidebar: sidebar 
+keywords: Fibre Channel protocol, switches, zone switches, zoning, host port identifiers, express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Per il protocollo Fibre Channel, configurare gli switch e determinare gli identificatori delle porte host. 
+---
+= Eseguire attività specifiche di FC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per il protocollo Fibre Channel, configurare gli switch e determinare gli identificatori delle porte host.
+
+
+
+== Fase 1: Configurazione degli switch FC - Windows
+
+La configurazione (zoning) degli switch Fibre Channel (FC) consente agli host di connettersi allo storage array e limita il numero di percorsi. Gli switch vengono posizionati in zone utilizzando l'interfaccia di gestione degli switch.
+
+.Di cosa hai bisogno
+* Credenziali di amministratore per gli switch.
+* Il numero WWPN di ciascuna porta di iniziatore host e di ciascuna porta di destinazione del controller collegata allo switch. (Utilizzare l'utility HBA per il rilevamento).
+
+
+.A proposito di questa attività
+È necessario eseguire la zona in base alla WWPN e non alla porta fisica. Ciascuna porta dell'iniziatore deve trovarsi in una zona separata con tutte le porte di destinazione corrispondenti. Per ulteriori informazioni sulla suddivisione in zone degli switch, consultare la documentazione del vendor dello switch.
+
+.Fasi
+. Accedere al programma di amministrazione dello switch FC, quindi selezionare l'opzione di configurazione dello zoning.
+. Creare una nuova zona che includa la prima porta iniziatore host e che includa anche tutte le porte di destinazione che si connettono allo stesso switch FC dell'iniziatore.
+. Creare zone aggiuntive per ciascuna porta iniziatore host FC nello switch.
+. Salvare le zone, quindi attivare la nuova configurazione di zoning.
+
+
+
+
+== Fase 2: Determinare le reti WWPN host ed effettuare le impostazioni consigliate: FC, Windows
+
+Installare un'utility HBA FC in modo da visualizzare il nome della porta globale (WWPN) di ciascuna porta host. Inoltre, è possibile utilizzare l'utility HBA per modificare le impostazioni consigliate nella colonna Note di http://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"^] per la configurazione supportata.
+
+.A proposito di questa attività
+Consulta le seguenti linee guida per le utility HBA:
+
+* La maggior parte dei vendor HBA offre un'utility HBA. È necessaria la versione corretta dell'HBA per il sistema operativo host e la CPU. Esempi di utility HBA FC includono:
++
+** Emulex OneCommand Manager per HBA Emulex
+** QLogic QConverge Console per HBA QLogic
+
+
+* Le porte i/o host potrebbero essere registrate automaticamente se è installato l'agente di contesto host.
+
+
+.Fasi
+. Scaricare l'utility appropriata dal sito Web del vendor HBA.
+. Installare l'utility.
+. Selezionare le impostazioni appropriate nell'utility HBA.
++
+Le impostazioni appropriate per la configurazione sono elencate nella colonna Note di http://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"^].
+
+
+
+
+
+== Fase 3: Registrare la configurazione
+
+È possibile generare e stampare un PDF di questa pagina, quindi utilizzare il seguente foglio di lavoro per registrare le informazioni di configurazione dello storage FC. Queste informazioni sono necessarie per eseguire le attività di provisioning.
+
+La figura mostra un host collegato a un array di storage e-Series in due zone. Una zona è indicata dalla linea blu, mentre l'altra è indicata dalla linea rossa. Ogni singola porta ha due percorsi per lo storage (uno per ciascun controller).
+
+image::../media/port_identifiers_host_and_target_conf-win.gif[gli identificatori di porta host e target conf win]
+
+
+
+=== Identificatori host
+
+|===
+| N. didascalia | Connessioni porta host (iniziatore) | PN. WWN 
+
+
+ a| 
+1
+ a| 
+Host
+ a| 
+_non applicabile_
+
+
+
+ a| 
+2
+ a| 
+Porta host 0 a switch FC zona 0
+ a| 
+
+
+
+ a| 
+7
+ a| 
+Dalla porta host 1 allo switch FC zona 1
+ a| 
+
+|===
+
+
+=== Identificatori di destinazione
+
+|===
+| N. didascalia | Connessioni delle porte (di destinazione) degli array controller | PN. WWN 
+
+
+ a| 
+3
+ a| 
+Switch
+ a| 
+_non applicabile_
+
+
+
+ a| 
+6
+ a| 
+Controller di array (destinazione)
+ a| 
+_non applicabile_
+
+
+
+ a| 
+5
+ a| 
+Dal controller A, dalla porta 1 allo switch FC 1
+ a| 
+
+
+
+ a| 
+9
+ a| 
+Dal controller A, dalla porta 2 allo switch FC 2
+ a| 
+
+
+
+ a| 
+4
+ a| 
+Dal controller B, porta 1 allo switch FC 1
+ a| 
+
+
+
+ a| 
+8
+ a| 
+Controller B, dalla porta 2 allo switch FC 2
+ a| 
+
+|===
+
+
+=== Nome host di mapping
+
+|===
+
+
+ a| 
+Nome host di mapping
+ a| 
+
+
+
+ a| 
+Tipo di sistema operativo host
+ a| 
+
+|===

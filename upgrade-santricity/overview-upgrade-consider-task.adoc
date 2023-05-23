@@ -1,0 +1,150 @@
+---
+permalink: upgrade-santricity/overview-upgrade-consider-task.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, SANtricity, drive firmware, upgrade SANtricity, upgrade OS, upgrade E-Series, upgrade firmware, upgrading, upgrade IOM firmware, upgrade NVSRAM, upgrade controller 
+summary: 'Esaminare le considerazioni sull"aggiornamento per il software e il firmware del controller del sistema operativo SANtricity dello storage array e per il relativo firmware del disco.' 
+---
+= Considerazioni sull'upgrade
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per garantire un aggiornamento corretto, fare riferimento alle seguenti considerazioni sull'aggiornamento.
+
+
+
+== Upgrade del controller (singolo o multiplo)
+
+Esaminare queste considerazioni principali prima di aggiornare i controller.
+
+
+
+=== Versioni correnti
+
+È possibile visualizzare le versioni correnti del software e del firmware, come indicato di seguito:
+
+* Per un singolo controller, utilizzare l'interfaccia Gestore di sistema di SANtricity. Accedere al menu:Support[Upgrade Center], quindi fare clic sul collegamento *Software and firmware Inventory* (inventario software e firmware).
+* Per più controller, utilizzare l'interfaccia di gestione unificata di SANtricity. Accedere alla pagina *Manage* per gli array di storage rilevati. Le versioni sono indicate nella colonna *Software SANtricity OS*. Il firmware del controller e LE informazioni SU NVSRAM sono disponibili in una finestra di dialogo a comparsa quando si fa clic sulla versione del sistema operativo SANtricity in ciascuna riga.
+
+
+
+
+=== Componenti inclusi nell'aggiornamento
+
+I seguenti componenti sono inclusi nel processo di aggiornamento del sistema operativo SANtricity:
+
+* *System Manager* -- System Manager è il software che gestisce lo storage array.
+* *Controller firmware* -- il firmware del controller gestisce l'i/o tra host e volumi.
+* *IOM firmware* -- il firmware del modulo i/o (IOM) gestisce la connessione tra un controller e uno shelf di dischi. Inoltre, monitora lo stato dei componenti.
+* *Software di supervisore* -- il software di supervisore è la macchina virtuale su un controller in cui viene eseguito il software.
+
+
+
+
+=== Componenti da aggiornare separatamente
+
+I seguenti componenti devono essere aggiornati separatamente:
+
+* *Controller NVSRAM* -- Controller NVSRAM è un file controller che specifica le impostazioni predefinite per i controller. Le istruzioni per l'aggiornamento DI NVSRAM sono incluse con le istruzioni per l'aggiornamento dei controller.
+* *Firmware del disco* -- vedere link:upgrade-drive-firmware-task.html["Aggiornare il firmware del disco"] per istruzioni separate.
+* *Driver multipath/failover* -- come parte del processo di aggiornamento, potrebbe essere necessario aggiornare anche il driver multipath/failover dell'host in modo che l'host possa interagire correttamente con i controller. Se gli host che eseguono sistemi operativi diversi da Microsoft Windows dispongono di connessioni i/o al sistema storage, aggiornare i driver multipath per tali host. Per informazioni sulla compatibilità, fare riferimento a. https://mysupport.netapp.com/NOW/products/interoperability["Matrice di interoperabilità NetApp"^]. Per istruzioni sull'aggiornamento, fare riferimento a. link:../config-linux/index.html["Configurazione di Linux Express"], link:../config-windows/index.html["Configurazione di Windows Express"], o. link:../config-vmware/index.html["Configurazione di VMware Express"].
+* *Gestore unificato di SANtricity* -- Gestore unificato è il software che gestisce più sistemi storage, inclusi i modelli E2800, E5700, EF300 e EF600. Unified Manager fa parte del proxy dei servizi Web di SANtricity, un server API RESTful installato separatamente su un sistema host per gestire centinaia di sistemi storage NetApp e-Series nuovi e legacy. Per ulteriori informazioni, vedere link:../web-services-proxy/index.html["Panoramica dei proxy dei servizi web SANtricity"].
+* *Utility* -- altre utility di gestione richiedono aggiornamenti separati, come l'utility host Windows di SANtricity, l'utility host Linux di SANtricity e il DSM Windows di SANtricity. Per ulteriori informazioni su queste utility, fare riferimento a. link:../config-linux/index.html["Configurazione di Linux Express"], link:../config-windows/index.html["Configurazione di Windows Express"], o. link:../config-vmware/index.html["Configurazione di VMware Express"].
+* *Sistemi legacy* -- se il sistema storage fa parte di una rete storage che include sistemi storage meno recenti, potrebbe essere necessario utilizzare la finestra di gestione aziendale (EMW) di SANtricity per fornire una vista aziendale di tutti i sistemi storage. In questo caso, verificare se è disponibile una versione di manutenzione più recente di Gestione storage SANtricity.
+
+
+
+
+=== Doppi controller ed elaborazione i/O.
+
+Se uno storage array contiene due controller e si dispone di un driver multipath installato, lo storage array può continuare a elaborare l'i/o durante l'aggiornamento. Durante l'aggiornamento, si verifica la seguente procedura:
+
+. Il controller A esegue il failover di tutti i LUN verso il controller B.
+. L'aggiornamento avviene sul controller A.
+. Il controller A riprende i LUN e tutti i LUN del controller B.
+. L'aggiornamento avviene sul controller B.
+
+
+Al termine dell'aggiornamento, potrebbe essere necessario ridistribuire manualmente i volumi tra i controller per garantire che i volumi tornino al controller proprietario corretto.
+
+
+
+=== Controllo dello stato di salute
+
+Durante il processo di aggiornamento viene eseguito un controllo dello stato di salute. Questo controllo dello stato di salute valuta tutti i componenti dell'array di storage per assicurarsi che l'aggiornamento possa continuare. Le seguenti condizioni potrebbero impedire l'aggiornamento:
+
+* Dischi assegnati non riusciti
+* Hot spare in uso
+* Gruppi di volumi incompleti
+* Operazioni esclusive in esecuzione
+* Volumi mancanti
+* Controller in stato non ottimale
+* Numero eccessivo di eventi del registro eventi
+* Errore di convalida del database di configurazione
+* Dischi con versioni precedenti di DACstore
+
+
+È inoltre possibile eseguire il controllo dello stato di salute pre-aggiornamento separatamente senza eseguire un aggiornamento.
+
+
+
+=== Upgrade immediato o a fasi
+
+È possibile attivare l'aggiornamento immediatamente o eseguirlo in un secondo momento. È possibile scegliere di eseguire l'attivazione in un secondo momento per i seguenti motivi:
+
+* *Ora del giorno* -- l'attivazione del software può richiedere molto tempo, quindi potrebbe essere necessario attendere che i carichi di i/o siano più leggeri. A seconda del carico di i/o e delle dimensioni della cache, il completamento di un aggiornamento del controller può richiedere da 15 a 25 minuti. I controller si riavviano e si eseguono il failover durante l'attivazione, pertanto le prestazioni potrebbero essere inferiori al solito fino al completamento dell'aggiornamento.
+* *Tipo di pacchetto* -- si consiglia di testare il nuovo software e firmware su un array di storage prima di aggiornare i file su altri array di storage.
+
+
+
+
+== Aggiornamento del firmware del disco
+
+Prima di aggiornare il firmware del disco, esaminare queste considerazioni principali.
+
+
+
+=== Compatibilità dei dischi
+
+Ciascun file del firmware del disco contiene informazioni sul tipo di disco su cui viene eseguito il firmware. È possibile scaricare il file del firmware specificato solo su un'unità compatibile. System Manager verifica automaticamente la compatibilità durante il processo di aggiornamento.
+
+
+
+=== Metodi di aggiornamento del disco
+
+Esistono due tipi di metodi di aggiornamento del firmware del disco: Online e offline.
+
+|===
+| Aggiornamento online | Upgrade offline 
+
+
+ a| 
+Durante un aggiornamento online, i dischi vengono aggiornati in sequenza, uno alla volta. Lo storage array continua l'elaborazione dell'i/o durante l'aggiornamento. Non è necessario interrompere l'i/O. Se un disco è in grado di eseguire un aggiornamento online, il metodo online viene utilizzato automaticamente.
+
+I dischi che possono eseguire un aggiornamento online includono:
+
+* Dischi in un pool ottimale
+* Dischi in un gruppo ottimale di volumi ridondanti (RAID 1, RAID 5 e RAID 6)
+* Dischi non assegnati
+* Dischi hot spare in standby
+
+
+L'aggiornamento del firmware di un disco online può richiedere diverse ore per esporre l'array di storage a potenziali errori di volume. In questi casi si potrebbero verificare errori di volume:
+
+* In un gruppo di volumi RAID 1 o RAID 5, un disco si guasta mentre viene aggiornato un altro disco del gruppo di volumi.
+* In un pool o gruppo di volumi RAID 6, due dischi si guastano mentre viene aggiornato un altro disco del pool o gruppo di volumi.
+
+ a| 
+Durante un aggiornamento offline, tutti i dischi dello stesso tipo di disco vengono aggiornati contemporaneamente. Questo metodo richiede l'interruzione dell'attività di i/o nei volumi associati ai dischi selezionati. Poiché è possibile aggiornare più dischi contemporaneamente (in parallelo), il downtime complessivo è notevolmente ridotto. Se un disco può eseguire solo un aggiornamento offline, il metodo offline viene utilizzato automaticamente.
+
+I seguenti dischi DEVONO utilizzare il metodo offline:
+
+* Dischi in un gruppo di volumi non ridondante (RAID 0)
+* Dischi in un pool o un gruppo di volumi non ottimali
+* Dischi nella cache SSD
+
+
+|===

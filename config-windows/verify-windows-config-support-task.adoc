@@ -1,0 +1,55 @@
+---
+permalink: config-windows/verify-windows-config-support-task.html 
+sidebar: sidebar 
+keywords: express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Verificare che la configurazione di Windows sia supportata. 
+---
+= Verificare che la configurazione di Windows sia supportata
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per garantire un funzionamento affidabile, creare un piano di implementazione e utilizzare lo strumento matrice di interoperabilità NetApp (IMT) per verificare che l'intera configurazione sia supportata.
+
+.Fasi
+. Accedere alla http://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"^].
+. Fare clic sulla sezione *Storage Solution Search*.
+. Nell'area menu:Protocols[SAN host], fare clic sul pulsante *Add* (Aggiungi) accanto a *e-Series SAN host*.
+. Fare clic su *View Refine Search Criteria* (Visualizza criteri di ricerca raffinati).
++
+Viene visualizzata la sezione Criteri di ricerca più precisi. In questa sezione è possibile selezionare il protocollo applicabile e altri criteri per la configurazione, ad esempio sistema operativo, sistema operativo NetApp e driver host multipath. Selezionare i criteri desiderati per la configurazione, quindi visualizzare gli elementi di configurazione compatibili applicabili. Se necessario, eseguire gli aggiornamenti per il sistema operativo e il protocollo prescritti nello strumento. Per informazioni dettagliate sulla configurazione scelta, fare clic sulla freccia a destra della pagina Visualizza configurazioni supportate.
+
+. Se necessario, eseguire gli aggiornamenti per il sistema operativo e il protocollo come indicato nella tabella.
++
+|===
+| Aggiornamenti del sistema operativo | Protocollo | Aggiornamenti relativi al protocollo 
+
+
+ a| 
+Potrebbe essere necessario installare driver pronti all'uso per garantire funzionalità e supportabilità adeguate.
+
+Ogni vendor HBA dispone di metodi specifici per aggiornare il codice di avvio e il firmware. Fare riferimento alla sezione di supporto del sito Web del vendor per ottenere le istruzioni e il software necessari per aggiornare il firmware e il codice di avvio HBA.
+ a| 
+FC
+ a| 
+Driver, firmware e codice di avvio dell'HBA (host bus adapter)
+
+
+
+ a| 
+ISCSI
+ a| 
+Driver, firmware e codice di avvio della scheda di interfaccia di rete (NIC).
+
+
+
+ a| 
+SAS
+ a| 
+Driver, firmware e codice di avvio dell'HBA (host bus adapter)
+
+|===
+

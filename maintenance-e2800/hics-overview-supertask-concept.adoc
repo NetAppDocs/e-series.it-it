@@ -1,0 +1,70 @@
+---
+permalink: maintenance-e2800/hics-overview-supertask-concept.html 
+sidebar: sidebar 
+keywords: E2800 replace HIC, E2800 replace host interface card, replacing E2800 HIC, E2800 replace HIC, adding E2800 HIC, upgrading E2800 HIC, E2800, E-Series, eseries 
+summary: Esaminare i requisiti per la sostituzione HIC E2800. 
+---
+= Requisiti per la sostituzione HIC E2800
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di aggiungere, aggiornare o sostituire una scheda di interfaccia host (HIC) in un E2800, esaminare i requisiti e le considerazioni.
+
+
+
+== Panoramica della procedura
+
+La procedura per sostituire un HIC dipende dal fatto che si disponga di uno o due controller, come segue:
+
+|===
+| Se lo storage array dispone di... | Devi... 
+
+
+ a| 
+Un controller (E2812 o E2824 simplex)
+ a| 
+. Interrompere le operazioni di i/o dell'host
+. Spegnere lo shelf del controller
+. Rimuovere il contenitore del controller
+. Sostituire la batteria
+. Sostituire il contenitore del controller
+. Alimentare lo shelf del controller
+
+
+
+
+ a| 
+Due controller (duplex E2860, E2812 o E2824)
+ a| 
+. Portare il controller offline
+. Rimuovere il contenitore del controller
+. Sostituire la batteria
+. Sostituire il contenitore del controller
+. Portare il controller online
+
+
+|===
+
+
+== Requisiti per l'aggiunta, l'aggiornamento o la sostituzione di un HIC
+
+Se si intende aggiungere, aggiornare o sostituire una scheda di interfaccia host (HIC), tenere presenti i seguenti requisiti.
+
+* È stata pianificata una finestra di manutenzione dei downtime per questa procedura. Quando si installa HICS, l'alimentazione deve essere spenta, in modo che non sia possibile accedere ai dati sullo storage array fino a quando non si è completata correttamente questa procedura. (In una configurazione duplex, questo perché entrambi i controller devono avere la stessa configurazione HIC quando vengono accesi).
+* Si dispone di uno o due HICS, a seconda che si disponga di uno o due controller nell'array di storage. L'HICS deve essere compatibile con i controller.
++
+Se si dispone di una configurazione duplex (due controller), l'HICS installato nei due contenitori del controller deve essere identico. La presenza di HICS non corrispondenti causa il blocco del controller con l'HIC sostitutivo quando lo si porta online.
+
+* Sono disponibili tutti i cavi, i ricetrasmettitori, gli switch e gli HBA (host Bus Adapter) necessari per collegare le nuove porte host.
++
+Per informazioni sull'hardware compatibile, fare riferimento a. https://mysupport.netapp.com/NOW/products/interoperability["Matrice di interoperabilità NetApp"^] o il http://hwu.netapp.com/home.aspx["NetApp Hardware Universe"^].
+
+* Si dispone di un braccialetto ESD o si sono prese altre precauzioni antistatiche.
+* Hai un cacciavite Phillips n. 1.
+* Sono presenti etichette per identificare ciascun cavo collegato al contenitore del controller.
+* Si dispone di una stazione di gestione con un browser in grado di accedere a Gestore di sistema SANtricity per il controller. Per aprire l'interfaccia di System Manager, puntare il browser sul nome di dominio o sull'indirizzo IP del controller.
+

@@ -1,0 +1,50 @@
+---
+permalink: config-linux/nvme-fc-verify-linux-config-support-task.html 
+sidebar: sidebar 
+keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: 'Per garantire un funzionamento affidabile, è necessario creare un piano di implementazione e utilizzare lo strumento matrice di interoperabilità NetApp (IMT) per verificare che l"intera configurazione sia supportata.' 
+---
+= Verificare il supporto di Linux ed esaminare le restrizioni
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Come prima fase, è necessario verificare che la configurazione Linux sia supportata ed esaminare anche le restrizioni relative a controller, host e ripristino.
+
+
+
+== Verificare che la configurazione Linux sia supportata
+
+Per garantire un funzionamento affidabile, è necessario creare un piano di implementazione e utilizzare lo strumento matrice di interoperabilità NetApp (IMT) per verificare che l'intera configurazione sia supportata.
+
+.Fasi
+. Accedere alla https://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"^].
+. Fare clic sulla sezione *Ricerca soluzione*.
+. Nell'area menu:Protocols[SAN host], fare clic sul pulsante *Add* (Aggiungi) accanto a *e-Series SAN host*.
+. Fare clic su *View Refine Search Criteria* (Visualizza criteri di ricerca raffinati).
++
+Viene visualizzata la sezione Criteri di ricerca più precisi. In questa sezione è possibile selezionare il protocollo applicabile e altri criteri per la configurazione, ad esempio sistema operativo, sistema operativo NetApp e driver host multipath.
+
+. Selezionare i criteri desiderati per la configurazione, quindi visualizzare gli elementi di configurazione compatibili applicabili.
+. Se necessario, eseguire gli aggiornamenti per il sistema operativo e il protocollo prescritti nello strumento.
++
+Per informazioni dettagliate sulla configurazione scelta, fare clic sulla freccia a destra della pagina Visualizza configurazioni supportate.
+
+
+
+
+
+== Esaminare le restrizioni per NVMe su FC
+
+Prima di utilizzare NVMe su Fibre Channel, consultare https://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"^] per esaminare le restrizioni più recenti relative a controller, host e recovery.
+
+
+
+=== Limitazioni di storage e disaster recovery
+
+* Il mirroring asincrono e sincrono non è supportato.
+* Il thin provisioning (creazione di thin volumi) non è supportato.
+

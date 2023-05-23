@@ -1,0 +1,84 @@
+---
+permalink: remote-storage-volumes/setup-remote-volumes-concept.html 
+sidebar: sidebar 
+keywords: configure Remote Storage Volumes, set up RTV, configure remote volumes, set up remote storage E-Series 
+summary: La configurazione iniziale è necessaria per consentire al sistema e-Series di connettersi allo storage remoto attraverso il protocollo iSCSI supportato. 
+---
+= Configurare l'hardware per i volumi di storage remoto
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il sistema storage e-Series deve essere configurato per comunicare con il sistema storage remoto attraverso il protocollo iSCSI supportato.
+
+
+
+== Configurare il dispositivo di storage remoto e l'array e-Series
+
+Prima di passare a Gestione sistema di SANtricity per configurare la funzione volumi di storage remoto, procedere come segue:
+
+. Stabilire manualmente una connessione cablata tra il sistema e-Series e il sistema di storage remoto in modo che i due sistemi possano essere configurati per comunicare tramite iSCSI.
+. Configurare le porte iSCSI in modo che il sistema e-Series e il sistema di storage remoto possano comunicare correttamente tra loro.
+. Ottenere l'IQN del sistema e-Series.
+. Rendere il sistema e-Series visibile al sistema di storage remoto. Se il sistema di storage remoto è un sistema e-Series, creare un host utilizzando l'IQN del sistema e-Series di destinazione come informazione di connessione per la porta host.
+. Se il dispositivo di storage remoto è in uso da un host/applicazione:
++
+** Arrestare i/o sul dispositivo di storage remoto.
+** Dismappare/smontare il dispositivo di storage remoto.
+
+
+. Mappare il dispositivo di storage remoto all'host definito per il sistema di storage e-Series.
+. Ottenere il numero LUN del dispositivo utilizzato per la mappatura.
+
+
+
+NOTE: Consigliato: Eseguire il backup del volume di origine remoto prima di avviare il processo di importazione.
+
+
+
+== Cablare gli array di storage
+
+Nell'ambito del processo di configurazione, gli array di storage e l'host i/o devono essere cablati all'interfaccia compatibile con iSCSI.
+
+I seguenti diagrammi forniscono esempi di come collegare i sistemi in modo che eseguano operazioni Remote Storage Volume su una connessione iSCSI.
+
+image:../media/remote_target_volumes_iscsi_use_case_1.png[""] image:../media/remote_target_volumes_iscsi_use_case_2.png[""]
+
+
+
+== Configurare le porte iSCSI
+
+È necessario configurare le porte iSCSI per garantire la comunicazione tra la destinazione (array di storage locale e-Series) e l'origine (array di storage remoto).
+
+Le porte iSCSI possono essere configurate in più modi in base alla subnet. Di seguito sono riportati alcuni esempi su come configurare le porte iSCSI per l'utilizzo con la funzione Remote Storage Volumes.
+
+|===
+| Fonte A. | Fonte B | Destinazione A | Destinazione B 
+
+
+ a| 
+10.10.1.100/22
+ a| 
+10.10.2.100/22
+ a| 
+10.10.1.101/22
+ a| 
+10.10.2.101/22
+
+|===
+|===
+| Fonte A. | Fonte B | Destinazione A | Destinazione B 
+
+
+ a| 
+10.10.0.100/16
+ a| 
+10.10.0.100/16
+ a| 
+10.10.0.101/16
+ a| 
+10.10.0.101/16
+
+|===

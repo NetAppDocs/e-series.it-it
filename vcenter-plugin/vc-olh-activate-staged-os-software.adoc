@@ -1,0 +1,49 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-activate-staged-os-software.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: È possibile scegliere di attivare il file software in un momento più comodo. 
+---
+= Attivare il software del sistema operativo in fasi
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile scegliere di attivare il file software immediatamente o attendere fino a un momento più comodo. Questa procedura presuppone che l'utente abbia scelto di attivare il file software in un secondo momento.
+
+.A proposito di questa attività
+È possibile trasferire i file del firmware senza attivarli. È possibile scegliere di eseguire l'attivazione in un secondo momento per i seguenti motivi:
+
+* *Ora del giorno* -- l'attivazione del software può richiedere molto tempo, quindi potrebbe essere necessario attendere che i carichi di i/o siano più leggeri. I controller si riavviano e si eseguono il failover durante l'attivazione, pertanto le prestazioni potrebbero essere inferiori al solito fino al completamento dell'aggiornamento.
+* *Tipo di pacchetto* -- si consiglia di testare il nuovo software e firmware su un array di storage prima di aggiornare i file su altri array di storage.
+
+
+
+NOTE: Non è possibile interrompere il processo di attivazione dopo l'avvio.
+
+.Fasi
+. Dalla vista principale, selezionare *Gestisci*. Se necessario, fare clic sulla colonna *Status* per ordinare, nella parte superiore della pagina, tutti gli array di storage con stato "OS Upgrade (waiting activation)" (aggiornamento del sistema operativo (in attesa di attivazione).
+. Selezionare uno o più array di storage per i quali si desidera attivare il software, quindi selezionare menu:Centro di aggiornamento[attiva software Staged SANtricity].
++
+Durante l'operazione di aggiornamento si verificano le seguenti azioni:
+
++
+** Nell'ambito del processo di attivazione viene eseguito un controllo dello stato di salute prima dell'aggiornamento. Il controllo dello stato di salute prima dell'aggiornamento valuta tutti i componenti dell'array di storage per assicurarsi che l'attivazione possa continuare.
+** Se un controllo dello stato di salute non riesce per un array di storage, l'attivazione si interrompe. È possibile fare clic sui puntini di sospensione (…) E selezionare *Save Log* (Salva registro) per esaminare gli errori. È inoltre possibile scegliere di ignorare l'errore di controllo dello stato di salute e fare clic su *continua* per procedere con l'attivazione.
+** È possibile annullare l'operazione di attivazione dopo il controllo dello stato di salute pre-aggiornamento.
++
+Una volta completato correttamente il controllo dello stato di salute prima dell'aggiornamento, si verifica l'attivazione. Il tempo necessario per l'attivazione dipende dalla configurazione dello storage array e dai componenti che si stanno attivando.
+
+
+
+. (Facoltativo) una volta completata l'attivazione, è possibile visualizzare un elenco degli elementi attivati per uno specifico array di storage facendo clic sui puntini di sospensione (…) E quindi selezionando *Save Log* (Salva registro).
++
+Il file viene salvato nella cartella Download del browser con il nome `activate_log-<date>. json`.
+
+

@@ -1,0 +1,14 @@
+---
+permalink: maintenance-ef600/concept-power-supplies-wombat.html 
+sidebar: sidebar 
+keywords: power, supply, redundant, source, controller, shelf, supplies 
+summary: Un alimentatore fornisce una fonte di alimentazione ridondante in uno shelf di controller. 
+---
+= Alimentatori
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un alimentatore fornisce una fonte di alimentazione ridondante in uno shelf di controller.

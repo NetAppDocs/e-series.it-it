@@ -1,0 +1,39 @@
+---
+permalink: remote-storage-volumes/modify-remote-storage-task.html 
+sidebar: sidebar 
+keywords: modify Remote Storage Volumes settings, RTV settings, remote volume settings, remote storage E-Series 
+summary: 'È possibile modificare le impostazioni di connessione per qualsiasi importazione di storage remoto configurata tramite l"opzione Visualizza/Modifica impostazioni nella schermata archiviazione remota di Gestione sistema di SANtricity.' 
+---
+= Modificare le impostazioni di connessione dello storage remoto
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile modificare, aggiungere o eliminare le impostazioni di connessione per qualsiasi configurazione di storage remoto tramite l'opzione View/Edit Settings (Visualizza/Modifica impostazioni).
+
+Le modifiche apportate alle proprietà della connessione influiscono sulle importazioni in corso. Per evitare interruzioni, apportare modifiche alle proprietà della connessione solo quando le importazioni non sono in esecuzione.
+
+.Fasi
+. Dalla schermata archiviazione remota di Gestione sistema SANtricity, selezionare l'oggetto di archiviazione remota desiderato nella sezione Result list (elenco risultati).
+. Fare clic su *View/Edit Settings* (Visualizza/Modifica impostazioni).
++
+Viene visualizzata la schermata Remote Storage Settings (Impostazioni storage remoto).
+
+. Fare clic sulla scheda *Connection Properties* (Proprietà connessione).
++
+Vengono visualizzati l'indirizzo IP configurato e le impostazioni della porta per l'importazione dello storage remoto.
+
+. Eseguire una delle seguenti operazioni:
++
+** *Edit* (Modifica) – fare clic su *Edit* (Modifica) accanto alla voce corrispondente per l'oggetto storage remoto. Inserire l'indirizzo IP e/o le informazioni sulla porta modificati nei campi.
+** *Aggiungi* – fare clic su *Aggiungi*, quindi inserire il nuovo indirizzo IP e le informazioni sulla porta nei campi forniti. Fare clic su *Aggiungi* per confermare, quindi la nuova connessione viene visualizzata nell'elenco degli oggetti di storage remoto.
+** *Delete* (Elimina) – selezionare la connessione desiderata dall'elenco, quindi fare clic su *Delete* (Elimina). Confermare l'operazione digitando `delete` Nel campo fornito, quindi fare clic su *Delete* (Elimina). La connessione viene rimossa dall'elenco degli oggetti di storage remoto.
+
+
+. Fare clic su *Save* (Salva).
++
+Le impostazioni di connessione modificate vengono applicate all'oggetto storage remoto.
+
+

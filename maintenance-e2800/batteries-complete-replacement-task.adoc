@@ -1,0 +1,159 @@
+---
+permalink: maintenance-e2800/batteries-complete-replacement-task.html 
+sidebar: sidebar 
+keywords: E2800 battery fail, E2800 battery, E2800 battery replacement, replace E2800 battery, replacing E2800 battery, E2800, E-Series, eseries 
+summary: Sostituire la batteria. 
+---
+= Sostituzione completa della batteria E2800
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La procedura per completare la sostituzione della batteria dipende dalla configurazione duplex (due controller) o simplex (un controller).
+
+* Per le configurazioni duplex, vedere <<Posizionare il controller online (duplex)>>.
+* Per le configurazioni simplex, vedere <<Controller di accensione (simplex)>>.
+
+
+
+
+== Posizionare il controller online (duplex)
+
+Posizionare il controller online per verificare che lo storage array funzioni correttamente. Quindi, è possibile raccogliere i dati di supporto e riprendere le operazioni.
+
+
+NOTE: Eseguire questa operazione solo se lo storage array dispone di due controller.
+
+.Fasi
+. All'avvio del controller, controllare i LED del controller e il display a sette segmenti.
++
+
+NOTE: La figura mostra un esempio di contenitore del controller. Il controller potrebbe avere un numero diverso e un tipo diverso di porte host.
+
++
+Quando la comunicazione con l'altro controller viene ristabilita:
+
++
+** Il display a sette segmenti mostra la sequenza ripetuta *OS*, *OL*, *_blank_* per indicare che il controller è offline.
+** Il LED di attenzione di colore ambra rimane acceso.
+** I LED del collegamento host potrebbero essere accesi, lampeggianti o spenti, a seconda dell'interfaccia host.image:../media/28_dwg_attn_led_7s_display_maint-e2800.gif[""]
++
+*(1)* _LED di attenzione (ambra)_
+
++
+*(2)* _Display a sette segmenti_
+
++
+*(3)* _LED collegamento host_
+
+
+
+. Portare il controller online utilizzando Gestione di sistema di SANtricity.
++
+** Da Gestore di sistema di SANtricity:
++
+... Selezionare *hardware*.
+... Se la figura mostra i dischi, selezionare *Mostra retro dello shelf*.
+... Selezionare il controller che si desidera mettere in linea.
+... Selezionare *Place Online* (Esegui online) dal menu di scelta rapida e confermare che si desidera eseguire l'operazione.
++
+Il sistema mette il controller in linea.
+
+
+
+** In alternativa, è possibile ripristinare il controller online utilizzando i seguenti comandi CLI:
++
+*Per il controller A:* `set controller [a] availability=online;`
+
++
+*Per il controller B:* `set controller [b] availability=online;`
+
+
+
+. Quando il controller torna in linea, verificare che lo stato sia ottimale e controllare i LED di attenzione dello shelf di controller.
++
+Se lo stato non è ottimale o se uno dei LED attenzione è acceso, verificare che tutti i cavi siano inseriti correttamente e che la batteria e il contenitore del controller siano installati correttamente. Se necessario, rimuovere e reinstallare il contenitore del controller e la batteria.
+
++
+
+NOTE: Se non si riesce a risolvere il problema, contattare il supporto tecnico.
+
+. Se necessario, raccogliere i dati di supporto per lo storage array utilizzando Gestione di sistema di SANtricity.
++
+.. Selezionare menu:Support[Support Center > Diagnostics] (supporto tecnico > Diagnostica).
+.. Selezionare *Collect Support Data*.
+.. Fare clic su *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *support-data.7z*.
+
+
+
+
+
+.Quali sono le prossime novità?
+La sostituzione della batteria è completata. È possibile riprendere le normali operazioni.
+
+
+
+== Controller di accensione (simplex)
+
+Accendere lo shelf del controller per verificare che funzioni correttamente. Quindi, è possibile raccogliere i dati di supporto e riprendere le operazioni.
+
+
+NOTE: Eseguire questa attività solo se lo storage array dispone di un controller.
+
+.Fasi
+. Accendere i due interruttori di alimentazione sul retro dello shelf del controller.
++
+** Non spegnere gli interruttori di alimentazione durante il processo di accensione, che in genere richiede 90 secondi o meno.
+** Le ventole di ogni shelf sono molto rumorose al primo avvio. Il rumore forte durante l'avvio è normale.
+
+
+. All'avvio del controller, controllare i LED del controller e il display a sette segmenti.
++
+** Il display a sette segmenti mostra la sequenza ripetuta *OS*, *SD*, *_blank_* per indicare che il controller sta eseguendo l'elaborazione SOD (Start-of-day). Una volta avviato correttamente un controller, il display a sette segmenti dovrebbe visualizzare l'ID del vassoio.
+** Il LED di attenzione ambra sul controller si accende e poi si spegne, a meno che non si verifichi un errore.
+** I LED verdi del collegamento host si accendono.
++
+
+NOTE: La figura mostra un esempio di contenitore del controller. Il controller potrebbe avere un numero diverso e un tipo diverso di porte host.
+
++
+image::../media/28_dwg_attn_led_7s_display_maint-e2800.gif[28 dwg attn led 7s display maintt e2800]
+
++
+*(1)* _LED di attenzione (ambra)_
+
++
+*(2)* _Display a sette segmenti_
+
++
+*(3)* _LED collegamento host_
+
+
+
+. Verificare che lo stato del controller sia ottimale e controllare i LED di attenzione dello shelf di controller.
++
+Se lo stato non è ottimale o se uno dei LED attenzione è acceso, verificare che tutti i cavi siano inseriti correttamente e che la batteria e il contenitore del controller siano installati correttamente. Se necessario, rimuovere e reinstallare il contenitore del controller e la batteria.
+
++
+
+NOTE: Se non si riesce a risolvere il problema, contattare il supporto tecnico.
+
+. Se necessario, raccogliere i dati di supporto per lo storage array utilizzando Gestione di sistema di SANtricity.
++
+.. Selezionare menu:Support[Support Center > Diagnostics] (supporto tecnico > Diagnostica).
+.. Selezionare *Collect Support Data*.
+.. Fare clic su *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *support-data.7z*.
+
+
+
+
+
+.Quali sono le prossime novità?
+La sostituzione della batteria è completata. È possibile riprendere le normali operazioni.

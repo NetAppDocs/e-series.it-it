@@ -1,0 +1,38 @@
+---
+permalink: getting-started/index.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, 
+summary: Questo sito contiene informazioni su release, modelli e componenti specifici di e-Series. 
+---
+= Cosa include questo sito
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Questo sito contiene informazioni su release, modelli e componenti specifici di e-Series.
+
+|===
+| Che cosa è incluso | Cosa _non_ è incluso 
+
+
+ a| 
+Questo sito contiene informazioni relative alle seguenti release e tipi di componenti:
+
+* *Software SANtricity* -- versione 11.50 e successive.
+* *Firmware del controller* -- versione 8.50 e successive.
+* *Tipi di controller* -- tutti i modelli E2800, EF280, EF300, E5700, EF570, E EF600.
+* *Tipi di interfaccia* -- Fibre Channel, iSCSI, iSER, SAS e NVMe.
+* *Sistemi operativi installati sugli host* -- Linux, VMware e Windows.
++
+
+NOTE: Potrebbero essere supportate interfacce e sistemi operativi aggiuntivi. Per ulteriori informazioni, contatta il supporto tecnico.
+
+
+ a| 
+Questo sito _non_ contiene informazioni relative alle release _precedenti alla versione software 11.50 o alla versione firmware 8.50. Per le versioni precedenti, visitare il https://www.netapp.com/us/documentation/eseries-santricity.aspx["E-Series e risorse di documentazione SANtricity"^] pagina.
+
+Per informazioni sui requisiti di preparazione del sito, visitare il sito Web all'indirizzo https://hwu.netapp.com/["NetApp Hardware Universe"^].
+
+|===

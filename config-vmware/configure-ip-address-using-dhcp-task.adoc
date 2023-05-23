@@ -1,0 +1,50 @@
+---
+permalink: config-vmware/configure-ip-address-using-dhcp-task.html 
+sidebar: sidebar 
+keywords: IP address, DHCP, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: 'Utilizzare il protocollo DHCP (Dynamic host Configuration Protocol) per fornire gli indirizzi IP nel metodo VMware Express.' 
+---
+= Configurare gli indirizzi IP utilizzando DHCP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per configurare le comunicazioni tra la stazione di gestione e lo storage array, utilizzare il protocollo DHCP (Dynamic host Configuration Protocol) per fornire gli indirizzi IP.
+
+.Di cosa hai bisogno
+Un server DHCP installato e configurato sulla stessa subnet delle porte di gestione dello storage.
+
+.A proposito di questa attività
+Ogni array di storage dispone di un controller (simplex) o due controller (duplex) e ciascun controller dispone di due porte per la gestione dello storage. A ciascuna porta di gestione viene assegnato un indirizzo IP.
+
+Le seguenti istruzioni si riferiscono a uno storage array con due controller (configurazione duplex).
+
+.Fasi
+. In caso contrario, collegare un cavo Ethernet alla stazione di gestione e alla porta di gestione 1 di ciascun controller (A e B).
++
+Il server DHCP assegna un indirizzo IP alla porta 1 di ciascun controller.
+
++
+
+NOTE: Non utilizzare la porta di gestione 2 su entrambi i controller. La porta 2 è riservata al personale tecnico di NetApp.
+
++
+
+NOTE: Se si scollega e si ricollega il cavo Ethernet o se lo storage array viene spento e riacceso, DHCP assegna nuovamente gli indirizzi IP. Questo processo si verifica fino a quando non vengono configurati gli indirizzi IP statici. Si consiglia di evitare di scollegare il cavo o di spegnere e riaccendere l'array.
+
++
+Se lo storage array non riesce a ottenere gli indirizzi IP assegnati da DHCP entro 30 secondi, vengono impostati i seguenti indirizzi IP predefiniti:
+
++
+** Controller A, porta 1: 169.254.128.101
+** Controller B, porta 1: 169.254.128.102
+** Subnet mask: 255.255.0.0
+
+
+. Individuare l'etichetta dell'indirizzo MAC sul retro di ciascun controller, quindi fornire all'amministratore di rete l'indirizzo MAC per la porta 1 di ciascun controller.
++
+L'amministratore di rete ha bisogno degli indirizzi MAC per determinare l'indirizzo IP di ciascun controller. Per connettersi al sistema di storage tramite il browser, sono necessari gli indirizzi IP.
+
+

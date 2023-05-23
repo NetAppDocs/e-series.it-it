@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-view-status.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Visualizzare lo stato del sistema dal plug-in di storage per vCenter o dal client vSphere 
+---
+= Visualizzare lo stato
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile visualizzare lo stato del sistema dal plugin Storage per vCenter o dal client vSphere.
+
+. Aprire il plug-in dal client vSphere.
+. Visualizzare lo stato dai seguenti pannelli:
++
+** *Stato array di storage* -- Vai al pannello *Gestisci-tutto*. Per ogni array rilevato, la riga fornisce una colonna Status (Stato).
+** *Operazioni in corso* -- fare clic su *operazioni* sul pannello laterale per visualizzare tutte le attività in esecuzione a lungo, ad esempio l'importazione delle impostazioni. È inoltre possibile visualizzare le operazioni a esecuzione prolungata dall'elenco a discesa Provisioning. Per ciascuna operazione elencata nella finestra di dialogo Operations in Progress (operazioni in corso), vengono visualizzate una percentuale di completamento e il tempo stimato rimanente per completare l'operazione. In alcuni casi, è possibile interrompere un'operazione o posizionarla con priorità più alta o più bassa. Se lo si desidera, utilizzare i collegamenti nella colonna Actions (azioni) per interrompere o modificare la priorità di un'operazione.
+
+
+
+
+
+CAUTION: Leggere tutto il testo di avviso fornito nelle finestre di dialogo, in particolare quando si interrompe un'operazione.
+
+Le operazioni che potrebbero essere visualizzate per il plug-in sono elencate nella seguente tabella. È possibile che nell'interfaccia di System Manager vengano visualizzate operazioni aggiuntive.
+
+|===
+| Operazione | Stato possibile dell'operazione | Azioni da intraprendere 
+
+
+| Creazione di volumi (solo volumi thick pool superiori a 64 TiB) | In corso | nessuno 
+
+
+| Eliminazione del volume (solo volumi thick pool superiori a 64 TiB) | In corso | nessuno 
+
+
+| Aggiungere capacità al pool o al gruppo di volumi | In corso | nessuno 
+
+
+| Modificare un livello RAID per un volume | In corso | nessuno 
+
+
+| Ridurre la capacità di un pool | In corso | nessuno 
+
+
+| Verificare il tempo rimanente per un'operazione con formato di disponibilità istantanea (IAF) per i volumi del pool | In corso | nessuno 
+
+
+| Controllare la ridondanza dei dati di un gruppo di volumi | In corso | nessuno 
+
+
+| Inizializzare un volume | In corso | nessuno 
+
+
+| Aumentare la capacità di un volume | In corso | nessuno 
+
+
+| Modificare le dimensioni dei segmenti di un volume | In corso | nessuno 
+|===

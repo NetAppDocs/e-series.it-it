@@ -1,0 +1,103 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-use-ca-signed-certificates.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Ottenere e importare certificati con firma CA per un accesso sicuro al sistema di gestione che ospita lo Storage Plugin per vCenter. 
+---
+= USA certificati firmati dalla CA
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile ottenere e importare certificati con firma CA per un accesso sicuro al sistema di gestione che ospita lo Storage Plugin per vCenter.
+
+L'utilizzo dei certificati firmati dalla CA è una procedura in tre fasi:
+
+* <<Fase 1: Completare un file CSR>>.
+* <<Fase 2: Inviare il file CSR>>.
+* <<Fase 3: Importazione dei certificati di gestione>>.
+
+
+
+
+== Fase 1: Completare un file CSR
+
+È necessario innanzitutto generare un file CSR (Certificate Signing Request) che identifichi l'organizzazione e il sistema host in cui è in esecuzione il plug-in. In alternativa, è possibile generare un file CSR utilizzando uno strumento come OpenSSL e passare a. <<Fase 2: Inviare il file CSR>>.
+
+.Fasi
+. Selezionare *Certificate Management* (Gestione certificati).
+. Dalla scheda *Gestione*, selezionare *completa CSR*.
+. Inserire le seguenti informazioni, quindi fare clic su *Avanti*:
++
+** *Organizzazione* -- il nome completo e legale della tua azienda o organizzazione. Includere i suffissi, ad esempio Inc. O Corp.
+** *Unità organizzativa (opzionale)* -- la divisione dell'organizzazione che gestisce il certificato.
+** *Città/Località* -- la città in cui si trova il sistema host o l'azienda.
+** *Stato/Regione (opzionale)* -- Stato o regione in cui si trova il sistema host o l'azienda.
+** *Codice ISO del Paese* -- Codice ISO (International Organization for Standardization) a due cifre del Paese, ad esempio USA.
+
+
+. Immettere le seguenti informazioni sul sistema host in cui è in esecuzione il plug-in:
++
+** *Nome comune* -- l'indirizzo IP o il nome DNS del sistema host in cui è in esecuzione il plug-in. Assicurarsi che questo indirizzo sia corretto; deve corrispondere esattamente a quello immesso per accedere al plug-in nel browser. Non includere http:// o https://. Il nome DNS non può iniziare con un carattere jolly.
+** *Indirizzi IP alternativi* -- se il nome comune è un indirizzo IP, è possibile inserire eventuali indirizzi IP o alias aggiuntivi per il sistema host. Per più voci, utilizzare un formato delimitato da virgole.
+** *Nomi DNS alternativi* -- se il nome comune è un nome DNS, immettere eventuali nomi DNS aggiuntivi per il sistema host. Per più voci, utilizzare un formato delimitato da virgole. Se non sono presenti nomi DNS alternativi, ma è stato immesso un nome DNS nel primo campo, copiarlo qui. Il nome DNS non può iniziare con un carattere jolly.
+
+
+. Assicurarsi che le informazioni sull'host siano corrette. In caso contrario, i certificati restituiti dalla CA non avranno esito positivo quando si tenta di importarli.
+. Fare clic su *fine*.
+
+
+
+
+== Fase 2: Inviare il file CSR
+
+Dopo aver creato un file CSR (Certificate Signing Request), il file CSR generato viene inviato a una CA per ricevere certificati di gestione firmati per il sistema che ospita il plug-in.
+
+I sistemi e-Series richiedono il formato PEM (codifica ASCII Base64) per i certificati firmati, che include i seguenti tipi di file: .Pem, .crt, .cer o .key.
+
+.Fasi
+. Individuare il file CSR scaricato.
++
+La posizione della cartella del download dipende dal browser in uso.
+
+. Inviare il file CSR a una CA (ad esempio, VeriSign o DigiCert) e richiedere certificati firmati in formato PEM.
+
+
+
+CAUTION: Dopo aver inviato un file CSR alla CA, NON rigenerare un altro file CSR.
+
+Ogni volta che si genera una CSR, il sistema crea una coppia di chiavi privata e pubblica. La chiave pubblica fa parte della CSR, mentre la chiave privata viene conservata nell'archivio chiavi del sistema. Quando si ricevono i certificati firmati e li si importano, il sistema garantisce che sia la chiave privata che la chiave pubblica siano la coppia originale. Se le chiavi non corrispondono, i certificati firmati non funzioneranno ed è necessario richiedere nuovi certificati alla CA.
+
+
+
+== Fase 3: Importazione dei certificati di gestione
+
+Una volta ricevuti i certificati firmati dall'autorità di certificazione (CA), importare i certificati nel sistema host in cui è installato il plug-in.
+
+.Prima di iniziare
+* È necessario disporre dei certificati firmati dalla CA. Questi file includono il certificato di origine, uno o più certificati intermedi e il certificato del server.
+* Se la CA ha fornito un file di certificato concatenato (ad esempio, un file .p7b), è necessario decomprimere il file concatenato in singoli file: Il certificato root, uno o più certificati intermedi e il certificato del server. È possibile utilizzare l'utility Windows certmgr per decomprimere i file (fare clic con il pulsante destro del mouse e selezionare menu:All Tasks[Export]). Si consiglia la codifica base-64. Una volta completate le esportazioni, viene visualizzato un file CER per ciascun file di certificato nella catena.
+* È necessario copiare i file dei certificati nel sistema host in cui è in esecuzione il plug-in.
+
+
+.Fasi
+. Selezionare *Certificate Management* (Gestione certificati).
+. Dalla scheda *Gestione*, selezionare *Importa*.
++
+Viene visualizzata una finestra di dialogo per l'importazione dei file dei certificati.
+
+. Fare clic su *Browse* (Sfoglia) per selezionare prima i file dei certificati root e intermedi, quindi selezionare il certificato del server. Se la CSR è stata generata da uno strumento esterno, è necessario importare anche il file della chiave privata creato insieme alla CSR.
++
+I nomi dei file vengono visualizzati nella finestra di dialogo.
+
+. Fare clic su *Importa*.
+
+
+.Risultato
+I file vengono caricati e validati. Le informazioni sul certificato vengono visualizzate nella pagina Gestione certificati.

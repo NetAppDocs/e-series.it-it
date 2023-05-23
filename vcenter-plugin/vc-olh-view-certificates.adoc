@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-view-certificates.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Visualizzare le informazioni riepilogative di un certificato, che includono l"organizzazione che utilizza il certificato, l"autorità che ha emesso il certificato, il periodo di validità e le impronte digitali (identificatori univoci)' 
+---
+= Visualizzare i certificati
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile visualizzare informazioni riepilogative per un certificato, che includono l'organizzazione che utilizza il certificato, l'autorità che ha emesso il certificato, il periodo di validità e le impronte digitali (identificatori univoci).
+
+.Fasi
+. Selezionare *Certificate Management* (Gestione certificati).
+. Selezionare una delle seguenti schede:
++
+** *Management* -- Mostra il certificato per il sistema che ospita il plugin. Un certificato di gestione può essere autofirmato o approvato da un'autorità di certificazione (CA). Consente un accesso sicuro al plug-in.
+** *Trusted* -- Mostra i certificati ai quali il plug-in può accedere per gli array di storage e altri server remoti, come un server LDAP. I certificati possono essere emessi da un'autorità di certificazione (CA) o autofirmati.
+
+
+. Per visualizzare ulteriori informazioni su un certificato, selezionare la relativa riga, selezionare i puntini di sospensione alla fine della riga, quindi fare clic su *Visualizza* o *Esporta*.
+

@@ -1,0 +1,138 @@
+---
+permalink: maintenance-e5700/hpp-complete-protocol-conversion-task.html 
+sidebar: sidebar 
+keywords: E5700 change host protocol, E5700 baseboard ports, convert E5700 protocol, IB protocol, Infiniband protocol, Fibre Channel protocol, FC protocol, iSCSI protocol, iSER, RoCE, NVMe, converting host port protocol, 
+summary: Completare la conversione del protocollo host E5700. 
+---
+= Conversione completa del protocollo host E5700
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver convertito il protocollo delle porte host, eseguire ulteriori operazioni per utilizzare il nuovo protocollo.
+
+I passaggi da completare dipendono dai protocolli iniziali e finali delle porte host della scheda base e delle porte HIC.
+
+
+
+== Conversione completa da FC a iSCSI
+
+Se in precedenza si disponevano di porte host FC e si erano convertiti in iSCSI, potrebbe essere necessario modificare la configurazione esistente per supportare iSCSI. La seguente procedura è applicabile solo se non è presente iSCSI HIC.
+
+.A proposito di questa attività
+Questa attività si applica solo se si sta convertendo un array di storage già in uso.
+
+Questa attività non si applica se si sta convertendo un nuovo array di storage che non ha ancora host e volumi definiti. Se è stato convertito il protocollo host-port di un nuovo array di storage, consultare link:../install-hw-cabling/index.html["Procedure di cablaggio"] Per installare cavi e SFP. Quindi, seguire le istruzioni in link:../config-linux/index.html["Configurazione di Linux Express"], link:../config-windows/index.html["Configurazione di Windows Express"], o. link:../config-vmware/index.html["Configurazione di VMware Express"] per completare la configurazione di ciascun protocollo.
+
+.Fasi
+. Configurare gli switch.
++
+È necessario configurare gli switch utilizzati per il trasporto del traffico iSCSI in base alle raccomandazioni del vendor per iSCSI. Questi consigli possono includere sia direttive di configurazione che aggiornamenti del codice.
+
+. Da Gestore di sistema di SANtricity, selezionare menu:hardware[Configura porte iSCSI].
+. Selezionare le impostazioni della porta.
++
+È possibile configurare la rete iSCSI in diversi modi. Rivolgersi all'amministratore di rete per suggerimenti sulla scelta della configurazione migliore per l'ambiente in uso.
+
+. Aggiornare le definizioni degli host in Gestore di sistema di SANtricity.
++
+
+NOTE: Per istruzioni sull'aggiunta di host o cluster di host, consultare la guida in linea di Gestione di sistema di SANtricity.
+
++
+.. Selezionare menu:Storage[Hosts] (Storage[host]).
+.. Selezionare l'host a cui associare la porta e fare clic su *View/Edit Settings* (Visualizza/Modifica impostazioni).
++
+Viene visualizzata la finestra di dialogo host Settings (Impostazioni host).
+
+.. Fare clic sulla scheda *host Ports* (Porte host).
++
+image::../media/sam1130_ss_host_settings_dialog_ports_tab_maint-e5700.gif[sam1130 ss impostazioni host finestra di dialogo porte scheda maintt e5700]
+
+.. Fare clic su *Add* (Aggiungi) e utilizzare la finestra di dialogo *Add host Port* (Aggiungi porta host) per associare un nuovo identificatore di porta host all'host.
++
+La lunghezza del nome dell'identificatore della porta host è determinata dalla tecnologia dell'interfaccia host. I nomi degli identificatori delle porte host FC devono contenere 16 caratteri. I nomi degli identificatori delle porte host iSCSI hanno un massimo di 223 caratteri. La porta deve essere univoca. Un numero di porta già configurato non è consentito.
+
+.. Fare clic su *Delete* (Elimina) e utilizzare la finestra di dialogo *Delete host Port* (Elimina porta host) per rimuovere (annullare l'associazione) un identificatore di porta host.
++
+L'opzione *Delete* non rimuove fisicamente la porta host. Questa opzione rimuove l'associazione tra la porta host e l'host. A meno che non si rimuovano host bus adapter o iSCSI Initiator, la porta host viene ancora riconosciuta dal controller.
+
+.. Fare clic su *Save* (Salva) per applicare le modifiche alle impostazioni dell'identificatore della porta host.
+.. Ripetere questa procedura per aggiungere e rimuovere eventuali identificatori di porta host aggiuntivi.
+
+
+. Riavviare l'host o eseguire una nuova scansione in modo che l'host scopra correttamente le LUN.
+. Eseguire il remount dei volumi o iniziare a utilizzare il volume a blocchi.
+
+
+.Quali sono le prossime novità?
+La conversione del protocollo host è stata completata. È possibile riprendere le normali operazioni.
+
+
+
+== Conversione completa da iSCSI a FC
+
+Se in precedenza si disponevano di porte host iSCSI e si erano convertiti in FC, potrebbe essere necessario modificare la configurazione esistente per supportare FC. La seguente procedura è applicabile solo se non è presente FC HIC.
+
+Questa attività si applica solo se si sta convertendo un array di storage già in uso.
+
+Questa attività non si applica se si sta convertendo un nuovo array di storage che non ha ancora host e volumi definiti. Se è stato convertito il protocollo host-port di un nuovo array di storage, consultare link:../install-hw-cabling/index.html["Procedure di cablaggio"] Per installare cavi e SFP. Quindi, seguire le istruzioni in link:../config-linux/index.html["Configurazione di Linux Express"], link:../config-windows/index.html["Configurazione di Windows Express"], o. link:../config-vmware/index.html["Configurazione di VMware Express"] per completare la configurazione di ciascun protocollo.
+
+.Fasi
+. Installare l'utility HBA e determinare le WWPN dell'iniziatore.
+. Fare una zona tra gli switch.
++
+Lo zoning degli switch consente agli host di connettersi allo storage e limita il numero di percorsi. Gli switch vengono posizionati in zone utilizzando l'interfaccia di gestione degli switch.
+
+. Aggiornare le definizioni degli host in Gestore di sistema di SANtricity.
++
+.. Selezionare menu:Storage[Hosts] (Storage[host]).
+.. Selezionare l'host a cui associare la porta e fare clic su *View/Edit Settings* (Visualizza/Modifica impostazioni).
++
+Viene visualizzata la finestra di dialogo host Settings (Impostazioni host).
+
+.. Fare clic sulla scheda *host Ports* (Porte host).
++
+image::../media/sam1130_ss_host_settings_dialog_ports_tab_maint-e5700.gif[sam1130 ss impostazioni host finestra di dialogo porte scheda maintt e5700]
+
+.. Fare clic su *Add* (Aggiungi) e utilizzare la finestra di dialogo *Add host Port* (Aggiungi porta host) per associare un nuovo identificatore di porta host all'host.
++
+La lunghezza del nome dell'identificatore della porta host è determinata dalla tecnologia dell'interfaccia host. I nomi degli identificatori delle porte host FC devono contenere 16 caratteri. I nomi degli identificatori delle porte host iSCSI hanno un massimo di 223 caratteri. La porta deve essere univoca. Un numero di porta già configurato non è consentito.
+
+.. Fare clic su *Delete* (Elimina) e utilizzare la finestra di dialogo *Delete host Port* (Elimina porta host) per rimuovere (annullare l'associazione) un identificatore di porta host.
++
+L'opzione *Delete* non rimuove fisicamente la porta host. Questa opzione rimuove l'associazione tra la porta host e l'host. A meno che non si rimuovano host bus adapter o iSCSI Initiator, la porta host viene ancora riconosciuta dal controller.
+
+.. Fare clic su *Save* (Salva) per applicare le modifiche alle impostazioni dell'identificatore della porta host.
+.. Ripetere questa procedura per aggiungere e rimuovere eventuali identificatori di porta host aggiuntivi.
+
+
+. Riavviare l'host o eseguire una nuova scansione in modo che l'host scopra correttamente lo storage mappato.
+. Eseguire il remount dei volumi o iniziare a utilizzare il volume a blocchi.
+
+
+.Quali sono le prossime novità?
+La conversione del protocollo host è stata completata. È possibile riprendere le normali operazioni.
+
+
+
+== Conversione completa per IB-iSER a/da IB-SRP, NVMe su IB, NVMe su RoCE o NVMe su FC
+
+Dopo aver applicato la chiave Feature Pack per convertire il protocollo utilizzato dalla porta InfiniBand iSER HIC in/da SRP, NVMe su InfiniBand, NVMe su RoCE o NVMe su Fibre Channel, è necessario configurare l'host per utilizzare il protocollo appropriato.
+
+.Fasi
+. Configurare l'host per l'utilizzo del protocollo SRP, iSER o NVMe.
++
+Per istruzioni dettagliate su come configurare l'host per l'utilizzo di SRP, iSER o NVMe, consultare link:../config-linux/index.html["Configurazione di Linux Express"].
+
+. Per collegare l'host allo storage array per una configurazione SRP, è necessario attivare lo stack di driver InfiniBand con le opzioni appropriate.
++
+Impostazioni specifiche possono variare a seconda delle distribuzioni Linux. Controllare http://mysupport.netapp.com/matrix["Matrice di interoperabilità NetApp"^] per istruzioni specifiche e impostazioni aggiuntive consigliate per la soluzione.
+
+
+
+.Quali sono le prossime novità?
+La conversione del protocollo host è stata completata. È possibile riprendere le normali operazioni.

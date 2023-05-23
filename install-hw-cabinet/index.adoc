@@ -1,0 +1,31 @@
+---
+permalink: install-hw-cabinet/index.html 
+sidebar: sidebar 
+keywords: 3040 40U cabinet, cabinet installation, drive tray installation, controller installation, shelf installation, E2800, E5700, EF300, EF600, 
+summary: 'Panoramica dell"installazione dei vassoi delle unità in cabinet e-Series 3040 40U' 
+---
+= Installare i vassoi nel cabinet 3040 40U
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nel cabinet e-Series 3040 40U è possibile installare i seguenti vassoi del controller e dei dischi di espansione:
+
+* Tray di dischi controller E2612, E2624 e E2660
+* Tray di dischi controller E2712, E2724 e E2760
+* Tray di dischi controller E5412, E5424 e E5460
+* Tray di dischi controller E5512, E5524 e E5560
+* Tray di dischi controller E5612, E5624 e E5660
+* Array flash EF540, EF550 e EF560
+* Tray di dischi DE1600, DE5600 e DE6600
+
+
+È inoltre possibile installare i seguenti shelf di controller SAS-3 e shelf di dischi nel cabinet.
+
+* Shelf di controller E2812, E2824 e E5724
+* Shelf di dischi DE212C e DE224C
+
+
+Tuttavia, le specifiche di questi shelf non sono elencate in queste procedure. Fare riferimento a. https://hwu.netapp.com["NetApp Hardware Universe"^].

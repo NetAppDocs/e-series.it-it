@@ -1,0 +1,108 @@
+---
+permalink: config-vmware/overview-concept.html 
+sidebar: sidebar 
+keywords: express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: 'Esaminare i requisiti per l"utilizzo del metodo Express per la configurazione di un array e-Series e di un host VMware.' 
+---
+= Presupposti
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il metodo VMware Express si basa sui seguenti presupposti:
+
+|===
+| Componente | Presupposti 
+
+
+ a| 
+Hardware
+ a| 
+* Per installare l'hardware, sono state utilizzate le istruzioni di installazione e configurazione fornite con gli shelf dei controller.
+* Sono stati collegati i cavi tra gli shelf di dischi opzionali e i controller.
+* Il sistema storage è alimentato.
+* Hai installato tutto l'altro hardware (ad esempio, stazione di gestione, switch) e hai effettuato le connessioni necessarie.
+
+
+
+
+ a| 
+Host
+ a| 
+* È stata stabilita una connessione tra il sistema storage e l'host dati.
+* Il sistema operativo host è stato installato.
+* Non stai utilizzando VMware come guest virtualizzato.
+* Non si sta configurando l'host dati (i/o collegato) per l'avvio da SAN.
+
+
+
+
+ a| 
+Stazione di gestione dello storage
+ a| 
+* Si utilizza una rete di gestione a 1 Gbps o più veloce.
+* Si sta utilizzando una stazione separata per la gestione piuttosto che l'host dei dati (i/o collegato).
+* Si sta utilizzando la gestione out-of-band, in cui una stazione di gestione dello storage invia comandi al sistema di storage attraverso le connessioni Ethernet al controller.
+* La stazione di gestione è stata collegata alla stessa subnet delle porte di gestione dello storage.
+
+
+
+
+ a| 
+Indirizzamento IP
+ a| 
+* È stato installato e configurato un server DHCP.
+* È stata ancora stabilita una connessione Ethernet tra la stazione di gestione e il sistema di storage.
+
+
+
+
+ a| 
+Provisioning dello storage
+ a| 
+* Non verranno utilizzati volumi condivisi.
+* Verranno creati pool anziché gruppi di volumi.
+
+
+
+
+ a| 
+Protocollo: FC
+ a| 
+* Sono state effettuate tutte le connessioni FC sul lato host e lo zoning dello switch attivato.
+* Stai utilizzando HBA e switch FC supportati da NetApp.
+* Si stanno utilizzando le versioni del driver e del firmware dell'HBA FC elencate nella http://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"^].
+
+
+
+
+ a| 
+Protocollo: NVMe su Fibre Channel
+ a| 
+* Sono state effettuate tutte le connessioni FC sul lato host e lo zoning dello switch attivato.
+* Stai utilizzando HBA e switch FC supportati da NetApp.
+* Si stanno utilizzando le versioni del driver e del firmware dell'HBA FC elencate nella http://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"^].
+
+
+
+
+ a| 
+Protocollo: ISCSI
+ a| 
+* Si utilizzano switch Ethernet in grado di trasportare il traffico iSCSI.
+* Gli switch Ethernet sono stati configurati in base alle raccomandazioni del vendor per iSCSI.
+
+
+
+
+ a| 
+Protocollo: SAS
+ a| 
+* Stai utilizzando HBA SAS supportati da NetApp.
+* Si stanno utilizzando le versioni del driver e del firmware dell'HBA SAS elencate nella http://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"^].
+
+
+|===
+Se questi presupposti non sono corretti per l'installazione o se si desidera ottenere informazioni di base più concettuali, consultare il seguente report tecnico: https://www.netapp.com/us/media/tr-4789.pdf["Guida alla configurazione VMware per l'integrazione iSCSI di e-Series SANtricity con ESXi 6.X."^]

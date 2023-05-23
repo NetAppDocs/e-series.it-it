@@ -1,0 +1,58 @@
+---
+permalink: config-linux/nvme-roce-assign-volume-task.html 
+sidebar: sidebar 
+keywords: assign volume Linux, assign namespace Linux, express linux configuration, linux host, 
+summary: 'È necessario assegnare un volume (namespace) a un host o a un cluster host in modo che possa essere utilizzato per le operazioni di i/O. Questa assegnazione consente a un host o a un cluster host di accedere a uno o più spazi dei nomi in un array di storage.' 
+---
+= Assegnare un volume
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario assegnare un volume (spazio dei nomi) a un host o a un cluster di host in modo che possa essere utilizzato per le operazioni di i/O. Questa assegnazione consente a un host o a un cluster host di accedere a uno o più spazi dei nomi in un array di storage.
+
+.A proposito di questa attività
+Tenere presenti queste linee guida quando si assegnano i volumi:
+
+* È possibile assegnare un volume a un solo host o cluster di host alla volta.
+* I volumi assegnati vengono condivisi tra i controller dell'array di storage.
+* Lo stesso ID dello spazio dei nomi (NSID) non può essere utilizzato due volte da un host o da un cluster host per accedere a un volume. È necessario utilizzare un NSID univoco.
+
+
+L'assegnazione di un volume non riesce nelle seguenti condizioni:
+
+* Vengono assegnati tutti i volumi.
+* Il volume è già assegnato a un altro host o cluster di host.
+
+
+La possibilità di assegnare un volume non è disponibile nelle seguenti condizioni:
+
+* Non esistono host o cluster di host validi.
+* Sono state definite tutte le assegnazioni dei volumi.
+
+
+Vengono visualizzati tutti i volumi non assegnati, ma le funzioni per gli host con o senza Data Assurance (da) si applicano come segue:
+
+* Per un host da-capable, è possibile selezionare i volumi che sono da-enabled o non da-enabled.
+* Per un host che non supporta da, se si seleziona un volume abilitato da, viene visualizzato un avviso che indica che il sistema deve disattivare automaticamente da sul volume prima di assegnarlo all'host.
+
+
+.Fasi
+. Selezionare menu:Storage[Hosts] (Storage[host]).
+. Selezionare l'host o il cluster host a cui si desidera assegnare i volumi, quindi fare clic su *Assign Volumes* (Assegna volumi).
++
+Viene visualizzata una finestra di dialogo che elenca tutti i volumi che è possibile assegnare. È possibile ordinare qualsiasi colonna o digitare qualcosa nella casella *Filter* per semplificare la ricerca di volumi specifici.
+
+. Selezionare la casella di controllo accanto a ciascun volume che si desidera assegnare oppure selezionare la casella di controllo nell'intestazione della tabella per selezionare tutti i volumi.
+. Fare clic su *Assegna* per completare l'operazione.
+
+
+.Risultato
+Dopo aver assegnato correttamente uno o più volumi a un host o a un cluster di host, il sistema esegue le seguenti operazioni:
+
+* Il volume assegnato riceve il successivo NSID disponibile. L'host utilizza l'NSID per accedere al volume.
+* Il nome del volume fornito dall'utente viene visualizzato negli elenchi dei volumi associati all'host.
+

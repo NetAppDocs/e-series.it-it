@@ -1,0 +1,100 @@
+---
+permalink: web-services-proxy/polling-intro-concept.html 
+sidebar: sidebar 
+keywords: polling Web Services Proxy, WSP statistics, poll WSP, 
+summary: È possibile configurare il polling automatico per tutte le statistiche di dischi e volumi sui sistemi storage rilevati. 
+---
+= Gestire il polling automatico per le statistiche del proxy dei servizi Web
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile configurare il polling automatico per tutte le statistiche di dischi e volumi sui sistemi storage rilevati.
+
+
+
+== Panoramica delle statistiche
+
+Le statistiche forniscono informazioni sui tassi di raccolta dei dati e sulle performance dei sistemi storage.
+
+Il proxy dei servizi Web consente di accedere ai seguenti tipi di statistiche:
+
+* Statistiche raw -- contatori totali per i punti dati al momento della raccolta dei dati. Le statistiche raw possono essere utilizzate per operazioni di lettura totali o operazioni di scrittura totali.
+* Statistiche analizzate -- informazioni calcolate per un intervallo. Esempi di statistiche analizzate sono le operazioni di input/output in lettura (IOPS) al secondo o il throughput in scrittura.
+
+
+Le statistiche raw sono lineari, in genere richiedono almeno due punti di dati raccolti per ricavare da essi i dati utilizzabili. Le statistiche analizzate sono una derivazione delle statistiche raw, che forniscono metriche importanti. Molti valori che possono essere derivati dalle statistiche raw vengono visualizzati in un formato point-in-time utilizzabile nelle statistiche analizzate per maggiore comodità.
+
+È possibile recuperare le statistiche raw indipendentemente dal fatto che il polling automatico sia attivato o meno. È possibile aggiungere `usecache=true` Stringa di query alla fine dell'URL per recuperare le statistiche memorizzate nella cache dall'ultimo polling. L'utilizzo dei risultati memorizzati nella cache aumenta notevolmente le performance del recupero delle statistiche. Tuttavia, più chiamate a una velocità uguale o inferiore alla cache dell'intervallo di polling configurata recuperano gli stessi dati.
+
+
+
+== Funzionalità delle statistiche
+
+Il proxy dei servizi Web fornisce endpoint API che consentono il recupero di statistiche di controller e interfacce raw e analizzate da modelli hardware e versioni software supportati.
+
+
+
+=== API Raw Statistics
+
+* `+/storage-systems/{system-id}/controller-statistics+`
+* `+/storage-systems/{system-id}/drive-statistics/{optional list of disk ids}+`
+* `+/storage-systems/{system-id}/interface-statistics/{optional list of interface ids}+`
+* `+/storage-systems/{system-id}/volume-statistics/{optional list of volume ids}+`
+
+
+
+
+=== API delle statistiche analizzate
+
+* `+/storage-systems/{id}/analysed-controller-statistics/+`
+* `+/storage-systems/{id}/analysed-drive-statistics/{optional list of disk ids}+`
+* `+/storage-systems/{id}/analysed-interface-statistics/{optional list of interface ids}+`
+* `+/storage-systems/{id}/analysed-volume-statistics/{optional list of volume ids}+`
+
+
+Questi URL recuperano le statistiche analizzate dall'ultimo polling e sono disponibili solo quando il polling è attivato. Questi URL includono i seguenti dati input-output:
+
+* Operazioni al secondo
+* Throughput in megabyte al secondo
+* Tempi di risposta in millisecondi
+
+
+I calcoli si basano sulle differenze tra le iterazioni di polling statistiche, che sono le misure più comuni delle performance dello storage. Queste statistiche sono preferibili alle statistiche non analizzate.
+
+
+NOTE: All'avvio del sistema, non esiste alcuna raccolta di statistiche precedente da utilizzare per calcolare le varie metriche, pertanto le statistiche analizzate richiedono almeno un ciclo di polling dopo l'avvio per restituire i dati. Inoltre, se i contatori cumulativi vengono ripristinati, il ciclo di polling successivo avrà numeri imprevedibili per i dati.
+
+
+
+== Configurare gli intervalli di polling
+
+Per configurare gli intervalli di polling, modificare il file wsconfig.xml in modo da specificare un intervallo di polling in secondi.
+
+
+NOTE: Poiché le statistiche sono memorizzate nella cache, potrebbe verificarsi un aumento di circa 1.5 MB di utilizzo della memoria per ciascun sistema di storage.
+
+.Prima di iniziare
+* I sistemi storage devono essere rilevati dal proxy.
+
+
+.Fasi
+. Aprire il file wsconfig.xml all'indirizzo:
++
+** (Windows) -- C:/Program Files/NetApp/SANtricity Web Services Proxy
+** (Linux) -- /opt/netapp/santricity_web_Services_proxy
+
+
+. Aggiungere la seguente riga all'interno di `<env-entries>` tag, in cui `n` indica il numero di secondi dell'intervallo tra le richieste di polling:
++
+[listing]
+----
+<env key="stats.poll.interval">n</env>
+----
++
+Ad esempio, se si inserisce 60, il polling inizia a intervalli di 60 secondi. Ovvero, il sistema richiede l'avvio del polling 60 secondi dopo il completamento del periodo di polling precedente (indipendentemente dalla durata del periodo di polling precedente). Tutte le statistiche sono contrassegnate con l'ora esatta in cui sono state recuperate. Il sistema utilizza l'indicatore orario o la differenza temporale su cui basare il calcolo di 60 secondi.
+
+. Salvare il file.
+

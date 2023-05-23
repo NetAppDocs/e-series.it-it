@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-remove-storage-arrays.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Rimuovere uno o più array di storage se non si desidera più gestirli dal plug-in Storage per vCenter. 
+---
+= Rimuovere gli array di storage
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile rimuovere uno o più array di storage se non si desidera più gestirli dallo Storage Plugin per vCenter.
+
+.A proposito di questa attività
+Non è possibile accedere a nessuno degli array di storage rimossi. Tuttavia, è possibile stabilire una connessione a uno degli array di storage rimossi puntando direttamente un browser all'indirizzo IP o al nome host.
+
+La rimozione di uno storage array non influisce in alcun modo sullo storage array o sui relativi dati. Se uno storage array viene rimosso accidentalmente, può essere aggiunto di nuovo.
+
+.Fasi
+. Dalla pagina *Manage* (Gestione), selezionare uno o più array di storage da rimuovere.
+. Selezionare menu:operazioni non comuni[Rimuovi array di storage].
++
+Lo storage array viene rimosso da tutte le viste dell'interfaccia del plugin.
+
+

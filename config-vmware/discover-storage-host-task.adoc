@@ -1,0 +1,23 @@
+---
+permalink: config-vmware/discover-storage-host-task.html 
+sidebar: sidebar 
+keywords: discover storage ESXi, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: 'Dopo aver assegnato i volumi all"host, eseguire una nuova scansione in modo che l"host rilevi e configuri i volumi per il multipathing.' 
+---
+= Rilevare lo storage sull'host
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver assegnato i volumi all'host, eseguire una nuova scansione in modo che l'host rilevi e configuri i volumi per il multipathing.
+
+Per impostazione predefinita, un host ESXi esegue automaticamente una nuova scansione ogni cinque minuti. Prima di eseguire una nuova scansione manuale, è possibile che venga visualizzato un volume tra un momento e l'altro in cui viene creato e assegnato a un host. Indipendentemente da ciò, è possibile eseguire una nuova scansione manuale per garantire che tutti i volumi siano configurati correttamente.
+
+.Fasi
+. Creare uno o più volumi e assegnarli all'host ESXi.
+. Se si utilizza un vCenter Server, aggiungere l'host all'inventario del server.
+. Utilizzare vSphere Client o vSphere Web Client per connettersi direttamente al vCenter Server o all'host ESXi.
+. Per istruzioni su come eseguire una nuova scansione dello storage su un host ESXi, cercare https://kb.vmware.com/s/["Knowledge base VMware"^] articolo su questo argomento.
+

@@ -1,0 +1,161 @@
+---
+permalink: web-services-proxy/install-login-task.html 
+sidebar: sidebar 
+keywords: log in API, log in Unified Manager 
+summary: 'Accesso e accesso all"API dei servizi Web e a Unified Manager.' 
+---
+= Accedere a API e Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+I servizi Web includono la documentazione API, che consente di interagire direttamente con L'API REST. Include inoltre Unified Manager, un'interfaccia basata su browser per la gestione di più sistemi storage e-Series.
+
+
+
+== Accedere all'API dei servizi Web
+
+Dopo aver installato Web Services Proxy, è possibile accedere alla documentazione API interattiva in un browser.
+
+La documentazione API viene eseguita con ogni istanza dei servizi Web ed è disponibile anche in formato PDF statico dal sito del supporto NetApp. Per accedere alla versione interattiva, aprire un browser e immettere l'URL che indica la posizione dei servizi Web (un controller per la versione incorporata o un server per il proxy).
+
+
+NOTE: L'API dei servizi Web implementa la specifica OpenAPI (originariamente chiamata specifica Swagger).
+
+Per l'accesso iniziale, utilizzare le credenziali "admin". "Admin" è considerato un super amministratore con accesso a tutte le funzioni e i ruoli.
+
+.Fasi
+. Aprire un browser.
+. Inserire l'URL per l'implementazione del proxy o incorporato:
++
+** Integrato: `+https://<controller>:<port>/devmgr/docs/+`
++
+In questo URL, `<controller>` È l'indirizzo IP o FQDN del controller, e. `<port>` è il numero della porta di gestione del controller (il valore predefinito è 8443).
+
+** Proxy: `+http[s]://<server>:<port>/devmgr/docs/+`
++
+In questo URL, `<server>` È l'indirizzo IP o FQDN del server in cui è installato il proxy, e. `<port>` È il numero della porta di ascolto (il valore predefinito è 8080 per HTTP o 8443 per HTTPS).
+
++
+
+NOTE: Se la porta di ascolto è già in uso, il proxy rileva il conflitto e richiede di scegliere un'altra porta di ascolto.
+
++
+La documentazione API viene aperta nel browser.
+
+
+
+. Una volta aperta la documentazione API interattiva, accedere al menu a discesa in alto a destra della pagina e selezionare *utils*.
+. Fare clic sulla categoria *Login* per visualizzare gli endpoint disponibili.
+. Fare clic sull'endpoint *POST: /Login*, quindi fare clic su *Provalo*.
+. Per il primo accesso, immettere admin come nome utente e password.
+. Fare clic su *Execute* (Esegui).
+. Per accedere agli endpoint per la gestione dello storage, andare al menu a discesa in alto a destra e selezionare *v2*.
++
+Vengono visualizzate le categorie di alto livello per gli endpoint. È possibile esplorare la documentazione API come descritto nella tabella.
+
++
+|===
+| Area | Descrizione 
+
+
+ a| 
+Menu a discesa
+ a| 
+Nella parte superiore destra della pagina, un menu a discesa fornisce le opzioni per passare dalla versione 2 della documentazione API (V2), all'interfaccia dei simboli (Symbol V2) e alle utility API (utils) per l'accesso.
+
+
+NOTE: Poiché la versione 1 della documentazione API era una versione preliminare e generalmente non disponibile, V1 non è incluso nel menu a discesa.
+
+
+
+ a| 
+Categorie
+ a| 
+La documentazione API è organizzata in base a categorie di alto livello (ad esempio, amministrazione, configurazione). Fare clic su una categoria per visualizzare gli endpoint correlati.
+
+
+
+ a| 
+Endpoint
+ a| 
+Selezionare un endpoint per visualizzare i percorsi URL, i parametri richiesti, i corpi di risposta e i codici di stato che gli URL potrebbero restituire.
+
+
+
+ a| 
+Provalo
+ a| 
+Interagire direttamente con l'endpoint facendo clic su *Provalo*. Questo pulsante viene fornito in ciascuna vista espansa per gli endpoint.
+
+Quando si fa clic sul pulsante, vengono visualizzati i campi per l'immissione dei parametri (se applicabile). Immettere i valori e fare clic su *Esegui*.
+
+La documentazione interattiva utilizza JavaScript per inviare la richiesta direttamente all'API; non si tratta di una richiesta di test.
+
+|===
+
+
+
+
+== Accedere a Unified Manager
+
+Dopo aver installato Web Services Proxy, è possibile accedere a Unified Manager per gestire più sistemi storage in un'interfaccia basata su web.
+
+Per accedere a Unified Manager, aprire un browser e immettere l'URL che indica la posizione in cui è installato il proxy. Sono supportati i seguenti browser e versioni.
+
+|===
+| Browser | Versione minima 
+
+
+ a| 
+Google Chrome
+ a| 
+79
+
+
+
+ a| 
+Microsoft Internet Explorer
+ a| 
+11
+
+
+
+ a| 
+Microsoft Edge
+ a| 
+79
+
+
+
+ a| 
+Mozilla Firefox
+ a| 
+70
+
+
+
+ a| 
+Safari
+ a| 
+12
+
+|===
+.Fasi
+. Aprire un browser e immettere il seguente URL:
++
+`+http[s]://<server>:<port>/um+`
+
++
+In questo URL, `<server>` Rappresenta l'indirizzo IP o FQDN del server in cui è installato Web Services Proxy, e. `<port>` Rappresenta il numero della porta di ascolto (il valore predefinito è 8080 per HTTP o 8443 per HTTPS).
+
++
+Viene visualizzata la pagina di accesso a Unified Manager.
+
+. Per il primo accesso, immettere `admin` specificare il nome utente, quindi impostare e confermare una password per l'utente amministratore.
++
+La password può contenere fino a 30 caratteri. Per ulteriori informazioni su utenti e password, consultare la sezione Gestione degli accessi della guida in linea di Unified Manager.
+
+

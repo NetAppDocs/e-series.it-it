@@ -1,0 +1,51 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-manage-software-repository.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: È possibile visualizzare e gestire un repository software, che elenca tutti i file software associati allo Storage Plugin per vCenter. 
+---
+= Gestire il repository software
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile visualizzare e gestire un repository software, che elenca tutti i file software associati allo Storage Plugin per vCenter.
+
+.Prima di iniziare
+Se si utilizza il repository per aggiungere file SANtricity OS, assicurarsi che i file del sistema operativo siano disponibili sul sistema locale.
+
+.A proposito di questa attività
+È possibile utilizzare l'opzione Gestisci repository software SANtricity OS per importare uno o più file del sistema operativo nel sistema host in cui è in esecuzione il plug-in. Puoi anche scegliere di eliminare uno o più file del sistema operativo disponibili nel repository software.
+
+.Fasi
+. Dalla vista principale, selezionare *Gestisci*, quindi menu:Centro di aggiornamento[Gestisci repository software SANtricity].
++
+Viene visualizzata la finestra di dialogo Gestisci repository software SANtricity OS.
+
+. Eseguire una delle seguenti operazioni:
++
+** *Importazione:*
++
+... Fare clic su *Importa*.
+... Fare clic su *Browse* (Sfoglia), quindi individuare il percorso in cui si trovano i file del sistema operativo che si desidera aggiungere. I file del sistema operativo hanno un nome file simile a. `N2800-830000-000.dlp`.
+... Selezionare uno o più file del sistema operativo da aggiungere, quindi fare clic su *Importa*.
+
+
+** *Elimina:*
++
+... Selezionare uno o più file del sistema operativo che si desidera rimuovere dal repository software.
+... Fare clic su *Delete* (Elimina).
+
+
+
+
+
+
+.Risultato
+Se è stata selezionata l'opzione di importazione, i file vengono caricati e validati. Se si seleziona Delete (Elimina), i file vengono rimossi dal repository software.

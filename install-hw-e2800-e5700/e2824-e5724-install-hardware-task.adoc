@@ -1,0 +1,72 @@
+---
+permalink: install-hw-e2800-e5700/e2824-e5724-install-hardware-task.html 
+sidebar: sidebar 
+keywords: E2800, E5700, installation 
+summary: Installare E2800 o E5700 in un rack a due montanti o in un cabinet di sistema NetApp. 
+---
+= Installare l'hardware
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Scopri come installare E5724, EF570, EF280, E2812, E2824, Sistema storage DE212C o DE224C in un rack a due montanti o in un cabinet di sistema NetApp.
+
+.Prima di iniziare
+Prima di installare l'hardware, assicurarsi di effettuare le seguenti operazioni:
+
+* Registrare l'hardware all'indirizzo http://mysupport.netapp.com/["mysupport.netapp.com"^].
+* Preparare un'area di lavoro piana e priva di elettricità statica.
+* Procurarsi un braccialetto ESD e adottare precauzioni antistatiche.
+
+
+Leggere tutte le istruzioni prima di procedere con i passaggi riportati di seguito.
+
+.Fasi
+. Disimballare il contenuto dell'hardware, quindi inventariare l'hardware contenuto in base alla distinta di imballaggio.
+. Montare le guide.
++
+Se le istruzioni sono state fornite con l'hardware per il montaggio in rack, fare riferimento a tali istruzioni per informazioni dettagliate su come installare le guide. Per ulteriori istruzioni sul montaggio in rack, vedere link:../rackmount-hardware.html["Hardware per il montaggio in rack"].
+
++
+
+NOTE: Installare l'hardware dalla parte inferiore del rack o dell'armadietto fino alla parte superiore per evitare che l'apparecchiatura si rovescii.
+
++
+image:../media/install_rails_inst-hw-e2800-e5700.png[""]
+
+. Installare lo shelf.
++
+
+CAUTION: Quando è completamente caricato con dischi, ogni shelf pesa circa 29 kg (64 lb). Per spostare il ripiano in modo sicuro sono necessarie due persone o un sollevatore meccanico.
+
++
+.. Partendo dal ripiano che si desidera posizionare sul fondo del cabinet, posizionare il retro del ripiano (l'estremità con i connettori) sulle guide.
+.. Sostenendo lo shelf dal basso, farlo scorrere nel cabinet.image:../media/4_person_lift_source.png[""]
+
+
+. Fissare lo shelf.
++
+Fissare lo shelf al rack come indicato nella link:../rackmount-hardware.html["Hardware per il montaggio in rack"].
+
++
+.. Inserire le viti nel primo e nel terzo foro dalla parte superiore del ripiano su entrambi i lati per fissarlo alla parte anteriore del cabinet.
+.. Posizionare due staffe posteriori su ciascun lato della sezione posteriore superiore del ripiano. Inserire le viti nel primo e nel terzo foro di ciascuna staffa per fissare la parte posteriore del cabinet.
+
+
++
+image:../media/trafford_secure.png[""]
+
+. Installare il pannello o i cappucci terminali.
++
+.. Posizionare il pannello anteriore davanti allo shelf del controller in modo che i fori su ciascuna estremità siano allineati con i dispositivi di fissaggio sullo shelf del controller.
+.. Far scattare il pannello in posizione.
+.. Se si dispone di shelf di dischi opzionali, posizionare il cappuccio terminale sinistro davanti allo shelf di dischi in modo che i fori nel cappuccio terminale siano allineati con i dispositivi di fissaggio sul lato sinistro dello shelf.
+.. Inserire il cappuccio terminale in posizione.
+.. Ripetere i passaggi precedenti per il cappuccio terminale destro.
+
+
+
+
+image:../media/install_faceplate_2_0_inst-hw-e2800-e5700.png[""]

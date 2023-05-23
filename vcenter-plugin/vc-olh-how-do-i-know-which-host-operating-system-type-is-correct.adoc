@@ -1,0 +1,71 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-how-do-i-know-which-host-operating-system-type-is-correct.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Il campo host Operating System Type (tipo di sistema operativo host) contiene il sistema operativo dell"host. È possibile selezionare il tipo di host consigliato dall"elenco a discesa o consentire all"HCA (host Context Agent) di configurare l"host e il tipo di sistema operativo appropriato.' 
+---
+= Come si fa a sapere quale tipo di sistema operativo host è corretto?
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Il campo host Operating System Type (tipo di sistema operativo host) contiene il sistema operativo dell'host. È possibile selezionare il tipo di host consigliato dall'elenco a discesa o consentire all'HCA (host Context Agent) di configurare l'host e il tipo di sistema operativo appropriato.
+
+I tipi di host visualizzati nell'elenco a discesa dipendono dal modello di array di storage e dalla versione del firmware. Le versioni più recenti visualizzano prima le opzioni più comuni, che sono le più probabili. L'aspetto in questo elenco non implica che l'opzione sia completamente supportata.
+
+
+NOTE: Per ulteriori informazioni sul supporto degli host, fare riferimento a. http://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"^].
+
+Alcuni dei seguenti tipi di host potrebbero essere visualizzati nell'elenco:
+
+|===
+| Tipo di sistema operativo host | Sistema operativo e driver multipath 
+
+
+| Linux DM-MP (kernel 3.10 o successivo) | Supporta i sistemi operativi Linux che utilizzano una soluzione di failover multipath di Device Mapper con kernel 3.10 o successivo. 
+
+
+| VMware ESXi | Supporta i sistemi operativi VMware ESXi che eseguono l'architettura NMP (Native Multipathing Plug-in) utilizzando il modulo SATP_ALUA Storage Array Type Policy integrato da VMware. 
+
+
+| Windows (in cluster o non in cluster) | Supporta configurazioni in cluster o non in cluster di Windows che non eseguono il driver di multipathing atto. 
+
+
+| ATTO Cluster (tutti i sistemi operativi) | Supporta tutte le configurazioni del cluster utilizzando il driver multipathing della tecnologia atto, Inc. 
+
+
+| Linux (Veritas DMP) | Supporta i sistemi operativi Linux che utilizzano una soluzione multipathing Veritas DMP. 
+
+
+| Linux (atto) | Supporta i sistemi operativi Linux che utilizzano un driver multipathing per la tecnologia atto, Inc. 
+
+
+| Sistema operativo Mac | Supporta le versioni di Mac OS che utilizzano un driver multipathing per la tecnologia atto, Inc. 
+
+
+| Windows (atto) | Supporta i sistemi operativi Windows che utilizzano un driver multipathing per la tecnologia atto, Inc. 
+
+
+| FlexArray (ALUA) | Supporta un sistema NetApp FlexArray che utilizza ALUA per il multipathing. 
+
+
+| SVC IBM | Supporta una configurazione IBM SAN Volume Controller. 
+
+
+| Impostazione predefinita di fabbrica | Riservato all'avvio iniziale dello storage array. Se il tipo di sistema operativo host in uso è impostato su Factory Default, modificarlo in modo che corrisponda al sistema operativo host e al driver multipath in esecuzione sull'host connesso. 
+
+
+| Linux DM-MP (Kernal 3.9 o precedente) | Supporta i sistemi operativi Linux che utilizzano una soluzione di failover multipath di Device Mapper con kernel 3.9 o precedente. 
+
+
+| Cluster di finestre (obsoleto) | Se il tipo di sistema operativo host è impostato su questo valore, utilizzare l'impostazione Windows (in cluster o non in cluster). 
+|===
+Una volta installato l'HCA e collegato lo storage all'host, l'HCA invia la topologia host ai controller di storage attraverso il percorso i/O. In base alla topologia dell'host, i controller di storage definiscono automaticamente l'host e le porte host associate, quindi impostano il tipo di host.
+
+
+NOTE: Se l'HCA non seleziona il tipo di host consigliato, è necessario impostare manualmente il tipo di host.

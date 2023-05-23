@@ -1,0 +1,69 @@
+---
+permalink: maintenance-e2800/batteries-remove-controller-canister-task.html 
+sidebar: sidebar 
+keywords: E2800 battery fail, E2800 battery, E2800 battery replacement, replace E2800 battery, replacing E2800 battery, E2800, E-Series, eseries 
+summary: Per rimuovere la batteria, rimuovere prima il contenitore del controller dallo shelf del controller. 
+---
+= Rimuovere il contenitore del controller E2800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario rimuovere il contenitore del controller dallo shelf del controller, in modo da poter rimuovere la batteria.
+
+Quando si rimuove un contenitore del controller, scollegare tutti i cavi. Quindi, far scorrere il contenitore del controller fuori dallo shelf del controller.
+
+.Di cosa hai bisogno
+* Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
+* Etichette per identificare ciascun cavo collegato al contenitore del controller.
+
+
+.Fasi
+. Indossare un braccialetto ESD o adottare altre precauzioni antistatiche.
+. Etichettare ciascun cavo collegato al contenitore del controller.
+. Scollegare tutti i cavi dal contenitore del controller.
++
+
+CAUTION: Per evitare prestazioni degradate, non attorcigliare, piegare, pizzicare o salire sui cavi.
+
+. Se le porte host sul contenitore del controller utilizzano ricetrasmettitori SFP+, lasciarli installati.
+. Verificare che il LED cache Active (cache attiva) sul retro del controller sia spento.
+. Premere il fermo sull'impugnatura della camma fino a quando non si rilascia, quindi aprire l'impugnatura della camma a destra per rilasciare l'elemento filtrante del controller dallo scaffale.
++
+La figura seguente è un esempio di shelf di controller E2812, shelf di controller E2824 o array flash EF280:
+
++
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e2824 rimuovere la manutenzione del contenitore del controller e2800]
+
++
+*(1)* _contenitore controller_
+
++
+*(2)* _maniglia della camma_
+
++
+La figura seguente è un esempio di shelf di controller E2860:
+
++
+image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[28 dwg e2860 add controller canister maintt e2800]
+
++
+*(1)* _contenitore controller_
+
++
+*(2)* _maniglia della camma_
+
+. Utilizzando due mani e l'impugnatura della camma, estrarre il contenitore del controller dallo scaffale.
++
+
+CAUTION: Utilizzare sempre due mani per sostenere il peso di un contenitore del controller.
+
++
+Se si rimuove il contenitore del controller da uno shelf di controller E2812, uno shelf di controller E2824 o un array flash EF280, un'aletta si sposta in posizione per bloccare l'alloggiamento vuoto, contribuendo a mantenere il flusso d'aria e il raffreddamento.
+
+. Capovolgere il contenitore del controller, in modo che il coperchio rimovibile sia rivolto verso l'alto.
+. Posizionare il contenitore del controller su una superficie piana e priva di elettricità statica.
+. Passare a. link:batteries-remove-failed-task.html["Rimuovere la batteria E2800 guasta"].
+

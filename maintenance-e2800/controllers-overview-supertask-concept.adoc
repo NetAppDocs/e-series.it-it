@@ -1,0 +1,119 @@
+---
+permalink: maintenance-e2800/controllers-overview-supertask-concept.html 
+sidebar: sidebar 
+keywords: E2800 controller replacement requirements, E2800 replace controller, replacing E2800 controller, add E2800 controller, adding E2800 controller, E2800, E2812 controller shelf, E2824 controller shelf, EF280 shelf, E-Series, eseries 
+summary: Esaminare i requisiti e le considerazioni per la sostituzione del controller E2800. 
+---
+= Requisiti per la sostituzione del controller E2800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di sostituire o aggiungere un controller E2800, esaminare i requisiti e le considerazioni.
+
+Ogni contenitore di controller contiene una scheda controller, una batteria e una scheda di interfaccia host (HIC) opzionale. È possibile aggiungere un secondo controller a una configurazione simplex o sostituire un controller guasto.
+
+Queste procedure si applicano agli shelf di dischi IOM12 e IOM12B.
+
+
+NOTE: I moduli IOM12B sono supportati solo da SANtricity OS 11.70.2 in poi. Assicurarsi che il firmware del controller sia stato aggiornato prima di installare o eseguire l'aggiornamento a IOM12B.
+
+
+NOTE: Queste procedure si riferiscono a sostituzioni o sostituzioni IOM simili a quelle degli shelf. Ciò significa che è possibile sostituire solo un modulo IOM12 con un altro modulo IOM12 o un modulo IOM12B con un altro modulo IOM12B. (Lo shelf può avere due moduli IOM12 o due moduli IOM12B).
+
+
+
+== Requisiti per l'aggiunta di un secondo controller
+
+È possibile aggiungere un secondo contenitore di controller alla versione simplex dei seguenti shelf di controller:
+
+* Shelf di controller E2812
+* Shelf di controller E2824
+* Flash array EF280
+
+
+Le figure mostrano un esempio di shelf di controller prima di aggiungere un secondo controller (un contenitore di controller e un bianco di controller) e dopo aver aggiunto un secondo controller (due contenitori di controller).
+
+image::../media/28_dwg_2800_controller_simplex.gif[28 dwg 2800 controller simplex]
+
+image::../media/28_dwg_2800_controller_duplex.gif[28 dwg 2800 controller duplex]
+
+
+NOTE: Le figure mostrano esempi di canister dei controller; le porte host sui canister dei controller potrebbero essere diverse.
+
+Prima di aggiungere un secondo controller, è necessario disporre di:
+
+* Un nuovo contenitore del controller con lo stesso numero di parte del contenitore del controller attualmente installato.
+* Un nuovo HIC identico all'HIC nel contenitore del controller attualmente installato (necessario solo se il contenitore del controller attualmente installato include una scheda di interfaccia host).
+* Tutti i cavi, i ricetrasmettitori, gli switch e gli HBA (host bus adapter) necessari per collegare le nuove porte del controller.
++
+Per informazioni sull'hardware compatibile, fare riferimento a. https://mysupport.netapp.com/NOW/products/interoperability["Matrice di interoperabilità NetApp"^] o il http://hwu.netapp.com/home.aspx["NetApp Hardware Universe"^].
+
+* Driver multipath installato sull'host in modo da poter utilizzare entrambi i controller. Fare riferimento a. link:../config-linux/index.html["Configurazione di Linux Express"], link:../config-windows/index.html["Configurazione di Windows Express"], o. link:../config-vmware/index.html["Configurazione di VMware Express"] per istruzioni.
+* Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
+* Un cacciavite Phillips n. 1.
+* Etichette per identificare i nuovi cavi.
+* Stazione di gestione con un browser che può accedere a Gestione di sistema SANtricity per il controller. Per aprire l'interfaccia di System Manager, puntare il browser sul nome di dominio o sull'indirizzo IP del controller.
++
+In alternativa, è possibile utilizzare l'interfaccia della riga di comando (CLI) per eseguire alcune procedure. Se non si dispone dell'accesso alla CLI, è possibile effettuare una delle seguenti operazioni:
+
++
+** *Per Gestore di sistema SANtricity (versione 11.60 e successive)* -- Scarica il pacchetto CLI (file zip) da Gestore di sistema. Accedere al menu:Impostazioni[sistema > componenti aggiuntivi > interfaccia riga di comando]. È quindi possibile eseguire i comandi CLI da un prompt del sistema operativo, ad esempio il prompt di DOS C:.
+** *Per Gestione storage SANtricity/finestra di gestione aziendale (EMW)* -- seguire le istruzioni nella guida rapida per scaricare e installare il software. È possibile eseguire i comandi CLI da EMW selezionando menu:Tools[Execute script] (Strumenti[Esegui script]).
+
+
+
+
+
+
+== Requisiti per la sostituzione del controller
+
+Quando si sostituisce un contenitore del controller guasto, rimuovere la batteria e l'HIC, se installato, dal contenitore del controller originale e installarli nel contenitore del controller sostitutivo.
+
+È possibile determinare se si dispone di un contenitore del controller guasto in due modi:
+
+* Il guru del ripristino in Gestione di sistema di SANtricity richiede la sostituzione del contenitore del controller.
+* Il LED di attenzione ambra sul contenitore del controller è acceso, a indicare che il controller è guasto.
+
+
+image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[28 controller dwg 2800 attn led maintt e2800]
+
+*(1)* _LED attenzione_
+
+
+NOTE: La figura mostra un esempio di contenitore del controller; le porte host sul contenitore del controller potrebbero essere diverse.
+
+Prima di sostituire un controller, è necessario disporre di:
+
+* Un contenitore del controller sostitutivo con lo stesso numero di parte del contenitore del controller che si sta sostituendo.
+* Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
+* Etichette per identificare ciascun cavo collegato al contenitore del controller.
+* Cacciavite Phillips n. 1.
+* Stazione di gestione con un browser che può accedere a Gestione di sistema SANtricity per il controller. Per aprire l'interfaccia di System Manager, puntare il browser sul nome di dominio o sull'indirizzo IP del controller.
++
+In alternativa, è possibile utilizzare l'interfaccia della riga di comando (CLI) per eseguire alcune procedure. Se non si dispone dell'accesso alla CLI, è possibile effettuare una delle seguenti operazioni:
+
++
+** *Per Gestore di sistema SANtricity (versione 11.60 e successive)* -- Scarica il pacchetto CLI (file zip) da Gestore di sistema. Accedere al menu:Impostazioni[sistema > componenti aggiuntivi > interfaccia riga di comando]. È quindi possibile eseguire i comandi CLI da un prompt del sistema operativo, ad esempio il prompt di DOS C:.
+** *Per Gestione storage SANtricity/finestra di gestione aziendale (EMW)* -- seguire le istruzioni nella guida rapida per scaricare e installare il software. È possibile eseguire i comandi CLI da EMW selezionando menu:Tools[Execute script] (Strumenti[Esegui script]).
+
+
+
+
+
+
+=== Requisiti di configurazione duplex
+
+Se lo shelf di controller dispone di due controller (configurazione duplex), è possibile sostituire un contenitore di controller mentre lo storage array è acceso ed esegue le operazioni di i/o host, a condizione che siano soddisfatte le seguenti condizioni:
+
+* Il secondo contenitore del controller nello shelf ha uno stato ottimale.
+* Il campo *OK per rimuovere* nell'area Dettagli del guru del ripristino in Gestione sistema di SANtricity visualizza *Sì*, a indicare che è possibile rimuovere questo componente in tutta sicurezza.
+
+
+
+
+=== Requisiti di configurazione simplex
+
+Se si dispone di un solo contenitore di controller (configurazione simplex), i dati sull'array di storage non saranno accessibili fino a quando non si sostituisce il contenitore di controller. È necessario interrompere le operazioni di i/o dell'host e spegnere lo storage array.

@@ -1,0 +1,48 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-resolve-untrusted-certificates.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Risolvi i certificati non attendibili importando un certificato autofirmato dall"array di storage o importando un certificato di autorità di certificazione (CA) emesso da una terza parte attendibile.' 
+---
+= Risolvi i certificati non attendibili
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Dalla pagina Certificate (certificato), è possibile risolvere i certificati non attendibili importando un certificato autofirmato dall'array di storage o importando un certificato dell'autorità di certificazione (CA) emesso da una terza parte attendibile.
+
+.Prima di iniziare
+Se si intende importare un certificato firmato dalla CA, assicurarsi che:
+
+* È stata generata una richiesta di firma del certificato (file CSR) per ciascun controller nell'array di storage e inviata alla CA.
+* La CA ha restituito file di certificato attendibili.
+* I file dei certificati sono disponibili nel sistema locale.
+
+
+.A proposito di questa attività
+I certificati non attendibili si verificano quando un array di storage tenta di stabilire una connessione sicura al plug-in, ma la connessione non viene confermata come sicura. Potrebbe essere necessario installare altri certificati CA attendibili se si verifica una delle seguenti condizioni:
+
+* Di recente è stato aggiunto uno storage array.
+* Uno o entrambi i certificati sono scaduti o revocati.
+* Uno o entrambi i certificati non dispongono di un certificato root o intermedio.
+
+
+.Fasi
+. Selezionare *Certificate Management* (Gestione certificati).
+. Selezionare la scheda *Trusted*.
++
+Questa pagina mostra tutti i certificati segnalati per gli array di storage.
+
+. Selezionare il menu:Importa[certificati] per importare un certificato CA oppure il menu:Importa[certificati array storage autofirmati] per importare un certificato autofirmato.
+. Per limitare la visualizzazione, è possibile utilizzare il campo di filtraggio *Mostra certificati...* oppure ordinare le righe dei certificati facendo clic su una delle intestazioni di colonna.
+. Nella finestra di dialogo, selezionare il certificato, quindi fare clic su *Importa*.
++
+Il certificato viene caricato e validato.
+
+

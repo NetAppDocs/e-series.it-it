@@ -1,0 +1,36 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-perform-pre-upgrade-health-check.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Un controllo dello stato di salute viene eseguito come parte del processo di aggiornamento, ma è anche possibile eseguire un controllo dello stato di salute separatamente prima di iniziare. 
+---
+= Eseguire un controllo dello stato di salute prima dell'aggiornamento
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Un controllo dello stato di salute viene eseguito come parte del processo di aggiornamento, ma è anche possibile eseguire un controllo dello stato di salute separatamente prima di iniziare. Il controllo dello stato di salute valuta i componenti dello storage array per assicurarsi che l'aggiornamento possa continuare.
+
+*Fasi*
+
+. Dalla vista principale, selezionare *Gestisci*, quindi selezionare menu:Centro di aggiornamento[controllo stato pre-aggiornamento].
++
+Viene visualizzata la finestra di dialogo Pre-Upgrade Health Check (verifica dello stato di salute pre-aggiornamento) che elenca tutti i sistemi storage rilevati.
+
+. Se necessario, filtrare o ordinare i sistemi storage nell'elenco, in modo da poter visualizzare tutti i sistemi che non sono attualmente nello stato ottimale.
+. Selezionare le caselle di controllo relative ai sistemi storage che si desidera eseguire attraverso il controllo dello stato di salute.
+. Fare clic su *Start*.
++
+L'avanzamento viene visualizzato nella finestra di dialogo durante l'esecuzione del controllo dello stato di salute.
+
+. Una volta completato il controllo dello stato di salute, fare clic sui puntini di sospensione (...) a destra di ciascuna riga per visualizzare ulteriori informazioni ed eseguire altre attività.
+
+
+
+NOTE: Se un array non supera il controllo dello stato di salute, è possibile saltare tale array e continuare l'aggiornamento per gli altri oppure interrompere l'intero processo e risolvere i problemi degli array che non hanno superato il test.

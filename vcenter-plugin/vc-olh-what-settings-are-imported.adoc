@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-what-settings-are-imported.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'La funzione Import Settings (Impostazioni di importazione) è un"operazione batch che carica le configurazioni da un array di storage a più array di storage. Le impostazioni importate durante questa operazione dipendono dalla configurazione dell"array di storage di origine in System Manager.' 
+---
+= Quali impostazioni vengono importate?
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+La funzione Import Settings (Impostazioni di importazione) è un'operazione batch che carica le configurazioni da un array di storage a più array di storage.
+
+Le impostazioni importate durante questa operazione dipendono dalla configurazione dell'array di storage di origine in System Manager. È possibile importare le seguenti impostazioni in più array di storage:
+
+* *Avvisi via email* -- le impostazioni includono un indirizzo del server di posta e gli indirizzi email dei destinatari degli avvisi.
+* *Syslog alerts* -- le impostazioni includono un indirizzo del server syslog e una porta UDP.
+* *SNMP alerts* -- le impostazioni includono un nome di comunità e un indirizzo IP per il server SNMP.
+* *AutoSupport* -- le impostazioni includono le funzioni separate (AutoSupport di base, AutoSupport on Demand e Diagnostica remota), la finestra di manutenzione, il metodo di erogazione, e pianificazione delle spedizioni.
+* *Directory Services* -- la configurazione include il nome di dominio e l'URL di un server LDAP (Lightweight Directory Access Protocol), oltre ai mapping dei gruppi di utenti del server LDAP ai ruoli predefiniti dell'array di storage.
+* *Configurazione dello storage* -- le configurazioni includono volumi (solo volumi thick e non repository), gruppi di volumi, pool e assegnazioni di dischi hot spare.
+* *Impostazioni di sistema* -- le configurazioni includono le impostazioni di scansione dei supporti per un volume, la cache SSD per i controller e il bilanciamento automatico del carico (non include il reporting della connettività host).
+

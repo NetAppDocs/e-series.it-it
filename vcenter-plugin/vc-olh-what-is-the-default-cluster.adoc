@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-what-is-the-default-cluster.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Il cluster predefinito è un"entità definita dal sistema che consente a qualsiasi identificatore di porta host non associato che abbia eseguito l"accesso all"array di storage di accedere ai volumi assegnati al cluster predefinito.' 
+---
+= Qual è il cluster predefinito?
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Il cluster predefinito è un'entità definita dal sistema che consente a qualsiasi identificatore di porta host non associato che abbia eseguito l'accesso all'array di storage di accedere ai volumi assegnati al cluster predefinito.
+
+Un identificatore di porta host non associato è una porta host che non è logicamente associata a un particolare host ma che è fisicamente installata in un host e collegata all'array di storage.
+
+
+NOTE: Se si desidera che gli host abbiano accesso specifico a determinati volumi nell'array di storage, non è necessario utilizzare il cluster predefinito. È invece necessario associare gli identificatori delle porte host ai rispettivi host. Questa attività può essere eseguita manualmente durante l'operazione Create host (Crea host) o automaticamente utilizzando l'HCA (host Context Agent) installato su ciascun host. Quindi, assegnare i volumi a un singolo host o a un cluster host.
+
+Utilizzare il cluster predefinito solo in situazioni speciali in cui l'ambiente di storage esterno favorisce l'accesso a tutti gli host e a tutti gli identificatori di porta host connessi allo storage array a tutti i volumi (modalità all-access) senza rendere specifici gli host noti allo storage array o all'interfaccia utente.
+
+Inizialmente, è possibile assegnare i volumi solo al cluster predefinito tramite l'interfaccia della riga di comando (CLI). Tuttavia, dopo aver assegnato almeno un volume al cluster predefinito, questa entità (chiamata cluster predefinito) viene visualizzata nell'interfaccia utente, dove è possibile gestire questa entità.

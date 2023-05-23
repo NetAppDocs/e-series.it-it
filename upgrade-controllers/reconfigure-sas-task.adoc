@@ -1,0 +1,105 @@
+---
+permalink: upgrade-controllers/reconfigure-sas-task.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, reconfigure SAS-2, SAS-2, SAS-3, convert controller shelf, convert drive shelf, 
+summary: 'È possibile convertire lo shelf di controller in un array SAS-2 approvato (E2700, E550/EF5500, E5600/EF560) in uno shelf di dischi e quindi posizionare lo shelf e gli shelf di dischi SAS-2 approvati (DE1600, DE5600, DE6600) dietro un nuovo array SAS-3 approvato (E2800, E5700/EF570) e shelf di dischi SAS-224C, DE212C approvati (DE2C) senza conservazione dei dati.' 
+---
+= Riconfigurare un sistema SAS-2 dietro un nuovo shelf di controller SAS-3
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se necessario, è possibile riconfigurare il sistema SAS-2 in modo da utilizzarlo dietro un nuovo shelf di controller SAS-3.
+
+Gli array SAS-2 approvati includono E2700, E550/EF5500 e E5600/EF560. Gli shelf di dischi SAS-2 approvati includono DE1600, DE5600 e DE6600. Gli array SAS-3 approvati includono E2800 e E5700/EF570. Gli shelf di dischi SAS-3 approvati includono DE212C, DE224C e DE460C.
+
+.A proposito di questa attività
+In questa procedura, è possibile convertire lo shelf del controller in un array SAS-2 approvato in uno shelf di dischi, quindi posizionarlo dietro un nuovo array SAS-3 e shelf di dischi approvati, senza preservarne i dati.
+
+Questa procedura si applica agli shelf di dischi IOM12 e IOM12B.
+
+
+NOTE: I moduli IOM12B sono supportati solo da SANtricity OS 11.70.2 in poi. Assicurarsi che il firmware del controller sia stato aggiornato prima di installare o eseguire l'aggiornamento a IOM12B.
+
+.Prima di iniziare
+A causa della complessità di questa procedura, è necessario quanto segue:
+
+* È necessario disporre di una funzione FPVR (Feature Product Variance Request). Per archiviare un FPVR, contatta i NetApp Professional Services.
++
+
+NOTE: La mancata acquisizione di un FPVR prima di tentare questa procedura può causare un guasto al disco e il blocco del controller.
+
+* Se sei in grado di eseguire il backup dei dati, puoi eseguire questa procedura senza l'assistenza dei NetApp Professional Services.
+* Se non è possibile eseguire il backup dei dati, contattare i NetApp Professional Services per assistenza con questa procedura.
+* Assicurarsi che entrambi gli array siano pronti per la procedura:
++
+** *Array esistente*: Array esistente con sistema operativo SANtricity 8.25 o successivo alimentato.
+** *Nuovo array*: Nuovo array decompresso e spento.
+
+
+* Annotare il numero di serie dello shelf del controller SAS-2 che si desidera convertire in uno shelf di dischi.
+
+
+
+
+== Fase 1: Spegnere i controller (conservazione non dei dati)
+
+Prima di spegnere i controller, è necessario arrestare tutte le operazioni.
+
+.Fasi
+. Se l'array SAS-2 esistente è ancora accessibile, eliminare tutti i gruppi di volumi, spegnere entrambi i controller e rimuovere tutti i cavi.
+. Annotare il numero di serie dello shelf del controller SAS-2 che si desidera convertire in uno shelf di dischi.
+. Se la protezione del disco è in uso per l'array esistente, assicurarsi che la chiave di sicurezza sia disponibile.
+
+
+
+
+== Fase 2: Installazione dei controller (non conservazione dei dati)
+
+Una volta arrestati correttamente, è possibile sostituire i controller nell'array.
+
+.Fasi
+. Sostituire entrambi i controller nell'array esistente con IOM o ESM.
+. Se possibile, utilizzare i cavi host e i cavi di rete dell'array esistente e collegarli ai controller del nuovo array.
++
+
+NOTE: A seconda delle connessioni host del nuovo array, potrebbero essere necessari cavi diversi.
+
+. Collegare gli shelf di dischi dietro i controller del nuovo array.
++
+Il vassoio del controller e gli eventuali vassoi del disco collegati diventano shelf di dischi e possono essere collegati ai controller del nuovo array.
+
++
+
+NOTE: Il collegamento di SAS-2 a SAS-3 richiede cavi SAS da HD a mini SAS. Per informazioni più dettagliate sui cavi per la configurazione del controller e dello shelf di espansione, fare riferimento a. link:../install-hw-cabling/index.html["Cablaggio"] o il https://library.netapp.com/ecm/ecm_download_file/ECMLP2588749["Guida al cablaggio hardware e-Series"^].
+
+
+
+
+
+== Fase 3: Accensione dei controller (conservazione non dei dati)
+
+Al termine dell'installazione, accendere i controller e inviare le modifiche di configurazione al supporto tecnico NetApp.
+
+.Fasi
+. Accendere il nuovo array, inclusi gli shelf di dischi collegati.
+. Configurare la porta di gestione e gli indirizzi IP installando https://mysupport.netapp.com/tools/info/ECMLP2563821I.html["Connessione rapida SANtricity"^] utility.
+. Se la protezione del disco era in uso sull'array esistente, importare la chiave di sicurezza.
+. Se non è stato possibile eliminare i gruppi di volumi dall'array esistente prima di eseguire questa procedura, è necessario impostare tutti i dischi esterni in modo che appaiano come nativi. Per informazioni dettagliate su come impostare i dischi su nativi, consultare la Guida in linea di SANtricity.
+. Inviare le modifiche alla configurazione al supporto tecnico NetApp.
++
+.. Ottenere il numero di serie del vecchio vassoio del disco del controller registrato nella fase 2.
+.. Accedere a. http://mysupport.netapp.com/eservice/assistant["Sito di supporto NetApp"^].
+.. Dall'elenco a discesa sotto *Categoria feedback*, selezionare *prodotti installati > richiesta di rimozione*.
+.. Selezionare *Crea caso*. Inserire il seguente testo nella casella di testo *Comments* (commenti), sostituendo il numero di serie del vassoio del controller con il numero di serie:
++
+`Please decommission this serial number as the entitlement has been moved to another serial number in the system. Please reference this in the SN notes.`
+
+.. Selezionare *Invia*.
+
+
+
+
+Le modifiche di configurazione da SAS-2 a SAS-3 completate vengono inviate al supporto tecnico di NetApp.

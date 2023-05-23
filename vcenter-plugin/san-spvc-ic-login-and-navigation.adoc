@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/san-spvc-ic-login-and-navigation.html 
+keywords: log in vCenter plugin, login Plugin for vCenter, browsers vCenter plugin user interface, vCenter GUI, 
+summary: Accedere e navigare nel Plugin per vCenter. 
+---
+= Accedere e navigare nel plug-in di storage per vCenter
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile accedere allo Storage Plugin per vCenter per navigare nell'interfaccia utente.
+
+. Prima di accedere al plug-in, assicurarsi di utilizzare uno dei seguenti browser:
++
+** Google Chrome 89 o versione successiva
+** Mozilla Firefox 80 o versione successiva
+** Microsoft Edge 90 o versione successiva
+
+
+. Accedere al client vSphere con l'account utente che dispone dei privilegi di lettura/scrittura per il plug-in.
+. Dalla home page del client vSphere, fare clic su *plug-in di storage SANtricity per vCenter*.
++
+Il plug-in si apre all'interno di una finestra del client vSphere. La pagina principale del plugin si apre su *Manage-All*.
+
+. Accedi alle attività di gestione dello storage dalla barra laterale di navigazione a sinistra:
++
+** *Gestisci* – rileva gli array di storage nella tua rete, apri System Manager per un array, importa le impostazioni da un array a più array, gestisci i gruppi di array, aggiorna il software del sistema operativo e esegui il provisioning dello storage.
+** *Certificate Management* – Gestisci i certificati per l'autenticazione tra browser e client.
+** *Operazioni* – consente di visualizzare l'avanzamento delle operazioni batch, ad esempio l'importazione di impostazioni da un array a un altro.
+** *Supporto* – Visualizza le opzioni di supporto tecnico, le risorse e i contatti.
+
+
+
+
+
+NOTE: Alcune operazioni non sono disponibili quando uno storage array ha uno stato non ottimale.

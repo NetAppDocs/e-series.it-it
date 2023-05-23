@@ -1,0 +1,64 @@
+---
+permalink: maintenance-e5700/batteries-intro-concept.html 
+sidebar: sidebar 
+keywords: E5700 battery, repair E5700 battery, replace E5700 battery, failed E5700 battery 
+summary: Esaminare i requisiti e le considerazioni per la sostituzione della batteria E5700. 
+---
+= Requisiti per la sostituzione della batteria E5700
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di sostituire una batteria E5700, esaminare i requisiti e le considerazioni.
+
+Ogni contenitore del controller include una batteria che conserva i dati memorizzati nella cache in caso di interruzione dell'alimentazione CA.
+
+
+
+== Recovery Guru
+
+Se il guru del ripristino in Gestione sistema di SANtricity riporta uno dei seguenti stati, è necessario sostituire la batteria interessata:
+
+* Guasto alla batteria
+* Sostituzione della batteria necessaria
+
+
+Da Gestore di sistema di SANtricity, esaminare i dettagli nel guru del ripristino per confermare che si è verificato un problema con una batteria e per assicurarsi che non siano prima necessari altri elementi da risolvere.
+
+
+
+== Panoramica della procedura
+
+Per proteggere i dati, è necessario sostituire una batteria guasta il prima possibile.
+
+Di seguito è riportata una panoramica dei passaggi per la sostituzione di una batteria nei controller E5700 (E5724, EF570 o E5760):
+
+. Portare il controller offline (solo duplex).
+. Rimuovere il contenitore del controller.
+. Sostituire la batteria.
+. Sostituire il contenitore del controller.
+. Portare il controller online (solo duplex).
+
+
+
+
+== Requisiti
+
+Se si intende sostituire una batteria guasta, è necessario disporre di:
+
+* Una batteria sostitutiva.
+* Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
+* Etichette per identificare ciascun cavo collegato al contenitore del controller.
+* Stazione di gestione con un browser che può accedere a Gestione di sistema SANtricity per il controller. Per aprire l'interfaccia di System Manager, puntare il browser sul nome di dominio o sull'indirizzo IP del controller.
++
+In alternativa, è possibile utilizzare l'interfaccia della riga di comando (CLI) per eseguire alcune procedure. Se non si dispone dell'accesso alla CLI, è possibile effettuare una delle seguenti operazioni:
+
++
+** *Per Gestore di sistema SANtricity (versione 11.60 e successive)* -- Scarica il pacchetto CLI (file zip) da Gestore di sistema. Accedere al menu:Impostazioni[sistema > componenti aggiuntivi > interfaccia riga di comando]. È quindi possibile eseguire i comandi CLI da un prompt del sistema operativo, ad esempio il prompt di DOS C:.
+** *Per Gestione storage SANtricity/finestra di gestione aziendale (EMW)* -- seguire le istruzioni nella guida rapida per scaricare e installare il software. È possibile eseguire i comandi CLI da EMW selezionando menu:Tools[Execute script] (Strumenti[Esegui script]).
+
+
+

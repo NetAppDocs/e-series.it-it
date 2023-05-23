@@ -1,0 +1,78 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-change-configuration-settings-for-a-volume-group.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Consente di modificare le impostazioni di un gruppo di volumi, inclusi il nome e il livello RAID. 
+---
+= Modificare le impostazioni di configurazione di un gruppo di volumi
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile modificare le impostazioni di un gruppo di volumi, inclusi il nome e il livello RAID.
+
+.Prima di iniziare
+Se si modifica il livello RAID per soddisfare le esigenze di performance delle applicazioni che accedono al gruppo di volumi, assicurarsi di soddisfare i seguenti prerequisiti:
+
+* Il gruppo di volumi deve trovarsi in uno stato ottimale.
+* È necessario disporre di capacità sufficiente nel gruppo di volumi per la conversione al nuovo livello RAID.
+
+
+.Fasi
+. Dalla pagina Manage (Gestione), selezionare l'array di storage con il gruppo di volumi.
+. Selezionare menu:Provisioning[Configure Pools and Volume Groups] (Configura pool e gruppi di volumi).
+. Selezionare il gruppo di volumi che si desidera modificare, quindi fare clic su *Visualizza/Modifica impostazioni*.
++
+Viene visualizzata la finestra di dialogo Volume Group Settings (Impostazioni gruppo di volumi).
+
+. Selezionare la scheda *Impostazioni*, quindi modificare le impostazioni del gruppo di volumi in base alle esigenze.
++
+.Dettagli campo
+[%collapsible]
+====
+[cols="25h,~"]
+|===
+| Impostazione | Descrizione 
+
+
+ a| 
+Nome
+ a| 
+È possibile modificare il nome fornito dall'utente del gruppo di volumi. Specificare un nome per un gruppo di volumi.
+
+
+
+ a| 
+Livello RAID
+ a| 
+Selezionare il nuovo livello RAID dal menu a discesa.
+
+** *RAID 0 striping* -- offre performance elevate ma non fornisce alcuna ridondanza dei dati. Se un singolo disco si guasta nel gruppo di volumi, tutti i volumi associati si guastano e tutti i dati vengono persi. Un gruppo RAID di striping combina due o più dischi in un'unica grande unità logica.
+** *Mirroring RAID 1* -- offre performance elevate e la migliore disponibilità dei dati ed è adatto per la memorizzazione di dati sensibili a livello aziendale o personale. Protegge i dati eseguendo automaticamente il mirroring del contenuto di un disco nel secondo disco della coppia mirrorata. Fornisce protezione in caso di guasto di un singolo disco.
+** *RAID 10 striping/mirroring* -- fornisce una combinazione di RAID 0 (striping) e RAID 1 (mirroring) e si ottiene selezionando quattro o più dischi. RAID 10 è adatto per applicazioni di transazioni di volumi elevati, come un database, che richiedono performance elevate e tolleranza agli errori.
+** *RAID 5* -- ottimale per ambienti multiutente (come storage di database o file system) in cui le dimensioni i/o tipiche sono ridotte e l'attività di lettura è molto elevata.
+** *RAID 6* -- ottimale per ambienti che richiedono una protezione di ridondanza oltre RAID 5, ma che non richiedono elevate prestazioni di scrittura. RAID 3 può essere assegnato solo ai gruppi di volumi utilizzando l'interfaccia della riga di comando (CLI). Quando si modifica il livello RAID, non è possibile annullare questa operazione dopo l'inizio. Durante la modifica, i dati rimangono disponibili.
+
+
+
+
+ a| 
+Capacità di ottimizzazione (solo array EF600)
+ a| 
+Quando viene creato un gruppo di volumi, viene generata una capacità di ottimizzazione consigliata che fornisce un equilibrio tra capacità disponibile e prestazioni e durata del disco. È possibile regolare questo bilanciamento spostando il cursore verso destra per migliorare le prestazioni e la durata del disco a scapito della maggiore capacità disponibile, oppure spostandolo verso sinistra per aumentare la capacità disponibile a scapito di migliori prestazioni e durata del disco. I dischi SSD avranno una maggiore durata e migliori prestazioni di scrittura massime quando una parte della loro capacità non viene allocata. Per i dischi associati a un gruppo di volumi, la capacità non allocata è costituita dalla capacità libera di un gruppo (capacità non utilizzata dai volumi) e da una parte della capacità utilizzabile come capacità di ottimizzazione aggiuntiva. La capacità di ottimizzazione aggiuntiva garantisce un livello minimo di capacità di ottimizzazione riducendo la capacità utilizzabile e, come tale, non è disponibile per la creazione di volumi.
+
+|===
+====
+. Fare clic su *Save* (Salva).
+
+
+Viene visualizzata una finestra di dialogo di conferma se la capacità viene ridotta, la ridondanza del volume viene persa o la protezione dalla perdita di shelf/cassetto viene persa a seguito della modifica del livello RAID. Selezionare *Sì* per continuare, altrimenti fare clic su *No*.
+
+.Risultato
+Se si modifica il livello RAID per un gruppo di volumi, il plug-in modifica i livelli RAID di ogni volume che comprende il gruppo di volumi. Le prestazioni potrebbero essere leggermente compromesse durante l'operazione.

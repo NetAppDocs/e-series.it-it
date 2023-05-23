@@ -1,0 +1,21 @@
+---
+permalink: maintenance-ef600/fans-overview-requirements-replacing2-concept.html 
+sidebar: sidebar 
+keywords: replace EF300 fan, replace EF600 fan, 
+summary: Esaminare i requisiti e le considerazioni prima di sostituire le ventole EF300 o EF600. 
+---
+= Requisiti per la sostituzione delle ventole EF300 o EF600
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di sostituire una ventola guasta in un array EF300 o EF600, esaminare i seguenti requisiti.
+
+* Si dispone di una ventola sostitutiva supportata per il modello di shelf di controller o di dischi.
+* Si dispone di un braccialetto ESD o si sono prese altre precauzioni antistatiche.
+
+
+
+NOTE: Se il Recovery Guru indica che non è possibile rimuovere la ventola, contattare il supporto tecnico.

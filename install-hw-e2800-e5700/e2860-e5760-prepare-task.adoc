@@ -1,0 +1,141 @@
+---
+permalink: install-hw-e2800-e5700/e2860-e5760-prepare-task.html 
+sidebar: sidebar 
+keywords: E2860, E5760, DE460, installation 
+summary: 'Per installare E2860, E5760 o DE460, creare un account e registrare l"hardware.' 
+---
+= Preparazione per l'installazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Scopri come preparare l'installazione del tuo sistema storage E2860, E5760 o DE460.
+
+.Fasi
+. Creare un account e registrare l'hardware all'indirizzo http://mysupport.netapp.com/["mysupport.netapp.com"^].
+. Assicurarsi che nella confezione ricevuta siano presenti i seguenti elementi.
++
+|===
+
+
+ a| 
+image:../media/trafford_overview.png[""]
+ a| 
+Shelf, pannello frontale e hardware per il montaggio in rack
+
+
+
+ a| 
+image:../media/handles_counted.png[""]
+ a| 
+4 maniglie per scaffali
+
+|===
++
+La seguente tabella identifica i tipi di cavi che potrebbero essere ricevuti. Se si riceve un cavo non elencato nella tabella, vedere https://hwu.netapp.com/["Hardware Universe"^] individuare il cavo e identificarne l'utilizzo.
+
++
+|===
+| Tipo di connettore | Tipo di cavo | Utilizzare 
+
+
+ a| 
+image:../media/cable_ethernet_inst-hw-e2800-e5700.png[""]
+ a| 
+Cavi Ethernet
+
+(se ordinato)
+ a| 
+Connessione di gestione
+
+
+
+ a| 
+image:../media/cable_io_inst-hw-e2800-e5700.png[""]
+ a| 
+Cavi i/O.
+
+(se ordinato)
+ a| 
+Cablaggio degli host di dati
+
+
+
+ a| 
+image:../media/cable_power_inst-hw-e2800-e5700.png[""]
+ a| 
+Cavi di alimentazione
+
+x2 per shelf
+
+(se ordinato)
+ a| 
+Accensione del sistema storage
+
+
+
+ a| 
+image:../media/sas_cable.png[""]
+ a| 
+Cavi SAS (inclusi solo con gli shelf di dischi)
+ a| 
+Cablaggio degli shelf
+
+|===
+. Assicurarsi di fornire i seguenti elementi.
++
+|===
+
+
+ a| 
+image:../media/screwdriver_inst-hw-e2800-e5700.png[""]
+ a| 
+Cacciavite Phillips n. 2
+
+
+
+ a| 
+image:../media/flashlight_inst-hw-e2800-e5700.png[""]
+ a| 
+Torcia
+
+
+
+ a| 
+image:../media/wrist_strap_inst-hw-e2800-e5700.png[""]
+ a| 
+Braccialetto ESD
+
+
+
+ a| 
+image:../media/4u_dummy.png[""]
+ a| 
+Spazio rack 4U: Uno standard da 19" Rack da 48.30 cm per rack 4U delle seguenti dimensioni.
+
+*Profondità*: 38.25" (97.16 cm)
+
+*Larghezza*: 17.66" (44.86 cm)
+
+*Altezza*: 6.87" (17.46 cm)
+
+*Peso massimo*: 113 kg (250 lb)
+
+
+
+ a| 
+image:../media/management_station_inst-hw-e2800-e5700_g60b3.png[""]
+ a| 
+Un browser supportato per il software di gestione:
+
+** Google Chrome (versione 47 e successive)
+** Microsoft Internet Explorer (versione 11 e successive)
+** Microsoft Edge (EdgeHTML 12 e versioni successive)
+** Mozilla Firefox (versione 31 e successive)
+** Safari (versione 9 e successive)
+
+
+|===
+

@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: manage-storage.html 
+keywords: online help, System Manager, Unified Manager 
+summary: Gestire lo storage 
+---
+= Gestire lo storage
+:allow-uri-read: 
+
+
+[role="lead"]
+Utilizzare i collegamenti riportati di seguito per accedere alla documentazione che descrive come configurare, gestire e monitorare gli oggetti di storage e i sistemi di storage e-Series. I collegamenti consentono di accedere a un altro sito di documentazione.
+
+
+
+== Guida in linea di System Manager 11.7
+
+Accedere a. https://docs.netapp.com/us-en/e-series-santricity/system-manager/index.html["Guida in linea di Gestore di sistema di SANtricity 11.7"^], dove è possibile trovare informazioni su come pianificare, configurare, gestire e risolvere i problemi del proprio array di storage.
+
+
+
+== Guida in linea di Unified Manager 5
+
+Accedere a. https://docs.netapp.com/us-en/e-series-santricity/unified-manager/index.html["Guida in linea di SANtricity Unified Manager 5"^], dove è possibile apprendere come eseguire comandi di gestione dello storage su più array di storage di rete.
+
+
+
+== Riferimento al comando
+
+Accedere a. https://docs.netapp.com/us-en/e-series-cli/index.html["Riferimento al comando"^], Dove è possibile apprendere come configurare e monitorare gli array di storage utilizzando i comandi dell'interfaccia a riga di comando (CLI).

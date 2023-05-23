@@ -1,0 +1,133 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-add-capacity-to-a-pool-or-volume-group.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Aggiungere dischi per espandere la capacità libera in un pool o gruppo di volumi esistente. 
+---
+= Aggiungere capacità a un pool o a un gruppo di volumi
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile aggiungere dischi per espandere la capacità libera in un pool o un gruppo di volumi esistente.
+
+.Prima di iniziare
+* I dischi devono essere in uno stato ottimale.
+* I dischi devono avere lo stesso tipo di disco (HDD o SSD).
+* Il pool o il gruppo di volumi deve essere in uno stato ottimale.
+* Se il pool o il gruppo di volumi contiene tutti i dischi con funzionalità di protezione, aggiungere solo i dischi in grado di protezione per continuare a utilizzare le funzionalità di crittografia dei dischi con funzionalità di protezione.
+
+
+Le unità compatibili con la protezione possono essere dischi con crittografia completa del disco (FDE) o dischi FIPS (Federal Information Processing Standard).
+
+.A proposito di questa attività
+In questa attività, è possibile aggiungere capacità libera da includere nel pool o nel gruppo di volumi. È possibile utilizzare questa capacità libera per creare volumi aggiuntivi. I dati nei volumi rimangono accessibili durante questa operazione.
+
+Per i pool, è possibile aggiungere un massimo di 60 dischi alla volta. Per i gruppi di volumi, è possibile aggiungere un massimo di due dischi alla volta. Se è necessario aggiungere più dischi del numero massimo, ripetere la procedura. (Un pool non può contenere più dischi rispetto al limite massimo per un array di storage).
+
+
+NOTE: Con l'aggiunta di dischi, potrebbe essere necessario aumentare la capacità di conservazione. Si consiglia di aumentare la capacità riservata dopo un'operazione di espansione.
+
+
+NOTE: Evitare di utilizzare dischi che siano in grado di aggiungere capacità a un pool o a un gruppo di volumi che non sono in grado di supportare da. Il pool o il gruppo di volumi non può sfruttare le funzionalità del disco da-capable. Prendere in considerazione l'utilizzo di dischi che non sono in grado di supportare da in questa situazione.
+
+.Fasi
+. Nella pagina Manage (Gestione), selezionare l'array di storage con il pool o il gruppo di volumi.
+. Selezionare menu:Provisioning[ Configura pool e gruppi di volumi].
+. Selezionare il pool o il gruppo di volumi a cui si desidera aggiungere le unità, quindi fare clic su *Add Capacity* (Aggiungi capacità).
++
+Viene visualizzata la finestra di dialogo Add Capacity (Aggiungi capacità). Vengono visualizzate solo le unità non assegnate compatibili con il pool o il gruppo di volumi.
+
+. In *Select drives to add Capacity...* (Seleziona dischi per aggiungere capacità), selezionare una o più unità che si desidera aggiungere al pool o al gruppo di volumi esistente.
++
+Il firmware del controller dispone le unità non assegnate con le opzioni migliori elencate in alto. La capacità libera totale aggiunta al pool o al gruppo di volumi viene visualizzata sotto l'elenco in *capacità totale selezionata*.
+
++
+.Dettagli campo
+[%collapsible]
+====
+[cols="25h,~"]
+|===
+| Campo | Descrizione 
+
+
+ a| 
+Shelf
+ a| 
+Indica la posizione dello shelf del disco.
+
+
+
+ a| 
+Baia
+ a| 
+Indica la posizione dell'alloggiamento del disco
+
+
+
+ a| 
+Capacità (GiB)
+ a| 
+Indica la capacità del disco.
+
+** Se possibile, selezionare dischi con capacità uguale a quella dei dischi correnti nel pool o nel gruppo di volumi.
+** Se è necessario aggiungere dischi non assegnati con una capacità inferiore, tenere presente che la capacità utilizzabile di ogni disco attualmente presente nel pool o nel gruppo di volumi è ridotta. Pertanto, la capacità del disco è la stessa nel pool o nel gruppo di volumi.
+** Se è necessario aggiungere dischi non assegnati con una capacità maggiore, tenere presente che la capacità utilizzabile dei dischi non assegnati aggiunti viene ridotta in modo che corrispondano alle capacità correnti dei dischi nel pool o nel gruppo di volumi.
+
+
+
+
+ a| 
+Sicuro
+ a| 
+Indica se il disco è sicuro.
+
+** È possibile proteggere il pool o il gruppo di volumi con la funzione Drive Security, ma per utilizzare questa funzione è necessario che tutti i dischi siano protetti.
+** È possibile creare un pool o un gruppo di volumi con una combinazione di dischi sicuri e non sicuri, ma non è possibile attivare la funzione Drive Security.
+** Un pool o un gruppo di volumi con tutti i dischi con funzionalità di protezione non può accettare un disco con funzionalità di protezione non sicura per lo sparing o l'espansione, anche se la funzionalità di crittografia non è in uso.
+** Le unità compatibili con la protezione possono essere dischi con crittografia completa del disco (FDE) o dischi FIPS (Federal Information Processing Standard). Un disco FIPS può essere di livello 140-2 o 140-3, con il livello 140-3 come livello di sicurezza superiore. Se si seleziona una combinazione di dischi di livello 140-2 e 140-3, il pool o il gruppo di volumi opereranno al livello di sicurezza inferiore (140-2).
+
+
+
+
+ a| 
+Compatibile CON DA
+ a| 
+Indica se il disco è compatibile con Data Assurance (da).
+
+** Si sconsiglia l'utilizzo di dischi che non sono in grado di aggiungere capacità a un pool o a un gruppo di volumi con funzionalità da. Il pool o il gruppo di volumi non dispone più delle funzionalità da e non è più possibile attivare il da sui volumi appena creati all'interno del pool o del gruppo di volumi.
+** Si sconsiglia l'utilizzo di dischi in grado di aggiungere capacità a un pool o a un gruppo di volumi non compatibili con da, in quanto tale pool o gruppo di volumi non può sfruttare le funzionalità del disco compatibile con da (gli attributi del disco non corrispondono). Considerare l'utilizzo di dischi non compatibili con da in questa situazione.
+
+
+
+
+ a| 
+Compatibile con DULBE
+ a| 
+Indica se il disco dispone dell'opzione Deallocated (disallocato) o Unwritten Logical Block Error (DULBE). DULBE è un'opzione sui dischi NVMe che consente allo storage array EF300 o EF600 di supportare volumi con provisioning di risorse.
+
+|===
+====
+. Fare clic su *Aggiungi*.
++
+Se si aggiungono unità a un pool o a un gruppo di volumi, viene visualizzata una finestra di dialogo di conferma se si seleziona un'unità che impedisce al pool o al gruppo di volumi di avere uno o più dei seguenti attributi:
+
++
+** Protezione contro la perdita di shelf
+** Protezione in caso di perdita del cassetto
+** Funzionalità di crittografia completa del disco
+** Funzionalità Data Assurance
+** Funzionalità DULBE
+
+
+. Per continuare, fare clic su *Sì*, altrimenti fare clic su *Annulla*.
+
+
+.Risultato
+Dopo aver aggiunto le unità non assegnate a un pool o a un gruppo di volumi, i dati di ciascun volume del pool o del gruppo di volumi vengono ridistribuiti per includere le unità aggiuntive.

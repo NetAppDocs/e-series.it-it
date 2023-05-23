@@ -1,0 +1,95 @@
+---
+permalink: maintenance-ef600/power-replace-supertask-task.html 
+sidebar: sidebar 
+keywords: replace EF300 power supply, replace EF600 power supply, 
+summary: Sostituire gli alimentatori quando si guastano nel controller EF300 o EF600. 
+---
+= Sostituire un alimentatore EF300 o EF600
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile sostituire un alimentatore in caso di guasto nel controller EF300 o EF600.
+
+In caso di guasto a un alimentatore, è necessario sostituirlo il prima possibile, in modo che lo shelf del controller disponga di una fonte di alimentazione ridondante.
+
+.Prima di iniziare
+* Esaminare i dettagli nel Recovery Guru per confermare che si è verificato un problema con l'alimentatore. Selezionare *ricontrollare* dal Recovery Guru per assicurarsi che nessun altro elemento debba essere affrontato per primo.
+* Verificare che il LED di attenzione ambra sull'alimentatore sia acceso, a indicare che l'alimentatore o la ventola integrata sono guasti.
+
+
+.Di cosa hai bisogno
+* Un alimentatore sostitutivo supportato per lo shelf del controller.
+* Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
+* Stazione di gestione con un browser che può accedere a Gestione di sistema SANtricity per il controller. Per aprire l'interfaccia di System Manager, puntare il browser sul nome di dominio o sull'indirizzo IP del controller.
+
+
+
+
+== Fase 1: Rimuovere l'alimentatore guasto
+
+Rimuovere un alimentatore guasto per poterlo sostituire con uno nuovo.
+
+.Fasi
+. Disimballare il nuovo alimentatore e posizionare il nuovo alimentatore su una superficie piana vicino allo shelf del disco.
++
+Conservare tutti i materiali di imballaggio per l'utilizzo quando si restituisce l'alimentatore guasto.
+
+. Scollegare i cavi di alimentazione:
++
+.. Aprire il fermo del cavo di alimentazione, quindi scollegare il cavo di alimentazione dall'alimentatore.
+.. Scollegare il cavo di alimentazione dalla presa di corrente.
+
+
+. Individuare la linguetta a destra dell'alimentatore e spingerla verso l'alimentatore.
++
+image::../media/psup_2.png[psup 2]
+
+. Individuare la maniglia sulla parte anteriore dell'alimentatore.
+. Utilizzare la maniglia per estrarre l'alimentatore dal sistema.
++
+
+CAUTION: Quando si rimuove un alimentatore, utilizzare sempre due mani per sostenerne il peso.
+
++
+image::../media/psup_3.png[psup 3]
+
+
+
+
+
+== Fase 2: Installare un nuovo alimentatore e completare la sostituzione
+
+Dopo aver rimosso l'alimentatore guasto, installarne uno nuovo.
+
+.Fasi
+. Con entrambe le mani, sostenere e allineare i bordi dell'alimentatore con l'apertura nello chassis del sistema, quindi spingere delicatamente l'alimentatore nello chassis utilizzando la maniglia della camma.
++
+Gli alimentatori sono dotati di chiavi e possono essere installati in un solo modo.
+
++
+
+CAUTION: Non esercitare una forza eccessiva quando si inserisce l'alimentatore nel sistema, poiché si potrebbe danneggiare il connettore.
+
++
+image::../media/psup_4.png[psup 4]
+
+. Verificare che lo stato sia ottimale e controllare i LED di attenzione dello shelf di controller.
++
+Se lo stato non è ottimale o se uno dei LED attenzione è acceso, verificare che tutti i cavi siano inseriti correttamente e che il contenitore del controller sia installato correttamente. Se necessario, rimuovere e reinstallare il contenitore del controller.
+
++
+
+NOTE: Se non si riesce a risolvere il problema, contattare il supporto tecnico.
+
+. Da Gestione sistemi SANtricity, fare clic su menu:supporto[Centro aggiornamento] per verificare che sia installata la versione più recente di SANtricity OS.
++
+Se necessario, installare la versione più recente.
+
+
+
+.Quali sono le prossime novità?
+La sostituzione dell'alimentatore è completata. È possibile riprendere le normali operazioni.

@@ -1,0 +1,91 @@
+---
+permalink: maintenance-e2800/batteries-overview-requirements-concept.html 
+sidebar: sidebar 
+keywords: E2800 battery fail, E2800 battery, E2800 battery replacement, replace E2800 battery, replacing E2800 battery, E2800, E-Series, eseries 
+summary: Esaminare i requisiti e le considerazioni per la sostituzione della batteria del sistema E2800. 
+---
+= Requisiti per la sostituzione della batteria E2800
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di sostituire una batteria E2800, esaminare i requisiti e le considerazioni.
+
+Ogni contenitore del controller include una batteria che conserva i dati memorizzati nella cache in caso di interruzione dell'alimentazione CA.
+
+
+
+== Recovery Guru
+
+Se il guru del ripristino in Gestione sistema di SANtricity riporta uno dei seguenti stati, è necessario sostituire la batteria interessata:
+
+* Guasto alla batteria
+* Sostituzione della batteria necessaria
+
+
+Da Gestore di sistema di SANtricity, esaminare i dettagli nel guru del ripristino per confermare che si è verificato un problema con una batteria e per assicurarsi che non siano prima necessari altri elementi da risolvere.
+
+
+
+== Panoramica della procedura
+
+Per proteggere i dati, è necessario sostituire una batteria guasta il prima possibile.
+
+Di seguito è riportata una panoramica dei passaggi necessari per sostituire una batteria in un controller E2800:
+
+. Preparare la sostituzione seguendo la procedura appropriata per una configurazione duplex o simplex.
+. Rimuovere il contenitore del controller.
+. Rimuovere la batteria guasta.
+. Installare la nuova batteria.
+. Reinstallare il contenitore del controller.
+. Completare la sostituzione seguendo la procedura appropriata per una configurazione duplex o simplex.
+
+
+
+
+== Configurazione duplex o simplex
+
+La procedura per sostituire una batteria dipende dal fatto che si disponga di uno o due controller, come segue:
+
+|===
+| Se lo storage array dispone di... | Devi... 
+
+
+ a| 
+Due controller (duplex)
+ a| 
+. Portare il controller offline.
+. Rimuovere il contenitore del controller.
+. Sostituire la batteria.
+. Sostituire il contenitore del controller.
+. Portare il controller online.
+
+
+
+
+ a| 
+Un controller (simplex)
+ a| 
+. Interrompere le operazioni di i/o dell'host.
+. Spegnere lo shelf del controller.
+. Rimuovere il contenitore del controller.
+. Sostituire la batteria.
+. Sostituire il contenitore del controller.
+. Alimentare lo shelf del controller.
+
+
+|===
+
+
+== Requisiti per la sostituzione di una batteria
+
+Se si intende sostituire una batteria guasta, è necessario disporre di:
+
+* Una batteria sostitutiva.
+* Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
+* Etichette per identificare ciascun cavo collegato al contenitore del controller.
+* Stazione di gestione con un browser che può accedere a Gestione di sistema SANtricity per il controller. Per aprire l'interfaccia di System Manager, puntare il browser sul nome di dominio o sull'indirizzo IP del controller.
+

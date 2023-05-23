@@ -1,0 +1,70 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-upgrade-overview.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: È possibile gestire il software SANtricity e gli aggiornamenti DI NVSRAM per più array di storage dello stesso tipo. 
+---
+= Panoramica sull'aggiornamento
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Nel plug-in di storage per vCenter, è possibile gestire il software SANtricity e gli aggiornamenti DI NVSRAM per più array di storage dello stesso tipo.
+
+
+
+== Workflow di upgrade
+
+I seguenti passaggi forniscono un workflow di alto livello per l'esecuzione degli aggiornamenti software:
+
+. È possibile scaricare il file SANtricity OS più recente dal sito di supporto (un collegamento è disponibile nella pagina di supporto). Salvare il file sul sistema host di gestione (l'host in cui si accede al plug-in in un browser), quindi decomprimere il file.
+. Nel plug-in, è possibile caricare il file del software SANtricity OS e IL file NVSRAM nel repository (un'area del server in cui sono memorizzati i file).
+. Una volta caricati i file nel repository, è possibile selezionare il file da utilizzare nell'aggiornamento. Dalla pagina Aggiorna software SANtricity OS, selezionare il file del software del sistema operativo e IL file NVSRAM. Dopo aver selezionato un file software, in questa pagina viene visualizzato un elenco di array di storage compatibili. Selezionare quindi gli array di storage che si desidera aggiornare con il nuovo software. (Non è possibile selezionare array incompatibili).
+. È quindi possibile avviare un trasferimento e un'attivazione software immediati oppure scegliere di preparare i file per l'attivazione in un secondo momento. Durante il processo di aggiornamento, il plug-in esegue le seguenti operazioni:
++
+** Esegue un controllo dello stato degli array di storage per determinare se esistono condizioni che potrebbero impedire il completamento dell'aggiornamento. Se un array non supera il controllo dello stato di salute, è possibile saltare tale array e continuare l'aggiornamento per gli altri oppure interrompere l'intero processo e risolvere i problemi degli array che non hanno superato il test.
+** Trasferisce i file di aggiornamento a ciascun controller.
+** Riavvia i controller e attiva il nuovo software del sistema operativo, un controller alla volta. Durante l'attivazione, il file del sistema operativo esistente viene sostituito con il nuovo file.
+
+
+
+
+
+NOTE: È inoltre possibile specificare che il software venga attivato in un secondo momento.
+
+
+
+== Considerazioni sull'upgrade
+
+Prima di eseguire l'upgrade di più array di storage, esaminare le considerazioni chiave come parte della pianificazione.
+
+
+
+=== Versioni correnti
+
+È possibile visualizzare le versioni correnti del software SANtricity OS dalla pagina Gestione del plug-in di storage per vCenter per ciascun array di storage rilevato. La versione viene visualizzata nella colonna Software SANtricity OS. Il firmware del controller e LE informazioni SU NVSRAM sono disponibili in una finestra di dialogo a comparsa quando si fa clic sulla versione del sistema operativo in ciascuna riga.
+
+
+
+=== Altri componenti che richiedono l'aggiornamento
+
+Nell'ambito del processo di aggiornamento, potrebbe essere necessario aggiornare il driver multipath/failover dell'host o il driver HBA in modo che l'host possa interagire correttamente con i controller. Per informazioni sulla compatibilità, fare riferimento a. link:https://imt.netapp.com/matrix/["Tool di matrice di interoperabilità"^].
+
+
+
+=== Controller doppi
+
+Se uno storage array contiene due controller e si dispone di un driver multipath installato, lo storage array può continuare a elaborare l'i/o durante l'aggiornamento. Durante l'aggiornamento, si verifica la seguente procedura:
+
+. Il controller A esegue il failover di tutti i LUN verso il controller B.
+. L'aggiornamento avviene sul controller A.
+. Il controller A riprende i LUN e tutti i LUN del controller B.
+. L'aggiornamento avviene sul controller B.
+
+
+Al termine dell'aggiornamento, potrebbe essere necessario ridistribuire manualmente i volumi tra i controller per garantire che i volumi tornino al controller proprietario corretto.

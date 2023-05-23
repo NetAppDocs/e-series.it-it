@@ -1,0 +1,14 @@
+---
+permalink: maintenance-ef600/concept-dimms-wombat.html 
+sidebar: sidebar 
+keywords: replace, dimm, memory, mismatch, fail 
+summary: È necessario sostituire un modulo DIMM in caso di mancata corrispondenza della memoria o di un modulo DIMM guasto. 
+---
+= DIMM
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario sostituire un modulo DIMM in caso di mancata corrispondenza della memoria o di un modulo DIMM guasto.

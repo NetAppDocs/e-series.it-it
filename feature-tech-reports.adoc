@@ -1,0 +1,35 @@
+---
+sidebar: sidebar 
+permalink: feature-tech-reports.html 
+keywords: feature technical reports, e-series, hardware, santricity, os 
+summary: Report tecnici e-Series 
+---
+= Sfoglia i report tecnici in primo piano
+:allow-uri-read: 
+
+
+
+
+== TR di funzionalità
+
+[cols="9,9,9"]
+|===
+
+
+| https://www.netapp.com/pdf.html?item=/media/28697-tr-4893-deploy.pdf["*TR-4893: Volumi di storage remoto SANtricity*"^] | https://www.netapp.com/pdf.html?item=/media/19405-tr-4839.pdf["*TR-4839: Mirroring sincrono e asincrono di SANtricity*"^] | https://www.netapp.com/pdf.html?item=/media/17167-tr4747pdf.pdf["*TR-4747: Panoramica delle funzionalità Snapshot di SANtricity e guida all'implementazione*"^] 
+
+
+| Descrive l'architettura della soluzione e come utilizzare il sistema di storage e-Series per importare i dati da un dispositivo di storage remoto esistente. | Descrive la funzione di mirroring sincrono e asincrono di SANtricity. | Descrive la funzione Snapshot di SANtricity, incluse le istruzioni di navigazione della GUI mediante Gestione di sistema di SANtricity. 
+
+
+|  |  |  
+
+
+|  |  |  
+
+
+| https://www.netapp.com/ko/media/12421-tr4652.pdf["*TR-4652: Pool di dischi dinamici SANtricity*"^] | https://www.netapp.com/pdf.html?item=/media/17144-tr4737pdf.pdf["*TR-4737: Bilanciamento automatico del carico SANtricity*"^] | https://www.netapp.com/pdf.html?item=/media/17142-tr4736pdf.pdf["*TR-4736: API dei servizi web SANtricity*"^] 
+
+
+| Descrive come gli amministratori dello storage possono raggruppare set di dischi simili in una topologia di pool in cui tutte le unità del pool partecipano al flusso di lavoro di i/O. | Viene fornita una panoramica del comportamento della funzionalità ALB, dei parametri di configurazione principali e dei miglioramenti all'interoperabilità degli host. | Viene fornita una panoramica dei servizi Web di SANtricity, un'API utilizzata per la configurazione e la gestione dei sistemi storage e-Series. 
+|===

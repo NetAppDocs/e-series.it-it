@@ -1,0 +1,47 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-add-volumes-to-workload.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Aggiungere volumi non assegnati a un workload esistente o nuovo. 
+---
+= Aggiungere volumi al carico di lavoro
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile aggiungere volumi non assegnati a un carico di lavoro esistente o nuovo.
+
+.A proposito di questa attività
+I volumi non sono associati a un carico di lavoro se sono stati creati utilizzando l'interfaccia della riga di comando (CLI) o se sono stati migrati (importati/esportati) da un array di storage diverso.
+
+.Fasi
+. Nella pagina Manage (Gestione), selezionare l'array di storage che contiene i volumi che si desidera aggiungere.
+. Selezionare menu:Provisioning[Manage Volumes] (Gestione volumi).
+. Selezionare la scheda *applicazioni e carichi di lavoro*.
++
+Viene visualizzata la vista applicazioni e carichi di lavoro.
+
+. Selezionare *Aggiungi al carico di lavoro*.
++
+Viene visualizzata la finestra di dialogo Select workload (Seleziona carico di lavoro).
+
+. Eseguire una delle seguenti operazioni:
++
+** *Aggiungi volumi a un carico di lavoro esistente* -- selezionare questa opzione per aggiungere volumi a un carico di lavoro esistente. Utilizzare l'elenco a discesa per selezionare un carico di lavoro. Il tipo di applicazione associato al carico di lavoro viene assegnato ai volumi aggiunti a questo carico di lavoro.
+** *Aggiungi volumi a un nuovo carico di lavoro* -- selezionare questa opzione per definire un nuovo carico di lavoro per un tipo di applicazione e aggiungere volumi al nuovo carico di lavoro.
+
+
+. Selezionare *Avanti* per continuare con la sequenza di aggiunta al carico di lavoro.
++
+Viene visualizzata la finestra di dialogo Select Volumes (Seleziona volumi).
+
+. Selezionare i volumi che si desidera aggiungere al carico di lavoro.
+. Esaminare i volumi che si desidera aggiungere al carico di lavoro selezionato.
+. Quando si è soddisfatti della configurazione del carico di lavoro, fare clic su *fine*.
+

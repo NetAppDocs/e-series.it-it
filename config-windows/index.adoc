@@ -1,0 +1,41 @@
+---
+permalink: config-windows/index.html 
+sidebar: sidebar 
+keywords: express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Utilizzare la configurazione rapida per un host Windows con un sistema e-Series. 
+---
+= Panoramica della configurazione di Windows Express
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il metodo Windows Express per l'installazione dello storage array e l'accesso a Gestore di sistema di SANtricity è appropriato per la configurazione di un host Windows standalone su un sistema e-Series. È progettato per rendere operativo il sistema storage il più rapidamente possibile, con un numero minimo di punti decisionali.
+
+
+
+== Panoramica della procedura
+
+Il metodo espresso include i seguenti passaggi, descritti anche nella link:understand-windows-concept.html["Workflow di Windows"].
+
+. Configurare uno dei seguenti ambienti di comunicazione:
++
+** link:fc-perform-specific-task.html["Fibre Channel (FC)"]
+** link:iscsi-perform-specific-task.html["ISCSI"]
+** link:sas-perform-specific-task.html["SAS"]
+
+
+. Creare volumi logici sull'array di storage.
+. Rendere i volumi disponibili per l'host dati.
+
+
+
+
+== Trova ulteriori informazioni
+
+* Guida in linea -- descrive come utilizzare Gestione di sistema di SANtricity per completare le attività di configurazione e gestione dello storage. È disponibile all'interno del prodotto.
+* https://kb.netapp.com/["Knowledge base di NetApp"^] (Un database di articoli) -- fornisce informazioni sulla risoluzione dei problemi, FAQ e istruzioni per un'ampia gamma di prodotti e tecnologie NetApp.
+* http://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"^] -- consente di cercare configurazioni di prodotti e componenti NetApp che soddisfino gli standard e i requisiti specificati da NetApp.
+* http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61343["Documentazione NetApp: Utility host"^] -- fornisce la documentazione per la versione corrente di Windows Unified host Utilities.
+

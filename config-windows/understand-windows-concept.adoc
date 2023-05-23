@@ -1,0 +1,16 @@
+---
+permalink: config-windows/understand-windows-concept.html 
+sidebar: sidebar 
+keywords: express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Utilizzare il flusso di lavoro di configurazione di Windows Express. 
+---
+= Comprendere il flusso di lavoro di Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Questo flusso di lavoro guida l'utente attraverso il metodo rapido per la configurazione dello storage array e di Gestore di sistema di SANtricity per rendere lo storage disponibile a un host Windows.
+
+image::../media/1130_flw_sys_mgr_windows_express_guide_all_protocols.png[1130 flw sys mgr windows express guida tutti i protocolli]

@@ -1,0 +1,168 @@
+---
+permalink: maintenance-e2800/canisters-overview-supertask-concept.html 
+sidebar: sidebar 
+keywords: E2800 replace canister, replacing E2800 canister, E2800 replace power supply, replacing E2800 power supply, E2800 replace fan, replacing E2800 fan, E2800, E-Series, eseries 
+summary: Esaminare i tipi e i requisiti dei contenitori E2800. 
+---
+= Requisiti per la sostituzione del filtro E2800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di sostituire un contenitore in un array E2800, esaminare i tipi e i requisiti del contenitore.
+
+I tipi di taniche includono alimentatori, taniche di alimentazione e taniche per ventole.
+
+
+
+== Alimentatore
+
+
+NOTE: La procedura di sostituzione dell'alimentatore è applicabile per le sostituzioni IOM. Per sostituire il modulo IOM, eseguire la procedura di sostituzione dell'alimentatore.
+
+Ogni shelf o shelf di controller da 12 o 24 dischi include due alimentatori con ventole integrate. In Gestione sistema di SANtricity, questi sono denominati _canister per ventole di alimentazione_. In caso di guasto di un contenitore della ventola di alimentazione, è necessario sostituirlo il prima possibile per assicurarsi che lo shelf disponga di una fonte di alimentazione ridondante e di un raffreddamento adeguato.
+
+
+
+=== Tipi di shelf per un alimentatore
+
+È possibile sostituire un alimentatore nei seguenti shelf:
+
+* Shelf di controller E2812
+* Shelf di controller E2824
+* Flash array EF280
+* Shelf di dischi DE212C
+* Shelf di dischi DE224C
+
+
+La figura seguente mostra un esempio di shelf di controller E2812, shelf di controller E2824 e flash array EF280 con due alimentatori (contenitori per ventole di alimentazione). Gli shelf di dischi DE212C e DE224C sono identici, ma includono i moduli i/o (IOM) invece dei controller canister.
+
+image::../media/28_dwg_e2812_power_fan_canisters.gif[28 taniche per ventole di alimentazione dwg e2812]
+
+*(1)* _Shelf del controller con due alimentatori (contenitori per ventole di alimentazione) sotto i contenitori del controller_
+
+La procedura per la sostituzione di un alimentatore non descrive come sostituire un contenitore della ventola di alimentazione guasto in un vassoio dell'unità DE1600 o DE5600, che potrebbe essere collegato agli shelf dei controller E5700 o E2800. Per istruzioni su questi modelli di tray di dischi, fare riferimento a. link:https://library.netapp.com/ecm/ecm_download_file/ECMP1140874["Ricollocamento di un contenitore della ventola di alimentazione nel vassoio dell'unità DE1600 o nel vassoio dell'unità DE5600"^].
+
+
+
+=== Requisiti per la sostituzione di un alimentatore
+
+Se si prevede di sostituire un alimentatore, tenere presenti i seguenti requisiti.
+
+* È necessario disporre di un alimentatore sostitutivo (contenitore della ventola di alimentazione) supportato per il modello di shelf di controller o di unità.
+* Si dispone di un braccialetto ESD o si sono prese altre precauzioni antistatiche.
+* È possibile sostituire un alimentatore (contenitore della ventola di alimentazione) mentre lo storage array è acceso ed esegue operazioni di i/o host, a condizione che siano soddisfatte le seguenti condizioni:
++
+** Il secondo alimentatore (contenitore della ventola di alimentazione) nello shelf ha uno stato ottimale.
+** Il campo *OK per rimuovere* nell'area Dettagli del guru del ripristino in Gestione sistema di SANtricity visualizza *Sì*, a indicare che è possibile rimuovere questo componente in tutta sicurezza.
++
+
+NOTE: Se il secondo alimentatore (contenitore della ventola di alimentazione) nello shelf non ha uno stato ottimale o se il Recovery Guru indica che non è possibile rimuovere il contenitore della ventola di alimentazione, contattare il supporto tecnico.
+
+
+
+
+
+
+
+== Filtro a carboni attivi
+
+Ogni shelf di controller da 60 dischi o shelf di dischi include due contenitori di alimentazione per la ridondanza dell'alimentazione.
+
+
+
+=== Tipi di shelf per un contenitore di alimentazione
+
+È possibile sostituire un contenitore di alimentazione nei seguenti shelf:
+
+* Shelf di controller E2860
+* Shelf di dischi DE460C
+
+
+La procedura per la sostituzione di un contenitore di alimentazione non descrive come sostituire un contenitore di alimentazione guasto in un vassoio del disco DE6600, che potrebbe essere collegato allo shelf del controller.
+
+La figura seguente mostra il retro di uno shelf di dischi DE460C con i due contenitori di alimentazione:
+
+image::../media/28_dwg_de460c_rear_no_callouts_maint-e2800.gif[28 dwg de460c post no callout maintt e2800]
+
+La figura seguente mostra un contenitore di alimentazione:
+
+image::../media/28_dwg_e2860_de460c_psu_maint-e2800.gif[28 dwg e2860 de460c psu principale e2800]
+
+
+
+=== Requisiti per la sostituzione di un contenitore di alimentazione
+
+Se si prevede di sostituire un contenitore di alimentazione, tenere presenti i seguenti requisiti.
+
+* Si dispone di un contenitore di alimentazione sostitutivo supportato per il modello di shelf di controller o di unità.
+* Si dispone di un contenitore di alimentazione installato e funzionante.
+* Si dispone di un braccialetto ESD o si sono prese altre precauzioni antistatiche.
+* È possibile sostituire un contenitore di alimentazione mentre lo storage array è acceso ed esegue operazioni di i/o host, a condizione che siano soddisfatte le seguenti condizioni:
++
+** L'altro contenitore di alimentazione nello shelf ha uno stato ottimale.
++
+
+NOTE: Durante l'esecuzione della procedura, l'altro contenitore di alimentazione alimenta entrambe le ventole per garantire che l'apparecchiatura non si surriscaldi.
+
+** Il campo *OK per rimuovere* nell'area Dettagli del guru del ripristino in Gestione sistema di SANtricity visualizza *Sì*, a indicare che è possibile rimuovere questo componente in tutta sicurezza.
++
+
+NOTE: Se il secondo contenitore di alimentazione nel ripiano non ha uno stato ottimale o se il Recovery Guru indica che non è possibile rimuovere il contenitore di alimentazione, contattare il supporto tecnico.
+
+
+
+
+
+
+
+== Filtro della ventola
+
+Ogni shelf di controller da 60 dischi o shelf di dischi include due contenitori per ventole.
+
+
+
+=== Tipi di shelf per un contenitore di ventole
+
+È possibile sostituire un contenitore della ventola nei seguenti ripiani:
+
+* Shelf di controller E2860
+* Shelf di dischi DE460C
+
+
+La procedura per la sostituzione di un contenitore della ventola non descrive come sostituire un contenitore della ventola guasto in un vassoio del disco DE6600, che potrebbe essere collegato allo shelf del controller.
+
+La figura seguente mostra un filtro a carboni attivi della ventola:
+
+image::../media/28_dwg_e2860_de460c_single_fan_canister_no_callouts_maint-e2800.gif[28 dwg e2860 de460c canister a ventola singola senza callout principale e2800]
+
+La figura seguente mostra il retro di uno shelf DE460C con due contenitori per ventole:
+
+image::../media/28_dwg_de460c_rear_no_callouts_maint-e2800.gif[28 dwg de460c post no callout maintt e2800]
+
+
+CAUTION: *Possibili danni all'apparecchiatura* -- se si sostituisce un contenitore della ventola con l'alimentazione accesa, è necessario completare la procedura di sostituzione entro 30 minuti per evitare il rischio di surriscaldamento dell'apparecchiatura.
+
+
+
+=== Requisiti per la sostituzione di un filtro a carboni attivi della ventola
+
+Se si prevede di sostituire un filtro a carboni attivi della ventola, tenere presenti i seguenti requisiti.
+
+* Si dispone di una ventola sostitutiva (ventola) supportata per il proprio modello di shelf di controller o di unità.
+* È presente un contenitore della ventola installato e in funzione.
+* Si dispone di un braccialetto ESD o si sono prese altre precauzioni antistatiche.
+* Se si esegue questa procedura con l'alimentazione accesa, è necessario completarla entro 30 minuti per evitare il surriscaldamento dell'apparecchiatura.
+* È possibile sostituire un contenitore di ventole mentre lo storage array è acceso ed esegue operazioni di i/o host, a condizione che siano soddisfatte le seguenti condizioni:
++
+** Il secondo contenitore della ventola nello shelf ha uno stato ottimale.
+** Il campo *OK per rimuovere* nell'area Dettagli del guru del ripristino in Gestione sistema di SANtricity visualizza *Sì*, a indicare che è possibile rimuovere questo componente in tutta sicurezza.
++
+
+NOTE: Se il secondo contenitore della ventola nello shelf non ha uno stato ottimale o se il Recovery Guru indica che non è possibile rimuovere il contenitore della ventola, contattare il supporto tecnico.
+
+
+
+

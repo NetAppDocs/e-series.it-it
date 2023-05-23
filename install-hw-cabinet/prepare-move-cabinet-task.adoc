@@ -1,0 +1,317 @@
+---
+permalink: install-hw-cabinet/prepare-move-cabinet-task.html 
+sidebar: sidebar 
+keywords: 3040 40U cabinet, cabinet installation, drive tray installation, controller installation, shelf installation, E2800, E5700, EF300, EF600 
+summary: Prepararsi a spostare il cabinet. 
+---
+= Preparazione per lo spostamento del cabinet
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prepararsi a spostare il cabinet dalla posizione nell'area di ricevimento stimandone il peso totale, acclimatando il cabinet, rimuovendo i materiali di imballaggio e controllando il contenuto della spedizione.
+
+
+
+== Fase 1: Stima del peso del cabinet
+
+Il cabinet trasporta in modo affidabile e sicuro fino a 909.1 kg (2000 lb) di capacità. È necessario conoscere il peso approssimativo del cabinet in modo da poterlo spostare in sicurezza.
+
+.Fasi
+. Utilizzare la seguente tabella per calcolare il peso totale approssimativo del cabinet.
++
+Il peso totale del cabinet dipende dal numero e dal tipo di vassoi installati nel cabinet.
+
++
+|===
+| Componente | Peso | Note 
+
+
+ a| 
+Cabinet
+ a| 
+138.80 kg (306.0 lb)
+ a| 
+Svuotare con lo sportello posteriore installato
+
+
+
+ a| 
+Unità di distribuzione dell'alimentazione (PDU [coppia])
+ a| 
+19.96 kg (44.0 lb)
+ a| 
+
+
+
+ a| 
+Guide di montaggio (coppia)
+ a| 
+1.59 kg (3.50 lb)
+ a| 
+
+
+
+ a| 
+Tray di dischi controller E2612
+ a| 
+27 kg (59.52 lb)
+ a| 
+Configurazione massima
+
+
+
+ a| 
+Tray di dischi controller E2624
+ a| 
+26.12 kg (57.32 lb)
+ a| 
+Configurazione massima
+
+
+
+ a| 
+Tray di dischi controller E2660
+ a| 
+105.2 kg (232 lb)
+ a| 
+Configurazione massima
+
+
+
+ a| 
+E2712 tray di dischi controller
+ a| 
+27.12 kg (59.8 lb)
+ a| 
+Configurazione massima
+
+
+
+ a| 
+Vassoio del disco controller E2724
+ a| 
+26 kg (57.32 lb)
+ a| 
+Configurazione massima
+
+
+
+ a| 
+Tray di dischi controller E2760
+ a| 
+105.2 kg (232 lb)
+ a| 
+Configurazione massima
+
+
+
+ a| 
+Tray di dischi controller E5412
+ a| 
+27.92 (61.52 lb)
+ a| 
+Configurazione massima
+
+
+
+ a| 
+Vassoio del disco controller E5424
+ a| 
+26.92 kg (59.32 lb)
+ a| 
+Configurazione massima
+
+
+
+ a| 
+Tray di dischi controller E5460
+ a| 
+105.2 kg (232 lb)
+ a| 
+Configurazione massima
+
+
+
+ a| 
+Tray di dischi controller E5512
+ a| 
+28.89 kg (63.7 lb)
+ a| 
+Configurazione massima
+
+
+
+ a| 
+Tray di dischi controller E5524
+ a| 
+27.9 kg (61.52 lb)
+ a| 
+Configurazione massima
+
+
+
+ a| 
+Tray di dischi controller E5560
+ a| 
+107.13 kg (236.2 lb)
+ a| 
+Configurazione massima
+
+
+
+ a| 
+Tray di dischi controller E5612
+ a| 
+28.89 kg (63.7 lb)
+ a| 
+Configurazione massima
+
+
+
+ a| 
+Tray di dischi controller E5624
+ a| 
+27.9 kg (61.52 lb)
+ a| 
+Configurazione massima
+
+
+
+ a| 
+Tray di dischi controller E5660
+ a| 
+107.13 kg (236.2 lb)
+ a| 
+Configurazione massima
+
+
+
+ a| 
+Flash array EF540
+ a| 
+23.64 kg (52.12 lb)
+ a| 
+Configurazione massima
+
+
+
+ a| 
+Flash array EF550
+ a| 
+24.63 kg (54.32 lb)
+ a| 
+Configurazione massima
+
+
+
+ a| 
+Flash array EF560
+ a| 
+24.63 kg (54.32 lb)
+ a| 
+Configurazione massima
+
+
+
+ a| 
+Vassoio del disco DE1600
+ a| 
+26.3 kg (58 lb)
+ a| 
+Configurazione massima
+
+
+
+ a| 
+Vassoio del disco DE5600
+ a| 
+25.31 kg (55.8 lb)
+ a| 
+Configurazione massima
+
+
+
+ a| 
+Vassoio del disco DE6600
+ a| 
+104.1 kg (229.6 lb)
+ a| 
+Configurazione massima
+
+|===
+. Rivedere le seguenti note.
++
+
+CAUTION: Rimuovere tutti i dischi dal vassoio del disco DE6600 prima di spostare il cabinet nella posizione finale.
+
++
+
+CAUTION: *Possibili danni alle apparecchiature* -- gli armadi con i cassetti per unità DE6600 vengono forniti senza unità per ridurre il peso di spedizione. Poiché un cabinet completamente popolato con cassetti per dischi DE6600 può pesare più di 1247.3 kg (2750 lb), assicurarsi di spostare il cabinet in posizione prima di caricare i dischi e assicurarsi che la capacità di carico a pavimento del cabinet di destinazione supporti tale peso.
+
++
+
+CAUTION: *Possibili danni ai componenti dei vassoi* -- non posizionare un vassoio per unità DE6600 su una superficie piana. Installare il vassoio dell'unità DE6600 nel cabinet prima di utilizzare o spostare i cassetti.
+
+
+
+
+
+== Fase 2: Acclimatare il cabinet
+
+Prima di rimuovere i materiali di imballaggio, assicurarsi che l'armadietto e i vassoi siano in grado di essere utilizzati in ambienti interni.
+
+.Fasi
+. Se la temperatura esterna è inferiore a 0°C (32°F), lasciare il cabinet e i vassoi all'interno delle cassette per almeno 24 ore per evitare la formazione di condensa.
+. Aumentare o diminuire il periodo di stabilizzazione di 24 ore in base alla temperatura esterna all'arrivo.
++
+
+CAUTION: *Possibili danni ai componenti del vassoio* -- se la temperatura esterna è inferiore a 0°C (32°F) quando si riceve il cabinet e i vassoi, non disimballarli immediatamente o non estrarli. L'esposizione di componenti freddi a temperature interne calde può causare condensa, con conseguenti danni o guasti ai componenti.
+
+
+
+
+
+== Fase 3: Rimuovere i materiali di imballaggio
+
+Rimuovere i materiali di imballaggio solo dopo che il cabinet si è acclimatato alla temperatura interna.
+
+.Fasi
+. Fare riferimento alle istruzioni di disimballaggio riportate sul lato anteriore della cassa di spedizione.
+. Rimuovere il materiale di imballaggio seguendo le istruzioni allegate.
+
+
+
+
+== Fase 4: Controllare il contenuto della spedizione
+
+Controllare il contenuto della spedizione per assicurarsi che tutte le apparecchiature siano arrivate al sito.
+
+.Fasi
+. Confrontare la distinta di imballaggio con l'apparecchiatura ricevuta.
+. Assicurarsi che tutte le apparecchiature siano arrivate al sito.
+. In caso di elementi mancanti, contattare il rappresentante commerciale.
+
+
+
+
+== Fase 5: Rimuovere i componenti pesanti dal cabinet
+
+Rimuovere alcuni dei componenti più pesanti posizionati nella parte superiore dell'armadio per garantire la massima stabilità.
+
+.Prima di iniziare
+* Assicurarsi che il peso massimo non superi i 2000 libbre prima di spostare l'armadietto.
+* Prendere nota della posizione di ciascun vassoio, componente e cavo prima di rimuoverlo, in modo da poter reinstallare ciascun elemento nella posizione originale.
+
+
+.Fasi
+. Registrare la configurazione del cavo per il riassemblaggio futuro se è necessario scollegare i cavi.
+. Rimuovere i vassoi delle unità e dei dischi controller nella metà superiore del cabinet. Tenere tutti i componenti dello stesso vassoio insieme.
++
+
+NOTE: Non è necessario rimuovere gli alimentatori o altri componenti dal retro di ciascun vassoio
+
+. Collocare ciascun componente in un sacchetto antistatico separato. Se sono disponibili le scatole di spedizione originali, utilizzarle per trasportare i componenti.
+

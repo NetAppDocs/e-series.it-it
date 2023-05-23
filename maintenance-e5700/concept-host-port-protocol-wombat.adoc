@@ -1,0 +1,14 @@
+---
+permalink: maintenance-e5700/concept-host-port-protocol-wombat.html 
+sidebar: sidebar 
+keywords: convert, protocol, host, compatibility, communication, establish, port 
+summary: È possibile convertire il protocollo di un host in un protocollo diverso in modo da stabilire compatibilità e comunicazione. 
+---
+= Protocollo della porta host
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile convertire il protocollo di un host in un protocollo diverso in modo da stabilire compatibilità e comunicazione.

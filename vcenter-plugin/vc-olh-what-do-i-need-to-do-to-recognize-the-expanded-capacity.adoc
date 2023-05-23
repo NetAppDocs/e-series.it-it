@@ -1,0 +1,23 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-what-do-i-need-to-do-to-recognize-the-expanded-capacity.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Se si aumenta la capacità di un volume, l"host potrebbe non riconoscere immediatamente l"aumento della capacità del volume.' 
+---
+= Cosa devo fare per riconoscere la capacità espansa?
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Se si aumenta la capacità di un volume, l'host potrebbe non riconoscere immediatamente l'aumento della capacità del volume.
+
+La maggior parte dei sistemi operativi riconosce la capacità del volume espanso e si espande automaticamente dopo l'avvio dell'espansione del volume. Tuttavia, alcuni potrebbero non farlo. Se il sistema operativo non riconosce automaticamente la capacità del volume espanso, potrebbe essere necessario eseguire una nuova scansione o un riavvio del disco.
+
+Una volta espansa la capacità del volume, è necessario aumentare manualmente le dimensioni del file system per ottenere la corrispondenza. Il modo in cui si esegue questa operazione dipende dal file system in uso.
+
+Per ulteriori informazioni, consultare la documentazione del sistema operativo host.

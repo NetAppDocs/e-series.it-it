@@ -1,0 +1,142 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-array-management-overview.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Utilizzare la funzione Add/Discover per trovare e aggiungere gli array di storage che si desidera gestire nella rete aziendale. 
+---
+= Panoramica sulla gestione degli array
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Utilizzare la funzione Add/Discover per trovare e aggiungere gli array di storage che si desidera gestire nel plug-in Storage per vCenter. Dalla pagina Manage (Gestione), è possibile rinominare, rimuovere e fornire nuove password per gli array rilevati.
+
+
+
+== Considerazioni per il rilevamento degli array
+
+Affinché il plug-in visualizzi e gestisca le risorse di storage, è necessario individuare gli array di storage che si desidera gestire nella rete aziendale. È possibile rilevare e aggiungere un singolo array o più array.
+
+
+
+=== Array di storage multipli
+
+Se si sceglie di rilevare più array, immettere un intervallo di indirizzi IP di rete e il sistema tenta di stabilire connessioni individuali a ciascun indirizzo IP dell'intervallo. Qualsiasi array di storage raggiunto correttamente viene visualizzato nel plug-in ed è possibile aggiungerlo al dominio di gestione.
+
+
+
+=== Singolo storage array
+
+Se si sceglie di rilevare un singolo array, immettere l'indirizzo IP singolo per uno dei controller nell'array di storage e aggiungerlo al dominio di gestione.
+
+
+NOTE: Il plug-in rileva e visualizza solo il singolo indirizzo IP o indirizzo IP all'interno di un intervallo assegnato a un controller. Se a questi controller sono assegnati controller alternativi o indirizzi IP che non rientrano in questo singolo indirizzo IP o intervallo di indirizzi IP, il plug-in non li rileva o li visualizza. Tuttavia, una volta aggiunto lo storage array, tutti gli indirizzi IP associati vengono rilevati e visualizzati nella vista Manage (Gestione).
+
+
+
+=== Credenziali dell'utente
+
+Specificare la password di amministratore per ciascun array di storage che si desidera aggiungere.
+
+
+
+=== Certificati
+
+Nell'ambito del processo di rilevamento, il sistema verifica che gli array di storage rilevati stiano utilizzando certificati da un'origine attendibile. Il sistema utilizza due tipi di autenticazione basata su certificati per tutte le connessioni stabilite con il browser:
+
+* *Certificati attendibili* -- potrebbe essere necessario installare altri certificati attendibili forniti dall'autorità di certificazione se uno o entrambi i certificati del controller sono scaduti, revocati o mancanti nella relativa catena.
+* *Certificati autofirmati* -- gli array possono anche utilizzare certificati autofirmati. Se si tenta di rilevare gli array senza importare certificati firmati, il plug-in fornisce un'ulteriore fase che consente di accettare il certificato autofirmato. Il certificato autofirmato dell'array di storage viene contrassegnato come attendibile e l'array di storage viene aggiunto al plug-in. Se le connessioni all'array di storage non sono attendibili, selezionare *Annulla* e convalidare la strategia del certificato di sicurezza dell'array di storage prima di aggiungere l'array di storage al plug-in.
+
+
+
+
+== Stato dello storage array
+
+Quando si apre Storage Plugin per vCenter, viene stabilita la comunicazione con ciascun array di storage e viene visualizzato lo stato di ciascun array di storage.
+
+Dalla pagina *Gestisci - tutto*, è possibile visualizzare lo stato dello storage array e lo stato della connessione dello storage array.
+
+|===
+| Stato | Indica 
+
+
+| Ottimale | Lo storage array si trova in uno stato ottimale. Non ci sono problemi di certificato e la password è valida. 
+
+
+| Password non valida | È stata fornita una password dello storage array non valida. 
+
+
+| Certificato non attendibile | Una o più connessioni con lo storage array non sono attendibili perché il certificato HTTPS è autofirmato e non è stato importato oppure il certificato è firmato dalla CA e i certificati CA principali e intermedi non sono stati importati. 
+
+
+| Richiede attenzione | Si è verificato un problema con lo storage array che richiede l'intervento dell'utente per correggerlo. 
+
+
+| Blocco | Lo storage array si trova in uno stato bloccato. 
+
+
+| Sconosciuto | Lo storage array non è mai stato contattato. Questo può accadere quando il plug-in si avvia e non è ancora entrato in contatto con lo storage array, oppure lo storage array non è in linea e non è mai stato contattato dall'avvio del plug-in. 
+
+
+| Offline | Il plug-in aveva precedentemente contattato lo storage array, ma ora ha perso tutte le connessioni. 
+|===
+
+
+== Interfaccia plug-in rispetto a System Manager
+
+È possibile utilizzare Storage Plugin per vCenter per le attività operative di base sull'array di storage; tuttavia, in alcuni casi potrebbe essere necessario avviare System Manager per eseguire attività non disponibili nel plug-in.
+
+System Manager è un'applicazione integrata nel controller dello storage array, collegata alla rete tramite una porta di gestione Ethernet. System Manager include tutte le funzioni basate su array.
+
+La seguente tabella consente di decidere se utilizzare l'interfaccia del plug-in o l'interfaccia di System Manager per una specifica attività di array di storage.
+
+|===
+| Funzione | Interfaccia del plugin | Interfaccia di System Manager 
+
+
+| Operazioni in batch su gruppi di array storage multipli | Sì | No Le operazioni vengono eseguite su un singolo array. 
+
+
+| Aggiornamenti per il firmware del sistema operativo SANtricity | Sì. Uno o più array in un'operazione batch. | Sì. Solo array singolo. 
+
+
+| Importa le impostazioni da un array a più array | Sì | No 
+
+
+| Gestione dei cluster host e host (creazione, assegnazione di volumi, aggiornamento ed eliminazione) | Sì | Sì 
+
+
+| Gestione di pool e gruppi di volumi (creazione, aggiornamento, attivazione della protezione ed eliminazione) | Sì | Sì 
+
+
+| Gestione dei volumi (creazione, ridimensionamento, aggiornamento ed eliminazione) | Sì | Sì 
+
+
+| Gestione della cache SSD (creazione, aggiornamento ed eliminazione) | Sì | Sì 
+
+
+| Mirroring e gestione delle snapshot | No | Sì 
+
+
+| Gestione dell'hardware (visualizzare lo stato del controller, configurare le connessioni delle porte, portare il controller offline, abilitare le hot spare, cancellare i dischi, ecc.) | No | Sì 
+
+
+| Gestire gli avvisi (e-mail, SNMP e syslog) | No | Sì 
+
+
+| Gestione delle chiavi di sicurezza | No | Sì 
+
+
+| Gestione dei certificati per i controller | No | Sì 
+
+
+| Gestione degli accessi per controller (LDAP, SAML, ecc.) | No | Sì 
+
+
+| Gestione di AutoSupport | No | Sì 
+|===

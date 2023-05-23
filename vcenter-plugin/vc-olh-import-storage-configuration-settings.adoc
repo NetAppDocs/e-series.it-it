@@ -1,0 +1,70 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-import-storage-configuration-settings.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Importare la configurazione dello storage da uno storage array ad altri storage array. 
+---
+= Importare le impostazioni di configurazione dello storage
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile importare la configurazione dello storage da uno storage array ad altri storage array. Questa operazione batch consente di risparmiare tempo quando è necessario configurare più array nella rete.
+
+.Prima di iniziare
+Assicurarsi che:
+
+* Lo storage viene configurato in System Manager per l'array di storage che si desidera utilizzare come origine.
+* Il backup della configurazione esistente per gli array di storage di destinazione viene eseguito in System Manager (menu:Impostazioni[sistema > Salva configurazione array di storage]).
+* Sono stati esaminati i requisiti per la replica delle configurazioni di storage in link:vc-olh-import-settings-overview.html["Panoramica delle impostazioni di importazione"].
+* Gli array di origine e di destinazione devono soddisfare i seguenti requisiti:
++
+** Gli shelf in cui risiedono i controller devono essere identici.
+** Gli ID degli shelf devono essere identici.
+** Gli shelf di espansione devono essere inseriti negli stessi slot con gli stessi tipi di unità.
+** Il tipo di enclosure RBOD deve essere identico.
+** L'HICS, incluse le funzionalità di Data Assurance dell'host, deve essere identico.
+** Gli array di destinazione devono essere nello stato ottimale.
+** La capacità del volume sull'array di destinazione è maggiore della capacità dell'array di origine.
+
+
+* Hai compreso le seguenti restrizioni:
++
+** L'importazione da una configurazione duplex a una facciata singola non è supportata; tuttavia, è consentita l'importazione da una facciata singola a una facciata fronte/retro.
+** Volumi di pool di dischi di almeno 64 TB sull'array di origine impediranno il processo di importazione sulle destinazioni.
+
+
+
+
+.A proposito di questa attività
+Le impostazioni importate includono volumi configurati (solo volumi thick e non di repository), gruppi di volumi, pool e assegnazioni di dischi hot spare.
+
+.Fasi
+. Dalla pagina Manage (Gestione), fare clic su menu:Actions[Import Settings] (azioni[Impostazioni importazione]).
++
+Viene visualizzata la procedura guidata Import Settings (Impostazioni importazione).
+
+. Nella finestra di dialogo Select Settings (Seleziona impostazioni), selezionare *Storage Configuration* (Configurazione archiviazione), quindi fare clic su *Next* (Avanti).
++
+Viene visualizzata una finestra di dialogo per la selezione dell'array di origine.
+
+. Nella finestra di dialogo Select Source (Seleziona origine), selezionare l'array con le impostazioni che si desidera importare, quindi fare clic su *Next* (Avanti).
+. Nella finestra di dialogo Select targets (Seleziona destinazioni), selezionare uno o più array per ricevere le nuove impostazioni.
++
+
+NOTE: Gli array di storage con firmware inferiore a 8.50 non sono disponibili per la selezione. Inoltre, un array non viene visualizzato in questa finestra di dialogo se il plug-in non è in grado di comunicare con tale array (ad esempio, se non è in linea o se presenta problemi di certificato, password o rete).
+
+. Fare clic su *fine*.
++
+La pagina Operations (operazioni) visualizza i risultati dell'operazione di importazione. Se l'operazione non riesce, fare clic sulla relativa riga per visualizzare ulteriori informazioni.
+
+
+
+.Risultato
+Gli array di storage di destinazione sono ora configurati con la stessa configurazione dello storage dell'array di origine.

@@ -1,0 +1,36 @@
+---
+permalink: install-hw-e2800-e5700/index.html 
+sidebar: sidebar 
+keywords: E2800, E5700, installation 
+summary: 'Installare e configurare l"array E2800 o E5700.' 
+---
+= Installare e configurare i sistemi storage E2800 ed E5700
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Scopri come installare e configurare il sistema storage E2800 o E5700.
+
+È possibile scegliere uno dei seguenti formati per l'installazione e la configurazione del nuovo sistema di storage.
+
+* *PDF*
++
+Questo è un PDF stampabile di istruzioni passo-passo con collegamenti in tempo reale a contenuti aggiuntivi. Scegli uno dei seguenti poster per iniziare.
+
++
+** https://library.netapp.com/ecm/ecm_download_file/ECMLP2842061["Poster in formato PDF E2860, E5760 e DE460C"^]
+** https://library.netapp.com/ecm/ecm_download_file/ECMLP2842063["E5724, EF570, EF280, E2812, E2824, Poster in formato PDF DE212C e DE224C"^]
+
+
+* *Istruzioni online*
++
+Queste sono le istruzioni di installazione descritte in questo sito. Inizia con uno dei seguenti argomenti per iniziare.
+
++
+** xref:e2860-e5760-prepare-task.adoc[Preparazione all'installazione di E2860, E5760 e DE460C]
+** xref:e2824-e5724-prepare-task.adoc[Preparazione all'installazione di E5724, EF570, EF280, E2812, E2824, DE212C e DE224C]
+
+
+

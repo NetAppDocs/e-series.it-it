@@ -1,0 +1,86 @@
+---
+permalink: upgrade-controllers/remove-controllers-task.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, remove controller, removing controller, remove battery, removing battery 
+summary: 'Il primo passo nell"aggiornamento dei controller consiste nel rimuovere i vecchi controller e, facoltativamente, la batteria.' 
+---
+= Rimuovere i controller
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Una volta completata la preparazione per l'aggiornamento, è possibile rimuovere i controller e, se necessario, rimuovere la batteria.
+
+
+
+== Fase 1: Rimuovere il controller
+
+Rimuovere il contenitore del controller in modo da poterlo aggiornare con uno nuovo. Scollegare tutti i cavi e rimuovere eventuali ricetrasmettitori SFP. Quindi, far scorrere il contenitore del controller fuori dallo shelf del controller.
+
+.Di cosa hai bisogno
+* Un braccialetto ESD o adottare altre precauzioni antistatiche.
+* Etichette per identificare ciascun cavo collegato al contenitore del controller.
+
+
+.A proposito di questa attività
+Per ciascun controller nel vassoio del disco del controller, procedere come segue
+
+Se si stanno aggiornando i controller in un vassoio del disco del controller duplex, ripetere tutti i passi per rimuovere il secondo contenitore del controller.
+
+.Fasi
+. Indossare un braccialetto ESD o adottare altre precauzioni antistatiche.
+. Etichettare ciascun cavo collegato al vecchio contenitore del controller. A seconda della configurazione HIC, potrebbe essere possibile ricollegare alcuni cavi dopo aver sostituito il contenitore del controller.
+. Scollegare tutti i cavi di interfaccia ed Ethernet dal vecchio contenitore del controller.
++
+Se sono presenti cavi in fibra ottica, è possibile utilizzare le due leve di rilascio per rimuovere parzialmente il contenitore del controller. L'apertura di queste leve di rilascio facilita la pressione verso il basso della linguetta di rilascio del cavo in fibra ottica.
+
++
+
+CAUTION: Per evitare prestazioni degradate, non attorcigliare, piegare, pizzicare o salire sui cavi.
+
+. Se il vecchio contenitore del controller contiene un HIC Fibre Channel o un HIC InfiniBand, rimuovere i ricetrasmettitori SFP+ (Small Form-factor Pluggable) (per Fibre Channel) o Quad SFP (QSFP+) (per InfiniBand) dall'HIC e conservarli per un eventuale riutilizzo.
+. Rimuovere il controller A.
++
+.. Sbloccare e ruotare verso l'esterno le maniglie di rilascio per rilasciare il contenitore del controller.
+.. Utilizzando le maniglie di rilascio e le mani, estrarre il contenitore del controller dal vassoio del disco del controller
++
+La figura seguente mostra un esempio della posizione generale delle maniglie di rilascio sui modelli di controller. Gli shelf dei controller e i vassoi dei dischi controller hanno una configurazione simile per le maniglie di rilascio.
+
++
+image:../media/28_dwg_e2824_remove_controller_canister_upg-hw.gif[""]
+
++
+*(1)* _contenitore controller_
+
++
+*(2)* _maniglia della camma_
+
+
+
+. Posizionare il vecchio contenitore del controller su una superficie piana e priva di elettricità statica vicino al vassoio del disco del controller con le leve di rilascio verso l'alto. Posizionare il contenitore del controller in modo da poter accedere al coperchio superiore.
+. (Condizionale) se si stanno aggiornando i controller in un vassoio del disco del controller duplex, ripetere tutti i passaggi per rimuovere il secondo contenitore del controller.
+
+
+Se si intende utilizzare la batteria del vecchio controller nel nuovo controller, passare alla parte successiva della sezione; in caso contrario, passare a. link:install-controllers-task.html["Installare nuovi controller"].
+
+
+
+== Fase 2: Rimuovere la batteria
+
+Rimuovere la batteria solo se si intende utilizzare la batteria dal vecchio contenitore del controller nel nuovo contenitore del controller.
+
+.Fasi
+. Premere verso il basso entrambi i pulsanti del dispositivo di chiusura del coperchio superiore sul vecchio contenitore del controller e far scorrere il coperchio superiore verso la parte posteriore del contenitore.
+. Eseguire una delle seguenti opzioni, a seconda del modello di vassoio del controller, per rilasciare la vecchia batteria:
++
+** Per il controller-drive E2600 o E2700, svitare la vite ad alette che fissa la batteria al contenitore del controller.
+** Per E5400, EF540, E5500, EF550, E5600, O EF600, rilasciare la linguetta che fissa la batteria al contenitore del controller.
+
+
+. Rimuovere la batteria facendola scorrere verso la parte posteriore del vecchio contenitore del controller.
+
+
+.Quali sono le prossime novità?
+Passare a. link:install-controllers-task.html["Installare nuovi controller"].

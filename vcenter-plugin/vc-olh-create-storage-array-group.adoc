@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-create-storage-array-group.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Il gruppo di storage definisce quali dischi forniscono lo storage che costituisce il volume. 
+---
+= Creare un gruppo di array di storage
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile creare gruppi di storage e quindi aggiungere array di storage ai gruppi. Il gruppo di storage definisce quali dischi forniscono lo storage che costituisce il volume.
+
+*Fasi*
+
+. Dalla pagina Manage (Gestisci), selezionare menu:Manage Groups (Gestisci gruppi)[Create storage array group] (Crea gruppo array di storage).
+. Nel campo *Nome*, digitare un nome per il nuovo gruppo.
+. Selezionare gli array di storage che si desidera aggiungere al nuovo gruppo.
+. Fare clic su *Create* (Crea).
+

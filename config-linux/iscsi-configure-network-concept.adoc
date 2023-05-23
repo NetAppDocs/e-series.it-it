@@ -1,0 +1,25 @@
+---
+permalink: config-linux/iscsi-configure-network-concept.html 
+sidebar: sidebar 
+keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Configurare la rete iSCSI. 
+---
+= Configurare il networking
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile configurare la rete iSCSI in diversi modi, a seconda dei requisiti di storage dei dati.
+
+Rivolgersi all'amministratore di rete per suggerimenti sulla scelta della configurazione migliore per l'ambiente in uso.
+
+Per configurare una rete iSCSI con ridondanza di base, collegare ciascuna porta host e una porta da ciascun controller a switch separati e partizionare ciascun set di porte host e porte controller su segmenti di rete o VLAN separati.
+
+È necessario attivare il controllo di flusso hardware di invio e ricezione *end-to-end*. È necessario disattivare il controllo del flusso di priorità.
+
+Se si utilizzano frame jumbo all'interno della SAN IP per motivi di performance, assicurarsi di configurare l'array, gli switch e gli host in modo che utilizzino frame jumbo. Consultare la documentazione del sistema operativo e dello switch per informazioni su come abilitare i frame jumbo sugli host e sugli switch. Per abilitare i frame jumbo sull'array, completare la procedura descritta in link:iscsi-configure-array-side-network-task.html["Configurare il networking lato array"].
+
+
+NOTE: Molti switch di rete devono essere configurati con un numero superiore a 9,000 byte per l'overhead IP. Per ulteriori informazioni, consultare la documentazione dello switch.

@@ -1,0 +1,27 @@
+---
+permalink: maintenance-ef600/hics-overview-supertask-concept.html 
+sidebar: sidebar 
+keywords: replace EF600 HIC, replace EF300 HIC, host interface card failed, HIC failure 
+summary: Esaminare i requisiti e le considerazioni prima di sostituire un HIC EF300 o EF600. 
+---
+= Requisiti per gli aggiornamenti HIC EF300 o EF600
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di aggiornare o sostituire una scheda di interfaccia host (HIC) in un array EF300 o EF600, esaminare i seguenti requisiti.
+
+* È stata pianificata una finestra di manutenzione dei downtime per questa procedura. Non è possibile accedere ai dati sull'array di storage fino a quando la procedura non è stata completata correttamente. Poiché entrambi i controller devono avere la stessa configurazione HIC quando vengono accesi, l'alimentazione deve essere disattivata quando si modifica la configurazione HIC. La presenza di HICS non corrispondenti causa il blocco del controller con l'HIC sostitutivo quando lo si porta online.
+* Sono disponibili tutti i cavi, i ricetrasmettitori, gli switch e gli HBA (host Bus Adapter) necessari per collegare le nuove porte host.
++
+Per informazioni sull'hardware compatibile, fare riferimento a. https://mysupport.netapp.com/NOW/products/interoperability["Matrice di interoperabilità NetApp"^] o il http://hwu.netapp.com/home.aspx["NetApp Hardware Universe"^].
+
+* Si dispone di un braccialetto ESD o si sono prese altre precauzioni antistatiche.
+* Hai un cacciavite Phillips n. 1.
+* Sono presenti etichette per identificare ciascun cavo collegato al contenitore del controller.
+* Stazione di gestione con un browser che può accedere a Gestione di sistema SANtricity per il controller. Per aprire l'interfaccia di System Manager, puntare il browser sul nome di dominio o sull'indirizzo IP del controller.
+* Alcuni aggiornamenti o sostituzioni HIC potrebbero richiedere una conversione del protocollo della porta host. Seguire le istruzioni in xref:hpp-change-supertask-task.html[Modificare il protocollo host per EF300 o EF600] per questo requisito.
+* I controller EF300 devono avere la porta HIC 2 piena di un HIC per la connettività host.
+

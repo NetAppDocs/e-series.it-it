@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-change-workload-settings.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Modificare il nome di un workload e visualizzarne il tipo di applicazione associato. 
+---
+= Modificare le impostazioni del carico di lavoro
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile modificare il nome di un workload e visualizzarne il tipo di applicazione associato.
+
+.Fasi
+. Dalla pagina Manage (Gestione), selezionare l'array di storage che contiene il carico di lavoro che si desidera modificare.
+. Selezionare menu:Provisioning[Manage Volumes] (Gestione volumi).
+. Selezionare la scheda *applicazioni e carichi di lavoro*.
++
+Viene visualizzata la vista applicazioni e carichi di lavoro.
+
+. Selezionare il carico di lavoro che si desidera modificare, quindi selezionare *Visualizza/Modifica impostazioni*.
++
+Viene visualizzata la finestra di dialogo Applications & workload Settings (Impostazioni applicazioni e carichi di lavoro).
+
+. (Facoltativo) modificare il nome del carico di lavoro fornito dall'utente.
+. Fare clic su *Save* (Salva).
+

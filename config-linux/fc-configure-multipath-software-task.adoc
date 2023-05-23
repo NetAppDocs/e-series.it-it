@@ -1,0 +1,72 @@
+---
+permalink: config-linux/fc-configure-multipath-software-task.html 
+sidebar: sidebar 
+keywords: multipath software for Linux, express linux configuration, software configuration, linux host, 
+summary: 'Configurare il software multipath, che fornisce un percorso ridondante all"array di storage in caso di interruzione di uno dei percorsi fisici.' 
+---
+= Configurare il software multipath
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per fornire un percorso ridondante all'array di storage, è possibile configurare il software multipath.
+
+.Di cosa hai bisogno
+È necessario installare i pacchetti richiesti sul sistema.
+
+* Per gli host Red Hat (RHEL), verificare che i pacchetti siano installati eseguendo `rpm -q device-mapper-multipath`.
+* Per gli host SLES, verificare che i pacchetti siano installati eseguendo `rpm -q multipath-tools`.
+
+
+Se il sistema operativo non è già stato installato, utilizzare i supporti forniti dal produttore del sistema operativo.
+
+.A proposito di questa attività
+Il software multipath fornisce un percorso ridondante all'array di storage in caso di interruzione di uno dei percorsi fisici. Il software multipath presenta il sistema operativo con un singolo dispositivo virtuale che rappresenta i percorsi fisici attivi verso lo storage. Il software multipath gestisce anche il processo di failover che aggiorna il dispositivo virtuale.
+
+Per le installazioni Linux si utilizza il tool DM-MP (Device mapper multipath). Per impostazione predefinita, DM-MP è disattivato in RHEL e SLES. Per abilitare i componenti DM-MP sull'host, attenersi alla seguente procedura.
+
+.Fasi
+. Se non è già stato creato un file multipath.conf, eseguire `# touch /etc/multipath.conf` comando.
+. Utilizzare le impostazioni di multipath predefinite lasciando vuoto il file multipath.conf.
+. Avviare il servizio multipath.
++
+[listing]
+----
+# systemctl start multipathd
+----
+. Salvare la versione del kernel eseguendo `uname -r` comando.
++
+[listing]
+----
+# uname -r
+3.10.0-327.el7.x86_64
+----
++
+Queste informazioni verranno utilizzate quando si assegnano volumi all'host.
+
+. Abilitare il daemon multipath all'avvio.
++
+[listing]
+----
+systemctl enable multipathd
+----
+. Ricostruire il `initramfs` o il `initrd` immagine nella directory /boot:
++
+[listing]
+----
+dracut --force --add multipath
+----
+. Assicurarsi che l'immagine /boot/initrams-* o /boot/initrd-* appena creata sia selezionata nel file di configurazione del boot.
++
+Ad esempio, per GRUB è così `/boot/grub/menu.lst` e per grub2 lo è `/boot/grub2/menu.cfg`.
+
+. Utilizzare https://docs.netapp.com/us-en/e-series-santricity/sm-storage/create-host-manually.html["Creare l'host manualmente"] procedura nella guida in linea per verificare se gli host sono definiti. Verificare che ogni impostazione del tipo di host sia basata sulle informazioni del kernel raccolte in <<step4,fase 4>>.
+
+
+
+NOTE: Il bilanciamento automatico del carico è disattivato per tutti i volumi mappati agli host che eseguono kernel 3.9 o versioni precedenti.
+
+. Riavviare l'host.
+

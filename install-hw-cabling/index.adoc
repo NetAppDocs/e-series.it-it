@@ -1,0 +1,75 @@
+---
+permalink: install-hw-cabling/index.html 
+sidebar: sidebar 
+keywords: cabling, cables, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C 
+summary: Collegare un host direttamente a un controller o utilizzare gli switch. 
+---
+= Panoramica dei cavi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile collegare un host direttamente a un controller o utilizzare gli switch per collegare un host a un controller.
+
+Se il sistema di storage include uno o più shelf di dischi, è necessario collegarlo al proprio shelf di controller. È possibile aggiungere un nuovo shelf di dischi mentre l'alimentazione è ancora applicata ad altri componenti del sistema di storage. Inoltre, è possibile collegare il sistema storage a una rete per la gestione fuori banda.
+
+Le informazioni sui cavi sono destinate a un installatore dell'hardware o a un amministratore di sistema che sta installando o espandendo un sistema storage. Si presuppone che il sistema storage sia stato installato come descritto nelle _istruzioni di installazione e configurazione_ dell'hardware.
+
+
+
+== Modello hardware applicabile
+
+Le informazioni sul cablaggio si applicano ai seguenti modelli hardware.
+
+|===
+| *Ripiano controller* | *Shelf di dischi* 
+
+
+ a| 
+EF300, EF600
+ a| 
+DE212C, DE224C, DE460
+
+
+
+ a| 
+E5724, EF570, E2812, E2824, EF280
+ a| 
+DE212C, DE224C
+
+
+
+ a| 
+E2860, E5760
+ a| 
+DE460C
+
+|===
+
+
+== Ulteriori informazioni sul cablaggio
+
+Se si utilizzano cavi per la seguente configurazione, vedere https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2859057["Aggiunta di shelf di dischi IOM a uno shelf di controller E27XX, E56XX o EF560 esistente."^]
+
+|===
+| *Ripiano controller* | *Shelf di dischi* 
+
+
+ a| 
+E2712, E2724, E5612, E5624, EF560
+ a| 
+DE212C, DE224C
+
+
+
+ a| 
+E2760, E5660
+ a| 
+DE460C
+
+|===
+Per informazioni su altre opzioni di cablaggio, consultare https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2773533["Guida al cablaggio hardware e-Series"^] per i sistemi meno recenti.
+
+Per informazioni sul cablaggio per il supporto delle funzioni di mirroring, consultare https://www.netapp.com/us/media/tr-4656.pdf["Guida alla distribuzione e descrizioni delle funzionalità di mirroring sincrono e asincrono"^].

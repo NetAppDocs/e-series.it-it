@@ -1,0 +1,107 @@
+---
+permalink: install-hw-cabinet/cabinet-gather-tools-equipment-task.html 
+sidebar: sidebar 
+keywords: 3040 40U cabinet, cabinet installation, drive tray installation, controller installation, shelf installation, E2800, E5700, EF300, EF600 
+summary: 'Prima di installare l"armadio 3040 40U, raccogliere gli strumenti e le apparecchiature necessari.' 
+---
+= Raccogliere gli strumenti e le apparecchiature necessari
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di installare l'armadio 3040 40U, assicurarsi di disporre degli strumenti e delle apparecchiature necessari.
+
+.Fase
+. Raccogliere tutti gli elementi elencati nella seguente tabella.
++
+|===
+|  | Elemento | Incluso con il cabinet 
+
+
+ a| 
+image:../media/83009_02.gif[""]
+ a| 
+*3/4" Chiave* (fornita nella cassa di spedizione) -- per sollevare e abbassare i piedini di livellamento sotto l'armadietto.
+
+*1/4-in. Chiave Allen* -- per sollevare e abbassare il piede di stabilità nella parte anteriore dell'armadio.
+ a| 
+image:../media/77037_11.gif[""]
+
+
+
+ a| 
+*NEMA L6-30*
+
+image:../media/73121_01_dwg_nema_l6_30_power_cord.gif[""]
+ a| 
+*Cavi di alimentazione CA* -- per collegare l'armadio a fonti di alimentazione esterne (prese a muro).
+
+** I connettori NEMA L6-30 sono destinati all'uso negli Stati Uniti e in Canada.
+** I connettori IEC-60309 sono destinati all'uso in tutto il mondo, ad eccezione di Stati Uniti e Canada.
+
+
+
+NOTE: Ciascuna PDU deve essere collegata a una fonte di alimentazione indipendente.
+ a| 
+image:../media/77037_11.gif[""]
+
+
+
+ a| 
+**IEC-60309**
+
+image:../media/73122_01_dwg_iec_60309_power_cord.gif[""]
+
+
+
+ a| 
+image:../media/78038_21.png[""]
+ a| 
+**Cavi SAS** (opzionali): Due cavi sono inclusi in ogni tray di dischi, mentre i cavi lato host devono essere acquistati separatamente.
+
+**Cavi di comunicazione** (opzionali) – per collegare il vassoio all'host.
+
+Per ulteriori informazioni, consultare la guida di installazione del vassoio del disco del controller appropriata.
+ a| 
+
+
+
+ a| 
+image:../media/77038_06.gif[""]
+ a| 
+**Spole per cavi montabili** – installate lungo entrambi i lati delle prese di distribuzione dell'alimentazione verticale per alloggiare cavi di lunghezza e instradamento in eccesso. Ogni cassetto del disco del controller include due spool per i cavi Gli spool dei cavi vengono forniti anche con i tray di dischi standalone.
+ a| 
+image:../media/77037_11.gif[""]
+
+
+
+ a| 
+ a| 
+**Shears** – per tagliare le fasce metalliche sulla cassa di spedizione.
+ a| 
+
+
+
+ a| 
+ a| 
+**Carrello elevatore** (opzionale) – per rimuovere il cabinet dal pallet di spedizione.
+ a| 
+
+
+
+ a| 
+ a| 
+**Kit pannello anteriore** (opzionale) – per coprire gli alloggiamenti vuoti nella parte anteriore del cabinet.
+ a| 
+
+
+
+ a| 
+ a| 
+**Buste antistatiche** (opzionali) – per proteggere i componenti rimossi durante la procedura di installazione del cabinet.
+ a| 
+
+|===
+

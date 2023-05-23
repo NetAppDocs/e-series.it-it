@@ -1,0 +1,35 @@
+---
+sidebar: sidebar 
+permalink: platform-tech-reports.html 
+keywords: platform technical reports, e-series, hardware, santricity, os 
+summary: Report tecnici e-Series 
+---
+= Sfoglia i report tecnici della piattaforma
+:allow-uri-read: 
+
+
+
+
+== TR della piattaforma
+
+[cols="9,9,9"]
+|===
+
+
+| https://www.netapp.com/pdf.html?item=/media/17026-tr4725pdf.pdf["*TR-4725: Panoramica delle funzionalità degli array E2800*"] | https://www.netapp.com/pdf.html?item=/media/17120-tr4724pdf.pdf["*+++TR-4724: Panoramica delle funzionalità degli array E5700++*"] | https://www.netapp.com/pdf.html?item=/media/21363-tr-4877.pdf["*+++TR-4877: Panoramica delle funzionalità degli array EF300++*"] 
+
+
+| Descrive le funzionalità hardware e software dell'array ibrido E2800 e le più recenti funzionalità del sistema operativo SANtricity. | Descrive le informazioni sul prodotto E5700, incluse le nuove funzionalità hardware e software introdotte con la versione più recente di SANtricity. | Descrive le funzionalità hardware e software dell'array all-flash EF300 e le nuove funzionalità del sistema operativo SANtricity. 
+
+
+|  |  |  
+
+
+|  |  |  
+
+
+| https://www.netapp.com/pdf.html?item=/media/17009-tr4800pdf.pdf["*TR-4800: Panoramica delle funzionalità degli array EF600*"] |  |  
+
+
+| Descrive le caratteristiche hardware e software dell'array all-flash EF600 e le nuove funzionalità del sistema operativo SANtricity. |  |  
+|===

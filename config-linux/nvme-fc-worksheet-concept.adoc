@@ -1,0 +1,131 @@
+---
+permalink: config-linux/nvme-fc-worksheet-concept.html 
+sidebar: sidebar 
+keywords: NVMe over FC worksheet Linux, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Utilizzare questo foglio di lavoro per registrare le informazioni di configurazione dello storage NVMe su Fibre Channel. 
+---
+= Registrare la configurazione NVMe over FC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile generare e stampare un PDF di questa pagina, quindi utilizzare il seguente foglio di lavoro per registrare le informazioni di configurazione dello storage NVMe su Fibre Channel. Queste informazioni sono necessarie per eseguire le attività di provisioning.
+
+
+
+== Topologia a connessione diretta
+
+In una topologia a connessione diretta, uno o più host sono collegati direttamente al controller.
+
+image::../media/nvme_fc_direct_topology.png[topologia diretta di nvme fc]
+
+* Host 1 HBA Port 1 e Controller A host Port 1
+* Host 1 HBA Port 2 e Controller B host Port 1
+* Host 2 HBA Port 1 e Controller A host Port 2
+* Host 2 HBA Port 2 e Controller B host Port 2
+* Host 3 HBA Port 1 e Controller A host Port 3
+* Host 3 HBA Port 2 e Controller B host Port 3
+* Host 4 HBA Port 1 e Controller A host Port 4
+* Host 4 HBA Port 2 e Controller B host Port 4
+
+
+
+
+== Topologia di connessione dello switch
+
+In una topologia fabric, vengono utilizzati uno o più switch. Vedere https://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"^] per un elenco degli switch supportati.
+
+image::../media/nvme_fc_fabric_topology.png[topologia del fabric fc nvme]
+
+
+
+== Identificatori host
+
+Individuare e documentare l'NQN iniziatore da ciascun host.
+
+|===
+| Connessioni alla porta host | NQN host 
+
+
+ a| 
+Host (iniziatore) 1
+ a| 
+
+
+
+ a| 
+Host (iniziatore) 2
+ a| 
+
+|===
+
+
+== NQN di destinazione
+
+Documentare l'NQN di destinazione per lo storage array.
+
+|===
+| Nome array | NQN di destinazione 
+
+
+ a| 
+Controller di array (destinazione)
+ a| 
+
+|===
+
+
+== NQN di destinazione
+
+Documentare gli NQN che devono essere utilizzati dalle porte dell'array.
+
+|===
+| Connessioni delle porte (di destinazione) degli array controller | NQN 
+
+
+ a| 
+Controller A, porta 1
+ a| 
+
+
+
+ a| 
+Controller B, porta 1
+ a| 
+
+
+
+ a| 
+Controller A, porta 2
+ a| 
+
+
+
+ a| 
+Controller B, porta 2
+ a| 
+
+|===
+
+
+== Nome host di mapping
+
+
+NOTE: Il nome host del mapping viene creato durante il flusso di lavoro.
+
+|===
+
+
+ a| 
+Nome host di mapping
+ a| 
+
+
+
+ a| 
+Tipo di sistema operativo host
+ a| 
+
+|===

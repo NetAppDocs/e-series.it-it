@@ -1,0 +1,106 @@
+---
+permalink: maintenance-e2800/drives-overview-supertask-concept.html 
+sidebar: sidebar 
+keywords: E2800 replace drive, replacing E2800 drive, E2800 replace drive, replacing E2800 drive, E2800, E-Series, eseries 
+summary: Esaminare i requisiti per la sostituzione del disco E2800. 
+---
+= Requisiti per la sostituzione del disco E2800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di sostituire un'unità E2800, esaminare i requisiti e le considerazioni.
+
+
+
+== Tipi di shelf
+
+È possibile sostituire un disco in uno shelf di controller da 12, 24 o 60 dischi o in uno shelf di dischi.
+
+
+
+=== shelf da 12 o 24 dischi
+
+Le figure mostrano come i dischi sono numerati in ogni tipo di shelf (il pannello anteriore o i cappucci terminali dello shelf sono stati rimossi).
+
+*Numerazione delle unità in uno shelf di controller E2812 o in uno shelf di dischi DE212C:*
+
+image::../media/28_dwg_e2812_de212c_drive_numbering.gif[28 numerazione dei dischi dwg e2812 de212c]
+
+*Numerazione delle unità in uno shelf di controller E2824, flash array EF280 o shelf di dischi DE224C:*
+
+image::../media/28_dwg_e2824_de224c_drive_numbering_maint-e2800.gif[28 principale numero di dischi dwg e2824 de224c e2800]
+
+
+NOTE: Lo storage array E2812, E2824, EF280 potrebbe includere uno o più tray di dischi di espansione SAS-2 legacy, tra cui il tray di 12 dischi DE1600, il tray di 24 dischi DE5600 o il tray di 60 dischi DE6600 Per istruzioni sulla sostituzione di un'unità in uno di questi vassoi, vedere link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2577975["Sostituzione di un'unità nei vassoi E2660, E2760, E5460, E5560 o E5660"^] e. link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2577971["Sostituzione di un'unità nei vassoi da 12 o 24 dischi E2600, E2700, E5400, E5500 e E5600"^].
+
+
+
+=== shelf da 60 dischi
+
+Sia lo shelf del controller E2860 che lo shelf del disco DE460C sono costituiti da cinque cassetti per unità contenenti ciascuno 12 slot per unità. Il cassetto dell'unità 1 si trova nella parte superiore e il cassetto dell'unità 5 nella parte inferiore.
+
+image::../media/28_dwg_e2860_de460c_front_no_callouts_maint-e2800.gif[28 dwg e2860 de460c anteriore senza callout principale e2800]
+
+Per un cassetto per shelf controller E2860 e un cassetto per shelf dischi DE460C, i dischi sono numerati da 0 a 11 in ogni cassetto per unità all'interno dello shelf.
+
+image::../media/dwg_trafford_drawer_with_hdds_callouts_maint-e2800.gif[cassetto dwg trafford con didascalie hdd principale e2800]
+
+
+NOTE: Lo storage array E2860 potrebbe includere uno o più tray di dischi di espansione SAS-2 preesistenti, tra cui il tray di 12 dischi DE1600, il tray di 24 dischi DE5600 o il tray di 60 dischi DE6600 Per istruzioni sulla sostituzione di un'unità in uno di questi vassoi, vedere link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2577975["Sostituzione di un'unità nei vassoi E2660, E2760, E5460, E5560 o E5660"^] e. link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2577971["Sostituzione di un'unità nei vassoi da 12 o 24 dischi E2600, E2700, E5400, E5500 e E5600"^].
+
+
+
+=== Cassetto dell'unità
+
+È possibile sostituire un cassetto dischi in uno shelf di controller E2860 e uno shelf di dischi DE460C. Ciascuno di questi shelf da 60 dischi dispone di cinque cassetti per dischi.
+
+image::../media/28_dwg_e2860_de460c_front_no_callouts_maint-e2800.gif[28 dwg e2860 de460c anteriore senza callout principale e2800]
+
+Ciascuno dei cinque cassetti può contenere fino a 12 dischi.
+
+image:../media/92_dwg_de6600_drawer_with_hdds_no_callouts_maint-e2800.gif[""]
+
+
+
+== Gestione dei dischi
+
+I dischi dello storage array sono fragili. Una gestione errata del disco è la causa principale del guasto del disco.
+
+Attenersi alle seguenti regole per evitare di danneggiare le unità dello storage array:
+
+* Prevenzione delle scariche elettrostatiche (ESD):
++
+** Tenere l'unità nella busta ESD fino a quando non si è pronti per l'installazione.
+** Non inserire utensili metallici o coltelli nel sacchetto ESD.
++
+Aprire il sacchetto ESD manualmente o tagliare la parte superiore con un paio di forbici.
+
+** Conservare il sacchetto ESD e il materiale di imballaggio nel caso in cui sia necessario restituire un'unità in un secondo momento.
+** Indossare sempre un braccialetto antistatico collegato a terra su una superficie non verniciata dello chassis dell'enclosure di storage.
++
+Se non è disponibile un braccialetto, toccare una superficie non verniciata sullo chassis del cabinet di storage prima di maneggiare il disco.
+
+
+
+* Gestire i dischi con attenzione:
++
+** Utilizzare sempre due mani per rimuovere, installare o trasportare un disco.
+** Non forzare mai un'unità in uno shelf e esercitare una pressione leggera e decisa per inserire completamente il dispositivo di chiusura dell'unità.
+** Posizionare i dischi su superfici imbottite e non impilare mai i dischi uno sopra l'altro.
+** Non urtare i dischi contro altre superfici.
+** Prima di rimuovere un'unità da uno shelf, sganciare la maniglia e attendere 30 secondi affinché l'unità si spenda.
+** Utilizzare sempre imballaggi approvati per la spedizione delle unità.
+
+
+* Evitare i campi magnetici:
++
+** Tenere le unità lontano da dispositivi magnetici.
++
+I campi magnetici possono distruggere tutti i dati presenti sul disco e causare danni irreparabili ai circuiti del disco.
+
+
+
+

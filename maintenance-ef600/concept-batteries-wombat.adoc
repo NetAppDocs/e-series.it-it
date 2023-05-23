@@ -1,0 +1,14 @@
+---
+permalink: maintenance-ef600/concept-batteries-wombat.html 
+sidebar: sidebar 
+keywords: battery, include, controller, preserve, cache, data, ac, power, fail, batteries 
+summary: 'Una batteria è inclusa in un controller e conserva i dati memorizzati nella cache in caso di interruzione dell"alimentazione CA.' 
+---
+= Batterie
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Una batteria è inclusa in un controller e conserva i dati memorizzati nella cache in caso di interruzione dell'alimentazione CA.

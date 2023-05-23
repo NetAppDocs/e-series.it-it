@@ -1,0 +1,88 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-check-volume-redundancy.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: È possibile controllare la ridondanza di un volume in un pool o in un gruppo di volumi per determinare se i dati su quel volume sono coerenti. I dati di ridondanza vengono utilizzati per ricostruire rapidamente le informazioni su un disco sostitutivo in caso di guasto di uno dei dischi del pool o del gruppo di volumi. 
+---
+= Controllare la ridondanza del volume
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sotto la guida del supporto tecnico o secondo le istruzioni del Recovery Guru, è possibile controllare la ridondanza su un volume in un pool o un gruppo di volumi per determinare se i dati su quel volume sono coerenti.
+
+I dati di ridondanza vengono utilizzati per ricostruire rapidamente le informazioni su un disco sostitutivo in caso di guasto di uno dei dischi del pool o del gruppo di volumi.
+
+.Prima di iniziare
+* Lo stato del pool o del gruppo di volumi deve essere ottimale.
+* Il pool o il gruppo di volumi non deve avere alcuna operazione di modifica del volume in corso.
+* È possibile controllare la ridondanza su qualsiasi livello RAID tranne su RAID 0, perché RAID 0 non ha ridondanza dei dati. (I pool sono configurati solo come RAID 6).
+
+
+
+NOTE: Controllare la ridondanza del volume solo quando richiesto dal Recovery Guru e sotto la guida del supporto tecnico.
+
+.A proposito di questa attività
+È possibile eseguire questo controllo solo su un pool o su un gruppo di volumi alla volta. Un controllo della ridondanza del volume esegue le seguenti operazioni:
+
+* Esegue la scansione dei blocchi di dati in un volume RAID 3, RAID 5 o RAID 6 e verifica le informazioni di ridondanza per ciascun blocco. (RAID 3 può essere assegnato solo ai gruppi di volumi utilizzando l'interfaccia della riga di comando).
+* Confronta i blocchi di dati sui dischi RAID 1 mirrorati.
+* Restituisce errori di ridondanza se il firmware del controller determina che i dati sono incoerenti.
+
+
+
+NOTE: L'esecuzione immediata di un controllo di ridondanza sullo stesso pool o gruppo di volumi potrebbe causare un errore. Per evitare questo problema, attendere da uno a due minuti prima di eseguire un altro controllo di ridondanza sullo stesso pool o gruppo di volumi.
+
+.Fasi
+. Nella pagina Manage (Gestione), selezionare l'array di storage con il pool o il gruppo di volumi.
+. Selezionare menu:Provisioning[Configure Pools and Volume Groups] (Configura pool e gruppi di volumi).
+. Selezionare menu:operazioni non comuni[controllare la ridondanza del volume].
++
+Viene visualizzata la finestra di dialogo Check Redundancy (verifica ridondanza).
+
+. Selezionare i volumi che si desidera controllare, quindi digitare check per confermare che si desidera eseguire questa operazione.
+. Fare clic su *Controlla*.
++
+Viene avviata l'operazione di controllo della ridondanza del volume. I volumi nel pool o nel gruppo di volumi vengono sottoposti a scansione in sequenza, a partire dalla parte superiore della tabella nella finestra di dialogo. Queste azioni si verificano quando viene eseguita la scansione di ciascun volume:
+
++
+** Il volume viene selezionato nella tabella dei volumi.
+** Lo stato del controllo di ridondanza viene visualizzato nella colonna Status (Stato).
+** Il controllo si interrompe in caso di errore di parità o supporto, quindi riporta l'errore. La seguente tabella fornisce ulteriori informazioni sullo stato del controllo di ridondanza:
+
+
++
+.Dettagli campo
+[%collapsible]
+====
+[cols="25h,~"]
+|===
+| Stato | Descrizione 
+
+
+| In sospeso | Si tratta del primo volume da sottoporre a scansione e non è stato fatto clic su Start (Avvia) per avviare il controllo di ridondanza. -Oppure- l'operazione di controllo della ridondanza viene eseguita su altri volumi nel pool o nel gruppo di volumi. 
+
+
+| Verifica in corso | Il volume è sottoposto al controllo di ridondanza. 
+
+
+| Superato | Il volume ha superato il controllo di ridondanza. Non sono state rilevate incongruenze nelle informazioni di ridondanza. 
+
+
+| Non riuscito | Il volume non ha superato il controllo di ridondanza. Sono state rilevate incoerenze nelle informazioni di ridondanza. 
+
+
+| Errore supporto | Il disco rigido è difettoso e illeggibile. Seguire le istruzioni visualizzate nel Recovery Guru. 
+
+
+| Errore di parità | La parità non è quella che dovrebbe essere per una determinata parte dei dati. Un errore di parità è potenzialmente grave e potrebbe causare una perdita permanente di dati. 
+|===
+====
+. Fare clic su *Done* (fine) dopo aver controllato l'ultimo volume del pool o del gruppo di volumi.
+

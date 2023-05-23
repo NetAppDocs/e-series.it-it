@@ -1,0 +1,220 @@
+---
+permalink: web-services-proxy/overview-api-concept.html 
+sidebar: sidebar 
+keywords: Web Services, WSP, SANtricity API, 
+summary: Scopri di più sulle API dei servizi Web 
+---
+= Nozioni di base sulle API
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Nell'API dei servizi Web, le comunicazioni HTTP implicano un ciclo di richiesta-risposta.
+
+
+
+== Elementi URL nelle richieste
+
+Indipendentemente dal linguaggio di programmazione o dallo strumento utilizzato, ogni chiamata all'API dei servizi Web ha una struttura simile, con un URL, un verbo HTTP e un'intestazione Accept.
+
+image::../media/web_services_proxy_api.gif[api proxy dei servizi web]
+
+Tutte le richieste includono un URL, come nell'esempio seguente, e contengono gli elementi descritti nella tabella.
+
+`+https://webservices.name.com:8443/devmgr/v2/storage-systems+`
+
+|===
+| Area | Descrizione 
+
+
+ a| 
+Trasporto HTTP
+
+`https://`
+ a| 
+Il proxy dei servizi Web attiva l'utilizzo di HTTP o HTTPS.
+
+I servizi Web incorporati richiedono HTTPS per motivi di sicurezza.
+
+
+
+ a| 
+URL di base e porta
+
+`webservices.name.com:8443`
+ a| 
+Ogni richiesta deve essere instradata correttamente a un'istanza attiva dei servizi Web. È richiesto l'FQDN (Fully Qualified Domain Name) o l'indirizzo IP dell'istanza, insieme alla porta di ascolto. Per impostazione predefinita, i servizi Web comunicano tramite la porta 8080 (per HTTP) e la porta 8443 (per HTTPS).
+
+Per il proxy dei servizi Web, è possibile modificare entrambe le porte durante l'installazione del proxy o nel file wsconfig.xml. Il conflitto di porte è comune negli host del data center che eseguono varie applicazioni di gestione.
+
+Per i servizi Web incorporati, la porta sul controller non può essere modificata; per impostazione predefinita, la porta 8443 consente connessioni sicure.
+
+
+
+ a| 
+Percorso API
+
+`devmgr/v2/storage-systems`
+ a| 
+Viene inviata una richiesta a una risorsa REST o a un endpoint specifico all'interno dell'API dei servizi Web. La maggior parte degli endpoint è sotto forma di:
+
+`devmgr/v2/<resource>/[id]`
+
+Il percorso API è costituito da tre parti:
+
+* `devmgr` (Device Manager) è lo spazio dei nomi dell'API dei servizi Web.
+* `v2` Indica la versione dell'API a cui si accede. È anche possibile utilizzare `utils` per accedere agli endpoint di login.
+* `storage-systems` è una categoria all'interno della documentazione.
+
+
+|===
+
+
+== Verbi HTTP supportati
+
+I verbi HTTP supportati includono GET, POST ed DELETE:
+
+* Le richieste GET vengono utilizzate per le richieste di sola lettura.
+* Le richieste POST vengono utilizzate per creare e aggiornare oggetti e anche per le richieste di lettura che potrebbero avere implicazioni sulla sicurezza.
+* Le richieste DI ELIMINAZIONE vengono in genere utilizzate per rimuovere un oggetto dalla gestione, rimuovere completamente un oggetto o ripristinare lo stato dell'oggetto.
+
+
+
+NOTE: Attualmente, l'API dei servizi Web non supporta PUT o PATCH. È invece possibile utilizzare POST per fornire le funzionalità tipiche di questi verbi.
+
+
+
+== Accettare le intestazioni
+
+Quando si restituisce un corpo della richiesta, i servizi Web restituiscono i dati in formato JSON (se non diversamente specificato). Alcuni client richiedono per impostazione predefinita "`text/html`" o qualcosa di simile. In questi casi, l'API risponde con un codice HTTP 406, che indica che non è in grado di fornire dati in questo formato. Come Best practice, devi definire l'intestazione Accept come "`application/json`" per tutti i casi in cui ti aspetti che JSON sia il tipo di risposta. In altri casi in cui un corpo di risposta non viene restituito (ad esempio, DELETE), la fornitura dell'intestazione Accept non causa effetti indesiderati.
+
+
+
+== Risposte
+
+Quando viene effettuata una richiesta all'API, una risposta restituisce due informazioni critiche:
+
+* Codice di stato HTTP -- indica se la richiesta ha avuto esito positivo.
+* Corpo di risposta opzionale - di solito fornisce un corpo JSON che rappresenta lo stato della risorsa o di un corpo fornendo maggiori dettagli sulla natura di un guasto.
+
+
+È necessario controllare il codice di stato e l'intestazione del tipo di contenuto per determinare l'aspetto del corpo della risposta risultante. Per i codici di stato HTTP 200-203 e 422, Web Services restituisce un corpo JSON con la risposta. Per altri codici di stato HTTP, i servizi Web generalmente non restituiscono un corpo JSON aggiuntivo, perché la specifica non lo consente (204) o perché lo stato è intuitivo. La tabella elenca i codici e le definizioni di stato HTTP comuni. Indica inoltre se le informazioni associate a ciascun codice HTTP vengono restituite in un corpo JSON.
+
+|===
+| Codice di stato HTTP | Descrizione | Corpo JSON 
+
+
+ a| 
+200 OK
+ a| 
+Indica una risposta corretta.
+ a| 
+Sì
+
+
+
+ a| 
+201 creato
+ a| 
+Indica che è stato creato un oggetto. Questo codice viene utilizzato in alcuni rari casi invece dello stato 200.
+ a| 
+Sì
+
+
+
+ a| 
+202 accettato
+ a| 
+Indica che la richiesta è accettata per l'elaborazione come richiesta asincrona, ma è necessario effettuare una richiesta successiva per ottenere il risultato effettivo.
+ a| 
+Sì
+
+
+
+ a| 
+203 informazioni non autorevoli
+ a| 
+Simile a una risposta 200, ma i servizi Web non possono garantire che i dati siano aggiornati (ad esempio, al momento sono disponibili solo i dati memorizzati nella cache).
+ a| 
+Sì
+
+
+
+ a| 
+204 Nessun contenuto
+ a| 
+Indica un'operazione riuscita, ma non esiste alcun corpo di risposta.
+ a| 
+No
+
+
+
+ a| 
+400 richiesta errata
+ a| 
+Indica che il corpo JSON fornito nella richiesta non è valido.
+ a| 
+No
+
+
+
+ a| 
+401 non autorizzato
+ a| 
+Indica che si è verificato un errore di autenticazione. Non sono state fornite credenziali oppure il nome utente o la password non sono validi.
+ a| 
+No
+
+
+
+ a| 
+403 proibita
+ a| 
+Errore di autorizzazione, che indica che l'utente autenticato non dispone dell'autorizzazione per accedere all'endpoint richiesto.
+ a| 
+No
+
+
+
+ a| 
+404 non trovato
+ a| 
+Indica che non è stato possibile individuare la risorsa richiesta. Questo codice è valido per API inesistenti o risorse inesistenti richieste dall'identificatore.
+ a| 
+No
+
+
+
+ a| 
+422 entità non elaborabile
+ a| 
+Indica che la richiesta è generalmente ben formata, ma i parametri di input non sono validi oppure lo stato del sistema di storage non consente ai servizi Web di soddisfare la richiesta.
+ a| 
+Sì
+
+
+
+ a| 
+424 dipendenza non riuscita
+ a| 
+Utilizzato in Web Services Proxy per indicare che il sistema di storage richiesto non è attualmente accessibile. Pertanto, i servizi Web non possono soddisfare la richiesta.
+ a| 
+No
+
+
+
+ a| 
+429 troppe richieste
+ a| 
+Indica che è stato superato un limite di richiesta e che è necessario eseguire un nuovo processo in un secondo momento.
+ a| 
+No
+
+|===
+
+
+== Script di esempio
+
+GitHub contiene un repository per la raccolta e l'organizzazione di script di esempio che illustrano l'utilizzo dell'API dei servizi web NetApp SANtricity. Per accedere al repository, vedere https://github.com/NetApp/webservices-samples["Esempi di NetApp WebServices"^].

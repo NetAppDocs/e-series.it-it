@@ -1,0 +1,144 @@
+---
+permalink: config-linux/nvme-roce-worksheet-for-concept.html 
+sidebar: sidebar 
+keywords: NVMe over RoCE worksheet Linux, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Utilizzare questo foglio di lavoro per registrare le informazioni di configurazione dello storage NVMe su RoCE. 
+---
+= Registrare la configurazione NVMe over RoCE
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile generare e stampare un PDF di questa pagina, quindi utilizzare il seguente foglio di lavoro per registrare le informazioni di configurazione dello storage NVMe su RoCE. Queste informazioni sono necessarie per eseguire le attività di provisioning.
+
+
+
+== Topologia a connessione diretta
+
+In una topologia a connessione diretta, uno o più host sono collegati direttamente al sottosistema. Nella versione SANtricity OS 11.50, supportiamo una singola connessione da ciascun host a un controller del sottosistema, come mostrato di seguito. In questa configurazione, una porta HCA (host Channel Adapter) di ciascun host deve trovarsi sulla stessa subnet della porta del controller e-Series a cui è collegato, ma su una subnet diversa dall'altra porta HCA.
+
+image::../media/nvmeof_direct_connect.gif[nvmeof direct connect]
+
+Una configurazione di esempio che soddisfa i requisiti è costituita da quattro subnet di rete come segue:
+
+* Subnet 1: Host 1 porta HCA 1 e Controller 1 porta host 1
+* Subnet 2: Host 1 porta HCA 2 e Controller 2 porta host 1
+* Subnet 3: Host 2 porta HCA 1 e Controller 1 porta host 2
+* Subnet 4: Host 2 HCA Port 2 e Controller 2 host Port 2
+
+
+
+
+== Topologia di connessione dello switch
+
+In una topologia fabric, vengono utilizzati uno o più switch. Fare riferimento a. https://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"^] per un elenco degli switch supportati.
+
+image::../media/nvmeof_switch_connect.gif[switch nvmeof connect]
+
+
+
+== Identificatori host
+
+Individuare e documentare l'NQN iniziatore da ciascun host.
+
+|===
+| Connessioni alla porta host | NQN iniziatore software 
+
+
+ a| 
+Host (iniziatore) 1
+ a| 
+
+
+
+ a| 
+ a| 
+
+
+
+ a| 
+Host (iniziatore) 2
+ a| 
+
+
+
+ a| 
+ a| 
+
+
+
+ a| 
+ a| 
+
+|===
+
+
+== NQN di destinazione
+
+Documentare l'NQN di destinazione per lo storage array.
+
+|===
+| Nome array | NQN di destinazione 
+
+
+ a| 
+Controller di array (destinazione)
+ a| 
+
+|===
+
+
+== NQN di destinazione
+
+Documentare gli NQN che devono essere utilizzati dalle porte dell'array.
+
+|===
+| Connessioni delle porte (di destinazione) degli array controller | NQN 
+
+
+ a| 
+Controller A, porta 1
+ a| 
+
+
+
+ a| 
+Controller B, porta 1
+ a| 
+
+
+
+ a| 
+Controller A, porta 2
+ a| 
+
+
+
+ a| 
+Controller B, porta 2
+ a| 
+
+|===
+
+
+== Nome host di mapping
+
+
+NOTE: Il nome host del mapping viene creato durante il flusso di lavoro.
+
+|===
+
+
+ a| 
+Nome host di mapping
+ a| 
+
+
+
+ a| 
+Tipo di sistema operativo host
+ a| 
+
+|===

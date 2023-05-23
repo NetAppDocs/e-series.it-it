@@ -1,0 +1,56 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-delete-volume.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Eliminare uno o più volumi per aumentare la capacità libera di un pool o di un gruppo di volumi. 
+---
+= Elimina volume
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile eliminare uno o più volumi per aumentare la capacità libera di un pool o di un gruppo di volumi.
+
+.Prima di iniziare
+Sui volumi che si intende eliminare, assicurarsi che:
+
+* Viene eseguito il backup di tutti i dati.
+* All Input/Output (i/o) viene interrotto.
+* Tutti i dispositivi e i file system vengono smontati.
+
+
+.A proposito di questa attività
+In genere, i volumi vengono eliminati se sono stati creati con parametri o capacità errati o se non soddisfano più le esigenze di configurazione dello storage. L'eliminazione di un volume aumenta la capacità libera nel pool o nel gruppo di volumi.
+
+
+CAUTION: L'eliminazione di un volume causa la perdita di tutti i dati presenti su tali volumi.
+
+Tenere presente che *non è possibile* eliminare un volume che presenta una delle seguenti condizioni:
+
+* Il volume è in fase di inizializzazione.
+* Il volume è in fase di ricostruzione.
+* Il volume fa parte di un gruppo di volumi che contiene un disco sottoposto a un'operazione copyback.
+* Il volume sta subendo un'operazione di modifica, ad esempio una modifica delle dimensioni dei segmenti, a meno che il volume non sia ora nello stato Failed (guasto).
+* Il volume contiene qualsiasi tipo di prenotazione persistente.
+* Il volume è un volume di origine o un volume di destinazione in un volume di copia con stato Pending (in sospeso), in Progress (in corso) o Failed (non riuscito).
+
+
+
+NOTE: Quando un volume supera una determinata dimensione (attualmente 128 TB), l'operazione di eliminazione viene eseguita in background e lo spazio liberato potrebbe non essere immediatamente disponibile.
+
+.Fasi
+. Dalla pagina *Manage* (Gestione), selezionare l'array di storage che contiene i volumi che si desidera eliminare.
+. Selezionare menu:Provisioning[Manage Volumes] (Gestione volumi).
+. Fare clic su *Delete* (Elimina).
++
+Viene visualizzata la finestra di dialogo Delete Volumes.
+
+. Selezionare uno o più volumi da eliminare, quindi confermare che si desidera eseguire l'operazione.
+. Fare clic su *Delete* (Elimina).
+

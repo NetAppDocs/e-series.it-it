@@ -1,0 +1,26 @@
+---
+permalink: config-linux/iser-ib-verify-storage-access-host-task.html 
+sidebar: sidebar 
+keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: 'Prima di utilizzare il volume, verificare che l"host sia in grado di scrivere i dati nel volume e di leggerli nuovamente.' 
+---
+= Verificare l'accesso allo storage sull'host
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di utilizzare il volume, verificare che l'host sia in grado di scrivere i dati nel volume e di leggerli nuovamente.
+
+.Di cosa hai bisogno
+Volume inizializzato formattato con un file system.
+
+.Fasi
+. Sull'host, copiare uno o più file nel punto di montaggio del disco.
+. Copiare di nuovo i file in un'altra cartella sul disco originale.
+. Eseguire `diff` per confrontare i file copiati con gli originali.
+
+
+.Al termine
+Rimuovere il file e la cartella copiati.

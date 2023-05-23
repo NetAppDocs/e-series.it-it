@@ -1,0 +1,156 @@
+---
+permalink: maintenance-e5700/canisters-fan-replace-task.html 
+sidebar: sidebar 
+keywords: E5700 fan, repair E5700 fan, replace E5700 fan, failed E5700 fan 
+summary: Sostituire una ventola E5700. 
+---
+= Sostituire il filtro della ventola E5700 (60 dischi)
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile sostituire un contenitore di ventole in un array E5700 con uno shelf da 60 dischi, che include i seguenti tipi di shelf:
+
+* Shelf di controller E5760
+* Shelf di dischi DE460C
+
+
+.A proposito di questa attività
+Ogni shelf di controller da 60 dischi o shelf di dischi include due contenitori per ventole. In caso di guasto di un contenitore della ventola, sostituirlo il prima possibile per garantire che il ripiano sia adeguatamente raffreddato.
+
+
+CAUTION: *Possibili danni all'apparecchiatura* -- se si esegue questa procedura con l'alimentazione accesa, è necessario completarla entro 30 minuti per evitare il rischio di surriscaldamento dell'apparecchiatura.
+
+.Prima di iniziare
+* Revisione link:canisters-overview-supertask-concept.html["Requisiti per la sostituzione del filtro E5700"].
+* Esaminare i dettagli nel Recovery Guru per confermare che si è verificato un problema con una batteria e per assicurarsi che non siano prima necessari altri elementi.
+* Controllare che il LED di attenzione ambra sul filtro della ventola sia acceso, a indicare che la ventola è guasta. Contattare il supporto tecnico per assistenza se entrambi i contenitori delle ventole nello shelf hanno i LED di attenzione color ambra accesi.
+
+
+.Di cosa hai bisogno
+* Un filtro della ventola di ricambio (ventola) supportato per il modello di shelf del controller o del disco.
+* Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
+* Stazione di gestione con un browser che può accedere a Gestione di sistema SANtricity per il controller. Per aprire l'interfaccia di System Manager, puntare il browser sul nome di dominio o sull'indirizzo IP del controller.
+
+
+
+
+== Fase 1: Preparazione alla sostituzione del filtro a carboni attivi della ventola
+
+Preparare la sostituzione di un contenitore di ventole in uno shelf di controller da 60 dischi o in uno shelf di dischi.
+
+.Fasi
+. Raccogliere i dati di supporto per lo storage array utilizzando Gestione di sistema di SANtricity.
++
+Se si verifica un problema durante questa procedura, è possibile utilizzare il file salvato per risolvere il problema. Il sistema salva i dati di inventario, stato e performance relativi all'array di storage in un singolo file.
+
++
+.. Selezionare menu:Support[Support Center > Diagnostics] (supporto tecnico > Diagnostica).
+.. Selezionare *Collect Support Data*.
+.. Fare clic su *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *support-data.7z*.
+
+
+
+. Da Gestore di sistema di SANtricity, determinare quale filtro a carboni attivi della ventola si è guastato.
++
+.. Selezionare *hardware*.
+.. Guardare la ventola image:../media/sam1130_ss_hardware_fan_icon_maint-e5700.gif[""] A destra degli elenchi a discesa *Shelf* per determinare quale shelf presenta il contenitore della ventola guasto.
++
+In caso di guasto di un componente, questa icona è rossa.
+
+.. Quando trovi lo shelf con un'icona rossa, seleziona *Mostra retro dello shelf*.
+.. Selezionare il filtro a carboni attivi della ventola o l'icona rossa della ventola.
+.. Nella scheda *ventole*, controllare gli stati dei contenitori delle ventole per determinare quale filtro a carboni attivi deve essere sostituito.
++
+Un componente con stato *Failed* deve essere sostituito.
+
++
+
+CAUTION: Se il secondo contenitore della ventola nello shelf non ha lo stato *ottimale*, non tentare di sostituire a caldo il contenitore della ventola guasto. Contattare invece il supporto tecnico per assistenza.
+
+
+
++
+È inoltre possibile trovare informazioni sul contenitore della ventola guasto nell'area Details (Dettagli) del Recovery Guru oppure consultare il registro eventi in Support (supporto) e Filter by Component Type (filtro per tipo di componente).
+
+. Dal retro dello storage array, osservare i LED di attenzione per individuare il contenitore della ventola da rimuovere.
++
+È necessario sostituire il filtro a carboni attivi della ventola con il LED attenzione acceso.
+
++
+image::../media/28_dwg_e2860_de460c_single_fan_canister_with_led_callout_maint-e5700.gif[28 dwg e2860 de460c canister a ventola singola con didascalia a led principale e5700]
+
++
+*(1)* _LED attenzione_. Se questo LED viene visualizzato come *giallo fisso*, significa che la ventola è guasta.
+
+
+
+
+
+== Fase 2: Rimuovere il filtro a carboni attivi della ventola guasto e installarne uno nuovo
+
+Rimuovere un contenitore della ventola guasto in modo da poterlo sostituire con uno nuovo.
+
+
+CAUTION: Se non si spegne l'alimentazione dello storage array, assicurarsi di rimuovere e sostituire il contenitore della ventola entro 30 minuti per evitare il surriscaldamento del sistema.
+
+.Fasi
+. Disimballare il nuovo contenitore della ventola e posizionarlo su una superficie piana vicino allo scaffale.
++
+Conservare tutto il materiale di imballaggio da utilizzare quando si restituisce la ventola guasta.
+
+. Premere la linguetta arancione per rilasciare la maniglia del filtro a carboni attivi della ventola.
++
+image::../media/28_dwg_e2860_de460c_single_fan_canister_with_orange_tab_callout_maint-e5700.gif[28 dwg e2860 de460c canister a ventola singola con linguetta arancione, didascalia principale e5700]
+
++
+*(1)* _linguetta che si preme per rilasciare la maniglia del filtro a carboni attivi della ventola._
+
+. Utilizzare la maniglia del filtro a carboni attivi per estrarre il filtro a carboni attivi dal ripiano.
++
+image::../media/28_dwg_e2860_de460c_fan_canister_handle_with_callout_maint-e5700.gif[28 dwg e2860 de460c maniglia del contenitore della ventola con didascalia principale e5700]
+
++
+*(1)* _maniglia per estrarre il contenitore della ventola._
+
+. Far scorrere completamente il contenitore della ventola di ricambio nello scaffale, quindi spostare la maniglia del contenitore della ventola fino a quando non si blocca con la linguetta arancione.
+
+
+
+
+== Fase 3: Sostituzione completa del filtro a carboni attivi della ventola
+
+Verificare che il nuovo filtro a carboni attivi della ventola funzioni correttamente, raccogliere i dati di supporto e riprendere le normali operazioni.
+
+.Fasi
+. Controllare il LED di attenzione ambra sul nuovo filtro a carboni attivi della ventola.
++
+
+NOTE: Dopo aver sostituito il filtro a carboni attivi della ventola, il LED attenzione rimane acceso (ambra fisso) mentre il firmware verifica che il filtro a carboni attivi della ventola sia stato installato correttamente. Il LED si spegne al termine del processo.
+
+. Dal guru del ripristino in Gestione sistema di SANtricity, selezionare *ricontrollare* per assicurarsi che il problema sia stato risolto.
+. Se viene ancora segnalato un guasto al filtro a carboni attivi della ventola, ripetere le operazioni descritte in <<Fase 2: Rimuovere il filtro a carboni attivi della ventola guasto e installarne uno nuovo>>. Se il problema persiste, contattare il supporto tecnico.
+. Rimuovere la protezione antistatica.
+. Raccogliere i dati di supporto per lo storage array utilizzando Gestione di sistema di SANtricity.
++
+Se si verifica un problema durante questa procedura, è possibile utilizzare il file salvato per risolvere il problema. Il sistema salva i dati di inventario, stato e performance relativi all'array di storage in un singolo file.
+
++
+.. Selezionare menu:Support[Support Center > Diagnostics] (supporto tecnico > Diagnostica).
+.. Selezionare *Collect Support Data*.
+.. Fare clic su *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *support-data.7z*.
+
+
+
+. Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit.
+
+
+.Quali sono le prossime novità?
+La sostituzione del filtro a carboni attivi della ventola è completata. È possibile riprendere le normali operazioni.

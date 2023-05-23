@@ -1,0 +1,22 @@
+---
+permalink: maintenance-ef600/hpp-overview-supertask-concept.html 
+sidebar: sidebar 
+keywords: convert EF300 host protocol, convert EF600 host protocol, 
+summary: Esaminare i requisiti e le considerazioni prima di convertire il protocollo host EF300 o EF600. 
+---
+= Requisiti per la conversione del protocollo host EF300 o EF600
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di convertire il protocollo host per un array EF300 o EF600, esaminare i seguenti requisiti.
+
+* È stata pianificata una finestra di manutenzione dei downtime per questa procedura.
+* È necessario interrompere le operazioni di i/o host quando si esegue la conversione. Non è possibile accedere ai dati sull'array di storage fino a quando la conversione non è stata completata correttamente.
+* Stai utilizzando la gestione fuori banda. Non è possibile utilizzare la gestione in-band per completare questa procedura.
+* Hai ottenuto l'hardware necessario per la conversione, che potrebbe includere un nuovo set di HICS e/o SFP. Il tuo rappresentante commerciale NetApp può aiutarti a determinare l'hardware di cui hai bisogno e a ordinare le parti corrette.
+* I ricetrasmettitori SFP a doppio protocollo supportano FC da 16 GB e 8 GB, oltre a iSCSI da 10 GB. Pertanto, potrebbe non essere necessario modificare gli SFP se si dispone del protocollo doppio e si sta semplicemente passando da FC a iSCSI o viceversa.
+* Alcune conversioni del protocollo della porta host potrebbero richiedere l'aggiunta o l'aggiornamento di una scheda di interfaccia host.
+

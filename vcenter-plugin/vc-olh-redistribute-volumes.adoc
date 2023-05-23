@@ -1,0 +1,39 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-redistribute-volumes.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Ridistribuire i volumi per spostarli di nuovo nei proprietari di controller preferiti 
+---
+= Ridistribuire i volumi
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Ridistribuisci i volumi per spostarli di nuovo nei proprietari di controller preferiti. In genere, i driver multipath spostano i volumi dal proprietario del controller preferito quando si verifica un problema lungo il percorso dei dati tra l'host e l'array di storage.
+
+.Prima di iniziare
+* I volumi che si desidera ridistribuire non sono in uso o si verificano errori di i/O.
+* Un driver multipath viene installato su tutti gli host che utilizzano i volumi che si desidera ridistribuire, altrimenti si verificheranno errori di i/O. Se si desidera ridistribuire i volumi senza un driver multipath sugli host, tutte le attività di i/o sui volumi durante l'operazione di ridistribuzione devono essere interrotte per evitare errori dell'applicazione.
+
+
+.A proposito di questa attività
+La maggior parte dei driver multipath host tenta di accedere a ciascun volume su un percorso verso il proprietario del controller preferito. Tuttavia, se questo percorso preferito non è disponibile, il driver multipath sull'host esegue il failover su un percorso alternativo. Questo failover potrebbe causare la modifica della proprietà del volume nel controller alternativo. Dopo aver risolto la condizione che ha causato il failover, alcuni host potrebbero spostare automaticamente la proprietà del volume nel proprietario del controller preferito, ma in alcuni casi potrebbe essere necessario ridistribuire manualmente i volumi.
+
+.Fasi
+. Nella pagina Manage (Gestione), selezionare l'array di storage che contiene i volumi da ridistribuire.
+. Selezionare menu:Provisioning[Manage Volumes] (Gestione volumi).
+. Selezionare il menu:More[redistribuisci volumi].
++
+Viene visualizzata la finestra di dialogo redistribuisci volumi. In questa finestra di dialogo vengono visualizzati tutti i volumi dell'array di storage il cui proprietario preferito del controller non corrisponde al proprietario corrente.
+
+. Selezionare uno o più volumi da ridistribuire e confermare che si desidera eseguire l'operazione.
+
+
+.Risultato
+Il sistema sposta i volumi selezionati nei controller preferiti oppure viene visualizzata una finestra di dialogo ridistribuisci volumi non necessari.

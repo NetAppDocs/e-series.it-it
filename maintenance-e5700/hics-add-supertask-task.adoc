@@ -1,0 +1,348 @@
+---
+permalink: maintenance-e5700/hics-add-supertask-task.html 
+sidebar: sidebar 
+keywords: E5700 host interface card, E5700 HIC, replace E5700 HIC, failed E5700 HIC 
+summary: Aggiungere un HIC in un E5700. 
+---
+= Aggiunta della scheda di interfaccia host (HIC) E5700
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile aggiungere una scheda di interfaccia host (HIC) ai canister dei controller E5700 con porte host della scheda base. Questa aggiunta aumenta il numero di porte host nell'array di storage e fornisce protocolli host aggiuntivi.
+
+.A proposito di questa attività
+Quando si aggiunge HICS, è necessario spegnere lo storage array, installare l'HIC e riapplicare l'alimentazione.
+
+.Prima di iniziare
+* Revisione link:hics-overview-supertask-concept.html["Requisiti per la sostituzione HIC E5700"].
+* Pianificare una finestra di manutenzione dei tempi di inattività per questa procedura. Quando si installa HICS, l'alimentazione deve essere spenta, in modo che non sia possibile accedere ai dati sullo storage array fino a quando non si è completata correttamente questa procedura. (In una configurazione duplex, entrambi i controller devono avere la stessa configurazione HIC quando vengono accesi).
+
+
+.Di cosa hai bisogno
+* Uno o due HICS, a seconda che si disponga di uno o due controller nell'array di storage. L'HICS deve essere compatibile con i controller.
+* Nuovo hardware host installato per le nuove porte host, ad esempio switch o HBA (host bus adapter).
+* Tutti i cavi, i ricetrasmettitori, gli switch e gli HBA (host bus adapter) necessari per collegare le nuove porte host.
++
+Per informazioni sull'hardware compatibile, fare riferimento a. https://mysupport.netapp.com/NOW/products/interoperability["Matrice di interoperabilità NetApp"^] e a. http://hwu.netapp.com/home.aspx["NetApp Hardware Universe"^].
+
+* Etichette per identificare ciascun cavo collegato al contenitore del controller.
+* Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
+* Un cacciavite Phillips n. 1.
+* Stazione di gestione con un browser che può accedere a Gestione di sistema SANtricity per il controller. Per aprire l'interfaccia di System Manager, puntare il browser sul nome di dominio o sull'indirizzo IP del controller.
+
+
+
+
+== Fase 1: Preparazione all'aggiunta di HIC
+
+Preparare l'aggiunta di un HIC eseguendo il backup del database di configurazione dello storage array, raccogliendo i dati di supporto e interrompendo le operazioni di i/o dell'host. Quindi, è possibile spegnere lo shelf del controller.
+
+.Fasi
+. Dalla home page di Gestore di sistema SANtricity, verificare che lo stato dello storage array sia ottimale.
++
+Se lo stato non è ottimale, utilizzare Recovery Guru o contattare il supporto tecnico per risolvere il problema. Non continuare con questa procedura.
+
+. Eseguire il backup del database di configurazione dello storage array utilizzando Gestione di sistema di SANtricity.
++
+Se si verifica un problema durante questa procedura, è possibile utilizzare il file salvato per ripristinare la configurazione. Il sistema salva lo stato corrente del database di configurazione RAID, che include tutti i dati per i gruppi di volumi e i pool di dischi sul controller.
+
++
+** Da System Manager:
++
+... Selezionare menu:Support[Support Center > Diagnostics] (supporto tecnico > Diagnostica).
+... Selezionare *Collect Configuration Data* (raccolta dati di configurazione).
+... Fare clic su *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+** In alternativa, è possibile eseguire il backup del database di configurazione utilizzando il seguente comando CLI:
++
+`save storageArray dbmDatabase sourceLocation=onboard contentType=all file="filename";`
+
+
+
+. Raccogliere i dati di supporto per lo storage array utilizzando Gestione di sistema di SANtricity.
++
+Se si verifica un problema durante questa procedura, è possibile utilizzare il file salvato per risolvere il problema. Il sistema salva i dati di inventario, stato e performance relativi all'array di storage in un singolo file.
+
++
+.. Selezionare menu:Support[Support Center > Diagnostics] (supporto tecnico > Diagnostica).
+.. Selezionare *Collect Support Data*.
+.. Fare clic su *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *support-data.7z*.
+
+
+
+. Assicurarsi che non si verifichino operazioni di i/o tra lo storage array e tutti gli host connessi. Ad esempio, è possibile eseguire le seguenti operazioni:
++
+** Arrestare tutti i processi che coinvolgono le LUN mappate dallo storage agli host.
+** Assicurarsi che nessuna applicazione stia scrivendo dati su tutte le LUN mappate dallo storage agli host.
+** Smontare tutti i file system associati ai volumi sull'array.
++
+
+NOTE: I passaggi esatti per interrompere le operazioni di i/o dell'host dipendono dal sistema operativo dell'host e dalla configurazione, che esulano dall'ambito di queste istruzioni. Se non si è sicuri di come interrompere le operazioni di i/o host nell'ambiente, è consigliabile arrestare l'host.
+
++
+
+CAUTION: *Possibile perdita di dati* -- se si continua questa procedura mentre si verificano le operazioni di i/o, l'applicazione host potrebbe perdere l'accesso ai dati perché lo storage non è accessibile.
+
+
+
+. Se l'array di storage partecipa a una relazione di mirroring, interrompere tutte le operazioni di i/o dell'host sull'array di storage secondario.
+. Attendere che i dati presenti nella memoria cache vengano scritti sui dischi.
++
+Il LED verde cache Active (cache attiva) sul retro di ciascun controller è acceso quando i dati memorizzati nella cache devono essere scritti sui dischi. Attendere che il LED si spenga.
+
++
+image::../media/e5700_ib_hic_w_cache_led_callouts_maint-e5700.gif[e5700 ib hic w cache led callout maintt e5700]
+
++
+*(1)* _LED cache attiva_
+
+. Dalla home page di Gestione sistema SANtricity, selezionare *Visualizza operazioni in corso*. Attendere il completamento di tutte le operazioni prima di passare alla fase successiva.
+. Spegnere lo shelf del controller.
++
+.. Spegnere entrambi gli interruttori di alimentazione sullo shelf del controller.
+.. Attendere che tutti i LED sullo shelf del controller si spenga.
+
+
+
+
+
+
+== Fase 2: Rimuovere il contenitore del controller
+
+Rimuovere il contenitore del controller in modo da poter aggiungere il nuovo HIC.
+
+.Fasi
+. Etichettare ciascun cavo collegato al contenitore del controller.
+. Scollegare tutti i cavi dal contenitore del controller.
++
+
+CAUTION: Per evitare prestazioni degradate, non attorcigliare, piegare, pizzicare o salire sui cavi.
+
+. Verificare che il LED cache Active (cache attiva) sul retro del controller sia spento.
++
+Il LED verde cache Active (cache attiva) sul retro del controller è acceso quando i dati memorizzati nella cache devono essere scritti sui dischi. Prima di rimuovere il contenitore del controller, è necessario attendere che questo LED si spenga.
+
++
+image::../media/e5700_ib_hic_w_cache_led_callouts_maint-e5700.gif[e5700 ib hic w cache led callout maintt e5700]
+
++
+*(1)* _LED cache attiva_
+
+. Premere il fermo sull'impugnatura della camma fino a quando non si rilascia, quindi aprire l'impugnatura della camma a destra per rilasciare l'elemento filtrante del controller dallo scaffale.
++
+La figura seguente è un esempio di shelf di controller E5724:
+
++
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e2824 rimuovere la manutenzione del contenitore del controller e5700]
+
++
+*(1)* _contenitore controller_
+
++
+*(2)* _maniglia della camma_
+
++
+La figura seguente è un esempio di shelf di controller E5760:
+
++
+image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[28 dwg e2860 add controller canister maintt e5700]
+
++
+*(1)* _contenitore controller_
+
++
+*(2)* _maniglia della camma_
+
+. Utilizzando due mani e l'impugnatura della camma, estrarre il contenitore del controller dallo scaffale.
++
+
+CAUTION: Utilizzare sempre due mani per sostenere il peso di un contenitore del controller.
+
++
+Se si rimuove il contenitore del controller da uno shelf del controller E5724, un'aletta si sposta in posizione per bloccare l'alloggiamento vuoto, contribuendo a mantenere il flusso d'aria e il raffreddamento.
+
+. Capovolgere il contenitore del controller, in modo che il coperchio rimovibile sia rivolto verso l'alto.
+. Posizionare il contenitore del controller su una superficie piana e priva di elettricità statica.
+
+
+
+
+== Fase 3: Installare un HIC
+
+Installare la scheda di interfaccia host (HIC) per aumentare il numero di porte host nell'array di storage.
+
+
+CAUTION: *Possibile perdita di accesso ai dati* -- non installare mai un HIC in un contenitore del controller E5700 se tale HIC è stato progettato per un altro controller e-Series. Inoltre, se si dispone di una configurazione duplex, entrambi i controller e gli HICS devono essere identici. La presenza di HICS incompatibili o non corrispondenti causa il blocco dei controller quando si applica l'alimentazione.
+
+.Fasi
+. Disimballare il nuovo HIC e la nuova mascherina HIC.
+. Premere il pulsante sul coperchio del contenitore del controller ed estrarre il coperchio.
+. Verificare che il LED verde all'interno del controller (accanto ai DIMM) sia spento.
++
+Se questo LED verde è acceso, il controller sta ancora utilizzando l'alimentazione a batteria. Prima di rimuovere qualsiasi componente, è necessario attendere che il LED si spenga.
+
++
+image::../media/28_dwg_e2800_internal_cache_active_led_maint-e5700.gif[28 dwg e2800 cache interna active led maintent e5700]
+
++
+*(1)* _cache interna attiva_
+
++
+*(2)* _batteria_
+
+. Utilizzando un cacciavite Phillips n. 1, rimuovere le quattro viti che fissano la mascherina vuota al contenitore del controller, quindi rimuovere la piastra frontale.
+. Allineare le tre viti a testa zigrinata sull'HIC con i fori corrispondenti sul controller e allineare il connettore sulla parte inferiore dell'HIC con il connettore di interfaccia HIC sulla scheda del controller.
++
+Fare attenzione a non graffiare o urtare i componenti sul fondo dell'HIC o sulla parte superiore della scheda del controller.
+
+. Abbassare con cautela l'HIC in posizione e inserire il connettore HIC premendo delicatamente sull'HIC.
++
+
+CAUTION: *Possibili danni alle apparecchiature* -- fare molta attenzione a non stringere il connettore a nastro dorato dei LED del controller tra l'HIC e le viti a testa zigrinata.
+
++
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e5700.gif[28 dwg e2800 hic thumbwaves maintt e5700]
+
++
+*(1)* _scheda di interfaccia host (HIC)_
+
++
+*(2)* _viti a testa zigrinata_
+
+. Serrare manualmente le viti a testa zigrinata HIC.
++
+Non utilizzare un cacciavite per evitare di serrare eccessivamente le viti.
+
+. Utilizzando un cacciavite Phillips n. 1, fissare la nuova piastra anteriore HIC al contenitore del controller con le quattro viti rimosse in precedenza.
++
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e5700.gif[28 viti hic faceplace dwg e2800 per la manutenzione e5700]
+
+
+
+
+
+== Fase 4: Reinstallare il contenitore del controller
+
+Reinstallare il contenitore del controller nello shelf del controller dopo aver installato il nuovo HIC.
+
+.Fasi
+. Capovolgere il contenitore del controller, in modo che il coperchio rimovibile sia rivolto verso il basso.
+. Con la maniglia della camma in posizione aperta, far scorrere il contenitore del controller fino in fondo nello shelf del controller.
++
+La figura seguente è un esempio di shelf di controller E5724:
+
++
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e2824 rimuovere la manutenzione del contenitore del controller e5700]
+
++
+*(1)* _contenitore controller_
+
++
+*(2)* _maniglia della camma_
+
++
+La figura seguente è un esempio di shelf di controller E5760:
+
++
+image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[28 dwg e2860 add controller canister maintt e5700]
+
++
+*(1)* _contenitore controller_
+
++
+*(2)* _maniglia della camma_
+
+. Spostare la maniglia della camma verso sinistra per bloccare il contenitore del controller in posizione.
+. Ricollegare tutti i cavi rimossi.
++
+
+CAUTION: Non collegare i cavi dati alle nuove porte HIC in questo momento.
+
+. (Facoltativo) se si aggiunge HICS a una configurazione duplex, ripetere tutti i passaggi per rimuovere il secondo elemento filtrante del controller, installare il secondo HIC e reinstallare il secondo elemento filtrante del controller.
+
+
+
+
+== Fase 5: Completare l'aggiunta di HIC
+
+Controllare i LED del controller e il display a sette segmenti, quindi verificare che lo stato del controller sia ottimale.
+
+.Fasi
+. Accendere i due interruttori di alimentazione sul retro dello shelf del controller.
++
+** Non spegnere gli interruttori di alimentazione durante il processo di accensione, che in genere richiede 90 secondi o meno.
+** Le ventole di ogni shelf sono molto rumorose al primo avvio. Il rumore forte durante l'avvio è normale.
+
+
+. All'avvio del controller, controllare i LED del controller e il display a sette segmenti.
++
+** Il display a sette segmenti mostra la sequenza ripetuta *OS*, *SD*, *_blank_* per indicare che il controller sta eseguendo l'elaborazione SOD (Start-of-day). Una volta avviato correttamente un controller, il display a sette segmenti dovrebbe visualizzare l'ID del vassoio.
+** Il LED di attenzione ambra sul controller si accende e poi si spegne, a meno che non si verifichi un errore.
+** I LED verdi del collegamento host rimangono spenti fino a quando non si collegano i cavi host.
++
+
+NOTE: La figura mostra un esempio di contenitore del controller. Il controller potrebbe avere un numero diverso e un tipo diverso di porte host.
+
++
+image::../media/e5700_hic_3_callouts_maint-e5700.gif[e5700 hic 3 callout maintt e5700]
+
++
+*(1)* _LED collegamento host_
+
++
+*(2)* _LED di attenzione (ambra)_
+
++
+*(3)* _Display a sette segmenti_
+
+
+
+. Da Gestore di sistema di SANtricity, verificare che lo stato del controller sia ottimale.
++
+Se lo stato non è ottimale o se uno dei LED attenzione è acceso, verificare che tutti i cavi siano inseriti correttamente e che l'HIC e il contenitore del controller siano installati correttamente. Se necessario, rimuovere e reinstallare il contenitore del controller e l'HIC.
+
++
+
+NOTE: Se non si riesce a risolvere il problema, contattare il supporto tecnico.
+
+. Se le nuove porte HIC richiedono ricetrasmettitori SFP+, installarli.
+. Se è stato installato un HIC con porte SFP+ (ottiche), verificare che le nuove porte dispongano del protocollo host previsto.
++
+.. Da Gestione sistema di SANtricity, selezionare *hardware*.
+.. Se la figura mostra i dischi, fare clic su *Mostra retro dello shelf*.
+.. Selezionare l'immagine per Controller A o Controller B.
+.. Selezionare *Visualizza impostazioni* dal menu di scelta rapida.
+.. Selezionare la scheda *interfacce host*.
+.. Fare clic su *Mostra altre impostazioni*.
+.. Esaminare i dettagli mostrati per le porte HIC (le porte etichettate *e0__x__* o *0__x__* in posizione HIC *slot 1*) per determinare se si è pronti per collegare le porte host agli host dati:
++
+*** _Se le nuove porte HIC dispongono del protocollo previsto_:
++
+Collegare le nuove porte HIC agli host dati; passare alla fase successiva.
+
+*** _Se le nuove porte HIC *non* hanno il protocollo previsto_:
++
+È necessario applicare un pacchetto di funzionalità software prima di poter collegare le nuove porte HIC agli host dati. Vedere link:hpp-change-host-protocol-task.html["Modificare il protocollo host E5700"]. Quindi, collegare le porte host agli host dati e riprendere le operazioni.
+
+
+
+
+
+. Collegare i cavi dalle porte host del controller agli host dati.
++
+Per istruzioni sulla configurazione e l'utilizzo di un nuovo protocollo host, fare riferimento a. link:../config-linux/index.html["Configurazione di Linux Express"], link:../config-windows/index.html["Configurazione di Windows Express"], o. link:../config-vmware/index.html["Configurazione di VMware Express"].
+
+
+
+.Quali sono le prossime novità?
+Il processo di aggiunta di una scheda di interfaccia host all'array di storage è completo. È possibile riprendere le normali operazioni.

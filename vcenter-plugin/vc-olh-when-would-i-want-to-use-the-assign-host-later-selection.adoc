@@ -1,0 +1,23 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-when-would-i-want-to-use-the-assign-host-later-selection.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Se si desidera accelerare il processo di creazione dei volumi, è possibile saltare la fase di assegnazione dell"host in modo che i volumi appena creati vengano inizializzati offline.' 
+---
+= Quando si desidera utilizzare la selezione dell'host di assegnazione in un secondo momento?
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Se si desidera accelerare il processo di creazione dei volumi, è possibile saltare la fase di assegnazione dell'host in modo che i volumi appena creati vengano inizializzati offline.
+
+I volumi appena creati devono essere inizializzati. Il sistema può inizializzarli utilizzando una delle due modalità, ovvero un processo di inizializzazione in background di IAF (immediate Available Format) o un processo offline.
+
+Quando si esegue il mapping di un volume a un host, tutti i volumi di inizializzazione del gruppo vengono forzati a passare all'inizializzazione in background. Questo processo di inizializzazione in background consente l'i/o host simultaneo, che a volte può richiedere molto tempo.
+
+Quando nessuno dei volumi in un gruppo di volumi viene mappato, viene eseguita l'inizializzazione offline. Il processo offline è molto più veloce del processo in background.

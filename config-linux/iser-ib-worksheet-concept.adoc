@@ -1,0 +1,237 @@
+---
+permalink: config-linux/iser-ib-worksheet-concept.html 
+sidebar: sidebar 
+keywords: iSER worksheet Linux, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Utilizzare questo foglio di lavoro per registrare le informazioni di configurazione dello storage iSER su Infiniband. 
+---
+= Registra la tua configurazione iSER su IB
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile generare e stampare un PDF di questa pagina, quindi utilizzare il seguente foglio di lavoro per registrare le informazioni di configurazione dello storage iSER su Infiniband. Queste informazioni sono necessarie per eseguire le attività di provisioning.
+
+
+
+== Identificatori host
+
+
+NOTE: Il software Initiator IQN viene determinato durante l'attività, xref:iser-ib-configure-network-attached-hosts-task.adoc[Configurare il networking per gli host collegati allo storage].
+
+Individuare e documentare l'IQN iniziatore da ciascun host. Per gli iniziatori software, l'IQN si trova in genere nel file /etc/iscsi/initatorname.iscsi.
+
+|===
+| N. didascalia | Connessioni alla porta host | IQN iniziatore software 
+
+
+ a| 
+1
+ a| 
+Host (iniziatore) 1
+ a| 
+
+
+
+ a| 
+n/a.
+ a| 
+ a| 
+
+
+
+ a| 
+n/a.
+ a| 
+ a| 
+
+
+
+ a| 
+n/a.
+ a| 
+ a| 
+
+
+
+ a| 
+n/a.
+ a| 
+ a| 
+
+|===
+
+
+== Configurazione consigliata
+
+Le configurazioni consigliate sono costituite da due porte host (iniziatore) e quattro porte di destinazione.
+
+image::../media/port_identifiers_ib_iser.gif[identificatori di porta ib iser]
+
+
+
+== IQN di destinazione
+
+Documentare l'IQN di destinazione per lo storage array. Queste informazioni verranno utilizzate in xref:iser-ib-configure-network-attached-hosts-task.adoc[Configurare il networking per gli host collegati allo storage].
+
+Individuare il nome IQN dell'array di storage utilizzando SANtricity: *Array di storage* > *iSER* > *Gestisci impostazioni*. Queste informazioni potrebbero essere necessarie quando si creano sessioni iSER da sistemi operativi che non supportano il rilevamento delle destinazioni di invio.
+
+|===
+| N. didascalia | Nome array | IQN di destinazione 
+
+
+ a| 
+6
+ a| 
+Controller di array (destinazione)
+ a| 
+
+|===
+
+
+== Configurazione di rete
+
+Documentare la configurazione di rete che verrà utilizzata per gli host e lo storage sul fabric InfiniBand. Queste istruzioni presuppongono che vengano utilizzate due subnet per la ridondanza completa.
+
+L'amministratore di rete può fornire le seguenti informazioni. Queste informazioni vengono utilizzate nell'argomento, xref:iser-ib-configure-network-attached-hosts-task.adoc[Configurare il networking per gli host collegati allo storage].
+
+
+
+=== Subnet A
+
+Definire la subnet da utilizzare.
+
+|===
+| Indirizzo di rete | Netmask 
+
+
+ a| 
+ a| 
+
+|===
+Documentare gli IQN che devono essere utilizzati dalle porte dell'array e da ciascuna porta host.
+
+|===
+| N. didascalia | Connessioni delle porte (di destinazione) degli array controller | IQN 
+
+
+ a| 
+3
+ a| 
+Switch
+ a| 
+_non applicabile_
+
+
+
+ a| 
+5
+ a| 
+Controller A, porta 1
+ a| 
+
+
+
+ a| 
+4
+ a| 
+Controller B, porta 1
+ a| 
+
+
+
+ a| 
+2
+ a| 
+Host 1, porta 1
+ a| 
+
+
+
+ a| 
+ a| 
+(Opzionale) host 2, porta 1
+ a| 
+
+|===
+
+
+=== Subnet B
+
+Definire la subnet da utilizzare.
+
+|===
+| Indirizzo di rete | Netmask 
+
+
+ a| 
+ a| 
+
+|===
+Documentare gli IQN che devono essere utilizzati dalle porte dell'array e da ciascuna porta host.
+
+|===
+| N. didascalia | Connessioni delle porte (di destinazione) degli array controller | IQN 
+
+
+ a| 
+8
+ a| 
+Switch
+ a| 
+_non applicabile_
+
+
+
+ a| 
+10
+ a| 
+Controller A, porta 2
+ a| 
+
+
+
+ a| 
+9
+ a| 
+Controller B, porta 2
+ a| 
+
+
+
+ a| 
+7
+ a| 
+Host 1, porta 2
+ a| 
+
+
+
+ a| 
+ a| 
+(Opzionale) host 2, porta 2
+ a| 
+
+|===
+
+
+== Nome host di mapping
+
+
+NOTE: Il nome host del mapping viene creato durante il flusso di lavoro.
+
+|===
+
+
+ a| 
+Nome host di mapping
+ a| 
+
+
+
+ a| 
+Tipo di sistema operativo host
+ a| 
+
+|===

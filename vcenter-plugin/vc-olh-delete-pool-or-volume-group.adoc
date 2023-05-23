@@ -1,0 +1,46 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-delete-pool-or-volume-group.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Eliminare un pool o un gruppo di volumi per creare più capacità non assegnata, che è possibile riconfigurare per soddisfare le esigenze di storage dell"applicazione' 
+---
+= Eliminare pool o gruppo di volumi
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile eliminare un pool o un gruppo di volumi per creare una maggiore capacità non assegnata, che è possibile riconfigurare per soddisfare le esigenze di storage dell'applicazione.
+
+.Prima di iniziare
+* È necessario aver eseguito il backup dei dati su tutti i volumi del pool o del gruppo di volumi.
+* È necessario aver interrotto tutti gli input/output (i/o).
+* È necessario smontare tutti i file system sui volumi.
+* È necessario eliminare tutte le relazioni mirror nel pool o nel gruppo di volumi.
+* È necessario interrompere qualsiasi operazione di copia del volume in corso per il pool o il gruppo di volumi.
+* Il pool o il gruppo di volumi non deve partecipare a un'operazione di mirroring asincrono.
+* I dischi nel gruppo di volumi non devono avere una prenotazione persistente.
+
+
+.Fasi
+. Nella pagina Manage (Gestione), selezionare l'array di storage con il pool o il gruppo di volumi.
+. Selezionare menu:Provisioning[Configure Pools and Volume Groups] (Configura pool e gruppi di volumi).
+. Selezionare un pool o un gruppo di volumi dall'elenco.
++
+È possibile selezionare un solo pool o gruppo di volumi alla volta. Scorrere l'elenco per visualizzare altri pool o gruppi di volumi.
+
+. Selezionare menu:attività non comuni[Elimina] e confermare.
+
+
+.Risultati
+Il sistema esegue le seguenti operazioni:
+
+* Elimina tutti i dati del pool o del gruppo di volumi.
+* Elimina tutte le unità associate al pool o al gruppo di volumi.
+* Annulla l'assegnazione delle unità associate, che consente di riutilizzarle in pool o gruppi di volumi nuovi o esistenti.
+

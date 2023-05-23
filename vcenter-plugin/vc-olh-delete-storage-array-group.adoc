@@ -1,0 +1,27 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-delete-storage-array-group.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Rimuovere uno o più gruppi di array di storage non più necessari. 
+---
+= Eliminare il gruppo di array di storage
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile rimuovere uno o più gruppi di array di storage non più necessari.
+
+.A proposito di questa attività
+Questa operazione elimina solo il gruppo di array di storage. Gli array di storage associati al gruppo cancellato rimangono accessibili tramite la vista Manage All (Gestisci tutti) o qualsiasi altro gruppo a cui è associato.
+
+.Fasi
+. Dalla pagina Manage (Gestisci), selezionare menu:Manage Groups (Gestisci gruppi)[Delete storage array group] (Elimina gruppo array di storage).
+. Selezionare uno o più gruppi di array di storage che si desidera eliminare.
+. Fare clic su *Delete* (Elimina).
+

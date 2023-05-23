@@ -1,0 +1,103 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-discover-storage-arrays.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Per visualizzare e gestire le risorse di storage nel plug-in Storage per vCenter, è necessario individuare gli indirizzi IP degli array nella rete. 
+---
+= Scopri gli array di storage
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Per visualizzare e gestire le risorse di storage nel plug-in Storage per vCenter, è necessario individuare gli indirizzi IP degli array nella rete.
+
+.Prima di iniziare
+* È necessario conoscere gli indirizzi IP di rete (o l'intervallo di indirizzi) degli array controller.
+* Gli array di storage devono essere configurati e configurati correttamente.
+* Le password degli array di storage devono essere impostate utilizzando il riquadro Access Management di System Manager.
+
+
+.A proposito di questa attività
+Il rilevamento degli array è una procedura a più fasi:
+
+* <<Fase 1: Inserire gli indirizzi di rete per il rilevamento>>
+* <<Fase 2: Risoluzione dei certificati non attendibili durante il rilevamento>>
+* <<Fase 3: Fornire le password>>
+
+
+
+
+== Fase 1: Inserire gli indirizzi di rete per il rilevamento
+
+Come primo passo per il rilevamento degli array di storage, immettere un singolo indirizzo IP o un intervallo di indirizzi IP per la ricerca nella sottorete locale. La funzione Aggiungi/rileva consente di aprire una procedura guidata che guida l'utente nel processo di rilevamento.
+
+.Fasi
+. Dalla pagina *Gestisci*, selezionare *Aggiungi/rileva*.
++
+Viene visualizzata la finestra di dialogo Immetti intervallo indirizzi di rete.
+
+. Effettuare una delle seguenti operazioni:
++
+** Per rilevare un array, selezionare il pulsante di opzione *Discover a single storage array* (rileva un singolo array di storage), quindi immettere l'indirizzo IP di uno dei controller dell'array di storage.
+** Per rilevare più array di storage, selezionare il pulsante di opzione *Discover all storage array in a network range* (rileva tutti gli array di storage all'interno di un intervallo di rete), quindi immettere l'indirizzo di rete iniziale e l'indirizzo di rete finale per eseguire la ricerca nella sottorete locale.
+
+
+. Fare clic su *Avvia rilevamento*.
++
+All'inizio del processo di rilevamento, la finestra di dialogo visualizza gli array di storage rilevati. Il completamento del processo di rilevamento potrebbe richiedere alcuni minuti.
+
++
+
+NOTE: Se non vengono rilevati array gestibili, verificare che gli array di storage siano collegati correttamente alla rete e che gli indirizzi assegnati rientrino nell'intervallo. Fare clic su *New Discovery Parameters* (nuovi parametri di rilevamento) per tornare alla pagina Add/Discover (Aggiungi/rileva).
+
+. Selezionare la casella di controllo accanto a qualsiasi array di storage che si desidera aggiungere al dominio di gestione.
++
+Il sistema esegue un controllo delle credenziali su ogni array che si sta aggiungendo al dominio di gestione. Prima di procedere, potrebbe essere necessario risolvere eventuali problemi relativi ai certificati non attendibili.
+
+. Fare clic su *Avanti* per passare alla fase successiva della procedura guidata.
+. Se gli array di storage dispongono di certificati validi, passare a. <<Fase 3: Fornire le password>>. Se uno degli array di storage non dispone di certificati validi, viene visualizzata la finestra di dialogo Risolvi certificati autofirmati; passare a. <<Fase 2: Risoluzione dei certificati non attendibili durante il rilevamento>>. Se si desidera importare i certificati firmati dalla CA, annullare le finestre di dialogo di rilevamento e accedere a. link:vc-olh-import-certificates-for-arrays.html["Importare certificati per gli array"].
+
+
+
+
+== Fase 2: Risoluzione dei certificati non attendibili durante il rilevamento
+
+Se necessario, è necessario risolvere eventuali problemi di certificato prima di procedere con il processo di rilevamento.
+
+Durante il rilevamento, se uno degli array di storage mostra lo stato "certificati non attendibili", viene visualizzata la finestra di dialogo Risolvi certificati autofirmati. In questa finestra di dialogo è possibile risolvere i certificati non attendibili oppure importare i certificati CA (vedere link:vc-olh-import-certificates-for-arrays.html["Importare certificati per gli array"]).
+
+.Fasi
+. Se viene visualizzata la finestra di dialogo Risolvi certificati autofirmati, esaminare le informazioni visualizzate per i certificati non attendibili. Per ulteriori informazioni, fare clic sui puntini di sospensione all'estremità della tabella e selezionare *View* (Visualizza) dal menu a comparsa.
+. Effettuare una delle seguenti operazioni:
++
+** Se le connessioni agli array di storage rilevati sono attendibili, fare clic su *Avanti*, quindi su *Sì* per confermare e passare alla scheda successiva della procedura guidata. I certificati autofirmati verranno contrassegnati come attendibili e gli array di storage verranno aggiunti al plug-in.
+** Se le connessioni agli array di storage non sono attendibili, selezionare *Annulla* e convalidare la strategia di certificato di sicurezza di ciascun array di storage prima di aggiungerne una al plug-in.
+
+
+
+
+
+
+== Fase 3: Fornire le password
+
+Come ultimo passaggio per il rilevamento, è necessario immettere le password per gli array di storage che si desidera aggiungere al dominio di gestione.
+
+.Fasi
+. Se in precedenza sono stati configurati gruppi per gli array, è possibile utilizzare il menu a discesa per selezionare un gruppo per gli array rilevati.
+. Per ogni array rilevato, inserire la password admin nei campi.
+. Fare clic su *fine*.
+
+
+
+NOTE: Il sistema può impiegare diversi minuti per connettersi agli array di storage specificati.
+
+.Risultato
+Gli array di storage vengono aggiunti al dominio di gestione e associati al gruppo selezionato (se specificato).
+
+
+NOTE: È possibile utilizzare l'opzione Launch per aprire System Manager basato su browser per uno o più array di storage quando si desidera eseguire operazioni di gestione.

@@ -1,0 +1,57 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-change-media-scan-settings-for-a-volume.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Una scansione dei supporti è un"operazione in background che esegue la scansione di tutti i dati e delle informazioni di ridondanza nel volume. Utilizzare questa opzione per attivare o disattivare le impostazioni di scansione dei supporti per uno o più volumi o per modificare la durata della scansione.' 
+---
+= Modificare le impostazioni di scansione dei supporti per un volume
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Una scansione dei supporti è un'operazione in background che esegue la scansione di tutti i dati e delle informazioni di ridondanza nel volume. Utilizzare questa opzione per attivare o disattivare le impostazioni di scansione dei supporti per uno o più volumi o per modificare la durata della scansione.
+
+.Prima di iniziare
+Comprendere quanto segue:
+
+* Le scansioni dei supporti vengono eseguite continuamente a una velocità costante in base alla capacità da sottoporre a scansione e alla durata della scansione. Le scansioni in background possono essere temporaneamente sospese da un'attività in background con priorità più alta (ad esempio ricostruzione), ma vengono rieseguite alla stessa velocità costante.
+* La scansione di un volume viene eseguita solo quando l'opzione di scansione dei supporti è attivata per l'array di storage e per quel volume. Se è attivata anche la verifica della ridondanza per quel volume, le informazioni di ridondanza nel volume verranno controllate per verificarne la coerenza con i dati, a condizione che il volume disponga di ridondanza. La scansione dei supporti con controllo della ridondanza è attivata per impostazione predefinita per ciascun volume al momento della creazione.
+* Se durante la scansione si verifica un errore irreversibile del supporto, i dati verranno riparati utilizzando le informazioni di ridondanza, se disponibili.
++
+Ad esempio, le informazioni di ridondanza sono disponibili in volumi RAID 5 ottimali o in volumi RAID 6 ottimali o con un solo disco guasto. Se l'errore irreversibile non può essere riparato utilizzando le informazioni di ridondanza, il blocco di dati viene aggiunto al registro del settore illeggibile. Nel registro eventi vengono riportati errori del supporto correggibili e non correggibili.
+
+* Se il controllo di ridondanza rileva un'incoerenza tra i dati e le informazioni di ridondanza, viene riportato nel registro eventi.
+
+
+.A proposito di questa attività
+Le scansioni dei supporti rilevano e riparano gli errori dei supporti sui blocchi di dischi che vengono raramente letti dalle applicazioni. Ciò può impedire la perdita di dati in caso di guasto di un disco, poiché i dati dei dischi guasti vengono ricostruiti utilizzando le informazioni di ridondanza e i dati di altri dischi nel gruppo di volumi o nel pool.
+
+È possibile eseguire le seguenti operazioni:
+
+* Attivare o disattivare la scansione dei supporti in background per l'intero array di storage
+* Modificare la durata della scansione per l'intero array di storage
+* Attivare o disattivare la scansione dei supporti per uno o più volumi
+* Attivare o disattivare il controllo di ridondanza per uno o più volumi
+
+
+.Fasi
+. Dalla pagina Manage (Gestione), selezionare l'array di storage contenente i volumi per i quali si desidera modificare le impostazioni di scansione dei supporti.
+. Selezionare menu:Provisioning[Manage Volumes] (Gestione volumi).
+. Selezionare un volume qualsiasi, quindi menu:More[Change media scan settings] (Altro[Modifica impostazioni di scansione dei supporti]).
++
+Viene visualizzata la finestra di dialogo Change Drive Media Scan Settings (Modifica impostazioni scansione supporti unità). In questa finestra di dialogo vengono visualizzati tutti i volumi dell'array di storage.
+
+. Per attivare la scansione dei supporti, selezionare la casella di controllo *scansione supporti durante...*. La disattivazione della casella di controllo scansione supporti consente di sospendere tutte le impostazioni di scansione dei supporti.
+. Specificare il numero di giorni in cui si desidera eseguire la scansione del supporto.
+. Selezionare la casella di controllo *Media Scan* per ciascun volume su cui si desidera eseguire una scansione dei supporti. Il sistema attiva l'opzione Redundancy Check (controllo ridondanza) per ciascun volume su cui si sceglie di eseguire una scansione dei supporti. Se esistono singoli volumi per i quali non si desidera eseguire un controllo di ridondanza, deselezionare la casella di controllo *controllo di ridondanza*.
+. Fare clic su *Save* (Salva).
+
+
+.Risultato
+Il sistema applica le modifiche alle scansioni dei supporti in background in base alla selezione effettuata.

@@ -1,0 +1,73 @@
+---
+permalink: getting-started/getup-run-concept.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, 
+summary: Per essere operativi con i sistemi e-Series, è necessario installare componenti hardware, configurare i sistemi host e configurare lo storage. 
+---
+= Guida rapida per e-Series
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per essere operativi con i sistemi e-Series, è necessario installare componenti hardware, configurare i sistemi host e configurare lo storage.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"] Installare l'hardware
+[role="quick-margin-para"]
+Per installare l'hardware e-Series, accedere alle istruzioni di installazione e configurazione per lo storage array e il tipo di shelf:
+
+[role="quick-margin-list"]
+* link:../install-hw-ef600/index.html["Serie EF600 o EF300 con shelf da 24 dischi"^]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2842063["Serie E2800/EF280 o E5700/EF570 con shelf da 12 o 24 dischi"^]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2842061["Serie E2800 o E5700 con shelf da 60 dischi"^]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"] Configurare l'armadietto
+[role="quick-margin-para"]
+Se si sta configurando un nuovo cabinet per lo storage array, è necessario spostare il cabinet nella posizione permanente, installare l'hardware e collegarlo a una fonte di alimentazione. Per configurare il cabinet, accedere alle seguenti istruzioni:
+
+[role="quick-margin-list"]
+* link:../install-hw-cabinet/index.html["Installare il cabinet 3040 40U"^]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tre"] Installare le guide
+[role="quick-margin-para"]
+Al momento della spedizione, ogni shelf include hardware per il montaggio in rack. Per istruzioni dettagliate sull'installazione delle guide, selezionare i tipi di guide:
+
+[role="quick-margin-list"]
+* https://mysupport.netapp.com/ecm/ecm_download_file/ECMP1652045["Installare le guide di supporto regolabili"^]
+* https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2484194["Installare l'enclosure 2U in un rack a quattro montanti"^]
+* https://mysupport.netapp.com/ecm/ecm_download_file/ECMM1280302["Installare lo shelf DE224C in un rack a due montanti"^]
+* http://docs.netapp.com/platstor/topic/com.netapp.doc.hw-rail-superrail/home.html["Installazione di SuperRail in un rack a quattro montanti (shelf DE224C/DE460C)"^]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quattro"] Collegare i cavi
+[role="quick-margin-para"]
+Le istruzioni di installazione e configurazione (fase 1) includono istruzioni per il collegamento dei cavi. Tuttavia, se sono necessari elenchi di cavi e ricetrasmettitori supportati, Best practice per il cablaggio e informazioni dettagliate sulle porte host del controller, accedere alle seguenti istruzioni:
+
+[role="quick-margin-list"]
+* link:../install-hw-cabling/index.html["Hardware Cable e-Series"]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinque"] Configurare gli host
+[role="quick-margin-para"]
+Per rendere lo storage disponibile a un host, selezionare una guida per il tipo di sistema operativo dell'host:
+
+[role="quick-margin-list"]
+* link:../config-linux/index.html["Configurazione di Linux Express"]
+* link:../config-vmware/index.html["Configurazione di VMware Express"]
+* link:../config-windows/index.html["Configurazione di Windows Express"]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Sei"] Configurare lo storage
+[role="quick-margin-para"]
+Per configurare lo storage, è possibile accedere all'interfaccia basata su Web, System Manager, puntando un browser all'indirizzo IP del controller. L'installazione guidata consente di iniziare a configurare il sistema. In alternativa, è possibile utilizzare anche l'interfaccia della riga di comando (CLI).
+
+[role="quick-margin-para"]
+Selezionare l'interfaccia che si desidera utilizzare:
+
+[role="quick-margin-list"]
+* https://docs.netapp.com/us-en/e-series-santricity/system-manager/index.html["Guida in linea di Gestore di sistema SANtricity per 11,7x"]
+* https://docs.netapp.com/us-en/e-series-santricity-116/index.html["Guida in linea di Gestione di sistema SANtricity per 11,6x"]
+

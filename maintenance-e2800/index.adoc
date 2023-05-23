@@ -1,0 +1,50 @@
+---
+permalink: maintenance-e2800/index.html 
+sidebar: sidebar 
+keywords: E2800 maintenance, E2800 repair, replace E2800 components, replacing E2800 components, 
+summary: Eseguire la manutenzione dei componenti E2800. 
+---
+= Manutenzione dell'hardware E2800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per il sistema storage E2800, è possibile eseguire le procedure di manutenzione dei seguenti componenti.
+
+
+
+== Batterie
+
+Ogni contenitore del controller include una batteria che conserva i dati memorizzati nella cache in caso di interruzione dell'alimentazione CA.
+
+
+
+== Controller
+
+Un controller è costituito da una scheda, firmware e software. Controlla i dischi e implementa le funzioni di System Manager.
+
+
+
+== Canister
+
+I contenitori sono costituiti da tre tipi diversi: Contenitori per ventole di alimentazione (alimentatori) che forniscono una fonte di alimentazione ridondante e un raffreddamento adeguato in uno shelf o uno shelf di controller da 12 o 24 dischi; contenitori di alimentazione utilizzati per la ridondanza dell'alimentazione in uno shelf di controller da 60 dischi o in uno shelf di dischi; e i contenitori per ventole utilizzati per il raffreddamento dello shelf di controller da 60 dischi o dello shelf di dischi.
+
+
+
+== Dischi
+
+Un'unità è un dispositivo elettromeccanico che fornisce i supporti di storage fisici per i dati.
+
+
+
+== HICS (host Interface Card)
+
+È possibile installare una scheda di interfaccia host (HIC) all'interno di un contenitore di controller. Il controller E2800 include porte host integrate sulla scheda controller stessa, nonché porte host sull'HIC opzionale. Le porte host integrate nel controller sono chiamate porte host baseboard. Le porte host integrate nell'HIC sono chiamate porte HIC.
+
+
+
+== Protocollo della porta host
+
+È possibile convertire il protocollo di un host in un protocollo diverso in modo da stabilire compatibilità e comunicazione.

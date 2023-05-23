@@ -1,0 +1,27 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-what-is-redundancy-check.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Un controllo di ridondanza determina se i dati su un volume in un pool o un gruppo di volumi sono coerenti. 
+---
+= Che cos'è il controllo di ridondanza?
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Un controllo di ridondanza determina se i dati su un volume in un pool o un gruppo di volumi sono coerenti. I dati di ridondanza vengono utilizzati per ricostruire rapidamente le informazioni su un disco sostitutivo in caso di guasto di uno dei dischi del pool o del gruppo di volumi.
+
+È possibile eseguire questo controllo solo su un pool o su un gruppo di volumi alla volta. Un controllo della ridondanza del volume esegue le seguenti operazioni:
+
+* Esegue la scansione dei blocchi di dati in un volume RAID 3, RAID 5 o RAID 6, quindi verifica le informazioni di ridondanza per ciascun blocco. (RAID 3 può essere assegnato solo ai gruppi di volumi utilizzando l'interfaccia della riga di comando).
+* Confronta i blocchi di dati sui dischi RAID 1 mirrorati.
+* Restituisce errori di ridondanza se i dati sono determinati come incoerenti dal firmware del controller.
+
+
+
+NOTE: L'esecuzione immediata di un controllo di ridondanza sullo stesso pool o gruppo di volumi potrebbe causare un errore. Per evitare questo problema, attendere da uno a due minuti prima di eseguire un altro controllo di ridondanza sullo stesso pool o gruppo di volumi.

@@ -1,0 +1,14 @@
+---
+permalink: maintenance-e5700/concept-controllers-wombat.html 
+sidebar: sidebar 
+keywords: controller, board, firmware, software, control, drive, implement, system, manager, function, section, duplex, configuration 
+summary: Un controller è costituito da una scheda, firmware e software. Controlla i dischi e implementa le funzioni di System Manager. Questa sezione descrive come sostituire un controller in una configurazione duplex. 
+---
+= Controller
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un controller è costituito da una scheda, firmware e software. Controlla i dischi e implementa le funzioni di System Manager. Questa sezione descrive come sostituire un controller in una configurazione duplex.

@@ -1,0 +1,42 @@
+---
+permalink: maintenance-ef600/dimms-overview-supertask-concept.html 
+sidebar: sidebar 
+keywords: replace EF300 DIMM, replace EF600 DIMM, 
+summary: Esaminare requisiti e considerazioni prima di sostituire i DIMM EF300 o EF600. 
+---
+= Requisiti per la sostituzione di un modulo DIMM EF300 o EF600
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di sostituire un DIMM in un array di storage EF300 o EF600, esaminare i requisiti e le considerazioni.
+
+È necessario sostituire un modulo DIMM in caso di mancata corrispondenza della memoria o di un modulo DIMM guasto. Verificare la configurazione del controller EF300 o EF600 per assicurarsi che vengano sostituite le dimensioni DIMM corrette.
+
+
+CAUTION: Tenere presente che i DIMM dell'array di storage sono fragili; una gestione errata può causare danni.
+
+Attenersi alle seguenti regole per evitare di danneggiare i DIMM dell'array di storage:
+
+* Prevenzione delle scariche elettrostatiche (ESD):
++
+** Conservare il modulo DIMM nel sacchetto ESD fino a quando non si è pronti per l'installazione.
+** Aprire il sacchetto ESD manualmente o tagliare la parte superiore con un paio di forbici. Non inserire utensili metallici o coltelli nel sacchetto ESD.
+** Conservare il sacchetto ESD e il materiale di imballaggio nel caso in cui sia necessario restituire un modulo DIMM in un secondo momento.
++
+
+CAUTION: Indossare sempre un braccialetto antistatico collegato a terra su una superficie non verniciata dello chassis dell'enclosure di storage.
+
+
+
+* Gestire con attenzione i DIMM:
++
+** Utilizzare sempre due mani per rimuovere, installare o trasportare un modulo DIMM.
+** Non forzare mai un modulo DIMM in uno shelf e esercitare una pressione leggera e decisa per inserire completamente il dispositivo di chiusura.
+** Per la spedizione dei moduli DIMM, utilizzare sempre confezioni approvate.
+
+
+* Evitare i campi magnetici. Tenere i DIMM lontani dai dispositivi magnetici.
+

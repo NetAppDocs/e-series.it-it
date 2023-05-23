@@ -1,0 +1,37 @@
+---
+permalink: config-linux/fc-determine-host-port-wwpns-task.html 
+sidebar: sidebar 
+keywords: host wwpn, HBA utility, express linux configuration, software configuration, linux host, 
+summary: 'Installare un"utility HBA FC in modo da visualizzare il nome della porta internazionale (WWPN) di ciascuna porta host. Inoltre, è possibile utilizzare l"utility HBA per modificare le impostazioni consigliate nella colonna Note di NetApp Interoperability Matrix Tool per la configurazione supportata.' 
+---
+= Determinare le WWPN host ed effettuare le impostazioni consigliate
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Installare un'utility HBA FC in modo da visualizzare il nome della porta globale (WWPN) di ciascuna porta host.
+
+Inoltre, è possibile utilizzare l'utility HBA per modificare le impostazioni consigliate nella colonna Note di https://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"^] per la configurazione supportata.
+
+.A proposito di questa attività
+Consulta le seguenti linee guida per le utility HBA:
+
+* La maggior parte dei vendor HBA offre un'utility HBA. È necessaria la versione corretta dell'HBA per il sistema operativo host e la CPU. Esempi di utility HBA FC includono:
++
+** Emulex OneCommand Manager per HBA Emulex
+** QLogic QConverge Console per HBA QLogic
+
+
+* Le porte i/o host potrebbero essere registrate automaticamente se è installato l'agente di contesto host.
+
+
+.Fasi
+. Scaricare l'utility appropriata dal sito Web del vendor HBA.
+. Installare l'utility.
+. Selezionare le impostazioni appropriate nell'utility HBA.
++
+Le impostazioni appropriate per la configurazione sono elencate nella colonna Note di https://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"^].
+
+

@@ -1,0 +1,62 @@
+---
+permalink: maintenance-e2800/batteries-install-new-task.html 
+sidebar: sidebar 
+keywords: E2800 battery fail, E2800 battery, E2800 battery replacement, replace E2800 battery, replacing E2800 battery, E2800, E-Series, eseries 
+summary: Installare una nuova batteria. 
+---
+= Installare una nuova batteria E2800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver rimosso la batteria guasta, è possibile installarne una nuova.
+
+.Di cosa hai bisogno
+* La batteria sostitutiva.
+* Una superficie piana e priva di cariche elettrostatiche.
+
+
+.Fasi
+. Disimballare la nuova batteria e riutilizzarla su una superficie piana e priva di scariche elettrostatiche.
++
+
+NOTE: Per rispettare le normative IATA in materia di sicurezza, le batterie sostitutive vengono spedite con uno stato di carica (SoC) pari o inferiore al 30%. Quando si riattiva l'alimentazione, tenere presente che il caching in scrittura non viene ripristinato fino a quando la batteria sostitutiva non viene completamente caricata e non viene completato il ciclo di apprendimento iniziale.
+
+. Orientare il contenitore del controller in modo che lo slot della batteria sia rivolto verso di sé.
+. Inserire la batteria nel contenitore del controller inclinandola leggermente verso il basso.
++
+Inserire la flangia metallica nella parte anteriore della batteria nello slot sul fondo del contenitore del controller e far scorrere la parte superiore della batteria sotto il piccolo perno di allineamento sul lato sinistro del contenitore.
+
+. Spostare il dispositivo di chiusura della batteria verso l'alto per fissare la batteria.
++
+Quando il dispositivo di chiusura scatta in posizione, la parte inferiore del dispositivo di chiusura si aggancia in uno slot metallico sul telaio.
+
++
+image::../media/28_dwg_e2800_insert_battery_maint-e2800.gif[28 dwg e2800 inserire la manutenzione della batteria e2800]
+
++
+*(1)* _dispositivo di chiusura a scatto della batteria_
+
++
+*(2)* _batteria_
+
+. Capovolgere il contenitore del controller per verificare che la batteria sia installata correttamente.
++
+
+CAUTION: *Possibili danni all'hardware* -- la flangia metallica sulla parte anteriore della batteria deve essere inserita completamente nello slot sul contenitore del controller (come mostrato nella prima figura). Se la batteria non è installata correttamente (come mostrato nella seconda figura), la flangia metallica potrebbe entrare in contatto con la scheda del controller, danneggiando il controller quando si applica l'alimentazione.
+
++
+** *Corretto* -- la flangia metallica della batteria è completamente inserita nello slot del controller:
+
+
++
+image:../media/28_dwg_e2800_battery_flange_ok_maint-e2800.gif[""]
+
++
+** *Errato* -- la flangia metallica della batteria non è inserita nello slot del controller: +image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e2800.gif[""]
+
+
+. Passare a. link:batteries-reinstall-controller-canister-task.html["Reinstallare il contenitore del controller E2800"].
+

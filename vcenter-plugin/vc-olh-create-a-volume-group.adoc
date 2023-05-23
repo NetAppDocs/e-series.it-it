@@ -1,0 +1,71 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-create-a-volume-group.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'È possibile creare un gruppo di volumi per uno o più volumi accessibili all"host.' 
+---
+= Creare un gruppo di volumi
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile creare un gruppo di volumi per uno o più volumi accessibili all'host. Un gruppo di volumi è un container per volumi con caratteristiche condivise, come il livello RAID e la capacità.
+
+.Prima di iniziare
+Consultare le seguenti linee guida:
+
+* È necessario almeno un disco non assegnato.
+* Esistono dei limiti per quanto riguarda la capacità di un disco in un singolo gruppo di volumi. Questi limiti variano in base al tipo di host.
+* Per attivare la protezione contro la perdita di scaffali/cassetti, è necessario creare un gruppo di volumi che utilizzi dischi posizionati in almeno tre shelf o cassetti, a meno che non si utilizzi RAID 1, dove due shelf/cassetti sono il minimo.
+* Quando si configura uno storage array EF600 o EF300, assicurarsi che ciascun controller abbia accesso a un numero uguale di dischi nei primi 12 slot e a un numero uguale di dischi negli ultimi 12 slot. Questa configurazione aiuta i controller a utilizzare entrambi i bus PCIe lato disco in modo più efficace. Il sistema attualmente consente la selezione del disco nella funzione Advanced (Avanzate) quando si crea un gruppo di volumi.
+
+
+Esaminare in che modo la scelta del livello RAID influisce sulla capacità risultante del gruppo di volumi.
+
+* Se si seleziona RAID 1, è necessario aggiungere due dischi alla volta per assicurarsi che sia selezionata una coppia mirrorata. Il mirroring e lo striping (noto come RAID 10 o RAID 1+0) si ottengono selezionando quattro o più dischi.
+* Se si seleziona RAID 5, è necessario aggiungere almeno tre dischi per creare il gruppo di volumi.
+* Se si seleziona RAID 6, è necessario aggiungere almeno cinque dischi per creare il gruppo di volumi.
+
+
+.A proposito di questa attività
+Durante la creazione del gruppo di volumi, è possibile determinare le caratteristiche del gruppo, ad esempio il numero di dischi, la funzionalità di sicurezza, la funzionalità di data assurance (da), la protezione contro la perdita di shelf e la protezione contro la perdita di cassetto.
+
+Per gli array di storage EF600 e EF300, le impostazioni includono anche il provisioning delle risorse, le dimensioni dei blocchi dei dischi e le dimensioni dei blocchi dei volumi.
+
+
+NOTE: Con dischi con capacità maggiore e la possibilità di distribuire volumi tra controller, la creazione di più di un volume per gruppo di volumi è un buon modo per sfruttare la capacità dello storage e proteggere i dati.
+
+.Fasi
+. Dalla pagina Manage (Gestione), selezionare l'array di storage per il gruppo di volumi.
+. Selezionare menu:Provisioning[Configure Pools and Volume Groups] (Configura pool e gruppi di volumi).
+. Fare clic sul menu:Create[Volume group] (Crea[gruppo di volumi]).
++
+Viene visualizzata la finestra di dialogo Create Volume Group (Crea gruppo di volumi).
+
+. Digitare un nome per il gruppo di volumi.
+. Seleziona il livello RAID che meglio soddisfa i tuoi requisiti di storage e protezione dei dati. Viene visualizzata la tabella dei candidati del gruppo di volumi che mostra solo i candidati che supportano il livello RAID selezionato.
+. (Facoltativo) se si dispone di più di un tipo di disco nell'array di storage, selezionare il tipo di disco che si desidera utilizzare.
++
+Viene visualizzata la tabella dei candidati del gruppo di volumi che mostra solo i candidati che supportano il tipo di disco e il livello RAID selezionati.
+
+. (Facoltativo) è possibile selezionare il metodo automatico o manuale per definire le unità da utilizzare nel gruppo di volumi. Il metodo automatico è la selezione predefinita.
++
+
+CAUTION: Non utilizzare il metodo manuale a meno che non si sia esperti in grado di comprendere la ridondanza dei dischi e le configurazioni ottimali dei dischi.
+
++
+Per selezionare i dischi manualmente, fare clic sul collegamento *Manually Select drives (Advanced)* (Seleziona manualmente i dischi (avanzati)*). Quando si fa clic su di esso, viene visualizzato *Automatically Select drives (Advanced)*.
+
++
+Il metodo Manuale consente di selezionare le unità specifiche che compongono il gruppo di volumi. È possibile selezionare dischi non assegnati specifici per ottenere la capacità richiesta. Se l'array di storage contiene dischi con tipi di supporti diversi o tipi di interfaccia diversi, è possibile scegliere solo la capacità non configurata per un singolo tipo di disco per creare il nuovo gruppo di volumi.
+
+. In base alle caratteristiche del disco visualizzate, selezionare le unità che si desidera utilizzare nel gruppo di volumi, quindi fare clic su *Create* (Crea).
+
+
+Le caratteristiche del disco visualizzate dipendono dalla selezione del metodo automatico o manuale. Per ulteriori informazioni, consultare la documentazione di Gestione di sistema di SANtricity, https://docs.netapp.com/us-en/e-series-santricity/sm-storage/create-volume-group.html["Creare un gruppo di volumi"^].

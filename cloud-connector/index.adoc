@@ -1,0 +1,54 @@
+---
+permalink: cloud-connector/index.html 
+sidebar: sidebar 
+keywords: Cloud Connector 
+summary: Connettore cloud SANtricity 
+---
+= Panoramica di SANtricity® Cloud Connector
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il connettore cloud di SANtricity è un'applicazione Linux basata su host che consente di eseguire backup e recovery completi basati su blocchi e file di volumi e-Series su account S3 (ad esempio, Amazon Simple Storage Service e NetApp StorageGRID) e appliance NetApp AltaVault.
+
+Disponibile per l'installazione su piattaforme Linux RedHat e SUSE, il connettore cloud SANtricity è una soluzione in pacchetto (file .bin). Dopo aver installato SANtricity Cloud Connector, è possibile configurare l'applicazione per eseguire processi di backup e ripristino dei volumi e-Series su un'appliance AltaVault o sugli account Amazon S3 o StorageGRID esistenti. Tutti i processi eseguiti tramite SANtricity Cloud Connector utilizzano API basate SU REST.
+
+
+NOTE: Lo strumento SANtricity Cloud Connector non è più disponibile per il download.
+
+
+
+== Considerazioni
+
+Quando si utilizzano queste procedure, tenere presente che:
+
+* I processi di configurazione e backup/ripristino descritti in queste procedure si applicano alla versione dell'interfaccia utente grafica di SANtricity Cloud Connector.
+* I flussi di lavoro API REST per l'applicazione SANtricity Cloud Connector non sono descritti in queste procedure. Per gli sviluppatori esperti, gli endpoint sono disponibili per ogni operazione di SANtricity Cloud Connector nella documentazione API. È possibile accedere alla documentazione API accedendo a. ``http://<hostname.domain>:<port>/docs`` tramite un browser.
+
+
+
+
+== Tipi di backup
+
+Il connettore cloud di SANtricity offre due tipi di backup: Backup basati su immagine e su file.
+
+* *Backup basato su immagine*
++
+Un backup basato su immagine legge i blocchi di dati raw da un volume di snapshot ed esegue il backup su un file noto come immagine. Viene eseguito il backup di tutti i blocchi di dati del volume Snapshot, inclusi i blocchi vuoti, i blocchi occupati dai file cancellati, i blocchi associati alla partizione e i metadati del file system. I backup delle immagini hanno il vantaggio di memorizzare tutte le informazioni con il volume snapshot indipendentemente dallo schema di partizione o dai file system su di esso.
+
++
+L'immagine non viene memorizzata nella destinazione di backup come singolo file, ma viene suddivisa in una serie di blocchi di dati, che hanno una dimensione di 64 MB. I blocchi di dati consentono a SANtricity Cloud Connector di utilizzare più connessioni alla destinazione di backup, migliorando in tal modo le prestazioni del processo di backup.
+
++
+Per i backup su StorageGRID e Amazon Web Services (S3), ogni blocco di dati utilizza una chiave di crittografia separata per crittografare il blocco. La chiave è un hash SHA256 composto dalla combinazione di una passphrase fornita dall'utente e dell'hash SHA256 dei dati dell'utente. Per i backup su AltaVault, SANtricity Cloud Connector non crittografa i blocchi di dati mentre AltaVault esegue questa operazione.
+
+* *Backup basato su file*
++
+Un backup basato su file legge i file contenuti in una partizione del file system e li esegue il backup in una serie di blocchi di dati di 64 MB. Un backup basato su file non esegue il backup di file cancellati o di partizioni e metadati del file system. Come per i backup basati su immagini, i blocchi di dati consentono a SANtricity Cloud Connector di utilizzare più connessioni alla destinazione di backup, migliorando in tal modo le performance del processo di backup.
+
++
+Per i backup su StorageGRID e Amazon Web Services, ogni blocco di dati utilizza una chiave di crittografia separata per crittografare il blocco. La chiave è un hash SHA256 costituito dalla combinazione di password fornite dall'utente e hash SHA256 dei dati dell'utente. Per i backup su AltaVault, i blocchi di dati non vengono crittografati da SANtricity Cloud Connector perché AltaVault esegue questa operazione.
+
+

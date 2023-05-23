@@ -1,0 +1,93 @@
+---
+sidebar: sidebar 
+permalink: solution-tech-reports.html 
+keywords: solution technical reports, e-series, hardware, santricity, os 
+summary: Report tecnici e-Series 
+---
+= Sfoglia i report tecnici delle soluzioni
+:allow-uri-read: 
+
+
+
+
+== Splunk
+
+[cols="9,9,9"]
+|===
+
+
+| https://www.netapp.com/pdf.html?item=/media/16851-tr-4623pdf.pdf["*TR-4623: E5700 con Splunk Enterprise*"^] | https://www.netapp.com/media/57104-tr-4903.pdf["*TR-4903: EF300 con Splunk Enterprise*"^] | https://www.netapp.com/pdf.html?item=/media/72003-tr-4930.pdf["*TR-4930: EF600 con Splunk Enterprise*"^] 
+
+
+| Descrive l'architettura integrata del sistema E5700 e la progettazione di Splunk. Questo documento riassume anche i risultati dei test delle performance ottenuti da uno strumento di simulazione degli eventi del log di Splunk. | Descrive l'architettura integrata dell'array all-flash EF300 e il design Splunk. Questo documento riassume anche i risultati dei test delle performance ottenuti da uno strumento di simulazione degli eventi del log di Splunk. | Descrive l'architettura integrata dell'array all-flash EF600 e il design Splunk. Questo documento riassume anche i risultati dei test delle performance ottenuti da uno strumento di simulazione degli eventi del log di Splunk. 
+|===
+
+
+== Database aziendali
+
+[cols="9,9,9"]
+|===
+
+
+| https://www.netapp.com/pdf.html?item=/media/17086-tr4764pdf.pdf["*TR-4764: Guida alle Best practice per Microsoft SQL Server con NetApp EF-Series*"^] | https://www.netapp.com/pdf.html?item=/media/17248-tr4794pdf.pdf["*TR-4794: Database Oracle su NetApp EF-Series*"^] |  
+
+
+| Aiuta gli amministratori dello storage e i database a implementare con successo Microsoft SQL Server sullo storage NetApp EF-Series. | Aiuta gli amministratori dello storage e gli amministratori del database a implementare con successo Oracle sullo storage NetApp EF-Series. |  
+|===
+
+
+== Backup e ripristino
+
+[cols="9,9,9"]
+|===
+
+
+| https://www.netapp.com/pdf.html?item=/media/17042-tr4320pdf.pdf["*TR-4320: Best Practice con CommVault Data Platform V11*"^] | https://www.netapp.com/pdf.html?item=/media/17159-tr4471pdf.pdf["*TR-4471: Best Practices with Veeam Backup and Replication*"^] | https://www.netapp.com/pdf.html?item=/media/16433-tr-4704pdf.pdf["*TR-4704: Implementazione di Veritas NetBackup con NetApp e-Series Storage*"^] 
+
+
+| Descrive l'architettura di riferimento e le Best practice per l'utilizzo dello storage NetApp e-Series in un ambiente CommVault Data Platform V11. | Descrive l'architettura di riferimento e le Best practice per l'utilizzo dello storage NetApp e-Series in un ambiente Veeeam Backup & Replication 9.5. | Descrive l'implementazione di Veritas NetBackup su storage NetApp e-Series. 
+|===
+
+
+== VSS
+
+[cols="9,9,9"]
+|===
+
+
+| https://www.netapp.com/pdf.html?item=/media/17200-tr4825pdf.pdf["*TR-4825: Guida alle Best practice di NetApp e-Series per la videosorveglianza*"^] | https://www.netapp.com/pdf.html?item=/media/6143-tr4818pdf.pdf["*TR-4818: Virtualizzazione dei sistemi di gestione video con lo storage NetApp e-Series*"^] | https://www.netapp.com/pdf.html?item=/media/19400-tr-4848.pdf["*TR-4848: Soluzione di registrazione video Bosch con array di storage su disco NetApp e-Series E2800*"^] 
+
+
+| Descrive le Best practice per l'implementazione degli array e-Series negli ambienti di videosorveglianza. | Descrive come progettare e implementare sistemi di gestione video con lo storage NetApp e-Series. | Descrive l'architettura della soluzione di videosorveglianza e include dettagli sui componenti e sulle Best practice per lo storage. 
+
+
+| https://www.netapp.com/pdf.html?item=/media/19427-tr-4838.pdf&v=2020106216["*TR-4838: E2800 ed E5700 con Milestone XProtect VMS Certification Report*"^] | https://www.netapp.com/media/17106-tr4771design.pdf["*TR-4771-DESIGN: Software di gestione video NetApp e-Series e Genetec*"^] |  
+
+
+| Descrive i risultati dei test di certificazione eseguiti sugli array di storage ibridi NetApp E2800 e E5700. | Descrive i risultati della certificazione del software di gestione video (VMS) Genetec Security Center sugli array di storage ibridi NetApp E2800 e E5700. |  
+|===
+
+
+== HPC
+
+[cols="9,9,9"]
+|===
+
+
+| https://www.netapp.com/pdf.html?item=/media/31665-tr-4884.pdf["*TR-4884: Sistemi HPC entry-level con NetApp e-Series e IBM Spectrum Scale*"^] | https://www.netapp.com/pdf.html?item=/media/22029-tr-4859.pdf["*TR-4859: Implementazione di IBM Spectrum Scale con lo storage NetApp e-Series*"^] | https://www.netapp.com/pdf.html?item=/media/19407-tr-4856-deploy.pdf["*TR-4856: Alta disponibilità di BeeGFS con e-Series con Red Hat Enterprise Linux Server*"^] 
+
+
+| Descrive l'architettura di riferimento per i sistemi HPC entry-level basati sui sistemi storage NetApp e-Series e IBM Spectrum Scale. | Descrive il processo di implementazione di una soluzione di file system completamente parallela basata sullo stack software Spectrum Scale di IBM. | Descrive le configurazioni richieste per l'implementazione dell'alta disponibilità in un'architettura BeeGFS supportata dal sistema NetApp e-Series e utilizzando RedHat Enterprise Linux per i servizi di storage, metadati e gestione BeeGFS. 
+
+
+|  |  |  
+
+
+|  |  |  
+
+
+| https://www.netapp.com/pdf.html?item=/media/19431-tr-4862.pdf["*TR-4862: Alta disponibilità di BeeGFS con e-Series con SUSE Linux Enterprise Server*"^] |  |  
+
+
+| Descrive le configurazioni richieste per l'implementazione dell'alta disponibilità in un'architettura BeeGFS supportata dal sistema NetApp e-Series e utilizzando SUSE Linux Enterprise Server per i servizi di storage, metadati e gestione BeeGFS. |  |  
+|===

@@ -1,0 +1,117 @@
+---
+permalink: config-vmware/sas-perform-specific-task.html 
+sidebar: sidebar 
+keywords: sas, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Per il protocollo SAS, determinare gli indirizzi delle porte host ed effettuare le impostazioni consigliate. 
+---
+= Eseguire attività specifiche di SAS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per il protocollo SAS, determinare gli indirizzi delle porte host ed effettuare le impostazioni consigliate.
+
+
+
+== Fase 1: Determinare gli identificatori host SAS - VMware
+
+Individuare gli indirizzi SAS utilizzando l'utility HBA, quindi utilizzare il BIOS HBA per definire le impostazioni di configurazione appropriate.
+
+.A proposito di questa attività
+Consulta le linee guida per le utility HBA:
+
+* La maggior parte dei vendor HBA offre un'utility HBA.
+* Le porte i/o host potrebbero essere registrate automaticamente se è installato l'agente di contesto host.
+
+
+.Fasi
+. Scaricare l'utility HBA dal sito Web del vendor HBA.
+. Installare l'utility.
+. Utilizzare il BIOS HBA per selezionare le impostazioni appropriate per la configurazione.
++
+Per le impostazioni appropriate, vedere la colonna Note di http://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"^] per consigli.
+
+
+
+
+
+== Fase 2: Registrare la configurazione
+
+È possibile generare e stampare un PDF di questa pagina, quindi utilizzare il seguente foglio di lavoro per registrare le informazioni di configurazione dello storage specifiche del protocollo. Queste informazioni sono necessarie per eseguire le attività di provisioning.
+
+image::../media/sas_topology_diagram_conf-vmw.gif[Diagramma: Topologia SAS]
+
+
+
+=== Identificatori host
+
+|===
+| N. didascalia | Connessioni porta host (iniziatore) | Indirizzo SAS 
+
+
+ a| 
+1
+ a| 
+Host
+ a| 
+_non applicabile_
+
+
+
+ a| 
+2
+ a| 
+Porta host (iniziatore) 1 collegata al controller A, porta 1
+ a| 
+
+
+
+ a| 
+3
+ a| 
+Porta host (iniziatore) 1 collegata al controller B, porta 1
+ a| 
+
+
+
+ a| 
+4
+ a| 
+Porta host (iniziatore) 2 collegata al controller A, porta 1
+ a| 
+
+
+
+ a| 
+5
+ a| 
+Porta host (iniziatore) 2 collegata al controller B, porta 1
+ a| 
+
+|===
+
+
+=== Identificatori di destinazione
+
+Le configurazioni consigliate sono costituite da due porte di destinazione.
+
+
+
+=== Nome host di mapping
+
+|===
+
+
+ a| 
+Nome host di mapping
+ a| 
+
+
+
+ a| 
+Tipo di sistema operativo host
+ a| 
+
+|===

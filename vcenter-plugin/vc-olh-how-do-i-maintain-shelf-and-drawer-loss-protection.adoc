@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-how-do-i-maintain-shelf-and-drawer-loss-protection.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Mantenere la protezione contro le perdite di shelf e cassetti per un pool o un gruppo di volumi 
+---
+= Come posso mantenere la protezione contro la perdita di scaffali e cassetti?
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Per mantenere la protezione contro le perdite di shelf e cassetti per un pool o un gruppo di volumi, utilizzare i criteri specificati nella tabella seguente.
+
+|===
+| Livello | Criteri per la protezione contro le perdite di scaffali/cassetti | Numero minimo di shelf/cassetti richiesti 
+
+
+| Piscina | Per gli shelf, il pool non deve contenere più di due dischi in un singolo shelf. Per i cassetti, il pool deve includere un numero uguale di unità da ciascun cassetto. | 6 per i ripiani 5 per i cassetti 
+
+
+| RAID 6 | Il gruppo di volumi non contiene più di due dischi in un singolo shelf o cassetto. | 3 
+
+
+| RAID 3 o RAID 5 | Ciascuna unità del gruppo di volumi si trova in uno shelf o in un cassetto separato. | 3 
+
+
+| RAID 1 | Ogni disco di una coppia mirrorata deve essere collocato in uno shelf o in un cassetto separato. | 2 
+
+
+| RAID 0 | Impossibile ottenere la protezione contro la perdita di scaffali/cassetti. | Non applicabile 
+|===
+
+NOTE: La protezione contro le perdite di shelf/cassetto non viene mantenuta se un disco si è già guastato nel pool o nel gruppo di volumi. In questa situazione, la perdita dell'accesso a uno shelf o a un cassetto di dischi e, di conseguenza, a un altro disco nel pool o nel gruppo di volumi causa la perdita di dati.

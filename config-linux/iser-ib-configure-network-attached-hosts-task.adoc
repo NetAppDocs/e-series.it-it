@@ -1,0 +1,168 @@
+---
+permalink: config-linux/iser-ib-configure-network-attached-hosts-task.html 
+sidebar: sidebar 
+keywords: configure network Linux, configure hosts linux, express linux configuration, linux host, 
+summary: 'Lo stack di driver InfiniBand OFED supporta l"esecuzione simultanea di iSER e SRP sulle stesse porte, pertanto non è necessario alcun hardware aggiuntivo.' 
+---
+= Configurare il networking per gli host collegati allo storage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se la configurazione utilizza il protocollo iSER su InfiniBand, eseguire la procedura descritta in questa sezione.
+
+Lo stack di driver InfiniBand OFED supporta l'esecuzione simultanea di iSER e SRP sulle stesse porte, pertanto non è necessario alcun hardware aggiuntivo.
+
+.Di cosa hai bisogno
+Un OFED consigliato da NetApp installato sul sistema. Per ulteriori informazioni, consultare https://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"^].
+
+.Fasi
+. Abilitare e avviare i servizi iSCSI sugli host:
++
+*Red Hat Enterprise Linux 7, 8 e 9 (RHEL 7, RHEL 8 e RHEL 9)*
+
++
+[listing]
+----
+
+# systemctl start iscsi
+# systemctl start iscsid
+# systemctl enable iscsi
+# systemctl enable iscsid
+----
++
+*SUSE Linux Enterprise Server 12 e 15 (SLES 12 e SLES 15)*
+
++
+[listing]
+----
+
+# systemctl start iscsid.service
+# systemctl enable iscsid.service
+----
+. Configurare le interfacce di rete della scheda InfiniBand:
++
+.. Identificare le porte InfiniBand che verranno utilizzate. Documentare l'indirizzo HW (indirizzo MAC) di ciascuna porta.
+.. Configurare i nomi persistenti per i dispositivi di interfaccia di rete InfiniBand.
+.. Configurare l'indirizzo IP e le informazioni di rete per le interfacce InfiniBand identificate.
++
+La configurazione specifica dell'interfaccia richiesta potrebbe variare a seconda del sistema operativo utilizzato. Consultare la documentazione del sistema operativo del vendor per informazioni specifiche sull'implementazione.
+
+.. Avviare le interfacce di rete IB riavviando il servizio di rete o riavviando manualmente ciascuna interfaccia. Ad esempio:
++
+[listing]
+----
+systemctl restart network
+----
+.. Verificare la connettività alle porte di destinazione. Dall'host, eseguire il ping degli indirizzi IP configurati durante la configurazione delle connessioni di rete.
+
+
+. Riavviare i servizi per caricare il modulo iSER.
+. Modificare le impostazioni iSCSI in /etc/iscsi/iscsid.conf
++
+[listing]
+----
+node.startup = automatic
+replacement_timeout = 20
+----
+. Creare configurazioni di sessione iSCSI:
++
+.. Creare file di configurazione iface per ogni interfaccia InfiniBand.
++
+
+NOTE: La posizione della directory per i file iface iSCSI dipende dal sistema operativo. Questo esempio è per l'utilizzo di Red Hat Enterprise Linux:
+
++
+[listing]
+----
+iscsiadm -m iface -I iser > /var/lib/iscsi/ifaces/iface-ib0
+iscsiadm -m iface -I iser > /var/lib/iscsi/ifaces/iface-ib1
+----
+.. Modificare ciascun file iface per impostare il nome dell'interfaccia e l'IQN dell'iniziatore. Impostare i seguenti parametri in modo appropriato per ogni file iface:
++
+|===
+| Opzione | Valore 
+
+
+ a| 
+iface.net_ifacename
+ a| 
+Il nome del dispositivo di interfaccia (es. ib0).
+
+
+
+ a| 
+iface.initiatorname
+ a| 
+L'iniziatore host IQN documentato nel foglio di lavoro.
+
+|===
+.. Creare sessioni iSCSI per la destinazione.
++
+Il metodo preferito per creare le sessioni consiste nell'utilizzare il metodo di ricerca SendTargets. Tuttavia, questo metodo non funziona su alcune versioni del sistema operativo.
+
++
+
+NOTE: Utilizzare *Method 2* per RHEL 6.x o SLES 11.3 o versione successiva.
+
++
+*** *Metodo 1 - rilevamento SendTargets:* utilizzare il meccanismo di rilevamento SendTargets per uno degli indirizzi IP del portale di destinazione. In questo modo verranno create sessioni per ciascuno dei portali di destinazione.
++
+[listing]
+----
+iscsiadm -m discovery -t st -p 192.168.130.101 -I iser
+----
+*** *Metodo 2 - creazione manuale:* per ogni indirizzo IP del portale di destinazione, creare una sessione utilizzando la configurazione appropriata dell'interfaccia host iface. In questo esempio, l'interfaccia ib0 si trova sulla subnet A e l'interfaccia ib1 sulla subnet B. Per queste variabili, sostituire il valore appropriato dal foglio di lavoro:
++
+**** <Target IQN> = IQN di destinazione dello storage array
+**** <Target Port IP> = indirizzo IP configurato sulla porta di destinazione specificata
+
+
+
+
+
+
++
+[listing]
+----
+# Controller A Port 1
+iscsiadm -m node --target <Target IQN> -I iface-ib0 -p <Target Port IP\> -l -o new
+# Controller B Port 1
+iscsiadm -m node --target <Target IQN> -I iface-ib0 -p <Target Port IP\> -l -o new
+# Controller A Port 2
+iscsiadm -m node --target <Target IQN> -I iface-ib1 -p <Target Port IP\> -l -o new
+# Controller B Port 2
+iscsiadm -m node --target <Target IQN> -I iface-ib1 -p <Target Port IP\> -l -o new
+----
+. Accedere alle sessioni iSCSI.
++
+Per ogni sessione, eseguire il comando iscsiadm per accedere alla sessione.
+
++
+[listing]
+----
+# Controller A Port 1
+iscsiadm -m node --target <Target IQN> -I iface-ib0 -p <Target Port IP\> -l
+# Controller B Port 1
+iscsiadm -m node --target <Target IQN> -I iface-ib0 -p <Target Port IP\> -l
+# Controller A Port 2
+iscsiadm -m node --target <Target IQN> -I iface-ib1 -p <Target Port IP\> -l
+# Controller B Port 2
+iscsiadm -m node --target <Target IQN> -I iface-ib1 -p <Target Port IP\> -l
+----
+. Verificare le sessioni iSER/iSCSI.
++
+.. Controllare lo stato della sessione iscsi dall'host:
++
+[listing]
+----
+iscsiadm -m session
+----
+.. Controllare lo stato della sessione iscsi dall'array. Da Gestore di sistema SANtricity, selezionare *array di storage* > *iSER* > *Visualizza/termina sessioni*.
+
+
+
+
+All'avvio del servizio OFED/RDMA, i moduli kernel iSER vengono caricati per impostazione predefinita quando i servizi iSCSI sono in esecuzione. Per completare la configurazione della connessione iSER, è necessario caricare i moduli iSER. Attualmente richiede un riavvio dell'host.

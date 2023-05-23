@@ -1,0 +1,73 @@
+---
+permalink: vcenter-plugin/san-spvc-ic-reqs.html 
+sidebar: sidebar 
+keywords: upgrade vCenter 
+summary: Requisiti di installazione e aggiornamento e considerazioni per il plug-in vCenter. 
+---
+= Verifica dei requisiti di installazione e aggiornamento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di installare o aggiornare il plug-in di storage SANtricity per vCenter, esaminare i requisiti di installazione e le considerazioni sull'aggiornamento.
+
+
+
+== Requisiti di installazione
+
+È possibile installare e configurare Storage Plugin per vCenter su un sistema host Windows. L'installazione del plug-in include i seguenti requisiti.
+
+[cols="35h,~"]
+|===
+| Requisito | Descrizione 
+
+
+ a| 
+Versioni supportate
+ a| 
+* Versioni supportate di VMware vCenter Server Appliance: 6.7U3J, 7.0U1, 7.0U2, 7.0U3 e 8.0.
+* Versione del sistema operativo NetApp SANtricity: 11.60.2 o superiore
+* Versioni degli host delle applicazioni supportate: Windows 2016, Windows 2019, Windows 2022.
+
+
+Per ulteriori informazioni sulla compatibilità, consultare http://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"^].
+
+
+
+ a| 
+Istanze multiple
+ a| 
+È possibile installare solo un'istanza di Storage Plugin per vCenter su un host Windows e registrarla solo su un vCSA.
+
+
+
+ a| 
+Pianificazione della capacità
+ a| 
+Storage Plugin per vCenter richiede uno spazio adeguato per l'esecuzione e la registrazione. Assicurarsi che il sistema soddisfi i seguenti requisiti di spazio disponibile su disco:
+
+* Spazio di installazione richiesto: 275 MB
+* Spazio di storage: 275 MB + 200 MB (registrazione)
+* Memoria di sistema: 512 MB
+
+
+
+
+ a| 
+Licenza
+ a| 
+Lo Storage Plugin per vCenter è un prodotto standalone gratuito che non richiede una chiave di licenza. Tuttavia, si applicano i copyright e i termini del servizio applicabili.
+
+|===
+
+
+== Considerazioni sull'upgrade
+
+Se si esegue l'aggiornamento da una versione precedente, tenere presente che il plug-in deve essere disregistrato da vCSA prima dell'aggiornamento.
+
+* Durante l'aggiornamento, la maggior parte delle impostazioni di configurazione precedenti del plug-in vengono mantenute. Queste impostazioni includono password utente, tutti i sistemi di storage rilevati, certificati server, certificati attendibili e configurazione del runtime del server.
+* Il processo di aggiornamento non conserva i file *vcenter.properties*, pertanto è necessario annullare la registrazione del plug-in prima dell'aggiornamento. Una volta completato l'aggiornamento, è possibile registrare nuovamente il plug-in nella vCSA.
+* Tutti i file SANtricity OS precedentemente caricati nel repository vengono rimossi durante l'aggiornamento.
+

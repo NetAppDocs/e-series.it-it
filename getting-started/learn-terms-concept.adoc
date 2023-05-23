@@ -1,0 +1,144 @@
+---
+permalink: getting-started/learn-terms-concept.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, terms 
+summary: Scopri di più sui termini utilizzati in e-Series. 
+---
+= Terminologia e-Series
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Scopri di più sui termini utilizzati in e-Series.
+
+|===
+| Termine | Descrizione 
+
+
+ a| 
+controller
+ a| 
+Un controller è costituito da una scheda, firmware e software. Controlla i dischi e implementa le funzioni.
+
+
+
+ a| 
+configurazioni duplex/simplex
+ a| 
+Il duplex è una configurazione a due moduli controller all'interno dello storage array. Simplex è una configurazione a modulo controller singolo.
+
+
+
+ a| 
+DISCO RIGIDO
+ a| 
+I dischi rigidi (HDD) sono dispositivi di storage dei dati che utilizzano dischi metallici rotanti con rivestimento magnetico.
+
+
+
+ a| 
+HIC
+ a| 
+Una scheda di interfaccia host (HIC) collega l'array all'host. Può essere installato in via opzionale all'interno di un contenitore del controller.
+
+
+
+ a| 
+IB
+ a| 
+InfiniBand (IB) è uno standard di comunicazione per la trasmissione dei dati tra server e sistemi storage dalle performance elevate.
+
+
+
+ a| 
+IOPS
+ a| 
+Gli IOPS sono operazioni di input/output al secondo.
+
+
+
+ a| 
+mirroring
+ a| 
+Il mirroring è la replica dei volumi di dati su storage array separati per garantire la disponibilità continua.
+
+
+
+ a| 
+piscina
+ a| 
+Un pool è un insieme di dischi raggruppati in modo logico. È possibile utilizzare un pool per creare uno o più volumi accessibili a un host.
+
+
+
+ a| 
+alimentazione/filtro a carboni attivi della ventola
+ a| 
+Un contenitore di alimentazione/ventola è un gruppo che scorre in un ripiano. Include un alimentatore e una ventola integrata.
+
+
+
+ a| 
+Unità rack (U)
+ a| 
+Un'unità rack (abbreviata U) è un'unità di misura definita come 44.50 millimetri (1.75 pollici).
+
+
+
+ a| 
+SAS
+ a| 
+Serial Attached SCSI (SAS) è un protocollo seriale point-to-point che collega i controller direttamente ai dischi.
+
+
+
+ a| 
+ROCE
+ a| 
+RDMA over Converged Ethernet (RoCE) è un protocollo di rete che consente l'accesso remoto diretto alla memoria (RDMA) su una rete Ethernet.
+
+
+
+ a| 
+shelf
+ a| 
+Uno shelf è un enclosure installato in un cabinet o in un rack. Contiene i componenti hardware per lo storage array. Esistono due tipi di shelf: Uno shelf di controller e uno shelf di dischi. Uno shelf di controller include controller e dischi. Uno shelf di dischi include i moduli di input/output (IOM) e i dischi.
+
+
+
+ a| 
+snapshot
+ a| 
+Un'immagine snapshot è una copia logica dei dati del volume, acquisita in un determinato momento. Come un punto di ripristino, le immagini Snapshot consentono di eseguire il rollback a un set di dati sicuramente funzionante.
+
+
+
+ a| 
+SSD
+ a| 
+I dischi a stato solido (SSD) sono dispositivi di storage che utilizzano la memoria a stato solido (flash) per memorizzare i dati in modo persistente. Gli SSD emulano i dischi rigidi convenzionali e sono disponibili con le stesse interfacce utilizzate dai dischi rigidi.
+
+
+
+ a| 
+array di storage
+ a| 
+Uno storage array include shelf, controller, dischi, software e firmware.
+
+
+
+ a| 
+volume
+ a| 
+Un volume è un container in cui applicazioni, database e file system memorizzano i dati. Si tratta del componente logico creato per consentire all'host di accedere allo storage sull'array di storage.
+
+
+
+ a| 
+carico di lavoro
+ a| 
+Un workload è un oggetto storage che supporta un'applicazione. Per alcune applicazioni, System Manager configura il carico di lavoro in modo che contenga volumi con caratteristiche di volume sottostanti simili. Queste caratteristiche dei volumi sono ottimizzate in base al tipo di applicazione supportata dal carico di lavoro.
+
+|===

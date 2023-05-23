@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-add-storage-array-to-group.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Aggiungere uno o più array di storage a un gruppo creato dall"utente.' 
+---
+= Aggiungere array di storage al gruppo
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile aggiungere uno o più array di storage a un gruppo creato dall'utente.
+
+*Fasi*
+
+. Dalla vista principale, selezionare *Gestisci*, quindi selezionare il gruppo a cui si desidera aggiungere gli array di storage.
+. Selezionare menu:Manage Groups[Add storage array to group] (Gestisci gruppi[Aggiungi array di storage al gruppo]).
+. Selezionare gli array di storage che si desidera aggiungere al gruppo.
+. Fare clic su *Aggiungi*.
+

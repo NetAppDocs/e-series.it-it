@@ -1,0 +1,104 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-create-host-access.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Per gestire lo storage con Storage Plugin per vCenter, è necessario individuare o definire ciascun host della rete. 
+---
+= Creare l'accesso all'host
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Per gestire lo storage con Storage Plugin per vCenter, è necessario individuare o definire ciascun host della rete.
+
+.A proposito di questa attività
+Creando un host, si definiscono i parametri host per fornire la connessione allo storage array e l'accesso i/o ai volumi.
+
+È possibile consentire all'HCA (host Context Agent) di rilevare automaticamente gli host, quindi verificare che le informazioni siano corrette selezionando *Visualizza/Modifica impostazioni* dalla pagina Configura host. Tuttavia, l'HCA non è disponibile su tutti i sistemi operativi supportati ed è necessario creare l'host manualmente.
+
+Quando si crea un host, tenere presenti le seguenti linee guida:
+
+* È necessario definire le porte di identificazione host associate all'host.
+* Assicurarsi di fornire lo stesso nome del nome di sistema assegnato all'host.
+* Questa operazione non riesce se il nome scelto è già in uso.
+* La lunghezza del nome non può superare i 30 caratteri.
+
+
+.Fasi
+. Dalla pagina Manage (Gestione), selezionare lo storage array con la connessione host.
+. Selezionare menu:Provisioning[Configure hosts] (Configura host).
++
+Viene visualizzata la pagina Configure hosts (Configura host).
+
+. Fare clic sul menu:Create[host] (Crea[host]).
++
+Viene visualizzata la finestra di dialogo Create host (Crea host).
+
+. Selezionare le impostazioni per l'host in base alle esigenze.
++
+.Dettagli campo
+[%collapsible]
+====
+[cols="25h,~"]
+|===
+| Impostazione | Descrizione 
+
+
+ a| 
+Nome
+ a| 
+Digitare un nome per il nuovo host.
+
+
+
+ a| 
+Tipo di sistema operativo host
+ a| 
+Selezionare il sistema operativo in esecuzione sul nuovo host dall'elenco a discesa.
+
+
+
+ a| 
+Tipo di interfaccia host
+ a| 
+(Facoltativo) se si dispone di più tipi di interfaccia host supportati sull'array di storage, selezionare il tipo di interfaccia host che si desidera utilizzare.
+
+
+
+ a| 
+Porte host
+ a| 
+Effettuare una delle seguenti operazioni:
+
+** *Selezionare l'interfaccia i/o* -- in genere, le porte host devono essere state registrate ed essere disponibili dall'elenco a discesa. È possibile selezionare gli identificatori della porta host dall'elenco.
+** *Aggiunta manuale* -- se un identificatore di porta host non viene visualizzato nell'elenco, significa che la porta host non ha effettuato l'accesso. È possibile utilizzare un'utility HBA o l'utility iSCSI Initiator per individuare gli identificatori delle porte host e associarli all'host. È possibile inserire manualmente gli identificatori della porta host o copiarli/incollarli dall'utility (uno alla volta) nel campo host ports (Porte host). È necessario selezionare un identificatore di porta host alla volta per associarlo all'host, ma è possibile continuare a selezionare tutti gli identificatori associati all'host. Ciascun identificatore viene visualizzato nel campo host ports (Porte host). Se necessario, è anche possibile rimuovere un identificatore selezionando la *X* accanto.
+
+
+
+
+ a| 
+Impostare CHAP Initiator secret
+ a| 
+(Facoltativo) se si seleziona o si immette manualmente una porta host con un IQN iSCSI e si desidera richiedere a un host che tenta di accedere allo storage array per l'autenticazione mediante Challenge Handshake Authentication Protocol (CHAP), selezionare la casella di controllo "Set CHAP Initiator secret" (Imposta CHAP initiator secret). Per ogni porta host iSCSI selezionata o inserita manualmente, procedere come segue:
+
+** Immettere lo stesso segreto CHAP impostato su ciascun iniziatore host iSCSI per l'autenticazione CHAP. Se si utilizza l'autenticazione CHAP reciproca (autenticazione bidirezionale che consente a un host di validarsi nell'array di storage e a un array di storage di validarsi nell'host), è necessario impostare anche il segreto CHAP per l'array di storage durante la configurazione iniziale o modificando le impostazioni.
+** Lasciare vuoto il campo se non si richiede l'autenticazione dell'host. Attualmente, l'unico metodo di autenticazione iSCSI utilizzato è CHAP.
+
+
+|===
+====
+. Fare clic su *Create* (Crea).
+. Per aggiornare le informazioni sull'host, selezionare l'host dalla tabella e fare clic su *View/Edit Settings* (Visualizza/Modifica impostazioni).
+
+
+.Risultato
+Una volta creato correttamente l'host, il sistema crea un nome predefinito per ciascuna porta host configurata per l'host (etichetta utente). L'alias predefinito è `<Hostname_Port Number>`. Ad esempio, l'alias predefinito per la prima porta creata per l'host IPT è `IPT_1`.
+
+.Al termine
+È necessario assegnare un volume a un host in modo che possa essere utilizzato per le operazioni di i/O. Passare a. link:vc-olh-assign-volumes-to-hosts.html["Assegnare volumi agli host"].

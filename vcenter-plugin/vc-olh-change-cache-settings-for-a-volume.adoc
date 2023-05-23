@@ -1,0 +1,70 @@
+---
+sidebar: sidebar 
+summary: È possibile modificare le impostazioni della cache di lettura e di scrittura per influire sulle prestazioni i/o generali di un volume. 
+permalink: vcenter-plugin/vc-olh-change-cache-settings-for-a-volume.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+---
+= Modificare le impostazioni della cache per un volume
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile modificare le impostazioni della cache di lettura e di scrittura per influire sulle prestazioni i/o generali di un volume.
+
+.A proposito di questa attività
+Quando si modificano le impostazioni della cache di un volume, tenere presenti le seguenti linee guida:
+
+* Dopo aver aperto la finestra di dialogo Change cache Settings (Modifica impostazioni cache), potrebbe essere visualizzata un'icona accanto alle proprietà della cache selezionate. Questa icona indica che il controller ha temporaneamente sospeso le operazioni di caching. Questa azione potrebbe verificarsi quando una nuova batteria è in carica, quando un controller è stato rimosso o se il controller ha rilevato una mancata corrispondenza nelle dimensioni della cache. Una volta deselezionata la condizione, le proprietà della cache selezionate nella finestra di dialogo diventano attive. Se le proprietà della cache selezionate non diventano attive, contattare il supporto tecnico.
+* È possibile modificare le impostazioni della cache per un singolo volume o per più volumi su un array di storage. È possibile modificare le impostazioni della cache per tutti i volumi contemporaneamente.
+
+
+.Fasi
+. Nella pagina Manage (Gestione), selezionare l'array di storage contenente i volumi per i quali si desidera modificare le impostazioni della cache.
+. Selezionare menu:Provisioning[Manage Volumes] (Gestione volumi).
+. Selezionare un volume qualsiasi, quindi menu:More[Change cache settings] (Altro[Modifica impostazioni cache]).
++
+Viene visualizzata la finestra di dialogo Change cache Settings (Modifica impostazioni cache). In questa finestra di dialogo vengono visualizzati tutti i volumi dell'array di storage.
+
+. Selezionare la scheda *Basic* per modificare le impostazioni per il caching in lettura e il caching in scrittura.
++
+.Dettagli campo
+[%collapsible]
+====
+[cols="25h,~"]
+|===
+| Impostazione della cache | Descrizione 
+
+
+| Read Caching (cache lettura) | La cache di lettura è un buffer che memorizza i dati letti dai dischi. I dati di un'operazione di lettura potrebbero essere già presenti nella cache di un'operazione precedente, eliminando così la necessità di accedere ai dischi. I dati rimangono nella cache di lettura fino a quando non vengono scaricati. 
+
+
+| Cache di scrittura | La cache di scrittura è un buffer che memorizza i dati dell'host che non sono ancora stati scritti sui dischi. I dati rimangono nella cache di scrittura fino a quando non vengono scritti sui dischi. Il caching in scrittura può aumentare le performance di i/O. La cache viene automaticamente scaricata dopo la disattivazione del caching in scrittura per un volume. 
+|===
+====
+. Selezionare la scheda *Advanced* (Avanzate) per modificare le impostazioni avanzate per i volumi spessi. Le impostazioni avanzate della cache sono disponibili solo per i volumi thick.
++
+.Dettagli campo
+[%collapsible]
+====
+[cols="25h,~"]
+|===
+| Impostazione | Descrizione 
+
+
+| Precaricamento della cache di lettura dinamica | Dynamic cache Read Prefetch consente al controller di copiare ulteriori blocchi di dati sequenziali nella cache durante la lettura dei blocchi di dati da un disco alla cache. Questo caching aumenta la possibilità che le future richieste di dati possano essere compilate dalla cache. Il prefetch dinamico della lettura della cache è importante per le applicazioni multimediali che utilizzano l'i/o sequenziale La velocità e la quantità di dati precaricati nella cache vengono regolate automaticamente in base alla velocità e alle dimensioni della richiesta dell'host. L'accesso casuale non fa sì che i dati vengano precaricati nella cache. Questa funzione non si applica quando il caching in lettura è disattivato. 
+
+
+| Cache di scrittura senza batterie | L'impostazione Write Caching without batteries (cache di scrittura senza batterie) consente di continuare il caching in scrittura anche quando le batterie sono mancanti, guaste, completamente scariche o non completamente cariche. La scelta del caching in scrittura senza batterie non è generalmente consigliata, in quanto i dati potrebbero andare persi in caso di interruzione dell'alimentazione. In genere, il caching in scrittura viene disattivato temporaneamente dal controller fino a quando le batterie non vengono caricate o non viene sostituita una batteria guasta. ATTENZIONE: *Possibile perdita di dati* -- se si seleziona questa opzione e non si dispone di un alimentatore universale per la protezione, si potrebbero perdere i dati. Inoltre, è possibile perdere i dati se non si dispone di batterie del controller e si attiva l'opzione Write caching without batteries (cache di scrittura senza batterie). 
+
+
+| Cache di scrittura con mirroring | Il caching in scrittura con mirroring si verifica quando i dati scritti nella memoria cache di un controller vengono scritti anche nella memoria cache dell'altro controller. Pertanto, se un controller si guasta, l'altro può completare tutte le operazioni di scrittura in sospeso. Il mirroring della cache di scrittura è disponibile solo se il caching di scrittura è attivato e sono presenti due controller. Il caching in scrittura con mirroring è l'impostazione predefinita alla creazione del volume. 
+|===
+====
+. Fare clic su *Save* (Salva) per modificare le impostazioni della cache.
+

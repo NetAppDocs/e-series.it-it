@@ -1,0 +1,61 @@
+---
+permalink: web-services-proxy/overview-compat-concept.html 
+sidebar: sidebar 
+keywords: Web Services, WSP, SANtricity API, 
+summary: Compatibilità e limitazioni per WSP. 
+---
+= Compatibilità e limitazioni
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'utilizzo del proxy dei servizi Web è soggetto alle seguenti limitazioni e compatibilità.
+
+|===
+| Considerazione | Compatibilità o restrizione 
+
+
+ a| 
+Supporto HTTP
+ a| 
+Il proxy dei servizi Web consente l'utilizzo di HTTP o HTTPS. (La versione integrata dei servizi Web richiede HTTPS per motivi di sicurezza).
+
+
+
+ a| 
+Sistemi storage e firmware
+ a| 
+Il proxy dei servizi Web è in grado di gestire tutti i sistemi storage e-Series, tra cui una combinazione di sistemi meno recenti e gli ultimi E2800, EF280, E5700, EF570, EF300, E sistemi della serie EF600.
+
+
+
+ a| 
+Supporto IP
+ a| 
+Il proxy dei servizi Web supporta il protocollo IPv4 o IPv6.
+
+
+NOTE: Il protocollo IPv6 potrebbe non funzionare quando il proxy dei servizi Web tenta di rilevare automaticamente l'indirizzo di gestione dalla configurazione del controller. Le possibili cause dell'errore includono problemi durante l'inoltro dell'indirizzo IP o l'attivazione di IPv6 sui sistemi storage ma non sul server.
+
+
+
+ a| 
+NVSRAM file name limits
+ a| 
+Il proxy dei servizi Web utilizza i nomi dei file NVSRAM per identificare accuratamente le informazioni sulla versione. Pertanto, non è possibile modificare I nomi dei file NVSRAM quando vengono utilizzati con il proxy dei servizi Web. Il proxy dei servizi Web potrebbe non riconoscere un file NVSRAM rinominato come file firmware valido.
+
+
+
+ a| 
+Web di Symbol
+ a| 
+Symbol Web è un URL nell'API REST. Consente di accedere a quasi tutte le chiamate Symbol. La funzione Symbol fa parte del seguente URL:
+
+`+http://host:port/devmgr/storage-system/storage array ID/symbol/symbol function+`
+
+
+NOTE: I sistemi storage disabilitati da Symbol sono supportati tramite il proxy dei servizi Web.
+
+|===

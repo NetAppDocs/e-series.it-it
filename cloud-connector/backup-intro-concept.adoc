@@ -1,0 +1,194 @@
+---
+permalink: cloud-connector/backup-intro-concept.html 
+sidebar: sidebar 
+keywords: Cloud Connector backup 
+summary: 'Puoi accedere all"opzione Backup nel pannello di navigazione a sinistra dell"applicazione SANtricity Cloud Connector. L"opzione Backup visualizza la pagina Backup, che consente di creare nuovi processi di backup basati su immagine o file.' 
+---
+= Backup
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puoi accedere all'opzione Backup nel pannello di navigazione a sinistra dell'applicazione SANtricity Cloud Connector. L'opzione Backup visualizza la pagina Backup, che consente di creare nuovi processi di backup basati su immagine o file.
+
+Utilizzare la pagina *backup* dell'applicazione SANtricity Cloud Connector per creare ed elaborare i backup dei volumi e-Series. È possibile creare backup basati su immagini o file ed eseguire tali operazioni immediatamente o in un secondo momento. Inoltre, è possibile scegliere di eseguire backup completi o incrementali in base all'ultimo backup completo eseguito. È possibile eseguire un massimo di sei backup incrementali in base all'ultimo backup completo eseguito tramite l'applicazione SANtricity Cloud Connector.
+
+
+NOTE: Tutti i timestamp per i processi di backup e ripristino elencati nell'applicazione SANtricity Cloud Connector utilizzano l'ora locale.
+
+
+
+== Creare un nuovo backup basato su immagine
+
+È possibile creare nuovi backup basati su immagini tramite la funzione Crea nella pagina dei backup dell'applicazione SANtricity Cloud Connector.
+
+.Prima di iniziare
+Assicurarsi di disporre di array di storage dal proxy dei servizi Web registrato al connettore cloud di SANtricity.
+
+.Fasi
+. Nella pagina Backup, fare clic su *Crea*.
++
+Viene visualizzata la finestra Create Backup (Crea backup).
+
+. Selezionare *Crea un backup basato su immagine*.
+. Fare clic su *Avanti*.
++
+Nella finestra Create Backup (Crea backup) viene visualizzato un elenco dei volumi e-Series disponibili.
+
+. Selezionare il volume e-Series desiderato e fare clic su *Avanti*.
++
+Viene visualizzata la pagina *assegnare un nome al backup e fornire una descrizione* della finestra di conferma della creazione del backup.
+
+. Per modificare il nome del backup generato automaticamente, immettere il nome desiderato nel campo *Nome processo*.
+. Se necessario, aggiungere una descrizione per il backup nel campo *Descrizione lavoro*.
++
+
+NOTE: Inserire una descrizione del lavoro che consenta di identificare facilmente il contenuto del backup.
+
+. Fare clic su *Avanti*.
++
+Un riepilogo del backup basato su immagine selezionato viene visualizzato nella pagina *Review backup information* della finestra Create Backup (Crea backup).
+
+. Esaminare il backup selezionato e fare clic su *fine*.
++
+Viene visualizzata la pagina di conferma della finestra Create Backup (Crea backup).
+
+. Selezionare una delle seguenti opzioni:
++
+** *Sì* -- Avvia un backup completo per il backup selezionato.
+** *NO* -- non viene eseguito Un backup completo per il backup basato sull'immagine selezionato.
++
+
+NOTE: Un backup completo per il backup basato sull'immagine selezionato può essere eseguito in un secondo momento attraverso la funzione Esegui nella pagina Backup.
+
+
+
+. Fare clic su *OK*.
++
+Il backup per il volume e-Series selezionato viene avviato e lo stato dell'attività viene visualizzato nella sezione Result list (elenco risultati) della pagina Backup.
+
+
+
+
+
+== Creare una nuova cartella/backup basato su file
+
+È possibile creare nuovi backup basati su file/cartelle tramite la funzione Crea nella pagina dei backup dell'applicazione SANtricity Cloud Connector.
+
+.Prima di iniziare
+Assicurarsi di disporre di array di storage dal proxy dei servizi Web registrato al connettore cloud di SANtricity.
+
+Un backup basato su file esegue il backup incondizionato di tutti i file sul file system specificato. Tuttavia, è possibile eseguire un ripristino selettivo di file e cartelle.
+
+.Fasi
+. Nella pagina Backup, fare clic su *Crea*.
++
+Viene visualizzata la finestra Create Backup (Crea backup).
+
+. Selezionare *Crea un backup basato su file/cartella*.
+. Fare clic su *Avanti*.
++
+Nella finestra Create Backup (Crea backup) viene visualizzato un elenco di volumi contenenti file system disponibili per il backup.
+
+. Selezionare il volume desiderato e fare clic su *Avanti*.
++
+Nella finestra Create Backup (Crea backup) viene visualizzato un elenco dei filesystem disponibili sul volume selezionato.
+
++
+
+NOTE: Se il file system non viene visualizzato, verificare che il tipo di file sia supportato dall'applicazione SANtricity Cloud Connector. Per ulteriori informazioni, fare riferimento a. link:learn-intro-concept.html#supported-file-systems["File system supportati"].
+
+. Selezionare il file system desiderato contenente la cartella o i file di cui eseguire il backup e fare clic su *Avanti*.
++
+Viene visualizzata la pagina *assegnare un nome al backup e fornire una descrizione* della finestra di conferma della creazione del backup.
+
+. Per modificare il nome del backup generato automaticamente, immettere il nome desiderato nel campo *Nome processo*.
+. Se necessario, aggiungere una descrizione per il backup nel campo *Descrizione lavoro*.
++
+
+NOTE: Inserire una descrizione del lavoro che consenta di identificare facilmente il contenuto del backup.
+
+. Fare clic su *Avanti*.
++
+Un riepilogo del backup basato su file o cartella selezionato viene visualizzato nella pagina *Review backup information* della finestra Create Backup (Crea backup).
+
+. Esaminare la cartella o il backup basato su file selezionato e fare clic su *fine*.
++
+Viene visualizzata la pagina di conferma della finestra Create Backup (Crea backup).
+
+. Selezionare una delle seguenti opzioni:
++
+** *Sì* -- Avvia un backup completo per il backup selezionato.
+** *NO* -- non viene eseguito Un backup completo per il backup selezionato.
++
+
+NOTE: Un backup completo per il backup basato su file selezionato può essere eseguito anche in un secondo momento attraverso la funzione Esegui nella pagina dei backup.
+
+
+
+. Fare clic su *Chiudi*.
++
+Il backup per il volume e-Series selezionato viene avviato e lo stato dell'attività viene visualizzato nella sezione Result list (elenco risultati) della pagina Backup.
+
+
+
+
+
+== Eseguire backup completi e incrementali
+
+È possibile eseguire backup completi e incrementali tramite la funzione Esegui nella pagina dei backup. I backup incrementali sono disponibili solo per i backup basati su file.
+
+.Prima di iniziare
+Assicurarsi di aver creato un processo di backup tramite SANtricity Cloud Connector.
+
+.Fasi
+. Nella scheda Backup, selezionare il processo di backup desiderato e fare clic su *Esegui*.
++
+
+NOTE: Il backup completo viene eseguito automaticamente ogni volta che viene selezionato un processo di backup basato su immagine o un processo di backup senza un backup iniziale eseguito in precedenza.
+
++
+Viene visualizzata la finestra Esegui backup.
+
+. Selezionare una delle seguenti opzioni:
++
+** *Completo* -- esegue il backup di tutti i dati per il backup basato su file selezionato.
+** *Incrementale* -- esegue il backup delle modifiche apportate solo dall'ultimo backup eseguito.
++
+
+NOTE: È possibile eseguire un numero massimo di sei backup incrementali in base all'ultimo backup completo eseguito tramite l'applicazione SANtricity Cloud Connector.
+
+
+
+. Fare clic su *Esegui*.
++
+Viene avviata la richiesta di backup.
+
+
+
+
+
+== Eliminare un processo di backup
+
+La funzione Delete (Elimina) elimina i dati di backup nella posizione di destinazione specificata per il backup selezionato insieme al set di backup.
+
+.Prima di iniziare
+Assicurarsi che sia presente un backup con lo stato completato, non riuscito o annullato.
+
+.Fasi
+. Nella pagina Backup, selezionare il backup desiderato e fare clic su *Delete* (Elimina).
++
+
+NOTE: Se si seleziona un backup di base completo per l'eliminazione, vengono eliminati anche tutti i backup incrementali associati.
+
++
+Viene visualizzata la finestra Confirm Delete (Conferma eliminazione).
+
+. Nel campo *Type delete*, digitare `DELETE` per confermare l'azione di eliminazione.
+. Fare clic su *Delete* (Elimina).
++
+Il backup selezionato viene eliminato.
+
+

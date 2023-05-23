@@ -1,0 +1,33 @@
+---
+permalink: config-windows/install-configure-host-utilities-task.html 
+sidebar: sidebar 
+keywords: Windows Unified Host Utilities, express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Installare Windows Unified host Utilities per il metodo Windows Express. 
+---
+= Installare e configurare Windows Unified host Utilities
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gli strumenti di Windows Unified host Utilities consentono di collegare i computer host ai sistemi di storage NetApp e di impostare i parametri richiesti sui computer host. È inoltre possibile impostare i timeout dei dischi appropriati per ottenere le migliori prestazioni di lettura/scrittura con lo storage NetApp.
+
+
+NOTE: Per ulteriori informazioni, consultare la _Guida all'installazione delle utility host di Windows,_ disponibile in http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61343["Documentazione NetApp: Utility host"^].
+
+.Fasi
+. Utilizzare http://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"^] Per determinare la versione appropriata di Unified host Utilities da installare.
++
+Le versioni sono elencate in una colonna all'interno di ciascuna configurazione supportata.
+
+. Scaricare le Unified host Utilities da http://mysupport.netapp.com["Supporto NetApp"^].
++
+
+NOTE: Questo pacchetto di utility non può essere installato utilizzando il programma di installazione di Gestore storage SANtricity.
+
++
+
+NOTE: In alternativa, è possibile utilizzare l'utility SMdevices di SANtricity per eseguire le stesse funzioni dello strumento Unified host Utility. L'utility SMdevices è inclusa nel pacchetto SMutils. Il pacchetto SMutils è una raccolta di utility per verificare ciò che l'host vede dall'array di storage. È incluso nell'installazione del software SANtricity.
+
+

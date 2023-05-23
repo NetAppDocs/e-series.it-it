@@ -1,0 +1,46 @@
+---
+permalink: config-linux/index.html 
+sidebar: sidebar 
+keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Utilizzare la configurazione rapida per un host Linux con un sistema e-Series. 
+---
+= Panoramica sulla configurazione di Linux Express
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il metodo Linux Express per l'installazione dello storage array e l'accesso a Gestore di sistema SANtricity è appropriato per la configurazione di un host Linux standalone su un sistema storage e-Series. È progettato per rendere operativo il sistema storage il più rapidamente possibile, con un numero minimo di punti decisionali.
+
+
+
+== Panoramica della procedura
+
+Il metodo Linux Express include i seguenti passaggi.
+
+. Configurare uno dei seguenti ambienti di comunicazione:
++
+** Fibre Channel (FC)
+** ISCSI
+** SAS
+** Iiser su Infiniband
+** SRP su Infiniband
+** NVMe su Infiniband
+** NVMe su RoCE
+** NVMe su Fibre Channel
+
+
+. Creare volumi logici sull'array di storage.
+. Rendere i volumi disponibili per l'host dati.
+
+
+
+
+== Trova ulteriori informazioni
+
+* Guida in linea -- descrive come utilizzare Gestione di sistema di SANtricity per completare le attività di configurazione e gestione dello storage. È disponibile all'interno del prodotto.
+* https://kb.netapp.com/["Knowledge base di NetApp"^] (Un database di articoli) -- fornisce informazioni sulla risoluzione dei problemi, FAQ e istruzioni per un'ampia gamma di prodotti e tecnologie NetApp.
+* http://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"^] -- consente di cercare configurazioni di prodotti e componenti NetApp che soddisfino gli standard e i requisiti specificati da NetApp.
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2547936["Guida all'installazione di Linux Unified host Utilities 7.1"^] -- descrive come utilizzare Linux Unified host Utilities 7.1.
+

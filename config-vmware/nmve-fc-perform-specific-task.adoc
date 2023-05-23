@@ -1,0 +1,207 @@
+---
+permalink: config-vmware/nmve-fc-perform-specific-task.html 
+sidebar: sidebar 
+keywords: Nvme over FC, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
+summary: Per il protocollo NVME over Fibre Channel, configurare gli switch e determinare gli identificatori delle porte host. 
+---
+= Eseguire NVMe su attività specifiche di FC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per il protocollo NVMe over Fibre Channel, configurare gli switch e determinare gli identificatori delle porte host.
+
+
+
+== Fase 1: Configurazione degli switch NVMe/FC
+
+La configurazione (zoning) degli switch NVMe over Fibre Channel (FC) consente agli host di connettersi allo storage array e limita il numero di percorsi. Gli switch vengono posizionati in zone utilizzando l'interfaccia di gestione degli switch.
+
+.Di cosa hai bisogno
+* Credenziali di amministratore per gli switch.
+* Il numero WWPN di ciascuna porta di iniziatore host e di ciascuna porta di destinazione del controller collegata allo switch. (Utilizzare l'utility HBA per il rilevamento).
+
+
+
+NOTE: È possibile utilizzare l'utility HBA di un vendor per aggiornare e ottenere informazioni specifiche sull'HBA. Per istruzioni su come ottenere l'utility HBA, consultare la sezione dedicata al supporto del sito Web del vendor.
+
+.A proposito di questa attività
+Ciascuna porta dell'iniziatore deve trovarsi in una zona separata con tutte le porte di destinazione corrispondenti. Per ulteriori informazioni sulla suddivisione in zone degli switch, consultare la documentazione del vendor dello switch.
+
+.Fasi
+. Accedere al programma di amministrazione dello switch FC, quindi selezionare l'opzione di configurazione dello zoning.
+. Creare una nuova zona che includa la prima porta iniziatore host e che includa anche tutte le porte di destinazione che si connettono allo stesso switch FC dell'iniziatore.
+. Creare zone aggiuntive per ciascuna porta iniziatore host FC nello switch.
+. Salvare le zone, quindi attivare la nuova configurazione di zoning.
+
+
+
+
+== Fase 2: Determinare le porte host WWPN--NVMe/FC VMware
+
+Per configurare lo zoning FC, è necessario determinare il nome della porta globale (WWPN) di ciascuna porta initiator.
+
+.Fasi
+. Connettersi all'host ESXi utilizzando SSH o la shell ESXi.
+. Eseguire il seguente comando:
++
+[listing]
+----
+esxcfg-scsidevs –a
+----
+. Registrare gli identificatori dell'iniziatore. L'output sarà simile a questo esempio:
++
+[listing]
+----
+vmhba3 lpfc link-up  fc.20000090fa05e848:10000090fa05e848 (0000:03:00.0)
+Emulex Corporation Emulex LPe16000 16Gb PCIe Fibre Channel Adapter
+vmhba4 lpfc link-up  fc.20000090fa05e849:10000090fa05e849 (0000:03:00.1)
+Emulex Corporation Emulex LPe16000 16Gb PCIe Fibre Channel Adapter
+----
+
+
+
+
+== Fase 3: Abilitare i driver HBA
+
+Il supporto per NVMe deve essere abilitato nei driver Broadcom/Emulex e HBA Marvell/Qlogic.
+
+.Fasi
+. Eseguire uno dei seguenti comandi dalla shell ESXi:
++
+** *Driver HBA Broadcom/Emulex*
++
+[listing]
+----
+esxcli system module parameters set -m lpfc -p "lpfc_enable_fc4_type=3"
+----
+** *Driver HBA Marvell/Qlogic*
++
+[listing]
+----
+esxcfg-module -s "ql2xnvmesupport=1" qlnativefc
+----
+
+
+. Riavviare l'host.
+
+
+
+
+== Fase 4: Registrare la configurazione
+
+È possibile generare e stampare un PDF di questa pagina, quindi utilizzare il seguente foglio di lavoro per registrare le informazioni di configurazione dello storage NVMe su Fibre Channel. Queste informazioni sono necessarie per eseguire le attività di provisioning.
+
+La figura mostra un host collegato a un array di storage e-Series in due zone. Una zona è indicata dalla linea blu, mentre l'altra è indicata dalla linea rossa. Ogni zona contiene una porta iniziatore e tutte le porte di destinazione.
+
+image::../media/port_identifiers_host_and_target_conf-vmw.gif[identificatori di porta host e target conf vmw]
+
+
+
+=== Identificatori host
+
+|===
+| N. didascalia | Connessioni porta host (iniziatore) | PN. WWN 
+
+
+ a| 
+1
+ a| 
+Host
+ a| 
+_non applicabile_
+
+
+
+ a| 
+2
+ a| 
+Porta host 0 a switch FC zona 0
+ a| 
+
+
+
+ a| 
+7
+ a| 
+Dalla porta host 1 allo switch FC zona 1
+ a| 
+
+|===
+
+
+=== Identificatori di destinazione
+
+|===
+| N. didascalia | Connessioni delle porte (di destinazione) degli array controller | PN. WWN 
+
+
+ a| 
+3
+ a| 
+Switch
+ a| 
+_non applicabile_
+
+
+
+ a| 
+6
+ a| 
+Controller di array (destinazione)
+ a| 
+_non applicabile_
+
+
+
+ a| 
+5
+ a| 
+Dal controller A, dalla porta 1 allo switch FC 1
+ a| 
+
+
+
+ a| 
+9
+ a| 
+Dal controller A, dalla porta 2 allo switch FC 2
+ a| 
+
+
+
+ a| 
+4
+ a| 
+Dal controller B, porta 1 allo switch FC 1
+ a| 
+
+
+
+ a| 
+8
+ a| 
+Controller B, dalla porta 2 allo switch FC 2
+ a| 
+
+|===
+
+
+=== Host di mappatura
+
+|===
+
+
+ a| 
+Nome host di mapping
+ a| 
+
+
+
+ a| 
+Tipo di sistema operativo host
+ a| 
+
+|===

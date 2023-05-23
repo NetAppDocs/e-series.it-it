@@ -1,0 +1,49 @@
+---
+permalink: maintenance-e2800/batteries-remove-failed-task.html 
+sidebar: sidebar 
+keywords: E2800 battery fail, E2800 battery, E2800 battery replacement, replace E2800 battery, replacing E2800 battery, E2800, E-Series, eseries 
+summary: Dopo aver rimosso il contenitore del controller dallo shelf del controller, è possibile rimuovere la batteria. 
+---
+= Rimuovere la batteria E2800 guasta
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver rimosso il contenitore del controller dallo shelf del controller, è possibile rimuovere la batteria.
+
+.Fasi
+. Rimuovere il coperchio del contenitore del controller premendo il pulsante e facendo scorrere il coperchio.
+. Verificare che il LED verde all'interno del controller (tra la batteria e i DIMM) sia spento.
++
+Se questo LED verde è acceso, il controller sta ancora utilizzando l'alimentazione a batteria. Prima di rimuovere qualsiasi componente, è necessario attendere che il LED si spenga.
+
++
+image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[28 dwg e2800 cache interna active led maintt e2800]
+
++
+*(1)* _cache interna attiva_
+
++
+*(2)* _batteria_
+
+. Individuare il dispositivo di chiusura blu della batteria.
+. Sbloccare la batteria spingendo il dispositivo di chiusura verso il basso e lontano dal contenitore del controller.
++
+image::../media/28_dwg_e2800_remove_battery_maint-e2800.gif[28 dwg e2800 rimuovere la batteria principale e2800]
+
++
+*(1)* _dispositivo di chiusura a scatto della batteria_
+
++
+*(2)* _batteria_
+
+. Sollevare la batteria ed estrarla dal contenitore del controller.
+. Seguire le procedure appropriate per il riciclaggio o lo smaltimento della batteria guasta.
++
+
+CAUTION: Per rispettare le normative IATA (International Air Transport Association), non spedire mai una batteria al litio via etere se non è installata nello shelf del controller.
+
+. Passare a. link:batteries-install-new-task.html["Installare una nuova batteria"].
+

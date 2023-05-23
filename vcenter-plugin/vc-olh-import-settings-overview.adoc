@@ -1,0 +1,95 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-import-settings-overview.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'La funzione Import Settings (Impostazioni di importazione) è un"operazione batch che consente di replicare le impostazioni di un singolo array di storage (l"origine) in più array (le destinazioni).' 
+---
+= Panoramica delle impostazioni di importazione
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+La funzione Import Settings (Impostazioni di importazione) è un'operazione batch che consente di replicare le impostazioni di un singolo array di storage (l'origine) in più array (le destinazioni) nel plug-in Storage per vCenter.
+
+
+
+== Impostazioni disponibili per l'importazione
+
+È possibile importare le seguenti configurazioni da un array a un altro:
+
+* *Alerts* -- metodi di avviso per inviare eventi importanti agli amministratori utilizzando la posta elettronica, un server syslog o un server SNMP.
+* *AutoSupport* -- funzionalità che monitora lo stato di salute di uno storage array e invia automaticamente i dispatches al supporto tecnico.
+* *Servizi di directory* -- metodo di autenticazione dell'utente gestito tramite un server LDAP (Lightweight Directory Access Protocol) e un servizio di directory, ad esempio Active Directory di Microsoft.
+* *Impostazioni di sistema* -- configurazioni relative a:
++
+** Impostazioni di scansione dei supporti per un volume
+** Impostazioni SSD
+** Bilanciamento automatico del carico (non include il reporting sulla connettività host)
+
+
+* *Configurazione dello storage* -- configurazioni relative a:
++
+** Volumi (solo volumi thick e non repository)
+** Gruppi di volumi e pool
+** Assegnazioni dei dischi hot spare
+
+
+
+
+
+
+== Workflow di configurazione
+
+Per importare le impostazioni, seguire questo flusso di lavoro:
+
+. Su uno storage array da utilizzare come origine, configurare le impostazioni utilizzando System Manager.
+. Sugli array di storage da utilizzare come destinazione, eseguire il backup della configurazione utilizzando System Manager.
+. Dall'interfaccia del plugin, accedere alla pagina *Manage* e importare le impostazioni.
+. Dalla pagina Operations (operazioni), esaminare i risultati dell'operazione Import Settings (Impostazioni di importazione).
+
+
+
+
+== Requisiti per la replica delle configurazioni di storage
+
+Prima di importare una configurazione dello storage da uno storage array a un altro, esaminare i requisiti e le linee guida.
+
+
+
+=== Shelf
+
+* Gli shelf in cui risiedono i controller devono essere identici sugli array di origine e di destinazione.
+* Gli shelf ID devono essere identici sugli array di origine e di destinazione.
+* Gli shelf di espansione devono essere inseriti negli stessi slot con gli stessi tipi di unità (se il disco viene utilizzato nella configurazione, la posizione dei dischi inutilizzati non è importante).
+
+
+
+
+=== Controller
+
+* Il tipo di controller può essere diverso tra gli array di origine e di destinazione, ma il tipo di enclosure RBOD deve essere identico.
+* L'HICS, incluse le funzionalità da dell'host, deve essere identico tra gli array di origine e di destinazione.
+* L'importazione da una configurazione duplex a una facciata singola non è supportata; tuttavia, è consentita l'importazione da una facciata singola a una facciata fronte/retro.
+* Le impostazioni FDE non sono incluse nel processo di importazione.
+
+
+
+
+=== Stato
+
+* Gli array di destinazione devono essere nello stato ottimale.
+* Non è necessario che l'array di origine sia nello stato ottimale.
+
+
+
+
+=== Storage
+
+* La capacità del disco può variare tra gli array di origine e di destinazione, a condizione che la capacità del volume sulla destinazione sia superiore a quella dell'origine. (Un array di destinazione potrebbe disporre di unità più recenti e di capacità maggiore che non sarebbero completamente configurate nei volumi dall'operazione di replica).
+* Volumi di pool di dischi di almeno 64 TB sull'array di origine impediranno il processo di importazione sulle destinazioni.
+

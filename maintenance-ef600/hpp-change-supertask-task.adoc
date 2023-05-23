@@ -1,0 +1,696 @@
+---
+permalink: maintenance-ef600/hpp-change-supertask-task.html 
+sidebar: sidebar 
+keywords: host protocol change, EF300 host protocol, EF600 host protocol 
+summary: Modificare il protocollo della porta host per un array EF300 o EF600. 
+---
+= Modificare il protocollo host per EF300 o EF600
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Seguire questa procedura per modificare il protocollo della porta host in un array EF300 o EF600. Questa procedura si applica solo alle schede di interfaccia host (HICS) che utilizzano Infiniband (IB) o Fibre Channel (FC).
+
+
+
+== Fase 1: Ottenere la chiave del Feature Pack
+
+Per ottenere la chiave del Feature Pack, è necessario il numero di serie dallo shelf del controller, un codice di attivazione della funzione e l'identificatore di abilitazione della funzione per lo storage array.
+
+.Fasi
+. Individuare il numero di serie.
++
+.. Da Gestore di sistema di SANtricity, selezionare menu:supporto[Centro di supporto].
+.. Con la scheda *Support Resources* (risorse di supporto) selezionata, scorrere fino alla sezione *View top storage array properties* (Visualizza proprietà principali storage array).
+.. Individuare *chassis Serial Number* (numero di serie chassis) e copiare questo valore in un file di testo.
++
+image::../media/sam1130_ss_e2800_storage_array_profile_sn_smid_copy_maint-ef600.gif[sam1130 ss e2800 storage array profile sn smid copy mainting ef600]
+
+
+
+. Individuare l'ID del sottomodello *Feature Pack*.
++
+.. In Gestione sistema di SANtricity, selezionare *supporto*.
+.. Selezionare il riquadro *Support Center*.
+.. Nella scheda Support Resources (risorse di supporto), individuare e selezionare il collegamento *Storage Array Profile* (Profilo array di storage).
+.. Digitare *Feature Pack submodel ID* nella casella di testo e fare clic su *Find* (trova).
+.. Individuare l'ID del sottomodello del Feature Pack per la configurazione iniziale.
++
+image::../media/storage_array_profile2_maint-ef600.gif[profilo array storage 2 mainte600]
+
+
+
+. Utilizzando l'ID del sottomodello del Feature Pack, individuare l'ID del sottomodello del controller corrispondente per la configurazione iniziale e individuare il codice di attivazione della funzione per la configurazione finale desiderata all'interno della seguente tabella. Quindi, copiare il codice di attivazione della funzione in un file di testo.
++
+|===
+2+| Avvio della configurazione 2+| Fine della configurazione .2+| Codice di attivazione della funzione 
+
+
+| ID del sottomodello del controller | Porte HIC | ID del sottomodello del controller | Porte HIC 
+
+
+ a| 
+443
+ a| 
+NVMe/FC
+
+oppure
+
+NVMe/RoCE
+ a| 
+444
+ a| 
+NVMe/IB
+ a| 
+DH5-HB4-ZK9QH
+
+
+
+ a| 
+448
+ a| 
+FC
+ a| 
+7 HZ-EB4-ZHAYW
+
+
+
+ a| 
+491
+ a| 
+Er/IB
+ a| 
+0H1-675-Z5SII
+
+
+
+ a| 
+492
+ a| 
+SRP/IB
+ a| 
+NHD-V75-ZB6ZX
+
+
+
+ a| 
+444
+ a| 
+NVMe/FC
+
+oppure
+
+NVMe/IB
+ a| 
+443
+ a| 
+NVMe/RoCE
+ a| 
+YH3-XB4-ZJRIZ
+
+
+
+ a| 
+448
+ a| 
+FC
+ a| 
+2HU-BB4-ZFCG5
+
+
+
+ a| 
+491
+ a| 
+Er/IB
+ a| 
+2H3-P75-Z6AQG
+
+
+
+ a| 
+492
+ a| 
+SRP/IB
+ a| 
+5HG-G75-ZDNEZ
+
+
+
+ a| 
+448
+ a| 
+FC
+ a| 
+443
+ a| 
+NVMe/FC
+
+oppure
+
+NVMe/RoCE
+ a| 
+JHX-UB4-ZGTP1
+
+
+
+ a| 
+444
+ a| 
+NVMe/FC
+
+oppure
+
+NVMe/IB
+ a| 
+LHS-RB4-ZDV29
+
+
+
+ a| 
+491
+ a| 
+Er/IB
+ a| 
+FH6-975-Z7Q7H
+
+
+
+ a| 
+492
+ a| 
+SRP/IB
+ a| 
+0HI-Z75-ZE4L5
+
+
+
+ a| 
+491
+ a| 
+Er/IB
+ a| 
+443
+ a| 
+NVMe/FC o NVMe/RoCE
+ a| 
+MHQ-M85-ZIJNT
+
+
+
+ a| 
+444
+ a| 
+NVMe/FC o NVMe/IB
+ a| 
+4HS-685-ZJZ1U
+
+
+
+ a| 
+448
+ a| 
+FC
+ a| 
+YHU-P85-ZLHCX
+
+
+
+ a| 
+465
+ a| 
+FC/PTL
+ a| 
+AHX-985-ZMXMI
+
+
+
+ a| 
+492
+ a| 
+SRP/IB
+ a| 
+ZHZ-S85-ZNF4J
+
+
+
+ a| 
+492
+ a| 
+SRP/IB
+ a| 
+443
+ a| 
+NVMe/FC o NVMe/RoCE
+ a| 
+EH3-C85-Z0V93
+
+
+
+ a| 
+444
+ a| 
+NVMe/FC o NVMe/IB
+ a| 
+BH5-V85-ZQDQJ
+
+
+
+ a| 
+448
+ a| 
+FC
+ a| 
+1H8-F85-ZRT1V
+
+
+
+ a| 
+465
+ a| 
+FC/PTL
+ a| 
+1HA-Y85-ZSB7S
+
+
+
+ a| 
+491
+ a| 
+Er/IB
+ a| 
+KHD-I85-ZUSMI
+
+
+
+ a| 
+465
+ a| 
+FC/PTL
+ a| 
+491
+ a| 
+Er
+ a| 
+6H8-S75-Z98FH
+
+
+
+ a| 
+492
+ a| 
+SRP
+ a| 
+NHL-J75-ZFL3W
+
+
+
+ a| 
+516
+ a| 
+NVMe/RoCE
+ a| 
+517
+ a| 
+NVMe/IB
+ a| 
+LHF-285-ZV9YZ
+
+
+
+ a| 
+518
+ a| 
+FC
+ a| 
+IHI-L85-ZXQEP
+
+
+
+ a| 
+519
+ a| 
+Er/IB
+ a| 
+RHK-585-ZY7P5
+
+
+
+ a| 
+520
+ a| 
+FC-PTL
+ a| 
+NHN-095-ZZ0XF
+
+
+
+ a| 
+521
+ a| 
+SRP/IB
+ a| 
+GHP-895-Z25BD
+
+
+
+ a| 
+517
+ a| 
+NVMe/IB
+ a| 
+516
+ a| 
+NVMe/RoCE
+ a| 
+7HS-R95-Z3M06
+
+
+
+ a| 
+518
+ a| 
+FC
+ a| 
+UHU-B95-Z43X2
+
+
+
+ a| 
+519
+ a| 
+FC-PTL
+ a| 
+8HX-U95-Z5K6F
+
+
+
+ a| 
+520
+ a| 
+Er/IB
+ a| 
+UHZ-E95-Z71LH
+
+
+
+ a| 
+521
+ a| 
+SRP/IB
+ a| 
+SH2-X95-Z8IVS
+
+
+
+ a| 
+518
+ a| 
+FC
+ a| 
+516
+ a| 
+NVMe/FC o.
+
+NVMe/RoCE
+ a| 
+UH5-H95-Z9Z58
+
+
+
+ a| 
+517
+ a| 
+NVMe/FC o.
+
+NVMe/IB
+ a| 
+XH7-195-ZBGJC
+
+
+
+ a| 
+519
+ a| 
+FC-PTL
+ a| 
+FHA-K95-ZCXX0
+
+
+
+ a| 
+520
+ a| 
+Er/IB
+ a| 
+JHC-595-ZDE3X
+
+
+
+ a| 
+521
+ a| 
+SRP/IB
+ a| 
+0HF-095-ZFVFN
+
+
+
+ a| 
+519
+ a| 
+FC-PTL
+ a| 
+516
+ a| 
+NVMe/FC o NVMe/RoCE
+ a| 
+YHH-895-ZGCXS
+
+
+
+ a| 
+517
+ a| 
+NVMe/FC o NVMe/IB
+ a| 
+2HK-R95-ZHT83
+
+
+
+ a| 
+518
+ a| 
+FC
+ a| 
+1HM-BA5-ZJALA
+
+
+
+ a| 
+520
+ a| 
+Er/IB
+ a| 
+YHP-UA5-ZKRXA
+
+
+
+ a| 
+521
+ a| 
+SRP/IB
+ a| 
+MHR-EA5-ZL83V
+
+
+
+ a| 
+520
+ a| 
+Er/IB
+ a| 
+516
+ a| 
+NVMe/FC o NVMe/RoCE
+ a| 
+HHU-XA5-ZNPLT
+
+
+
+ a| 
+517
+ a| 
+NVMe/FC o NVMe/IB
+ a| 
+YHW-HA5-Z07QK
+
+
+
+ a| 
+518
+ a| 
+FC
+ a| 
+WHZ-1A5-ZPN4U
+
+
+
+ a| 
+519
+ a| 
+FC/PTL
+ a| 
+7H2-KA5-ZR5C3
+
+
+
+ a| 
+521
+ a| 
+SRP
+ a| 
+3H5-4A5-ZSLVX
+
+
+
+ a| 
+521
+ a| 
+SRP/IB
+ a| 
+516
+ a| 
+NVMe/FC o NVMe/RoCE
+ a| 
+1H7-NA5-ZT31W
+
+
+
+ a| 
+517
+ a| 
+NVMe/FC o NVMe/IB
+ a| 
+XHA-7A5-ZVJGC
+
+
+
+ a| 
+518
+ a| 
+FC
+ a| 
+KHC-QA5-ZW1P3
+
+
+
+ a| 
+519
+ a| 
+FC/PTL
+ a| 
+CHE-AA5-ZXH2F
+
+
+
+ a| 
+520
+ a| 
+Er/IB
+ a| 
+SHH-TA5-ZZYHS
+
+|===
++
+
+NOTE: Se l'ID del sottomodello del controller non è presente nell'elenco, contattare https://mysupport.netapp.com/site/["Supporto NetApp"^].
+
+. In System Manager, individuare Feature Enable Identifier.
++
+.. Accedere al menu:Impostazioni[sistema].
+.. Scorrere verso il basso fino a *componenti aggiuntivi*.
+.. In *Change Feature Pack*, individuare *Feature Enable Identifier*.
+.. Copiare e incollare questo numero di 32 cifre in un file di testo.
++
+image::../media/sam1130_ss_e2800_change_feature_pack_feature_enable_identifier_copy_maint-ef600.gif[sam1130 ss e2800 change feature pack enable identifier copy maintain ef600]
+
+
+
+. Passare a. http://partnerspfk.netapp.com["Attivazione della licenza NetApp: Attivazione della funzionalità Premium dello storage Array"^]e immettere le informazioni necessarie per ottenere il feature pack.
++
+** Numero di serie dello chassis
+** Codice di attivazione della funzione
+** Feature Enable Identifier NOTA: Il sito Web Premium Feature Activation include un collegamento a "`Premium Feature Activation Instructions`". Non tentare di seguire queste istruzioni per questa procedura.
+
+
+. Scegliere se ricevere il file delle chiavi per il Feature Pack in un'e-mail o scaricarlo direttamente dal sito.
+
+
+
+
+== Fase 2: Arrestare l'i/o host
+
+Interrompere tutte le operazioni di i/o dall'host prima di convertire il protocollo delle porte host.
+
+Non è possibile accedere ai dati sull'array di storage fino a quando la conversione non viene completata correttamente.
+
+.Fasi
+. Assicurarsi che non si verifichino operazioni di i/o tra lo storage array e tutti gli host connessi. Ad esempio, è possibile eseguire le seguenti operazioni:
++
+** Arrestare tutti i processi che coinvolgono le LUN mappate dallo storage agli host.
+** Assicurarsi che nessuna applicazione stia scrivendo dati su tutte le LUN mappate dallo storage agli host.
+** Smontare tutti i file system associati ai volumi sull'array.
++
+
+NOTE: I passaggi esatti per interrompere le operazioni di i/o dell'host dipendono dal sistema operativo dell'host e dalla configurazione, che esulano dall'ambito di queste istruzioni. Se non si è sicuri di come interrompere le operazioni di i/o host nell'ambiente, è consigliabile arrestare l'host.
+
++
+
+CAUTION: *Possibile perdita di dati* -- se si continua questa procedura mentre si verificano le operazioni di i/o, si potrebbero perdere i dati.
+
+
+
+. Attendere che i dati presenti nella memoria cache vengano scritti sui dischi.
++
+Il LED verde cache Active (cache attiva) sul retro di ciascun controller è acceso quando i dati memorizzati nella cache devono essere scritti sui dischi. Attendere che il LED si spenga.
+
+. Dalla home page di Gestione sistema SANtricity, selezionare *Visualizza operazioni in corso*.
+. Attendere il completamento di tutte le operazioni prima di passare alla fase successiva.
+
+
+
+
+== Fase 3: Modificare il Feature Pack
+
+Modificare il Feature Pack per convertire il protocollo host delle porte host.
+
+.Fasi
+. Da Gestore di sistema di SANtricity, selezionare menu:Impostazioni[sistema].
+. In *componenti aggiuntivi*, selezionare *Cambia Feature Pack*.
++
+image::../media/sam1130_ss_system_change_feature_pack_maint-ef600.gif[sam1130 ss system change feature pack maintent ef600]
+
+. Fare clic su *Sfoglia*, quindi selezionare il Feature Pack che si desidera applicare.
+. Digitare *CHANGE* nel campo.
+. Fare clic su *Cambia*.
++
+Viene avviata la migrazione dei Feature Pack. Entrambi i controller si riavviano automaticamente due volte per rendere effettivo il nuovo Feature Pack. Una volta completato il riavvio, lo storage array torna allo stato di risposta.
+
+. Verificare che le porte host dispongano del protocollo previsto.
++
+.. Da Gestione sistema di SANtricity, selezionare *hardware*.
+.. Fare clic su *Mostra retro dello shelf*.
+.. Selezionare l'immagine per Controller A o Controller B.
+.. Selezionare *Visualizza impostazioni* dal menu di scelta rapida.
+.. Selezionare la scheda *interfacce host*.
+.. Fare clic su *Mostra altre impostazioni*.
+
+
+
+
+.Quali sono le prossime novità?
+Passare a. link:hpp-complete-protocol-conversion-task.html["Completa la conversione del protocollo host"].

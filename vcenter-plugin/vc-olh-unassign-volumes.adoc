@@ -1,0 +1,44 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-unassign-volumes.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: 'Se non è più necessario l"accesso i/o a un volume, è possibile annullare l"assegnazione dall"host o dal cluster host.' 
+---
+= Annullare l'assegnazione dei volumi
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Se non è più necessario l'accesso i/o a un volume, è possibile annullare l'assegnazione dall'host o dal cluster host.
+
+.A proposito di questa attività
+Tenere presenti queste linee guida quando si annulla l'assegnazione di un volume:
+
+* Se si rimuove l'ultimo volume assegnato da un cluster host e il cluster host dispone anche di host con volumi assegnati specifici, assicurarsi di rimuovere o spostare tali assegnazioni prima di rimuovere l'ultima assegnazione per il cluster host.
+* Se un cluster host, un host o una porta host viene assegnata a un volume registrato nel sistema operativo, è necessario annullare la registrazione prima di poter rimuovere questi nodi.
+
+
+.Fasi
+. Dalla pagina Manage (Gestione), selezionare lo storage array con la connessione host.
+. Selezionare menu:Provisioning[Configure hosts] (Configura host).
++
+Viene visualizzata la pagina Configure hosts (Configura host).
+
+. Selezionare l'host o il cluster host che si desidera modificare, quindi fare clic su *Annulla assegnazione volumi*.
++
+Viene visualizzata una finestra di dialogo che mostra tutti i volumi attualmente assegnati.
+
+. Selezionare la casella di controllo accanto a ciascun volume che si desidera annullare l'assegnazione oppure selezionare la casella di controllo nell'intestazione della tabella per selezionare tutti i volumi.
+. Fare clic su *Annulla assegnazione*.
+
+
+.Risultati
+* I volumi non assegnati sono disponibili per una nuova assegnazione.
+* Fino a quando le modifiche non vengono configurate sull'host, il volume viene ancora riconosciuto dal sistema operativo host.
+

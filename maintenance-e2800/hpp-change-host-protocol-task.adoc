@@ -1,0 +1,563 @@
+---
+permalink: maintenance-e2800/hpp-change-host-protocol-task.html 
+sidebar: sidebar 
+keywords: 'E2800 convert host port protocol, convert E2800 FC iSCSI, Fibre Channel protocol, iSCSI protocol, convert HPP, converting host port protocol, SFP+ (optical) host ports, E2800, E-Series, eseries' 
+summary: 'Modificare il protocollo della porta host da Fibre Channel (FC) a iSCSI o da iSCSI a FC.' 
+---
+= Modificare il protocollo host per E2800
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se si dispone di uno storage array E2800 con porte host SFP+ (ottiche), è possibile modificare il protocollo della porta host da Fibre Channel (FC) a iSCSI o da iSCSI a FC.
+
+È possibile modificare il protocollo utilizzato dalle porte host integrate nel controller (_baseboard host ports_), il protocollo utilizzato dalle porte host sulla scheda di interfaccia host (_HIC ports_) o il protocollo di tutte le porte host.
+
+
+
+== Fase 1: Determinare se si dispone di SFP a doppio protocollo
+
+Utilizzare Gestore di sistema SANtricity per determinare il tipo di ricetrasmettitori SFP in uso. Poiché questi SFP possono essere utilizzati con protocolli FC e iSCSI, vengono definiti come _dual-Protocol_ o _Unified_ SFP.
+
+.Fasi
+. Da Gestore di sistema di SANtricity, selezionare *supporto*.
+. Selezionare il riquadro *Support Center*.
+. Nella scheda Support Resources (risorse di supporto), individuare e selezionare il collegamento *Storage Array Profile* (Profilo array di storage).
+. Digitare *SFP* nella casella di testo e fare clic su *Find* (trova).
+. Per ogni SFP elencato nel profilo dell'array di storage, individuare la voce *velocità dati supportata*.
++
+image::../media/sam1130_ss_e2800_unified_spf_maint-e2800.gif[sam1130 ss e2800 unified spf mait e2800]
+
+. Fare riferimento alla tabella per determinare se è possibile riutilizzare gli SFP, come indicato di seguito:
++
+|===
+| Velocità di trasferimento dati supportata | Tipo di SFP | Protocollo supportato 
+
+
+ a| 
+16 Gbps, 10 Gbps, 4 Gbps
+ a| 
+Protocollo doppio
+ a| 
+** *FC:* 16 Gbps, 4 Gbps
+** **ISCSI:**10 Gbps
+
+
+
+
+ a| 
+25 Gbps, 10 Gbps
+ a| 
+25 Gbps. 10 Gbps,
+ a| 
+Solo iSCSI
+
+
+
+ a| 
+32 Gbps, 16 Gbps, 8 Gbps, 4 Gbps
+ a| 
+32 Gbps, 16 Gbps
+ a| 
+Solo FC
+
+|===
++
+** Se si dispone di SFP a doppio protocollo, è possibile continuare a utilizzarli dopo aver convertito il protocollo.
++
+
+NOTE: Gli SFP a doppio protocollo non supportano iSCSI da 1 GB. Se si stanno convertendo le porte host in iSCSI, tenere presente che gli SFP a doppio protocollo supportano solo un collegamento da 10 GB alla porta connessa.
+
+** Se si utilizzano SFP a 16 Gbps e si stanno convertendo le porte host in iSCSI, è necessario rimuovere gli SFP e sostituirli con SFP a doppio protocollo o a 10 Gbps dopo la conversione del protocollo. In base alle esigenze, è anche possibile utilizzare il rame iSCSI a 10 Gbps utilizzando uno speciale cavo Twin-Ax con SFP.
++
+
+NOTE: Gli SFP FC a 8 Gbps NON sono supportati nei controller E28xx o E57xx. Sono supportati SOLO SFP FC a 16 Gbps e 32 Gbps.
+
+** Se si utilizzano SFP a 10 Gbps e si stanno convertendo le porte host in FC, è necessario rimuovere gli SFP da queste porte e sostituirli con SFP a doppio protocollo o a 16 Gbps dopo aver convertito il protocollo.
+
+
+
+
+
+
+== Fase 2: Ottenere il Feature Pack
+
+Per ottenere il Feature Pack, è necessario il numero di serie dallo shelf del controller, un codice di attivazione delle funzioni e l'identificatore di abilitazione delle funzioni per lo storage array.
+
+.Fasi
+. Individuare il numero di serie.
++
+.. Da Gestore di sistema di SANtricity, selezionare menu:supporto[Centro di supporto].
+.. Con la scheda *Support Resources* (risorse di supporto) selezionata, scorrere fino alla sezione *View top storage array properties* (Visualizza proprietà principali storage array).
+.. Individuare *chassis Serial Number* (numero di serie chassis) e copiare questo valore in un file di testo.
++
+image::../media/sam1130_ss_e2800_storage_array_profile_sn_smid_copy_maint-e2800.gif[sam1130 ss e2800 storage array profile sn smid copy mainting e2800]
+
+
+
+. Individuare l'ID del sottomodello *Feature Pack*.
++
+.. Nella scheda Support Resources (risorse di supporto), individuare e selezionare il collegamento *Storage Array Profile* (Profilo array di storage).
+.. Digitare *Feature Pack submodel ID* nella casella di testo e fare clic su *Find* (trova).
+.. Individuare l'ID del sottomodello del Feature Pack per la configurazione iniziale.
++
+image::../media/storage_array_profile2_maint-e2800.gif[profilo array storage 2 mainte2800]
+
+
+
+. Utilizzando l'ID del sottomodello del Feature Pack, individuare l'ID del sottomodello del controller corrispondente per la configurazione iniziale e individuare il codice di attivazione della funzione per la configurazione finale desiderata all'interno della tabella riportata di seguito. Quindi, copiare il codice di attivazione della funzione in un file di testo.
++
+|===
+3+| Avvio della configurazione 3+| Fine della configurazione .2+| Codice di attivazione della funzione 
+
+
+| ID del sottomodello del controller | Porte baseboard | Porte HIC | ID del sottomodello del controller | Porte baseboard | Porte HIC 
+
+
+ a| 
+318
+ a| 
+FC
+ a| 
+FC
+ a| 
+319
+ a| 
+FC
+ a| 
+ISCSI
+ a| 
+ZGW-4L2-Z36IJ
+
+
+
+ a| 
+320
+ a| 
+ISCSI
+ a| 
+FC
+ a| 
+4GZ-NL2-Z4NRP
+
+
+
+ a| 
+321
+ a| 
+ISCSI
+ a| 
+ISCSI
+ a| 
+TG2-7L2-Z5485
+
+
+
+ a| 
+_Nessun HIC o non un HIC ottico_
+ a| 
+321
+ a| 
+ISCSI
+ a| 
+TG2-7L2-Z5485
+
+
+
+ a| 
+319
+ a| 
+FC
+ a| 
+ISCSI
+ a| 
+318
+ a| 
+FC
+ a| 
+FC
+ a| 
+1G5-QL2-Z7LFC
+
+
+
+ a| 
+320
+ a| 
+ISCSI
+ a| 
+FC
+ a| 
+FG7-AL2-Z82RW
+
+
+
+ a| 
+321
+ a| 
+ISCSI
+ a| 
+ISCSI
+ a| 
+5G7-0K2-Z0G8X
+
+
+
+ a| 
+320
+ a| 
+ISCSI
+ a| 
+FC
+ a| 
+318
+ a| 
+FC
+ a| 
+FC
+ a| 
+4GP-HL2-ZYRKP
+
+
+
+ a| 
+319
+ a| 
+FC
+ a| 
+ISCSI
+ a| 
+PGU-KL2-Z1P7I
+
+
+
+ a| 
+321
+ a| 
+ISCSI
+ a| 
+ISCSI
+ a| 
+BGA-8K2-ZQWM5
+
+
+
+ a| 
+321
+ a| 
+ISCSI
+ a| 
+ISCSI
+ a| 
+318
+ a| 
+FC
+ a| 
+FC
+ a| 
+SGH-UK2-ZUCJG
+
+
+
+ a| 
+319
+ a| 
+FC
+ a| 
+ISCSI
+ a| 
+1GK-EK2-ZVSW1
+
+
+
+ a| 
+320
+ a| 
+ISCSI
+ a| 
+FC
+ a| 
+AGM-XL2-ZWA8A
+
+|===
++
+|===
+3+| Avvio della configurazione 3+| Fine della configurazione .2+| Codice di attivazione della funzione 
+
+
+| ID del sottomodello del controller | Porte baseboard | Porte HIC | ID del sottomodello del controller | Porte baseboard | Porte HIC 
+
+
+ a| 
+338
+ a| 
+FC
+ a| 
+FC
+ a| 
+339
+ a| 
+FC
+ a| 
+ISCSI
+ a| 
+PGC-RK2-ZREUT
+
+
+
+ a| 
+340
+ a| 
+ISCSI
+ a| 
+FC
+ a| 
+MGF-BK2-ZSU3Z
+
+
+
+ a| 
+341
+ a| 
+ISCSI
+ a| 
+ISCSI
+ a| 
+NGR-1L2-ZZ8QC
+
+
+
+ a| 
+_Nessun HIC o non un HIC ottico_
+ a| 
+341
+ a| 
+ISCSI
+ a| 
+NGR-1L2-ZZ8QC
+
+
+
+ a| 
+339
+ a| 
+FC
+ a| 
+ISCSI
+ a| 
+338
+ a| 
+FC
+ a| 
+FC
+ a| 
+DGT-7M2-ZKBMD
+
+
+
+ a| 
+340
+ a| 
+ISCSI
+ a| 
+FC
+ a| 
+GGA-TL2-Z9J50
+
+
+
+ a| 
+341
+ a| 
+ISCSI
+ a| 
+ISCSI
+ a| 
+WGC-DL2-ZBZIB
+
+
+
+ a| 
+340
+ a| 
+ISCSI
+ a| 
+FC
+ a| 
+338
+ a| 
+FC
+ a| 
+FC
+ a| 
+4GM-KM2-ZGWS1
+
+
+
+ a| 
+339
+ a| 
+FC
+ a| 
+ISCSI
+ a| 
+PG0-4M2-ZHDZ6
+
+
+
+ a| 
+341
+ a| 
+ISCSI
+ a| 
+ISCSI
+ a| 
+XGR-NM2-ZJUGR
+
+
+
+ a| 
+341
+ a| 
+ISCSI
+ a| 
+ISCSI
+ a| 
+338
+ a| 
+FC
+ a| 
+FC
+ a| 
+3GE-WL2-ZCHNY
+
+
+
+ a| 
+339
+ a| 
+FC
+ a| 
+ISCSI
+ a| 
+FGH-HL2-ZDY3R
+
+
+
+ a| 
+340
+ a| 
+ISCSI
+ a| 
+FC
+ a| 
+VGJ-1L2-ZFFEW
+
+|===
++
+
+NOTE: Se l'ID del modello secondario del controller non è presente nell'elenco, contattare http://mysupport.netapp.com["Supporto NetApp"^].
+
+. In System Manager, individuare Feature Enable Identifier.
++
+.. Accedere al menu:Impostazioni[sistema].
+.. Scorrere verso il basso fino a *componenti aggiuntivi*.
+.. In *Change Feature Pack*, individuare *Feature Enable Identifier*.
+.. Copiare e incollare questo numero di 32 cifre in un file di testo.
++
+image::../media/sam1130_ss_e2800_change_feature_pack_feature_enable_identifier_copy_maint-e2800.gif[sam1130 ss e2800 change feature pack enable identifier copy maintain e2800]
+
+
+
+. Passare a. http://partnerspfk.netapp.com["Attivazione della licenza NetApp: Attivazione della funzionalità Premium dello storage Array"^]e immettere le informazioni necessarie per ottenere il feature pack.
++
+** Numero di serie dello chassis
+** Codice di attivazione della funzione
+** Identificatore di abilitazione della funzione
++
+
+NOTE: Il sito Web di attivazione delle funzionalità Premium include un collegamento a "`istruzioni di attivazione delle funzioni Premium`". Non tentare di seguire queste istruzioni per questa procedura.
+
+
+
+. Scegliere se ricevere il file delle chiavi per il Feature Pack in un'e-mail o scaricarlo direttamente dal sito.
+
+
+
+
+== Fase 3: Arrestare l'i/o host
+
+È necessario interrompere tutte le operazioni di i/o dall'host prima di convertire il protocollo delle porte host. Non è possibile accedere ai dati sull'array di storage fino a quando la conversione non viene completata correttamente.
+
+.Fasi
+. Assicurarsi che non si verifichino operazioni di i/o tra lo storage array e tutti gli host connessi. Ad esempio, è possibile eseguire le seguenti operazioni:
++
+** Arrestare tutti i processi che coinvolgono le LUN mappate dallo storage agli host.
+** Assicurarsi che nessuna applicazione stia scrivendo dati su tutte le LUN mappate dallo storage agli host.
+** Smontare tutti i file system associati ai volumi sull'array.
++
+
+NOTE: I passaggi esatti per interrompere le operazioni di i/o dell'host dipendono dal sistema operativo dell'host e dalla configurazione, che esulano dall'ambito di queste istruzioni. Se non si è sicuri di come interrompere le operazioni di i/o host nell'ambiente, è consigliabile arrestare l'host.
+
++
+
+CAUTION: *Possibile perdita di dati* -- se si continua questa procedura mentre si verificano le operazioni di i/o, l'applicazione host potrebbe perdere l'accesso ai dati perché lo storage non è accessibile.
+
+
+
+. Se l'array di storage partecipa a una relazione di mirroring, interrompere tutte le operazioni di i/o dell'host sull'array di storage secondario.
+. Attendere che i dati presenti nella memoria cache vengano scritti sui dischi.
++
+Il LED verde cache Active (cache attiva) sul retro di ciascun controller è acceso quando i dati memorizzati nella cache devono essere scritti sui dischi. Attendere che il LED si spenga.image:../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[""]
+
++
+|===
+| Didascalia | Tipo di porte host 
+
+
+ a| 
+*(1)*
+ a| 
+LED cache Active (cache attiva)
+
+|===
+. Dalla home page di Gestione sistema SANtricity, selezionare *Visualizza operazioni in corso*.
+. Attendere il completamento di tutte le operazioni prima di passare alla fase successiva.
+
+
+
+
+== Fase 4: Modificare il Feature Pack
+
+Modificare il Feature Pack per convertire il protocollo host delle porte host della scheda base, delle porte IB HIC o di entrambi i tipi di porte.
+
+.Fasi
+. Da Gestore di sistema di SANtricity, selezionare menu:Impostazioni[sistema].
+. In *componenti aggiuntivi*, selezionare *Cambia Feature Pack*.
++
+image::../media/sam1130_ss_system_change_feature_pack_maint-e2800.gif[sam1130 ss system change feature pack maintain e2800]
+
+. Fare clic su *Sfoglia*, quindi selezionare il Feature Pack che si desidera applicare.
+. Tipo `CHANGE` sul campo.
+. Fare clic su *Cambia*.
++
+Viene avviata la migrazione dei Feature Pack. Entrambi i controller si riavviano automaticamente due volte per rendere effettivo il nuovo Feature Pack. Una volta completato il riavvio, lo storage array torna allo stato di risposta.
+
+. Verificare che le porte host dispongano del protocollo previsto.
++
+.. Da Gestione sistema di SANtricity, selezionare *hardware*.
+.. Fare clic su *Mostra retro dello shelf*.
+.. Selezionare l'immagine per Controller A o Controller B.
+.. Selezionare *Visualizza impostazioni* dal menu di scelta rapida.
+.. Selezionare la scheda *interfacce host*.
+.. Fare clic su *Mostra altre impostazioni*.
+.. Esaminare i dettagli mostrati per le porte della scheda base e le porte HIC (etichettate "`slotto 1`") e verificare che ciascun tipo di porta disponga del protocollo previsto.
+
+
+
+
+.Quali sono le prossime novità?
+Passare a. link:hpp-complete-protocol-conversion-task.html["Completa la conversione del protocollo host"].

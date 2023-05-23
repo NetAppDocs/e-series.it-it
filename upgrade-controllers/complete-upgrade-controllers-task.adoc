@@ -1,0 +1,204 @@
+---
+permalink: upgrade-controllers/complete-upgrade-controllers-task.html 
+sidebar: sidebar 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, vendor ID, upgrade status, upgrade validate 
+summary: 'Completare l"aggiornamento del controller accendendo lo shelf del controller e convalidando la versione del software del controller. Quindi, è possibile raccogliere i dati di supporto e riprendere le operazioni.' 
+---
+= Aggiornamento completo del controller
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Completare l'aggiornamento del controller accendendo lo shelf del controller e convalidando la versione del software del controller. Quindi, è possibile raccogliere i dati di supporto e riprendere le operazioni.
+
+Se si stanno aggiornando i controller in un vassoio del disco del controller duplex, ripetere tutti i passi per completare l'aggiornamento del secondo controller.
+
+
+
+== Fase 1: Accendere il controller
+
+Accendere lo shelf del controller per verificare che funzioni correttamente.
+
+.Fasi
+. Accendere l'interruttore di alimentazione situato sul retro di ciascun vassoio dell'unità collegato al vassoio del disco del controller
+. Attendere due minuti per consentire l'accelerazione delle unità.
+. Accendere l'interruttore di alimentazione sul retro del vassoio del disco del controller
+. Attendere tre minuti per il completamento del processo di accensione.
+. Se si sta eseguendo una sostituzione completa del controller per i controller E2800 o E5700, procedere con una delle seguenti procedure in base allo scenario di sicurezza del disco.
++
+|===
+| Tipo completo di sostituzione del controller | Procedura e prerequisiti 
+
+
+ a| 
+Tutti i dischi non protetti, né la gestione delle chiavi interna o esterna
+ a| 
+Passare alla fase successiva.
+
+
+
+ a| 
+Combinazione di dischi protetti e non protetti, gestione interna delle chiavi
+ a| 
+Per sbloccare le unità protette, è necessario innanzitutto creare una chiave di sicurezza interna e importarla manualmente. Una volta sbloccati i dischi, è possibile accedervi.
+
+.. Creare una chiave di sicurezza interna
+.. Swap del controller con gestione interna delle chiavi e una o più unità protette
+
+
+
+
+ a| 
+Tutti i dischi protetti, gestione interna delle chiavi
+ a| 
+Swap del controller con gestione interna delle chiavi e una o più unità protette
+
+
+
+ a| 
+Combinazione di dischi protetti e non protetti, External Key Management
+ a| 
+Passare alla fase successiva.
+
+Dopo aver sostituito il controller, i controller si risincronizzano automaticamente con il server di gestione delle chiavi esterne e i dischi si sbloccano e sono accessibili.
+
+
+NOTE: Se si riceve un codice di blocco del display a sette segmenti di `L5` dopo aver sostituito un controller di dischi misti protetti con la gestione interna delle chiavi, contattare il supporto tecnico.
+
+
+
+ a| 
+Tutti i dischi protetti, Gestione delle chiavi esterne, si è temporaneamente tornati alla gestione delle chiavi interne per la procedura di sostituzione del controller
+ a| 
+È necessario prima sbloccare le unità protette utilizzando la procedura di gestione delle chiavi interne. Una volta sbloccati i dischi, si torna alla gestione delle chiavi esterne creando una nuova chiave di sicurezza esterna per lo storage array.
+
+.. Swap del controller con gestione interna delle chiavi e una o più unità protette
+.. Creare una chiave di sicurezza esterna
+
+
+
+
+ a| 
+Tutti i dischi protetti, Gestione delle chiavi esterne, non si è temporaneamente passati alla gestione delle chiavi interne per la procedura di sostituzione del controller
+ a| 
+Swap del controller con gestione esterna delle chiavi e protezione di tutti i dischi
+
+|===
+
+
+
+
+== Fase 2: Controllare lo stato dei controller e dei vassoi
+
+È possibile utilizzare i LED e il software di gestione dello storage per controllare lo stato dei controller e dei vassoi.
+
+.Fasi
+. Controllare i LED sul controller A per assicurarsi che sia in fase di avvio corretta.
++
+I LED host link Service Action Required diventano verdi durante il riavvio. Il display a sette segmenti mostra la sequenza OS+ SD+ vuoto- per indicare che il controller sta eseguendo l'elaborazione SOD (Start-of-day).
+
++
+Una volta completato correttamente il riavvio del controller, il display a sette segmenti mostra l'ID del vassoio corrispondente al display a sette segmenti sul secondo controller. È quindi possibile scoprire il nuovo contenitore del controller utilizzando il software di gestione dello storage.
+
+. Se uno dei LED Service Action Required (azione di servizio richiesta) del vassoio del disco del controller è _ON_, o se il LED Controller Service Action Required (azione di servizio del controller richiesta) è _ON_:
++
+.. Verificare che il contenitore del controller sia stato installato correttamente e che tutti i cavi siano inseriti correttamente. Reinstallare il contenitore del controller, se necessario.
+.. Controllare di nuovo i LED Service Action Required (azione di servizio richiesta) del vassoio del controller e il LED Controller Service Action Required (azione di servizio richiesta del controller). Se il problema non viene risolto, contattare il supporto tecnico.
+
+
+. Per una configurazione duplex, ripetere i passi da 1 a 2 per il controller B.
+. Utilizzando i LED e il software di gestione dello storage, controllare lo stato di tutti i vassoi dello storage array. Se uno dei componenti ha uno stato di intervento richiesto, utilizzare Recovery Guru per la risoluzione dei problemi. Se il problema non viene risolto, contattare il supporto tecnico.
+
+
+
+
+== Fase 3: Convalidare la versione del software del controller
+
+È necessario assicurarsi che i nuovi controller siano in esecuzione con IL sistema operativo (firmware del controller) corretto e CON NVSRAM.
+
+.Fasi
+. Effettuare una delle seguenti operazioni:
++
+** Se si esegue l'aggiornamento a controller che non supportano SANtricity 11.30 e il firmware del controller 8.30, assicurarsi che la versione in esecuzione sui nuovi controller corrisponda alla versione eseguita per ultima sui controller originali. Normalmente, questa sarà la versione più recente supportata dai vecchi controller. Se necessario, installare la versione appropriata sui nuovi controller.
+** Se si esegue l'aggiornamento ai controller che eseguono SANtricity 11.30 e il firmware del controller 8.30, scaricare e installare L'ULTIMA VERSIONE DI NVSRAM dopo l'accensione dei nuovi controller.
+
+
+. Se l'aggiornamento del controller comporta una modifica del protocollo (ad esempio, da Fibre Channel a iSCSI) e si dispone già di host definiti per lo storage array, associare le nuove porte host agli host:
++
+.. Da System Manager, selezionare menu:Storage[Hosts] (Storage[host]).
+.. Selezionare l'host a cui associare le porte, quindi fare clic su *View/Edit Settings* (Visualizza/Modifica impostazioni).
++
+Viene visualizzata una finestra di dialogo che mostra le impostazioni correnti dell'host.
+
+.. Fare clic sulla scheda *host Ports* (Porte host).
++
+La finestra di dialogo mostra gli identificatori di porta host correnti.
+
+.. Per aggiornare le informazioni relative all'identificatore della porta host associate a ciascun host, sostituire gli ID della porta host dei vecchi adattatori host con i nuovi ID della porta host per il nuovo adattatore host.
+.. Ripetere il passaggio d per ciascun host.
+.. Fare clic su *Save* (Salva).
+
+
++
+Per informazioni sull'hardware compatibile, fare riferimento a. https://mysupport.netapp.com/NOW/products/interoperability["Matrice di interoperabilità NetApp"^] e a. http://hwu.netapp.com/home.aspx["NetApp Hardware Universe"^].
+
+. Se la cache write-back è stata disattivata per tutti i volumi thin durante la preparazione per lo scambio di risorse, riattivare la cache write-back.
++
+.. Da System Manager, selezionare menu:Storage[Volumes] (Storage[volumi]).
+.. Selezionare un volume qualsiasi, quindi menu:More[Change cache settings] (Altro[Modifica impostazioni cache]).
++
+Viene visualizzata la finestra di dialogo Change cache Setting (Modifica impostazioni cache). In questa finestra di dialogo vengono visualizzati tutti i volumi dell'array di storage.
+
+.. Selezionare la scheda *Basic* e modificare le impostazioni per il caching in lettura e il caching in scrittura.
+.. Fare clic su *Save* (Salva).
+
+
+. Se SAML è stato disattivato durante la preparazione per lo swapping, riattivare SAML.
++
+.. Da System Manager, selezionare menu:Impostazioni[Gestione accessi].
+.. Selezionare la scheda *SAML*, quindi seguire le istruzioni sulla pagina.
+
+
+. Raccogliere i dati di supporto relativi allo storage array utilizzando la GUI o la CLI:
++
+** Utilizzare System Manager o Array Management Window di Storage Manager per raccogliere e salvare un bundle di supporto per lo storage array.
++
+*** Da System Manager, selezionare menu:Support[Support Center > scheda Diagnostics]. Quindi selezionare *Collect Support Data* e fare clic su *Collect*.
+*** Dalla barra degli strumenti della finestra Array Management (Gestione array), selezionare menu:Monitor[Health > Collect Support Data Manually] (Monitor[Salute > Collect Support Data Manually]). Quindi, immettere un nome e specificare una posizione nel sistema in cui si desidera memorizzare il bundle di supporto.
++
+Il file viene salvato nella cartella Download del browser con il nome `support-data.7z`.
+
++
+Se lo shelf contiene cassetti, i dati di diagnostica per lo shelf vengono archiviati in un file separato con zip denominato `tray-component-state-capture.7z`
+
+
+
+** Utilizzare l'interfaccia CLI per eseguire `save storageArray supportData` per raccogliere dati di supporto completi sull'array di storage.
++
+
+NOTE: La raccolta dei dati di supporto può influire temporaneamente sulle performance dello storage array.
+
+
+
+. Avvisare il supporto tecnico NetApp delle modifiche apportate alla configurazione dello storage array.
++
+.. Ottenere il numero di serie del vassoio del disco del controller registrato xref:prepare-upgrade-controllers-task.adoc[Preparazione per l'aggiornamento dei controller].
+.. Accedere al sito di supporto NetApp all'indirizzo http://mysupport.netapp.com/eservice/assistant["mysupport.netapp.com/eservice/assistant"^].
+.. Selezionare *Product Registration* (registrazione prodotto) dall'elenco a discesa sotto *Category 1* (Categoria 1).
+.. Inserire il seguente testo nella casella di testo **commenti**, sostituendo il numero di serie del vassoio del controller con il numero di serie:
++
+`Please create alert against Serial Number: serial number. The alert name should be “E-Series Upgrade”. The alert text should read as follows:`
+
++
+`“Attention: The controllers in this system have been upgraded from the original configuration. Verify the controller configuration before ordering replacement controllers and notify dispatch that the system has been upgraded.”`
+
+.. Fare clic sul pulsante *Invia* nella parte inferiore del modulo.
+
+
+
+
+.Quali sono le prossime novità?
+Se l'aggiornamento del controller comporta la modifica dell'ID vendor da LSI a NETAPP, visitare il sito Web link:remount-volumes-lsi-task.html["Rimontare i volumi dopo aver cambiato il vendor da LSI a NETAPP"]; in caso contrario, l'aggiornamento del controller è completo ed è possibile riprendere le normali operazioni.

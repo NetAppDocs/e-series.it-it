@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/vc-olh-increase-capacity-of-a-volume.html 
+keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
+summary: Ridimensionare un volume per aumentarne la capacità segnalata. 
+---
+= Aumentare la capacità di un volume
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile ridimensionare un volume per aumentarne la capacità indicata.
+
+.Prima di iniziare
+Assicurarsi che:
+
+* È disponibile una capacità libera sufficiente nel pool o nel gruppo di volumi associati al volume.
+* Il volume è ottimale e non in alcun stato di modifica.
+* Nel volume non sono in uso dischi hot spare. (Si applica solo ai volumi nei gruppi di volumi).
+
+
+.A proposito di questa attività
+Questa attività descrive come aumentare la capacità riportata (la capacità riportata agli host) di un volume utilizzando la capacità libera disponibile nel pool o nel gruppo di volumi. Assicurarsi di prendere in considerazione eventuali requisiti di capacità futuri per altri volumi in questo pool o gruppo di volumi.
+
+
+NOTE: L'aumento della capacità di un volume è supportato solo su alcuni sistemi operativi. Se si aumenta la capacità del volume su un sistema operativo host non supportato, la capacità espansa non è utilizzabile e non è possibile ripristinare la capacità del volume originale.
+
+.Fasi
+. Dalla pagina *Manage* (Gestisci), selezionare l'array di storage che contiene i volumi che si desidera ridimensionare.
+. Selezionare menu:Provisioning[Manage Volumes] (Gestione volumi).
+. Selezionare il volume per il quale si desidera aumentare la capacità, quindi selezionare *aumenta capacità*.
++
+Viene visualizzata la finestra di dialogo Conferma aumento capacità.
+
+. Selezionare *Sì* per continuare.
++
+Viene visualizzata la finestra di dialogo aumenta capacità riportata. Questa finestra di dialogo visualizza la capacità corrente del volume riportata e la capacità libera disponibile nel gruppo di volumi o pool associato al volume.
+
+. Utilizzare la casella *aumenta capacità segnalata aggiungendo...* per aggiungere capacità alla capacità corrente disponibile indicata. È possibile modificare il valore della capacità in modo che venga visualizzato in megibyte (MiB), gibibyte (GiB) o tebibyte (TIB).
+. Fare clic su *aumenta*.
++
+La capacità del volume viene aumentata in base alla selezione effettuata. Tenere presente che questa operazione può essere lunga e può influire sulle prestazioni del sistema.
+
+
+
+.Al termine
+Dopo aver espanso la capacità del volume, è necessario aumentare manualmente le dimensioni del file system per ottenere la corrispondenza. Il modo in cui si esegue questa operazione dipende dal file system in uso. Per ulteriori informazioni, consultare la documentazione del sistema operativo host.
