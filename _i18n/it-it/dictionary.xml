@@ -8868,6 +8868,5 @@
   <block id="2bae42f280067110dfd52cc69a468364" category="sidebar">Active IQ (accesso richiesto)</block>
   <block id="54708ac788109e3332a896f8d957e38f" category="sidebar">Download di e-Series/SANtricity (accesso richiesto)</block>
   <block id="17fbe20fbbd5b537dbcef5b0ec0d1dea" category="section-title">Nuove funzionalità della versione 11.75</block>
-  <block id="a4b7d4d589fe2fdcc52596432d9392ed" category="paragraph">Consenti aggiornamenti a 11.80.x.</block>
-  <block id="7c2f19d039e9dc3e3394a748e8ac016e" category="paragraph">Per eseguire l'aggiornamento alla versione 11.80.x o successiva, è necessario che i sistemi eseguano la versione 11.70.5. FIPS 140-3 è ora supportato su alcuni dischi per SSD SAS e basati su NVMe. I dischi SSD FIPS a 140-3 livelli possono coesistere con i dischi SSD FIPS a 140-2 livelli, a condizione che siano tutti basati su NVMe o tutti basati su SAS. Quando si utilizza una combinazione di questi livelli in gruppi di volumi e pool di dischi, tenere presente che il gruppo o il pool funzionerà con il livello di sicurezza inferiore (140-2).</block>
+  <block id="fc663b28a8d6054c2d97e0b897d7291f" category="paragraph">Per eseguire l'aggiornamento alla versione 11.80.x o successiva, è necessario che i sistemi eseguano la versione 11.70.5.</block>
 </blocks>
