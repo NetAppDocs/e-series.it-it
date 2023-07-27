@@ -47,7 +47,7 @@ Al momento della spedizione, ogni shelf include hardware per il montaggio in rac
 Le istruzioni di installazione e configurazione (fase 1) includono istruzioni per il collegamento dei cavi. Tuttavia, se sono necessari elenchi di cavi e ricetrasmettitori supportati, Best practice per il cablaggio e informazioni dettagliate sulle porte host del controller, accedere alle seguenti istruzioni:
 
 [role="quick-margin-list"]
-* link:../install-hw-cabling/index.html["Hardware Cable e-Series"]
+* link:../install-hw-cabling/index.html["Hardware Cable e-Series"^]
 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinque"] Configurare gli host
@@ -55,9 +55,9 @@ Le istruzioni di installazione e configurazione (fase 1) includono istruzioni pe
 Per rendere lo storage disponibile a un host, selezionare una guida per il tipo di sistema operativo dell'host:
 
 [role="quick-margin-list"]
-* link:../config-linux/index.html["Configurazione di Linux Express"]
-* link:../config-vmware/index.html["Configurazione di VMware Express"]
-* link:../config-windows/index.html["Configurazione di Windows Express"]
+* link:../config-linux/index.html["Configurazione di Linux Express"^]
+* link:../config-vmware/index.html["Configurazione di VMware Express"^]
+* link:../config-windows/index.html["Configurazione di Windows Express"^]
 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Sei"] Configurare lo storage
@@ -68,6 +68,7 @@ Per configurare lo storage, è possibile accedere all'interfaccia basata su Web,
 Selezionare l'interfaccia che si desidera utilizzare:
 
 [role="quick-margin-list"]
-* https://docs.netapp.com/us-en/e-series-santricity/system-manager/index.html["Guida in linea di Gestore di sistema SANtricity per 11,7x"]
-* https://docs.netapp.com/us-en/e-series-santricity-116/index.html["Guida in linea di Gestione di sistema SANtricity per 11,6x"]
+* https://docs.netapp.com/us-en/e-series-santricity/system-manager/index.html["Guida in linea di Gestore di sistema SANtricity per 11.8x"^]
+* https://docs.netapp.com/us-en/e-series-santricity-117/system-manager/index.html["Guida in linea di Gestione sistemi SANtricity per 11.7x"^]
+* https://docs.netapp.com/us-en/e-series-santricity-116/index.html["Guida in linea di Gestione sistemi SANtricity per 11,6x"^]
 

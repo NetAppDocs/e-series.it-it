@@ -31,6 +31,14 @@ Consultare i collegamenti riportati di seguito per accedere alla documentazione 
 
 
 
+=== SANtricity versione 11.7
+
+* https://docs.netapp.com/us-en/e-series-santricity-117/index.html["Guida di System Manager"^]
+* https://docs.netapp.com/us-en/e-series-santricity-117/index.html["Guida di Unified Manager"^]
+
+
+
+
 === SANtricity versione 11.6
 
 * https://docs.netapp.com/us-en/e-series-santricity-116/index.html["Guida di System Manager"^]

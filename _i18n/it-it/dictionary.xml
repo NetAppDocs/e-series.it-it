@@ -7039,7 +7039,6 @@
   <block id="b5c57792c88e99b9c90f4866b01361c8" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block> Collegare i cavi</block>
   <block id="85e9bf543d76b21d1d000a334e3359db" category="paragraph">Le istruzioni di installazione e configurazione (fase 1) includono istruzioni per il collegamento dei cavi. Tuttavia, se sono necessari elenchi di cavi e ricetrasmettitori supportati, Best practice per il cablaggio e informazioni dettagliate sulle porte host del controller, accedere alle seguenti istruzioni:</block>
   <block id="e716b652b3e3b8c2ecc764925c3d152b" category="inline-link-macro">Hardware Cable e-Series</block>
-  <block id="61ebb23dfb23d5322222d22abfb363a7" category="list-text"><block ref="61ebb23dfb23d5322222d22abfb363a7" category="inline-link-macro-rx"></block></block>
   <block id="e5d9de39f7ca1ba2637e5640af3ae8aa" category="inline-image-macro">Cinque</block>
   <block id="4d34b8dd475537b31eded726b5f109a4" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block> Configurare gli host</block>
   <block id="23f5c5a2cb4745a537bec1d583b5d6cc" category="paragraph">Per rendere lo storage disponibile a un host, selezionare una guida per il tipo di sistema operativo dell'host:</block>
@@ -7050,10 +7049,6 @@
   <block id="8cb633130263590fcb215001ddbab715" category="paragraph-title"><block ref="ef78558f80439832e0f51cc22cee8b8c" category="inline-image-macro-rx" type="image"></block> Configurare lo storage</block>
   <block id="9bc4dbdc4b0ba32e879477f6d380d1f2" category="paragraph">Per configurare lo storage, è possibile accedere all'interfaccia basata su Web, System Manager, puntando un browser all'indirizzo IP del controller. L'installazione guidata consente di iniziare a configurare il sistema. In alternativa, è possibile utilizzare anche l'interfaccia della riga di comando (CLI).</block>
   <block id="dc319fa18c0e449181d9af17b46cb41d" category="paragraph">Selezionare l'interfaccia che si desidera utilizzare:</block>
-  <block id="82c87a954533f4f73c4568a90d45d795" category="inline-link">Guida in linea di Gestore di sistema SANtricity per 11,7x</block>
-  <block id="b6adf77a8fd2cb1ee566051ed64b7bbb" category="list-text"><block ref="b6adf77a8fd2cb1ee566051ed64b7bbb" category="inline-link-rx"></block></block>
-  <block id="73ea8f8143966cdb241af48e230354bb" category="inline-link">Guida in linea di Gestione di sistema SANtricity per 11,6x</block>
-  <block id="00f0cc59eb519b0e3ccef23f32fc3242" category="list-text"><block ref="00f0cc59eb519b0e3ccef23f32fc3242" category="inline-link-rx"></block></block>
   <block id="2703edfa4919c58a8b79beb4a3174be5" category="summary">Questo sito contiene informazioni su release, modelli e componenti specifici di e-Series.</block>
   <block id="2f68c2c4e738fd96a0fe692eefed7ab9" category="doc">Cosa include questo sito</block>
   <block id="ad32e4a428834c3f0dd6d07dbd6fe60a" category="cell">Che cosa è incluso</block>
@@ -8836,4 +8831,19 @@
   <block id="9fed5991090e027f2348c873d605f4d6" category="admonition">Il sistema EF300 supporta configurazioni di shelf di espansione senza dischi nel vassoio di base Quando si utilizza questa configurazione, assicurarsi che le unità siano inserite nello shelf di espansione e collegate correttamente al vassoio di base prima di accendere il sistema.</block>
   <block id="dae6baa86f1f6e4135f2552862c8b191" category="list-text">Unità SSD SAS con shelf di espansione: Qualsiasi combinazione di shelf DE212C, DE224C e DE460C non deve superare un totale di 96 slot per unità SSD SAS e 7 shelf di espansione, a meno che non vengano utilizzati solo shelf DE212C, sono consentiti 8 shelf DE212C. Ad esempio, 1 shelf DE460C più 1 shelf DE224C più 1 shelf DE212C o 4 shelf DE224C o 8 shelf DE212C</block>
   <block id="e1602ccaec81c1829eb2a83bd391bfb8" category="admonition">Il sistema EF600 supporta configurazioni di shelf di espansione senza dischi nel vassoio di base Quando si utilizza questa configurazione, assicurarsi che le unità siano inserite nello shelf di espansione e collegate correttamente al vassoio di base prima di accendere il sistema.</block>
+  <block id="70a5ac954926edc08c5f6fc4c248a4a6" category="section-title">SANtricity versione 11.7</block>
+  <block id="f7b52729af7c7aa177e09390f0afd194" category="list-text"><block ref="f7b52729af7c7aa177e09390f0afd194" category="inline-link-rx"></block></block>
+  <block id="797222f106ff986b71e9f972dd342bc3" category="list-text"><block ref="797222f106ff986b71e9f972dd342bc3" category="inline-link-rx"></block></block>
+  <block id="3effdbd16c4bb389ee66095c1d8d2ee9" category="inline-link">11.80 Note di rilascio</block>
+  <block id="b1aa5c2649b826498df008931f57355f" category="list-text"><block ref="b1aa5c2649b826498df008931f57355f" category="inline-link-rx"></block></block>
+  <block id="c190aac6a3d3fb7d9f71ca0ce7ca264f" category="list-text"><block ref="c190aac6a3d3fb7d9f71ca0ce7ca264f" category="inline-link-macro-rx"></block></block>
+  <block id="f923e6588ebbb58f38eadd7304100a8f" category="list-text"><block ref="f923e6588ebbb58f38eadd7304100a8f" category="inline-link-macro-rx"></block></block>
+  <block id="2000cb1e7de82e823717ad308e491d64" category="list-text"><block ref="2000cb1e7de82e823717ad308e491d64" category="inline-link-macro-rx"></block></block>
+  <block id="872316f2e40e5f7164acd94c4ac49c16" category="list-text"><block ref="872316f2e40e5f7164acd94c4ac49c16" category="inline-link-macro-rx"></block></block>
+  <block id="7cac9f30e199e7ecb1c7454e8193ea25" category="inline-link">Guida in linea di Gestore di sistema SANtricity per 11.8x</block>
+  <block id="f96ffc1296cfb22e1010ea2a5c153c7d" category="list-text"><block ref="f96ffc1296cfb22e1010ea2a5c153c7d" category="inline-link-rx"></block></block>
+  <block id="e310bf04394efde500bf9f4c81acb37c" category="inline-link">Guida in linea di Gestione sistemi SANtricity per 11.7x</block>
+  <block id="57ceabd1bd2acd18e97acd2a27a09688" category="list-text"><block ref="57ceabd1bd2acd18e97acd2a27a09688" category="inline-link-rx"></block></block>
+  <block id="cf7b3313bd605518202463f0e3fe1b45" category="inline-link">Guida in linea di Gestione sistemi SANtricity per 11,6x</block>
+  <block id="8200e232e26f3c94f328c9f6cf840844" category="list-text"><block ref="8200e232e26f3c94f328c9f6cf840844" category="inline-link-rx"></block></block>
 </blocks>
