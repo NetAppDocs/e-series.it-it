@@ -19,7 +19,9 @@ Gestione storage SANtricity include l'interfaccia a riga di comando (CLI) per ul
 
 NOTE: Se si utilizza il software SANtricity 11.60 e versioni successive, non è necessario seguire questa procedura. La CLI sicura di SANtricity (SMcli) è inclusa nel sistema operativo SANtricity e può essere scaricata tramite Gestore di sistema di SANtricity. Per ulteriori informazioni su come scaricare SMcli tramite Gestione sistema di SANtricity, fare riferimento all'argomento _Download command line interface (CLI)_ nella Guida in linea di Gestione sistema di SANtricity.
 
-.Di cosa hai bisogno
+.Prima di iniziare
+Assicurarsi di disporre di quanto segue:
+
 * Software SANtricity 11.53 o precedente.
 * I privilegi di amministratore o superutente corretti.
 * Un sistema per il client di gestione dello storage SANtricity con i seguenti requisiti minimi:

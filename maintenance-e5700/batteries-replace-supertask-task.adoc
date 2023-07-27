@@ -20,13 +20,14 @@ Ogni contenitore del controller E5700 include una batteria che conserva i dati m
 .Prima di iniziare
 * Verificare che non siano in uso volumi o che su tutti gli host che utilizzano questi volumi sia installato un driver multipath.
 * Revisione link:batteries-intro-concept.html["Requisiti per la sostituzione della batteria E5700"].
+* Assicurarsi di disporre di quanto segue:
++
+** Una batteria sostitutiva.
+** Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
+** Etichette per identificare ciascun cavo collegato al contenitore del controller.
+** Stazione di gestione con un browser che può accedere a Gestione di sistema SANtricity per il controller. Per aprire l'interfaccia di System Manager, puntare il browser sul nome di dominio o sull'indirizzo IP del controller.
 
 
-.Di cosa hai bisogno
-* Una batteria sostitutiva.
-* Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
-* Etichette per identificare ciascun cavo collegato al contenitore del controller.
-* Stazione di gestione con un browser che può accedere a Gestione di sistema SANtricity per il controller. Per aprire l'interfaccia di System Manager, puntare il browser sul nome di dominio o sull'indirizzo IP del controller.
 
 
 

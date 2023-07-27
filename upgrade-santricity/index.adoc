@@ -20,4 +20,4 @@ Queste procedure di aggiornamento includono istruzioni separate per quanto segue
 * Drive -- include istruzioni per l'aggiornamento del firmware del disco.
 
 
-Prima di iniziare l'aggiornamento, assicurarsi di esaminare il link:overview-upgrade-consider-task.html["Considerazioni sull'upgrade"].
+Prima di iniziare l'aggiornamento, assicurarsi di esaminare il  link:overview-upgrade-consider-task.html["Considerazioni sull'upgrade"^].

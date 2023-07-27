@@ -21,6 +21,7 @@ Prima di installare Web Services Proxy, esaminare i requisiti di installazione e
 
 L'installazione del proxy include i seguenti requisiti.
 
+[cols="35h,~"]
 |===
 | Requisito | Descrizione 
 

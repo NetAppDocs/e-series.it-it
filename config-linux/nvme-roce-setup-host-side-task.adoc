@@ -13,7 +13,7 @@ summary: 'La configurazione di NVMe Initiator in un ambiente RoCE include l"inst
 [role="lead"]
 La configurazione di NVMe Initiator in un ambiente RoCE include l'installazione e la configurazione dei pacchetti rdma-core e nvme-cli, la configurazione degli indirizzi IP dell'iniziatore e l'impostazione del layer NVMe-of sull'host.
 
-.Di cosa hai bisogno
+.Prima di iniziare
 È necessario utilizzare il sistema operativo RHEL 7, RHEL 8, RHEL 9, SUSE Linux Enterprise Server 12 o 15 Service Pack più recente. Vedere https://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"^] per un elenco completo dei requisiti più recenti.
 
 .Fasi
@@ -202,16 +202,17 @@ method=auto
 # ifup eth4
 # ifup eth5
 ----
-. Impostare il livello NVMe-of sull'host. Creare il seguente file in `/etc/modules-load.d/` per caricare `nvme-rdma` kernel e assicurarsi che il modulo kernel sia sempre attivo, anche dopo un riavvio:
+. Impostare il livello NVMe-of sull'host. Creare il seguente file in `/etc/modules-load.d/` per caricare `nvme_rdma` kernel e assicurarsi che il modulo kernel sia sempre attivo, anche dopo un riavvio:
 +
 [listing]
 ----
 
-# cat /etc/modules-load.d/nvme-rdma.conf
-  nvme-rdma
+# cat /etc/modules-load.d/nvme_rdma.conf
+  nvme_rdma
 ----
+. Riavviare l'host.
 +
-Per verificare `nvme-rdma` kernel module è stato caricato, eseguire questo comando:
+Per verificare `nvme_rdma` kernel module è stato caricato, eseguire questo comando:
 
 +
 [listing]

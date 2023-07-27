@@ -14,7 +14,7 @@ summary: 'Collegare i cavi di alimentazione e l"alimentazione agli shelf di disc
 Scopri come collegare i cavi di alimentazione e alimentare gli shelf di dischi.
 
 .Prima di iniziare
-Prima di alimentare gli shelf di controller, assicurarsi di effettuare le seguenti operazioni:
+Assicurarsi di effettuare le seguenti operazioni:
 
 * Installare l'hardware.
 * Adottare precauzioni antistatiche.

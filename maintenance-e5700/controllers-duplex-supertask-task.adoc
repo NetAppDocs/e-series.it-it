@@ -24,7 +24,9 @@ Ogni contenitore di controller contiene una scheda controller, una batteria e un
 
 NOTE: Questa attività è valida solo per gli array di storage con due controller (configurazione duplex).
 
-.Di cosa hai bisogno
+.Prima di iniziare
+Assicurarsi di disporre di quanto segue:
+
 * Un contenitore del controller sostitutivo con lo stesso numero di parte del contenitore del controller che si sta sostituendo. (Vedere il passaggio 1 per verificare il codice del ricambio).
 * Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
 * Cacciavite Phillips n. 1.

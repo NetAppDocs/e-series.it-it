@@ -23,7 +23,9 @@ summary: Sostituire un contenitore del controller in una configurazione duplex.
 .A proposito di questa attività
 Ogni contenitore di controller contiene una scheda controller, una batteria e una scheda di interfaccia host (HIC) opzionale. Quando si sostituisce un contenitore del controller, è necessario rimuovere la batteria e l'HIC, se installato, dal contenitore del controller originale e installarli nel contenitore del controller sostitutivo.
 
-.Di cosa hai bisogno
+.Prima di iniziare
+Assicurarsi di disporre di quanto segue:
+
 * Un contenitore del controller sostitutivo con lo stesso numero di parte del contenitore del controller che si sta sostituendo. (Vedere il passaggio 1 per verificare il codice del ricambio).
 * Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
 * Cacciavite Phillips n. 1.

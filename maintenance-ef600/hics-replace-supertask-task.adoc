@@ -20,19 +20,21 @@ Quando si sostituisce un HIC guasto, è necessario spegnere lo storage array, so
 .Prima di iniziare
 * Revisione link:hics-overview-supertask-concept.html["Requisiti per gli aggiornamenti HIC EF300 o EF600"].
 * Pianificare una finestra di manutenzione dei tempi di inattività per questa procedura. Non è possibile accedere ai dati sull'array di storage fino a quando la procedura non è stata completata correttamente. Poiché entrambi i controller devono avere la stessa configurazione HIC quando sono accesi, l'alimentazione deve essere disattivata quando si installa HICS.
-
-
-.Di cosa hai bisogno
-* HICS compatibili con i controller.
-* Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
-* Un'area di lavoro piana e priva di elettricità statica.
-* Etichette per identificare ciascun cavo collegato al contenitore del controller.
-* Un cacciavite Phillips n. 1.
-* Stazione di gestione con un browser che può accedere a Gestione di sistema SANtricity per il controller. Per aprire l'interfaccia di System Manager, puntare il browser sul nome di dominio o sull'indirizzo IP del controller.
-
-
+* Assicurarsi di disporre di quanto segue:
++
+** HICS compatibili con i controller.
+** Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
+** Un'area di lavoro piana e priva di elettricità statica.
+** Etichette per identificare ciascun cavo collegato al contenitore del controller.
+** Un cacciavite Phillips n. 1.
+** Stazione di gestione con un browser che può accedere a Gestione di sistema SANtricity per il controller. Per aprire l'interfaccia di System Manager, puntare il browser sul nome di dominio o sull'indirizzo IP del controller.
++
 
 CAUTION: *Possibile perdita di accesso ai dati* -- non installare mai un HIC in un contenitore di controller EF300 o EF600 se tale HIC è stato progettato per un altro controller e-Series. Inoltre, entrambi i controller e gli HICS devono essere identici. La presenza di HICS incompatibili o non corrispondenti causa il blocco dei controller quando si applica l'alimentazione.
+
+
+
+
 
 
 

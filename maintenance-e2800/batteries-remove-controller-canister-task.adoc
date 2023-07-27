@@ -15,7 +15,9 @@ summary: Per rimuovere la batteria, rimuovere prima il contenitore del controlle
 
 Quando si rimuove un contenitore del controller, scollegare tutti i cavi. Quindi, far scorrere il contenitore del controller fuori dallo shelf del controller.
 
-.Di cosa hai bisogno
+.Prima di iniziare
+Assicurarsi di disporre di quanto segue:
+
 * Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
 * Etichette per identificare ciascun cavo collegato al contenitore del controller.
 

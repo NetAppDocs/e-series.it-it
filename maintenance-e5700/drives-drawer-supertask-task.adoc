@@ -32,15 +32,18 @@ La procedura per sostituire un cassetto del disco guasto in uno shelf di control
 
 CAUTION: *Possibile perdita di accesso ai dati* -- se un volume si trova già in uno stato degradato e si rimuovono le unità dal cassetto, il volume potrebbe non funzionare.
 
-.Di cosa hai bisogno
-* Un'unità sostitutiva supportata da NetApp per lo shelf di controller o lo shelf di dischi.
-* Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
-* Una torcia.
-* Un indicatore permanente per annotare la posizione esatta di ciascuna unità durante la rimozione dell'unità dal cassetto.
-* Accesso all'interfaccia a riga di comando (CLI) dello storage array. Se non si dispone dell'accesso alla CLI, è possibile effettuare una delle seguenti operazioni:
+* Assicurarsi di disporre di quanto segue:
 +
-** *Per Gestore di sistema SANtricity (versione 11.60 e successive)* -- Scarica il pacchetto CLI (file zip) da Gestore di sistema. Accedere al menu:Impostazioni[sistema > componenti aggiuntivi > interfaccia riga di comando]. È quindi possibile eseguire i comandi CLI da un prompt del sistema operativo, ad esempio il prompt di DOS C:.
-** *Per Gestione storage SANtricity/finestra di gestione aziendale (EMW)* -- seguire le istruzioni nella guida rapida per scaricare e installare il software. È possibile eseguire i comandi CLI da EMW selezionando menu:Tools[Execute script] (Strumenti[Esegui script]).
+** Un'unità sostitutiva supportata da NetApp per lo shelf di controller o lo shelf di dischi.
+** Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
+** Una torcia.
+** Un indicatore permanente per annotare la posizione esatta di ciascuna unità durante la rimozione dell'unità dal cassetto.
+** Accesso all'interfaccia a riga di comando (CLI) dello storage array. Se non si dispone dell'accesso alla CLI, è possibile effettuare una delle seguenti operazioni:
++
+*** *Per Gestore di sistema SANtricity (versione 11.60 e successive)* -- Scarica il pacchetto CLI (file zip) da Gestore di sistema. Accedere al menu:Impostazioni[sistema > componenti aggiuntivi > interfaccia riga di comando]. È quindi possibile eseguire i comandi CLI da un prompt del sistema operativo, ad esempio il prompt di DOS C:.
+*** *Per Gestione storage SANtricity/finestra di gestione aziendale (EMW)* -- seguire le istruzioni nella guida rapida per scaricare e installare il software. È possibile eseguire i comandi CLI da EMW selezionando menu:Tools[Execute script] (Strumenti[Esegui script]).
+
+
 
 
 
@@ -195,10 +198,10 @@ La catena di cavi superiore è collegata al cassetto dell'unità 1. La catena de
 image::../media/trafford_cable_rail_1_maint-e5700.gif[binario per cavi trafford 1 principale e5700]
 
 +
-*(1)* _connettore verticale (collegato alla scheda intermedia)_
+*(1)* _catena di cavi_
 
 +
-*(2)* _catena di cavi_
+*(2)* _connettore verticale (collegato alla scheda intermedia)_
 
 +
 *(3)* _connettore orizzontale (collegato al cassetto)_

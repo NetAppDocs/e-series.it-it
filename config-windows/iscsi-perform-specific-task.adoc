@@ -20,7 +20,9 @@ Per il protocollo iSCSI, configurare gli switch, configurare la rete sul lato ar
 
 Gli switch vengono configurati in base alle raccomandazioni del vendor per iSCSI. Questi consigli possono includere sia direttive di configurazione che aggiornamenti del codice.
 
-.Di cosa hai bisogno
+.Prima di iniziare
+Assicurarsi di disporre di quanto segue:
+
 * Due reti separate per l'alta disponibilità. Assicurarsi di isolare il traffico iSCSI per separare i segmenti di rete utilizzando VLAN o due reti separate.
 * Controllo di flusso hardware di invio e ricezione abilitato *end-to-end*.
 * Controllo di flusso prioritario disattivato.
@@ -41,7 +43,9 @@ Consultare la documentazione del fornitore dello switch.
 
 Una strategia efficace per configurare la rete iSCSI con ridondanza di base consiste nel collegare ciascuna porta host e una porta da ciascun controller per separare gli switch e partizionare ciascun set di porte host e controller su segmenti di rete separati utilizzando VLAN.
 
-.Di cosa hai bisogno
+.Prima di iniziare
+Assicurarsi di disporre di quanto segue:
+
 * Controllo di flusso hardware di invio e ricezione abilitato *end-to-end*.
 * Controllo di flusso prioritario disattivato.
 * Se appropriato, abilitare i frame jumbo.
@@ -62,7 +66,7 @@ NOTE: Molti switch di rete devono essere configurati a un valore superiore a 9,0
 
 La GUI di Gestione di sistema di SANtricity consente di configurare il collegamento in rete iSCSI sul lato array.
 
-.Di cosa hai bisogno
+.Prima di iniziare
 * L'indirizzo IP o il nome di dominio di uno dei controller degli array di storage.
 * Una password per la GUI di System Manager, RBAC (Role-Based Access Control) o LDAP e un servizio di directory configurato per l'accesso di sicurezza appropriato allo storage array. Per ulteriori informazioni sulla gestione degli accessi, consultare la guida in linea di Gestione di sistema SANtricity.
 
@@ -198,7 +202,9 @@ Selezionare questa opzione per attivare il parametro che determina la priorità 
 
 È necessario configurare la rete iSCSI sul lato host in modo che l'iniziatore iSCSI Microsoft possa stabilire sessioni con l'array.
 
-.Di cosa hai bisogno
+.Prima di iniziare
+Assicurarsi di disporre di quanto segue:
+
 * Switch completamente configurati che verranno utilizzati per trasportare il traffico dello storage iSCSI.
 * Controllo di flusso hardware di invio e ricezione abilitato *end-to-end*
 * Controllo di flusso prioritario disattivato.

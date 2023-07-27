@@ -15,8 +15,11 @@ Poiché un nuovo LUN non è in linea e non dispone di partizione o file system q
 
 È possibile inizializzare il disco come disco di base con una tabella di partizione GPT o MBR. In genere, si formatta il LUN con un file system come New Technology file System (NTFS).
 
-.Di cosa hai bisogno
-Un LUN rilevato dall'host.
+.Prima di iniziare
+Assicurarsi di disporre di quanto segue:
+
+* Un LUN rilevato dall'host.
+
 
 .Fasi
 . Dal prompt dei comandi di Windows, immettere `diskpart` contesto.

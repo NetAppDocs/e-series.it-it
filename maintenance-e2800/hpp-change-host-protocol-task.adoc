@@ -102,6 +102,10 @@ image::../media/sam1130_ss_e2800_storage_array_profile_sn_smid_copy_maint-e2800.
 +
 .. Nella scheda Support Resources (risorse di supporto), individuare e selezionare il collegamento *Storage Array Profile* (Profilo array di storage).
 .. Digitare *Feature Pack submodel ID* nella casella di testo e fare clic su *Find* (trova).
++
+
+NOTE: Il "modello secondario" può anche essere scritto come "modello secondario".
+
 .. Individuare l'ID del sottomodello del Feature Pack per la configurazione iniziale.
 +
 image::../media/storage_array_profile2_maint-e2800.gif[profilo array storage 2 mainte2800]

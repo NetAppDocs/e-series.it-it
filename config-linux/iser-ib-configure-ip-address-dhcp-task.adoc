@@ -13,8 +13,9 @@ summary: 'Utilizzare il protocollo DHCP (Dynamic host Configuration Protocol) pe
 [role="lead"]
 Per configurare le comunicazioni tra la stazione di gestione e lo storage array, utilizzare il protocollo DHCP (Dynamic host Configuration Protocol) per fornire gli indirizzi IP.
 
-.Di cosa hai bisogno
-Un server DHCP installato e configurato sulla stessa subnet delle porte di gestione dello storage.
+.Prima di iniziare
+Assicurarsi di disporre di quanto segue:
+* Un server DHCP installato e configurato sulla stessa subnet delle porte di gestione dello storage.
 
 .A proposito di questa attività
 Ogni array di storage dispone di un controller (simplex) o due controller (duplex) e ciascun controller dispone di due porte per la gestione dello storage. A ciascuna porta di gestione viene assegnato un indirizzo IP.

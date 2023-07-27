@@ -28,11 +28,12 @@ CAUTION: *Possibili danni all'apparecchiatura* -- se si esegue questa procedura 
 * Esaminare i requisiti del filtro a carboni attivi della ventola in link:canisters-overview-supertask-concept.html["Requisiti per la sostituzione del contenitore"].
 * Esaminare i dettagli nel Recovery Guru per confermare che si è verificato un problema con il filtro a carboni attivi della ventola e selezionare *ricontrollare* dal Recovery Guru per assicurarsi che non sia necessario risolvere prima altri elementi.
 * Controllare che il LED di attenzione ambra sul filtro della ventola sia acceso, a indicare che la ventola è guasta. Contattare il supporto tecnico per assistenza se entrambi i contenitori delle ventole nello shelf hanno i LED di attenzione color ambra accesi.
+* Assicurarsi di disporre di quanto segue:
++
+** Un filtro della ventola di ricambio (ventola) supportato per il modello di shelf del controller o del disco.
+** Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
 
 
-.Di cosa hai bisogno
-* Un filtro della ventola di ricambio (ventola) supportato per il modello di shelf del controller o del disco.
-* Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
 
 
 

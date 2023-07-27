@@ -13,8 +13,11 @@ summary: Installare il pacchetto DSM, che contiene il software multipath per Win
 [role="lead"]
 Per fornire un percorso ridondante all'array di storage, è possibile installare il pacchetto DSM Windows di SANtricity e utilizzare il pacchetto multipath per Windows.
 
-.Di cosa hai bisogno
-I privilegi di amministratore o superutente corretti.
+.Prima di iniziare
+Assicurarsi di disporre di quanto segue:
+
+* I privilegi di amministratore o superutente corretti.
+
 
 .A proposito di questa attività
 Il software multipath fornisce un percorso ridondante all'array di storage in caso di interruzione di uno dei percorsi fisici. Prima di poter utilizzare il multipathing, è necessario installare il pacchetto DSM Windows di SANtricity. Questo pacchetto contiene il software multipath per Windows.

@@ -16,7 +16,9 @@ Per configurare lo storage array, è possibile utilizzare la procedura di instal
 
 Gestore di sistema di SANtricity è un'interfaccia basata su web integrata in ogni controller. Per accedere all'interfaccia utente, puntare un browser verso l'indirizzo IP del controller. L'installazione guidata consente di iniziare a configurare il sistema.
 
-.Di cosa hai bisogno
+.Prima di iniziare
+Assicurarsi di disporre di quanto segue:
+
 * Gestione fuori banda.
 * Stazione di gestione per l'accesso a Gestore di sistema di SANtricity che include uno dei seguenti browser:
 +
@@ -27,35 +29,28 @@ Gestore di sistema di SANtricity è un'interfaccia basata su web integrata in og
  a| 
 Google Chrome
  a| 
-79
-
-
-
- a| 
-Microsoft Internet Explorer
- a| 
-11
+89
 
 
 
  a| 
 Microsoft Edge
  a| 
-79
+90
 
 
 
  a| 
 Mozilla Firefox
  a| 
-70
+80
 
 
 
  a| 
 Safari
  a| 
-12
+14
 
 |===
 

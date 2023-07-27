@@ -17,7 +17,9 @@ summary: Aggiungere un secondo controller a uno shelf di controller dotato di un
 .A proposito di questa attività
 Questa attività descrive come aggiungere un secondo contenitore di controller alla versione simplex di uno shelf di controller E2812, uno shelf di controller E2824 o un array flash EF280. Questa procedura viene anche chiamata conversione simplex-to-duplex, che è una procedura online. È possibile accedere ai dati sull'array di storage durante l'esecuzione di questa procedura.
 
-.Di cosa hai bisogno
+.Prima di iniziare
+Assicurarsi di disporre di quanto segue:
+
 * Un nuovo contenitore del controller con lo stesso numero di parte del contenitore del controller attualmente installato. (Vedere il passaggio 1 per verificare il codice del ricambio).
 * Un nuovo HIC identico all'HIC nel contenitore del controller attualmente installato (necessario solo se il contenitore del controller attualmente installato include una scheda di interfaccia host).
 * Un braccialetto ESD o adottare altre precauzioni antistatiche.

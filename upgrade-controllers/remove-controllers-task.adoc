@@ -19,7 +19,9 @@ Una volta completata la preparazione per l'aggiornamento, è possibile rimuovere
 
 Rimuovere il contenitore del controller in modo da poterlo aggiornare con uno nuovo. Scollegare tutti i cavi e rimuovere eventuali ricetrasmettitori SFP. Quindi, far scorrere il contenitore del controller fuori dallo shelf del controller.
 
-.Di cosa hai bisogno
+.Prima di iniziare
+Assicurarsi di disporre di quanto segue:
+
 * Un braccialetto ESD o adottare altre precauzioni antistatiche.
 * Etichette per identificare ciascun cavo collegato al contenitore del controller.
 

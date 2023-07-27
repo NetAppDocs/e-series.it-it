@@ -20,14 +20,15 @@ Per sostituire un DIMM, verificare le dimensioni della cache del controller, pos
 .Prima di iniziare
 * Revisione link:dimms-overview-supertask-concept.html["Requisiti per la sostituzione di un modulo DIMM EF300 o EF600"].
 * Assicurarsi che non siano in uso volumi o che su tutti gli host che utilizzano questi volumi sia installato un driver multipath.
+* Assicurarsi di disporre di quanto segue:
++
+** Un DIMM sostitutivo.
+** Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
+** Un'area di lavoro piana e priva di elettricità statica.
+** Etichette per identificare ciascun cavo collegato al contenitore del controller.
+** Stazione di gestione con un browser che può accedere a Gestione di sistema SANtricity per il controller. Per aprire l'interfaccia di System Manager, puntare il browser sul nome di dominio o sull'indirizzo IP del controller.
 
 
-.Di cosa hai bisogno
-* Un DIMM sostitutivo.
-* Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
-* Un'area di lavoro piana e priva di elettricità statica.
-* Etichette per identificare ciascun cavo collegato al contenitore del controller.
-* Stazione di gestione con un browser che può accedere a Gestione di sistema SANtricity per il controller. Per aprire l'interfaccia di System Manager, puntare il browser sul nome di dominio o sull'indirizzo IP del controller.
 
 
 

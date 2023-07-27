@@ -27,12 +27,13 @@ Ogni shelf di controller da 24 dischi o shelf di dischi include due alimentatori
 * Revisione link:canisters-overview-supertask-concept.html["Requisiti per la sostituzione del filtro E5700"].
 * Esaminare i dettagli nel Recovery Guru per confermare che si è verificato un problema con l'alimentatore. Selezionare *ricontrollare* dal Recovery Guru per assicurarsi che nessun altro elemento debba essere affrontato per primo.
 * Verificare che il LED di attenzione ambra sull'alimentatore sia acceso, a indicare che l'alimentatore o la ventola integrata sono guasti. Contattare il supporto tecnico per assistenza se entrambi gli alimentatori dello shelf hanno i LED di attenzione ambra accesi.
+* Assicurarsi di disporre di quanto segue:
++
+** Un alimentatore sostitutivo supportato per il modello di shelf di controller o di dischi.
+** Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
+** Stazione di gestione con un browser che può accedere a Gestione di sistema SANtricity per il controller. Per aprire l'interfaccia di System Manager, puntare il browser sul nome di dominio o sull'indirizzo IP del controller.
 
 
-.Di cosa hai bisogno
-* Un alimentatore sostitutivo supportato per il modello di shelf di controller o di dischi.
-* Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
-* Stazione di gestione con un browser che può accedere a Gestione di sistema SANtricity per il controller. Per aprire l'interfaccia di System Manager, puntare il browser sul nome di dominio o sull'indirizzo IP del controller.
 
 
 

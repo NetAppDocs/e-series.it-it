@@ -13,7 +13,7 @@ summary: 'Configurare il software multipath, che fornisce un percorso ridondante
 [role="lead"]
 Per fornire un percorso ridondante all'array di storage, è possibile configurare il software multipath.
 
-.Di cosa hai bisogno
+.Prima di iniziare
 È necessario installare i pacchetti richiesti sul sistema.
 
 * Per gli host Red Hat (RHEL), verificare che i pacchetti siano installati eseguendo `rpm -q device-mapper-multipath`.
@@ -59,8 +59,7 @@ systemctl enable multipathd
 dracut --force --add multipath
 ----
 . Utilizzare https://docs.netapp.com/us-en/e-series-santricity/sm-storage/create-host-manually.html["Creare l'host manualmente"] procedura nella guida in linea per verificare se gli host sono definiti. Verificare che ogni impostazione del tipo di host sia basata sulle informazioni del kernel raccolte in <<step4,fase 4>>.
-
-
++
 
 NOTE: Il bilanciamento automatico del carico è disattivato per tutti i volumi mappati agli host che eseguono kernel 3.9 o versioni precedenti.
 

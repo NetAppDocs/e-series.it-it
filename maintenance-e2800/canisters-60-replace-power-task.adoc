@@ -29,11 +29,12 @@ Durante l'esecuzione di questa attività, l'altro contenitore di alimentazione a
 * Esaminare i requisiti del filtro a carboni attivi in link:canisters-overview-supertask-concept.html["Requisiti per la sostituzione del contenitore"].
 * Esaminare i dettagli nel Recovery Guru per confermare che si è verificato un problema con il contenitore di alimentazione e selezionare *ricontrollare* dal Recovery Guru per assicurarsi che non siano prima necessari altri elementi.
 * Controllare che il LED di attenzione ambra sul filtro a carboni attivi sia acceso, a indicare che il filtro a carboni attivi è guasto. Contattare il supporto tecnico per assistenza se entrambi i contenitori di alimentazione presenti nello shelf hanno i LED di attenzione color ambra accesi.
+* Assicurarsi di disporre di quanto segue:
++
+** Un contenitore di alimentazione sostitutivo supportato per il modello di shelf di controller o di dischi.
+** Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
 
 
-.Di cosa hai bisogno
-* Un contenitore di alimentazione sostitutivo supportato per il modello di shelf di controller o di dischi.
-* Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
 
 
 

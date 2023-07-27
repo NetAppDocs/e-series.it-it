@@ -21,7 +21,9 @@ summary: È possibile sostituire un contenitore del controller guasto in una con
 .A proposito di questa attività
 Il contenitore del controller contiene una scheda controller, una batteria e una scheda di interfaccia host (HIC) opzionale. Quando si sostituisce un contenitore del controller guasto, rimuovere la batteria e l'HIC, se installato, dal contenitore del controller originale e installarli nel contenitore del controller sostitutivo.
 
-.Di cosa hai bisogno
+.Prima di iniziare
+Assicurarsi di disporre di quanto segue:
+
 * Un contenitore del controller sostitutivo con lo stesso numero di parte del contenitore del controller che si sta sostituendo.
 * Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
 * Etichette per identificare ciascun cavo collegato al contenitore del controller.

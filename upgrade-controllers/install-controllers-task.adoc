@@ -16,7 +16,9 @@ Dopo aver rimosso i vecchi controller, è possibile installare nuovi controller 
 .A proposito di questa attività
 Per ciascun controller nel vassoio del disco del controller, procedere come segue Se si stanno aggiornando i controller in un vassoio del controller duplex, ripetere tutti i passi per installare il secondo contenitore del controller.
 
-.Di cosa hai bisogno
+.Prima di iniziare
+Assicurarsi di disporre di quanto segue:
+
 * Un braccialetto ESD o adottare altre precauzioni antistatiche.
 * Una batteria dal contenitore del controller originale o una nuova batteria ordinata.
 * Il nuovo contenitore del controller.

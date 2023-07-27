@@ -13,7 +13,9 @@ summary: 'Un nuovo LUN non dispone di partizione o file system quando l"host Lin
 [role="lead"]
 Poiché un nuovo LUN non dispone di partizione o file system quando l'host Linux lo rileva per la prima volta, è necessario formattare il LUN prima di poterlo utilizzare. In alternativa, è possibile creare un file system sul LUN.
 
-.Di cosa hai bisogno
+.Prima di iniziare
+Assicurarsi di disporre di quanto segue:
+
 * Un LUN rilevato dall'host.
 * Un elenco dei dischi disponibili. (Per visualizzare i dischi disponibili, eseguire `ls` nella cartella /dev/mapper.)
 

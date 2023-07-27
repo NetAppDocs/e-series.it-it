@@ -21,7 +21,7 @@ Se si sta cablando EF300 per l'espansione SAS, consultare le seguenti informazio
 
 
 .Fasi
-. Creare un account e registrare l'hardware all'indirizzo http://mysupport.netapp.com/["mysupport.netapp.com"^].
+. Creare un account e registrare l'hardware all'indirizzo http://mysupport.netapp.com/["Supporto NetApp"^].
 . Assicurarsi che nella confezione ricevuta siano presenti i seguenti elementi.
 +
 |===
@@ -125,11 +125,10 @@ image:../media/management_station_inst-hw-ef600_g60b3.png[""]
  a| 
 Un browser supportato per il software di gestione:
 
-** Google Chrome (versione 78 e successive)
-** Microsoft Internet Explorer (versione 11 e successive)
-** Microsoft Edge (88 e versioni successive)
-** Mozilla Firefox (versione 70 e successive)
-** Safari (versione 12 e successive)
+** Google Chrome (versione 89 e successive)
+** Microsoft Edge (90 e versioni successive)
+** Mozilla Firefox (versione 80 e successive)
+** Safari (versione 14 e successive)
 
 
 |===

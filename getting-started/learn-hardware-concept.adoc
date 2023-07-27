@@ -26,6 +26,9 @@ Gli array e-Series sono disponibili nei seguenti modelli:
 
 
 
+NOTE: Tutte le porte USB sono disattivate su E2800, EF280, E5700, EF570, EF600, E EF300.
+
+
 
 == Modelli E2800
 
@@ -132,6 +135,9 @@ Supporta i seguenti dischi con una singola scheda di interfaccia host (HIC) per 
 * Unità NL-SAS con shelf di espansione: Qualsiasi combinazione di shelf DE212C e DE460C non deve superare un totale di 240 slot per unità NL-SAS e 4 shelf di espansione, a meno che non si utilizzino solo shelf DE212C, sono consentiti 8 shelf DE212C. Ad esempio, 4 shelf DE460C o 8 shelf DE212C o 2 shelf DE460C più 2 shelf DE212.
 * Unità SSD SAS con shelf di espansione: Qualsiasi combinazione di shelf DE212C, DE224C e DE460C non deve superare un totale di 96 slot per unità SSD SAS e 4 shelf di espansione, a meno che non vengano utilizzati solo shelf DE212C, sono consentiti 8 shelf DE212C. Ad esempio, 1 shelf DE460C più 1 shelf DE224C più 1 shelf DE212C o 4 shelf DE224C o 8 shelf DE212C.
 
+
+
+NOTE: Il sistema EF300 supporta configurazioni di shelf di espansione senza dischi nel vassoio di base Quando si utilizza questa configurazione, assicurarsi che le unità siano inserite nello shelf di espansione e collegate correttamente al vassoio di base prima di accendere il sistema.
 
 
 
@@ -264,8 +270,11 @@ Supporta i seguenti dischi con una singola scheda di interfaccia host (HIC) per 
 
 * Unità SSD NVMe: Fino a 24 unità SSD NVMe nello shelf del controller.
 * Unità NL-SAS con shelf di espansione: Qualsiasi combinazione di shelf DE212C e DE460C non deve superare un totale di 420 slot per unità NL-SAS e 7 shelf di espansione, a meno che non si utilizzino solo shelf DE212C, sono consentiti 8 shelf DE212C. Ad esempio, 7 shelf DE460C o 8 shelf DE212C o 5 shelf DE460C più 2 shelf DE212.
-* Unità SSD SAS con shelf di espansione: Qualsiasi combinazione di shelf DE212C, DE224C e DE460C non deve superare un totale di 96 slot per unità SSD SAS e 7 shelf di espansione, a meno che non vengano utilizzati solo shelf DE212C, sono consentiti 8 shelf DE212C. Ad esempio, 1 shelf DE460C più 1 shelf DE224C più 1 shelf DE212C o 4 shelf DE224C o 8 shelf DE212C.
+* Unità SSD SAS con shelf di espansione: Qualsiasi combinazione di shelf DE212C, DE224C e DE460C non deve superare un totale di 96 slot per unità SSD SAS e 7 shelf di espansione, a meno che non vengano utilizzati solo shelf DE212C, sono consentiti 8 shelf DE212C. Ad esempio, 1 shelf DE460C più 1 shelf DE224C più 1 shelf DE212C o 4 shelf DE224C o 8 shelf DE212C
 
+
+
+NOTE: Il sistema EF600 supporta configurazioni di shelf di espansione senza dischi nel vassoio di base Quando si utilizza questa configurazione, assicurarsi che le unità siano inserite nello shelf di espansione e collegate correttamente al vassoio di base prima di accendere il sistema.
 
 
 

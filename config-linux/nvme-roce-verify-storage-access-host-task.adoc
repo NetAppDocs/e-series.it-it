@@ -13,8 +13,11 @@ summary: 'Prima di utilizzare lo spazio dei nomi, verificare che l"host possa sc
 [role="lead"]
 Prima di utilizzare lo spazio dei nomi, verificare che l'host possa scrivere i dati nello spazio dei nomi e leggerli.
 
-.Di cosa hai bisogno
-Namespace inizializzato formattato con un file system.
+.Prima di iniziare
+Assicurarsi di disporre di quanto segue:
+
+* Namespace inizializzato formattato con un file system.
+
 
 .Fasi
 . Sull'host, copiare uno o più file nel punto di montaggio del disco.

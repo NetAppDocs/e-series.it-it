@@ -20,7 +20,9 @@ Per il protocollo iSCSI, configurare gli switch e la rete sul lato array e sul l
 
 Gli switch vengono configurati in base alle raccomandazioni del vendor per iSCSI. Questi consigli possono includere sia direttive di configurazione che aggiornamenti del codice.
 
-.Di cosa hai bisogno
+.Prima di iniziare
+Assicurarsi di disporre di quanto segue:
+
 * Due reti separate per l'alta disponibilità. Assicurarsi di isolare il traffico iSCSI per separare i segmenti di rete.
 * Controllo di flusso hardware di invio e ricezione abilitato *end-to-end*.
 * Controllo di flusso prioritario disattivato.
@@ -39,7 +41,9 @@ Consultare la documentazione del fornitore dello switch.
 
 È possibile configurare la rete iSCSI in diversi modi, a seconda dei requisiti di storage dei dati. Rivolgersi all'amministratore di rete per suggerimenti sulla scelta della configurazione migliore per l'ambiente in uso.
 
-.Di cosa hai bisogno
+.Prima di iniziare
+Assicurarsi di disporre di quanto segue:
+
 * Controllo di flusso hardware di invio e ricezione abilitato *end-to-end*.
 * Controllo di flusso prioritario disattivato.
 * Se appropriato, abilitare i frame jumbo.
@@ -72,7 +76,9 @@ NOTE: Molti switch di rete devono essere configurati a un valore superiore a 9,0
 
 La GUI di Gestione di sistema di SANtricity consente di configurare il collegamento in rete iSCSI sul lato array.
 
-.Di cosa hai bisogno
+.Prima di iniziare
+Assicurarsi di disporre di quanto segue:
+
 * L'indirizzo IP o il nome di dominio di uno dei controller degli array di storage.
 * La password per la GUI di System Manager, RBAC (Role-Based Access Control) o LDAP e un servizio di directory è configurata per l'accesso di sicurezza appropriato allo storage array. Per ulteriori informazioni sulla gestione degli accessi, consultare la guida in linea di Gestione di sistema SANtricity.
 

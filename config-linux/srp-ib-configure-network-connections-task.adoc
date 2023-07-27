@@ -13,7 +13,7 @@ summary: Se la configurazione utilizza il protocollo SRP su Infiniband, atteners
 [role="lead"]
 Se la configurazione utilizza il protocollo SRP su Infiniband, attenersi alla procedura descritta in questa sezione.
 
-.Di cosa hai bisogno
+.Prima di iniziare
 Per collegare l'host Linux allo storage array, è necessario attivare lo stack di driver InfiniBand con le opzioni appropriate. Impostazioni specifiche possono variare a seconda delle distribuzioni Linux. Controllare https://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"^] per istruzioni specifiche e impostazioni aggiuntive consigliate specifiche per la soluzione.
 
 .Fasi

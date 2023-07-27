@@ -19,7 +19,9 @@ Per il protocollo NVMe over Fibre Channel, configurare gli switch e determinare 
 
 La configurazione (zoning) degli switch NVMe over Fibre Channel (FC) consente agli host di connettersi allo storage array e limita il numero di percorsi. Gli switch vengono posizionati in zone utilizzando l'interfaccia di gestione degli switch.
 
-.Di cosa hai bisogno
+.Prima di iniziare
+Assicurarsi di disporre di quanto segue:
+
 * Credenziali di amministratore per gli switch.
 * Il numero WWPN di ciascuna porta di iniziatore host e di ciascuna porta di destinazione del controller collegata allo switch. (Utilizzare l'utility HBA per il rilevamento).
 

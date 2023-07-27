@@ -50,7 +50,7 @@ Storage Plugin per vCenter richiede uno spazio adeguato per l'esecuzione e la re
 
 * Spazio di installazione richiesto: 275 MB
 * Spazio di storage: 275 MB + 200 MB (registrazione)
-* Memoria di sistema: 512 MB
+* Memoria di sistema: 1.5 GB
 
 
 

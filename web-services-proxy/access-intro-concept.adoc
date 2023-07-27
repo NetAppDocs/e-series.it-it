@@ -27,6 +27,7 @@ RBAC (role-based access control) associa gli utenti predefiniti ai ruoli. Ogni r
 
 La tabella seguente descrive ciascun ruolo.
 
+[cols="35h,~"]
 |===
 | Ruolo | Descrizione 
 
@@ -62,6 +63,7 @@ Gli account utente predefiniti sono definiti nel file users.properties. È possi
 
 La tabella seguente elenca gli accessi utente disponibili per il proxy dei servizi Web.
 
+[cols="35h,~"]
 |===
 | Accesso utente predefinito | Descrizione 
 

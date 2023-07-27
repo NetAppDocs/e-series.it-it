@@ -13,7 +13,7 @@ summary: 'Configurare il software multipath, che fornisce un percorso ridondante
 [role="lead"]
 Per fornire un percorso ridondante all'array di storage, è possibile configurare il software multipath.
 
-.Di cosa hai bisogno
+.Prima di iniziare
 È necessario installare i pacchetti richiesti sul sistema.
 
 * Per gli host Red Hat (RHEL), verificare che i pacchetti siano installati eseguendo `rpm -q device-mapper-multipath`.

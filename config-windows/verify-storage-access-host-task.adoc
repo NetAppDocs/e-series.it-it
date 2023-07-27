@@ -13,7 +13,7 @@ summary: 'Verificare che l"host sia in grado di scrivere i dati sul LUN e di leg
 [role="lead"]
 Prima di utilizzare il volume, verificare che l'host sia in grado di scrivere i dati sul LUN e di leggerli.
 
-.Di cosa hai bisogno
+.Prima di iniziare
 Il LUN deve essere stato inizializzato e formattato con un file system.
 
 .Fasi

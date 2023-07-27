@@ -13,7 +13,9 @@ summary: Installare una nuova batteria.
 [role="lead"]
 Dopo aver rimosso la batteria guasta, è possibile installarne una nuova.
 
-.Di cosa hai bisogno
+.Prima di iniziare
+Assicurarsi di disporre di quanto segue:
+
 * La batteria sostitutiva.
 * Una superficie piana e priva di cariche elettrostatiche.
 

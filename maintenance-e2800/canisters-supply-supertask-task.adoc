@@ -30,11 +30,12 @@ Ogni shelf o shelf di controller da 12 o 24 dischi include due alimentatori con 
 * Esaminare i requisiti di alimentazione in link:canisters-overview-supertask-concept.html["Requisiti per la sostituzione del contenitore"].
 * Esaminare i dettagli nel Recovery Guru per confermare che si è verificato un problema con l'alimentatore. Selezionare *ricontrollare* dal Recovery Guru per assicurarsi che nessun altro elemento debba essere affrontato per primo.
 * Verificare che il LED di attenzione ambra sull'alimentatore sia acceso, a indicare che l'alimentatore o la ventola integrata sono guasti. Contattare il supporto tecnico per assistenza se entrambi gli alimentatori dello shelf hanno i LED di attenzione ambra accesi.
+* Assicurarsi di disporre di quanto segue:
++
+** Un alimentatore sostitutivo supportato per il modello di shelf di controller o di dischi.
+** Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
 
 
-.Di cosa hai bisogno
-* Un alimentatore sostitutivo supportato per il modello di shelf di controller o di dischi.
-* Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
 
 
 

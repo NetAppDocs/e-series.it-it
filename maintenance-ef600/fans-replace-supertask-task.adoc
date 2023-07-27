@@ -17,7 +17,9 @@ summary: Sostituire una ventola in un EF300 o EF600.
 .A proposito di questa attività
 Ogni shelf o shelf di controller EF300 e EF600 include cinque ventole. In caso di guasto di una ventola, è necessario sostituirla il prima possibile per assicurarsi che lo shelf abbia un raffreddamento adeguato.
 
-.Di cosa hai bisogno
+.Prima di iniziare
+Assicurarsi di disporre di quanto segue:
+
 * Una ventola sostitutiva.
 * Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
 * Un'area di lavoro piana e priva di elettricità statica.

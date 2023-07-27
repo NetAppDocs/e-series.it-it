@@ -47,6 +47,8 @@ Per sbloccare le unità protette, è necessario innanzitutto creare una chiave d
 
 .. Creare una chiave di sicurezza interna
 .. Swap del controller con gestione interna delle chiavi e una o più unità protette
+.. Eseguire il comando SMclient, `set allDrives nativeState`.
+.. Attendere il riavvio di entrambi i controller.
 
 
 
@@ -77,6 +79,8 @@ Tutti i dischi protetti, Gestione delle chiavi esterne, si è temporaneamente to
 
 .. Swap del controller con gestione interna delle chiavi e una o più unità protette
 .. Creare una chiave di sicurezza esterna
+.. Eseguire il comando SMclient, `set allDrives nativeState`.
+.. Attendere il riavvio di entrambi i controller.
 
 
 

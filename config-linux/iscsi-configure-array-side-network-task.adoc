@@ -14,7 +14,9 @@ summary: Configurare il networking iSCSI sul lato array.
 [role="lead"]
 La GUI di Gestione di sistema di SANtricity consente di configurare il collegamento in rete iSCSI sul lato array.
 
-.Di cosa hai bisogno
+.Prima di iniziare
+Assicurarsi di disporre di quanto segue:
+
 * L'indirizzo IP o il nome di dominio di uno dei controller degli array di storage.
 * Una password per la GUI di System Manager, RBAC (Role-Based Access Control) o LDAP e un servizio di directory configurato per l'accesso di sicurezza appropriato allo storage array. Per ulteriori informazioni sulla gestione degli accessi, consultare la guida in linea di Gestione di sistema SANtricity.
 

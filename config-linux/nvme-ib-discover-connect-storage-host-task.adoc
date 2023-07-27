@@ -30,7 +30,7 @@ NOTE: Il `nvme discover` il comando rileva tutte le porte del controller nel sot
 +
 [listing]
 ----
-# nvme discover -t rdma -a 10.10.10.100
+# nvme discover -t rdma -a 10.10.10.200
  Discovery Log Number of Records 2, Generation counter 0
  =====Discovery Log Entry 0======
  trtype:  rdma
@@ -40,7 +40,7 @@ NOTE: Il `nvme discover` il comando rileva tutte le porte del controller nel sot
  portid:  0
  trsvcid: 4420
  subnqn:  nqn.1992-08.com.netapp:5700.600a098000af41580000000058ed54be
- traddr: 10.10.10.100
+ traddr: 10.10.10.200
  rdma_prtype: infiniband
  rdma_qptype: connected
  rdma_cms:    rdma-cm
@@ -88,25 +88,9 @@ NOTE: Il periodo di timeout consigliato per la perdita del controller in secondi
 +
 [listing]
 ----
-# nvme connect -t rdma -a 10.10.10.100 -n nqn.1992-08.com.netapp:5700.600a098000af41580000000058ed54be -Q 1024 -l 3600
+# nvme connect -t rdma -a 10.10.10.200 -n nqn.1992-08.com.netapp:5700.600a098000af41580000000058ed54be -Q 1024 -l 3600
 ----
-. Utilizzare `nvme list` Per visualizzare un elenco dei dispositivi NVMe attualmente connessi. Nell'esempio riportato di seguito, è così `nvme0n1`.
-+
-[listing]
-----
- # nvme list
-
- Node          SN            Model             Namespace
- -------------------------------------------------------
- /dev/nvme0n1  021648023161  NetApp E-Series      1
-----
-+
-[listing]
-----
-Usage                 Format           FW Rev
---------------------------------------------------------------
-5.37 GB /5.37 GB      512 B + 0 B      0842XXXX
-----
+. Utilizzare `nvme list-subsys` Per visualizzare un elenco dei dispositivi NVMe attualmente connessi.
 . Connettersi al sottosistema rilevato sul secondo percorso:
 +
 [listing]

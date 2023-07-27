@@ -14,7 +14,7 @@ summary: 'Per installare E2860, E5760 o DE460, creare un account e registrare l"
 Scopri come preparare l'installazione del tuo sistema storage E2860, E5760 o DE460.
 
 .Fasi
-. Creare un account e registrare l'hardware all'indirizzo http://mysupport.netapp.com/["mysupport.netapp.com"^].
+. Creare un account e registrare l'hardware all'indirizzo http://mysupport.netapp.com/["Supporto NetApp"^].
 . Assicurarsi che nella confezione ricevuta siano presenti i seguenti elementi.
 +
 |===
@@ -130,11 +130,10 @@ image:../media/management_station_inst-hw-e2800-e5700_g60b3.png[""]
  a| 
 Un browser supportato per il software di gestione:
 
-** Google Chrome (versione 47 e successive)
-** Microsoft Internet Explorer (versione 11 e successive)
-** Microsoft Edge (EdgeHTML 12 e versioni successive)
-** Mozilla Firefox (versione 31 e successive)
-** Safari (versione 9 e successive)
+** Google Chrome (versione 89 e successive)
+** Microsoft Edge (versione 90 e successive)
+** Mozilla Firefox (versione 80 e successive)
+** Safari (versione 14 e successive)
 
 
 |===
