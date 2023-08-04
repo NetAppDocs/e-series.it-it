@@ -536,15 +536,11 @@
   <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="summary">Le note legali forniscono l'accesso a dichiarazioni di copyright, marchi, brevetti e altro ancora.</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">Note legali</block>
   <block id="6016a2b341113bf496b719905398ecd2" category="section-title">Copyright</block>
-  <block id="09e95b77ffe81fe465a83ba99efad5c8" category="paragraph"><block ref="09e95b77ffe81fe465a83ba99efad5c8" category="inline-link-rx"></block></block>
   <block id="126a02652da6de02962cf1b654fd6376" category="section-title">Marchi</block>
   <block id="c4ce4761e466527d26b3e3d5ed1006fd" category="paragraph">NETAPP, il logo NETAPP e i marchi elencati nella pagina dei marchi NetApp sono marchi di NetApp, Inc. Altri nomi di società e prodotti potrebbero essere marchi dei rispettivi proprietari.</block>
-  <block id="7aa531e9acfe2b98e34d2c92fe9846ff" category="paragraph"><block ref="7aa531e9acfe2b98e34d2c92fe9846ff" category="inline-link-rx"></block></block>
   <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">Brevetti</block>
   <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">Un elenco aggiornato dei brevetti di proprietà di NetApp è disponibile all'indirizzo:</block>
-  <block id="d7f1fbcf9ce4e42f705add574d262b2c" category="paragraph"><block ref="d7f1fbcf9ce4e42f705add574d262b2c" category="inline-link-rx"></block></block>
   <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">Direttiva sulla privacy</block>
-  <block id="fc248f74f5e36542f7f5627b8610e9a3" category="paragraph"><block ref="fc248f74f5e36542f7f5627b8610e9a3" category="inline-link-rx"></block></block>
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">Open source</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">I file di avviso forniscono informazioni sul copyright e sulle licenze di terze parti utilizzate nel software NetApp.</block>
   <block id="cc1ba14f8dc9bd7ba20e2aa654cde10b" category="inline-link">Avviso per i sistemi operativi SANtricity e-Series/EF-Series</block>
@@ -8799,8 +8795,6 @@
   <block id="a8c2ab0b22d074faf460a15d6648a3e7" category="paragraph">Il firmware del disco è firmato crittograficamente. Le firme vengono controllate durante il download iniziale e supportate da un certificato Extended Validation emesso dalla CA. Il contenuto del firmware del disco viene ora fornito come file ZIP, che contiene il firmware precedente non firmato e il nuovo firmware firmato. L'utente deve scegliere il file appropriato in base alla versione di rilascio del codice in esecuzione sul sistema di destinazione.</block>
   <block id="3c65e3636111523111e45a49a80face3" category="paragraph">Gestione server chiavi esterne - dimensione chiave certificato</block>
   <block id="406774a2d5f641d5566318ef7eb88033" category="paragraph">La nuova chiave di certificato predefinita è di 3072 bit (da 2048). Sono supportate dimensioni delle chiavi fino a 4096 bit. Un bit NVSRAM deve essere modificato per supportare le dimensioni delle chiavi non predefinite.</block>
-  <block id="710e42f1cedbf3e670aace3815d6e451" category="paragraph">Supporto per pool di dischi dinamici di dimensioni maggiori utilizzando dischi con blocchi di dimensioni 512b</block>
-  <block id="7a4f6b11e091466663e9c7d3c9480717" category="paragraph">I clienti che utilizzano il tipo di versione del pool versione 1 possono ora disporre di un pool di dischi di dimensioni massime pari a 48 TB. La versione precedente supporta pool di dischi fino a 24 TB. Se i pool di dischi esistenti devono essere convertiti in dimensioni maggiori, è necessario rimuovere prima tutti i volumi. Un'operazione di downgrade è limitata quando esiste un pool di dischi versione 1.</block>
   <block id="9a1c6a24950fba4eade84dc9952a77dd" category="paragraph">System Manager e Unified Manager non verranno lanciati a meno che non vengano soddisfatti i requisiti minimi del browser</block>
   <block id="09a616fc9241625ec6003f2da3c0cff9" category="paragraph">È necessaria una versione minima del browser prima dell'avvio di System Manager o di Unified Manager. Di seguito sono riportate le versioni minime supportate:</block>
   <block id="6cdb1f943282038a6441359c5c88f812" category="list-text">Firefox versione minima 80</block>
@@ -8846,4 +8840,24 @@
   <block id="df9168fd1981b1464f7c0d38b2207c30" category="paragraph"><block ref="df9168fd1981b1464f7c0d38b2207c30" category="inline-link-rx"></block></block>
   <block id="050910c569f1cb9044086ceee795e2f8" category="sidebar">Gestore di sistema di SANtricity 11.8</block>
   <block id="1cf9153cf0b1bfe4b703e41b4509763e" category="sidebar">Gestore unificato SANtricity 6</block>
+  <block id="52009bb7ee17227f566cd26a02caee56" category="inline-link-macro"><block ref="52009bb7ee17227f566cd26a02caee56" category="inline-link-rx"></block></block>
+  <block id="a1a9afcf552a769c282769271829889a" category="paragraph"><block ref="a1a9afcf552a769c282769271829889a" category="inline-link-macro-rx"></block></block>
+  <block id="f99aa604031e5049799e73b5c3748a98" category="inline-link-macro"><block ref="f99aa604031e5049799e73b5c3748a98" category="inline-link-rx"></block></block>
+  <block id="5d545fe5152641e2ebe654e336e520e5" category="paragraph"><block ref="5d545fe5152641e2ebe654e336e520e5" category="inline-link-macro-rx"></block></block>
+  <block id="88e5eabd3917048b6927c42496b98f86" category="inline-link-macro"><block ref="88e5eabd3917048b6927c42496b98f86" category="inline-link-rx"></block></block>
+  <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
+  <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
+  <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
+  <block id="deab0ae4ee87e153ce15a1182bf91617" category="paragraph">I valori di selezione delle dimensioni chiave sono i seguenti:</block>
+  <block id="92c9cd6ce879c70c929395d49566fca3" category="list-text">VALORE PREDEFINITO = 0</block>
+  <block id="91d66be9b353d488558a2fc87f866263" category="list-text">LUNGHEZZA 2048 = 1</block>
+  <block id="60f95b27118522aa50716737cc578a39" category="list-text">LUNGHEZZA 3072 = 2</block>
+  <block id="46b1448aca55d48c198834955f8e6b6a" category="list-text">LUNGHEZZA 4096 = 3</block>
+  <block id="80b104f769b8bbef5d4b39ffe2efd816" category="paragraph">Per modificare la dimensione della chiave in 4096 tramite SMcli:</block>
+  <block id="7f1a49e026d5afc827c5a0184af45fe0" category="paragraph"><block ref="53d52ccae7296ad3c52a5cc86881da22" prefix="" category="inline-code"></block><block ref="52baead6a42dd6532784cc33f69d8d94" prefix=" " category="inline-code"></block></block>
+  <block id="ad7ca0ac2dce92cb837bf072818ce860" category="paragraph">Interrogare le dimensioni della chiave:</block>
+  <block id="dc8f09004148c8853414b2fe2f19c503" category="paragraph"><block ref="5dfae352b2be729a121ea8024c5dc604" prefix="" category="inline-code"></block></block>
+  <block id="32e0b12538b4abe36e648446dbb8723b" category="paragraph">Miglioramenti dei pool di dischi</block>
+  <block id="82faf4161a36aa8a69bd4c363e6b57cc" category="paragraph">I pool di dischi creati con i controller che eseguono la versione 11,80 o superiore saranno _pool versione 1_ anziché _pool versione 0_. Un'operazione di downgrade è limitata quando esiste un pool di dischi _versione 1_.</block>
+  <block id="45e56b98136f4292dd8c522edf38b3b2" category="paragraph">La versione di un pool di dischi può essere identificata nel profilo dell'array di storage.</block>
 </blocks>

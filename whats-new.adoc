@@ -63,12 +63,31 @@ Gestione server chiavi esterne - dimensione chiave certificato
  a| 
 La nuova chiave di certificato predefinita è di 3072 bit (da 2048). Sono supportate dimensioni delle chiavi fino a 4096 bit. Un bit NVSRAM deve essere modificato per supportare le dimensioni delle chiavi non predefinite.
 
+I valori di selezione delle dimensioni chiave sono i seguenti:
+
+* VALORE PREDEFINITO = 0
+* LUNGHEZZA 2048 = 1
+* LUNGHEZZA 3072 = 2
+* LUNGHEZZA 4096 = 3
+
+
+Per modificare la dimensione della chiave in 4096 tramite SMcli:
+
+`set controller[b] globalnvsrambyte[0xc0]=3;`
+`set controller[a] globalnvsrambyte[0xc0]=3;`
+
+Interrogare le dimensioni della chiave:
+
+`show allcontrollers globalnvsrambyte[0xc0];`
+
 
 
  a| 
-Supporto per pool di dischi dinamici di dimensioni maggiori utilizzando dischi con blocchi di dimensioni 512b
+Miglioramenti dei pool di dischi
  a| 
-I clienti che utilizzano il tipo di versione del pool versione 1 possono ora disporre di un pool di dischi di dimensioni massime pari a 48 TB. La versione precedente supporta pool di dischi fino a 24 TB. Se i pool di dischi esistenti devono essere convertiti in dimensioni maggiori, è necessario rimuovere prima tutti i volumi. Un'operazione di downgrade è limitata quando esiste un pool di dischi versione 1.
+I pool di dischi creati con i controller che eseguono la versione 11,80 o superiore saranno _pool versione 1_ anziché _pool versione 0_. Un'operazione di downgrade è limitata quando esiste un pool di dischi _versione 1_.
+
+La versione di un pool di dischi può essere identificata nel profilo dell'array di storage.
 
 
 
