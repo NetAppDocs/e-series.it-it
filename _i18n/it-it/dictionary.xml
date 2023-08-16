@@ -8860,4 +8860,6 @@
   <block id="32e0b12538b4abe36e648446dbb8723b" category="paragraph">Miglioramenti dei pool di dischi</block>
   <block id="82faf4161a36aa8a69bd4c363e6b57cc" category="paragraph">I pool di dischi creati con i controller che eseguono la versione 11,80 o superiore saranno _pool versione 1_ anziché _pool versione 0_. Un'operazione di downgrade è limitata quando esiste un pool di dischi _versione 1_.</block>
   <block id="45e56b98136f4292dd8c522edf38b3b2" category="paragraph">La versione di un pool di dischi può essere identificata nel profilo dell'array di storage.</block>
+  <block id="82bf7451a207cfbac427edc3bb60fced" category="paragraph">Questo è un PDF stampabile di istruzioni passo-passo con collegamenti in tempo reale a contenuti aggiuntivi.</block>
+  <block id="a2f0a23d015da77ff81697442b8f6aad" category="paragraph">Queste sono le istruzioni di installazione descritte in questo sito.</block>
 </blocks>
