@@ -26,7 +26,7 @@ Gli array e-Series sono disponibili nei seguenti modelli:
 
 
 
-NOTE: Tutte le porte USB sono disattivate su E2800, EF280, E5700, EF570, EF600, E EF300.
+NOTE: Per SANtricity OS 11,80GA e versioni successive, tutte le porte USB sono disattivate su E2800, EF280, E5700, EF570, EF600, e EF300.
 
 
 
@@ -137,7 +137,7 @@ Supporta i seguenti dischi con una singola scheda di interfaccia host (HIC) per 
 
 
 
-NOTE: Il sistema EF300 supporta configurazioni di shelf di espansione senza dischi nel vassoio di base Quando si utilizza questa configurazione, assicurarsi che le unità siano inserite nello shelf di espansione e collegate correttamente al vassoio di base prima di accendere il sistema.
+NOTE: Per SANtricity OS 11,80GA e versioni successive, EF300 supporta le configurazioni di shelf di espansione senza dischi nello slot di base Quando si utilizza questa configurazione, assicurarsi che le unità siano inserite nello shelf di espansione e collegate correttamente al vassoio di base prima di accendere il sistema.
 
 
 
@@ -274,7 +274,7 @@ Supporta i seguenti dischi con una singola scheda di interfaccia host (HIC) per 
 
 
 
-NOTE: Il sistema EF600 supporta configurazioni di shelf di espansione senza dischi nel vassoio di base Quando si utilizza questa configurazione, assicurarsi che le unità siano inserite nello shelf di espansione e collegate correttamente al vassoio di base prima di accendere il sistema.
+NOTE: Per SANtricity OS 11,80GA e versioni successive, EF600 supporta le configurazioni di shelf di espansione senza dischi nello slot di base Quando si utilizza questa configurazione, assicurarsi che le unità siano inserite nello shelf di espansione e collegate correttamente al vassoio di base prima di accendere il sistema.
 
 
 
