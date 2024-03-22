@@ -1,0 +1,67 @@
+---
+indexpage:
+  title: Documentazione sui sistemi e-Series
+  summary: I sistemi e-Series offrono una soluzione hardware e software integrata
+    per applicazioni dedicate a elevata larghezza di banda, come analisi dei dati,
+    videosorveglianza e backup basato su disco, che richiedono uno storage SAN semplice,
+    rapido e affidabile.
+  keywords: e-series, integrated hardware, software, data analytics, video surveillance,
+    disk-based backup
+  lead: I sistemi e-Series offrono una soluzione hardware e software integrata per
+    applicazioni dedicate a elevata larghezza di banda, come analisi dei dati, videosorveglianza
+    e backup basato su disco, che richiedono uno storage SAN semplice, rapido e affidabile.
+  tiles:
+  - title: Inizia subito
+    links:
+    - title: Avvio rapido
+      url: "/getting-started/getup-run-concept.html"
+    - title: Scheda informativa EF-Series
+      url: https://www.netapp.com/pdf.html?item=/media/19339-DS-4082.pdf
+    - title: Scheda informativa su E5700
+      url: https://www.netapp.com/pdf.html?item=/media/7572-ds-3894.pdf
+    - title: Scheda informativa su E2800
+      url: https://www.netapp.com/pdf.html?item=/media/7573-ds-3805.pdf
+  - title: Software SANtricity
+    links:
+    - title: Gestore di sistema di SANtricity 11.8
+      url: https://docs.netapp.com/us-en/e-series-santricity/system-manager/index.html
+    - title: Gestore unificato SANtricity 6
+      url: https://docs.netapp.com/us-en/e-series-santricity/unified-manager/index.html
+    - title: Riferimento dell'interfaccia della riga di comando (CLI)
+      url: https://docs.netapp.com/us-en/e-series-cli/index.html
+  - title: API SANtricity
+    links:
+    - title: Servizi Web
+      url: "/web-services-proxy/index.html"
+    - title: Plug-in per vCenter
+      url: "/vcenter-plugin/san-spvc-ic-overview.html"
+    - title: Provider SMI-S.
+      url: https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62208
+  - title: App e add-on per le performance
+    links:
+    - title: App SANtricity per Splunk Enterprise
+      url: https://splunkbase.splunk.com/app/1932/
+    - title: Add-on con tecnologia Splunk per SANtricity
+      url: https://splunkbase.splunk.com/app/1933/
+    - title: Analizzatore delle performance con e-Series + Grafana
+      url: https://github.com/NetApp/eseries-perf-analyzer
+    - title: Blog su e-Series Performance Analyzer
+      url: https://blog.netapp.com/monitoring-netapp-eseries
+  - title: Per il SES
+    links:
+    - title: Formazione tecnica e-Series/EF-Series (accesso richiesto)
+      url: https://fieldportal.netapp.com/content/199944
+    - title: Panoramica e dettagli tecnici di EF300 (accesso obbligatorio)
+      url: https://fieldportal.netapp.com/content/1417672
+    - title: NetApp Fusion (accesso richiesto)
+      url: https://fusion.netapp.com/
+  - title: Strumenti e supporto
+    links:
+    - title: Matrice di interoperabilità NetApp
+      url: http://mysupport.netapp.com/matrix/
+    - title: Knowledge base di NetApp
+      url: https://kb.netapp.com/
+    - title: Active IQ (accesso richiesto)
+      url: https://activeiq.netapp.com/?source=aiqnsspage
+    - title: Download di e-Series/SANtricity (accesso richiesto)
+      url: https://mysupport.netapp.com/site/downloads#E
