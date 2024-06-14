@@ -341,8 +341,8 @@ Nell'ultimo passaggio, viene esaminato un riepilogo dei volumi che si intende cr
 .Al termine
 * Nel client vSphere, creare datastore per i volumi.
 * Eseguire tutte le modifiche del sistema operativo necessarie sull'host dell'applicazione in modo che le applicazioni possano utilizzare il volume.
-* Eseguire il sistema basato su host `hot_add` o un'utility specifica del sistema operativo (disponibile presso un fornitore di terze parti), quindi eseguire `SMdevices` utility per correlare i nomi dei volumi con i nomi degli array di storage host.
+* Eseguire l'utilità specifica del sistema operativo (disponibile presso un fornitore di terze parti), quindi eseguire il comando SMcli `-identifyDevices` per correlare i nomi dei volumi con i nomi degli array di archiviazione host.
 +
-Il `hot_add` e a. `SMdevices` le utility sono incluse nel `SMutils` pacchetto. Il `SMutils` il pacchetto è un insieme di utility per verificare ciò che l'host vede dall'array di storage. È incluso nell'installazione del software SANtricity.
+SMcli è incluso nel sistema operativo SANtricity e può essere scaricato tramite il Gestore di sistema di SANtricity. Per ulteriori informazioni su come scaricare SMcli tramite il Gestore di sistema di SANtricity, fare riferimento alla https://docs.netapp.com/us-en/e-series-santricity/sm-settings/download-cli.html["Scaricare l'argomento dell'interfaccia a riga di comando (CLI) nella Guida in linea di SANtricity System Manager"^].
 
 

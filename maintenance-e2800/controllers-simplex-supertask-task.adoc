@@ -506,6 +506,23 @@ Il controller si riavvia automaticamente.
 .. Se lo stato non è ottimale, evidenziare il controller e selezionare *posiziona online*.
 
 
+. Quando il controller è di nuovo in linea, controllare se in Recovery Guru viene segnalata una mancata corrispondenza NVSRAM.
++
+.. Se viene rilevata una mancata corrispondenza NVSRAM, aggiornare NVSRAM utilizzando il seguente comando SMcli:
++
+[listing]
+----
+SMcli <controller A IP> <controller B IP> -u admin -p <password> -k -c "download storageArray NVSRAM file=\"C:\Users\testuser\Downloads\NVSRAM .dlp file>\" forceDownload=TRUE;"
+----
++
+Il `-k` il parametro è necessario se l'array non è protetto da https.
+
+
+
++
+
+NOTE: Se il comando SMcli non può essere completato, contattare https://www.netapp.com/company/contact-us/support/["Assistenza tecnica NetApp"^] oppure accedere al https://mysupport.netapp.com["Sito di supporto NetApp"^] per creare un caso.
+
 . Raccogliere i dati di supporto per lo storage array utilizzando Gestione di sistema di SANtricity.
 +
 .. Selezionare menu:Support[Support Center > *Diagnostics].

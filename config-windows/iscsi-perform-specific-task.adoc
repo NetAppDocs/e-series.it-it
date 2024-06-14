@@ -247,7 +247,7 @@ Verificare le connessioni di rete IP (Internet Protocol) utilizzando i test ping
 +
 [listing]
 ----
-ping -s <hostIP\> <targetIP\>
+ping -S <hostIP\> <targetIP\>
 ----
 ** Se i frame jumbo sono abilitati, eseguire il comando ping con una dimensione del payload di 8,972 byte. Le intestazioni combinate IP e ICMP sono di 28 byte, che quando vengono aggiunte al payload equivale a 9,000 byte. L'interruttore -f imposta il `don’t fragment (DF)` bit. L'interruttore -l consente di impostare le dimensioni. Queste opzioni consentono di trasmettere correttamente frame jumbo di 9,000 byte tra l'iniziatore iSCSI e la destinazione.
 +

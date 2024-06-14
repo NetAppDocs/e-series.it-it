@@ -16,6 +16,56 @@ La seguente tabella descrive le nuove funzionalità di SANtricity OS 11.8 per la
 
 
 
+== Nuove funzioni della versione 11.80.1
+
+[cols="35h,~"]
+|===
+| Nuova funzionalità | Descrizione 
+
+
+ a| 
+`-identifyDevices` parametro
+ a| 
+Un nuovo `-identifyDevices` Il parametro è ora disponibile in SMcli. Questo nuovo parametro consente di cercare tutti i dispositivi a blocchi nativi SCSI associati agli array di archiviazione. Per ulteriori informazioni, vedere il link: Parametri della riga di comando di https://docs.netapp.com/us-en/e-series-cli/get-started/downloadable-smcli-parameters.html#identify-Devices[Downloadable SMcli^].
+
+
+
+ a| 
+Statistiche del kernel Ethernet
+ a| 
+Una nuova opzione Ethernet kernel Statistics è ora disponibile nella pagina View iSCSI Statistics Packages (Visualizza pacchetti statistiche iSCSI) in System Manager. Questa nuova opzione consente di visualizzare le statistiche per i driver del kernel della piattaforma del dispositivo iSCSI. Per ulteriori informazioni, vedere il link: https://docs.netapp.com/us-en/e-series-santricity/sm-support/view-iscsi-statistics-packages-support.html[View iSCSI Statistics Packages^].
+
+
+
+ a| 
+Miglioramento del filtraggio delle unità non assegnate e abilitate per la protezione in System Manager
+ a| 
+System Manager ora filtra le unità abilitate non assegnate e protette quando si selezionano le unità manuali. Pertanto, il numero di selezioni delle unità di System Manager corrisponde ora all'elenco di candidati per la selezione automatica delle unità presente nella CLI e nell'API REST. Un'icona univoca e il testo del passaggio del mouse vengono ora applicati anche alle unità abilitate non assegnate e protette in System Manager.
+
+
+
+ a| 
+Aggiunta la capacità di bloccare gli indirizzi IP tramite l'endpoint REST API
+ a| 
+Gli utenti possono ora bloccare indirizzi IP specifici tramite l'endpoint Impostazioni (`/devmgr/v2/settings`). Una volta configurato tramite l'endpoint Impostazioni, solo gli indirizzi IP specificati tramite una whitelist possono comunicare con il dispositivo di archiviazione. Questa nuova funzione supporta gli elenchi di indirizzi IPv4 e IPv6.
+
+
+
+ a| 
+Plug-in vCenter Storage
+ a| 
+Il plug-in vCenter Storage è stato aggiornato per verificarne la compatibilità con la release e-Series 11.80.1.
+
+
+
+ a| 
+Proxy dei servizi Web
+ a| 
+Web Services Proxy è stato aggiornato alla versione 6,1 per la compatibilità con la versione 11.80.1 di e-Series.
+
+|===
+
+
 == Nuove funzionalità della versione 11.80
 
 [cols="35h,~"]

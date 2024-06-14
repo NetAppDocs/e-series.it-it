@@ -23,6 +23,20 @@ Quando si sostituisce un contenitore del controller guasto, è necessario rimuov
 +
 ** Il guru del ripristino in Gestione di sistema di SANtricity richiede la sostituzione del contenitore del controller.
 ** Il LED di attenzione ambra sul contenitore del controller è acceso, a indicare che il controller è guasto.
++
+[]
+====
+
+NOTE: Il LED di attenzione color ambra del controller si spegne ogni volta che si verificano le seguenti condizioni di sostituzione:
+
+*** Errore alimentatore Alt
+*** Percorso unità Alt non riuscito
+*** Cassetto aperto/mancante
+*** Ventola guasta/mancante
+*** Alimentatore mancante
+
+
+====
 
 
 * Assicurarsi di disporre di quanto segue:
@@ -129,7 +143,6 @@ CAUTION: Per evitare prestazioni degradate, non attorcigliare, piegare, pizzicar
 +
 Poiché è necessario rimuovere l'HIC dal contenitore del controller guasto, è necessario rimuovere eventuali SFP dalle porte HIC. Quando si ricollegano i cavi, è possibile spostare questi SFP nel nuovo contenitore del controller.
 
-. Verificare che il LED cache Active (cache attiva) sul retro del controller sia spento.
 . Premere le maniglie su entrambi i lati del controller e tirare indietro fino a quando non si sgancia dallo shelf.
 +
 image::../media/remove_controller_5.png[rimuovere il controller 5]
@@ -454,7 +467,24 @@ Quando la comunicazione con l'altro controller viene ristabilita:
 ** I LED del collegamento host potrebbero essere accesi, lampeggianti o spenti, a seconda dell'interfaccia host.
 
 
-. Quando il controller torna in linea, verificare che lo stato sia ottimale e controllare i LED di attenzione dello shelf di controller.
+. Quando il controller è di nuovo in linea, controllare se in Recovery Guru viene segnalata una mancata corrispondenza NVSRAM.
++
+.. Se viene rilevata una mancata corrispondenza NVSRAM, aggiornare NVSRAM utilizzando il seguente comando SMcli:
++
+[listing]
+----
+SMcli <controller A IP> <controller B IP> -u admin -p <password> -k -c "download storageArray NVSRAM file=\"C:\Users\testuser\Downloads\NVSRAM .dlp file>\" forceDownload=TRUE;"
+----
++
+Il `-k` il parametro è necessario se l'array non è protetto da https.
+
+
+
++
+
+NOTE: Se il comando SMcli non può essere completato, contattare https://www.netapp.com/company/contact-us/support/["Assistenza tecnica NetApp"^] oppure accedere al https://mysupport.netapp.com["Sito di supporto NetApp"^] per creare un caso.
+
+. Verificare che lo stato del sistema sia ottimale e controllare i LED di attenzione del ripiano del controller.
 +
 Se lo stato non è ottimale o se uno dei LED attenzione è acceso, verificare che tutti i cavi siano inseriti correttamente e che il contenitore del controller sia installato correttamente. Se necessario, rimuovere e reinstallare il contenitore del controller.
 
@@ -462,7 +492,7 @@ Se lo stato non è ottimale o se uno dei LED attenzione è acceso, verificare ch
 
 NOTE: Se non si riesce a risolvere il problema, contattare il supporto tecnico.
 
-. Fare clic su menu:hardware[supporto > Centro aggiornamenti] per verificare che sia installata la versione più recente di SANtricity OS.
+. Fare clic su menu:hardware[supporto > Centro di aggiornamento] per assicurarsi che le versioni del firmware e NVSRAM sul sistema siano ai livelli desiderati.
 +
 Se necessario, installare la versione più recente.
 

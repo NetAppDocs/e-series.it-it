@@ -24,7 +24,6 @@ Consulta le seguenti linee guida per le utility HBA:
 ** QLogic QConverge Console per HBA QLogic
 
 
-* Le porte i/o host potrebbero essere registrate automaticamente se è installato l'agente di contesto host.
 
 
 .Fasi

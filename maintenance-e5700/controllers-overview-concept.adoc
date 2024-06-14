@@ -26,6 +26,19 @@ Quando si sostituisce un contenitore del controller guasto, rimuovere la batteri
 
 * Il guru del ripristino in Gestione di sistema di SANtricity richiede la sostituzione del contenitore del controller.
 * Il LED di attenzione ambra sul contenitore del controller è acceso, a indicare che il controller è guasto.
++
+[]
+====
+
+NOTE: Il LED di attenzione color ambra del controller si spegne ogni volta che si verificano le seguenti condizioni di sostituzione:
+
+** Percorso unità Alt non riuscito
+** Cassetto aperto/mancante
+** Ventola guasta/mancante
+** Alimentatore mancante
+
+
+====
 
 
 image::../media/e5700_attention_led_callout.png[callout led attenzione e5700]

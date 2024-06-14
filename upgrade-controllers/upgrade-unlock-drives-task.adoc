@@ -40,7 +40,7 @@ NOTE: Se non si utilizza la porta di gestione 1, provare con altri indirizzi IP 
 
 . Utilizzando l'indirizzo IP 192.168.128.101 con nome utente *admin* e la password vuota, importare la chiave interna utilizzando `import storageArray securityKey file` Comando CLI, con la chiave di sicurezza salvata da link:prepare-upgrade-controllers-task.html["Preparazione per l'aggiornamento dei controller"]. Per informazioni sull'utilizzo di questo comando, vedere https://docs.netapp.com/us-en/e-series-cli/index.html["Riferimento all'interfaccia della riga di comando"].
 +
-*Esempio:* `SMcli 192.168.128.101 -u admin -c "import storageArray securityKey file=\"Directory&FileName\" passPhrase=\"passPhraseString\";"`
+*Esempio:* `SMcli 192.168.128.101 -u admin -p "" -c "import storageArray securityKey file=\"Directory&FileName\" passPhrase=\"passPhraseString\";"`
 
 +
 In alternativa, è possibile importare la chiave interna tramite l'API REST tramite la seguente chiamata: `/storage-systems/{system-id}/security-key/import`
@@ -70,24 +70,24 @@ NOTE: Lo storage array deve essere in uno stato ottimale per recuperare i certif
 
 . Utilizzando l'indirizzo IP predefinito 192.168.128.101 con nome utente *admin* e la password vuota, configurare il server di gestione delle chiavi esterno utilizzando `set storageArray externalKeyManagement` CLI e fornire il comando `serverAddress` e. `serverPort` salvato da link:prepare-upgrade-controllers-task.html["Preparazione per l'aggiornamento dei controller"]. Per informazioni sull'utilizzo di questo comando, vedere https://docs.netapp.com/us-en/e-series-cli/index.html["Riferimento all'interfaccia della riga di comando"].
 +
-*Esempio:* `SMcli 192.168.128.101 -u admin -c "set storageArray externalKeyManagement serverAddress=<ServerIPAddress> serverPort=<serverPort>;"`
+*Esempio:* `SMcli 192.168.128.101 -u admin -p "" -c "set storageArray externalKeyManagement serverAddress=<ServerIPAddress> serverPort=<serverPort>;"`
 
 +
 In alternativa, è possibile configurare il server di gestione delle chiavi esterno tramite l'API REST tramite la seguente chiamata: `/storage-systems/{system-id}/external-key-server`
 
 . Utilizzando l'indirizzo IP predefinito 192.168.128.101 con il nome utente *admin* e la password vuota, importare i certificati utilizzando `storageArray keyManagementCertificate` Comando CLI: Una volta per il certificato client e una seconda per il certificato server.
 +
-*Esempio A:* `SMcli 192.168.128.101 -u admin -c "download storageArray keyManagementCertificate certificateType=client file=\"Directory&FileName\";"`
+*Esempio A:* `SMcli 192.168.128.101 -u admin -p "" -c "download storageArray keyManagementCertificate certificateType=client file=\"Directory&FileName\";"`
 
 +
-*Esempio B:* `SMcli 192.168.128.101 -u admin -c "download storageArray keyManagementCertificate certificateType=server file=\"Directory&FileName\";"`
+*Esempio B:* `SMcli 192.168.128.101 -u admin -p "" -c "download storageArray keyManagementCertificate certificateType=server file=\"Directory&FileName\";"`
 
 +
 In alternativa, è possibile importare il certificato del keyserver tramite l'API REST tramite la seguente chiamata: `/storage-systems/{system-id}/external-key-server/certificate`
 
 . Utilizzando la chiave di sicurezza salvata da link:prepare-upgrade-controllers-task.html["Preparazione per l'aggiornamento dei controller"], Importare la chiave esterna nell'indirizzo IP 192.168.128.101 con il nome utente *admin* e la password che rimane vuota.
 +
-*Esempio:* `SMcli 192.168.128.101 -u admin -c "import storageArray securityKey file=\"Directory&FileName\" passPhrase=\"passPhraseString\";"`
+*Esempio:* `SMcli 192.168.128.101 -u admin -p "" -c "import storageArray securityKey file=\"Directory&FileName\" passPhrase=\"passPhraseString\";"`
 
 +
 In alternativa, è possibile importare la chiave esterna tramite l'API REST tramite la seguente chiamata: `/storage-systems/{system-id}/security-key/import`

@@ -23,7 +23,6 @@ Individuare gli indirizzi SAS utilizzando l'utility HBA, quindi utilizzare il BI
 Consulta le linee guida per le utility HBA:
 
 * La maggior parte dei vendor HBA offre un'utility HBA.
-* Le porte i/o host potrebbero essere registrate automaticamente se è installato l'agente di contesto host.
 
 
 .Fasi

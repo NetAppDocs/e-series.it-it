@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: vcenter-plugin/vc-olh-how-do-i-know-which-host-operating-system-type-is-correct.html 
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
-summary: 'Il campo host Operating System Type (tipo di sistema operativo host) contiene il sistema operativo dell"host. È possibile selezionare il tipo di host consigliato dall"elenco a discesa o consentire all"HCA (host Context Agent) di configurare l"host e il tipo di sistema operativo appropriato.' 
+summary: 'Il campo host Operating System Type (tipo di sistema operativo host) contiene il sistema operativo dell"host. È possibile selezionare il tipo di host consigliato dall"elenco a discesa.' 
 ---
 = Come si fa a sapere quale tipo di sistema operativo host è corretto?
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 'Il campo host Operating System Type (tipo di sistema operativo host) c
 
 
 [role="lead"]
-Il campo host Operating System Type (tipo di sistema operativo host) contiene il sistema operativo dell'host. È possibile selezionare il tipo di host consigliato dall'elenco a discesa o consentire all'HCA (host Context Agent) di configurare l'host e il tipo di sistema operativo appropriato.
+Il campo host Operating System Type (tipo di sistema operativo host) contiene il sistema operativo dell'host. È possibile selezionare il tipo di host consigliato dall'elenco a discesa.
 
 I tipi di host visualizzati nell'elenco a discesa dipendono dal modello di array di storage e dalla versione del firmware. Le versioni più recenti visualizzano prima le opzioni più comuni, che sono le più probabili. L'aspetto in questo elenco non implica che l'opzione sia completamente supportata.
 
@@ -65,7 +65,3 @@ Alcuni dei seguenti tipi di host potrebbero essere visualizzati nell'elenco:
 
 | Cluster di finestre (obsoleto) | Se il tipo di sistema operativo host è impostato su questo valore, utilizzare l'impostazione Windows (in cluster o non in cluster). 
 |===
-Una volta installato l'HCA e collegato lo storage all'host, l'HCA invia la topologia host ai controller di storage attraverso il percorso i/O. In base alla topologia dell'host, i controller di storage definiscono automaticamente l'host e le porte host associate, quindi impostano il tipo di host.
-
-
-NOTE: Se l'HCA non seleziona il tipo di host consigliato, è necessario impostare manualmente il tipo di host.

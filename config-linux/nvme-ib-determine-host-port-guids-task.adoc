@@ -11,7 +11,7 @@ summary: Determinare i GUID della porta host.
 
 
 [role="lead"]
-Il pacchetto infiniband-DIAGS include comandi per visualizzare il GUID (Globally Unique ID) di ciascuna porta InfiniBand (IB). La maggior parte delle distribuzioni Linux con OFED/RDMA supportato attraverso i pacchetti inclusi dispone anche del pacchetto infiniband-diags, che include comandi per visualizzare informazioni su HCA.
+Il pacchetto infiniband-DIAGS include comandi per visualizzare il GUID (Globally Unique ID) di ciascuna porta InfiniBand (IB). La maggior parte delle distribuzioni Linux con OFED/RDMA supportate tramite i pacchetti inclusi dispone anche del pacchetto infiniband-Diags, che include comandi per visualizzare informazioni sull'adattatore del canale host (HCA).
 
 .Fasi
 . Installare `infiniband-diags` che utilizza i comandi di gestione dei pacchetti del sistema operativo.

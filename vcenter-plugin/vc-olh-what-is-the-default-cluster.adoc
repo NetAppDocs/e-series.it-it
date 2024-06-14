@@ -19,7 +19,7 @@ Il cluster predefinito è un'entità definita dal sistema che consente a qualsia
 Un identificatore di porta host non associato è una porta host che non è logicamente associata a un particolare host ma che è fisicamente installata in un host e collegata all'array di storage.
 
 
-NOTE: Se si desidera che gli host abbiano accesso specifico a determinati volumi nell'array di storage, non è necessario utilizzare il cluster predefinito. È invece necessario associare gli identificatori delle porte host ai rispettivi host. Questa attività può essere eseguita manualmente durante l'operazione Create host (Crea host) o automaticamente utilizzando l'HCA (host Context Agent) installato su ciascun host. Quindi, assegnare i volumi a un singolo host o a un cluster host.
+NOTE: Se si desidera che gli host abbiano accesso specifico a determinati volumi nell'array di storage, non è necessario utilizzare il cluster predefinito. È invece necessario associare gli identificatori delle porte host ai rispettivi host. Questa operazione può essere eseguita manualmente durante l'operazione Create host (Crea host). Quindi, assegnare i volumi a un singolo host o a un cluster host.
 
 Utilizzare il cluster predefinito solo in situazioni speciali in cui l'ambiente di storage esterno favorisce l'accesso a tutti gli host e a tutti gli identificatori di porta host connessi allo storage array a tutti i volumi (modalità all-access) senza rendere specifici gli host noti allo storage array o all'interfaccia utente.
 

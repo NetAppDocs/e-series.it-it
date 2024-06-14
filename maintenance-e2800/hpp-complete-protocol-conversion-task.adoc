@@ -133,7 +133,7 @@ Se in precedenza disponevano di tutte le porte host FC e ne sono state convertit
 . Modificare la partizione host per aggiungere gli ID delle porte host iSCSI e rimuovere gli ID delle porte host FC.
 . Dopo il riavvio degli host iSCSI, utilizzare le procedure applicabili sugli host per registrare i volumi e renderli disponibili per il sistema operativo.
 +
-** A seconda del sistema operativo in uso, il software per la gestione dello storage (hot_add e SMdevices) include due utility. Queste utility consentono di registrare i volumi con gli host e di visualizzare i nomi dei dispositivi applicabili ai volumi.
+** È possibile utilizzare il comando SMcli `-identifyDevices` per visualizzare i nomi dei dispositivi applicabili ai volumi. SMcli è incluso nel sistema operativo SANtricity e può essere scaricato tramite il Gestore di sistema di SANtricity. Per ulteriori informazioni su come scaricare SMcli tramite il Gestore di sistema di SANtricity, fare riferimento alla https://docs.netapp.com/us-en/e-series-santricity/sm-settings/download-cli.html["Scaricare l'argomento dell'interfaccia a riga di comando (CLI) nella Guida in linea di SANtricity System Manager"^].
 ** Potrebbe essere necessario utilizzare strumenti e opzioni specifici forniti con il sistema operativo per rendere disponibili i volumi (ovvero, assegnare lettere di unità, creare punti di montaggio e così via). Per ulteriori informazioni, consultare la documentazione del sistema operativo host.
 
 
@@ -170,7 +170,7 @@ Se in precedenza disponevano di tutte le porte host iSCSI e ne sono state conver
 . Modificare la partizione host per aggiungere gli ID delle porte host FC e rimuovere gli ID delle porte host iSCSI.
 . Dopo il riavvio dei nuovi host FC, utilizzare le procedure applicabili sugli host per registrare i volumi e renderli disponibili per il sistema operativo.
 +
-** A seconda del sistema operativo in uso, il software per la gestione dello storage (hot_add e SMdevices) include due utility. Queste utility consentono di registrare i volumi con gli host e di visualizzare i nomi dei dispositivi applicabili ai volumi.
+** È possibile utilizzare il comando SMcli `-identifyDevices` per visualizzare i nomi dei dispositivi applicabili ai volumi. SMcli è incluso nel sistema operativo SANtricity e può essere scaricato tramite il Gestore di sistema di SANtricity. Per ulteriori informazioni su come scaricare SMcli tramite il Gestore di sistema di SANtricity, fare riferimento alla https://docs.netapp.com/us-en/e-series-santricity/sm-settings/download-cli.html["Scaricare l'argomento dell'interfaccia a riga di comando (CLI) nella Guida in linea di SANtricity System Manager"^].
 ** Potrebbe essere necessario utilizzare strumenti e opzioni specifici forniti con il sistema operativo per rendere disponibili i volumi (ovvero, assegnare lettere di unità, creare punti di montaggio e così via). Per ulteriori informazioni, consultare la documentazione del sistema operativo host.
 
 
@@ -207,7 +207,7 @@ Se in precedenza si utilizzava una combinazione di porte host FC e porte host iS
 . Modificare la partizione host per aggiungere gli ID delle porte host FC e rimuovere gli ID delle porte host iSCSI.
 . Dopo il riavvio dei nuovi host FC, utilizzare le procedure applicabili sugli host per registrare i volumi e renderli disponibili per il sistema operativo.
 +
-** A seconda del sistema operativo in uso, il software per la gestione dello storage (hot_add e SMdevices) include due utility. Queste utility consentono di registrare i volumi con gli host e di visualizzare i nomi dei dispositivi applicabili ai volumi.
+** È possibile utilizzare il comando SMcli `-identifyDevices` per visualizzare i nomi dei dispositivi applicabili ai volumi. SMcli è incluso nel sistema operativo SANtricity e può essere scaricato tramite il Gestore di sistema di SANtricity. Per ulteriori informazioni su come scaricare SMcli tramite il Gestore di sistema di SANtricity, fare riferimento alla https://docs.netapp.com/us-en/e-series-santricity/sm-settings/download-cli.html["Scaricare l'argomento dell'interfaccia a riga di comando (CLI) nella Guida in linea di SANtricity System Manager"^].
 ** Potrebbe essere necessario utilizzare strumenti e opzioni specifici forniti con il sistema operativo per rendere disponibili i volumi (ovvero, assegnare lettere di unità, creare punti di montaggio e così via). Per ulteriori informazioni, consultare la documentazione del sistema operativo host.
 
 
@@ -243,7 +243,7 @@ Se in precedenza si utilizzava una combinazione di porte host FC e porte host iS
 . Modificare la partizione host per aggiungere gli ID delle porte host iSCSI e rimuovere gli ID delle porte host FC.
 . Dopo il riavvio dei nuovi host iSCSI, utilizzare le procedure applicabili sugli host per registrare i volumi e renderli disponibili per il sistema operativo.
 +
-** A seconda del sistema operativo in uso, il software per la gestione dello storage (hot_add e SMdevices) include due utility. Queste utility consentono di registrare i volumi con gli host e di visualizzare i nomi dei dispositivi applicabili ai volumi.
+** È possibile utilizzare il comando SMcli `-identifyDevices` per visualizzare i nomi dei dispositivi applicabili ai volumi. SMcli è incluso nel sistema operativo SANtricity e può essere scaricato tramite il Gestore di sistema di SANtricity. Per ulteriori informazioni su come scaricare SMcli tramite il Gestore di sistema di SANtricity, fare riferimento alla https://docs.netapp.com/us-en/e-series-santricity/sm-settings/download-cli.html["Scaricare l'argomento dell'interfaccia a riga di comando (CLI) nella Guida in linea di SANtricity System Manager"^].
 ** Potrebbe essere necessario utilizzare strumenti e opzioni specifici forniti con il sistema operativo per rendere disponibili i volumi (ovvero, assegnare lettere di unità, creare punti di montaggio e così via). Per ulteriori informazioni, consultare la documentazione del sistema operativo host.
 
 

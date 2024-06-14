@@ -60,7 +60,7 @@ Per impostazione predefinita, l'iniziatore software iSCSI VMware crea una singol
 
 NOTE: VMware iSCSI port binding è una funzionalità che obbliga tutte le porte VMkernel associate ad accedere a tutte le porte di destinazione accessibili sui segmenti di rete configurati. Deve essere utilizzato con array che presentano un singolo indirizzo di rete per la destinazione iSCSI. NetApp consiglia di non utilizzare il binding della porta iSCSI. Per ulteriori informazioni, consultare http://kb.vmware.com/["Knowledge base VMware"] Per l'articolo relativo alle considerazioni sull'utilizzo del binding della porta iSCSI software in ESX/ESXi. Se l'host ESXi è collegato allo storage di un altro vendor, NetApp consiglia di utilizzare porte vmkernel iSCSI separate per evitare qualsiasi conflitto con il binding delle porte.
 
-Per le Best practice, NON utilizzare l'associazione delle porte sugli array di storage e-Series.
+Per le Best practice, NON utilizzare l'associazione delle porte sugli array di storage e-Series. Vedere https://www.netapp.com/media/17017-tr4789.pdf["TR-4789: Guida alla configurazione di VMware per l'integrazione iSCSI SANtricity e-Series con ESXi 6.x e 7.x"] per ulteriori informazioni.
 
 Per garantire una buona configurazione multipathing, utilizzare più segmenti di rete per la rete iSCSI. Posizionare almeno una porta lato host e almeno una porta da ciascun controller di array su un segmento di rete e un gruppo identico di porte lato host e lato array su un altro segmento di rete. Se possibile, utilizzare più switch Ethernet per fornire ulteriore ridondanza.
 

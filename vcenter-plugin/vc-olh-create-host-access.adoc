@@ -20,8 +20,6 @@ Per gestire lo storage con Storage Plugin per vCenter, è necessario individuare
 .A proposito di questa attività
 Creando un host, si definiscono i parametri host per fornire la connessione allo storage array e l'accesso i/o ai volumi.
 
-È possibile consentire all'HCA (host Context Agent) di rilevare automaticamente gli host, quindi verificare che le informazioni siano corrette selezionando *Visualizza/Modifica impostazioni* dalla pagina Configura host. Tuttavia, l'HCA non è disponibile su tutti i sistemi operativi supportati ed è necessario creare l'host manualmente.
-
 Quando si crea un host, tenere presenti le seguenti linee guida:
 
 * È necessario definire le porte di identificazione host associate all'host.

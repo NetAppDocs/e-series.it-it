@@ -28,6 +28,10 @@ Formattare il LUN con un file system come ext4. Alcune applicazioni non richiedo
 .Fasi
 . Recuperare l'ID SCSI del disco mappato emettendo `sanlun lun show -p` comando.
 +
+
+NOTE: In alternativa, è possibile recuperare questi risultati tramite `multipath -ll` comando.
+
++
 L'ID SCSI è una stringa di 33 caratteri composta da cifre esadecimali, che iniziano con il numero 3. Se sono attivati nomi intuitivi, Device Mapper riporta i dischi come mpath invece che come ID SCSI.
 
 +

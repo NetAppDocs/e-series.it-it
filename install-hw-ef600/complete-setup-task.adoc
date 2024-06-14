@@ -138,6 +138,10 @@ image:../media/ethernet_callout.png[""]
 
 |===
 . Aprire un browser e utilizzare l'indirizzo IP predefinito (169.254.128.101) per stabilire una connessione al controller. Il controller restituisce un certificato autofirmato. Il browser informa che la connessione non è sicura.
++
+
+NOTE: Per le piattaforme che eseguono SANtricity 11,60 e versioni successive, la subnet mask predefinita è 255.255.0.0.
+
 . Seguire le istruzioni del browser per procedere e avviare Gestione di sistema di SANtricity.
 +
 

@@ -20,5 +20,3 @@ Quando si dispone di queste informazioni, selezionare gli identificatori di port
 
 
 CAUTION: Assicurarsi di selezionare gli identificatori di porta host appropriati per l'host che si sta creando. Se si associano identificatori di porta host errati, potrebbe verificarsi un accesso non intenzionale da un altro host a questi dati.
-
-Se si creano automaticamente host utilizzando l'HCA (host Context Agent) installato su ciascun host, l'HCA deve associare automaticamente gli identificatori di porta host a ciascun host e configurarli in modo appropriato.

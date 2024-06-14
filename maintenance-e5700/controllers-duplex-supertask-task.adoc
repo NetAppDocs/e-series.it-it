@@ -422,7 +422,24 @@ CAUTION: *Possibile perdita di accesso ai dati* -- se il controller appena insta
 
 
 
-. Quando il controller torna in linea, verificare che lo stato sia ottimale e controllare i LED di attenzione dello shelf di controller.
+. Quando il controller è di nuovo in linea, controllare se in Recovery Guru viene segnalata una mancata corrispondenza NVSRAM.
++
+.. Se viene rilevata una mancata corrispondenza NVSRAM, aggiornare NVSRAM utilizzando il seguente comando SMcli:
++
+[listing]
+----
+SMcli <controller A IP> <controller B IP> -u admin -p <password> -k -c "download storageArray NVSRAM file=\"C:\Users\testuser\Downloads\NVSRAM .dlp file>\" forceDownload=TRUE;"
+----
++
+Il `-k` il parametro è necessario se l'array non è protetto da https.
+
+
+
++
+
+NOTE: Se il comando SMcli non può essere completato, contattare https://www.netapp.com/company/contact-us/support/["Assistenza tecnica NetApp"^] oppure accedere al https://mysupport.netapp.com["Sito di supporto NetApp"^] per creare un caso.
+
+. Verificare che lo stato del sistema sia ottimale e controllare i LED di attenzione del ripiano del controller.
 +
 Se lo stato non è ottimale o se uno dei LED attenzione è acceso, verificare che tutti i cavi siano inseriti correttamente e che il contenitore del controller sia installato correttamente. Se necessario, rimuovere e reinstallare il contenitore del controller.
 
@@ -430,13 +447,13 @@ Se lo stato non è ottimale o se uno dei LED attenzione è acceso, verificare ch
 
 NOTE: Se non si riesce a risolvere il problema, contattare il supporto tecnico.
 
-. Se necessario, ridistribuire tutti i volumi al proprietario preferito.
+. Se necessario, ridistribuire tutti i volumi al proprietario preferito utilizzando Gestione di sistema di SANtricity.
 +
 .. Selezionare menu:Storage[Volumes] (Storage[volumi]).
 .. Selezionare il menu:More[redistribuisci volumi].
 
 
-. Fare clic su menu:hardware[supporto > Centro aggiornamenti] per verificare che sia installata la versione più recente del software SANtricity OS (firmware del controller).
+. Fare clic su menu:hardware[supporto > Centro di aggiornamento] per assicurarsi che le versioni del firmware e NVSRAM sul sistema siano ai livelli desiderati.
 +
 Se necessario, installare la versione più recente.
 

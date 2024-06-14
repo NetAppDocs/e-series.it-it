@@ -21,7 +21,7 @@ Consultare i collegamenti riportati di seguito per accedere alla documentazione 
 * https://mysupport.netapp.com/info/web/ECMP11392380.html["Installare sistemi meno recenti"^]
 * https://mysupport.netapp.com/info/web/ECMP11751516.html["Manutenzione di sistemi meno recenti"^]
 * https://mysupport.netapp.com/ecm/ecm_download_file/ECMP1394872["Aggiunta di un secondo controller a E2600 ed E2700"^]
-* https://mysupport.netapp.com/info/web/ECMP11750309.html["Modificare o aggiungere protocolli host"^]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2353447["Modificare o aggiungere protocolli host"^]
 * https://mysupport.netapp.com/ecm/ecm_download_file/ECMP1656638["Conversione da alimentazione CA a CC"^]
 
 
