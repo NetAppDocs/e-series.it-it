@@ -38,13 +38,6 @@ Una nuova opzione Ethernet kernel Statistics è ora disponibile nella pagina Vie
 
 
  a| 
-Miglioramento del filtraggio delle unità non assegnate e abilitate per la protezione in System Manager
- a| 
-System Manager ora filtra le unità abilitate non assegnate e protette quando si selezionano le unità manuali. Pertanto, il numero di selezioni delle unità di System Manager corrisponde ora all'elenco di candidati per la selezione automatica delle unità presente nella CLI e nell'API REST. Un'icona univoca e il testo del passaggio del mouse vengono ora applicati anche alle unità abilitate non assegnate e protette in System Manager.
-
-
-
- a| 
 Aggiunta la capacità di bloccare gli indirizzi IP tramite l'endpoint REST API
  a| 
 Gli utenti possono ora bloccare indirizzi IP specifici tramite l'endpoint Impostazioni (`/devmgr/v2/settings`). Una volta configurato tramite l'endpoint Impostazioni, solo gli indirizzi IP specificati tramite una whitelist possono comunicare con il dispositivo di archiviazione. Questa nuova funzione supporta gli elenchi di indirizzi IPv4 e IPv6.
