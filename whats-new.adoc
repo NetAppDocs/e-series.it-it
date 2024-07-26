@@ -16,6 +16,21 @@ La seguente tabella descrive le nuove funzionalità di SANtricity OS 11.8 per la
 
 
 
+== Nuove funzioni della versione 11.80.1R1
+
+[cols="35h,~"]
+|===
+| Nuova funzionalità | Descrizione 
+
+
+ a| 
+Maggiore lunghezza della chiave per i nuovi certificati di gestione autofirmati e con firma CA.
+ a| 
+La lunghezza della chiave del certificato di gestione per il certificato autofirmato delle applicazioni SANtricity System Manager e Unified Manager è stata modificata da 2048 a 3072 bit. La modifica si applica ai certificati autofirmati e con firma CA generati di recente dalle applicazioni SANtricity. La lunghezza della chiave è fissa e non è influenzata dalle definizioni delle dimensioni della chiave predefinite in NVSRAM.
+
+|===
+
+
 == Nuove funzioni della versione 11.80.1
 
 [cols="35h,~"]

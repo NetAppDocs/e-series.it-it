@@ -42,5 +42,5 @@ Il metodo Linux Express include i seguenti passaggi.
 * Guida in linea -- descrive come utilizzare Gestione di sistema di SANtricity per completare le attività di configurazione e gestione dello storage. È disponibile all'interno del prodotto.
 * https://kb.netapp.com/["Knowledge base di NetApp"^] (Un database di articoli) -- fornisce informazioni sulla risoluzione dei problemi, FAQ e istruzioni per un'ampia gamma di prodotti e tecnologie NetApp.
 * http://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"^] -- consente di cercare configurazioni di prodotti e componenti NetApp che soddisfino gli standard e i requisiti specificati da NetApp.
-* https://library.netapp.com/ecm/ecm_download_file/ECMLP2547936["Guida all'installazione di Linux Unified host Utilities 7.1"^] -- descrive come utilizzare Linux Unified host Utilities 7.1.
+* https://docs.netapp.com/us-en/ontap-sanhost/hu_luhu_71.html#recommended-driver-settings-with-linux-kernel["Installare Linux Unified host Utilities 7.1"^] -- descrive come installare Linux Unified host Utilities 7,1.
 
