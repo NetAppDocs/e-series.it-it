@@ -38,7 +38,7 @@ Il metodo espresso include i seguenti passaggi, descritti anche nella link:under
 * Guida in linea -- descrive come utilizzare Gestione di sistema di SANtricity per completare le attività di configurazione e gestione dello storage. È disponibile all'interno del prodotto.
 * https://kb.netapp.com/["Knowledge base di NetApp"^] (Un database di articoli) -- fornisce informazioni sulla risoluzione dei problemi, FAQ e istruzioni per un'ampia gamma di prodotti e tecnologie NetApp.
 * http://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"^] -- consente di cercare configurazioni di prodotti e componenti NetApp che soddisfino gli standard e i requisiti specificati da NetApp.
-* https://www.netapp.com/us/media/tr-4789.pdf["Guida alla configurazione VMware per l'integrazione iSCSI di e-Series SANtricity con ESXi 6.X."^] -- fornisce dettagli tecnici sull'integrazione iSCSI con VMware.
+* https://www.netapp.com/pdf.html?item=/media/17017-tr4789pdf.pdf["Guida alla configurazione VMware per l'integrazione iSCSI di e-Series SANtricity con ESXi 6.X."^] -- fornisce dettagli tecnici sull'integrazione iSCSI con VMware.
 * https://configmax.vmware.com/home["Massimi di configurazione VMware"^] -- descrive come configurare lo storage fisico e virtuale in modo che rimanga entro i limiti massimi consentiti supportati da ESX/ESXi.
 * https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.storage.doc/GUID-9AEE5F4D-0CB8-4355-BF89-BB61C5F30C70.html["Requisiti e limitazioni dello storage VMware NVMe"^].
 * https://docs.vmware.com/en/VMware-vSphere/index.html["Documentazione VMware vSphere"^] -- fornisce la documentazione di ESXi vCenter Server.

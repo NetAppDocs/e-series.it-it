@@ -105,4 +105,4 @@ Protocollo: SAS
 
 
 |===
-Se questi presupposti non sono corretti per l'installazione o se si desidera ottenere informazioni di base più concettuali, consultare il seguente report tecnico: https://www.netapp.com/us/media/tr-4789.pdf["Guida alla configurazione VMware per l'integrazione iSCSI di e-Series SANtricity con ESXi 6.X."^]
+Se questi presupposti non sono corretti per l'installazione o se si desidera avere informazioni di base più concettuali, vedere il seguente report tecnico: https://www.netapp.com/pdf.html?item=/media/17017-tr4789pdf.pdf["Guida alla configurazione VMware per l'integrazione iSCSI di e-Series SANtricity con ESXi 6.X."^]
