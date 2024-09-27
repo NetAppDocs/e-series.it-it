@@ -48,6 +48,9 @@ CAUTION: *Possibile perdita di accesso ai dati* -- se un volume si trova già in
 
 
 
+NOTE: Per informazioni su come sostituire uno shelf di espansione e-Series DE460c, consulta la https://kb.netapp.com/on-prem/E-Series/Hardware-KBs/How_to_replace_an_E_Series_DE460c_controller_expansion_shelf["Knowledge base NetApp"^] .
+
+
 
 == Fase 1: Preparazione alla sostituzione del cassetto dell'unità
 
