@@ -19,7 +19,7 @@ Nell'API dei servizi Web, le comunicazioni HTTP implicano un ciclo di richiesta-
 
 Indipendentemente dal linguaggio di programmazione o dallo strumento utilizzato, ogni chiamata all'API dei servizi Web ha una struttura simile, con un URL, un verbo HTTP e un'intestazione Accept.
 
-image::../media/web_services_proxy_api.gif[api proxy dei servizi web]
+image::../media/web_services_proxy_api.gif[Diagramma delle chiamate API dei servizi Web]
 
 Tutte le richieste includono un URL, come nell'esempio seguente, e contengono gli elementi descritti nella tabella.
 

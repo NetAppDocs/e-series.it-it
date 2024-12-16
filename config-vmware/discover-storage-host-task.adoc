@@ -19,5 +19,5 @@ Per impostazione predefinita, un host ESXi esegue automaticamente una nuova scan
 . Creare uno o più volumi e assegnarli all'host ESXi.
 . Se si utilizza un vCenter Server, aggiungere l'host all'inventario del server.
 . Utilizzare vSphere Client o vSphere Web Client per connettersi direttamente al vCenter Server o all'host ESXi.
-. Per istruzioni su come eseguire una nuova scansione dello storage su un host ESXi, cercare https://kb.vmware.com/s/["Knowledge base VMware"^] articolo su questo argomento.
+. Per istruzioni su come eseguire una nuova scansione dello storage su un host ESXi, cercare l' https://support.broadcom.com/["Knowledge base VMware"^]articolo in questo argomento.
 

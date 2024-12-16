@@ -39,7 +39,7 @@ Ogni shelf o shelf di controller da 12 o 24 dischi include due alimentatori con 
 
 La figura seguente mostra un esempio di shelf di controller E2812, shelf di controller E2824 e flash array EF280 con due alimentatori (contenitori per ventole di alimentazione). Gli shelf di dischi DE212C e DE224C sono identici, ma includono i moduli i/o (IOM) invece dei controller canister.
 
-image::../media/28_dwg_e2812_power_fan_canisters.gif[28 taniche per ventole di alimentazione dwg e2812]
+image::../media/28_dwg_e2812_power_fan_canisters.gif[E2800 con canister per ventole di alimentazione]
 
 *(1)* _Shelf del controller con due alimentatori (contenitori per ventole di alimentazione) sotto i contenitori del controller_
 
@@ -85,11 +85,11 @@ La procedura per la sostituzione di un contenitore di alimentazione non descrive
 
 La figura seguente mostra il retro di uno shelf di dischi DE460C con i due contenitori di alimentazione:
 
-image::../media/28_dwg_de460c_rear_no_callouts_maint-e2800.gif[28 dwg de460c post no callout maintt e2800]
+image::../media/28_dwg_de460c_rear_no_callouts_maint-e2800.gif[DE460C con canister]
 
 La figura seguente mostra un contenitore di alimentazione:
 
-image::../media/28_dwg_e2860_de460c_psu_maint-e2800.gif[28 dwg e2860 de460c psu principale e2800]
+image::../media/28_dwg_e2860_de460c_psu_maint-e2800.gif[Canister di potenza]
 
 
 
@@ -136,11 +136,11 @@ La procedura per la sostituzione di un contenitore della ventola non descrive co
 
 La figura seguente mostra un filtro a carboni attivi della ventola:
 
-image::../media/28_dwg_e2860_de460c_single_fan_canister_no_callouts_maint-e2800.gif[28 dwg e2860 de460c canister a ventola singola senza callout principale e2800]
+image::../media/28_dwg_e2860_de460c_single_fan_canister_no_callouts_maint-e2800.gif[Filtro della ventola]
 
 La figura seguente mostra il retro di uno shelf DE460C con due contenitori per ventole:
 
-image::../media/28_dwg_de460c_rear_no_callouts_maint-e2800.gif[28 dwg de460c post no callout maintt e2800]
+image::../media/28_dwg_de460c_rear_no_callouts_maint-e2800.gif[DE460c con due canister]
 
 
 CAUTION: *Possibili danni all'apparecchiatura* -- se si sostituisce un contenitore della ventola con l'alimentazione accesa, è necessario completare la procedura di sostituzione entro 30 minuti per evitare il rischio di surriscaldamento dell'apparecchiatura.

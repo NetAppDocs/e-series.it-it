@@ -1,0 +1,103 @@
+---
+permalink: install-hw-e4000/install-hardware-60.html 
+sidebar: sidebar 
+keywords:  
+summary: Scopri come installare un sistema di storage E4060 o DE460C in un rack a due montanti o in un cabinet di sistema NetApp. 
+---
+= Installazione dell'hardware (E4060)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Scopri come installare un sistema di storage E4060 o DE460C in un rack a due montanti o in un cabinet di sistema NetApp.
+
+.Prima di iniziare
+* Registrare l'hardware all'indirizzo http://mysupport.netapp.com/["Supporto NetApp"^].
+* Preparare un'area di lavoro piana e priva di elettricità statica.
+* Procurarsi un braccialetto ESD e adottare precauzioni antistatiche.
+
+
+Leggere tutte le istruzioni prima di procedere con i passaggi riportati di seguito.
+
+.Fasi
+. Disimballare il contenuto dell'hardware, quindi inventariare l'hardware contenuto in base alla distinta di imballaggio.
+. Montare le guide.
++
+Se le istruzioni sono state fornite con l'hardware per il montaggio in rack, fare riferimento a tali istruzioni per informazioni su come installare le guide. Per ulteriori istruzioni sul montaggio in rack, vedere link:../rackmount-hardware.html["Hardware per il montaggio in rack"].
+
++
+
+NOTE: Per gli armadi a foro quadrato, è necessario installare i dadi della gabbia in dotazione per fissare la parte anteriore e posteriore del ripiano con le viti.
+
++
+|===
+|  
+
+
+ a| 
+image:../media/install_rails_inst-hw-e2800-e5700.png["Installare le guide"]
+
+|===
+. Installare lo shelf.
++
+
+CAUTION: Un ripiano vuoto pesa 114,91 kg (253,33 lb). Per spostare in sicurezza uno scaffale vuoto, sono necessari un sollevatore meccanico o quattro persone che utilizzano le maniglie di sollevamento.
+
++
+.. Se si solleva il ripiano manualmente, collegare le quattro maniglie di sollevamento. Spingere verso l'alto ciascuna maniglia fino a farla scattare in posizione.
+.. Sostenendo lo shelf dal basso, farlo scorrere nel cabinet. Se si utilizzano le maniglie di sollevamento, rimuoverle una alla volta mentre lo scaffale scorre nell'armadio. Per rimuovere le maniglie, tirare indietro il fermo di rilascio, spingere verso il basso, quindi allontanarlo dallo scaffale.
+
+
++
+image:../media/4_person_lift_source.png["Ascensore per quattro persone"]
+
+. Fissare lo shelf.
++
+.. Inserire le viti nel primo e nel terzo foro dalla parte superiore del ripiano su entrambi i lati per fissarlo alla parte anteriore del cabinet.
+.. Posizionare due staffe posteriori su ciascun lato della sezione posteriore superiore del ripiano. Inserire le viti nel primo e nel terzo foro di ciascuna staffa per fissare la parte posteriore del cabinet.
++
+image:../media/trafford_secure.png["Fissare gli shelf"]
+
+
+
+. Installare i dischi.
++
+.. Avvolgere l'estremità del braccialetto ESD intorno al polso e fissare l'estremità a una messa a terra metallica per evitare scariche elettrostatiche.
+.. Partendo dallo slot anteriore sinistro del cassetto superiore, installare ciascuna unità posizionandola delicatamente nello slot e abbassando la maniglia sollevata fino a farla scattare in posizione.
++
+*** Se si installano meno di 60 dischi, se si dispone di dischi a stato solido (SSD) o se i dischi hanno capacità diverse:
++
+**** Mantenere un minimo di 20 dischi per shelf. Installare prima le unità nei quattro slot anteriori di ciascun cassetto, per ottenere un flusso d'aria adeguato per il raffreddamento.
+**** Distribuire le unità rimanenti nei cassetti. Se possibile, installare un numero uguale di ciascun tipo di disco in ciascun cassetto per consentire la creazione di gruppi di volumi o pool di dischi protetti da perdita del cassetto.
+**** Distribuisci gli SSD in modo uniforme nei cassetti.
+
+
+
+
+.. Far scorrere con cautela il cassetto all'interno spingendo il centro e chiudendo delicatamente entrambi i fermi.
++
+*** Non forzare il cassetto in posizione.
+*** Utilizzare lo strumento di connessione, scollegare il connettore del cavo di serpente e ricollegarlo, assicurarsi di sentire uno scatto per determinare che la riconnessione sia stata eseguita correttamente.
+*** La disconnessione e la riconnessione devono essere necessarie solo durante la configurazione iniziale o se il vassoio viene spedito in una posizione diversa.
+
+
+.. Fissare il pannello anteriore.
+
+
+
+
+|===
+
+
+ a| 
+image:../media/trafford_overview.png["Fissare la cornice"]
+
+
+
+ a| 
+
+CAUTION: Rischio di danni all'apparecchiatura -- interrompere la spinta del cassetto se si sente l'inceppamento. Utilizzare le leve di rilascio nella parte anteriore del cassetto per far scorrere il cassetto all'indietro. Quindi, reinserire con cautela il cassetto nell'alloggiamento.
+
+|===

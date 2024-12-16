@@ -13,4 +13,4 @@ summary: Utilizzare il workflow di configurazione di WVMware Express.
 [role="lead"]
 Questo flusso di lavoro guida l'utente attraverso il "metodo rapido" per la configurazione dello storage array e del gestore di sistema SANtricity in modo da rendere lo storage disponibile per un host VMware.
 
-image::../media/1130_flw_sys_mgr_vmware_express_guide_all_protocols.png[1130 flw sys mgr vmware express guida tutti i protocolli]
+image::../media/1130_flw_sys_mgr_vmware_express_guide_all_protocols.png[Flusso di lavoro VMware Express Guide"]

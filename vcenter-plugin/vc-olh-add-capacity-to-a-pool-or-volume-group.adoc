@@ -11,7 +11,7 @@ summary: Aggiungere dischi per espandere la capacità libera in un pool o gruppo
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

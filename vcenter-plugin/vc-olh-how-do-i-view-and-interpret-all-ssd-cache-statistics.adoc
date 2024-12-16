@@ -11,7 +11,7 @@ summary: È possibile visualizzare statistiche nominali e statistiche dettagliat
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

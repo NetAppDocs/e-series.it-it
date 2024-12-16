@@ -125,7 +125,7 @@ NOTE: La voce relativa all'indicatore data e ora è superflua.
 
 === Configurare il metodo di erogazione AutoSupport
 
-È possibile configurare la funzione AutoSupport in modo che utilizzi i metodi di consegna HTTPS, HTTP o SMTP. HTTPS è il metodo di consegna predefinito.
+È possibile configurare la funzione AutoSupport in modo che utilizzi i metodi di recapito HTTPS o SMTP. HTTPS è il metodo di consegna predefinito.
 
 . Accedere al file ASUPConfig.xml nella directory di lavoro.
 . Nella stringa, `<delivery type="n">`, inserire 1, 2 o 3 come descritto nella tabella:
@@ -146,15 +146,6 @@ NOTE: La voce relativa all'indicatore data e ora è superflua.
 
  a| 
 2
- a| 
-*HTTP*
-
-<delivery type="2">
-
-
-
- a| 
-3
  a| 
 *SMTP* -- per configurare correttamente il tipo di recapito AutoSupport su SMTP, è necessario includere l'indirizzo del server di posta SMTP, insieme ai messaggi di posta elettronica dell'utente mittente e destinatario, come nell'esempio seguente:
 

@@ -11,7 +11,7 @@ summary: Importare i certificati per gli array di storage in modo che possano au
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

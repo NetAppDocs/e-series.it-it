@@ -27,11 +27,11 @@ Le figure mostrano come i dischi sono numerati in ogni tipo di shelf (il pannell
 
 *Numerazione delle unità in uno shelf di controller E2812 o in uno shelf di dischi DE212C:*
 
-image::../media/28_dwg_e2812_de212c_drive_numbering.gif[28 numerazione dei dischi dwg e2812 de212c]
+image::../media/28_dwg_e2812_de212c_drive_numbering.gif[Numerazione dei dischi per shelf da 12 dischi]
 
 *Numerazione delle unità in uno shelf di controller E2824, flash array EF280 o shelf di dischi DE224C:*
 
-image::../media/28_dwg_e2824_de224c_drive_numbering_maint-e2800.gif[28 principale numero di dischi dwg e2824 de224c e2800]
+image::../media/28_dwg_e2824_de224c_drive_numbering_maint-e2800.gif[Numerazione dei dischi per shelf da 24 dischi]
 
 
 NOTE: Lo storage array E2812, E2824, EF280 potrebbe includere uno o più tray di dischi di espansione SAS-2 legacy, tra cui il tray di 12 dischi DE1600, il tray di 24 dischi DE5600 o il tray di 60 dischi DE6600 Per istruzioni sulla sostituzione di un'unità in uno di questi vassoi, vedere link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2577975["Sostituzione di un'unità nei vassoi E2660, E2760, E5460, E5560 o E5660"^] e. link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2577971["Sostituzione di un'unità nei vassoi da 12 o 24 dischi E2600, E2700, E5400, E5500 e E5600"^].
@@ -42,11 +42,11 @@ NOTE: Lo storage array E2812, E2824, EF280 potrebbe includere uno o più tray di
 
 Sia lo shelf del controller E2860 che lo shelf del disco DE460C sono costituiti da cinque cassetti per unità contenenti ciascuno 12 slot per unità. Il cassetto dell'unità 1 si trova nella parte superiore e il cassetto dell'unità 5 nella parte inferiore.
 
-image::../media/28_dwg_e2860_de460c_front_no_callouts_maint-e2800.gif[28 dwg e2860 de460c anteriore senza callout principale e2800]
+image::../media/28_dwg_e2860_de460c_front_no_callouts_maint-e2800.gif[cassetti da 60 dischi"]
 
 Per un cassetto per shelf controller E2860 e un cassetto per shelf dischi DE460C, i dischi sono numerati da 0 a 11 in ogni cassetto per unità all'interno dello shelf.
 
-image::../media/dwg_trafford_drawer_with_hdds_callouts_maint-e2800.gif[cassetto dwg trafford con didascalie hdd principale e2800]
+image::../media/dwg_trafford_drawer_with_hdds_callouts_maint-e2800.gif[Numeri degli slot delle unità]
 
 
 NOTE: Lo storage array E2860 potrebbe includere uno o più tray di dischi di espansione SAS-2 preesistenti, tra cui il tray di 12 dischi DE1600, il tray di 24 dischi DE5600 o il tray di 60 dischi DE6600 Per istruzioni sulla sostituzione di un'unità in uno di questi vassoi, vedere link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2577975["Sostituzione di un'unità nei vassoi E2660, E2760, E5460, E5560 o E5660"^] e. link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2577971["Sostituzione di un'unità nei vassoi da 12 o 24 dischi E2600, E2700, E5400, E5500 e E5600"^].
@@ -57,11 +57,11 @@ NOTE: Lo storage array E2860 potrebbe includere uno o più tray di dischi di esp
 
 È possibile sostituire un cassetto dischi in uno shelf di controller E2860 e uno shelf di dischi DE460C. Ciascuno di questi shelf da 60 dischi dispone di cinque cassetti per dischi.
 
-image::../media/28_dwg_e2860_de460c_front_no_callouts_maint-e2800.gif[28 dwg e2860 de460c anteriore senza callout principale e2800]
+image::../media/28_dwg_e2860_de460c_front_no_callouts_maint-e2800.gif[cassetto da 60 dischi"]
 
 Ciascuno dei cinque cassetti può contenere fino a 12 dischi.
 
-image:../media/92_dwg_de6600_drawer_with_hdds_no_callouts_maint-e2800.gif[""]
+image:../media/92_dwg_de6600_drawer_with_hdds_no_callouts_maint-e2800.gif["Cassetto con unità installate"]
 
 
 
@@ -91,7 +91,7 @@ Se non è disponibile un braccialetto, toccare una superficie non verniciata sul
 ** Non forzare mai un'unità in uno shelf e esercitare una pressione leggera e decisa per inserire completamente il dispositivo di chiusura dell'unità.
 ** Posizionare i dischi su superfici imbottite e non impilare mai i dischi uno sopra l'altro.
 ** Non urtare i dischi contro altre superfici.
-** Prima di rimuovere un'unità da uno shelf, sganciare la maniglia e attendere 30 secondi affinché l'unità si spenda.
+** Prima di rimuovere un'unità da uno shelf, sganciare la maniglia e attendere 60 secondi affinché l'unità si spenda.
 ** Utilizzare sempre imballaggi approvati per la spedizione delle unità.
 
 

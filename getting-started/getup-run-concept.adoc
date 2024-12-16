@@ -1,7 +1,7 @@
 ---
 permalink: getting-started/getup-run-concept.html 
 sidebar: sidebar 
-keywords: E-Series, eseries, E2800, E5700, EF300, EF600, 
+keywords: E-Series, eseries, E2800, E5700, EF300, EF600, E4000 
 summary: Per essere operativi con i sistemi e-Series, è necessario installare componenti hardware, configurare i sistemi host e configurare lo storage. 
 ---
 = Guida rapida per e-Series
@@ -21,6 +21,7 @@ Per installare l'hardware e-Series, accedere alle istruzioni di installazione e 
 * link:../install-hw-ef600/index.html["Serie EF600 o EF300 con shelf da 24 dischi"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2842063["Serie E2800/EF280 o E5700/EF570 con shelf da 12 o 24 dischi"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2842061["Serie E2800 o E5700 con shelf da 60 dischi"^]
+* link:../install-hw-e4000/index.html["Serie E4000 con shelf da 12 o 60 dischi"^]
 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"] Configurare l'armadietto

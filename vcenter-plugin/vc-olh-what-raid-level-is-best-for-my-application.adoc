@@ -10,7 +10,7 @@ summary: Per massimizzare le performance di un gruppo di volumi, è necessario s
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

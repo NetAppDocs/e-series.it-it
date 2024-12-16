@@ -11,7 +11,7 @@ summary: Modificare il nome di un gruppo di array di storage quando il nome corr
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

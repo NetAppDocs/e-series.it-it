@@ -1,7 +1,7 @@
 ---
 permalink: getting-started/learn-hardware-concept.html 
 sidebar: sidebar 
-keywords: E-Series, eseries, E2800, E5700, EF300, EF600, hardware, all flash array, E-Series protocols, E-Series rack 
+keywords: E-Series, eseries, E4000, E2800, E5700, EF300, EF600, hardware, all flash array, E-Series protocols, E-Series rack 
 summary: Gli storage array e-Series sono disponibili in diverse configurazioni e modelli. 
 ---
 = Panoramica dell'hardware e-Series
@@ -20,6 +20,7 @@ Gli array e-Series sono disponibili nei seguenti modelli:
 * Serie E2800 -- ibrido entry-level
 * Serie EF280 -- all flash entry-level
 * Serie EF300 -- all flash entry-level, all NVMe
+* Serie E4000 -- ibrido entry-level
 * Serie E5700 -- ibrido midrange
 * Serie EF570 -- all flash midrange
 * Serie EF600 -- midrange all flash, all NVMe
@@ -28,34 +29,28 @@ Gli array e-Series sono disponibili nei seguenti modelli:
 
 NOTE: Per SANtricity OS 11,80GA e versioni successive, tutte le porte USB sono disattivate su E2800, EF280, E5700, EF570, EF600, e EF300.
 
-
-
-== Modelli E2800
-
-[cols="35h,~"]
-|===
-| Componente | Specifica 
-
-
- a| 
-Dimensioni rack:
- a| 
+[role="tabbed-block"]
+====
+.Modelli E2800
+--
+Dimensioni dei rack::
++
+--
 * 2U12 (2 unità rack; 12 unità)
 * 2U24 (2 unità rack; 24 unità)
 +
-image::../media/e2800_2u_front.gif[e2800 2u anteriore]
+image::../media/e2800_2u_front.gif[E2800 2U]
 
 * 4U60 (4 unità rack; 60 unità)
 +
-image::../media/e2860_front.gif[e2860 anteriore]
+image::../media/e2860_front.gif["E2800 4U"]
 
 
 
-
-
- a| 
-Dischi:
- a| 
+--
+Dischi::
++
+--
 Supporta i seguenti tipi di dischi:
 
 * NL-SAS da 3.5" (fino a 180)
@@ -63,11 +58,10 @@ Supporta i seguenti tipi di dischi:
 * HDD SAS da 2.5" (fino a 180)
 
 
-
-
- a| 
-Interfacce:
- a| 
+--
+Interfacce::
++
+--
 Disponibile con le seguenti interfacce:
 
 * SAS 12 GB
@@ -75,33 +69,29 @@ Disponibile con le seguenti interfacce:
 * Fibre Channel da 16 GB o 32 GB
 
 
-|===
+--
 
 
-== Modelli EF280
+--
+.Modelli EF280
+--
+Dimensioni dei rack::
++
+--
+2U24 (2 unità rack; 24 unità)
 
-[cols="35h,~"]
-|===
-| Componente | Specifica 
+image:../media/ef570_front.gif["EF280 2U"]
 
-
- a| 
-Dimensioni rack:
- a| 
-2U24 (2 unità rack; 24 unità)image:../media/ef570_front.gif[""]
-
-
-
- a| 
-Dischi:
- a| 
+--
+Dischi::
++
+--
 Supporta fino a 96 unità SSD da 2.5"
 
-
-
- a| 
-Interfacce:
- a| 
+--
+Interfacce::
++
+--
 Disponibile con le seguenti interfacce:
 
 * SAS 12 GB
@@ -109,26 +99,23 @@ Disponibile con le seguenti interfacce:
 * Fibre Channel da 16 GB o 32 GB
 
 
-|===
+--
 
 
-== Modelli EF300
+--
+.Modelli EF300
+--
+Dimensioni dei rack::
++
+--
+2U24 (2 unità rack; 24 unità)
 
-[cols="35h,~"]
-|===
-| Componente | Specifica 
+image:../media/ef570_front.gif["EF300 2U"]
 
-
- a| 
-Dimensioni rack:
- a| 
-2U24 (2 unità rack; 24 unità)image:../media/ef570_front.gif[""]
-
-
-
- a| 
-Dischi e HICS:
- a| 
+--
+Unità e HICS::
++
+--
 Supporta i seguenti dischi con una singola scheda di interfaccia host (HIC) per controller:
 
 * Unità SSD NVMe: Fino a 24 unità SSD NVMe nello shelf del controller.
@@ -139,11 +126,10 @@ Supporta i seguenti dischi con una singola scheda di interfaccia host (HIC) per 
 
 NOTE: Per SANtricity OS 11,80GA e versioni successive, EF300 supporta le configurazioni di shelf di espansione senza dischi nello slot di base Quando si utilizza questa configurazione, assicurarsi che le unità siano inserite nello shelf di espansione e collegate correttamente al vassoio di base prima di accendere il sistema.
 
-
-
- a| 
-Interfacce:
- a| 
+--
+Interfacce::
++
+--
 Disponibile con le seguenti interfacce:
 
 * 25 GB iSCSI
@@ -155,34 +141,29 @@ Disponibile con le seguenti interfacce:
 * 100 GB NVMe/RoCE
 
 
-|===
+--
 
 
-== Modelli E5700
-
-[cols="35h,~"]
-|===
-| Componente | Specifica 
-
-
- a| 
-Dimensioni rack:
- a| 
+--
+.Modelli E5700
+--
+Dimensioni dei rack::
++
+--
 * 2U24 (2 unità rack; 24 unità)
 +
-image::../media/e2800_2u_front.gif[e2800 2u anteriore]
+image::../media/e2800_2u_front.gif[E5700 2U]
 
 * 4U60 (4 unità rack; 60 unità)
 +
-image::../media/e2860_front.gif[e2860 anteriore]
+image::../media/e2860_front.gif[E5700 4U]
 
 
 
-
-
- a| 
-Dischi:
- a| 
+--
+Dischi::
++
+--
 Supporta fino a 480 dei seguenti tipi di dischi:
 
 * Dischi NL-SAS da 3.5"
@@ -190,11 +171,10 @@ Supporta fino a 480 dei seguenti tipi di dischi:
 * Unità HDD SAS da 2.5"
 
 
-
-
- a| 
-Interfacce:
- a| 
+--
+Interfacce::
++
+--
 Disponibile con le seguenti interfacce:
 
 * SAS 12 GB
@@ -207,33 +187,29 @@ Disponibile con le seguenti interfacce:
 * 100 GB NVMe/RoCE
 
 
-|===
+--
 
 
-== Modelli EF570
+--
+.Modelli EF570
+--
+Dimensioni dei rack::
++
+--
+2U24 (2 unità rack; 24 unità)
 
-[cols="35h,~"]
-|===
-| Componente | Specifica 
+image:../media/ef570_front.gif["EF570 2U"]
 
-
- a| 
-Dimensioni rack:
- a| 
-2U24 (2 unità rack; 24 unità)image:../media/ef570_front.gif[""]
-
-
-
- a| 
-Dischi:
- a| 
+--
+Dischi::
++
+--
 Supporta fino a 120 unità SSD da 2.5"
 
-
-
- a| 
-Interfacce:
- a| 
+--
+Interfacce::
++
+--
 Disponibile con le seguenti interfacce:
 
 * SAS 12 GB
@@ -246,26 +222,23 @@ Disponibile con le seguenti interfacce:
 * 100 GB NVMe/RoCE
 
 
-|===
+--
 
 
-== Modelli EF600
+--
+.Modelli EF600
+--
+Dimensioni dei rack::
++
+--
+2U24 (2 unità rack; 24 unità)
 
-[cols="35h,~"]
-|===
-| Componente | Specifica 
+image:../media/ef570_front.gif["EF600 2U"]
 
-
- a| 
-Dimensioni rack:
- a| 
-2U24 (2 unità rack; 24 unità)image:../media/ef570_front.gif[""]
-
-
-
- a| 
-Dischi e HICS:
- a| 
+--
+Unità e HICS::
++
+--
 Supporta i seguenti dischi con una singola scheda di interfaccia host (HIC) per controller:
 
 * Unità SSD NVMe: Fino a 24 unità SSD NVMe nello shelf del controller.
@@ -276,11 +249,10 @@ Supporta i seguenti dischi con una singola scheda di interfaccia host (HIC) per 
 
 NOTE: Per SANtricity OS 11,80GA e versioni successive, EF600 supporta le configurazioni di shelf di espansione senza dischi nello slot di base Quando si utilizza questa configurazione, assicurarsi che le unità siano inserite nello shelf di espansione e collegate correttamente al vassoio di base prima di accendere il sistema.
 
-
-
- a| 
-Interfacce:
- a| 
+--
+Interfacce::
++
+--
 Disponibile con le seguenti interfacce:
 
 * 25 GB iSCSI
@@ -295,4 +267,49 @@ Disponibile con le seguenti interfacce:
 * 200 GB NVMe/RoCE
 
 
-|===
+--
+
+
+--
+.Modelli E4000
+--
+Dimensioni dei rack::
++
+--
+* 2U12 (2 unità rack; 12 unità)
++
+image::../media/e4000_2u_front.png[E4000 2U]
+
+* 4U60 (4 unità rack; 60 unità)
++
+image::../media/e4000_4u_front.png[E4000 4U]
+
+
+
+--
+Dischi::
++
+--
+Supporta i seguenti tipi di dischi:
+
+* NL-SAS da 3.5" (fino a 300)
+* SSD SAS da 2.5" (fino a 120)
+
+
+--
+Interfacce::
++
+--
+Disponibile con le seguenti interfacce:
+
+* SAS 12 GB
+* ISCSI da 1 GB o 10GBASE-T.
+* ISCSI da 1GB Gbit, 10Gb Gbit o 25GB Gbit
+* FC da 8GB GB, 16GB GB o 32GB GB
+
+
+--
+
+
+--
+====

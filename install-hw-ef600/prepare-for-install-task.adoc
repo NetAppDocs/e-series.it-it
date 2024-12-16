@@ -28,14 +28,14 @@ Se si sta cablando EF300 per l'espansione SAS, consultare le seguenti informazio
 
 
  a| 
-image:../media/ef600_w_faceplate.png[""]
+image:../media/ef600_w_faceplate.png["Shelf con dischi installati e pannello frontale"]
  a| 
 Shelf con dischi installati (pannello e cappucci terminali confezionati separatamente)
 
 
 
  a| 
-image:../media/superrails_inst-hw-ef600.png[""]
+image:../media/superrails_inst-hw-ef600.png["Hardware per il montaggio in rack"]
  a| 
 Hardware per il montaggio in rack
 
@@ -49,7 +49,7 @@ La seguente tabella identifica i tipi di cavi che potrebbero essere ricevuti. Se
 
 
  a| 
-image:../media/cable_ethernet_inst-hw-ef600.png[""]
+image:../media/cable_ethernet_inst-hw-ef600.png["Cavo ethernet RJ-45"]
  a| 
 Cavi Ethernet RJ-45 (se ordinati)
  a| 
@@ -58,7 +58,7 @@ Connessione di gestione
 
 
  a| 
-image:../media/cable_io_inst-hw-ef600.png[""]
+image:../media/cable_io_inst-hw-ef600.png["Cavo i/O."]
  a| 
 Cavi i/o (se ordinati)
  a| 
@@ -67,7 +67,7 @@ Cablaggio degli host di dati
 
 
  a| 
-image:../media/cable_power_inst-hw-ef600.png[""]
+image:../media/cable_power_inst-hw-ef600.png["Cavi di alimentazione"]
  a| 
 Cavi di alimentazione (se ordinati)
  a| 
@@ -80,28 +80,28 @@ Accensione del sistema storage
 
 
  a| 
-image:../media/screwdriver_inst-hw-ef600.png[""]
+image:../media/screwdriver_inst-hw-ef600.png["Cacciavite Phillips n. 2"]
  a| 
 Cacciavite Phillips n. 2
 
 
 
  a| 
-image:../media/flashlight_inst-hw-ef600.png[""]
+image:../media/flashlight_inst-hw-ef600.png["Torcia"]
  a| 
 Torcia
 
 
 
  a| 
-image:../media/wrist_strap_inst-hw-ef600.png[""]
+image:../media/wrist_strap_inst-hw-ef600.png["Braccialetto ESD"]
  a| 
 Braccialetto ESD
 
 
 
  a| 
-image:../media/2u_rackspace_inst-hw-ef600.png[""]
+image:../media/2u_rackspace_inst-hw-ef600.png["Rack 2U"]
  a| 
 Spazio rack 2U: Uno standard da 19" Rack da 48.30 cm per rack 2U delle seguenti dimensioni.
 
@@ -121,7 +121,7 @@ NOTE: L'utilizzo di cabinet di terze parti potrebbe causare la limitazione dell'
 
 
  a| 
-image:../media/management_station_inst-hw-ef600_g60b3.png[""]
+image:../media/management_station_inst-hw-ef600_g60b3.png["Stazione di gestione con browser supportato per il software di gestione"]
  a| 
 Un browser supportato per il software di gestione:
 

@@ -11,7 +11,7 @@ summary: Un controllo dello stato di salute viene eseguito come parte del proces
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

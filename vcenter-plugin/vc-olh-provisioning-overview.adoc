@@ -10,7 +10,7 @@ summary: 'È possibile creare container di dati, chiamati volumi, in modo che l"
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

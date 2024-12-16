@@ -11,7 +11,7 @@ summary: 'È possibile attivare Drive Security per un pool o un gruppo di volumi
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

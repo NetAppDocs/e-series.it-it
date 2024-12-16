@@ -44,7 +44,7 @@ Nell'ambito del processo di configurazione, gli array di storage e l'host i/o de
 
 I seguenti diagrammi forniscono esempi di come collegare i sistemi in modo che eseguano operazioni Remote Storage Volume su una connessione iSCSI.
 
-image:../media/remote_target_volumes_iscsi_use_case_1.png[""] image:../media/remote_target_volumes_iscsi_use_case_2.png[""]
+image:../media/remote_target_volumes_iscsi_use_case_1.png["Cablaggio dello storage iSCSI"] image:../media/remote_target_volumes_iscsi_use_case_2.png["Cablaggio dello storage iSCSI"]
 
 
 

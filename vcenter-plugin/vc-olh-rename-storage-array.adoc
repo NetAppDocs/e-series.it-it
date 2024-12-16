@@ -10,7 +10,7 @@ summary: 'Modificare il nome dello storage array visualizzato nella pagina Manag
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

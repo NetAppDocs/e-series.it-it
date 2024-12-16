@@ -1,7 +1,7 @@
 ---
 permalink: upgrade-controllers/remove-controllers-task.html 
 sidebar: sidebar 
-keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, remove controller, removing controller, remove battery, removing battery 
+keywords: E-Series, eseries, E4000, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, remove controller, removing controller, remove battery, removing battery 
 summary: 'Il primo passo nell"aggiornamento dei controller consiste nel rimuovere i vecchi controller e, facoltativamente, la batteria.' 
 ---
 = Rimuovere i controller
@@ -51,7 +51,7 @@ CAUTION: Per evitare prestazioni degradate, non attorcigliare, piegare, pizzicar
 La figura seguente mostra un esempio della posizione generale delle maniglie di rilascio sui modelli di controller. Gli shelf dei controller e i vassoi dei dischi controller hanno una configurazione simile per le maniglie di rilascio.
 
 +
-image:../media/28_dwg_e2824_remove_controller_canister_upg-hw.gif[""]
+image:../media/28_dwg_e2824_remove_controller_canister_upg-hw.gif["Rimuovere il contenitore del controller"]
 
 +
 *(1)* _contenitore controller_
@@ -75,12 +75,7 @@ Rimuovere la batteria solo se si intende utilizzare la batteria dal vecchio cont
 
 .Fasi
 . Premere verso il basso entrambi i pulsanti del dispositivo di chiusura del coperchio superiore sul vecchio contenitore del controller e far scorrere il coperchio superiore verso la parte posteriore del contenitore.
-. Eseguire una delle seguenti opzioni, a seconda del modello di vassoio del controller, per rilasciare la vecchia batteria:
-+
-** Per il controller-drive E2600 o E2700, svitare la vite ad alette che fissa la batteria al contenitore del controller.
-** Per E5400, EF540, E5500, EF550, E5600, O EF600, rilasciare la linguetta che fissa la batteria al contenitore del controller.
-
-
+. Sul modello di vassoio del controller, rilasciare la linguetta che fissa la batteria al contenitore del controller per rilasciare la batteria vecchia.
 . Rimuovere la batteria facendola scorrere verso la parte posteriore del vecchio contenitore del controller.
 
 

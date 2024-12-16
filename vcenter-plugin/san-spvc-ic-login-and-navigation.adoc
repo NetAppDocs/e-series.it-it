@@ -10,7 +10,7 @@ summary: Accedere e navigare nel Plugin per vCenter.
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

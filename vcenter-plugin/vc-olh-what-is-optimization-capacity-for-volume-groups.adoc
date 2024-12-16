@@ -10,7 +10,7 @@ summary: I dischi SSD avranno una maggiore durata e migliori prestazioni di scri
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

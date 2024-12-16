@@ -29,7 +29,7 @@ Utilizzare Gestore di sistema SANtricity per determinare il tipo di ricetrasmett
 . Digitare *SFP* nella casella di testo e fare clic su *Find* (trova).
 . Per ogni SFP elencato nel profilo dell'array di storage, individuare la voce *velocità dati supportata*.
 +
-image::../media/sam1130_ss_e2800_unified_spf_maint-e2800.gif[sam1130 ss e2800 unified spf mait e2800]
+image::../media/sam1130_ss_e2800_unified_spf_maint-e2800.gif[Velocità di trasferimento dati supportata]
 
 . Fare riferimento alla tabella per determinare se è possibile riutilizzare gli SFP, come indicato di seguito:
 +
@@ -94,7 +94,7 @@ Per ottenere il Feature Pack, è necessario il numero di serie dallo shelf del c
 .. Con la scheda *Support Resources* (risorse di supporto) selezionata, scorrere fino alla sezione *View top storage array properties* (Visualizza proprietà principali storage array).
 .. Individuare *chassis Serial Number* (numero di serie chassis) e copiare questo valore in un file di testo.
 +
-image::../media/sam1130_ss_e2800_storage_array_profile_sn_smid_copy_maint-e2800.gif[sam1130 ss e2800 storage array profile sn smid copy mainting e2800]
+image::../media/sam1130_ss_e2800_storage_array_profile_sn_smid_copy_maint-e2800.gif[Numero di serie dello chassis]
 
 
 
@@ -108,7 +108,7 @@ NOTE: Il "modello secondario" può anche essere scritto come "modello secondario
 
 .. Individuare l'ID del sottomodello del Feature Pack per la configurazione iniziale.
 +
-image::../media/storage_array_profile2_maint-e2800.gif[profilo array storage 2 mainte2800]
+image::../media/storage_array_profile2_maint-e2800.gif[ID sottomodello del pacchetto funzioni]
 
 
 
@@ -472,7 +472,7 @@ NOTE: Se l'ID del modello secondario del controller non è presente nell'elenco,
 .. In *Change Feature Pack*, individuare *Feature Enable Identifier*.
 .. Copiare e incollare questo numero di 32 cifre in un file di testo.
 +
-image::../media/sam1130_ss_e2800_change_feature_pack_feature_enable_identifier_copy_maint-e2800.gif[sam1130 ss e2800 change feature pack enable identifier copy maintain e2800]
+image::../media/sam1130_ss_e2800_change_feature_pack_feature_enable_identifier_copy_maint-e2800.gif["Identificatore abilitazione funzione"]
 
 
 
@@ -515,7 +515,7 @@ CAUTION: *Possibile perdita di dati* -- se si continua questa procedura mentre s
 . Se l'array di storage partecipa a una relazione di mirroring, interrompere tutte le operazioni di i/o dell'host sull'array di storage secondario.
 . Attendere che i dati presenti nella memoria cache vengano scritti sui dischi.
 +
-Il LED verde cache Active (cache attiva) sul retro di ciascun controller è acceso quando i dati memorizzati nella cache devono essere scritti sui dischi. Attendere che il LED si spenga.image:../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[""]
+Il LED verde cache Active (cache attiva) sul retro di ciascun controller è acceso quando i dati memorizzati nella cache devono essere scritti sui dischi. Attendere lo spegnimento del LED.image:../media/28_dwg_2800_controller_attn_led_maint-e2800.gif["LED cache attiva sul controller E2800"]
 
 +
 |===
@@ -542,7 +542,7 @@ Modificare il Feature Pack per convertire il protocollo host delle porte host de
 . Da Gestore di sistema di SANtricity, selezionare menu:Impostazioni[sistema].
 . In *componenti aggiuntivi*, selezionare *Cambia Feature Pack*.
 +
-image::../media/sam1130_ss_system_change_feature_pack_maint-e2800.gif[sam1130 ss system change feature pack maintain e2800]
+image::../media/sam1130_ss_system_change_feature_pack_maint-e2800.gif[Modificare il pacchetto di funzioni]
 
 . Fare clic su *Sfoglia*, quindi selezionare il Feature Pack che si desidera applicare.
 . Tipo `CHANGE` sul campo.

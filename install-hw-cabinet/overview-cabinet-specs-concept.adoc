@@ -23,7 +23,7 @@ Il cabinet modello 3040 40U presenta le seguenti caratteristiche standard:
 
 Le seguenti figure mostrano una vista frontale (sinistra) e una vista posteriore (destra) dell'armadio.
 
-image::../media/83000_07_dwg_3040_cabinet_with_callouts.gif[cabinet 83000 07 dwg 3040 con didascalie]
+image::../media/83000_07_dwg_3040_cabinet_with_callouts.gif[panoramica del cabinet 3040]
 
 |===
 

@@ -10,7 +10,7 @@ summary: 'Nella finestra di dialogo Add Capacity (Aggiungi capacità), non tutti
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

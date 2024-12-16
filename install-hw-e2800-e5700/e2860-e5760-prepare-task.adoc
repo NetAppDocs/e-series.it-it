@@ -21,14 +21,14 @@ Scopri come preparare l'installazione del tuo sistema storage E2860, E5760 o DE4
 
 
  a| 
-image:../media/trafford_overview.png[""]
+image:../media/trafford_overview.png["Shelf con dischi installati e pannello frontale"]
  a| 
 Shelf, pannello frontale e hardware per il montaggio in rack
 
 
 
  a| 
-image:../media/handles_counted.png[""]
+image:../media/handles_counted.png["Maniglie dei ripiani"]
  a| 
 4 maniglie per scaffali
 
@@ -42,7 +42,7 @@ La seguente tabella identifica i tipi di cavi che potrebbero essere ricevuti. Se
 
 
  a| 
-image:../media/cable_ethernet_inst-hw-e2800-e5700.png[""]
+image:../media/cable_ethernet_inst-hw-e2800-e5700.png["Cavi Ethernet"]
  a| 
 Cavi Ethernet
 
@@ -53,7 +53,7 @@ Connessione di gestione
 
 
  a| 
-image:../media/cable_io_inst-hw-e2800-e5700.png[""]
+image:../media/cable_io_inst-hw-e2800-e5700.png["Cavi i/O."]
  a| 
 Cavi i/O.
 
@@ -64,7 +64,7 @@ Cablaggio degli host di dati
 
 
  a| 
-image:../media/cable_power_inst-hw-e2800-e5700.png[""]
+image:../media/cable_power_inst-hw-e2800-e5700.png["Cavi di alimentazione"]
  a| 
 Cavi di alimentazione
 
@@ -77,7 +77,7 @@ Accensione del sistema storage
 
 
  a| 
-image:../media/sas_cable.png[""]
+image:../media/sas_cable.png["Cavi SAS"]
  a| 
 Cavi SAS (inclusi solo con gli shelf di dischi)
  a| 
@@ -90,28 +90,28 @@ Cablaggio degli shelf
 
 
  a| 
-image:../media/screwdriver_inst-hw-e2800-e5700.png[""]
+image:../media/screwdriver_inst-hw-e2800-e5700.png["Cacciavite Phillips n. 2"]
  a| 
 Cacciavite Phillips n. 2
 
 
 
  a| 
-image:../media/flashlight_inst-hw-e2800-e5700.png[""]
+image:../media/flashlight_inst-hw-e2800-e5700.png["Torcia"]
  a| 
 Torcia
 
 
 
  a| 
-image:../media/wrist_strap_inst-hw-e2800-e5700.png[""]
+image:../media/wrist_strap_inst-hw-e2800-e5700.png["Braccialetto ESD"]
  a| 
 Braccialetto ESD
 
 
 
  a| 
-image:../media/4u_dummy.png[""]
+image:../media/4u_dummy.png["4U rack\""]
  a| 
 Spazio rack 4U: Uno standard da 19" Rack da 48.30 cm per rack 4U delle seguenti dimensioni.
 
@@ -126,7 +126,7 @@ Spazio rack 4U: Uno standard da 19" Rack da 48.30 cm per rack 4U delle seguenti 
 
 
  a| 
-image:../media/management_station_inst-hw-e2800-e5700_g60b3.png[""]
+image:../media/management_station_inst-hw-e2800-e5700_g60b3.png["Stazione di gestione con browser supportato per il software di gestione"]
  a| 
 Un browser supportato per il software di gestione:
 

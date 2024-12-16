@@ -6,6 +6,8 @@ summary: Gestire lo storage
 ---
 = Gestire lo storage
 :allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
 
 
 [role="lead"]

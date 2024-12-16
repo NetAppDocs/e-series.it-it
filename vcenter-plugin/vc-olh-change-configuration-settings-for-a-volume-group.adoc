@@ -11,7 +11,7 @@ summary: Consente di modificare le impostazioni di un gruppo di volumi, inclusi 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -6,7 +6,12 @@ summary: Report tecnici e-Series
 ---
 = Sfoglia i report tecnici della piattaforma
 :allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
 
+
+[role="lead"]
+Consulta i link sottostanti per accedere ai report tecnici relativi alle piattaforme e-Series. I collegamenti consentono di accedere a un altro sito di documentazione.
 
 
 
@@ -28,8 +33,8 @@ summary: Report tecnici e-Series
 |  |  |  
 
 
-| https://www.netapp.com/pdf.html?item=/media/17009-tr4800pdf.pdf["*TR-4800: Panoramica delle funzionalità degli array EF600*"] |  |  
+| https://www.netapp.com/pdf.html?item=/media/17009-tr4800pdf.pdf["*TR-4800: Panoramica delle funzionalità degli array EF600*"] | https://www.netapp.com/pdf.html?item=/media/116236-tr-5001-intro-to-netapp-e4000-arrays-with-santricity.pdf["*TR-5001: Panoramica delle funzionalità degli array E4000*"^] |  
 
 
-| Descrive le caratteristiche hardware e software dell'array all-flash EF600 e le nuove funzionalità del sistema operativo SANtricity. |  |  
+| Descrive le caratteristiche hardware e software dell'array all-flash EF600 e le nuove funzionalità del sistema operativo SANtricity. | Descrive le funzionalità hardware e software dell'array ibrido E4000 e le più recenti funzionalità del sistema operativo SANtricity. |  
 |===

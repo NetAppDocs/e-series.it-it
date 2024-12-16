@@ -10,7 +10,7 @@ summary: È possibile gestire il software SANtricity e gli aggiornamenti DI NVSR
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

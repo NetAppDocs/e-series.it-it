@@ -46,7 +46,7 @@ Conservare il materiale di imballaggio da utilizzare per la spedizione del conte
 
 . Individuare le etichette dell'indirizzo MAC e del numero di parte della FRU sul retro del contenitore del controller.
 +
-image::../media/28_dwg_e2800_labels_maint-e2800.gif[28 etichette dwg e2800 principali e2800]
+image::../media/28_dwg_e2800_labels_maint-e2800.gif[Indirizzo MAC e numero parte FRU sul controller E2800]
 
 +
 *(1)* _MAC address:_ Indirizzo MAC per la porta di gestione 1 ("`P1`"). Se si è utilizzato DHCP per ottenere l'indirizzo IP del controller originale, è necessario questo indirizzo per connettersi al nuovo controller.
@@ -60,7 +60,7 @@ Quando un controller presenta un guasto e deve essere sostituito, il codice del 
 
 +
 .. Selezionare *hardware*.
-.. Individuare lo shelf del controller, contrassegnato dall'icona del controller image:../media/sam1130_ss_hardware_controller_icon_maint-e2800.gif[""].
+.. Individuare il ripiano del controller contrassegnato con l'icona del controller image:../media/sam1130_ss_hardware_controller_icon_maint-e2800.gif["Icona del controller"].
 .. Fare clic sull'icona del controller.
 .. Selezionare il controller e fare clic su *Avanti*.
 .. Nella scheda *base*, annotare il *numero di parte di ricambio* del controller.
@@ -166,7 +166,7 @@ Poiché è necessario rimuovere l'HIC dal contenitore del controller guasto, è 
 La figura seguente è un esempio di shelf di controller E2812, shelf di controller E2824 o array flash EF280:
 
 +
-image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e2824 rimuovere la manutenzione del contenitore del controller e2800]
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[Rimuovere il contenitore del controller]
 
 +
 *(1)* _contenitore controller_
@@ -178,7 +178,7 @@ image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e
 La figura seguente è un esempio di shelf di controller E2860:
 
 +
-image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[28 dwg e2860 add controller canister maintt e2800]
+image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[Rimuovere il contenitore del controller]
 
 +
 *(1)* _contenitore controller_
@@ -211,7 +211,7 @@ Rimuovere la batteria per installare il nuovo controller.
 Se questo LED verde è acceso, il controller sta ancora utilizzando l'alimentazione a batteria. Prima di rimuovere qualsiasi componente, è necessario attendere che il LED si spenga.
 
 +
-image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[28 dwg e2800 cache interna active led maintt e2800]
+image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[LED cache interna attiva]
 
 +
 *(1)* _LED cache interna attiva_
@@ -222,7 +222,7 @@ image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[28 dwg e2
 . Individuare il dispositivo di chiusura blu della batteria.
 . Sbloccare la batteria spingendo il dispositivo di chiusura verso il basso e lontano dal contenitore del controller.
 +
-image::../media/28_dwg_e2800_remove_battery_maint-e2800.gif[28 dwg e2800 rimuovere la batteria principale e2800]
+image::../media/28_dwg_e2800_remove_battery_maint-e2800.gif[Rimuovere la batteria dal contenitore della centralina]
 
 +
 *(1)* _dispositivo di chiusura a scatto della batteria_
@@ -245,7 +245,7 @@ Se il contenitore del controller include una scheda di interfaccia host (HIC), �
 Sono presenti quattro viti: Una sulla parte superiore, una laterale e due sulla parte anteriore.
 
 +
-image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[28 viti hic faceplace dwg e2800 per la manutenzione e2800]
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[Rimuovere la mascherina]
 
 . Rimuovere la piastra anteriore dell'HIC.
 . Utilizzando le dita o un cacciavite Phillips, allentare le tre viti a testa zigrinata che fissano l'HIC alla scheda del controller.
@@ -255,7 +255,7 @@ image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[28 viti hic fa
 CAUTION: Fare attenzione a non graffiare o urtare i componenti sul fondo dell'HIC o sulla parte superiore della scheda del controller.
 
 +
-image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[28 dwg e2800 hic thumbwaves mainten e2800]
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[Rimuovere l'HIC dalla scheda del controller]
 
 +
 *(1)* _scheda di interfaccia host (HIC)_
@@ -291,7 +291,7 @@ Inserire la flangia metallica nella parte anteriore della batteria nello slot su
 Quando il dispositivo di chiusura scatta in posizione, la parte inferiore del dispositivo di chiusura si aggancia in uno slot metallico sul telaio.
 
 +
-image::../media/28_dwg_e2800_insert_battery_maint-e2800.gif[28 dwg e2800 inserire la manutenzione della batteria e2800]
+image::../media/28_dwg_e2800_insert_battery_maint-e2800.gif[Reinstallare la batteria]
 
 +
 *(1)* _dispositivo di chiusura a scatto della batteria_
@@ -309,14 +309,14 @@ CAUTION: *Possibili danni all'hardware* -- la flangia metallica sulla parte ante
 
 
 +
-image:../media/28_dwg_e2800_battery_flange_ok_maint-e2800.gif[""]
+image:../media/28_dwg_e2800_battery_flange_ok_maint-e2800.gif["Flangia metallica corretta"]
 
 +
 ** *Errato* -- la flangia metallica della batteria non è inserita nello slot del controller:
 
 
 +
-image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e2800.gif[""]
+image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e2800.gif["Flangia metallica non corretta"]
 
 
 
@@ -338,7 +338,7 @@ Fare attenzione a non graffiare o urtare i componenti sul fondo dell'HIC o sulla
 CAUTION: *Possibili danni alle apparecchiature* -- fare molta attenzione a non stringere il connettore a nastro dorato dei LED del controller tra l'HIC e le viti a testa zigrinata.
 
 +
-image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[28 dwg e2800 hic thumbwaves mainten e2800]
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[Rimontare l'HIC sulla centralina]
 
 +
 *(1)* _scheda di interfaccia host (HIC)_
@@ -352,7 +352,7 @@ Non utilizzare un cacciavite per evitare di serrare eccessivamente le viti.
 
 . Utilizzando un cacciavite Phillips n. 1, fissare la piastra anteriore HIC rimossa dal contenitore del controller originale al nuovo contenitore del controller con quattro viti.
 +
-image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[28 viti hic faceplace dwg e2800 per la manutenzione e2800]
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[Reinstallare la mascherina]
 
 
 
@@ -367,7 +367,7 @@ Dopo aver installato la batteria e la scheda di interfaccia host (HIC), se inizi
 . Capovolgere il contenitore del controller, in modo che il coperchio rimovibile sia rivolto verso il basso.
 . Con la maniglia della camma in posizione aperta, far scorrere il contenitore del controller fino in fondo nello shelf del controller.
 +
-image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e2824 rimuovere la manutenzione del contenitore del controller e2800]
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[Rimontare il contenitore della centralina]
 
 +
 *(1)* _contenitore controller_
@@ -376,7 +376,7 @@ image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e
 *(2)* _maniglia della camma_
 
 +
-image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[28 dwg e2860 add controller canister maintt e2800]
+image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[Rimontare il contenitore della centralina]
 
 +
 *(1)* _contenitore controller_
@@ -410,7 +410,7 @@ Quando la comunicazione con l'altro controller viene ristabilita:
 +
 ** Il display a sette segmenti mostra la sequenza ripetuta *OS*, *OL*, *_blank_* per indicare che il controller è offline.
 ** Il LED di attenzione di colore ambra rimane acceso.
-** I LED del collegamento host potrebbero essere accesi, lampeggianti o spenti, a seconda dell'interfaccia host.image:../media/28_dwg_attn_led_7s_display_maint-e2800.gif[""]
+** I LED del collegamento host potrebbero essere accesi, lampeggianti o spenti, a seconda dell'interfaccia host. image:../media/28_dwg_attn_led_7s_display_maint-e2800.gif["E2800 LED del controller"]
 +
 *(1)* _LED di attenzione (ambra)_
 

@@ -1,0 +1,228 @@
+---
+permalink: maintenance-e4000/replace-hic-upgrade-e4000.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Aggiornamento HIC nel E4000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile aggiornare le schede di interfaccia host (HICS) per aumentare il numero di porte host o modificare i protocolli host.
+
+.A proposito di questa attività
+* Quando si aggiorna HICS, è necessario spegnere lo storage array, aggiornare l'HICS e riapplicare l'alimentazione.
+* Quando si aggiorna l'HICS in un controller E4000, ripetere tutti i passaggi per rimuovere il secondo controller, aggiornare l'HICS del secondo controller e reinstallare il secondo controller prima di riapplicare l'alimentazione allo shelf del controller.
+
+
+.Prima di iniziare
+* Pianificare una finestra di manutenzione dei tempi di inattività per questa procedura. Non è possibile accedere ai dati sull'array di storage fino a quando la procedura non è stata completata correttamente. Poiché entrambi i controller devono avere la stessa configurazione HIC quando vengono accesi, l'alimentazione deve essere disattivata quando si modifica la configurazione HIC. La presenza di HICS non corrispondenti causa il blocco del controller con l'HIC sostitutivo quando lo si porta online.
+* Assicurarsi di disporre di quanto segue:
++
+** Due HICS compatibili con i controller.
+** Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
+** Un'area di lavoro piana e priva di elettricità statica.
+** Etichette per identificare ciascun cavo collegato al contenitore del controller.
+** Un cacciavite Phillips n. 1.
+** Stazione di gestione con un browser che può accedere a Gestione di sistema SANtricity per il controller. Per aprire l'interfaccia di System Manager, puntare il browser sul nome di dominio o sull'indirizzo IP del controller.
++
+
+CAUTION: *Possibile perdita di accesso ai dati* -- non installare mai un HIC in un contenitore del controller E4000 se tale HIC è stato progettato per un altro controller e-Series. Inoltre, entrambi i controller e gli HICS devono essere identici. La presenza di HICS incompatibili o non corrispondenti causa il blocco dei controller quando si applica l'alimentazione.
+
+
+
+
+
+
+
+== Fase 1: Posizionare lo shelf del controller offline
+
+Posiziona lo shelf del controller offline in modo da poter aggiornare l'HICS in tutta sicurezza.
+
+.Fasi
+. Dalla home page di Gestore di sistema SANtricity, verificare che lo stato dello storage array sia ottimale.
++
+Se lo stato non è ottimale, utilizzare Recovery Guru o contattare il supporto tecnico per risolvere il problema. Non continuare con questa procedura.
+
+. Fare clic su *supporto > Centro aggiornamenti* per assicurarsi che sia installata la versione più recente di SANtricity OS.
++
+Se necessario, installare la versione più recente.
+
+. Eseguire il backup del database di configurazione dello storage array utilizzando Gestione di sistema di SANtricity.
++
+Se si verifica un problema durante la rimozione di un controller, è possibile utilizzare il file salvato per ripristinare la configurazione. Il sistema salva lo stato corrente del database di configurazione RAID, che include tutti i dati per i gruppi di volumi e i pool di dischi sul controller.
+
++
+** Da System Manager:
++
+... Selezionare *supporto > Support Center > Diagnostica*.
+... Selezionare *Collect Configuration Data* (raccolta dati di configurazione).
+... Fare clic su *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+
+
+. Assicurarsi che non si verifichino operazioni di i/o tra lo storage array e tutti gli host connessi. Ad esempio, è possibile eseguire le seguenti operazioni:
++
+** Arrestare tutti i processi che coinvolgono le LUN mappate dallo storage agli host.
+** Assicurarsi che nessuna applicazione stia scrivendo dati su tutte le LUN mappate dallo storage agli host.
+** Smontare tutti i file system associati ai volumi sull'array.
++
+
+NOTE: I passaggi esatti per interrompere le operazioni di i/o dell'host dipendono dal sistema operativo dell'host e dalla configurazione, che esulano dall'ambito di queste istruzioni. Se non si è sicuri di come interrompere le operazioni di i/o host nell'ambiente, è consigliabile arrestare l'host.
+
++
+
+CAUTION: *Possibile perdita di dati* -- se si continua questa procedura mentre si verificano le operazioni di i/o, l'applicazione host potrebbe perdere l'accesso ai dati perché lo storage non è accessibile.
+
+
+
+. Attendere che i dati presenti nella memoria cache vengano scritti sui dischi.
++
+Il LED verde cache Active (cache attiva) sul retro di ciascun controller è acceso quando i dati memorizzati nella cache devono essere scritti sui dischi. Attendere che il LED si spenga.
+
+. Dalla home page di Gestione sistema SANtricity, selezionare *Visualizza operazioni in corso*. Attendere il completamento di tutte le operazioni prima di passare alla fase successiva.
+. Spegnere lo shelf del controller.
++
+.. Etichettare e scollegare entrambi i cavi di alimentazione dallo shelf del controller.
+.. Attendere che tutti i LED sullo shelf del controller si spenga.
+
+
+
+
+
+
+== Fase 2: Rimuovere il contenitore del controller
+
+Rimuovere il filtro a carboni attivi della centralina dal sistema, quindi rimuovere il coperchio del filtro a carboni attivi della centralina.
+
+.Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Allentare il gancio e la fascetta che fissano i cavi al dispositivo di gestione dei cavi, quindi scollegare i cavi di sistema e i SFP (se necessario) dal contenitore del controller, tenendo traccia del punto in cui sono stati collegati i cavi.
++
+Lasciare i cavi nel dispositivo di gestione dei cavi in modo che quando si reinstalla il dispositivo di gestione dei cavi, i cavi siano organizzati.
+
+. Rimuovere e mettere da parte i dispositivi di gestione dei cavi dai lati sinistro e destro del contenitore del controller.
+. Premere il fermo sulla maniglia della camma fino a sganciarla, aprire completamente la maniglia della camma per sganciare il contenitore della centralina dalla piastra centrale, quindi, con due mani, estrarre il contenitore della centralina dal telaio.
+. Capovolgere il contenitore della centralina e collocarlo su una superficie piana e stabile.
+. Aprire il coperchio premendo i pulsanti blu sui lati del contenitore del controller per rilasciare il coperchio, quindi ruotare il coperchio verso l'alto e verso l'esterno del contenitore del controller.
++
+image::../media/drw_E4000_open_controller_module_cover_IEOPS-870.png[Aprire il coperchio del contenitore della centralina.]
+
+
+
+
+
+== Fase 3: Aggiornare l'HIC
+
+Rimuovere e sostituire l'HIC.
+
+.Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Rimuovere l'HIC:
++
+image::../media/drw_E4000_replace_HIC_source_IEOPS-864.png[Rimuovere l'HIC dal modulo controller.]
+
++
+.. Rimuovere la piastra anteriore dell'HIC allentando tutte le viti e facendola scorrere fuori dal modulo controller.
+.. Allentare le viti a testa zigrinata sull'HIC e sollevare l'HIC verticalmente.
+
+
+. Reinstallare l'HIC:
++
+.. Allineare lo zoccolo della spina HIC sostitutiva con lo zoccolo della scheda madre, quindi inserire delicatamente la scheda nello zoccolo.
+.. Serrare le tre viti a testa zigrinata sull'HIC.
+.. Rimontare la piastra anteriore dell'HIC.
+
+
+. Reinstallare il coperchio del modulo controller e bloccarlo in posizione.
+
+
+
+
+== Fase 4: Reinstallare il contenitore del controller
+
+Rimontare il contenitore della centralina nel telaio.
+
+.Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Se non è già stato fatto, sostituire il coperchio sul contenitore della centralina.
+. Capovolgere il contenitore della centralina e allineare l'estremità con l'apertura nel telaio.
+. Allineare l'estremità del contenitore della centralina con l'apertura nel telaio, quindi spingere delicatamente il contenitore della centralina a metà corsa nel sistema.
++
+
+NOTE: Non inserire completamente il contenitore della centralina nel telaio fino a quando non viene richiesto.
+
+. Ricable il sistema, come necessario.
++
+Se sono stati rimossi i convertitori multimediali (QSFP o SFP), ricordarsi di reinstallarli se si utilizzano cavi in fibra ottica.
+
+. Completare la reinstallazione del contenitore della centralina:
++
+.. Con la maniglia della camma in posizione aperta, spingere con decisione il contenitore del controller fino a quando non raggiunge la parte interna e non è completamente insediato, quindi chiudere la maniglia della camma in posizione bloccata.
++
+
+NOTE: Non esercitare una forza eccessiva quando si fa scorrere il contenitore della centralina nel telaio per evitare di danneggiare i connettori.
+
+.. Se non è già stato fatto, reinstallare il dispositivo di gestione dei cavi.
+.. Collegare i cavi al dispositivo di gestione dei cavi con il gancio e la fascetta.
+
+
+. Ripetere <<step2_remove_controller_canister,Fase 2: Rimuovere il contenitore del controller>>, , <<step3_upgrade_hic,Fase 3: Aggiornare l'HIC>>e <<step4_reinstall_controller,Fase 4: Reinstallare il contenitore del controller>> per la seconda centralina.
+
+
+
+
+== Fase 5: Completare l'aggiornamento HIC
+
+Posizionare entrambi i controller online, raccogliere dati di supporto e riprendere le operazioni.
+
+.Fasi
+. Posizionare i controller online.
++
+.. Collegare i cavi di alimentazione.
+
+
+. All'avvio dei controller, controllare i LED del controller.
++
+** Il LED di attenzione di colore ambra rimane acceso.
+** I LED del collegamento host potrebbero essere accesi, lampeggianti o spenti, a seconda dell'interfaccia host.
+
+
+. Quando i controller sono di nuovo online, verificare che il loro stato sia ottimale e controllare i LED di attenzione dello shelf del controller.
++
+Se lo stato non è ottimale o se uno dei LED di attenzione è acceso, verificare che tutti i cavi siano inseriti correttamente e che i contenitori del controller siano installati correttamente. Se necessario, rimuovere e reinstallare i contenitori del controller.
+
++
+
+NOTE: Se non si riesce a risolvere il problema, contattare il supporto tecnico.
+
+. Verificare che tutti i volumi siano stati restituiti al proprietario preferito.
++
+.. Selezionare *archiviazione › volumi*. Dalla pagina *tutti i volumi*, verificare che i volumi siano distribuiti ai proprietari preferiti. Selezionare *Altro › Cambia proprietà* per visualizzare i proprietari di volumi.
+.. Se tutti i volumi sono di proprietà del proprietario preferito, passare alla fase 6.
+.. Se nessuno dei volumi viene restituito, è necessario restituire manualmente i volumi. Vai a *More › redistribuisci volumi*.
+.. Se solo alcuni dei volumi vengono restituiti ai proprietari preferiti dopo la distribuzione automatica o manuale, è necessario controllare il Recovery Guru per verificare la presenza di problemi di connettività host.
+.. Se non è presente un Recovery Guru o se si seguono le fasi del guru del recovery, i volumi non vengono ancora restituiti ai proprietari preferiti, contattare il supporto.
+
+
+. Raccogliere i dati di supporto per lo storage array utilizzando Gestione di sistema di SANtricity.
++
+.. Selezionare *supporto > Support Center > Diagnostica*.
+.. Selezionare *Collect Support Data*.
+.. Fare clic su *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *support-data.7z*.
+
+
+
+
+
+.Quali sono le prossime novità?
+Il processo di aggiornamento di una scheda di interfaccia host nell'array di storage è completo. È possibile riprendere le normali operazioni.

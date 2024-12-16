@@ -11,7 +11,7 @@ summary: È possibile rimuovere il software del sistema operativo in fasi per as
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

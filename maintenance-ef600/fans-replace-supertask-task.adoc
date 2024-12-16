@@ -90,7 +90,7 @@ CAUTION: Per evitare prestazioni degradate, non attorcigliare, piegare, pizzicar
 . Verificare che il LED cache Active (cache attiva) sul retro del controller sia spento.
 . Premere le maniglie su entrambi i lati del controller e tirare indietro fino a quando non si sgancia dallo shelf.
 +
-image::../media/remove_controller_5.png[rimuovere il controller 5]
+image::../media/remove_controller_5.png[Premere le maniglie per rimuovere il controller]
 
 . Utilizzando due mani e le maniglie, estrarre il contenitore del controller dallo scaffale. Quando la parte anteriore del controller è libera dal contenitore, estrarlo completamente con due mani.
 +
@@ -98,7 +98,7 @@ image::../media/remove_controller_5.png[rimuovere il controller 5]
 CAUTION: Utilizzare sempre due mani per sostenere il peso di un contenitore del controller.
 
 +
-image::../media/remove_controller_6.png[rimuovere il controller 6]
+image::../media/remove_controller_6.png[Utilizzare due mani per sostenere il peso del controller durante la rimozione]
 
 . Posizionare il contenitore del controller su una superficie piana e priva di elettricità statica.
 
@@ -117,7 +117,7 @@ Se questo LED verde è acceso, il controller sta ancora utilizzando l'alimentazi
 
 . Sollevare delicatamente la ventola guasta dal controller.
 +
-image::../media/fan_2.png[ventola 2]
+image::../media/fan_2.png[Rimuovere la ventola]
 
 
 
@@ -130,10 +130,10 @@ Installare una nuova ventola per sostituire quella guasta.
 .Fasi
 . Far scorrere la ventola di ricambio fino in fondo nello scaffale.
 +
-image::../media/fan_3.png[ventola 3]
+image::../media/fan_3.png[Montare la ventola nella centralina]
 
 +
-image::../media/fan_3_a.png[ventola 3 a]
+image::../media/fan_3_a.png[Montare la ventola nella centralina]
 
 
 
@@ -151,7 +151,7 @@ Dopo aver installato la nuova ventola, reinstallare il contenitore del controlle
 NOTE: Il controller scatta in maniera udibile quando viene installato correttamente nello shelf.
 
 +
-image::../media/remove_controller_7.png[rimuovere il controller 7]
+image::../media/remove_controller_7.png[Installare il controller nello shelf]
 
 
 

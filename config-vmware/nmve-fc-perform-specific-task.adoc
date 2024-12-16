@@ -98,7 +98,7 @@ esxcfg-module -s "ql2xnvmesupport=1" qlnativefc
 
 La figura mostra un host collegato a un array di storage e-Series in due zone. Una zona è indicata dalla linea blu, mentre l'altra è indicata dalla linea rossa. Ogni zona contiene una porta iniziatore e tutte le porte di destinazione.
 
-image::../media/port_identifiers_host_and_target_conf-vmw.gif[identificatori di porta host e target conf vmw]
+image::../media/port_identifiers_host_and_target_conf-vmw.gif[Identificatori di porte NVMe over Fibre Channel"]
 
 
 

@@ -102,7 +102,7 @@ CAUTION: *Possibile perdita di dati* -- se si continua questa procedura mentre s
 Il LED verde cache Active (cache attiva) sul retro di ciascun controller è acceso quando i dati memorizzati nella cache devono essere scritti sui dischi. Attendere che il LED si spenga.
 
 +
-image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[28 controller dwg 2800 attn led maintt e2800]
+image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[LED cache attiva sul controller E2800]
 
 +
 *(1)* _LED cache attiva_
@@ -134,7 +134,7 @@ CAUTION: Per evitare prestazioni degradate, non attorcigliare, piegare, pizzicar
 Il LED verde cache Active (cache attiva) sul retro del controller è acceso quando i dati memorizzati nella cache devono essere scritti sui dischi. Prima di rimuovere il contenitore del controller, è necessario attendere che questo LED si spenga.
 
 +
-image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[28 controller dwg 2800 attn led maintt e2800]
+image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[LED cache attiva sul controller E2800]
 
 +
 *(1)* _LED cache attiva_
@@ -144,7 +144,7 @@ image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[28 controller dw
 La figura seguente è un esempio di shelf di controller E2812, shelf di controller E2824 o array flash EF280:
 
 +
-image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e2824 rimuovere la manutenzione del contenitore del controller e2800]
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[Rimuovere il contenitore della centralina dal ripiano]
 
 +
 *(1)* _contenitore controller_
@@ -156,7 +156,7 @@ image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e
 La figura seguente è un esempio di shelf di controller E2860:
 
 +
-image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[28 dwg e2860 add controller canister maintt e2800]
+image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif["Rimuovere il contenitore della centralina dal ripiano"]
 
 +
 *(1)* _contenitore controller_
@@ -193,7 +193,7 @@ CAUTION: *Possibile perdita di accesso ai dati* -- non installare mai un HIC in 
 Se questo LED verde è acceso, il controller sta ancora utilizzando l'alimentazione a batteria. Prima di rimuovere qualsiasi componente, è necessario attendere che il LED si spenga.
 
 +
-image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[28 dwg e2800 cache interna active led maintt e2800]
+image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[LED cache interna attiva]
 
 +
 *(1)* _cache interna attiva_
@@ -212,7 +212,7 @@ Fare attenzione a non graffiare o urtare i componenti sul fondo dell'HIC o sulla
 CAUTION: *Possibili danni alle apparecchiature* -- fare molta attenzione a non stringere il connettore a nastro dorato dei LED del controller tra l'HIC e le viti a testa zigrinata.
 
 +
-image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[28 dwg e2800 hic thumbwaves mainten e2800]
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[Montare l'HIC sulla scheda del controller]
 
 +
 *(1)* _scheda di interfaccia host (HIC)_
@@ -226,7 +226,7 @@ Non utilizzare un cacciavite per evitare di serrare eccessivamente le viti.
 
 . Utilizzando un cacciavite Phillips n. 1, fissare la nuova piastra anteriore HIC al contenitore del controller con le quattro viti rimosse in precedenza.
 +
-image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[28 viti hic faceplace dwg e2800 per la manutenzione e2800]
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[Montare la mascherina sul controller]
 
 
 
@@ -243,7 +243,7 @@ Reinstallare il contenitore del controller nello shelf del controller dopo aver 
 La figura seguente è un esempio di shelf di controller E2824 o array flash EF280:
 
 +
-image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e2824 rimuovere la manutenzione del contenitore del controller e2800]
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[Rimontare il filtro a carboni attivi della centralina]
 
 +
 *(1)* _contenitore controller_
@@ -252,7 +252,7 @@ image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e
 *(2)* _maniglia della camma_
 
 +
-La figura seguente è un esempio di shelf di controller E2860: image:../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[""]
+La figura seguente è un esempio di shelf di controller E2860: image:../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif["Rimontare il filtro a carboni attivi della centralina"]
 
 +
 *(1)* _contenitore controller_
@@ -292,7 +292,7 @@ Controllare i LED del controller e il display a sette segmenti, quindi verificar
 NOTE: La figura mostra un esempio di contenitore del controller. Il controller potrebbe avere un numero diverso e un tipo diverso di porte host.
 
 +
-image::../media/28_dwg_attn_led_7s_display_maint-e2800.gif[28 dwg attn led 7s display maintt e2800]
+image::../media/28_dwg_attn_led_7s_display_maint-e2800.gif[E2800 LED del controller]
 
 +
 *(1)* _LED di attenzione (ambra)_

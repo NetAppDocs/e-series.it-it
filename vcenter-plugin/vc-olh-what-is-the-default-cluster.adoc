@@ -10,7 +10,7 @@ summary: 'Il cluster predefinito è un"entità definita dal sistema che consente
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

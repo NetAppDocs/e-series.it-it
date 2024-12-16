@@ -10,7 +10,7 @@ summary: 'La funzione Import Settings (Impostazioni di importazione) è un"opera
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

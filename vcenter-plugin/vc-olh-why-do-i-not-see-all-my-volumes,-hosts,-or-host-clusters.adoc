@@ -10,7 +10,7 @@ summary: 'I volumi Snapshot con un volume di base abilitato da non possono esser
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: Mantenere la protezione contro le perdite di shelf e cassetti per un po
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

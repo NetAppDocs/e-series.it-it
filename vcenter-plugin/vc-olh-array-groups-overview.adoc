@@ -10,7 +10,7 @@ summary: Gestisci la tua infrastruttura fisica e virtualizzata raggruppando un s
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

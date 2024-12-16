@@ -2,7 +2,7 @@
 permalink: config-linux/srp-ib-express-setup-task.html 
 sidebar: sidebar 
 keywords: srp, infiniband, express, setup 
-summary: SRP su InfiniBand Express Setup 
+summary: È possibile utilizzare SRP tramite il protocollo InfiniBand con un host Linux su un sistema e-Series. 
 ---
 = SRP su InfiniBand Express Setup
 :allow-uri-read: 
@@ -10,3 +10,5 @@ summary: SRP su InfiniBand Express Setup
 :imagesdir: ../media/
 
 
+[role="lead"]
+È possibile utilizzare SRP tramite il protocollo InfiniBand con un host Linux su un sistema e-Series.

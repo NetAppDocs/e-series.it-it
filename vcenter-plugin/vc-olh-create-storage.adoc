@@ -11,7 +11,7 @@ summary: Creare lo storage creando prima un carico di lavoro per un tipo di appl
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

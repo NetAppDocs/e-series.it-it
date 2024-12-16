@@ -10,7 +10,7 @@ summary: 'Per eseguire il provisioning dello storage, creare un pool o un gruppo
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

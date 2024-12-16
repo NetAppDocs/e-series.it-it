@@ -22,5 +22,11 @@ summary: Collegare gli alimentatori di ciascun componente a circuiti di alimenta
 La fonte di alimentazione del sistema storage deve essere in grado di soddisfare i requisiti di alimentazione del nuovo shelf di dischi. Per informazioni sul consumo energetico del sistema storage, consultare https://hwu.netapp.com/Controller/Index?platformTypeId=2357027["Hardware Universe"^].
 
 .Fase
+. Collegare un cavo di alimentazione a ciascuna unità di alimentazione del sistema di archiviazione.
 . Collegare i due cavi di alimentazione per ogni shelf a diverse unità di distribuzione dell'alimentazione (PDU) nell'armadio o nel rack.
+. Accendere entrambi gli interruttori di alimentazione.
++
+
+NOTE: I sistemi di archiviazione EF300 e EF600 non sono dotati di interruttori di alimentazione. Si accenderanno non appena i cavi saranno collegati.
+
 

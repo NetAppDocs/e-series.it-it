@@ -11,7 +11,7 @@ summary: Per gestire lo storage con Storage Plugin per vCenter, è necessario in
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

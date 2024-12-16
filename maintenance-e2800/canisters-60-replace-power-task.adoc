@@ -57,7 +57,7 @@ Il file viene salvato nella cartella Download del browser con il nome *support-d
 . Da Gestore di sistema di SANtricity, determinare quale contenitore di alimentazione si è guastato.
 +
 .. Selezionare *hardware*.
-.. Guarda la potenza image:../media/sam1130_ss_hardware_power_icon_maint-e2800.gif[""] A destra degli elenchi a discesa *Shelf* per determinare quale shelf presenta il contenitore di alimentazione guasto.
+.. Osservare l'icona di alimentazione a destra degli elenchi a discesa *ripiano* per determinare quale ripiano presenta il contenitore di alimentazione image:../media/sam1130_ss_hardware_power_icon_maint-e2800.gif["Icona di alimentazione"]guasto.
 +
 In caso di guasto di un componente, questa icona è rossa.
 
@@ -82,7 +82,7 @@ NOTE: È inoltre possibile trovare informazioni sul contenitore di alimentazione
 È necessario sostituire il filtro a carboni attivi con il LED attenzione acceso.
 
 +
-image::../media/28_dwg_e2860_de460c_psu_w_callouts_maint-e2800.gif[28 psu dwg e2860 de460c con callout principale e2800]
+image::../media/28_dwg_e2860_de460c_psu_w_callouts_maint-e2800.gif[LED del filtro a carboni attivi]
 
 +
 *(1)* _LED di alimentazione_. Se è *verde fisso*, il filtro a carboni attivi funziona correttamente. Se è *spento*, il contenitore di alimentazione è guasto, l'interruttore CA è spento, il cavo di alimentazione CA non è installato correttamente o la tensione di ingresso del cavo di alimentazione CA non rientra nei margini (si è verificato un problema all'estremità della fonte del cavo di alimentazione CA).

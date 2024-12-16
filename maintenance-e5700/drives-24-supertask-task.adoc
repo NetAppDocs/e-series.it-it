@@ -70,20 +70,20 @@ Conservare tutti i materiali di imballaggio.
 
 . Premere il pulsante di rilascio sul disco guasto.
 +
-image::../media/drw_drive_latch_maint-e5700.gif[disco drw latch maot e5700]
+image::../media/drw_drive_latch_maint-e5700.gif[Premere il pulsante di rilascio per rimuovere l'unità guasta]
 
 +
 ** Per i dischi negli shelf di controller E5724 o negli shelf di dischi DE224C, il pulsante di rilascio si trova nella parte superiore dell'unità. La maniglia della camma sulle molle del disco si apre parzialmente e il disco si disinnesta dalla scheda intermedia.
 
 
 . Aprire la maniglia della camma ed estrarre leggermente l'unità.
-. Attendere 30 secondi.
+. Attendere 60 secondi.
 . Rimuovere l'unità dallo shelf con entrambe le mani.
 . Posizionare l'unità su una superficie antistatica e imbottita, lontano dai campi magnetici.
-. Attendere 30 secondi affinché il software riconosca che l'unità è stata rimossa.
+. Attendere 60 secondi affinché il software riconosca che l'unità è stata rimossa.
 +
 
-NOTE: Se si rimuove accidentalmente un disco attivo, attendere almeno 30 secondi, quindi reinstallarlo. Per la procedura di ripristino, fare riferimento al software di gestione dello storage.
+NOTE: Se si rimuove accidentalmente un disco attivo, attendere almeno 60 secondi, quindi reinstallarlo. Per la procedura di ripristino, fare riferimento al software di gestione dello storage.
 
 
 
@@ -119,7 +119,7 @@ Quando si inserisce un disco per la prima volta, il LED attenzione potrebbe esse
 
 +
 ** Il LED di alimentazione è acceso o lampeggia e il LED attenzione è spento: Indica che il nuovo disco funziona correttamente.
-** LED di alimentazione spento: Indica che l'unità potrebbe non essere installata correttamente. Rimuovere l'unità, attendere 30 secondi, quindi reinstallarla.
+** LED di alimentazione spento: Indica che l'unità potrebbe non essere installata correttamente. Rimuovere l'unità, attendere 60 secondi, quindi reinstallarla.
 ** LED attenzione acceso: Indica che il nuovo disco potrebbe essere difettoso. Sostituirlo con un altro disco nuovo.
 
 

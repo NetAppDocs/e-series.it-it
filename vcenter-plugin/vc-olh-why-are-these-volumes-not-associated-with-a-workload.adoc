@@ -10,7 +10,7 @@ summary: 'I volumi non sono associati a un carico di lavoro se sono stati creati
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

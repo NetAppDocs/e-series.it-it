@@ -11,7 +11,7 @@ summary: Modificare il nome della cache SSD e visualizzarne lo stato, la capacit
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -70,7 +70,7 @@ Le impostazioni appropriate per la configurazione sono elencate nella colonna No
 
 La figura mostra un host collegato a un array di storage e-Series in due zone. Una zona è indicata dalla linea blu, mentre l'altra è indicata dalla linea rossa. Ogni singola porta ha due percorsi per lo storage (uno per ciascun controller).
 
-image::../media/port_identifiers_host_and_target_conf-win.gif[gli identificatori di porta host e target conf win]
+image::../media/port_identifiers_host_and_target_conf-win.gif[Identificatori di porte Fibre Channel]
 
 
 

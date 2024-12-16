@@ -39,7 +39,7 @@ Verificare che il nuovo controller abbia lo stesso numero di parte del controlle
 . Disimballare il nuovo contenitore del controller e riutilizzarlo su una superficie piana e priva di elettricità statica.
 . Individuare le etichette dell'indirizzo MAC e del numero di parte della FRU sul retro del contenitore del controller.
 +
-image::../media/28_dwg_e2800_labels_maint-e2800.gif[28 etichette dwg e2800 principali e2800]
+image::../media/28_dwg_e2800_labels_maint-e2800.gif[Indirizzo MAC e numero parte FRU sul controller E2800]
 
 +
 *(1)* _MAC address:_ Indirizzo MAC per la porta di gestione 1 ("`P1`"). Se si è utilizzato DHCP per ottenere l'indirizzo IP del controller originale, sarà necessario questo indirizzo per connettersi al nuovo controller.
@@ -50,7 +50,7 @@ image::../media/28_dwg_e2800_labels_maint-e2800.gif[28 etichette dwg e2800 princ
 . Da Gestore di sistema di SANtricity, individuare il numero di parte di ricambio per il contenitore del controller installato.
 +
 .. Selezionare *hardware*.
-.. Individuare lo shelf del controller, contrassegnato dall'icona del controller image:../media/sam1130_ss_hardware_controller_icon_maint-e2800.gif[""].
+.. Individuare il ripiano del controller contrassegnato con l'icona del controller image:../media/sam1130_ss_hardware_controller_icon_maint-e2800.gif["Icona del controller"].
 .. Fare clic sull'icona del controller.
 .. Selezionare il controller e fare clic su *Avanti*.
 .. Nella scheda *base*, annotare il *numero di parte di ricambio* del controller.
@@ -88,7 +88,7 @@ Fare attenzione a non graffiare o urtare i componenti sul fondo dell'HIC o sulla
 CAUTION: *Possibili danni alle apparecchiature* -- fare molta attenzione a non stringere il connettore a nastro dorato dei LED del controller tra l'HIC e le viti a testa zigrinata.
 
 +
-image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[28 dwg e2800 hic thumbwaves mainten e2800]
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[Montare l'HIC sulla centralina]
 
 +
 *(1)* _scheda di interfaccia host_
@@ -102,7 +102,7 @@ Non utilizzare un cacciavite per evitare di serrare eccessivamente le viti.
 
 . Utilizzando un cacciavite Phillips n. 1, fissare la nuova piastra anteriore HIC al contenitore del controller con le quattro viti rimosse in precedenza.
 +
-image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[28 viti hic faceplace dwg e2800 per la manutenzione e2800]
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.gif[Installare la mascherina]
 
 . Reinstallare il coperchio sul contenitore del controller facendo scorrere il coperchio dal retro verso la parte anteriore fino a quando il pulsante non scatta in posizione.
 . Mettere da parte il contenitore del controller fino a quando non si è pronti per installarlo.
@@ -286,7 +286,7 @@ Installare un secondo contenitore del controller per modificare una configurazio
 . Capovolgere il contenitore del controller, in modo che il coperchio rimovibile sia rivolto verso il basso.
 . Con la maniglia della camma in posizione aperta, far scorrere il contenitore del controller fino in fondo nello shelf del controller.
 +
-image::../media/28_dwg_e2824_add_controller_canister.gif[28 dwg e2824 aggiungere il contenitore del controller]
+image::../media/28_dwg_e2824_add_controller_canister.gif[Installare il secondo filtro a carboni attivi della centralina]
 
 +
 *(1)* _contenitore controller_
@@ -312,7 +312,7 @@ Quando la comunicazione con l'altro controller viene ristabilita:
 +
 ** Il display a sette segmenti mostra la sequenza ripetuta *OS*, *OL*, *_blank_* per indicare che il controller è offline.
 ** Il LED di attenzione di colore ambra rimane acceso.
-** I LED del collegamento host potrebbero essere accesi, lampeggianti o spenti, a seconda dell'interfaccia host.image:../media/28_dwg_attn_led_7s_display_maint-e2800.gif[""]
+** I LED del collegamento host potrebbero essere accesi, lampeggianti o spenti, a seconda dell'interfaccia host. image:../media/28_dwg_attn_led_7s_display_maint-e2800.gif["E2800 LED del controller"]
 +
 *(1)* _LED di attenzione (ambra)_
 
@@ -380,7 +380,7 @@ Il pulsante Change Ownership (Cambia proprietà) è attivato.
 
 .. Per ciascun volume che si desidera ridistribuire, selezionare *Controller B* dall'elenco *Preferred Owner* (Proprietario preferito).
 +
-image::../media/sam1130_ss_change_volume_ownership.gif[sam1130 ss cambiare la proprietà del volume]
+image::../media/sam1130_ss_change_volume_ownership.gif[Schermata di System Manager per Change Volume Ownership]
 
 .. Fare clic su *Cambia proprietà*.
 +

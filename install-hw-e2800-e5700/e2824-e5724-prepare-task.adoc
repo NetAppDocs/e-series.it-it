@@ -21,14 +21,14 @@ Scopri come preparare l'installazione di E5724, EF570, EF280, E2812, E2824, Sist
 
 
  a| 
-image:../media/trafford_overview.png[""]
+image:../media/trafford_overview.png["Shelf con dischi installati e pannello frontale"]
  a| 
 Shelf con dischi installati (pannello in confezione separata)
 
 
 
  a| 
-image:../media/superrails_inst-hw-e2800-e5700.png[""]
+image:../media/superrails_inst-hw-e2800-e5700.png["Hardware per il montaggio in rack"]
  a| 
 Hardware per il montaggio in rack
 
@@ -42,7 +42,7 @@ La seguente tabella identifica i tipi di cavi che potrebbero essere ricevuti. Se
 
 
  a| 
-image:../media/cable_ethernet_inst-hw-e2800-e5700.png[""]
+image:../media/cable_ethernet_inst-hw-e2800-e5700.png["Cavi Ethernet"]
  a| 
 Cavi Ethernet
 
@@ -53,7 +53,7 @@ Connessione di gestione
 
 
  a| 
-image:../media/cable_io_inst-hw-e2800-e5700.png[""]
+image:../media/cable_io_inst-hw-e2800-e5700.png["Cavi i/O."]
  a| 
 Cavi i/O.
 
@@ -64,7 +64,7 @@ Cablaggio degli host di dati
 
 
  a| 
-image:../media/cable_power_inst-hw-e2800-e5700.png[""]
+image:../media/cable_power_inst-hw-e2800-e5700.png["Cavi di alimentazione"]
  a| 
 Cavi di alimentazione
 
@@ -75,7 +75,7 @@ Accensione del sistema storage
 
 
  a| 
-image:../media/sas_cable.png[""]
+image:../media/sas_cable.png["Cavi SAS"]
  a| 
 Cavi SAS inclusi solo con gli shelf di dischi
  a| 
@@ -88,28 +88,28 @@ Cavi SAS
 
 
  a| 
-image:../media/screwdriver_inst-hw-e2800-e5700.png[""]
+image:../media/screwdriver_inst-hw-e2800-e5700.png["Cacciavite Phillips n. 2"]
  a| 
 Cacciavite Phillips n. 2
 
 
 
  a| 
-image:../media/flashlight_inst-hw-e2800-e5700.png[""]
+image:../media/flashlight_inst-hw-e2800-e5700.png["Torcia"]
  a| 
 Torcia
 
 
 
  a| 
-image:../media/wrist_strap_inst-hw-e2800-e5700.png[""]
+image:../media/wrist_strap_inst-hw-e2800-e5700.png["Braccialetto ESD"]
  a| 
 Braccialetto ESD
 
 
 
  a| 
-image:../media/2u_rackspace_inst-hw-e2800-e5700.png[""]
+image:../media/2u_rackspace_inst-hw-e2800-e5700.png["2U rack\""]
  a| 
 Spazio rack 2U: Uno standard da 19" Rack da 48.30 cm per rack 2U delle seguenti dimensioni.
 
@@ -126,7 +126,7 @@ Spazio rack 2U: Uno standard da 19" Rack da 48.30 cm per rack 2U delle seguenti 
 
 
  a| 
-image:../media/management_station_inst-hw-e2800-e5700_g60b3.png[""]
+image:../media/management_station_inst-hw-e2800-e5700_g60b3.png["Stazione di gestione con browser supportato per il software di gestione"]
  a| 
 Un browser supportato per il software di gestione:
 

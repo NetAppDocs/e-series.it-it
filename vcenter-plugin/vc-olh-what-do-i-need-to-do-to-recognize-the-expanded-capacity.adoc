@@ -10,7 +10,7 @@ summary: 'Se si aumenta la capacità di un volume, l"host potrebbe non riconosce
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

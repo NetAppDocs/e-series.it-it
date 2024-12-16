@@ -10,7 +10,7 @@ summary: Riportare il certificato di gestione allo stato originale autofirmato.
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

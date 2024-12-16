@@ -1,7 +1,7 @@
 ---
 permalink: upgrade-controllers/complete-upgrade-controllers-task.html 
 sidebar: sidebar 
-keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, vendor ID, upgrade status, upgrade validate 
+keywords: E-Series, eseries, E4000, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, vendor ID, upgrade status, upgrade validate 
 summary: 'Completare l"aggiornamento del controller accendendo lo shelf del controller e convalidando la versione del software del controller. Quindi, è possibile raccogliere i dati di supporto e riprendere le operazioni.' 
 ---
 = Aggiornamento completo del controller
@@ -88,7 +88,7 @@ Tutti i dischi protetti, Gestione delle chiavi esterne, si è temporaneamente to
  a| 
 Tutti i dischi protetti, Gestione delle chiavi esterne, non si è temporaneamente passati alla gestione delle chiavi interne per la procedura di sostituzione del controller
  a| 
-Swap del controller con gestione esterna delle chiavi e protezione di tutti i dischi
+Swap del controller con gestione esterna delle chiavi e tutti i dischi protetti. Vedere https://docs.netapp.com/us-en/e-series/upgrade-controllers/upgrade-unlock-drives-task.html#external-key-management["Gestione esterna delle chiavi"^] per istruzioni dettagliate.
 
 |===
 
@@ -102,10 +102,10 @@ Swap del controller con gestione esterna delle chiavi e protezione di tutti i di
 .Fasi
 . Controllare i LED sul controller A per assicurarsi che sia in fase di avvio corretta.
 +
-I LED host link Service Action Required diventano verdi durante il riavvio. Il display a sette segmenti mostra la sequenza OS+ SD+ vuoto- per indicare che il controller sta eseguendo l'elaborazione SOD (Start-of-day).
+I LED host link Service Action Required diventano verdi durante il riavvio.
 
 +
-Una volta completato correttamente il riavvio del controller, il display a sette segmenti mostra l'ID del vassoio corrispondente al display a sette segmenti sul secondo controller. È quindi possibile scoprire il nuovo contenitore del controller utilizzando il software di gestione dello storage.
+Una volta riavviato il controller, è possibile rilevare il nuovo contenitore del controller utilizzando il software di gestione dello storage.
 
 . Se uno dei LED Service Action Required (azione di servizio richiesta) del vassoio del disco del controller è _ON_, o se il LED Controller Service Action Required (azione di servizio del controller richiesta) è _ON_:
 +
@@ -124,12 +124,6 @@ Una volta completato correttamente il riavvio del controller, il display a sette
 È necessario assicurarsi che i nuovi controller siano in esecuzione con IL sistema operativo (firmware del controller) corretto e CON NVSRAM.
 
 .Fasi
-. Effettuare una delle seguenti operazioni:
-+
-** Se si esegue l'aggiornamento a controller che non supportano SANtricity 11.30 e il firmware del controller 8.30, assicurarsi che la versione in esecuzione sui nuovi controller corrisponda alla versione eseguita per ultima sui controller originali. Normalmente, questa sarà la versione più recente supportata dai vecchi controller. Se necessario, installare la versione appropriata sui nuovi controller.
-** Se si esegue l'aggiornamento ai controller che eseguono SANtricity 11.30 e il firmware del controller 8.30, scaricare e installare L'ULTIMA VERSIONE DI NVSRAM dopo l'accensione dei nuovi controller.
-
-
 . Se l'aggiornamento del controller comporta una modifica del protocollo (ad esempio, da Fibre Channel a iSCSI) e si dispone già di host definiti per lo storage array, associare le nuove porte host agli host:
 +
 .. Da System Manager, selezionare menu:Storage[Hosts] (Storage[host]).
@@ -156,7 +150,7 @@ Per informazioni sull'hardware compatibile, fare riferimento a. https://mysuppor
 +
 Viene visualizzata la finestra di dialogo Change cache Setting (Modifica impostazioni cache). In questa finestra di dialogo vengono visualizzati tutti i volumi dell'array di storage.
 
-.. Selezionare la scheda *Basic* e modificare le impostazioni per il caching in lettura e il caching in scrittura.
+.. Selezionare la scheda *Basic* e abilitare le impostazioni per la memorizzazione nella cache in lettura e in scrittura.
 .. Fare clic su *Save* (Salva).
 
 
@@ -168,10 +162,9 @@ Viene visualizzata la finestra di dialogo Change cache Setting (Modifica imposta
 
 . Raccogliere i dati di supporto relativi allo storage array utilizzando la GUI o la CLI:
 +
-** Utilizzare System Manager o Array Management Window di Storage Manager per raccogliere e salvare un bundle di supporto per lo storage array.
+** Utilizza System Manager per raccogliere e salvare un bundle di supporto dello storage array.
 +
 *** Da System Manager, selezionare menu:Support[Support Center > scheda Diagnostics]. Quindi selezionare *Collect Support Data* e fare clic su *Collect*.
-*** Dalla barra degli strumenti della finestra Array Management (Gestione array), selezionare menu:Monitor[Health > Collect Support Data Manually] (Monitor[Salute > Collect Support Data Manually]). Quindi, immettere un nome e specificare una posizione nel sistema in cui si desidera memorizzare il bundle di supporto.
 +
 Il file viene salvato nella cartella Download del browser con il nome `support-data.7z`.
 
@@ -205,4 +198,4 @@ NOTE: La raccolta dei dati di supporto può influire temporaneamente sulle perfo
 
 
 .Quali sono le prossime novità?
-Se l'aggiornamento del controller comporta la modifica dell'ID vendor da LSI a NETAPP, visitare il sito Web link:remount-volumes-lsi-task.html["Rimontare i volumi dopo aver cambiato il vendor da LSI a NETAPP"]; in caso contrario, l'aggiornamento del controller è completo ed è possibile riprendere le normali operazioni.
+L'aggiornamento del controller è completo e puoi riprendere le normali operazioni.

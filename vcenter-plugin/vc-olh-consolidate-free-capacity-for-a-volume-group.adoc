@@ -11,7 +11,7 @@ summary: 'Utilizzare l"opzione consolida capacità libera per consolidare le est
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -11,7 +11,7 @@ summary: Importa configurazioni di avviso da uno storage array ad altri storage 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -1,0 +1,148 @@
+---
+permalink: install-hw-e4000/prepare-installation.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Preparazione per l'installazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Devi preparare il tuo sito in modo da soddisfare le specifiche del sistema storage della serie E4000.
+
+.Fasi
+. Creare un account e registrare l'hardware all'indirizzo http://mysupport.netapp.com/["Supporto NetApp"^].
+. Assicurarsi che nella confezione ricevuta siano presenti i seguenti elementi:
++
+[role="tabbed-block"]
+====
+.E4012
+--
+Shelf con dischi installati (pannello in confezione separata)::
++
+--
+image:../media/trafford_overview.png["Shelf con dischi installati"]
+
+--
+Hardware per il montaggio in rack::
++
+--
+image:../media/superrails_inst-hw-e2800-e5700.png["Hardware per il montaggio in rack"]
+
+--
+Cavi Ethernet per la connessione di gestione (se ordinati)::
++
+--
+image:../media/cable_ethernet_inst-hw-e2800-e5700.png["Cavi Ethernet per la gestione delle connessioni"]
+
+--
+Cavi di i/o per il cablaggio degli host dati::
++
+--
+image:../media/cable_io_inst-hw-e2800-e5700.png["Cavi di i/o per il cablaggio degli host dati"]
+
+--
+Cavi di alimentazione::
++
+--
+image:../media/cable_power_inst-hw-e2800-e5700.png["Cavi di alimentazione"]
+
+--
+Cavi SAS::
++
+--
+image:../media/sas_cable.png["Cavi SAS"]
+
+--
+
+
+--
+.E4060
+--
+Shelf, pannello frontale e hardware per il montaggio in rack::
++
+--
+image:../media/trafford_overview.png["Shelf, pannello frontale e hardware per il montaggio in rack"]
+
+--
+Quattro maniglie a mensola x4:: image:../media/handles_counted.png["Quattro maniglie per ripiani"]
+Cavi Ethernet per la connessione di gestione (se ordinati)::
++
+--
+image:../media/cable_ethernet_inst-hw-e2800-e5700.png["Cavi Ethernet per la gestione delle connessioni"]
+
+--
+Cavi di i/o per il cablaggio degli host dati::
++
+--
+image:../media/cable_io_inst-hw-e2800-e5700.png["Cavi di i/o per il cablaggio degli host dati"]
+
+--
+Cavi di alimentazione::
++
+--
+image:../media/cable_power_inst-hw-e2800-e5700.png["Cavi di alimentazione"]
+
+--
+Cavi SAS::
++
+--
+image:../media/sas_cable.png["Cavi SAS"]
+
+--
+
+
+--
+====
+. Procurarsi gli elementi aggiuntivi necessari per l'installazione:
++
+** Un cacciavite philips n. 2
+** Una torcia
+** Un braccialetto antistatico
+** Un cabinet o un rack può essere montato su ripiani delle seguenti dimensioni:
++
+[role="tabbed-block"]
+====
+.E4012
+--
+*Profondità*: 53,59 cm (21,1")
+
+*Larghezza*: 44,8 mm (17,64 poll.)
+
+*Altezza*: 8,64 cm (3,4 poll.)
+
+*Peso massimo*: 29.6 kg (65.25 lb)
+
+--
+.E4060
+--
+*Profondità*: 92,2 cm (36,3 poll.)
+
+*Larghezza*: 44,8 cm (17,64 poll.)
+
+*Altezza*: 17,78 cm (7,0 poll.)
+
+*Peso massimo*: 114.91 kg (253.33 lb)
+
+--
+====
+** Una posizione che fornisce la corretta tensione di alimentazione CA:
++
+*** E4012: Da 120 a 240 V CA
+*** E4060: 240 V CA
+
+
+** Un browser supportato per il software di gestione:
++
+*** Google Chrome (versione 89 e successive)
+*** Microsoft Edge (versione 90 e successive)
+*** Mozilla Firefox (versione 80 e successive)
+*** Safari (versione 14 e successive)
+
+
+
+
+

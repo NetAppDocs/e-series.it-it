@@ -11,7 +11,7 @@ summary: È possibile individuare le unità per identificare fisicamente tutte l
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

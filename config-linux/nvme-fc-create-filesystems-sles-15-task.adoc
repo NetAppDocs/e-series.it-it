@@ -7,7 +7,7 @@ summary: Per RHEL 8 e SLES 15, si crea un file system sul dispositivo nvme nativ
 = Creazione di file system (RHEL 8, RHEL 9, SLES 15)
 :allow-uri-read: 
 :icons: font
-:imagesdir: ../media
+:imagesdir: ../media/
 
 
 [role="lead"]

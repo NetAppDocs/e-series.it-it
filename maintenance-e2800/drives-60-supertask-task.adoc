@@ -96,7 +96,7 @@ serviceAllowedIndicator=forceOnWarning;"
 ** Se il comando ha esito positivo, non è necessario interrompere l'attività di i/o dell'host. Tutti i dischi nel cassetto sono in pool o gruppi di volumi con protezione perdita cassetto. Passare a. <<Fase 2: Rimuovere le catene di cavi>>.
 +
 
-CAUTION: *Possibili danni ai dischi* -- attendere 30 secondi dopo il completamento del comando prima di aprire il cassetto del disco. L'attesa di 30 secondi consente lo spin down dei dischi, evitando possibili danni all'hardware.
+CAUTION: *Possibili danni ai dischi* -- attendere 60 secondi dopo il completamento del comando prima di aprire il cassetto del disco. L'attesa di 60 secondi consente lo spin down dei dischi, evitando possibili danni all'hardware.
 
 ** Se viene visualizzato un avviso che indica che non è stato possibile completare questo comando, è necessario interrompere l'attività di i/o dell'host prima di rimuovere il cassetto. L'avviso viene visualizzato perché uno o più dischi nel cassetto interessato sono in pool o gruppi di volumi senza protezione perdita cassetto. Per evitare la perdita di dati, è necessario completare i passaggi successivi per interrompere l'attività di i/o dell'host e spegnere lo shelf di dischi e lo shelf di controller.
 
@@ -122,7 +122,7 @@ CAUTION: *Possibile perdita di dati* -- se si continua questa procedura mentre s
 Il LED verde cache Active (cache attiva) sul retro di ciascun controller è acceso quando i dati memorizzati nella cache devono essere scritti sui dischi. Attendere che il LED si spenga.
 
 +
-image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[28 controller dwg 2800 attn led maintt e2800]
+image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[LED cache attiva sul controller E2800]
 
 +
 *(1)* _LED cache attiva_
@@ -177,7 +177,7 @@ CAUTION: *Possibili danni all'hardware* -- se il vassoio dell'unità è acceso, 
 La figura mostra la maniglia del filtro a carboni attivi della ventola estesa e rilasciata dalla linguetta arancione a sinistra.
 
 +
-image::../media/28_dwg_e2860_de460c_fan_canister_handle_with_callout_maint-e2800.gif[28 dwg e2860 de460c maniglia del contenitore della ventola con didascalia principale e2800]
+image::../media/28_dwg_e2860_de460c_fan_canister_handle_with_callout_maint-e2800.gif[Maniglia del filtro della ventola]
 
 +
 *(1)* _maniglia del filtro della ventola_
@@ -198,7 +198,7 @@ CAUTION: *Possibili danni all'apparecchiatura dovuti al surriscaldamento* -- se 
 La catena di cavi superiore è collegata al cassetto dell'unità 1. La catena dei cavi inferiore è collegata al cassetto dell'unità 5. Vengono fornite le didascalie per il cassetto unità 1.
 
 +
-image::../media/trafford_cable_rail_1_maint-e2800.gif[cavo binario trafford 1 principale e2800]
+image::../media/trafford_cable_rail_1_maint-e2800.gif[Catena portacavi e connettori per il cassetto di azionamento]
 
 +
 *(1)* _catena di cavi_
@@ -216,7 +216,7 @@ image::../media/trafford_cable_rail_1_maint-e2800.gif[cavo binario trafford 1 pr
 +
 .. Utilizzando una torcia, individuare l'anello arancione all'estremità della catena di cavi collegata alla guida verticale del contenitore.
 +
-image::../media/trafford_cable_rail_3_maint-e2800.gif[cavo binario trafford 3 principale e2800]
+image::../media/trafford_cable_rail_3_maint-e2800.gif[Anello arancione per guida verticale e catena portacavi per cassetto di azionamento]
 
 +
 *(1)* _anello arancione su guida verticale_
@@ -235,7 +235,7 @@ image::../media/trafford_cable_rail_3_maint-e2800.gif[cavo binario trafford 3 pr
 La figura mostra il connettore orizzontale a destra e la catena dei cavi scollegata e parzialmente estratta sul lato sinistro.
 
 +
-image::../media/trafford_cable_rail_2_maint-e2800.gif[cavo binario trafford 2 principale e2800]
+image::../media/trafford_cable_rail_2_maint-e2800.gif[Anello arancione per guida orizzontale e catena portacavi per cassetto di azionamento]
 
 +
 *(1)* _anello arancione sulla guida orizzontale_
@@ -312,7 +312,7 @@ CAUTION: *Possibile perdita di accesso ai dati* -- i campi magnetici possono dis
 . Utilizzando le leve estese, estrarre con cautela il cassetto dell'unità fino a quando non si arresta. Non rimuovere completamente il cassetto dal ripiano del disco.
 . Se i volumi sono già stati creati e assegnati, utilizzare un indicatore permanente per annotare la posizione esatta di ciascun disco. Ad esempio, utilizzando il seguente disegno come riferimento, scrivere il numero di slot appropriato sulla parte superiore di ciascun disco.
 +
-image::../media/dwg_trafford_drawer_with_hdds_callouts_maint-e2800.gif[cassetto dwg trafford con didascalie hdd principale e2800]
+image::../media/dwg_trafford_drawer_with_hdds_callouts_maint-e2800.gif[Numeri degli slot delle unità]
 
 +
 
@@ -324,7 +324,7 @@ CAUTION: **Possibile perdita di accesso ai dati** -- assicurarsi di registrare l
 .. Sollevare la maniglia dell'unità in verticale.
 .. Utilizzare la maniglia per sollevare l'unità dal cassetto dell'unità.
 +
-image::../media/92_dwg_de6600_install_or_remove_drive_maint-e2800.gif[92 dwg de6600 installare o rimuovere il disco principale e2800]
+image::../media/92_dwg_de6600_install_or_remove_drive_maint-e2800.gif[Utilizzare la maniglia della camma per sollevare l'unità dal cassetto]
 
 .. Posizionare l'unità su una superficie piana, priva di scariche elettrostatiche e lontano da dispositivi magnetici.
 
@@ -333,7 +333,7 @@ image::../media/92_dwg_de6600_install_or_remove_drive_maint-e2800.gif[92 dwg de6
 +
 .. Individuare la leva di rilascio in plastica su ciascun lato del cassetto dell'unità.
 +
-image::../media/92_pht_de6600_drive_drawer_release_lever_maint-e2800.gif[92 pht de6600 drive drawer release lever maintt e2800]
+image::../media/92_pht_de6600_drive_drawer_release_lever_maint-e2800.gif[Rilasciare la leva per rimuovere il cassetto]
 
 +
 *(1)* _leva di rilascio cassetto unità_
@@ -357,7 +357,7 @@ Installare un nuovo cassetto per sostituire quello guasto.
 Il gruppo di blocco è una funzione di sicurezza che impedisce l'apertura di più cassetti per disco alla volta.
 
 +
-image::../media/92_pht_de6600_lock_out_tumbler_detail_maint-e2800.gif[92 pht de6600 lock out tumbler detail maot e2800]
+image::../media/92_pht_de6600_lock_out_tumbler_detail_maint-e2800.gif[Serratura e guida del cassetto]
 
 +
 *(1)* _Tumbler Lock-out_
@@ -419,7 +419,7 @@ CAUTION: *Rischio di malfunzionamento dell'apparecchiatura* -- assicurarsi di fa
 La figura mostra le guide orizzontali e verticali per il secondo cassetto del disco nel contenitore.
 
 +
-image::../media/2860_dwg_both_guide_rails_maint-e2800.gif[2860 dwg entrambe le guide principali e2800]
+image::../media/2860_dwg_both_guide_rails_maint-e2800.gif[Guide orizzontali e verticali]
 
 +
 *(1)* _guida orizzontale_
@@ -491,7 +491,7 @@ CAUTION: *Possibile perdita di accesso ai dati* -- è necessario installare cias
 .. Utilizzando le leve estese, estrarre con cautela il cassetto dell'unità fino a quando non si arresta. Non rimuovere completamente il cassetto dal ripiano del disco.
 .. Determinare il disco da installare in ogni slot utilizzando le note create durante la rimozione dei dischi.
 +
-image::../media/dwg_trafford_drawer_with_hdds_callouts_maint-e2800.gif[cassetto dwg trafford con didascalie hdd principale e2800]
+image::../media/dwg_trafford_drawer_with_hdds_callouts_maint-e2800.gif[Numeri degli slot delle unità]
 
 .. Sollevare la maniglia dell'unità in verticale.
 .. Allineare i due pulsanti rialzati su ciascun lato dell'unità con le tacche del cassetto.
@@ -499,14 +499,14 @@ image::../media/dwg_trafford_drawer_with_hdds_callouts_maint-e2800.gif[cassetto 
 La figura mostra la vista laterale destra di un'unità, che mostra la posizione dei pulsanti sollevati.
 
 +
-image::../media/28_dwg_e2860_de460c_drive_cru_maint-e2800.gif[28 dwg e2860 de460c disco cru mainting e2800]
+image::../media/28_dwg_e2860_de460c_drive_cru_maint-e2800.gif[Il pulsante sollevato sul supporto dell'unità deve corrispondere al canale dell'unità sul cassetto dell'unità]
 
 +
 *(1)* _pulsante sollevato sul lato destro del disco_
 
 .. Abbassare l'unità, accertandosi che sia premuta fino in fondo nell'alloggiamento, quindi ruotare la maniglia dell'unità verso il basso fino a farla scattare in posizione.
 +
-image::../media/92_dwg_de6600_install_or_remove_drive_maint-e2800.gif[92 dwg de6600 installare o rimuovere il disco principale e2800]
+image::../media/92_dwg_de6600_install_or_remove_drive_maint-e2800.gif[Utilizzare la maniglia per abbassare l'unità sul cassetto]
 
 .. Ripetere questa procedura per installare tutti i dischi.
 

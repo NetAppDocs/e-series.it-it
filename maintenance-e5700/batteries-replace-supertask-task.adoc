@@ -127,7 +127,7 @@ CAUTION: Per evitare prestazioni degradate, non attorcigliare, piegare, pizzicar
 La figura seguente è un esempio di shelf di controller E5724:
 
 +
-image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e2824 rimuovere la manutenzione del contenitore del controller e5700]
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[Rimuovere il contenitore del controller]
 
 +
 *(1)* _contenitore controller_
@@ -139,7 +139,7 @@ image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e
 La figura seguente è un esempio di shelf di controller E5760:
 
 +
-image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[28 dwg e2860 add controller canister maintt e5700]
+image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[Rimuovere il contenitore del controller]
 
 +
 *(1)* _contenitore controller_
@@ -172,7 +172,7 @@ Dopo aver rimosso il contenitore del controller dallo shelf del controller, rimu
 Se questo LED verde è acceso, il controller sta ancora utilizzando l'alimentazione a batteria. Prima di rimuovere qualsiasi componente, è necessario attendere che il LED si spenga.
 
 +
-image::../media/28_dwg_e2800_internal_cache_active_led_maint-e5700.gif[28 dwg e2800 cache interna active led maintent e5700]
+image::../media/28_dwg_e2800_internal_cache_active_led_maint-e5700.gif[LED cache interna attiva]
 
 +
 *(1)* _LED cache interna attiva_
@@ -183,7 +183,7 @@ image::../media/28_dwg_e2800_internal_cache_active_led_maint-e5700.gif[28 dwg e2
 . Individuare il dispositivo di chiusura blu della batteria.
 . Sbloccare la batteria spingendo il dispositivo di chiusura verso il basso e lontano dal contenitore del controller.
 +
-image::../media/28_dwg_e2800_remove_battery_maint-e5700.gif[28 dwg e2800 rimuovere la batteria principale e5700]
+image::../media/28_dwg_e2800_remove_battery_maint-e5700.gif[Rimuovere la batteria]
 
 +
 *(1)* _dispositivo di chiusura a scatto della batteria_
@@ -221,7 +221,7 @@ Inserire la flangia metallica nella parte anteriore della batteria nello slot su
 Quando il dispositivo di chiusura scatta in posizione, la parte inferiore del dispositivo di chiusura si aggancia in uno slot metallico sul telaio.
 
 +
-image::../media/28_dwg_e2800_insert_battery_maint-e5700.gif[28 dwg e2800 inserire la manutenzione della batteria e5700]
+image::../media/28_dwg_e2800_insert_battery_maint-e5700.gif[Installare la batteria]
 
 +
 *(1)* _dispositivo di chiusura a scatto della batteria_
@@ -237,11 +237,11 @@ CAUTION: *Possibili danni all'hardware* -- la flangia metallica sulla parte ante
 +
 ** *Corretto* -- la flangia metallica della batteria è completamente inserita nello slot del controller:
 +
-image:../media/28_dwg_e2800_battery_flange_ok_maint-e5700.gif[""]
+image:../media/28_dwg_e2800_battery_flange_ok_maint-e5700.gif["Flangia della batteria corretta"]
 
 ** *Errato* -- la flangia metallica della batteria non è inserita nello slot del controller:
 +
-image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e5700.gif[""]
+image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e5700.gif["Flangia della batteria non corretta"]
 
 
 
@@ -258,7 +258,7 @@ Dopo aver installato la nuova batteria, reinstallare il contenitore del controll
 . Capovolgere il contenitore del controller, in modo che il coperchio rimovibile sia rivolto verso il basso.
 . Con la maniglia della camma in posizione aperta, far scorrere il contenitore del controller fino in fondo nello shelf del controller.
 +
-image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e2824 rimuovere la manutenzione del contenitore del controller e5700]
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[Rimontare il contenitore della centralina]
 
 +
 *(1)* _contenitore controller_
@@ -267,7 +267,7 @@ image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e
 *(2)* _maniglia della camma_
 
 +
-image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[28 dwg e2860 add controller canister maintt e5700]
+image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[Rimontare il contenitore della centralina]
 
 +
 *(1)* _contenitore controller_
@@ -300,7 +300,7 @@ Quando la comunicazione con l'altro controller viene ristabilita:
 +
 ** Il display a sette segmenti mostra la sequenza ripetuta *OS*, *OL*, *_blank_* per indicare che il controller è offline.
 ** Il LED di attenzione di colore ambra rimane acceso.
-** I LED del collegamento host potrebbero essere accesi, lampeggianti o spenti, a seconda dell'interfaccia host.image:../media/e5700_hic_3_callouts_maint-e5700.gif[""]
+** I LED del collegamento host potrebbero essere accesi, lampeggianti o spenti, a seconda dell'interfaccia host. image:../media/e5700_hic_3_callouts_maint-e5700.gif["E5700 LED del controller"]
 +
 *(1)* _LED collegamento host_
 

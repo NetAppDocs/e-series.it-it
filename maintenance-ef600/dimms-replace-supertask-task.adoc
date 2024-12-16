@@ -111,7 +111,7 @@ CAUTION: Per evitare prestazioni degradate, non attorcigliare, piegare, pizzicar
 . Verificare che il LED cache Active (cache attiva) sul retro del controller sia spento.
 . Premere le maniglie su entrambi i lati del controller e tirare indietro fino a quando non si sgancia dallo shelf.
 +
-image::../media/remove_controller_5.png[rimuovere il controller 5]
+image::../media/remove_controller_5.png[Premere le maniglie per rimuovere il controller]
 
 . Utilizzando due mani e le maniglie, estrarre il contenitore del controller dallo scaffale. Quando la parte anteriore del controller è libera dal contenitore, estrarlo completamente con due mani.
 +
@@ -119,7 +119,7 @@ image::../media/remove_controller_5.png[rimuovere il controller 5]
 CAUTION: Utilizzare sempre due mani per sostenere il peso di un contenitore del controller.
 
 +
-image::../media/remove_controller_6.png[rimuovere il controller 6]
+image::../media/remove_controller_6.png[Utilizzare due mani per sostenere il peso del controller durante la rimozione]
 
 . Posizionare il contenitore del controller su una superficie piana e priva di elettricità statica.
 
@@ -144,10 +144,10 @@ NOTE: Una tacca nella parte inferiore del DIMM consente di allineare il DIMM dur
 
 . Spingere lentamente verso l'esterno le due linguette di espulsione dei moduli DIMM su entrambi i lati del modulo DIMM per estrarlo dal relativo slot, quindi farlo scorrere verso l'esterno.
 +
-image::../media/dimm_2.png[dimm 2]
+image::../media/dimm_2.png[Premere la linguetta dell'estrattore verso il basso sull'alloggiamento DIMM]
 
 +
-image::../media/dimim_3.png[dimim 3]
+image::../media/dimim_3.png[Rimuovere la scheda DIMM]
 
 +
 
@@ -183,7 +183,7 @@ NOTE: Esaminare visivamente il DIMM per verificare che sia allineato in modo uni
 NOTE: I DIMM si inseriscono saldamente. Potrebbe essere necessario premere delicatamente su un lato alla volta e fissare ciascuna linguetta singolarmente.
 
 +
-image::../media/dimm_5.png[dimm 5]
+image::../media/dimm_5.png[Inserire i moduli DIMM nello slot e fissarli con le linguette]
 
 
 
@@ -201,7 +201,7 @@ Dopo aver installato i nuovi DIMM, reinstallare il contenitore del controller ne
 NOTE: Il controller scatta in maniera udibile quando viene installato correttamente nello shelf.
 
 +
-image::../media/remove_controller_7.png[rimuovere il controller 7]
+image::../media/remove_controller_7.png[Installare il DIMM nell'alloggiamento del controller]
 
 . Ricollegare tutti i cavi.
 

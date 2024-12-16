@@ -94,7 +94,7 @@ CAUTION: Per evitare prestazioni degradate, non attorcigliare, piegare, pizzicar
 . Verificare che il LED cache Active (cache attiva) sul retro del controller sia spento.
 . Premere le maniglie su entrambi i lati del controller e tirare indietro fino a quando non si sgancia dallo shelf.
 +
-image::../media/remove_controller_5.png[rimuovere il controller 5]
+image::../media/remove_controller_5.png[Premere le maniglie per rimuovere il controller]
 
 . Utilizzando due mani e le maniglie, estrarre il contenitore del controller dallo scaffale. Quando la parte anteriore del controller è libera dal contenitore, estrarlo completamente con due mani.
 +
@@ -102,7 +102,7 @@ image::../media/remove_controller_5.png[rimuovere il controller 5]
 CAUTION: Utilizzare sempre due mani per sostenere il peso di un contenitore del controller.
 
 +
-image::../media/remove_controller_6.png[rimuovere il controller 6]
+image::../media/remove_controller_6.png[Utilizzare due mani per sostenere il peso del controller durante la rimozione]
 
 . Posizionare il contenitore del controller su una superficie piana e priva di elettricità statica.
 
@@ -122,15 +122,15 @@ Se questo LED verde è acceso, il controller sta ancora utilizzando l'alimentazi
 . Individuare la scheda 'PRESS' sul lato del controller.
 . Sganciare la batteria premendo la linguetta e premendo l'alloggiamento della batteria.
 +
-image::../media/batt_3.png[batt 3]
+image::../media/batt_3.png["Premere la linguetta per sbloccare la batteria]
 
 . Premere delicatamente il connettore che ospita il cablaggio della batteria. Tirare verso l'alto, scollegando la batteria dalla scheda.
 +
-image::../media/batt_2.png[batt 2]
+image::../media/batt_2.png[Rimuovere il connettore che ospita il cablaggio della batteria]
 
 . Estrarre la batteria dal controller e posizionarla su una superficie piana e priva di scariche elettrostatiche.
 +
-image::../media/batt_4.png[batt 4]
+image::../media/batt_4.png[Estrarre la batteria dalla centralina]
 
 . Seguire le procedure appropriate per il riciclaggio o lo smaltimento della batteria guasta.
 +
@@ -153,7 +153,7 @@ NOTE: Per rispettare le normative IATA in materia di sicurezza, le batterie sost
 
 . Inserire la batteria nel controller allineando l'alloggiamento della batteria con i fermi metallici sul lato del controller.
 +
-image::../media/batt_5.png[batt 5]
+image::../media/batt_5.png[Inserire la batteria]
 
 +
 La batteria scatta in posizione.
@@ -175,7 +175,7 @@ Reinstallare il controller nello shelf del controller.
 NOTE: Il controller scatta in maniera udibile quando viene installato correttamente nello shelf.
 
 +
-image::../media/remove_controller_7.png[rimuovere il controller 7]
+image::../media/remove_controller_7.png[Installare il controller nel ripiano]
 
 
 

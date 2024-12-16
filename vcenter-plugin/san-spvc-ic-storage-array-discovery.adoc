@@ -10,7 +10,7 @@ summary: 'Utilizzare l"interfaccia Plugin per vCenter per rilevare gli indirizzi
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

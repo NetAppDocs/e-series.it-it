@@ -6,7 +6,12 @@ summary: Report tecnici e-Series
 ---
 = Sfoglia i report tecnici sulla sicurezza
 :allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
 
+
+[role="lead"]
+Consulta i link sottostanti per accedere ai report tecnici sulla sicurezza relativi all'hardware e al software SANtricity e-Series. I collegamenti consentono di accedere a un altro sito di documentazione.
 
 
 

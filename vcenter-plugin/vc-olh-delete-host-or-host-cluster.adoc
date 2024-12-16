@@ -11,7 +11,7 @@ summary: È possibile rimuovere un host o un cluster di host in modo che i volum
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

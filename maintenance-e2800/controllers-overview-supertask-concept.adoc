@@ -36,9 +36,9 @@ NOTE: Queste procedure si riferiscono a sostituzioni o sostituzioni IOM simili a
 
 Le figure mostrano un esempio di shelf di controller prima di aggiungere un secondo controller (un contenitore di controller e un bianco di controller) e dopo aver aggiunto un secondo controller (due contenitori di controller).
 
-image::../media/28_dwg_2800_controller_simplex.gif[28 dwg 2800 controller simplex]
+image::../media/28_dwg_2800_controller_simplex.gif[E2800 Configurazione simplex]
 
-image::../media/28_dwg_2800_controller_duplex.gif[28 dwg 2800 controller duplex]
+image::../media/28_dwg_2800_controller_duplex.gif[E2800 Configurazione duplex]
 
 
 NOTE: Le figure mostrano esempi di canister dei controller; le porte host sui canister dei controller potrebbero essere diverse.
@@ -91,7 +91,7 @@ NOTE: Il LED di attenzione color ambra del controller si spegne ogni volta che s
 ====
 
 
-image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[28 controller dwg 2800 attn led maintt e2800]
+image::../media/28_dwg_2800_controller_attn_led_maint-e2800.gif[E2800 LED di attenzione]
 
 *(1)* _LED attenzione_
 

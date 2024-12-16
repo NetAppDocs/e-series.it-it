@@ -11,7 +11,7 @@ summary: È possibile rimuovere i dischi per ridurre la capacità di un pool o d
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

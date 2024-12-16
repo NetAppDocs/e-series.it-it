@@ -11,7 +11,7 @@ summary: È possibile scegliere di attivare il file software in un momento più 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

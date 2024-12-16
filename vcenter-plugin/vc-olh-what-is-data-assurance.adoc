@@ -10,7 +10,7 @@ summary: 'Data Assurance (da) implementa lo standard T10 Protection Information 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

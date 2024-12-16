@@ -11,7 +11,7 @@ summary: È possibile modificare il nome, il tipo di sistema operativo host e i 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -27,7 +27,7 @@ Assicurarsi di effettuare le seguenti operazioni:
 
 
  a| 
-image:../media/power_cable_inst-hw-ef600.png[""]
+image:../media/power_cable_inst-hw-ef600.png["Cavi di alimentazione"]
  a| 
 *Cavi di alimentazione*
 
@@ -37,7 +37,7 @@ image:../media/power_cable_inst-hw-ef600.png[""]
 
 
  a| 
-image:../media/cabling_power.png[""]
+image:../media/cabling_power.png["Cablaggio di alimentazione EF600/EF300"]
 
 |===
 . Collegare i due cavi di alimentazione, uno per ciascun controller, a due unità di distribuzione dell'alimentazione (PDU) separate nell'armadio o nel rack.

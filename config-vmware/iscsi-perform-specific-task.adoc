@@ -53,12 +53,12 @@ Se si utilizzano frame jumbo all'interno della SAN IP per motivi di performance,
 
 
 .A proposito di questa attività
-Durante la pianificazione della rete iSCSI, tenere presente che https://configmax.vmware.com/home["Massimi di configurazione VMware"^] La guida indica che il numero massimo di percorsi di storage iSCSI supportati è 8. È necessario considerare questo requisito per evitare di configurare troppi percorsi.
+Durante la pianificazione della rete iSCSI, tenere presente che la https://configmax.broadcom.com/home["Massimi di configurazione VMware"^] guida indica che il numero massimo di percorsi di archiviazione iSCSI supportati è 8. È necessario considerare questo requisito per evitare di configurare troppi percorsi.
 
 Per impostazione predefinita, l'iniziatore software iSCSI VMware crea una singola sessione per target iSCSI quando non si utilizza il binding della porta iSCSI.
 
 
-NOTE: VMware iSCSI port binding è una funzionalità che obbliga tutte le porte VMkernel associate ad accedere a tutte le porte di destinazione accessibili sui segmenti di rete configurati. Deve essere utilizzato con array che presentano un singolo indirizzo di rete per la destinazione iSCSI. NetApp consiglia di non utilizzare il binding della porta iSCSI. Per ulteriori informazioni, consultare http://kb.vmware.com/["Knowledge base VMware"] Per l'articolo relativo alle considerazioni sull'utilizzo del binding della porta iSCSI software in ESX/ESXi. Se l'host ESXi è collegato allo storage di un altro vendor, NetApp consiglia di utilizzare porte vmkernel iSCSI separate per evitare qualsiasi conflitto con il binding delle porte.
+NOTE: VMware iSCSI port binding è una funzionalità che obbliga tutte le porte VMkernel associate ad accedere a tutte le porte di destinazione accessibili sui segmenti di rete configurati. Deve essere utilizzato con array che presentano un singolo indirizzo di rete per la destinazione iSCSI. NetApp consiglia di non utilizzare il binding della porta iSCSI. Per ulteriori informazioni, consultare l' https://support.broadcom.com/["Knowledge base VMware"]articolo relativo alle considerazioni sull'utilizzo del binding della porta iSCSI del software in ESX/ESXi. Se l'host ESXi è collegato allo storage di un altro vendor, NetApp consiglia di utilizzare porte vmkernel iSCSI separate per evitare qualsiasi conflitto con il binding delle porte.
 
 Per le Best practice, NON utilizzare l'associazione delle porte sugli array di storage e-Series. Per ulteriori informazioni, vedere https://www.netapp.com/media/17017-tr4789.pdf["TR-4789: Guida alla configurazione di VMware per l'integrazione iSCSI SANtricity e-Series con ESXi 6.x e 7.x"^] .
 
@@ -280,7 +280,7 @@ NOTE: Se il comando non riesce e viene visualizzato il messaggio `sendto() faile
 
 Le configurazioni consigliate sono costituite da due porte iniziatore e quattro porte di destinazione con una o più VLAN.
 
-image::../media/50001_01_conf-vmw.gif[50001 01 conf vmw]
+image::../media/50001_01_conf-vmw.gif[Identificatore della porta iSCSI]
 
 
 

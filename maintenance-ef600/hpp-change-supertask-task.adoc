@@ -27,7 +27,7 @@ Per ottenere la chiave del Feature Pack, è necessario il numero di serie dallo 
 .. Con la scheda *Support Resources* (risorse di supporto) selezionata, scorrere fino alla sezione *View top storage array properties* (Visualizza proprietà principali storage array).
 .. Individuare *chassis Serial Number* (numero di serie chassis) e copiare questo valore in un file di testo.
 +
-image::../media/sam1130_ss_e2800_storage_array_profile_sn_smid_copy_maint-ef600.gif[sam1130 ss e2800 storage array profile sn smid copy mainting ef600]
+image::../media/sam1130_ss_e2800_storage_array_profile_sn_smid_copy_maint-ef600.gif[Numero di serie dello chassis]
 
 
 
@@ -39,7 +39,7 @@ image::../media/sam1130_ss_e2800_storage_array_profile_sn_smid_copy_maint-ef600.
 .. Digitare *Feature Pack submodel ID* nella casella di testo e fare clic su *Find* (trova).
 .. Individuare l'ID del sottomodello del Feature Pack per la configurazione iniziale.
 +
-image::../media/storage_array_profile2_maint-ef600.gif[profilo array storage 2 mainte600]
+image::../media/storage_array_profile2_maint-ef600.gif[Profilo dello storage array]
 
 
 
@@ -596,7 +596,7 @@ NOTE: Se l'ID del sottomodello del controller non è presente nell'elenco, conta
 .. In *Change Feature Pack*, individuare *Feature Enable Identifier*.
 .. Copiare e incollare questo numero di 32 cifre in un file di testo.
 +
-image::../media/sam1130_ss_e2800_change_feature_pack_feature_enable_identifier_copy_maint-ef600.gif[sam1130 ss e2800 change feature pack enable identifier copy maintain ef600]
+image::../media/sam1130_ss_e2800_change_feature_pack_feature_enable_identifier_copy_maint-ef600.gif[Finestra di dialogo Modifica pacchetto funzioni]
 
 
 
@@ -652,7 +652,7 @@ Modificare il Feature Pack per convertire il protocollo host delle porte host.
 . Da Gestore di sistema di SANtricity, selezionare menu:Impostazioni[sistema].
 . In *componenti aggiuntivi*, selezionare *Cambia Feature Pack*.
 +
-image::../media/sam1130_ss_system_change_feature_pack_maint-ef600.gif[sam1130 ss system change feature pack maintent ef600]
+image::../media/sam1130_ss_system_change_feature_pack_maint-ef600.gif[Modificare il pacchetto di funzioni]
 
 . Fare clic su *Sfoglia*, quindi selezionare il Feature Pack che si desidera applicare.
 . Digitare *CHANGE* nel campo.

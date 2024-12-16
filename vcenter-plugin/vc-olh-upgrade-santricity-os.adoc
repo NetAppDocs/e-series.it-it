@@ -11,7 +11,7 @@ summary: Aggiorna uno o più storage array con il software più recente e NVSRAM
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

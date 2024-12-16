@@ -1,0 +1,26 @@
+---
+section: install-hw-e4000
+title: E4000
+entries:
+- title: Panoramica dell'installazione
+  url: "/install-hw-e4000/index.html"
+- title: Prima dell'installazione
+  url: "/install-hw-e4000/prepare-installation.html"
+- title: Installare l'hardware
+  entries:
+  - title: E4012
+    url: "/install-hw-e4000/install-hardware-12.html"
+  - title: E4060
+    url: "/install-hw-e4000/install-hardware-60.html"
+- title: Ripiani per cavi
+  entries:
+  - title: E4012
+    url: "/install-hw-e4000/connect-cables-12.html"
+  - title: E4060
+    url: "/install-hw-e4000/connect-cables-60.html"
+- title: Completare la configurazione del sistema storage
+  entries:
+  - title: E4012
+    url: "/install-hw-e4000/complete-setup-12.html"
+  - title: E4060
+    url: "/install-hw-e4000/complete-setup-60.html"

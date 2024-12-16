@@ -39,14 +39,14 @@ Per gli esempi illustrati, sono necessari i seguenti cavi:
 
 
  a| 
-image:../media/sas_cable.png[""]
+image:../media/sas_cable.png["Cavo SAS"]
  a| 
 *Cavi SAS*
 
 |===
 +
 .Esempio A: Shelf di controller E5700 con tre shelf di dischi DE212C/DE224 in una configurazione SAS standard.
-image:../media/example_a_28_57.png[""]
+image:../media/example_a_28_57.png["Controller E5700 in configurazione SAS"]
 
 +
 .. Collegare il controller a al modulo IOM A del primo shelf di dischi.
@@ -59,7 +59,7 @@ image:../media/example_a_28_57.png[""]
 
 +
 .Esempio B: Shelf di controller E5700 con shelf di dischi DE212C/DE224 in una configurazione SAS standard.
-image:../media/example_b_57_28.png[""]
+image:../media/example_b_57_28.png["Controller E5700 in configurazione SAS"]
 
 +
 .. Collegare il controller a al modulo IOM A.
@@ -75,7 +75,7 @@ Sono necessari i seguenti cavi:
 
 
  a| 
-image:../media/power_cable_inst-hw-e2800-e5700.png[""]
+image:../media/power_cable_inst-hw-e2800-e5700.png["Cavi di alimentazione"]
  a| 
 *Cavi di alimentazione*
 
@@ -99,7 +99,7 @@ Durante l'avvio, il display a sette segmenti mostra la sequenza ripetuta di OS, 
 
 
  a| 
-*Esempio: I collegamenti di alimentazione si trovano sul retro dello shelf.*image:../media/trafford_power.png[""]
+*Esempio: I collegamenti di alimentazione si trovano sul retro del ripiano.* image:../media/trafford_power.png["Connessioni degli shelf di alimentazione"]
 
 |===
 

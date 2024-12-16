@@ -15,7 +15,7 @@ summary: Utilizzare questo foglio di lavoro per registrare le informazioni di co
 
 La figura mostra un host collegato a un array di storage e-Series in due zone. Una zona è indicata dalla linea blu, mentre l'altra è indicata dalla linea rossa. Ogni singola porta ha due percorsi per lo storage (uno per ciascun controller).
 
-image::../media/port_identifiers_host_and_target_conf-lin.gif[identificatori di porta host e lin di configurazione di destinazione]
+image::../media/port_identifiers_host_and_target_conf-lin.gif[Configurazione di rete FC]
 
 
 

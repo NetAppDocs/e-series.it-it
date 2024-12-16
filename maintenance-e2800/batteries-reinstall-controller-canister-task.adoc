@@ -18,7 +18,7 @@ Dopo aver installato la nuova batteria, reinstallare il contenitore del controll
 . Capovolgere il contenitore del controller, in modo che il coperchio rimovibile sia rivolto verso il basso.
 . Con la maniglia della camma in posizione aperta, far scorrere il contenitore del controller fino in fondo nello shelf del controller.
 +
-image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e2824 rimuovere la manutenzione del contenitore del controller e2800]
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[24 reinstallazione del controller dell'unità]
 
 +
 *(1)* _contenitore controller_
@@ -27,7 +27,7 @@ image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e
 *(2)* _maniglia della camma_
 
 +
-image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[28 dwg e2860 add controller canister maintt e2800]
+image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[60 reinstallazione del controller dell'unità]
 
 +
 *(1)* _contenitore controller_

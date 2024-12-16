@@ -39,14 +39,14 @@ Per gli esempi illustrati in questa sezione, sono necessari i seguenti cavi:
 
 
  a| 
-image:../media/sas_cable.png[""]
+image:../media/sas_cable.png["Cavi SAS"]
  a| 
 *Cavi SAS*
 
 |===
 +
 .Esempio A: Shelf di controller E2860 con due shelf di dischi DE460C in una configurazione SAS standard.
-image:../media/example_a_2860.png[""]
+image:../media/example_a_2860.png["Controller E2860 in configurazione SAS"]
 
 +
 .. Collegare il controller a al modulo IOM A del primo shelf di dischi.
@@ -57,7 +57,7 @@ image:../media/example_a_2860.png[""]
 
 +
 .Esempio B: Uno shelf di controller E2860 con uno shelf di dischi DE460C in una configurazione SAS standard.
-image:../media/example_b_2860.png[""]
+image:../media/example_b_2860.png["Controller E2860 in configurazione SAS"]
 
 +
 .. Collegare il controller a al modulo IOM A.
@@ -73,7 +73,7 @@ Sono necessari i seguenti cavi:
 
 
  a| 
-image:../media/power_cable_inst-hw-e2800-e5700.png[""]
+image:../media/power_cable_inst-hw-e2800-e5700.png["Cavi di alimentazione"]
  a| 
 *Cavi di alimentazione*
 
@@ -97,7 +97,7 @@ Durante l'avvio, il display a sette segmenti mostra la sequenza ripetuta di OS, 
 
 
  a| 
-*Esempio: I collegamenti di alimentazione si trovano sul retro dello shelf.*image:../media/trafford_power.png[""]
+*Esempio: I collegamenti di alimentazione si trovano sul retro del ripiano.* image:../media/trafford_power.png["Collegamenti di alimentazione per la parte posteriore del ripiano"]
 
 |===
 

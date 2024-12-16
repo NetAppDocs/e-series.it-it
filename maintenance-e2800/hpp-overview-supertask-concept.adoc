@@ -22,7 +22,7 @@ NOTE: Solo le porte HICS FC da 16 GB/iSCSI da 10 GB e le porte di base ottiche s
 
 La figura seguente mostra il retro di un controller E2800 dotato di due porte host SFP+ (ottiche) per scheda base *(1)* e quattro porte HIC SFP+ (ottiche) *(2)*.
 
-image::../media/28_dwg_e2800_optical_base_quad_sfp_hic.gif[28 dwg e2800 base ottica quad sfp hic]
+image::../media/28_dwg_e2800_optical_base_quad_sfp_hic.gif[Porte host e HIC su un controller E2800"]
 
 
 NOTE: È disponibile anche un HIC a due porte.
@@ -275,7 +275,7 @@ Prima e dopo la conversione, il mirroring viene eseguito sulla porta FC con il n
 Quando si applica il Feature Pack, il supporto del mirroring passa dalla porta host della scheda base con il numero più alto (contrassegnata con *1* nella figura) alla porta HIC con il numero più alto (contrassegnata con *2* nella figura).
 
 +
-image::../media/28_dwg_e2800_fc_iscsi_to_fc.gif[28 dwg e2800 fc iscsi to fc]
+image::../media/28_dwg_e2800_fc_iscsi_to_fc.gif[Porte su un controller E2800"]
 
 +
 |===

@@ -11,7 +11,7 @@ summary: Visualizzare le statistiche per la cache SSD, ad esempio letture, scrit
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

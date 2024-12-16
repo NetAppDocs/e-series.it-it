@@ -1,7 +1,7 @@
 ---
 permalink: upgrade-controllers/prepare-upgrade-controllers-task.html 
 sidebar: sidebar 
-keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, upgrade controller requirements, upgrade controller key management, prepare upgrade controller, upgrade controller preparation, preparing controller upgrade 
+keywords: E-Series, eseries, E4000, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, upgrade controller requirements, upgrade controller key management, prepare upgrade controller, upgrade controller preparation, preparing controller upgrade 
 summary: 'Preparare l"aggiornamento dei controller salvando la chiave di sicurezza del disco, raccogliendo i dati di supporto e portando il controller offline.' 
 ---
 = Preparazione per l'aggiornamento dei controller
@@ -94,10 +94,9 @@ Questo numero di serie è necessario per eseguire le operazioni descritte in lin
 
 . Raccogliere i dati di supporto relativi allo storage array utilizzando la GUI o la CLI:
 +
-** Utilizzare System Manager o Array Management Window in Storage Manager per raccogliere e salvare un bundle di supporto dello storage array.
+** Utilizza System Manager per raccogliere e salvare un bundle di supporto dello storage array.
 +
 *** Da System Manager, selezionare menu:Support[Support Center > scheda Diagnostics]. Quindi selezionare *Collect Support Data* e fare clic su *Collect*.
-*** Dalla barra degli strumenti della finestra Array Management (Gestione array), selezionare menu:Monitor[Health > Collect Support Data Manually] (Monitor[Salute > Collect Support Data Manually]). Quindi, immettere un nome e specificare una posizione nel sistema in cui si desidera memorizzare il bundle di supporto.
 +
 Il file viene salvato nella cartella Download del browser con il nome `support-data.7z`.
 
@@ -133,7 +132,7 @@ CAUTION: *Possibile perdita di dati* -- se si continua questa procedura mentre s
 +
 Viene visualizzata la finestra di dialogo Change cache Setting (Modifica impostazioni cache). In questa finestra di dialogo vengono visualizzati tutti i volumi dell'array di storage.
 
-.. Selezionare la scheda *Basic* e modificare le impostazioni per il caching in lettura e il caching in scrittura.
+.. Selezionare la scheda *Basic* e disattivare le impostazioni per la memorizzazione nella cache in lettura e la memorizzazione nella cache in scrittura.
 .. Fare clic su *Save* (Salva).
 .. Attendere cinque minuti per consentire il trasferimento dei dati presenti nella memoria cache sul disco.
 

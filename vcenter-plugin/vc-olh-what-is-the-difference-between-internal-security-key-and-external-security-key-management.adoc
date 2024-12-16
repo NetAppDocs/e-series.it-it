@@ -10,7 +10,7 @@ summary: 'Quando si implementa la funzione Drive Security, è possibile utilizza
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

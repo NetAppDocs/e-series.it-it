@@ -59,7 +59,7 @@ Il file viene salvato nella cartella Download del browser con il nome *support-d
 . Da Gestore di sistema di SANtricity, determinare quale alimentatore si è guastato. Queste informazioni sono disponibili nell'area Details (Dettagli) del Recovery Guru o nelle informazioni visualizzate per lo shelf.
 +
 .. Selezionare *hardware*.
-.. Guarda la potenza image:../media/sam1130_ss_hardware_power_icon_maint-e5700.gif[""] e la ventola image:../media/sam1130_ss_hardware_fan_icon_maint-e5700.gif[""] Icone a destra degli elenchi a discesa *Shelf* per determinare quale shelf presenta l'alimentatore guasto.
+.. Osservare le icone dell'alimentazione image:../media/sam1130_ss_hardware_power_icon_maint-e5700.gif["Icona di alimentazione"] e della ventola image:../media/sam1130_ss_hardware_fan_icon_maint-e5700.gif["Icona ventola"]a destra degli elenchi a discesa *Shelf* per determinare quale shelf presenta l'alimentatore guasto.
 +
 In caso di guasto di un componente, una o entrambe le icone sono rosse.
 
@@ -80,12 +80,12 @@ CAUTION: Se il secondo contenitore dell'alimentatore nello shelf non ha lo stato
 È necessario sostituire l'alimentatore con il LED attenzione acceso.
 
 +
-image::../media/28_dwg_913w_power_supply_back_view_maint-e5700.gif[alimentatore da 28 dwg 913w vista posteriore principale e5700]
+image::../media/28_dwg_913w_power_supply_back_view_maint-e5700.gif[LED di attenzione dell'alimentatore]
 
 +
-** Se il LED di alimentazione image:../media/drw_sas_power_icon_maint-e5700.gif[""] è *verde fisso*, l'alimentatore funziona correttamente. Se è *spento*, l'alimentatore è guasto, l'interruttore CA è spento, il cavo di alimentazione CA non è installato correttamente o la tensione di ingresso del cavo di alimentazione CA non rientra nei margini (si è verificato un problema all'estremità della fonte del cavo di alimentazione CA).
+** Se il LED di alimentazione image:../media/drw_sas_power_icon_maint-e5700.gif["Icona del LED di alimentazione"]è *verde fisso*, l'alimentatore funziona correttamente. Se è *spento*, l'alimentatore è guasto, l'interruttore CA è spento, il cavo di alimentazione CA non è installato correttamente o la tensione di ingresso del cavo di alimentazione CA non rientra nei margini (si è verificato un problema all'estremità della fonte del cavo di alimentazione CA).
 +
-Se il LED attenzione image:../media/drw_sas_fault_icon_maint-e5700.gif[""] è di colore *ambra fisso*, l'alimentatore o la ventola integrata presentano un guasto.
+Se il LED attenzione image:../media/drw_sas_fault_icon_maint-e5700.gif["Icona di guasto"]è *giallo fisso*, l'alimentatore o la ventola integrata presentano un guasto.
 
 
 
@@ -111,7 +111,7 @@ Conservare tutti i materiali di imballaggio per l'utilizzo quando si restituisce
 
 . Premere il fermo sulla maniglia della camma dell'alimentatore, quindi aprire la maniglia della camma per rilasciare completamente l'alimentatore dal piano intermedio.
 +
-image::../media/drw_2600_psu_maint-e5700.gif[2600 psu principale e5700]
+image::../media/drw_2600_psu_maint-e5700.gif[Utilizzare il dispositivo di chiusura per rilasciare l'alimentazione dal piano intermedio]
 
 . Utilizzare la maniglia della camma per estrarre l'alimentatore dal sistema.
 +

@@ -1,0 +1,81 @@
+---
+permalink: maintenance-e4000/replace-controller-requirements-e4000.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Requisiti per la sostituzione del controller E4000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di sostituire o aggiungere un controller E4000, esaminare i requisiti e le considerazioni.
+
+Ciascun contenitore di controllo contiene una scheda di controllo e una batteria. È possibile aggiungere un secondo controller a una configurazione simplex o sostituire un controller guasto.
+
+
+
+== Requisiti per l'aggiunta di un secondo controller
+
+È possibile aggiungere un secondo contenitore del controller alla versione simplex dello shelf del controller E4000. Prima di aggiungere un secondo controller, è necessario disporre di:
+
+* Un nuovo contenitore del controller con lo stesso numero di parte del contenitore del controller attualmente installato.
++
+
+NOTE: Questo non è applicabile per un dispositivo StorageGRID.
+
+* Tutti i cavi, i ricetrasmettitori, gli switch e gli HBA (host bus adapter) necessari per collegare le nuove porte del controller.
++
+Per informazioni sull'hardware compatibile, fare riferimento alla https://mysupport.netapp.com/NOW/products/interoperability["Matrice di interoperabilità NetApp"] o alla http://hwu.netapp.com/home.aspx["NetApp Hardware Universe"].
+
+* Driver multipath installato sull'host in modo da poter utilizzare entrambi i controller. Per istruzioni, fare riferimento a https://docs.netapp.com/us-en/e-series/config-linux/index.html["Configurazione di Linux Express"] , https://docs.netapp.com/us-en/e-series/config-windows/index.html["Configurazione di Windows Express"] o https://docs.netapp.com/us-en/e-series/config-vmware/index.html["Configurazione di VMware Express"] .
+* Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
+* Un cacciavite Phillips n. 1.
+* Etichette per identificare i nuovi cavi.
+* Stazione di gestione con un browser che può accedere a Gestione di sistema SANtricity per il controller. (Per aprire l'interfaccia di System Manager, puntare il browser verso il nome di dominio o l'indirizzo IP del controller).
++
+In alternativa, è possibile utilizzare l'interfaccia della riga di comando (CLI) per eseguire alcune procedure. Per SANtricity System Manager (versione 11,60 e successive), è possibile scaricare il pacchetto CLI (file zip) da Gestione sistema. A tale scopo, accedere a *Impostazioni > sistema > componenti aggiuntivi > interfaccia della riga di comando* in System Manager. È quindi possibile eseguire i comandi CLI da un prompt del sistema operativo, ad esempio il prompt di DOS C:.
+
+
+
+
+
+== Requisiti per la sostituzione del controller
+
+Quando si sostituisce un contenitore della centralina guasto, è necessario rimuovere la batteria, l'HIC e i DIMM dal contenitore della centralina originale e installarli nel contenitore della centralina di ricambio.
+
+È possibile determinare se si dispone di un contenitore del controller guasto in due modi:
+
+* Il guru del ripristino in Gestione di sistema di SANtricity richiede la sostituzione del contenitore del controller.
+* Il LED di attenzione ambra sul contenitore del controller è acceso, a indicare che il controller è guasto.
+
+
+Prima di sostituire un controller, è necessario disporre di:
+
+* Un contenitore del controller sostitutivo con lo stesso numero di parte del contenitore del controller che si sta sostituendo.
+* Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
+* Etichette per identificare ciascun cavo collegato al contenitore del controller.
+* Cacciavite Phillips n. 1.
+* Stazione di gestione con un browser che può accedere a Gestione di sistema SANtricity per il controller. (Per aprire l'interfaccia di System Manager, puntare il browser verso il nome di dominio o l'indirizzo IP del controller).
++
+In alternativa, è possibile utilizzare l'interfaccia della riga di comando (CLI) per eseguire alcune procedure. Per SANtricity System Manager (versione 11,60 e successive), è possibile scaricare il pacchetto CLI (file zip) da Gestione sistema. A tale scopo, accedere a *Impostazioni > sistema > componenti aggiuntivi > interfaccia della riga di comando* in System Manager. È quindi possibile eseguire i comandi CLI da un prompt del sistema operativo, ad esempio il prompt di DOS C:.
+
+
+
+
+
+=== Requisiti di configurazione duplex
+
+Se lo shelf di controller dispone di due controller (configurazione duplex), è possibile sostituire un contenitore di controller mentre lo storage array è acceso ed esegue le operazioni di i/o host, a condizione che siano soddisfatte le seguenti condizioni:
+
+* Il secondo contenitore del controller nello shelf ha uno stato ottimale.
+* Il campo *OK per rimuovere* nell'area Dettagli del guru del ripristino in Gestione sistema di SANtricity visualizza *Sì*, a indicare che è possibile rimuovere questo componente in tutta sicurezza.
+
+
+
+
+=== Requisiti di configurazione simplex
+
+Se si dispone di un solo contenitore di controller (configurazione simplex), i dati sull'array di storage non saranno accessibili fino a quando non si sostituisce il contenitore di controller. È necessario interrompere le operazioni di i/o dell'host e spegnere lo storage array.

@@ -1,0 +1,132 @@
+---
+permalink: install-hw-e4000/complete-setup-60.html 
+sidebar: sidebar 
+keywords:  
+summary: Scopri come collegare i controller alla rete e completare la configurazione e la configurazione del sistema storage. 
+---
+= Setup completo del sistema storage (E4060)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Scopri come collegare i controller alla rete e completare la configurazione e la configurazione del sistema storage.
+
+
+
+== Fase 1: Collegare via cavo gli host dati
+
+Collegare il sistema in base alla topologia di rete.
+
+[role="tabbed-block"]
+====
+.Opzione 1: Topologia a collegamento diretto
+--
+Nell'esempio seguente viene illustrato il collegamento dei cavi agli host di dati utilizzando una topologia a collegamento diretto.
+
+image:../media/drw_e4060_direct_topology_ieops-2048.svg["E4060 topologia diretta, larghezza=1000px"]
+
+. Collegare ciascun adattatore host direttamente alle porte host e0a e e0b sui controller.
+
+
+--
+.Opzione 2: Topologia del fabric
+--
+Nell'esempio seguente viene illustrato il collegamento degli host di dati mediante una topologia fabric.
+
+image:../media/drw_e4060_fabric_topology_ieops-2049.svg["Topologia del tessuto E4060, larghezza=1000px"]
+
+. Collegare ciascun adattatore host direttamente allo switch.
+. Collegare ogni switch direttamente alle porte host e0a e e0b sui controller.
+
+
+--
+====
+
+
+== Fase 2: Connessione e configurazione della connessione di gestione
+
+È possibile configurare le porte di gestione del controller utilizzando un server DHCP o un indirizzo IP statico.
+
+[role="tabbed-block"]
+====
+.Opzione 1: Server DHCP
+--
+Scopri come configurare le porte di gestione con un server DHCP.
+
+.Prima di iniziare
+* Configurare il server DHCP per associare un indirizzo IP, una subnet mask e un indirizzo gateway come lease permanente per ciascun controller.
+* Ottenere gli indirizzi IP assegnati per la connessione al sistema di storage dall'amministratore di rete.
+
+
+.Fasi
+. Collegare un cavo Ethernet alla porta di gestione di ciascun controller e l'altra estremità alla rete.
++
+Le seguenti figure mostrano esempi della posizione della porta di gestione del controller:
+
++
+image:../media/e4000_management_port.png["E4000 porta di gestione del controller"]
+
+. Aprire un browser e connettersi al sistema di storage utilizzando uno degli indirizzi IP del controller forniti dall'amministratore di rete.
+
+
+--
+.Opzione 2: Indirizzo IP statico
+--
+Informazioni su come configurare manualmente le porte di gestione immettendo l'indirizzo IP e la subnet mask.
+
+.Prima di iniziare
+* Richiedere all'amministratore di rete l'indirizzo IP, la subnet mask, l'indirizzo del gateway e le informazioni sul server DNS e NTP dei controller.
+* Assicurarsi che il portatile in uso non riceva la configurazione di rete da un server DHCP.
+
+
+.Fasi
+. Utilizzando un cavo Ethernet, collegare la porta di gestione Del controller A alla porta Ethernet di un laptop.
++
+image:../media/e4000_management_port.png["E4000 porta di gestione del controller"]
+
+. Aprire un browser e utilizzare l'indirizzo IP predefinito (169.254.128.101) per stabilire una connessione al controller. Il controller restituisce un certificato autofirmato. Il browser informa che la connessione non è sicura.
+. Seguire le istruzioni del browser per procedere e avviare Gestione di sistema di SANtricity. Se non si riesce a stabilire una connessione, verificare di non ricevere la configurazione di rete da un server DHCP.
+. Impostare la password di accesso del sistema di storage.
+. Utilizzare le impostazioni di rete fornite dall'amministratore di rete nella procedura guidata *Configura impostazioni di rete* per configurare le impostazioni di rete del controller A, quindi selezionare *fine*.
++
+
+NOTE: Poiché l'indirizzo IP viene ripristinato, System Manager perde la connessione al controller.
+
+. Scollegare il cavo ethernet dal sistema di archiviazione e collegare la porta di gestione sul controller A alla rete.
+. Aprire un browser su un computer connesso alla rete e immettere l'indirizzo IP appena configurato del controller A.
++
+
+NOTE: Se si perde la connessione al controller A, è possibile collegare un cavo ethernet al controller B per ristabilire la connessione al controller A attraverso il controller B (169.254.128.102).
+
+. Accedere utilizzando la password impostata in precedenza.
++
+Viene visualizzata la procedura guidata Configure Network Settings (Configura impostazioni di rete).
+
+. Utilizzare le impostazioni di rete fornite dall'amministratore di rete nella procedura guidata *Configura impostazioni di rete* per configurare le impostazioni di rete del controller B, quindi selezionare *fine*.
+. Collegare il controller B alla rete.
+. Convalidare le impostazioni di rete del controller B inserendo l'indirizzo IP appena configurato del controller B in un browser.
++
+
+NOTE: Se si perde la connessione al controller B, è possibile utilizzare la connessione precedentemente convalidata al controller A per ristabilire la connessione al controller B attraverso il controller A.
+
+
+
+--
+====
+
+
+== Fase 3: Configurare e gestire il sistema storage
+
+Dopo aver installato l'hardware, utilizzare il software SANtricity per configurare e gestire il sistema di storage.
+
+.Prima di iniziare
+* Configurare le porte di gestione.
+* Verificare e registrare la password e gli indirizzi IP.
+
+
+.Fasi
+. Utilizza il software SANtricity per configurare e gestire gli array di storage.
+. Nella configurazione di rete più semplice, connettere il controller a un browser web e utilizzare SANtricity System Manager per gestire un singolo storage array serie E4000. Per accedere a System Manager, utilizzare gli stessi indirizzi IP utilizzati per configurare le porte di gestione.
+

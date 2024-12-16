@@ -1,0 +1,80 @@
+---
+permalink: install-hw-e4000/connect-cables-60.html 
+sidebar: sidebar 
+keywords: E4000 connect power cables 
+summary: 'Collegare i cavi di alimentazione e l"alimentazione agli shelf di dischi.' 
+---
+= Cablare i ripiani (E4060)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Scopri come collegare i cavi di alimentazione e alimentare gli shelf di dischi.
+
+.Prima di iniziare
+* Installare l'hardware.
+* Adottare precauzioni antistatiche.
+
+
+Questa procedura si applica agli shelf di dischi IOM12 e IOM12B.
+
+.Fasi
+. Cablare gli scaffali.
++
+Collegare il sistema in base alla configurazione. Se sono necessarie più opzioni di cablaggio rispetto agli esempi illustrati in questa sezione, vedere link:../install-hw-cabling/index.html["Cablaggio"].
+
++
+Per gli esempi illustrati in questa sezione, sono necessari i seguenti cavi:
+
++
+|===
+
+
+ a| 
+image:../media/sas_cable.png["Cavo SAS"]
+ a| 
+*Cavi SAS*
+
+|===
++
+.Esempio A: Shelf di controller E4060 con due shelf di dischi DE460C in una configurazione SAS standard.
+.. Collegare il controller a al modulo IOM A del primo shelf di dischi.
+.. Collegare IOM A del primo shelf di dischi a IOM A del secondo shelf di dischi.
+.. Cavo IOM B del primo shelf di dischi a IOM B del secondo shelf di dischi.
+.. Collegare il controller B all'IOM B del secondo shelf di dischi.
+
+
++
+.Esempio B: Uno shelf di controller E4060 con uno shelf di dischi DE460C in una configurazione SAS standard.
+.. Collegare il controller a al modulo IOM A.
+.. Cavo controller B a IOM B.
+
+
+. Alimentare gli shelf di dischi.
++
+Sono necessari i seguenti cavi:
+
++
+|===
+
+
+ a| 
+image:../media/power_cable_inst-hw-e2800-e5700.png["Cavo di alimentazione"]
+ a| 
+*Cavi di alimentazione*
+
+|===
++
+
+CAUTION: Verificare che gli interruttori di alimentazione dello shelf siano spenti.
+
++
+.. Collegare i due cavi di alimentazione per ogni shelf a diverse unità di distribuzione dell'alimentazione (PDU) nell'armadio o nel rack.
+.. Se si dispone di shelf di dischi, accendere prima i due interruttori di alimentazione. Attendere 2 minuti prima di alimentare lo shelf del controller.
+.. Accendere i due interruttori di alimentazione sullo shelf del controller.
+.. Controllare i LED su ciascun controller.
+
+
+

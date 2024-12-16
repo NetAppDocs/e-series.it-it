@@ -13,4 +13,4 @@ summary: 'Esaminare la procedura per l"installazione e la configurazione di E280
 [role="lead"]
 Prima di installare e configurare il nuovo sistema storage, acquisire familiarità con il processo di installazione:
 
-image::../media/ef600_isi_workflow_v_2_inst-hw-e2800-e5700.bmp[ef600 isi workflow v 2 inst hw e2800 e5700]
+image::../media/ef600_isi_workflow_v_2_inst-hw-e2800-e5700.bmp[Flusso di lavoro del processo di installazione di E2800 e E5700]

@@ -11,7 +11,7 @@ summary: È possibile creare pool automaticamente quando il sistema rileva almen
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

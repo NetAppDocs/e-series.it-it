@@ -36,7 +36,7 @@ Ogni shelf di controller da 24 dischi o shelf di dischi include due alimentatori
 
 La figura seguente mostra un esempio di shelf di controller E5724 con due alimentatori (contenitori per ventole di alimentazione). Gli shelf di dischi DE224C sono identici, ma includono i moduli i/o (IOM) invece dei server di controllo.
 
-image::../media/e5700_power_supply_callout.png[didascalia dell'alimentatore e5700]
+image::../media/e5700_power_supply_callout.png[Alimentazione del controller E5700]
 
 *(1)* _Shelf del controller con due alimentatori (contenitori per ventole di alimentazione) sotto i contenitori del controller._
 
@@ -82,11 +82,11 @@ Gli argomenti di _sostituire il contenitore di alimentazione_ non descrivono com
 
 La figura seguente mostra il retro di uno shelf di dischi DE460C con i due contenitori di alimentazione:
 
-image::../media/28_dwg_de460c_rear_no_callouts_maint-e5700.gif[28 dwg de460c posteriore senza callout principale e5700]
+image::../media/28_dwg_de460c_rear_no_callouts_maint-e5700.gif[DE460C con due canister]
 
 La figura seguente mostra un contenitore di alimentazione:
 
-image::../media/28_dwg_e2860_de460c_psu_maint-e5700.gif[28 psu dwg e2860 de460c principale e5700]
+image::../media/28_dwg_e2860_de460c_psu_maint-e5700.gif[Filtro a carboni attivi]
 
 
 
@@ -130,11 +130,11 @@ Gli argomenti di _sostituire il contenitore della ventola_ non descrivono come s
 
 La figura seguente mostra un filtro a carboni attivi della ventola:
 
-image::../media/28_dwg_e2860_de460c_single_fan_canister_no_callouts_maint-e5700.gif[28 dwg e2860 de460c canister a ventola singola senza callout principale e5700]
+image::../media/28_dwg_e2860_de460c_single_fan_canister_no_callouts_maint-e5700.gif[Filtro della ventola]
 
 La figura seguente mostra il retro di uno shelf DE460C con due contenitori per ventole:
 
-image::../media/28_dwg_de460c_rear_no_callouts_maint-e5700.gif[28 dwg de460c posteriore senza callout principale e5700]
+image::../media/28_dwg_de460c_rear_no_callouts_maint-e5700.gif[DE460C con due canister]
 
 
 CAUTION: *Possibili danni all'apparecchiatura* -- se si sostituisce un contenitore della ventola con l'alimentazione accesa, è necessario completare la procedura di sostituzione entro 30 minuti per evitare il rischio di surriscaldamento dell'apparecchiatura.

@@ -129,3 +129,16 @@ L'endpoint */certificates/reload* in genere restituisce una risposta http 202 co
 Utilizzando una sessione di navigazione in incognito o privata, è possibile aprire una connessione al server senza utilizzare i dati salvati delle sessioni di navigazione precedenti.
 
 
+
+
+
+== Funzione di blocco dell'accesso
+
+Configurabile solo tramite l'API REST, è possibile limitare il numero di tentativi di accesso per i servizi Web incorporati e proxy. In base alle impostazioni, la funzione di blocco viene attivata una volta superato il numero di tentativi di accesso per i servizi Web.
+
+.Fasi
+. Accedere a. link:install-login-task.html["Documentazione API interattiva"].
+. Andare al menu a discesa in alto a destra e selezionare *v2*.
+. Fare clic sull'endpoint *GET:/settings/lockout* per recuperare le impostazioni di blocco.
+. Fare clic sull'endpoint *POST:/settings/lockout*, quindi fare clic su *prova* per configurare le impostazioni di blocco.
+

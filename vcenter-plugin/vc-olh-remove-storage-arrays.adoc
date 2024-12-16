@@ -11,7 +11,7 @@ summary: Rimuovere uno o più array di storage se non si desidera più gestirli 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

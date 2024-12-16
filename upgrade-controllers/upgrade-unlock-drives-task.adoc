@@ -11,7 +11,7 @@ summary: Se si stanno aggiornando i controller E2800 ed E5700 e la funzione Driv
 
 
 [role="lead"]
-Se si aggiornano i controller E2800 e E5700, la funzione Drive Security di questi controller blocca i dischi in parte, esternamente o internamente. Se la funzione Drive Security è attivata, è necessario sbloccare manualmente queste unità.
+La funzione Drive Security di questi controller blocca le unità parzialmente, esternamente o internamente. Se la funzione Drive Security è attivata, è necessario sbloccare manualmente queste unità.
 
 Seguire la procedura appropriata per:
 

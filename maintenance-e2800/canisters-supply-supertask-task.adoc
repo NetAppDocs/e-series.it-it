@@ -61,7 +61,7 @@ Queste informazioni sono disponibili nell'area Details (Dettagli) del Recovery G
 
 +
 .. Selezionare *hardware*.
-.. Guarda la potenza image:../media/sam1130_ss_hardware_power_icon_maint-e2800.gif[""] e la ventola image:../media/sam1130_ss_hardware_fan_icon_maint-e2800.gif[""] Icone a destra degli elenchi a discesa *Shelf* per determinare quale shelf presenta l'alimentatore guasto.
+.. Osservare le icone dell'alimentazione image:../media/sam1130_ss_hardware_power_icon_maint-e2800.gif["Icona di alimentazione"] e della ventola image:../media/sam1130_ss_hardware_fan_icon_maint-e2800.gif["Icona ventola"]a destra degli elenchi a discesa *Shelf* per determinare quale shelf presenta l'alimentatore guasto.
 +
 In caso di guasto di un componente, una o entrambe queste icone sono rosse.
 
@@ -82,7 +82,7 @@ CAUTION: Se il secondo contenitore dell'alimentatore nello shelf non ha lo stato
 È necessario sostituire l'alimentatore con il LED attenzione acceso.
 
 +
-image::../media/28_dwg_913w_power_supply_back_view_maint-e2800.gif[28 dwg 913w alimentatore vista posteriore principale e2800]
+image::../media/28_dwg_913w_power_supply_back_view_maint-e2800.gif[LED dell'alimentatore]
 
 +
 ** LED di alimentazione: Se è *verde fisso*, l'alimentatore funziona correttamente. Se è *spento*, l'alimentatore è guasto, l'interruttore CA è spento, il cavo di alimentazione CA non è installato correttamente o la tensione di ingresso del cavo di alimentazione CA non rientra nei margini (si è verificato un problema all'estremità della fonte del cavo di alimentazione CA).
@@ -111,7 +111,7 @@ Conservare tutti i materiali di imballaggio per l'utilizzo quando si restituisce
 
 . Premere il fermo sulla maniglia della camma dell'alimentatore, quindi aprire la maniglia della camma per rilasciare completamente l'alimentatore dal piano intermedio.
 +
-image::../media/drw_2600_psu_maint-e2800.gif[2600 psu principale e2800]
+image::../media/drw_2600_psu_maint-e2800.gif[Tirare la maniglia della camma per rilasciare l'alimentatore dal piano intermedio]
 
 . Utilizzare la maniglia della camma per estrarre l'alimentatore dal sistema.
 +

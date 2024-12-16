@@ -10,7 +10,7 @@ summary: 'Se si desidera accelerare il processo di creazione dei volumi, è poss
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

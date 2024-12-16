@@ -10,7 +10,7 @@ summary: 'Per gestire un singolo array, utilizzare l"opzione Launch (Avvio) per 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

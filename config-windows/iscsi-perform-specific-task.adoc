@@ -230,9 +230,6 @@ Questi protocolli includono, a titolo esemplificativo ma non esaustivo, QoS, Con
 . Mantenere i valori predefiniti per le restanti caselle di controllo, quindi selezionare *OK*.
 . Selezionare di nuovo *OK* quando si torna alla finestra di dialogo *Connetti a destinazione*.
 . Ripetere questa procedura per ogni porta e sessione dell'iniziatore (percorso logico) verso l'array di storage che si desidera stabilire.
-+
-image::../media/82012_00.gif[82012 00]
-
 
 
 
@@ -293,7 +290,7 @@ NOTE: Se il comando non riesce (ad esempio, restituisce `Packet needs to be frag
 
 Le configurazioni consigliate sono costituite da due porte iniziatore e quattro porte di destinazione con una o più VLAN.
 
-image::../media/50001_01_conf-win.gif[50001 01 conf vincente]
+image::../media/50001_01_conf-win.gif[Identificatori delle porte iSCSI]
 
 
 

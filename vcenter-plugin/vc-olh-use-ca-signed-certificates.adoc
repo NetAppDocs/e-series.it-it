@@ -11,7 +11,7 @@ summary: Ottenere e importare certificati con firma CA per un accesso sicuro al 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

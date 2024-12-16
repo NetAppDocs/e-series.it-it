@@ -11,7 +11,7 @@ summary: Eliminare uno o più volumi per aumentare la capacità libera di un poo
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: 'Durante la creazione del volume, vengono richieste informazioni sull"u
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -22,7 +22,7 @@ NOTE: È possibile convertire solo le porte della base ottica di un controller E
 
 La figura seguente mostra l'E5700 con le porte host SFP+ (ottiche) della scheda base *(1)* e le due porte IB HIC opzionali *(2)*.
 
-image::../media/e5700_with_2_port_100g_edr_infiniband_hic_w_callouts.gif[e5700 con 2 didascalie edr infiniband 100g a 2 porte]
+image::../media/e5700_with_2_port_100g_edr_infiniband_hic_w_callouts.gif[Porte host e HIC sul controller E5700]
 
 
 

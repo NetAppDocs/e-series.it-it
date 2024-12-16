@@ -10,7 +10,7 @@ summary: La protezione FDE/FIPS si riferisce a dischi sicuri che crittografano i
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

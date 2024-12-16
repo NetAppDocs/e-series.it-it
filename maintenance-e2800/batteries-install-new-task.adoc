@@ -36,7 +36,7 @@ Inserire la flangia metallica nella parte anteriore della batteria nello slot su
 Quando il dispositivo di chiusura scatta in posizione, la parte inferiore del dispositivo di chiusura si aggancia in uno slot metallico sul telaio.
 
 +
-image::../media/28_dwg_e2800_insert_battery_maint-e2800.gif[28 dwg e2800 inserire la manutenzione della batteria e2800]
+image::../media/28_dwg_e2800_insert_battery_maint-e2800.gif[E2800 inserire la batteria]
 
 +
 *(1)* _dispositivo di chiusura a scatto della batteria_
@@ -54,10 +54,10 @@ CAUTION: *Possibili danni all'hardware* -- la flangia metallica sulla parte ante
 
 
 +
-image:../media/28_dwg_e2800_battery_flange_ok_maint-e2800.gif[""]
+image:../media/28_dwg_e2800_battery_flange_ok_maint-e2800.gif["Inserire correttamente la flangia della batteria"]
 
 +
-** *Errato* -- la flangia metallica della batteria non è inserita nello slot del controller: +image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e2800.gif[""]
+** *Non corretto* -- la flangia metallica della batteria non è inserita nello slot del controller: + image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e2800.gif["Inserto della flangia della batteria non corretto"]
 
 
 . Passare a. link:batteries-reinstall-controller-canister-task.html["Reinstallare il contenitore del controller E2800"].

@@ -27,14 +27,14 @@ Leggere tutte le istruzioni prima di procedere con i passaggi riportati di segui
 . Disimballare il contenuto dell'hardware, quindi inventariare l'hardware contenuto in base alla distinta di imballaggio.
 . Montare le guide.
 +
-Se le istruzioni sono state fornite con l'hardware per il montaggio in rack, fare riferimento a tali istruzioni per informazioni dettagliate su come installare le guide. Per ulteriori istruzioni sul montaggio in rack, vedere link:../rackmount-hardware.html["Hardware per il montaggio in rack"].
+Se le istruzioni sono state fornite con l'hardware per il montaggio in rack, fare riferimento a tali istruzioni per informazioni dettagliate su come installare le guide. Per ulteriori istruzioni sul montaggio in rack, vedere link:../rackmount-hardware.html["Hardware per il montaggio in rack"^].
 
 +
 
 NOTE: Installare l'hardware dalla parte inferiore del rack o dell'armadietto fino alla parte superiore per evitare che l'apparecchiatura si rovescii.
 
 +
-image:../media/install_rails_inst-hw-e2800-e5700.png[""]
+image:../media/install_rails_inst-hw-e2800-e5700.png["Installare le guide"]
 
 . Installare lo shelf.
 +
@@ -43,7 +43,7 @@ CAUTION: Quando è completamente caricato con dischi, ogni shelf pesa circa 29 k
 
 +
 .. Partendo dal ripiano che si desidera posizionare sul fondo del cabinet, posizionare il retro del ripiano (l'estremità con i connettori) sulle guide.
-.. Sostenendo lo shelf dal basso, farlo scorrere nel cabinet.image:../media/4_person_lift_source.png[""]
+.. Sostenendo il ripiano dal basso, farlo scorrere nel cabinet. image:../media/4_person_lift_source.png["Sono necessarie quattro persone per sollevare il ripiano nel mobiletto"]
 
 
 . Fissare lo shelf.
@@ -56,7 +56,7 @@ Fissare lo shelf al rack come indicato nella link:../rackmount-hardware.html["Ha
 
 
 +
-image:../media/trafford_secure.png[""]
+image:../media/trafford_secure.png["Fissare le staffe alla parte posteriore del ripiano"]
 
 . Installare il pannello o i cappucci terminali.
 +
@@ -69,4 +69,4 @@ image:../media/trafford_secure.png[""]
 
 
 
-image:../media/install_faceplate_2_0_inst-hw-e2800-e5700.png[""]
+image:../media/install_faceplate_2_0_inst-hw-e2800-e5700.png["Installare la mascherina"]

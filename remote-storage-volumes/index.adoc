@@ -27,6 +27,9 @@ Utilizzare il seguente flusso di lavoro:
 
 
 
+NOTE: I volumi di archiviazione remota SANtricity non sono attualmente supportati sui sistemi E4000.
+
+
 
 == Trova ulteriori informazioni
 

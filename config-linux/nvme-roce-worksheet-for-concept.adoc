@@ -19,7 +19,7 @@ summary: Utilizzare questo foglio di lavoro per registrare le informazioni di co
 
 In una topologia a connessione diretta, uno o più host sono collegati direttamente al sottosistema. Nella versione SANtricity OS 11.50, supportiamo una singola connessione da ciascun host a un controller del sottosistema, come mostrato di seguito. In questa configurazione, una porta HCA (host Channel Adapter) di ciascun host deve trovarsi sulla stessa subnet della porta del controller e-Series a cui è collegato, ma su una subnet diversa dall'altra porta HCA.
 
-image::../media/nvmeof_direct_connect.gif[nvmeof direct connect]
+image::../media/nvmeof_direct_connect.gif[Esempio di connessione diretta NVME over RoCE]
 
 Una configurazione di esempio che soddisfa i requisiti è costituita da quattro subnet di rete come segue:
 
@@ -35,7 +35,7 @@ Una configurazione di esempio che soddisfa i requisiti è costituita da quattro 
 
 In una topologia fabric, vengono utilizzati uno o più switch. Fare riferimento a. https://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"^] per un elenco degli switch supportati.
 
-image::../media/nvmeof_switch_connect.gif[switch nvmeof connect]
+image::../media/nvmeof_switch_connect.gif[Esempio di connessione a switch NVMe over RoCE]
 
 
 

@@ -10,7 +10,7 @@ summary: 'È necessario creare un cluster host se si desidera che due o più hos
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

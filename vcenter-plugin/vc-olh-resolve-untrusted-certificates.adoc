@@ -11,7 +11,7 @@ summary: 'Risolvi i certificati non attendibili importando un certificato autofi
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

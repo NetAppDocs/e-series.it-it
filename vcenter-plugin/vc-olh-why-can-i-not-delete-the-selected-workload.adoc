@@ -10,7 +10,7 @@ summary: 'I volumi di questo carico di lavoro non sono associati a un carico di 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

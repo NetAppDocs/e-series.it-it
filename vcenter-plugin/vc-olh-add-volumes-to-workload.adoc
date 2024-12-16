@@ -11,7 +11,7 @@ summary: Aggiungere volumi non assegnati a un workload esistente o nuovo.
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

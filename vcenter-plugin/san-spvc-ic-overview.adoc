@@ -37,7 +37,7 @@ Il plug-in richiede un'appliance VMware vCenter Server implementata nell'ambient
 
 Fare riferimento alla figura seguente per ulteriori informazioni sulle comunicazioni nell'ambiente vCenter.
 
-image:../media/vcenter_communication2.png[""]
+image:../media/vcenter_communication2.png["Ambiente di comunicazione vCenter"]
 
 
 

@@ -11,7 +11,7 @@ summary: Importare una configurazione di servizi di directory da un array di sto
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

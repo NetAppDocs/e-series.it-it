@@ -29,7 +29,7 @@ I piedini di livellamento si trovano vicino a ciascun angolo inferiore del cabin
 La figura seguente fornisce una vista ravvicinata del piede di stabilità e dei piedini di livellamento.
 
 +
-image::../media/83000_08.gif[83000 08]
+image::../media/83000_08.gif[Piedini di livellamento e stabilità]
 
 +
 |===
@@ -83,7 +83,7 @@ Dopo aver reinstallato i vassoi, installare gli spool dei cavi e le fascette. Gl
 .Fase
 . Installare gli steli dei cavi e le fascette avvolti lungo entrambi i lati delle prese di distribuzione dell'alimentazione verticali.
 +
-image::../media/83003_01_dwg_3040_cable_spools.gif[83003 01 spole per cavi dwg 3040]
+image::../media/83003_01_dwg_3040_cable_spools.gif[Legatura e bobina del cavo]
 
 +
 |===
@@ -123,7 +123,6 @@ La copertura degli spazi vuoti è necessaria per mantenere il corretto flusso d'
 
 == Fase 5: Installare guide di montaggio aggiuntive
 
-[role="lead"]
 Se si installano i vassoi del disco controller o i vassoi del disco forniti separatamente (non già installati nel cabinet), potrebbe essere necessario installare ulteriori guide di montaggio nel cabinet.
 
 .Fasi
@@ -140,7 +139,7 @@ Se si installano i vassoi del disco controller o i vassoi del disco forniti sepa
 
 . Utilizzare i contrassegni di misurazione sui supporti verticali anteriori destro e sinistro per fissare le guide di montaggio nella stessa posizione su ciascun lato dell'armadio.
 +
-image::../media/92042_06.gif[92042 06]
+image::../media/92042_06.gif[Montaggio su guida]
 
 +
 |===
@@ -248,7 +247,7 @@ NOTE: È necessario collegare ciascuna PDU a una fonte di alimentazione indipend
 
 . Portare tutti e 12 gli interruttori automatici nella posizione ON (su).
 +
-image::../media/83002_05_dwg_3040_cabinet_pdus.gif[83002 05 pdu dwg 3040 cabinet]
+image::../media/83002_05_dwg_3040_cabinet_pdus.gif[Interruttori automatici e prese elettriche]
 
 +
 |===
@@ -277,9 +276,9 @@ Scatole di alimentazione
 . Accendere tutti i vassoi delle unità del cabinet.
 +
 
-NOTE: Attendere 30 secondi dopo aver acceso i vassoi delle unità prima di accendere i vassoi delle unità del controller.
+NOTE: Attendere 60 secondi dopo aver acceso i vassoi delle unità prima di accendere i vassoi delle unità del controller.
 
-. Dopo aver acceso i vassoi delle unità, attendere 30 secondi, quindi accendere tutti i vassoi dei dischi del controller nel cabinet.
+. Dopo aver acceso i vassoi delle unità, attendere 60 secondi, quindi accendere tutti i vassoi dei dischi del controller nel cabinet.
 
 
 .Risultato

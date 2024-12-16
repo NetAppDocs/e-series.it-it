@@ -56,7 +56,7 @@ Ad esempio, non tentare di sostituire un disco rigido (HDD) con un disco a stato
 Il LED di attenzione del cassetto dell'unità (ambra) lampeggia per consentire l'apertura del cassetto dell'unità corretto e identificare l'unità da sostituire.
 
 +
-image::../media/2860_dwg_attn_led_on_drawer_maint-e2800.gif[2860 dwg attn ha condotto su deadmait e2800]
+image::../media/2860_dwg_attn_led_on_drawer_maint-e2800.gif[LED attenzione sul cassetto dell'unità E2800]
 
 +
 *(1)* _LED attenzione_
@@ -65,7 +65,7 @@ image::../media/2860_dwg_attn_led_on_drawer_maint-e2800.gif[2860 dwg attn ha con
 .. Utilizzando le leve estese, estrarre con cautela il cassetto dell'unità fino a quando non si arresta.
 .. Controllare la parte superiore del cassetto dell'unità per individuare il LED di attenzione davanti a ciascun disco.
 +
-image::../media/2860_dwg_amber_on_drive_maint-e2800.gif[2860 dwg ambra su disco principale e2800]
+image::../media/2860_dwg_amber_on_drive_maint-e2800.gif[LED attenzione sul cassetto dell'unità E2800]
 
 
 
@@ -75,7 +75,7 @@ image::../media/2860_dwg_amber_on_drive_maint-e2800.gif[2860 dwg ambra su disco 
 
 I LED attenzione cassetto unità si trovano sul lato sinistro davanti a ciascun disco, con un'icona di attenzione sulla maniglia del disco appena dietro il LED.
 
-image::../media/28_dwg_e2860_de460c_attention_led_drive_maint-e2800.gif[28 dwg e2860 de460c manutenzione dei dischi e2800]
+image::../media/28_dwg_e2860_de460c_attention_led_drive_maint-e2800.gif[Icona attenzione e LED sul cassetto dell'unità]
 
 *(1)* _icona attenzione_
 
@@ -99,22 +99,22 @@ Conservare tutti i materiali di imballaggio per la prossima volta che sarà nece
 La maniglia della camma sulle molle di azionamento si apre parzialmente e l'unità viene rilasciata dal cassetto.
 
 +
-image::../media/trafford_drive_rel_button_maint-e2800.gif[pulsante di comando trafford e2800]
+image::../media/trafford_drive_rel_button_maint-e2800.gif[Fermo di rilascio arancione sul cassetto dell'unità]
 
 +
 *(1)* _dispositivo di chiusura arancione_
 
 . Aprire la maniglia della camma ed estrarre leggermente l'unità.
-. Attendere 30 secondi.
+. Attendere 60 secondi.
 . Utilizzare la maniglia della camma per sollevare l'unità dallo scaffale.
 +
-image::../media/92_dwg_de6600_install_or_remove_drive_maint-e2800.gif[92 dwg de6600 installare o rimuovere il disco principale e2800]
+image::../media/92_dwg_de6600_install_or_remove_drive_maint-e2800.gif[Utilizzare la maniglia della camma per sollevare l'unità dal ripiano]
 
 . Posizionare l'unità su una superficie antistatica e imbottita, lontano dai campi magnetici.
-. Attendere 30 secondi affinché il software riconosca che l'unità è stata rimossa.
+. Attendere 60 secondi affinché il software riconosca che l'unità è stata rimossa.
 +
 
-NOTE: Se si rimuove accidentalmente un disco attivo, attendere almeno 30 secondi, quindi reinstallarlo. Per la procedura di ripristino, fare riferimento al software di gestione dello storage.
+NOTE: Se si rimuove accidentalmente un disco attivo, attendere almeno 60 secondi, quindi reinstallarlo. Per la procedura di ripristino, fare riferimento al software di gestione dello storage.
 
 
 
@@ -134,7 +134,7 @@ CAUTION: *Possibile perdita di accesso ai dati* -- quando si reinserisce il cass
 . Sollevare la maniglia della camma sul nuovo disco in verticale.
 . Allineare i due pulsanti rialzati su ciascun lato del supporto dell'unità con lo spazio corrispondente nel canale dell'unità sul cassetto dell'unità.
 +
-image::../media/28_dwg_e2860_de460c_drive_cru_maint-e2800.gif[28 dwg e2860 de460c disco cru mainting e2800]
+image::../media/28_dwg_e2860_de460c_drive_cru_maint-e2800.gif[Il pulsante sollevato sul supporto dell'unità deve corrispondere al canale dell'unità sul cassetto dell'unità]
 
 +
 *(1)* _pulsante sollevato sul lato destro del supporto del disco_
@@ -160,7 +160,7 @@ Verificare che il nuovo disco funzioni correttamente.
 . Controllare il LED di alimentazione e il LED di attenzione sull'unità sostituita. (Quando si inserisce un disco per la prima volta, il LED attenzione potrebbe essere acceso. Tuttavia, il LED dovrebbe spegnersi entro un minuto.
 +
 ** Il LED di alimentazione è acceso o lampeggia e il LED attenzione è spento: Indica che il nuovo disco funziona correttamente.
-** LED di alimentazione spento: Indica che l'unità potrebbe non essere installata correttamente. Rimuovere l'unità, attendere 30 secondi, quindi reinstallarla.
+** LED di alimentazione spento: Indica che l'unità potrebbe non essere installata correttamente. Rimuovere l'unità, attendere 60 secondi, quindi reinstallarla.
 ** LED attenzione acceso: Indica che il nuovo disco potrebbe essere difettoso. Sostituirlo con un altro disco nuovo.
 
 

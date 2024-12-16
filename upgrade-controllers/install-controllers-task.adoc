@@ -1,7 +1,7 @@
 ---
 permalink: upgrade-controllers/install-controllers-task.html 
 sidebar: sidebar 
-keywords: E-Series, eseries, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, installing new controller, install new controller, install battery, installing battery, install controller canister 
+keywords: E-Series, eseries, E4000, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, installing new controller, install new controller, install battery, installing battery, install controller canister 
 summary: Dopo aver rimosso i vecchi controller, è possibile installare nuovi controller nel vassoio del disco del controller 
 ---
 = Installare nuovi controller
@@ -34,35 +34,20 @@ Installare la batteria rimossa dal contenitore del controller originale o una nu
 . Disimballare il nuovo contenitore del controller e riutilizzarlo su una superficie piana e priva di scariche elettrostatiche, in modo che il coperchio rimovibile sia rivolto verso l'alto.
 . Premere il pulsante del coperchio verso il basso ed estrarre il coperchio.
 . Orientare il contenitore del controller in modo che lo slot della batteria sia rivolto verso di sé.
-. A seconda del modello di controller in uso, effettuare una delle seguenti operazioni:
-+
-** Per i modelli di controller E2600 o E2700:
-+
-... Inserire la scheda del circuito della batteria facendola scorrere verso la parte anteriore del nuovo contenitore del controller.
-... Serrare la vite a testa zigrinata per fissare la scheda del circuito della batteria nella nuova scheda del contenitore del controller.
-... Reinstallare il coperchio superiore sul nuovo contenitore del controller facendolo scorrere in avanti fino a quando i coperchi del dispositivo di chiusura superiore non scattano.
-+
-Quando il dispositivo di chiusura scatta in posizione, la parte inferiore del dispositivo di chiusura si aggancia in uno slot metallico sul telaio.
-
-
-
-** Per altri modelli di controller:
-+
-... Inserire la batteria nel nuovo contenitore del controller.
+. Inserire la batteria nel nuovo contenitore del controller.
 +
 Far scorrere la batteria nel contenitore, assicurandosi che rimanga sotto i rivetti sulla parete del nuovo contenitore.
 
-... Mantenendo la maniglia di bloccaggio a un angolo di 45 gradi, allineare i connettori sul fondo della batteria con i connettori sul contenitore.
-... Spingere la batteria verso il basso fino a udire uno scatto, quindi spostare la maniglia di blocco verso l'alto per fissare la batteria del controller al contenitore del controller.
++
+.. Mantenendo la maniglia di bloccaggio a un angolo di 45 gradi, allineare i connettori sul fondo della batteria con i connettori sul contenitore.
+.. Spingere la batteria verso il basso fino a udire uno scatto, quindi spostare la maniglia di blocco verso l'alto per fissare la batteria del controller al contenitore del controller.
 +
 
 TIP: Per assicurarsi che la batteria del controller sia inserita correttamente nel vassoio del controller E5XX, potrebbe essere necessario farla scorrere verso l'esterno e reinserirla. È sicuro quando si sente scattare in posizione e quando la maniglia di blocco non si sposta dalla posizione verticale quando si muove.
 
-... Reinstallare il coperchio superiore sul nuovo contenitore del controller facendolo scorrere in avanti fino a quando i coperchi del dispositivo di chiusura superiore non scattano.
+.. Reinstallare il coperchio superiore sul nuovo contenitore del controller facendolo scorrere in avanti fino a quando i coperchi del dispositivo di chiusura superiore non scattano.
 +
 Quando il dispositivo di chiusura scatta in posizione, la parte inferiore del dispositivo di chiusura si aggancia in uno slot metallico sul telaio.
-
-
 
 
 
@@ -76,7 +61,7 @@ Quando il dispositivo di chiusura scatta in posizione, la parte inferiore del di
 Installare il nuovo contenitore del controller nello shelf del controller.
 
 .Fasi
-. Far scorrere completamente il nuovo contenitore del controller nel vassoio del disco del controller Ruotare le leve di rilascio verso il centro del contenitore del controller per bloccarlo in posizione.
+. Far scorrere completamente il nuovo contenitore del controller nel vassoio del disco del controller Ruotare le maniglie di rilascio verso il centro del contenitore della centralina per bloccarlo in posizione.
 . Se il nuovo contenitore del controller dispone di un HIC Fibre Channel o di un HIC InfiniBand, installare i ricetrasmettitori SFP+ (Fibre Channel) o QSFP+ (InfiniBand) nel contenitore del controller e ricollegare i cavi host.
 +
 A seconda dell'HICS coinvolto nell'aggiornamento, potrebbe essere possibile riutilizzare il ricetrasmettitore SFP+ o i ricetrasmettitori QSFP+ rimossi dal vecchio contenitore del controller.
@@ -85,11 +70,7 @@ A seconda dell'HICS coinvolto nell'aggiornamento, potrebbe essere possibile riut
 +
 Se la configurazione del cablaggio dell'unità è identica a quella dei vecchi controller, utilizzare le etichette collegate ai cavi per ricollegare correttamente i cavi.
 
-+
-
-NOTE: Se si esegue l'aggiornamento ai controller E2700 da un modello precedente, la configurazione del cablaggio delle unità potrebbe essere diversa da quella utilizzata per i controller precedenti.
-
 
 
 .Quali sono le prossime novità?
-Se si stanno aggiornando i controller E2800 e E5700 e la funzione Drive Security è attivata, visitare il sito Web link:upgrade-unlock-drives-task.html["Sbloccare i dischi"]. In caso contrario, passare a. link:complete-upgrade-controllers-task.html["Aggiornamento completo del controller"].
+Se la funzione Drive Security è attivata, andare a link:upgrade-unlock-drives-task.html["Sbloccare i dischi"]. In caso contrario, andare a link:complete-upgrade-controllers-task.html["Aggiornamento completo del controller"].

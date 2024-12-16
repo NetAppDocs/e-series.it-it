@@ -10,7 +10,7 @@ summary: 'Se si crea manualmente un host, è necessario utilizzare l"utility HBA
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

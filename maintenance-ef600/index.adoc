@@ -11,58 +11,79 @@ summary: 'Manutenzione dell"hardware EF300 ed EF600'
 
 
 [role="lead"]
+Potrebbe essere necessario eseguire le procedure di manutenzione dell'hardware. In questa sezione sono riportate le procedure specifiche per la manutenzione dei componenti del sistema EF300 o EF600.
+
+Le procedure descritte in questa sezione presuppongono che il sistema EF300 o EF600 sia già stato implementato nell'ambiente e-Series.
+
+
+
+== Componenti del sistema
+
 Per i sistemi storage EF300 ed EF600, è possibile eseguire procedure di manutenzione sui seguenti componenti.
 
+[cols="25,65"]
+|===
 
 
-== Batterie
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-ef600/batteries-overview-requirements-concept.html["Batterie"]
+ a| 
 Una batteria è inclusa in un controller e conserva i dati memorizzati nella cache in caso di interruzione dell'alimentazione CA.
 
 
 
-== Controller
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-ef600/controllers-overview-supertask-concept.html["Controller"]
+ a| 
 Un controller è costituito da una scheda, firmware e software. Controlla i dischi e implementa le funzioni di Gestore di sistema di SANtricity.
 
 
 
-== DIMM
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-ef600/dimms-overview-supertask-concept.html["DIMM"]
+ a| 
 È necessario sostituire un modulo DIMM (Dual in-line Memory Module) quando è presente una mancata corrispondenza di memoria o se si verifica un guasto al modulo DIMM.
 
 
 
-== Dischi
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-ef600/drives-overview-supertask-concept.html["Dischi"]
+ a| 
 Un disco è un dispositivo che fornisce i supporti di storage fisici per i dati.
 
 
 
-== Ventole
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-ef600/fans-overview-requirements-replacing2-concept.html["Ventole"]
+ a| 
 Ogni shelf o shelf di controller EF300 o EF600 include cinque ventole per il raffreddamento del controller.
 
 
 
-== HICS (host Interface Card)
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-ef600/hics-overview-supertask-concept.html["HICS (host Interface Card)"]
+ a| 
 Una scheda di interfaccia host (HIC) deve essere installata all'interno di un contenitore del controller. Il controller EF600 include porte host sull'HIC opzionale. Le porte host integrate nell'HIC sono chiamate porte HIC.
 
 
 
-== Protocollo della porta host
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-ef600/hpp-overview-supertask-concept.html["Protocollo della porta host"]
+ a| 
 È possibile convertire il protocollo di un host in un protocollo diverso in modo da stabilire compatibilità e comunicazione.
 
 
 
-== Alimentatori
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-ef600/power-overview-requirements2-concept.html["Alimentatori"]
+ a| 
 Un alimentatore fornisce una fonte di alimentazione ridondante in uno shelf di controller.
 
 
 
-== Schede di espansione SAS
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-ef600/sas-overview-supertask-concept.html["Schede di espansione SAS"]
+ a| 
 È possibile installare una scheda di espansione SAS all'interno di un contenitore di controller. Il controller EF300 supporta l'espansione SAS.
+
+|===

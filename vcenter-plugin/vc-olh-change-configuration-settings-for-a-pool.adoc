@@ -11,7 +11,7 @@ summary: Modificare le impostazioni di un pool, inclusi nome, impostazioni degli
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -37,7 +37,7 @@ CAUTION: Per evitare prestazioni degradate, non attorcigliare, piegare, pizzicar
 La figura seguente è un esempio di shelf di controller E2812, shelf di controller E2824 o array flash EF280:
 
 +
-image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e2824 rimuovere la manutenzione del contenitore del controller e2800]
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[24 reinstallazione del controller dell'unità]
 
 +
 *(1)* _contenitore controller_
@@ -49,7 +49,7 @@ image::../media/28_dwg_e2824_remove_controller_canister_maint-e2800.gif[28 dwg e
 La figura seguente è un esempio di shelf di controller E2860:
 
 +
-image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[28 dwg e2860 add controller canister maintt e2800]
+image::../media/28_dwg_e2860_add_controller_canister_maint-e2800.gif[60 reinstallazione del controller dell'unità]
 
 +
 *(1)* _contenitore controller_

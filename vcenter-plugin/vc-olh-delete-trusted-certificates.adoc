@@ -10,7 +10,7 @@ summary: Eliminare uno o più certificati non più necessari.
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -11,7 +11,7 @@ summary: 'Aggiungere uno o più array di storage a un gruppo creato dall"utente.
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

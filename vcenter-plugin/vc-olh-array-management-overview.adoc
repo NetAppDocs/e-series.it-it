@@ -10,7 +10,7 @@ summary: Utilizzare la funzione Add/Discover per trovare e aggiungere gli array 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

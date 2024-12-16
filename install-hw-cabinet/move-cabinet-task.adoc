@@ -31,6 +31,6 @@ Molti cabinet sono popolati con i vassoi delle unità. Questa situazione comport
 . Rimuovere i dispositivi più in alto nel cabinet per assicurarsi che il cabinet venga trasportato in modo sicuro nella posizione finale. Ciò è particolarmente importante se una rampa presenta un'inclinazione o un calo superiore a 10 gradi.
 . Spostare il cabinet nella sua posizione permanente utilizzando il metodo corretto mostrato nella figura seguente. Assicurarsi di premere la parte anteriore del cabinet e non la parte posteriore.
 +
-image::../media/83004_01.gif[83004 01]
+image::../media/83004_01.gif[Avviso di spostamento dell'armadio]
 
 

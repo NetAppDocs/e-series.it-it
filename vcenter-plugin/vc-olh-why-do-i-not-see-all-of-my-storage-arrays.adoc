@@ -10,7 +10,7 @@ summary: 'Durante l"operazione Import Settings (Impostazioni di importazione), a
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

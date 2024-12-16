@@ -11,7 +11,7 @@ summary: 'Modificare la proprietà del controller preferita di un volume, in mod
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

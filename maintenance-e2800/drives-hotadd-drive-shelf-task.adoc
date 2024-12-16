@@ -21,7 +21,7 @@ A causa della complessità di questa procedura, si consiglia quanto segue:
 
 
 .A proposito di questa attività
-Questa procedura si applica all'aggiunta a caldo di uno shelf di dischi DE212C, DE224C o DE460C a E2800, E2800, EF280, E5700, E5700B, Shelf di controller EF570, EF300 o EF600.
+La presente procedura si applica all'aggiunta a caldo di uno shelf di dischi DE212C EF300, E2800B EF600 o DE460C E4000 a uno shelf di controller E2800, E5700B, EF570, E5700, DE224C o EF280.
 
 Questa procedura si applica agli shelf di dischi IOM12 e IOM12B.
 
@@ -67,21 +67,25 @@ La pagina Registro eventi visualizza i dati dell'evento.
 
 NOTE: Se si sono verificati eventi critici non risolti nelle due o tre settimane precedenti, interrompere la procedura e contattare il supporto tecnico. Continuare la procedura solo dopo aver risolto il problema.
 
-. Selezionare *hardware*.
-. Selezionare l'icona *IOM (ESM)*.
+. Se sono presenti IOM collegati all'hardware, completare la seguente procedura. In caso contrario, passare a. <<step2_install_drive_shelf,Fase 2: Installare lo shelf del disco e alimentare.>>
 +
-image::../media/sam1130_ss_hardware_iom_icon.gif[sam1130 ss icona iom hardware]
+.. Selezionare *hardware*.
+.. Selezionare l'icona *IOM (ESM)*.
++
+image::../media/sam1130_ss_hardware_iom_icon.gif[Icona IOM (ESM)]
 
 +
 Viene visualizzata la finestra di dialogo Shelf Component Settings (Impostazioni componenti shelf) con la scheda *IOM (ESM)* selezionata.
 
-. Assicurarsi che lo stato visualizzato per ogni IOM/ESM sia _ottimale_.
-. Fare clic su *Mostra altre impostazioni*.
-. Verificare che sussistano le seguenti condizioni:
+.. Assicurarsi che lo stato visualizzato per ogni IOM/ESM sia _ottimale_.
+.. Fare clic su *Mostra altre impostazioni*.
+.. Verificare che sussistano le seguenti condizioni:
 +
-** Il numero di ESM/IOM rilevati corrisponde al numero di ESM/IOM installati nel sistema e a quello di ogni shelf di dischi.
-** Entrambi gli ESM/IOM mostrano che la comunicazione è corretta.
-** La velocità di trasferimento dati è di 12 GB/s per gli shelf di dischi DE212C, DE224C e DE460C o di 6 GB/s per gli altri tray di dischi.
+*** Il numero di ESM/IOM rilevati corrisponde al numero di ESM/IOM installati nel sistema e a quello di ogni shelf di dischi.
+*** Entrambi gli ESM/IOM mostrano che la comunicazione è corretta.
+*** La velocità di trasferimento dati è di 12 GB/s per gli shelf di dischi DE212C, DE224C e DE460C o di 6 GB/s per gli altri tray di dischi.
+
+
 
 
 
@@ -109,18 +113,12 @@ NOTE: Consultare le istruzioni di installazione del modello in uso per la proced
 
 == Fase 3: Collegare il sistema via cavo
 
-Selezionare una delle seguenti opzioni:
-
-* <<Opzione 1: Collegamento dello shelf di dischi per E2800 o E5700>>
-* <<Opzione 2: Collegare lo shelf di dischi per EF300 o EF600>>
-
-
 Se si sta cablando uno shelf di controller meno recente a DE212C, DE224C o DE460, vedere https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2859057["Aggiunta di shelf di dischi IOM a uno shelf di controller E27XX, E56XX o EF560 esistente"^].
 
-
-
-=== Opzione 1: Collegamento dello shelf di dischi per E2800 o E5700
-
+[role="tabbed-block"]
+====
+.Connetti lo shelf del disco per E2800 o E5700
+--
 Collegare lo shelf di dischi al controller A, confermare lo stato IOM, quindi collegare lo shelf di dischi al controller B.
 
 .Fasi
@@ -129,10 +127,10 @@ Collegare lo shelf di dischi al controller A, confermare lo stato IOM, quindi co
 La figura seguente mostra un esempio di connessione tra un ulteriore shelf di dischi e il controller A. Per individuare le porte sul modello in uso, consultare la https://hwu.netapp.com/Controller/Index?platformTypeId=2357027["Hardware Universe"^].
 
 +
-image::../media/hot_e5700_0.png[e5700 a caldo 0]
+image::../media/hot_e5700_0.png[Collegamento dello shelf di dischi al controller]
 
 +
-image::../media/hot_e5700_1.png[e5700 caldo 1]
+image::../media/hot_e5700_1.png[Collegamento dello shelf di dischi al controller]
 
 . In Gestione sistema di SANtricity, fare clic su *hardware*.
 +
@@ -142,7 +140,7 @@ NOTE: A questo punto della procedura, si dispone di un solo percorso attivo per 
 . Scorrere verso il basso, se necessario, per visualizzare tutti gli shelf di dischi nel nuovo sistema storage. Se il nuovo shelf di dischi non viene visualizzato, risolvere il problema di connessione.
 . Selezionare l'icona *ESM/IOM* per il nuovo shelf di dischi.
 +
-image::../media/sam1130_ss_hardware_iom_icon.gif[sam1130 ss icona iom hardware]
+image::../media/sam1130_ss_hardware_iom_icon.gif[Icona ESM/IOM]
 
 +
 Viene visualizzata la finestra di dialogo *Shelf Component Settings* (Impostazioni componenti shelf).
@@ -161,7 +159,7 @@ Viene visualizzata la finestra di dialogo *Shelf Component Settings* (Impostazio
 La figura seguente mostra un esempio di connessione tra un ulteriore shelf di dischi e il controller B. Per individuare le porte sul modello in uso, consultare la https://hwu.netapp.com/Controller/Index?platformTypeId=2357027["Hardware Universe"^].
 
 +
-image::../media/hot_e5700_2.png[e5700 hot 2]
+image::../media/hot_e5700_2.png[Esempio di collegamento dello shelf di dischi]
 
 . Se non è già selezionata, selezionare la scheda *ESM/IOM* nella finestra di dialogo *Shelf Component Settings*, quindi selezionare *Mostra altre opzioni*. Verificare che la scheda di comunicazione sia *sì*.
 +
@@ -170,10 +168,9 @@ NOTE: Lo stato ottimale indica che l'errore di perdita di ridondanza associato a
 
 
 
-
-
-=== Opzione 2: Collegare lo shelf di dischi per EF300 o EF600
-
+--
+.Connetti lo shelf del disco per EF300 o EF600
+--
 Collegare lo shelf di dischi al controller A, confermare lo stato IOM, quindi collegare lo shelf di dischi al controller B.
 
 .Prima di iniziare
@@ -183,17 +180,17 @@ Collegare lo shelf di dischi al controller A, confermare lo stato IOM, quindi co
 .Fasi
 . Scollegare entrambi i cavi del controller Lato A dalle porte IOM12 una e due dell'ultimo shelf precedente dello stack, quindi collegarli alle porte IOM12 del nuovo shelf una e due.
 +
-image::../media/de224c_sides.png[de224c lati]
+image::../media/de224c_sides.png[Scollegare i cavi dal controller A e collegarli al nuovo ripiano]
 
 . Collegare i cavi alle porte IOM12 lato A tre e quattro dal nuovo shelf alle porte IOM12 dell'ultimo shelf precedenti una e due.
 +
 La figura seguente mostra un esempio di connessione per un lato tra un ulteriore shelf di dischi e l'ultimo shelf precedente. Per individuare le porte sul modello in uso, consultare la https://hwu.netapp.com/Controller/Index?platformTypeId=2357027["Hardware Universe"^].
 
 +
-image::../media/hot_ef_0.png[ef a caldo 0]
+image::../media/hot_ef_0.png[Esempio di cablaggio dello shelf di dischi]
 
 +
-image::../media/hot_ef_1.png[ef a caldo 1]
+image::../media/hot_ef_1.png[Esempio di cablaggio dello shelf di dischi]
 
 . In Gestione sistema di SANtricity, fare clic su *hardware*.
 +
@@ -203,7 +200,7 @@ NOTE: A questo punto della procedura, si dispone di un solo percorso attivo per 
 . Scorrere verso il basso, se necessario, per visualizzare tutti gli shelf di dischi nel nuovo sistema storage. Se il nuovo shelf di dischi non viene visualizzato, risolvere il problema di connessione.
 . Selezionare l'icona *ESM/IOM* per il nuovo shelf di dischi.
 +
-image::../media/sam1130_ss_hardware_iom_icon.gif[sam1130 ss icona iom hardware]
+image::../media/sam1130_ss_hardware_iom_icon.gif[Icona ESM/IOM]
 
 +
 Viene visualizzata la finestra di dialogo *Shelf Component Settings* (Impostazioni componenti shelf).
@@ -222,7 +219,7 @@ Viene visualizzata la finestra di dialogo *Shelf Component Settings* (Impostazio
 La figura seguente mostra un esempio di collegamento per il lato B tra un ulteriore shelf di dischi e l'ultimo shelf precedente. Per individuare le porte sul modello in uso, consultare la https://hwu.netapp.com/Controller/Index?platformTypeId=2357027["Hardware Universe"^].
 
 +
-image::../media/hot_ef_2.png[ef 2 a caldo]
+image::../media/hot_ef_2.png[Esempio di cablaggio dello shelf di dischi]
 
 . Se non è già selezionata, selezionare la scheda *ESM/IOM* nella finestra di dialogo *Shelf Component Settings*, quindi selezionare *Mostra altre opzioni*. Verificare che la scheda di comunicazione sia *sì*.
 +
@@ -231,6 +228,51 @@ NOTE: Lo stato ottimale indica che l'errore di perdita di ridondanza associato a
 
 
 
+--
+.Connetti lo shelf del disco per E4000
+--
+Collegare lo shelf di dischi al controller A, confermare lo stato IOM, quindi collegare lo shelf di dischi al controller B.
+
+.Fasi
+. Collegare lo shelf di dischi al controller A.
++
+image::../media/hot_e4000_cabling_1.png[Cablaggio dello shelf di dischi]
+
+. In Gestione sistema di SANtricity, fare clic su *hardware*.
++
+
+NOTE: A questo punto della procedura, si dispone di un solo percorso attivo per lo shelf del controller.
+
+. Scorrere verso il basso, se necessario, per visualizzare tutti gli shelf di dischi nel nuovo sistema storage. Se il nuovo shelf di dischi non viene visualizzato, risolvere il problema di connessione.
+. Selezionare l'icona *ESM/IOM* per il nuovo shelf di dischi.
++
+image::../media/sam1130_ss_hardware_iom_icon.gif[Icona hardware IOM]
+
++
+Viene visualizzata la finestra di dialogo *Shelf Component Settings* (Impostazioni componenti shelf).
+
+. Selezionare la scheda *ESM/IOM* nella finestra di dialogo *Shelf Component Settings* (Impostazioni componenti shelf).
+. Selezionare *Mostra altre opzioni* e verificare quanto segue:
++
+** IOM/ESM A è elencato.
+** La velocità attuale dei dati è di 12 Gbps per uno shelf di dischi SAS-3.
+** Le comunicazioni con la scheda sono corrette.
+
+
+. Scollegare tutti i cavi di espansione dal controller B.
+. Collegare lo shelf di dischi al controller B.
++
+image::../media/hot_e4000_cabling_2.png[Cablaggio dello shelf di dischi]
+
+. Se non è già selezionata, selezionare la scheda *ESM/IOM* nella finestra di dialogo *Shelf Component Settings*, quindi selezionare *Mostra altre opzioni*. Verificare che la scheda di comunicazione sia *sì*.
++
+
+NOTE: Lo stato ottimale indica che l'errore di perdita di ridondanza associato al nuovo shelf di dischi è stato risolto e che il sistema di storage è stabilizzato.
+
+
+
+--
+====
 
 
 == Fase 4: Completare l'aggiunta a caldo

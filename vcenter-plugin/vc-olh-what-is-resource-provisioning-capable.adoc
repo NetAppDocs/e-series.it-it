@@ -10,7 +10,7 @@ summary: Il provisioning delle risorse è una funzionalità disponibile negli ar
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

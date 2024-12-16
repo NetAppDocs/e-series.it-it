@@ -11,7 +11,7 @@ summary: 'Se non è più necessario l"accesso i/o a un volume, è possibile annu
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

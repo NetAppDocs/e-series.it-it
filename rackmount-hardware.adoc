@@ -6,6 +6,8 @@ summary: 'Montare l"hardware in rack.'
 ---
 = Hardware per il montaggio in rack
 :allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
 
 
 [role="lead"]

@@ -60,7 +60,7 @@ Il file viene salvato nella cartella Download del browser con il nome *support-d
 . Da Gestore di sistema di SANtricity, determinare quale filtro a carboni attivi della ventola si è guastato.
 +
 .. Selezionare *hardware*.
-.. Guardare la ventola image:../media/sam1130_ss_hardware_fan_icon_maint-e5700.gif[""] A destra degli elenchi a discesa *Shelf* per determinare quale shelf presenta il contenitore della ventola guasto.
+.. Osservare l'icona della ventola image:../media/sam1130_ss_hardware_fan_icon_maint-e5700.gif["Icona ventola"]a destra degli elenchi a discesa *ripiano* per determinare quale ripiano presenta il filtro della ventola guasto.
 +
 In caso di guasto di un componente, questa icona è rossa.
 
@@ -84,7 +84,7 @@ CAUTION: Se il secondo contenitore della ventola nello shelf non ha lo stato *ot
 È necessario sostituire il filtro a carboni attivi della ventola con il LED attenzione acceso.
 
 +
-image::../media/28_dwg_e2860_de460c_single_fan_canister_with_led_callout_maint-e5700.gif[28 dwg e2860 de460c canister a ventola singola con didascalia a led principale e5700]
+image::../media/28_dwg_e2860_de460c_single_fan_canister_with_led_callout_maint-e5700.gif[LED di attenzione]
 
 +
 *(1)* _LED attenzione_. Se questo LED viene visualizzato come *giallo fisso*, significa che la ventola è guasta.
@@ -107,14 +107,14 @@ Conservare tutto il materiale di imballaggio da utilizzare quando si restituisce
 
 . Premere la linguetta arancione per rilasciare la maniglia del filtro a carboni attivi della ventola.
 +
-image::../media/28_dwg_e2860_de460c_single_fan_canister_with_orange_tab_callout_maint-e5700.gif[28 dwg e2860 de460c canister a ventola singola con linguetta arancione, didascalia principale e5700]
+image::../media/28_dwg_e2860_de460c_single_fan_canister_with_orange_tab_callout_maint-e5700.gif[Premere la linguetta arancione per rilasciare la maniglia del contenitore della ventola]
 
 +
 *(1)* _linguetta che si preme per rilasciare la maniglia del filtro a carboni attivi della ventola._
 
 . Utilizzare la maniglia del filtro a carboni attivi per estrarre il filtro a carboni attivi dal ripiano.
 +
-image::../media/28_dwg_e2860_de460c_fan_canister_handle_with_callout_maint-e5700.gif[28 dwg e2860 de460c maniglia del contenitore della ventola con didascalia principale e5700]
+image::../media/28_dwg_e2860_de460c_fan_canister_handle_with_callout_maint-e5700.gif[Utilizzare la maniglia per estrarre il filtro a carboni attivi della ventola]
 
 +
 *(1)* _maniglia per estrarre il contenitore della ventola._

@@ -11,7 +11,7 @@ summary: Rimuovere uno o più gruppi di array di storage non più necessari.
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

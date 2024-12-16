@@ -11,7 +11,7 @@ summary: Modificare il nome di un workload e visualizzarne il tipo di applicazio
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

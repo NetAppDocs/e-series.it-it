@@ -36,7 +36,7 @@ Attenersi alle seguenti regole per evitare di danneggiare le unità dello storag
 ** Non forzare mai un'unità in uno shelf e esercitare una pressione leggera e decisa per inserire completamente il dispositivo di chiusura dell'unità.
 ** Posizionare i dischi su superfici imbottite e non impilare mai i dischi uno sopra l'altro.
 ** Non urtare i dischi contro altre superfici.
-** Prima di rimuovere un'unità da uno shelf, sganciare la maniglia e attendere 30 secondi affinché l'unità si spenda.
+** Prima di rimuovere un'unità da uno shelf, sganciare la maniglia e attendere 60 secondi affinché l'unità si spenda.
 ** Utilizzare sempre imballaggi approvati per la spedizione delle unità.
 
 
@@ -52,10 +52,10 @@ I campi magnetici possono distruggere tutti i dati presenti sul disco e causare 
 
 Gli shelf standard da 24 dischi richiedono uno scaglionamento delle unità. La figura seguente mostra come i dischi sono numerati in ogni shelf (il pannello anteriore dello shelf è stato rimosso).
 
-image::../media/ef600_drives_numbered.png[dischi ef600 numerati]
+image::../media/ef600_drives_numbered.png[Numerazione dei dischi in uno shelf da 24 dischi]
 
 Quando si inseriscono meno di 24 dischi in un controller EF300 o EF600, è necessario alternare le due metà del controller. Partendo dall'estrema sinistra e spostandosi verso destra, posizionare i dischi in uno alla volta.
 
 La figura seguente mostra come eseguire lo sfalsamento dei dischi tra le due metà.
 
-image::../media/ef600_drives_staggering.png[ef600 offre un'incredibile efficienza]
+image::../media/ef600_drives_staggering.png[Scaglionamento dei dischi in uno shelf da 24 dischi]

@@ -10,7 +10,7 @@ summary: Visualizzare lo stato del sistema dal plug-in di storage per vCenter o 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

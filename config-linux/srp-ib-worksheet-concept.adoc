@@ -13,7 +13,7 @@ summary: Utilizzare questo foglio di lavoro per registrare le informazioni di co
 [role="lead"]
 È possibile generare e stampare un PDF di questa pagina, quindi utilizzare il seguente foglio di lavoro per registrare le informazioni di configurazione dello storage SRP su InfiniBand. Queste informazioni sono necessarie per eseguire le attività di provisioning.
 
-image::../media/port_identifiers_ib_srp.gif[identificatori di porta ib srp]
+image::../media/port_identifiers_ib_srp.gif[Identificatori di porta SRB over IB]
 
 
 

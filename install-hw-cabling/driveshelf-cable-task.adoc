@@ -1,7 +1,7 @@
 ---
 permalink: install-hw-cabling/driveshelf-cable-task.html 
 sidebar: sidebar 
-keywords: cabling, cables, drive shelf cabling, controller shelf cabling, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C 
+keywords: cabling, cables, drive shelf cabling, controller shelf cabling, E-Series, eseries, E2800, E5700, EF300, EF600, E4000, DE212C, DE224C, DE460C 
 summary: 'Collegare ciascun controller nello shelf di controller a un modulo i/o (IOM) in uno shelf di dischi.' 
 ---
 = Cablaggio dello shelf di dischi
@@ -29,34 +29,27 @@ Se si sta cablando uno shelf di controller meno recente a DE212C, DE224C o DE460
 
 Le seguenti informazioni si applicano al cablaggio di E2800, E2800, EF280, E5700, EF5700B, Oppure EF570 su uno shelf di dischi DE212C, DE224C o DE460.
 
-
-
-=== Cablaggio di uno shelf da 12 o 24 dischi
-
+[role="tabbed-block"]
+====
+.shelf da 12 dischi o 24 dischi
+--
 È possibile collegare lo shelf del controller a uno o più shelf da 12 o 24 dischi.
 
 L'immagine seguente mostra una rappresentazione dello shelf del controller e degli shelf di dischi. Per individuare le porte sul modello in uso, vedere https://hwu.netapp.com/Controller/Index?platformTypeId=2357027["Hardware Universe"^].
 
+image::../media/12_24_cabling.png[Uno shelf di controller e shelf da 12 o 24 dischi]
 
-
-==== Uno shelf di controller e shelf da 12 o 24 dischi
-
-image::../media/12_24_cabling.png[12 24 cablaggio]
-
-
-
-=== Cablaggio di uno shelf da 60 dischi
-
+--
+.shelf da 60 dischi
+--
 È possibile collegare lo shelf del controller a uno o più shelf da 60 dischi.
 
 L'immagine seguente mostra una rappresentazione dello shelf del controller e degli shelf di dischi. Per individuare le porte sul modello in uso, vedere https://hwu.netapp.com/Controller/Index?platformTypeId=2357027["Hardware Universe"^].
 
+image::../media/60_cabling.png[Uno shelf di controller e 60 shelf di dischi]
 
-
-==== Uno shelf di controller e 60 shelf di dischi
-
-image::../media/60_cabling.png[60 cablaggio]
-
+--
+====
 
 
 == Cablaggio EF300 ed EF600
@@ -66,30 +59,47 @@ Le seguenti informazioni si applicano al cablaggio di uno shelf di controller EF
 .Prima di iniziare
 Prima di collegare un dispositivo EF300 o EF600, assicurarsi che il firmware sia aggiornato alla versione più recente. Per aggiornare il firmware, seguire le istruzioni in link:../upgrade-santricity/index.html["Aggiornamento del sistema operativo SANtricity"^].
 
-
-
-=== Cablaggio di uno shelf da 12 o 24 dischi
-
+[role="tabbed-block"]
+====
+.shelf da 12 dischi o 24 dischi
+--
 È possibile collegare lo shelf del controller a uno o più shelf da 12 o 24 dischi.
 
 L'immagine seguente mostra una rappresentazione dello shelf del controller e degli shelf di dischi. Per individuare le porte sul modello in uso, vedere https://hwu.netapp.com/Controller/Index?platformTypeId=2357027["Hardware Universe"^].
 
+image::../media/ef_to_de224c_four_shelves.png[Uno shelf di controller e shelf da 12 o 24 dischi]
 
-
-==== Uno shelf di controller e shelf da 12 o 24 dischi
-
-image::../media/ef_to_de224c_four_shelves.png[da ef a de224c quattro shelf]
-
-
-
-=== Cablaggio di uno shelf da 60 dischi
-
+--
+.shelf da 60 dischi
+--
 È possibile collegare lo shelf del controller a uno o più shelf da 60 dischi.
 
 L'immagine seguente mostra una rappresentazione dello shelf del controller e degli shelf di dischi. Per individuare le porte sul modello in uso, vedere https://hwu.netapp.com/Controller/Index?platformTypeId=2357027["Hardware Universe"^].
 
+image::../media/ef_to_de460c.png[Uno shelf di controller e 60 shelf di dischi]
+
+--
+====
 
 
-==== Uno shelf di controller e 60 shelf di dischi
+== Cablaggio E4000
 
-image::../media/ef_to_de460c.png[da ef a de460c]
+Le seguenti informazioni si applicano al cablaggio di uno shelf di controller E4000 a uno shelf di dischi DE212C, DE224C o DE460.
+
+[role="tabbed-block"]
+====
+.shelf da 12 dischi
+--
+È possibile collegare lo shelf del controller a uno o più shelf da 12 dischi.
+
+image::../media/e4012_cabling.png[Uno shelf di controller e uno shelf da 12 dischi]
+
+--
+.shelf da 60 dischi
+--
+È possibile collegare lo shelf del controller a uno o più shelf da 60 dischi.
+
+image::../media/e4060_cabling.png[Uno shelf di controller e 60 shelf di dischi]
+
+--
+====

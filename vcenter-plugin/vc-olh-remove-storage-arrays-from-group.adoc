@@ -11,7 +11,7 @@ summary: Rimuovere uno o più array di storage gestiti da un gruppo se non si de
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

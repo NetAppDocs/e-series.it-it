@@ -10,7 +10,7 @@ summary: La password viene utilizzata per crittografare e decrittare il file del
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

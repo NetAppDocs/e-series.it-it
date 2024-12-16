@@ -10,7 +10,7 @@ summary: Un controllo di ridondanza determina se i dati su un volume in un pool 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

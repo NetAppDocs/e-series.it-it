@@ -1,19 +1,62 @@
 ---
 sidebar: sidebar 
 permalink: whats-new.html 
-keywords: whats new, new features, SANtricity 11.73 
+keywords: whats new, new features, SANtricity 11.90 
 summary: Nuove funzionalità di SANtricity OS. 
 ---
 = Novità di SANtricity OS
 :allow-uri-read: 
 :experimental: 
 :icons: font
-:imagesdir: ../media/
+:imagesdir: ./media/
 
 
 [role="lead"]
-La seguente tabella descrive le nuove funzionalità di SANtricity OS 11.8 per la gestione integrata dei controller EF300, EF600, E2800/EF280 e E5700/EF570.
+La tabella seguente descrive le nuove funzioni delle ultime versioni del sistema operativo SANtricity per la gestione integrata dei controller E4000, EF300, EF600, E2800/EF280 e E5700/EF570.
 
+
+
+== Nuove funzionalità della versione 11.90
+
+[cols="35h,~"]
+|===
+| Nuova funzionalità | Descrizione 
+
+
+ a| 
+Nuovo modello di sistema storage – E4000
+ a| 
+Questa release introduce il sistema di storage a basso costo E4000. E4000 supporta unità da 12 e 60 GB e una singola scheda di interfaccia host (HIC) per controller. Per la versione iniziale, le schede di interfaccia host supportate includono iSCSI e Fibre Channel. In Unified Manager è possibile visualizzare e gestire i sistemi storage E4000 e altri sistemi storage e-Series.
+
+
+
+ a| 
+Maggiore capacità per Dynamic Disk Pools
+ a| 
+La capacità dei Dynamic Disk Pools (DDP) è stata aumentata a 12 PB ogniqualvolta la capacità di ciascuno dei singoli dischi del pool è superiore a 23 TB. Se la capacità dei singoli dischi è inferiore a 23 TB, la capacità DDP è 6 PB.
+
+
+
+ a| 
+Impostazioni di scansione dei supporti predefinite aumentate
+ a| 
+La velocità di scansione predefinita dei supporti è stata aumentata a 120 giorni.
+
+
+
+ a| 
+Chiave privata ora accettata per la gestione esterna delle chiavi
+ a| 
+Il file CSR (Certificate Signing Request) generato esternamente tramite coppie di chiavi private e pubbliche può ora essere importato tramite System Manager.
+
+
+
+ a| 
+La funzione di blocco dell'accesso è ora disponibile per i servizi Web
+ a| 
+Configurabile solo tramite l'API REST, è ora disponibile una nuova impostazione di blocco dell'accesso per i servizi Web incorporati e proxy.
+
+|===
 
 
 == Nuove funzioni della versione 11.80.1R1

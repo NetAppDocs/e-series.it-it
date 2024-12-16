@@ -126,7 +126,7 @@ CAUTION: Per evitare prestazioni degradate, non attorcigliare, piegare, pizzicar
 Il LED verde cache Active (cache attiva) sul retro del controller è acceso quando i dati memorizzati nella cache devono essere scritti sui dischi. Prima di rimuovere il contenitore del controller, è necessario attendere che questo LED si spenga.
 
 +
-image::../media/e5700_ib_hic_w_cache_led_callouts_maint-e5700.gif[e5700 ib hic w cache led callout maintt e5700]
+image::../media/e5700_ib_hic_w_cache_led_callouts_maint-e5700.gif[LED cache attiva sul controller E5700]
 
 +
 *(1)* _LED cache attiva_
@@ -136,7 +136,7 @@ image::../media/e5700_ib_hic_w_cache_led_callouts_maint-e5700.gif[e5700 ib hic w
 La figura seguente è un esempio di shelf di controller E5724:
 
 +
-image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e2824 rimuovere la manutenzione del contenitore del controller e5700]
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[Rimuovere il contenitore del controller]
 
 +
 *(1)* _contenitore controller_
@@ -148,7 +148,7 @@ image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e
 La figura seguente è un esempio di shelf di controller E5760:
 
 +
-image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[28 dwg e2860 add controller canister maintt e5700]
+image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[Rimuovere il contenitore del controller]
 
 +
 *(1)* _contenitore controller_
@@ -185,7 +185,7 @@ CAUTION: *Possibile perdita di accesso ai dati* -- non installare mai un HIC in 
 Se questo LED verde è acceso, il controller sta ancora utilizzando l'alimentazione a batteria. Prima di rimuovere qualsiasi componente, è necessario attendere che il LED si spenga.
 
 +
-image::../media/28_dwg_e2800_internal_cache_active_led_maint-e5700.gif[28 dwg e2800 cache interna active led maintent e5700]
+image::../media/28_dwg_e2800_internal_cache_active_led_maint-e5700.gif[LED cache interna attiva]
 
 +
 *(1)* _LED cache interna attiva_
@@ -204,7 +204,7 @@ Fare attenzione a non graffiare o urtare i componenti sul fondo dell'HIC o sulla
 CAUTION: *Possibili danni alle apparecchiature* -- fare molta attenzione a non stringere il connettore a nastro dorato dei LED del controller tra l'HIC e le viti a testa zigrinata.
 
 +
-image::../media/28_dwg_e2800_hic_thumbscrews_maint-e5700.gif[28 dwg e2800 hic thumbwaves maintt e5700]
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e5700.gif[Installare l'HIC sulla scheda dell'unità di comando]
 
 +
 *(1)* _scheda di interfaccia host_
@@ -218,7 +218,7 @@ Non utilizzare un cacciavite per evitare di serrare eccessivamente le viti.
 
 . Utilizzando un cacciavite Phillips n. 1, fissare la nuova piastra anteriore HIC al contenitore del controller con le quattro viti rimosse in precedenza.
 +
-image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e5700.gif[28 viti hic faceplace dwg e2800 per la manutenzione e5700]
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e5700.gif[Installare la mascherina sul controller]
 
 
 
@@ -235,7 +235,7 @@ Dopo aver installato l'HIC, reinstallare il contenitore del controller nello she
 La figura seguente è un esempio di shelf di controller E5724:
 
 +
-image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e2824 rimuovere la manutenzione del contenitore del controller e5700]
+image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[Installare il contenitore della centralina]
 
 +
 *(1)* _contenitore controller_
@@ -247,7 +247,7 @@ image::../media/28_dwg_e2824_remove_controller_canister_maint-e5700.gif[28 dwg e
 La figura seguente è un esempio di shelf di controller E5760:
 
 +
-image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[28 dwg e2860 add controller canister maintt e5700]
+image::../media/28_dwg_e2860_add_controller_canister_maint-e5700.gif[Installare il contenitore della centralina]
 
 +
 *(1)* _contenitore controller_
@@ -285,7 +285,7 @@ Quando la comunicazione con l'altro controller viene ristabilita:
 +
 ** Il display a sette segmenti mostra la sequenza ripetuta *OS*, *OL*, *_blank_* per indicare che il controller è offline.
 ** Il LED di attenzione di colore ambra rimane acceso.
-** I LED del collegamento host potrebbero essere accesi, lampeggianti o spenti, a seconda dell'interfaccia host.image:../media/e5700_hic_3_callouts_maint-e5700.gif[""]
+** I LED del collegamento host potrebbero essere accesi, lampeggianti o spenti, a seconda dell'interfaccia host. image:../media/e5700_hic_3_callouts_maint-e5700.gif["E5700 LED del controller\""]
 +
 *(1)* _LED link host_
 

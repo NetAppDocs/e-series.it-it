@@ -10,7 +10,7 @@ summary: Per visualizzare e gestire le risorse di storage nel plug-in Storage pe
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

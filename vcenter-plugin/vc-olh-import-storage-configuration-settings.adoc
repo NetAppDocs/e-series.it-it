@@ -11,7 +11,7 @@ summary: Importare la configurazione dello storage da uno storage array ad altri
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

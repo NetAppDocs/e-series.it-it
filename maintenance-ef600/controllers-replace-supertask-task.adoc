@@ -145,7 +145,7 @@ Poiché è necessario rimuovere l'HIC dal contenitore del controller guasto, è 
 
 . Premere le maniglie su entrambi i lati del controller e tirare indietro fino a quando non si sgancia dallo shelf.
 +
-image::../media/remove_controller_5.png[rimuovere il controller 5]
+image::../media/remove_controller_5.png[Premere le maniglie per rimuovere il controller]
 
 . Utilizzando due mani e le maniglie, estrarre il contenitore del controller dallo scaffale. Quando la parte anteriore del controller è libera dal contenitore, estrarlo completamente con due mani.
 +
@@ -153,7 +153,7 @@ image::../media/remove_controller_5.png[rimuovere il controller 5]
 CAUTION: Utilizzare sempre due mani per sostenere il peso di un contenitore del controller.
 
 +
-image::../media/remove_controller_6.png[rimuovere il controller 6]
+image::../media/remove_controller_6.png[Utilizzare due mani per sostenere il peso del controller durante la rimozione]
 
 . Posizionare il contenitore del controller su una superficie piana e priva di elettricità statica.
 
@@ -169,10 +169,10 @@ Rimuovere la batteria dal contenitore del controller guasto in modo da poterla i
 . Individuare la scheda 'PRESS' sul lato del controller.
 . Sganciare la batteria premendo la linguetta e premendo l'alloggiamento della batteria.
 +
-image::../media/batt_3.png[batt 3]
+image::../media/batt_3.png["Premere la linguetta per sbloccare la batteria]
 
-. Premere delicatamente il connettore che ospita il cablaggio della batteria. Tirare verso l'alto, scollegando la batteria dalla scheda.image:../media/batt_2.png[""]
-. Estrarre la batteria dal controller e posizionarla su una superficie piana e priva di scariche elettrostatiche.image:../media/batt_4.png[""]
+. Premere delicatamente il connettore che ospita il cablaggio della batteria. Tirare verso l'alto, scollegando la batteria dalla scheda.image:../media/batt_2.png["Rimuovere il connettore che ospita il cablaggio della batteria"]
+. Estrarre la batteria dal controller e posizionarla su una superficie piana e priva di elettricità statica.image:../media/batt_4.png["Estrarre la batteria dalla centralina"]
 
 
 
@@ -184,7 +184,7 @@ Se il contenitore del controller include un HIC, è necessario rimuovere l'HIC d
 .Fasi
 . Utilizzando un cacciavite Phillips, rimuovere le due viti che fissano la mascherina HIC al contenitore del controller.
 +
-image::../media/hic_2.png[hic 2]
+image::../media/hic_2.png[Rimuovere la piastra anteriore dell'HIC]
 
 +
 
@@ -193,7 +193,7 @@ NOTE: L'immagine riportata sopra è un esempio, l'aspetto dell'HIC potrebbe diff
 . Rimuovere la piastra anteriore dell'HIC.
 . Utilizzando le dita o un cacciavite Phillips, allentare la singola vite a testa zigrinata che fissa l'HIC alla scheda del controller.
 +
-image::../media/hic_3.png[hic 3]
+image::../media/hic_3.png[Allentare le viti a testa zigrinata HIC]
 
 +
 
@@ -205,7 +205,7 @@ NOTE: L'HIC viene fornito con tre posizioni delle viti sulla parte superiore, ma
 CAUTION: Fare attenzione a non graffiare o urtare i componenti sul fondo dell'HIC o sulla parte superiore della scheda del controller.
 
 +
-image::../media/hic_4.png[hic 4]
+image::../media/hic_4.png[Rimuovere l'HIC dalla scheda del controller]
 
 . Posizionare l'HIC su una superficie piana e priva di scariche elettrostatiche.
 
@@ -225,12 +225,12 @@ Rimuovere l'alimentatore per installarlo nel nuovo controller.
 
 . Individuare la linguetta a destra dell'alimentatore e spingerla verso l'alimentatore.
 +
-image::../media/psup_2.png[psup 2]
+image::../media/psup_2.png[Premere la linguetta accanto all'alimentatore]
 
 . Individuare la maniglia sulla parte anteriore dell'alimentatore.
 . Utilizzare la maniglia per estrarre l'alimentatore dal sistema.
 +
-image::../media/psup_3.png[psup 3]
+image::../media/psup_3.png[Estrarre l'alimentatore]
 
 +
 
@@ -257,10 +257,10 @@ NOTE: Una tacca nella parte inferiore del DIMM consente di allineare il DIMM dur
 NOTE: Tenere il modulo DIMM per i bordi in modo da evitare di esercitare pressione sui componenti della scheda a circuiti stampati del modulo DIMM.
 
 +
-image::../media/dimm_2.png[dimm 2]
+image::../media/dimm_2.png[Premere la linguetta dell'estrattore verso il basso sull'alloggiamento DIMM]
 
 +
-image::../media/dimim_3.png[dimim 3]
+image::../media/dimim_3.png[Rimuovere la scheda DIMM]
 
 
 
@@ -273,7 +273,7 @@ Rimuovere le ventole in modo da poterle installare nel nuovo controller.
 .Fasi
 . Sollevare delicatamente la ventola dal controller.
 +
-image::../media/fan_2.png[ventola 2]
+image::../media/fan_2.png[Rimuovere la ventola]
 
 . Ripetere l'operazione fino a rimuovere tutte le ventole.
 
@@ -301,7 +301,7 @@ Installare la batteria nel contenitore del controller di ricambio.
 
 . Inserire la batteria nel controller allineando l'alloggiamento della batteria con i fermi metallici sul lato del controller.
 +
-image::../media/batt_5.png[batt 5]
+image::../media/batt_5.png[Installare la batteria]
 
 +
 La batteria scatta in posizione.
@@ -322,7 +322,7 @@ Se è stato rimosso un HIC dal contenitore del controller originale, è necessar
 Fare attenzione a non graffiare o urtare i componenti sul fondo dell'HIC o sulla parte superiore della scheda del controller.
 
 +
-image::../media/hic_7.png[hic 7]
+image::../media/hic_7.png[Installare HIC]
 
 +
 
@@ -338,7 +338,7 @@ CAUTION: *Possibili danni alle apparecchiature* -- fare molta attenzione a non s
 Non utilizzare un cacciavite per evitare di serrare eccessivamente la vite.
 
 +
-image::../media/hic_3.png[hic 3]
+image::../media/hic_3.png[Serrare manualmente le viti ad alette HIC sulla centralina]
 
 +
 
@@ -363,7 +363,7 @@ Gli alimentatori sono dotati di chiavi e possono essere installati in un solo mo
 CAUTION: Non esercitare una forza eccessiva quando si inserisce l'alimentatore nel sistema, poiché si potrebbe danneggiare il connettore.
 
 +
-image::../media/psup_4.png[psup 4]
+image::../media/psup_4.png[Installare l'alimentatore nel controller]
 
 
 
@@ -380,7 +380,7 @@ La tacca tra i pin del DIMM deve allinearsi con la linguetta dello zoccolo.
 
 . Inserire il DIMM nello slot.
 +
-image::../media/dimm_4.png[dimm 4]
+image::../media/dimm_4.png[Installare il DIMM nell'alloggiamento del controller]
 
 +
 Il DIMM si inserisce saldamente nello slot, ma dovrebbe essere inserito facilmente. In caso contrario, riallineare il DIMM con lo slot e reinserirlo.
@@ -395,7 +395,7 @@ NOTE: Esaminare visivamente il DIMM per verificare che sia allineato in modo uni
 NOTE: I DIMM si inseriscono saldamente. Potrebbe essere necessario premere delicatamente su un lato alla volta e fissare ciascuna linguetta singolarmente.
 
 +
-image::../media/dimm_5.png[dimm 5]
+image::../media/dimm_5.png[Premere i fermi sull'alloggiamento DIMM per fissarlo]
 
 
 
@@ -408,10 +408,10 @@ Installare le ventole nel contenitore del controller sostitutivo.
 .Fasi
 . Far scorrere la ventola fino in fondo nel controller sostitutivo.
 +
-image::../media/fan_3.png[ventola 3]
+image::../media/fan_3.png[Montare la ventola nella centralina]
 
 +
-image::../media/fan_3_a.png[ventola 3 a]
+image::../media/fan_3_a.png[Montare la ventola nella centralina]
 
 . Ripetere l'operazione fino a installare tutte le ventole.
 
@@ -430,7 +430,7 @@ Infine, installare il nuovo contenitore del controller nello shelf del controlle
 NOTE: Il controller scatta in maniera udibile quando viene installato correttamente nello shelf.
 
 +
-image::../media/remove_controller_7.png[rimuovere il controller 7]
+image::../media/remove_controller_7.png[Installare il controller nello shelf]
 
 . Installare gli SFP dal controller originale nelle porte host del nuovo controller, se installati nel controller originale, e ricollegare tutti i cavi.
 +

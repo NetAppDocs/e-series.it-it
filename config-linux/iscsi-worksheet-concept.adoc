@@ -19,7 +19,7 @@ summary: Utilizzare questo foglio di lavoro per registrare le informazioni di co
 
 Le configurazioni consigliate sono costituite da due porte iniziatore e quattro porte di destinazione con una o più VLAN.
 
-image::../media/50001_01_conf-lin.gif[50001 01 conf lin]
+image::../media/50001_01_conf-lin.gif[Configurazione di rete iSCSI]
 
 
 

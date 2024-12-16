@@ -11,40 +11,58 @@ summary: 'Manutenzione dell"hardware E5700'
 
 
 [role="lead"]
+Potrebbe essere necessario eseguire le procedure di manutenzione dell'hardware. In questa sezione sono riportate le procedure specifiche per la manutenzione dei componenti del sistema E5700.
+
+Le procedure descritte in questa sezione presuppongono che il sistema E5700 sia già stato implementato nell'ambiente e-Series.
+
+
+
+== Componenti del sistema
+
 Per il sistema storage E5700, è possibile eseguire procedure di manutenzione sui seguenti componenti.
 
+[cols="25,65"]
+|===
 
 
-== Batterie
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-e5700/batteries-intro-concept.html["Batterie"]
+ a| 
 Una batteria è inclusa in un contenitore del controller e conserva i dati memorizzati nella cache in caso di interruzione dell'alimentazione CA.
 
 
 
-== Controller
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-e5700/controllers-overview-concept.html["Controller"]
+ a| 
 Un controller è costituito da una scheda, firmware e software. Controlla i dischi e implementa le funzioni di System Manager.
 
 
 
-== Canister
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-e5700/canisters-overview-supertask-concept.html["Canister"]
+ a| 
 I contenitori sono costituiti da tre tipi diversi: Contenitori per ventole di alimentazione (alimentatori) che forniscono una fonte di alimentazione ridondante e un raffreddamento adeguato in uno shelf o uno shelf di controller da 12 o 24 dischi; contenitori di alimentazione utilizzati per la ridondanza dell'alimentazione in uno shelf di controller da 60 dischi o in uno shelf di dischi; e i contenitori per ventole utilizzati per il raffreddamento dello shelf di controller da 60 dischi o dello shelf di dischi.
 
 
 
-== Dischi
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-e5700/drives-overview-supertask-concept.html["Dischi"]
+ a| 
 Un'unità è un dispositivo elettromeccanico che fornisce i supporti di storage fisici per i dati.
 
 
 
-== HICS (host Interface Card)
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-e5700/hics-overview-supertask-concept.html["HICS (host Interface Card)"]
+ a| 
 È possibile installare una scheda di interfaccia host (HIC) all'interno di un contenitore di controller. Il controller E5700 include porte host integrate sulla scheda controller stessa, nonché porte host sull'HIC opzionale. Le porte host integrate nel controller sono chiamate porte host baseboard. Le porte host integrate nell'HIC sono chiamate porte HIC.
 
 
 
-== Protocollo della porta host
-
+ a| 
+https://docs.netapp.com/us-en/e-series/maintenance-e5700/hpp-overview-supertask-concept.html["Protocollo della porta host"]
+ a| 
 È possibile convertire il protocollo di un host in un protocollo diverso in modo da stabilire compatibilità e comunicazione.
+
+|===

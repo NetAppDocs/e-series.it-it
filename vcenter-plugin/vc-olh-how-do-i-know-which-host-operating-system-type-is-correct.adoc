@@ -10,7 +10,7 @@ summary: 'Il campo host Operating System Type (tipo di sistema operativo host) c
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

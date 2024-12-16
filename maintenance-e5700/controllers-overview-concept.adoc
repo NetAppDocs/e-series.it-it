@@ -41,7 +41,7 @@ NOTE: Il LED di attenzione color ambra del controller si spegne ogni volta che s
 ====
 
 
-image::../media/e5700_attention_led_callout.png[callout led attenzione e5700]
+image::../media/e5700_attention_led_callout.png[E5700 LED di attenzione del controller]
 
 *(1)* _LED attenzione_
 

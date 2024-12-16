@@ -73,16 +73,16 @@ Conservare tutti i materiali di imballaggio.
 Il fermo sulle molle dell'unità si apre parzialmente, quindi l'unità si sgancia dal controller.
 
 . Aprire la maniglia della camma ed estrarre leggermente l'unità.
-. Attendere 30 secondi.
+. Attendere 60 secondi.
 . Rimuovere l'unità dallo shelf con entrambe le mani.
 +
-image::../media/ef624_2.png[ef624 2]
+image::../media/ef624_2.png[Rimuovere l'unità dallo shelf]
 
 . Posizionare l'unità su una superficie antistatica e imbottita, lontano dai campi magnetici.
-. Attendere 30 secondi affinché il software riconosca che l'unità è stata rimossa.
+. Attendere 60 secondi affinché il software riconosca che l'unità è stata rimossa.
 +
 
-NOTE: Se si rimuove accidentalmente un disco attivo, attendere almeno 30 secondi, quindi reinstallarlo. Per la procedura di ripristino, fare riferimento al software di gestione dello storage.
+NOTE: Se si rimuove accidentalmente un disco attivo, attendere almeno 60 secondi, quindi reinstallarlo. Per la procedura di ripristino, fare riferimento al software di gestione dello storage.
 
 
 
@@ -115,7 +115,7 @@ Completare la sostituzione del disco per verificare che il nuovo disco funzioni 
 . Controllare il LED di alimentazione e il LED di attenzione sull'unità sostituita. (Quando si inserisce un disco per la prima volta, il LED attenzione potrebbe essere acceso. Tuttavia, il LED dovrebbe spegnersi entro un minuto.
 +
 ** Il LED di alimentazione è acceso o lampeggia e il LED attenzione è spento: Indica che il nuovo disco funziona correttamente.
-** LED di alimentazione spento: Indica che l'unità potrebbe non essere installata correttamente. Rimuovere l'unità, attendere 30 secondi, quindi reinstallarla.
+** LED di alimentazione spento: Indica che l'unità potrebbe non essere installata correttamente. Rimuovere l'unità, attendere 60 secondi, quindi reinstallarla.
 ** LED attenzione acceso: Indica che il nuovo disco potrebbe essere difettoso. Sostituirlo con un altro disco nuovo.
 
 

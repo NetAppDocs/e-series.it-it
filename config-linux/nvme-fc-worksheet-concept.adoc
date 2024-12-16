@@ -19,7 +19,7 @@ summary: Utilizzare questo foglio di lavoro per registrare le informazioni di co
 
 In una topologia a connessione diretta, uno o più host sono collegati direttamente al controller.
 
-image::../media/nvme_fc_direct_topology.png[topologia diretta di nvme fc]
+image::../media/nvme_fc_direct_topology.png[Esempio di topologia a connessione diretta]
 
 * Host 1 HBA Port 1 e Controller A host Port 1
 * Host 1 HBA Port 2 e Controller B host Port 1
@@ -37,7 +37,7 @@ image::../media/nvme_fc_direct_topology.png[topologia diretta di nvme fc]
 
 In una topologia fabric, vengono utilizzati uno o più switch. Vedere https://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"^] per un elenco degli switch supportati.
 
-image::../media/nvme_fc_fabric_topology.png[topologia del fabric fc nvme]
+image::../media/nvme_fc_fabric_topology.png[Esempio di topologia di connessione switch]
 
 
 

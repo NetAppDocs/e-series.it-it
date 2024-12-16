@@ -1,7 +1,7 @@
 ---
 permalink: getting-started/learn-software-concept.html 
 sidebar: sidebar 
-keywords: E-Series, eseries, E2800, E5700, EF300, EF600, SANtricity, E-Series software, E-Series user interface 
+keywords: E-Series, eseries, E4000, E2800, E5700, EF300, EF600, SANtricity, E-Series software, E-Series user interface 
 summary: I sistemi e-Series includono il software SANtricity per il provisioning dello storage e altre attività. 
 ---
 = Panoramica del software SANtricity
@@ -36,56 +36,56 @@ System Manager offre una vasta gamma di funzionalità di gestione, tra cui:
 
 
  a| 
-image:../media/sam1130_icon_performance.gif[""] *Prestazioni*
+image:../media/sam1130_icon_performance.gif["Performance"] *Prestazioni*
  a| 
 Visualizza fino a 30 giorni di dati sulle performance, tra cui latenza di i/o, IOPS, utilizzo della CPU e throughput.
 
 
 
  a| 
-image:../media/sam1130_icon_volumes.gif[""] *Storage*
+image:../media/sam1130_icon_volumes.gif["Storage"] *Archiviazione*
  a| 
 Eseguire il provisioning dello storage utilizzando pool o gruppi di volumi e creare carichi di lavoro delle applicazioni.
 
 
 
  a| 
-image:../media/sam1130_icon_async_mirroring.gif[""] *Protezione dei dati*
+image:../media/sam1130_icon_async_mirroring.gif["Protezione dei dati"] *Protezione dei dati*
  a| 
 Eseguire backup e disaster recovery utilizzando snapshot, copia del volume e mirroring remoto.
 
 
 
  a| 
-image:../media/sam1130_icon_controllers.gif[""] *Hardware*
+image:../media/sam1130_icon_controllers.gif["Hardware"] *Hardware*
  a| 
 Controllare lo stato dei componenti ed eseguire alcune funzioni correlate a tali componenti, ad esempio l'assegnazione di dischi hot spare.
 
 
 
  a| 
-image:../media/sam1130_icon_alerts.gif[""] *Avvisi*
+image:../media/sam1130_icon_alerts.gif["Avvisi"] *Avvisi*
  a| 
 Avvisare gli amministratori degli eventi importanti che si verificano sullo storage array. Gli avvisi possono essere inviati tramite e-mail, trap SNMP e syslog.
 
 
 
  a| 
-image:../media/sam1140_icon_active_directory.gif[""] *Gestione degli accessi*
+image:../media/sam1140_icon_active_directory.gif["Gestione degli accessi"] *Gestione degli accessi*
  a| 
 Configurare l'autenticazione dell'utente che richiede agli utenti di accedere al sistema con le credenziali assegnate.
 
 
 
  a| 
-image:../media/sam1130_icon_settings.gif[""] *Impostazioni di sistema*
+image:../media/sam1130_icon_settings.gif["Impostazioni di sistema"] *Impostazioni di sistema*
  a| 
 Configurare altre funzionalità delle performance di sistema, come la cache SSD e il bilanciamento del carico automatico.
 
 
 
  a| 
-image:../media/sam1130_icon_support.gif[""] *Supporto*
+image:../media/sam1130_icon_support.gif["Supporto"] *Supporto*
  a| 
 Visualizza i dati diagnostici, gestisci gli aggiornamenti e configura AutoSupport, che monitora lo stato di salute di uno storage array e invia automaticamente i dispatches al supporto tecnico.
 
@@ -94,7 +94,7 @@ Visualizza i dati diagnostici, gestisci gli aggiornamenti e configura AutoSuppor
 
 == Gestore unificato SANtricity
 
-Unified Manager è un software basato sul web utilizzato per gestire l'intero dominio. Da una vista centrale, è possibile visualizzare lo stato di tutti gli array e-Series ed EF-Series più recenti, come E2800, EF280, EF300, E5700, EF570, E EF600. È inoltre possibile eseguire operazioni batch su array di storage selezionati.
+Unified Manager è un software basato sul web utilizzato per gestire l'intero dominio. Da una vista centrale, puoi vedere lo stato di tutti gli array e-Series ed EF-Series più recenti, come E4000, E2800, EF280, EF300, E5700, EF570 ed EF600. È inoltre possibile eseguire operazioni batch su array di storage selezionati.
 
 Unified Manager viene installato su un server di gestione insieme al proxy dei servizi Web. Per accedere a Unified Manager, aprire un browser e immettere l'URL che punta al server in cui è installato il proxy dei servizi Web.
 
@@ -104,56 +104,56 @@ Unified Manager offre una vasta gamma di funzionalità di gestione, tra cui:
 
 
  a| 
-image:../media/artboard_9.png[""] *Rilevare gli array di storage*
+image:../media/artboard_9.png["Scopri gli array di storage"] *Individuare gli array di storage*
  a| 
 Trova e Aggiungi gli array di storage che desideri gestire nella rete aziendale. È quindi possibile visualizzare lo stato di tutti gli array di storage da una singola pagina.
 
 
 
  a| 
-image:../media/artboard_11.png[""] *Lancio*
+image:../media/artboard_11.png["Lancio"] *Avvia*
  a| 
 Aprire un'istanza di System Manager per eseguire singole operazioni di gestione su un determinato array di storage.
 
 
 
  a| 
-image:../media/sam1130_icon_system.gif[""] *Impostazioni di importazione*
+image:../media/sam1130_icon_system.gif["Impostazioni di importazione"] *Impostazioni di importazione*
  a| 
 Eseguire un'importazione in batch da uno storage array a più array, incluse le impostazioni per gli avvisi, AutoSupport e i servizi di directory.
 
 
 
  a| 
-image:../media/sam1130_icon_async_mirroring.gif[""] *Mirroring*
+image:../media/sam1130_icon_async_mirroring.gif["Mirroring"] *Mirroring*
  a| 
 Configurare coppie di mirroring asincrone o sincrono tra due array di storage.
 
 
 
  a| 
-image:../media/artboard_10.png[""] *Gestisci gruppi*
+image:../media/artboard_10.png["Gestisci gruppi"] *Gestisci gruppi*
  a| 
 Organizza gli array di storage in gruppi per una gestione più semplice.
 
 
 
  a| 
-image:../media/sam1130_icon_upgrade_center.gif[""] *Upgrade Center*
+image:../media/sam1130_icon_upgrade_center.gif["Centro di upgrade"] *Centro di aggiornamento*
  a| 
 Aggiornare il software del sistema operativo SANtricity su più array di storage.
 
 
 
  a| 
-image:../media/sam1140_icon_certs.gif[""] *Certificati*
+image:../media/sam1140_icon_certs.gif["Certificati"] *Certificati*
  a| 
 Creare richieste di firma del certificato (CSR), importare certificati e gestire i certificati esistenti per più array di storage.
 
 
 
  a| 
-image:../media/sam1140_icon_active_directory.gif[""] *Gestione degli accessi*
+image:../media/sam1140_icon_active_directory.gif["Gestione degli accessi"] *Gestione degli accessi*
  a| 
 Configurare l'autenticazione dell'utente che richiede agli utenti di accedere a Unified Manager con le credenziali assegnate.
 

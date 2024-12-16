@@ -20,7 +20,7 @@ Dopo aver rimosso il contenitore del controller dallo shelf del controller, è p
 Se questo LED verde è acceso, il controller sta ancora utilizzando l'alimentazione a batteria. Prima di rimuovere qualsiasi componente, è necessario attendere che il LED si spenga.
 
 +
-image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[28 dwg e2800 cache interna active led maintt e2800]
+image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[LED cache interna attiva]
 
 +
 *(1)* _cache interna attiva_
@@ -31,7 +31,7 @@ image::../media/28_dwg_e2800_internal_cache_active_led_maint-e2800.gif[28 dwg e2
 . Individuare il dispositivo di chiusura blu della batteria.
 . Sbloccare la batteria spingendo il dispositivo di chiusura verso il basso e lontano dal contenitore del controller.
 +
-image::../media/28_dwg_e2800_remove_battery_maint-e2800.gif[28 dwg e2800 rimuovere la batteria principale e2800]
+image::../media/28_dwg_e2800_remove_battery_maint-e2800.gif[Rimuovere la batteria dalla centralina]
 
 +
 *(1)* _dispositivo di chiusura a scatto della batteria_
