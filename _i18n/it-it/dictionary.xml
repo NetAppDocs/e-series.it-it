@@ -3191,16 +3191,12 @@
   <block id="4fca16c33bb8244a7b60dd7da4eec715" category="doc">Sfoglia i report tecnici della piattaforma</block>
   <block id="775ecf6ed5e3db61059ce09b5b398110" category="section-title">TR della piattaforma</block>
   <block id="a28b8b732f1d7a87c511f615fe886bc4" category="inline-link">*TR-4725: Panoramica delle funzionalità degli array E2800*</block>
-  <block id="fac7424958d70cf4f8d849fb90db1f68" category="cell"><block ref="fac7424958d70cf4f8d849fb90db1f68" category="inline-link-rx"></block></block>
   <block id="16ee0112605f5c7f44d31ab4fb0f7c73" category="inline-link">*+++TR-4724: Panoramica delle funzionalità degli array E5700++*</block>
-  <block id="cdbe326a711e037f4bddbe4b226edfa6" category="cell"><block ref="cdbe326a711e037f4bddbe4b226edfa6" category="inline-link-rx"></block></block>
   <block id="346bfe6c5f1a40af18c578c446b216aa" category="inline-link">*+++TR-4877: Panoramica delle funzionalità degli array EF300++*</block>
-  <block id="ca74b797e6d3bd7c698dff9a991616e6" category="cell"><block ref="ca74b797e6d3bd7c698dff9a991616e6" category="inline-link-rx"></block></block>
   <block id="c3bad4531ac09819ae11c8f1eef46379" category="cell">Descrive le funzionalità hardware e software dell'array ibrido E2800 e le più recenti funzionalità del sistema operativo SANtricity.</block>
   <block id="170c5373a5aea2b6d6daa41c328182fc" category="cell">Descrive le informazioni sul prodotto E5700, incluse le nuove funzionalità hardware e software introdotte con la versione più recente di SANtricity.</block>
   <block id="6bf4f338106e6cad43fd2f2fecfcaafa" category="cell">Descrive le funzionalità hardware e software dell'array all-flash EF300 e le nuove funzionalità del sistema operativo SANtricity.</block>
   <block id="f3a3500a11e0c13b98d7092f5af6a6c7" category="inline-link">*TR-4800: Panoramica delle funzionalità degli array EF600*</block>
-  <block id="567d596a04a1bf27275d8aa991230778" category="cell"><block ref="567d596a04a1bf27275d8aa991230778" category="inline-link-rx"></block></block>
   <block id="6b4552e99c78bda589322e0594a1d89b" category="cell">Descrive le caratteristiche hardware e software dell'array all-flash EF600 e le nuove funzionalità del sistema operativo SANtricity.</block>
   <block id="81de063f729f541c198651ab6ca8171b" category="summary">Rimuovere uno o più gruppi di array di storage non più necessari.</block>
   <block id="1075451261ff01d866ffbf5c0de96768" category="doc">Eliminare il gruppo di array di storage</block>
@@ -7311,12 +7307,6 @@
   <block id="43d61efb5c5b9a22659cb0751fa61930" category="cell">Viene fornita una panoramica dei servizi Web di SANtricity, un'API utilizzata per la configurazione e la gestione dei sistemi storage e-Series.</block>
   <block id="f54101aa6702c025c4f74ec5ada7bae3" category="summary">Gestire lo storage</block>
   <block id="14ad3096f7edeb7d23e22e3ab3539e0f" category="paragraph">Utilizzare i collegamenti riportati di seguito per accedere alla documentazione che descrive come configurare, gestire e monitorare gli oggetti di storage e i sistemi di storage e-Series. I collegamenti consentono di accedere a un altro sito di documentazione.</block>
-  <block id="55b9698df8d5ce238fd672cacb45db33" category="section-title">Guida in linea di System Manager 11.7</block>
-  <block id="bb0f94cdcadb9a7fe9605a5b5978bc9f" category="inline-link">Guida in linea di Gestore di sistema di SANtricity 11.7</block>
-  <block id="ff584d910a943e131a1a33c07ee376cf" category="paragraph">Accedere a.<block ref="4f3037dfe9e12b0599983cd81724b08c" category="inline-link-rx"></block>, dove è possibile trovare informazioni su come pianificare, configurare, gestire e risolvere i problemi del proprio array di storage.</block>
-  <block id="08bdf5ba02a44ea1089a7356e56323d3" category="section-title">Guida in linea di Unified Manager 5</block>
-  <block id="d9b69b9cb75561d821d13badf467853f" category="inline-link">Guida in linea di SANtricity Unified Manager 5</block>
-  <block id="a9a112f936967fe8b7a02587778320ab" category="paragraph">Accedere a.<block ref="777f091bde7329e4b8f42b44c5184089" category="inline-link-rx"></block>, dove è possibile apprendere come eseguire comandi di gestione dello storage su più array di storage di rete.</block>
   <block id="6e8602d76e9fef34df4842cd3e73e25b" category="section-title">Riferimento al comando</block>
   <block id="173fec560797244d437c91da004ea89c" category="paragraph">Accedere a.<block ref="60cc209e7041626253d52f9b6ac8557b" category="inline-link-rx"></block>, Dove è possibile apprendere come configurare e monitorare gli array di storage utilizzando i comandi dell'interfaccia a riga di comando (CLI).</block>
   <block id="77bfec755a5e57d7ef372575d496401b" category="summary">Un disco è un dispositivo che fornisce i supporti di storage fisici per i dati.</block>
@@ -9462,4 +9452,15 @@
   <block id="7dca1699f8152d82864de292753389fc" category="sidebar">Sostituire il cassetto dell'unità (4060)</block>
   <block id="676d3cbad89c6a95fe470771db65cfaa" category="sidebar">Aggiornamento HIC</block>
   <block id="f1de52c9b2e0108b121235152081f684" category="sidebar">Sostituire l'HIC guasto</block>
+  <block id="54941a8cb8785fb145b01e1bb947b67f" category="section-title">Guida in linea di System Manager</block>
+  <block id="a4cf386ebe9065ef38c507aa0138fca1" category="inline-link">Guida in linea di SANtricity System Manager</block>
+  <block id="022c96b1591a4fe3fe2e854b113c6c33" category="paragraph">Accedere a<block ref="4060ff1e62df840ae8eeaa66b7bc4ef3" category="inline-link-rx"></block>, dove è possibile trovare informazioni su come pianificare, configurare, gestire e risolvere i problemi dell'array di archiviazione.</block>
+  <block id="68b5d7bbc938636a6430a66ddd3590d0" category="section-title">Guida online di Unified Manager</block>
+  <block id="703be4c8c3307cd5e44163a39538eb58" category="inline-link">Guida online di SANtricity Unified Manager</block>
+  <block id="4c0bdc96ec6314c064f33faae57a0c02" category="paragraph">Accedere a<block ref="d6978b00f819ec3b99c59933f313d81f" category="inline-link-rx"></block>, dove è possibile apprendere come eseguire comandi di gestione dello storage su più array di storage di rete.</block>
+  <block id="5b4f9cf27402df2737b167e7393669c2" category="cell"><block ref="5b4f9cf27402df2737b167e7393669c2" category="inline-link-rx"></block></block>
+  <block id="034410ce2cd58a6a56e6772fadec879b" category="cell"><block ref="034410ce2cd58a6a56e6772fadec879b" category="inline-link-rx"></block></block>
+  <block id="6c33c8a01a7b3f83682789dc2c3e0a6e" category="cell"><block ref="6c33c8a01a7b3f83682789dc2c3e0a6e" category="inline-link-rx"></block></block>
+  <block id="ec476342469d41cbc06b7065ffea021e" category="cell"><block ref="ec476342469d41cbc06b7065ffea021e" category="inline-link-rx"></block></block>
+  <block id="ba463c26bea3a95ca7381fd32b63eb98" category="sidebar">Scheda informativa su E4000</block>
 </blocks>

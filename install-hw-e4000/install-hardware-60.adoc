@@ -48,10 +48,10 @@ CAUTION: Un ripiano vuoto pesa 114,91 kg (253,33 lb). Per spostare in sicurezza 
 +
 .. Se si solleva il ripiano manualmente, collegare le quattro maniglie di sollevamento. Spingere verso l'alto ciascuna maniglia fino a farla scattare in posizione.
 .. Sostenendo lo shelf dal basso, farlo scorrere nel cabinet. Se si utilizzano le maniglie di sollevamento, rimuoverle una alla volta mentre lo scaffale scorre nell'armadio. Per rimuovere le maniglie, tirare indietro il fermo di rilascio, spingere verso il basso, quindi allontanarlo dallo scaffale.
-
-
 +
 image:../media/4_person_lift_source.png["Ascensore per quattro persone"]
+
+
 
 . Fissare lo shelf.
 +

@@ -306,17 +306,14 @@ CAUTION: *Possibili danni all'hardware* -- la flangia metallica sulla parte ante
 
 +
 ** *Corretto* -- la flangia metallica della batteria è completamente inserita nello slot del controller:
-
-
 +
 image:../media/28_dwg_e2800_battery_flange_ok_maint-e2800.gif["Flangia metallica corretta"]
 
-+
 ** *Errato* -- la flangia metallica della batteria non è inserita nello slot del controller:
-
-
 +
 image:../media/28_dwg_e2800_battery_flange_not_ok_maint-e2800.gif["Flangia metallica non corretta"]
+
+
 
 
 

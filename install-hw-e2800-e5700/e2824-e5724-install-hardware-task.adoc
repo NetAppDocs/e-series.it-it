@@ -53,10 +53,10 @@ Fissare lo shelf al rack come indicato nella link:../rackmount-hardware.html["Ha
 +
 .. Inserire le viti nel primo e nel terzo foro dalla parte superiore del ripiano su entrambi i lati per fissarlo alla parte anteriore del cabinet.
 .. Posizionare due staffe posteriori su ciascun lato della sezione posteriore superiore del ripiano. Inserire le viti nel primo e nel terzo foro di ciascuna staffa per fissare la parte posteriore del cabinet.
-
-
 +
 image:../media/trafford_secure.png["Fissare le staffe alla parte posteriore del ripiano"]
+
+
 
 . Installare il pannello o i cappucci terminali.
 +

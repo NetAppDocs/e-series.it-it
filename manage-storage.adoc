@@ -15,15 +15,15 @@ Utilizzare i collegamenti riportati di seguito per accedere alla documentazione 
 
 
 
-== Guida in linea di System Manager 11.7
+== Guida in linea di System Manager
 
-Accedere a. https://docs.netapp.com/us-en/e-series-santricity/system-manager/index.html["Guida in linea di Gestore di sistema di SANtricity 11.7"^], dove è possibile trovare informazioni su come pianificare, configurare, gestire e risolvere i problemi del proprio array di storage.
+Accedere a https://docs.netapp.com/us-en/e-series-santricity/system-manager/index.html["Guida in linea di SANtricity System Manager"^], dove è possibile trovare informazioni su come pianificare, configurare, gestire e risolvere i problemi dell'array di archiviazione.
 
 
 
-== Guida in linea di Unified Manager 5
+== Guida online di Unified Manager
 
-Accedere a. https://docs.netapp.com/us-en/e-series-santricity/unified-manager/index.html["Guida in linea di SANtricity Unified Manager 5"^], dove è possibile apprendere come eseguire comandi di gestione dello storage su più array di storage di rete.
+Accedere a https://docs.netapp.com/us-en/e-series-santricity/unified-manager/index.html["Guida online di SANtricity Unified Manager"^], dove è possibile apprendere come eseguire comandi di gestione dello storage su più array di storage di rete.
 
 
 

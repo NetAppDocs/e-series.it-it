@@ -76,14 +76,14 @@ dove:
 ** `array_password` è la password per lo storage array. È necessario racchiudere il valore di array_password tra virgolette doppie ("").
 ** `[trayID]` è l'identificativo dello shelf di dischi che contiene il cassetto che si desidera sostituire. I valori dell'ID dello shelf del disco vanno da 0 a 99. È necessario racchiudere il valore per `trayID` tra parentesi quadre.
 ** `[drawerID]` è l'identificativo del cassetto dell'unità che si desidera sostituire. I valori dell'ID cassetto sono da 1 (cassetto superiore) a 5 (cassetto inferiore). È necessario racchiudere il valore per `drawerID` tra parentesi quadre. Questo comando consente di rimuovere il cassetto più in alto nello shelf 10:
-
-
 +
 [listing]
 ----
 SMcli <ctlr_IP1\> -p "safety-1" -c "set tray [10] drawer [1]
 serviceAllowedIndicator=forceOnWarning;"
 ----
+
+
 . Determinare se è necessario interrompere l'attività di i/o dell'host, come segue:
 +
 ** Se il comando ha esito positivo, non è necessario interrompere l'attività di i/o dell'host. Tutti i dischi nel cassetto sono in pool o gruppi di volumi con protezione perdita cassetto. Passare a. <<Fase 2: Rimuovere le catene di cavi>>.
