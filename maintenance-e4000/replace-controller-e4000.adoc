@@ -160,6 +160,19 @@ save storageArray dbmDatabase sourceLocation=onboard contentType=all file="filen
 ----
 
 
+. Raccogliere i dati di supporto per lo storage array utilizzando Gestione di sistema di SANtricity.
++
+Se si verifica un problema durante la rimozione di un controller, è possibile utilizzare il file salvato per risolvere il problema. Il sistema salva i dati di inventario, stato e performance relativi all'array di storage in un singolo file.
+
++
+.. *Selezionare Support › Support Center › Diagnostics*.
+.. Selezionare *Collect Support Data*.
+.. Fare clic su *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *support-data.7z*.
+
+
+
 . Se il controller non è già offline, portalo offline usando Gestione di sistema di SANtricity.
 +
 ** Da Gestore di sistema di SANtricity:

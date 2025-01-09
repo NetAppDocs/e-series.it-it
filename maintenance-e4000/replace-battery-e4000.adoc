@@ -186,7 +186,10 @@ Assicurarsi di disporre di quanto segue:
 CAUTION: Per evitare prestazioni degradate, non attorcigliare, piegare, pizzicare o salire sui cavi.
 
 . Se le porte host sul contenitore del controller utilizzano ricetrasmettitori SFP+, lasciarli installati.
-. Verificare che il LED cache Active (cache attiva) sul retro del controller sia spento.
+. Verificare che i LED cache Active sul retro del controller e la mascherina del controller siano spenti.
++
+Se uno dei LED è acceso, il controller utilizza ancora l'alimentazione a batteria. Prima di continuare con questa procedura, tutti i LED devono essere spenti.
+
 . Premere il fermo sulla maniglia della camma fino a sganciarla, aprire completamente la maniglia della camma per sganciare il contenitore della centralina dalla scheda di collegamento interna, quindi, con due mani, estrarre il contenitore della centralina a metà del telaio.
 
 
