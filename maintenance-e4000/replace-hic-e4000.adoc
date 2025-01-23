@@ -240,6 +240,10 @@ image::../media/drw_E4000_replace_HIC_source_IEOPS-864.png[Rimuovere l'HIC e la 
 +
 .. Rimuovere la piastra anteriore dell'HIC facendola scorrere fuori dal modulo controller.
 .. Allentare le viti a testa zigrinata sull'HIC e sollevarlo verticalmente.
++
+
+NOTE: Se si utilizzano le dita per allentare la vite a testa zigrinata, potrebbe essere necessario premere la linguetta di rilascio della batteria e ruotare la batteria verso l'alto per un accesso migliore.
+
 
 
 . Reinstallare l'HIC:

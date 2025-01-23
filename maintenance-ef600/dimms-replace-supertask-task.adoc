@@ -108,11 +108,11 @@ Rimuovere il contenitore del controller guasto in modo da poter sostituire i DIM
 
 CAUTION: Per evitare prestazioni degradate, non attorcigliare, piegare, pizzicare o salire sui cavi.
 
-. Verificare che il LED cache Active (cache attiva) sul retro del controller sia spento.
 . Premere le maniglie su entrambi i lati del controller e tirare indietro fino a quando non si sgancia dallo shelf.
 +
 image::../media/remove_controller_5.png[Premere le maniglie per rimuovere il controller]
 
+. Verificare che il LED cache Active (cache attiva) sul retro del controller sia spento.
 . Utilizzando due mani e le maniglie, estrarre il contenitore del controller dallo scaffale. Quando la parte anteriore del controller è libera dal contenitore, estrarlo completamente con due mani.
 +
 

@@ -176,6 +176,7 @@ Lasciare i cavi nel dispositivo di gestione dei cavi in modo che quando si reins
 
 . Rimuovere e mettere da parte i dispositivi di gestione dei cavi dai lati sinistro e destro del contenitore del controller.
 . Premere il fermo sulla maniglia della camma fino a sganciarla, aprire completamente la maniglia della camma per sganciare il contenitore della centralina dalla piastra centrale, quindi, con due mani, estrarre il contenitore della centralina dal telaio.
+. Verificare che il LED cache Active (cache attiva) sul retro del controller sia spento.
 . Capovolgere il contenitore della centralina e collocarlo su una superficie piana e stabile.
 . Aprire il coperchio premendo i pulsanti blu sui lati del contenitore del controller per rilasciare il coperchio, quindi ruotare il coperchio verso l'alto e verso l'esterno del contenitore del controller.
 +

@@ -39,7 +39,7 @@ Scopri come collegare i cavi di alimentazione e gli shelf di unità per un siste
 * link:../install-hw-e4000/connect-cables-60.html["Hardware cavo E4060"^]
 
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Quattro"] Setup completo del sistema storage
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quattro"] Setup completo del sistema storage
 [role="quick-margin-para"]
 Scopri come collegare i controller alla rete e completare la configurazione e la configurazione del sistema storage.
 

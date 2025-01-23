@@ -8735,7 +8735,6 @@
   <block id="6adf9424fa970f95f29a45229a2a48e3" category="list-text"><block ref="6adf9424fa970f95f29a45229a2a48e3" category="inline-link-macro-rx"></block></block>
   <block id="0bdd3a63338a5f71bf0f66ce3e145347" category="inline-link-macro">Hardware cavo E4060</block>
   <block id="fd5e3a8bbb01955eb25b26a2aa899281" category="list-text"><block ref="fd5e3a8bbb01955eb25b26a2aa899281" category="inline-link-macro-rx"></block></block>
-  <block id="02971fd96b36d000a680f975bb4e1363" category="paragraph-title"><block ref="9737b49bc02beca58682ff5044cdd49e" category="inline-image-macro-rx" type="image"></block> Setup completo del sistema storage</block>
   <block id="2a89ecf0966c7233643ee0ac37b2caff" category="inline-link-macro">Completare l'installazione di E4012</block>
   <block id="70e66ac508b932f6cd2c87145fd85bc6" category="list-text"><block ref="70e66ac508b932f6cd2c87145fd85bc6" category="inline-link-macro-rx"></block></block>
   <block id="010112692d6ce4ece0b0b240d05f24a3" category="inline-link-macro">Completare l'installazione di E4060</block>
@@ -9465,4 +9464,6 @@
   <block id="ba463c26bea3a95ca7381fd32b63eb98" category="sidebar">Scheda informativa su E4000</block>
   <block id="b30b3ed54d36ae2fd1e5c231ba1b18c0" category="list-text">Verificare che i LED cache Active sul retro del controller e la mascherina del controller siano spenti.</block>
   <block id="53ec2a2a971455f492adc2f07e6c780d" category="paragraph">Se uno dei LED è acceso, il controller utilizza ancora l'alimentazione a batteria. Prima di continuare con questa procedura, tutti i LED devono essere spenti.</block>
+  <block id="5509a7e2ae2dbdec2ed18ae433b4cec6" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block> Setup completo del sistema storage</block>
+  <block id="492fcae0b90e6f4d11439a1f70e422cf" category="admonition">Se si utilizzano le dita per allentare la vite a testa zigrinata, potrebbe essere necessario premere la linguetta di rilascio della batteria e ruotare la batteria verso l'alto per un accesso migliore.</block>
 </blocks>
