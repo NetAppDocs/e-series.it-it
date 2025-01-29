@@ -59,6 +59,18 @@ Configurabile solo tramite l'API REST, è ora disponibile una nuova impostazione
 |===
 
 
+== Nuove funzioni della versione 11.80.1R3
+
+Questa versione contiene solo modifiche minori e nessuna nuova funzionalità o restrizioni. Per ulteriori informazioni sulle modifiche apportate a questa versione, fare riferimento al file README.
+
+
+
+== Nuove funzioni della versione 11.80.1R2
+
+Questa versione contiene solo modifiche minori e nessuna nuova funzionalità o restrizioni. Per ulteriori informazioni sulle modifiche apportate a questa versione, fare riferimento al file README.
+
+
+
 == Nuove funzioni della versione 11.80.1R1
 
 [cols="35h,~"]

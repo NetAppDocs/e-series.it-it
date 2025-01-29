@@ -9466,4 +9466,7 @@
   <block id="53ec2a2a971455f492adc2f07e6c780d" category="paragraph">Se uno dei LED è acceso, il controller utilizza ancora l'alimentazione a batteria. Prima di continuare con questa procedura, tutti i LED devono essere spenti.</block>
   <block id="5509a7e2ae2dbdec2ed18ae433b4cec6" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block> Setup completo del sistema storage</block>
   <block id="492fcae0b90e6f4d11439a1f70e422cf" category="admonition">Se si utilizzano le dita per allentare la vite a testa zigrinata, potrebbe essere necessario premere la linguetta di rilascio della batteria e ruotare la batteria verso l'alto per un accesso migliore.</block>
+  <block id="fdaf387b2cf2a5e0708730deae924c52" category="section-title">Nuove funzioni della versione 11.80.1R3</block>
+  <block id="a372f5d0e522484d2807c2713feb9e59" category="paragraph">Questa versione contiene solo modifiche minori e nessuna nuova funzionalità o restrizioni. Per ulteriori informazioni sulle modifiche apportate a questa versione, fare riferimento al file README.</block>
+  <block id="cb495aee74d8e4c14850fb4a3882a508" category="section-title">Nuove funzioni della versione 11.80.1R2</block>
 </blocks>
