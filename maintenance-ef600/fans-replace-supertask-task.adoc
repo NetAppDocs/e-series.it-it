@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/fans-replace-supertask-task.html 
 sidebar: sidebar 
-keywords: replace EF300 fan, replace EF600 fan, fan fail 
+keywords: EF600, EF300, EF600C, EF300C, replace fan, fan fail 
 summary: Sostituire una ventola in un EF300 o EF600. 
 ---
 = Sostituire una ventola EF300 o EF600
@@ -12,7 +12,7 @@ summary: Sostituire una ventola in un EF300 o EF600.
 
 
 [role="lead"]
-È possibile sostituire una ventola in un array EF300 o EF600.
+È possibile sostituire una ventola in un array EF300, EF600, EF300C o EF600C.
 
 .A proposito di questa attività
 Ogni shelf o shelf di controller EF300 e EF600 include cinque ventole. In caso di guasto di una ventola, è necessario sostituirla il prima possibile per assicurarsi che lo shelf abbia un raffreddamento adeguato.

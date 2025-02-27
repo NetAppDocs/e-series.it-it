@@ -28,7 +28,7 @@ Le informazioni sul cablaggio si applicano ai seguenti modelli hardware.
 
 
  a| 
-EF300, EF600
+EF300, EF600, EF300C, EF600C
  a| 
 DE212C, DE224C, DE460
 

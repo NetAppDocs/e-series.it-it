@@ -280,7 +280,6 @@
   <block id="55d00560611b7ac6ad1fbc07da675be3" category="inline-link">Knowledge base di NetApp</block>
   <block id="aebb270a0f1270c10fb5b2e56830535a" category="list-text"><block ref="18f041f08534fbeb53ae160ad78cfbc4" category="inline-link-rx"></block> (Un database di articoli) -- fornisce informazioni sulla risoluzione dei problemi, FAQ e istruzioni per un'ampia gamma di prodotti e tecnologie NetApp.</block>
   <block id="fc4773230b262d26eed69c2a96bd9708" category="list-text"><block ref="b1540a3ec25c7d8277b499a1cc1d920b" category="inline-link-rx"></block> -- consente di cercare configurazioni di prodotti e componenti NetApp che soddisfino gli standard e i requisiti specificati da NetApp.</block>
-  <block id="5ec68760b690fe27d275d8ef065433df" category="list-text"><block ref="3efd8448d2410829795078709782a7da" category="inline-link-rx"></block> -- descrive come configurare lo storage fisico e virtuale in modo che rimanga entro i limiti massimi consentiti supportati da ESX/ESXi.</block>
   <block id="094bf2c199fb9ef7ac29e64a12fd7cad" category="inline-link">Requisiti e limitazioni dello storage VMware NVMe</block>
   <block id="8f853bc18ffad192705726f50eff4144" category="list-text"><block ref="6e8a1449bb92590a7f42c1a30534b1da" category="inline-link-rx"></block>.</block>
   <block id="9779d294487414d92ca919d114654e00" category="list-text"><block ref="29363e1f838b703a5f0d926c5c21352a" category="inline-link-rx"></block> -- fornisce la documentazione di ESXi vCenter Server.</block>
@@ -362,7 +361,6 @@
   <block id="aafac493f2e35b6f1c326279401ced51" category="paragraph">È possibile collegare lo shelf del controller a uno o più shelf da 60 dischi.</block>
   <block id="9829150d11210fb5e6fc62e793db934e" category="section-title">Uno shelf di controller e 60 shelf di dischi</block>
   <block id="add241dc5ececee27088b6736250072e" category="section-title">Cablaggio EF300 ed EF600</block>
-  <block id="aa7f7f642f0f31272aec24455af2999f" category="paragraph">Le seguenti informazioni si applicano al cablaggio di uno shelf di controller EF300 o EF600 su uno shelf di dischi DE212C, DE224C o DE460.</block>
   <block id="44358da7cef962731faab21103a86c3e" category="inline-link-macro">Aggiornamento del sistema operativo SANtricity</block>
   <block id="e20bd51b5e818feb7ae7162ff2a5040b" category="paragraph">Prima di collegare un dispositivo EF300 o EF600, assicurarsi che il firmware sia aggiornato alla versione più recente. Per aggiornare il firmware, seguire le istruzioni in <block ref="2834c74834ca1d1cb0e165f8c6e2c750" category="inline-link-macro-rx"></block>.</block>
   <block id="c81c8dd5f36b047d276d8dc8a3771a78" category="summary">Collegare un host direttamente a un controller o utilizzare gli switch.</block>
@@ -374,7 +372,6 @@
   <block id="1458d41ed1532a66aec83e0f005887a5" category="paragraph">Le informazioni sul cablaggio si applicano ai seguenti modelli hardware.</block>
   <block id="bd5c641408f65aa18580861a6ce2400c" category="cell">*Ripiano controller*</block>
   <block id="0980e5858005022a7297657f3c4b364f" category="cell">*Shelf di dischi*</block>
-  <block id="f212760efdd1ee6ecc6a822f380627cd" category="paragraph">EF300, EF600</block>
   <block id="a49b136089a95385ac24b13d585982b3" category="paragraph">DE212C, DE224C, DE460</block>
   <block id="e2601a92435cce9fb17f276fae4332e9" category="paragraph">DE212C, DE224C</block>
   <block id="56d5920f093315d1b4acca4634ea813e" category="paragraph">DE460C</block>
@@ -3074,7 +3071,6 @@
   <block id="c4c758aa103c97f5ed7c97cfec548724" category="admonition">Le ventole sono molto rumorose quando si accende per la prima volta.</block>
   <block id="602581c7f4fef4e0ffc7c312b3efa341" category="summary">Installare EF300 o EF600 in un rack a due montanti o in un cabinet di sistema NetApp.</block>
   <block id="923a86c9f908f09f61d33d7831905371" category="doc">Installare l'hardware</block>
-  <block id="d751bcfe66df83ffc12435f4dd821d73" category="paragraph">È possibile installare un sistema storage EF300 o EF600 in un rack a due montanti o in un cabinet di sistema NetApp.</block>
   <block id="2d25dc407855f99aa2a0fe96d3aaffc7" category="list-text">Preparare un'area di lavoro piana e priva di elettricità statica.</block>
   <block id="9ad20405ed7442681aff80b87cb2dba2" category="list-text">Disimballare l'hardware.</block>
   <block id="ddaca6e351d1a3c9ab3d82db4c028ff5" category="list-text">Disimballare il contenuto e inventariare l'hardware contenuto in base alla distinta di imballaggio.</block>
@@ -3158,7 +3154,6 @@
   <block id="296eab9aafd9b2f5526c968b1b09061d" category="inline-link-macro">Cablaggio dell'hardware e-Series</block>
   <block id="4966f1118cf315109cd0bde55b35c2c2" category="paragraph">Se si sta cablando EF300 per l'espansione SAS, vedere <block ref="e1bbeb059c02a804db29dd1e8449b843" category="inline-link-macro-rx"></block> Per l'installazione della scheda di espansione SAS e di <block ref="a48890f0b8f43b924432692645604270" category="inline-link-macro-rx"></block> Per il cablaggio di espansione SAS.</block>
   <block id="0a5007e0321faf4985d50a7bb7ba0e2e" category="summary">Per installare EF300 o EF600, creare un account e registrare l'hardware.</block>
-  <block id="d63189d25566dd6ce02071e79b58fa61" category="paragraph">Scopri come prepararti per l'installazione del tuo sistema storage EF300 o EF600.</block>
   <block id="d835a4a9669f275077940ef187446bc5" category="paragraph">Se si sta cablando EF300 per l'espansione SAS, consultare le seguenti informazioni:</block>
   <block id="ae4728ced8957babaccab930d6730f18" category="inline-link-macro">Aggiungere schede di espansione SAS</block>
   <block id="ed340a74210414952184f18bdea46abb" category="list-text"><block ref="59592944f1499a5ed0c513d73204b10a" category="inline-link-macro-rx"></block> Per l'installazione della scheda di espansione SAS.</block>
@@ -6382,9 +6377,6 @@
   <block id="3aa8db601a262e6c7ce55106cbfb88cf" category="paragraph">Utilizzato in Web Services Proxy per indicare che il sistema di storage richiesto non è attualmente accessibile. Pertanto, i servizi Web non possono soddisfare la richiesta.</block>
   <block id="858d9ef3cff533a963578b1a8a8d4a62" category="paragraph">429 troppe richieste</block>
   <block id="036fbcb66eb52eb94ad85dbcb48f8fce" category="paragraph">Indica che è stato superato un limite di richiesta e che è necessario eseguire un nuovo processo in un secondo momento.</block>
-  <block id="fc53c036602508ed6c2afc18e2fbdf51" category="section-title">Script di esempio</block>
-  <block id="2fd0d86a248b2472ae69f3f3c21669c9" category="inline-link">Esempi di NetApp WebServices</block>
-  <block id="c44a76942b050cc49aec1fa7f5570bec" category="paragraph">GitHub contiene un repository per la raccolta e l'organizzazione di script di esempio che illustrano l'utilizzo dell'API dei servizi web NetApp SANtricity. Per accedere al repository, vedere<block ref="0c095e5032a5d0867c1a67924875784d" category="inline-link-rx"></block>.</block>
   <block id="93a7f24cea8d167a80b981802dcfd7a7" category="summary">Per rimuovere Web Services Proxy e Unified Manager, è possibile utilizzare qualsiasi modalità (file grafico, console, silenzioso o RPM), indipendentemente dal metodo utilizzato per installare il proxy.</block>
   <block id="e4122e5b67152b85f11552ad7580054b" category="doc">Disinstallare il proxy dei servizi Web</block>
   <block id="2fa064ed20abdd0f3b30964d0b6a2862" category="section-title">Disinstallazione della modalità grafica</block>
@@ -6442,7 +6434,6 @@
   <block id="77e309486c3d835aea70d40429cd8763" category="inline-link-macro">Configurare il proxy dei servizi Web</block>
   <block id="cc4bf58dba772738539b000ef7815fde" category="list-text"><block ref="a5854a34a0c5ab2777626906b175ead4" category="inline-link-macro-rx"></block>.</block>
   <block id="7e90e7aafc41dd2ae860ea7d075f0a24" category="list-text">Unified Manager -- l'installazione del proxy include SANtricity Unified Manager, un'interfaccia basata su web che fornisce l'accesso alla configurazione ai più recenti sistemi storage e-Series ed EF-Series. Per ulteriori informazioni, consultare la guida in linea di Unified Manager, disponibile dalla relativa interfaccia utente o dal<block ref="173d089ddf996dbd066dc04ffeb10dca" category="inline-link-rx"></block>.</block>
-  <block id="6dcc47dbb36dc1602e64f7f0d0883dc8" category="list-text">Repository di GitHub -- GitHub contiene un repository per la raccolta e l'organizzazione di script di esempio che illustrano l'utilizzo dell'API dei servizi web di NetApp SANtricity. Per accedere al repository, vedere<block ref="0c095e5032a5d0867c1a67924875784d" category="inline-link-rx"></block>.</block>
   <block id="32eac081ab8132e42611dc0066282fe9" category="list-text">Representational state transfer (REST) -- i servizi web sono un'API RESTful che fornisce l'accesso praticamente a tutte le funzionalità di gestione di SANtricity, in modo da avere familiarità con i concetti REST. Per ulteriori informazioni, vedere<block ref="f6676be33ff47b799bb2e0366943e72b" category="inline-link-rx"></block>.</block>
   <block id="e26cd645db0153fb417155d12d6936cc" category="list-text">JavaScript Object Notation (JSON) -- poiché i dati all'interno dei servizi Web sono codificati tramite JSON, dovresti avere familiarità con i concetti di programmazione JSON. Per ulteriori informazioni, vedere<block ref="4d69e99d61c7a555a660d740c47af7e5" category="inline-link-rx"></block>.</block>
   <block id="1d13608bf3a22542edf7af63faca8d62" category="summary">Per gestire i sistemi storage in rete, è necessario prima rilevarli e poi aggiungerli all'elenco di gestione.</block>
@@ -6894,7 +6885,6 @@
   <block id="33d6fe66d2b404f7c25080e8098edd9c" category="list-text">Dischi da 3.5" e 2.5" (NL-SAS, SAS e SSD)</block>
   <block id="3fcdd0c9c8fbc91f7bb9df81e95c618f" category="paragraph">* NE224:*</block>
   <block id="73fe55efcdaa2ad95e010a4bac9165df" category="list-text">Unità SSD NVMe da 2.5"</block>
-  <block id="ee42e406b098eeee6019f729810f7302" category="list-text">Controller EF300 e EF600</block>
   <block id="2e3bd5464112fbc6b9e25a77c53c32de" category="summary">Requisiti di sistema, configurazione, installazione, configurazione e processi associati all'applicazione SANtricity Cloud Connector.</block>
   <block id="6008f80a45b23e50f6eb01bd634a2a89" category="doc">Requisiti di sistema per Cloud Connector</block>
   <block id="a1a22727d99115e771391ff5beb831f5" category="paragraph">Il sistema deve soddisfare i requisiti di compatibilità per SANtricity Cloud Connector.</block>
@@ -7312,7 +7302,6 @@
   <block id="77bfec755a5e57d7ef372575d496401b" category="summary">Un disco è un dispositivo che fornisce i supporti di storage fisici per i dati.</block>
   <block id="8af1af6830937a72d5cd88e0d6c25265" category="summary">Aggiunta di una scheda di espansione SAS ai controller EF300 per consentire l'espansione del tray di dischi.</block>
   <block id="cf505540e6b324232d096ecbbeb36457" category="doc">Aggiunta di una scheda di espansione SAS a EF300 e EF600</block>
-  <block id="a06914d93f698c6a8bb3f09a21efd671" category="paragraph">È possibile aggiungere una scheda di espansione SAS a un controller EF300 o EF600 per consentire l'espansione del vassoio dell'unità.</block>
   <block id="76b6d67ba2d43b0e0d5354712cf5475c" category="paragraph">Quando si aggiunge una scheda di espansione SAS, è necessario spegnere lo storage array, installare la nuova scheda di espansione SAS e rialimentare.</block>
   <block id="b18049a57fbb2ec5fd47fae049bd965b" category="inline-link-macro">Requisiti per la sostituzione delle schede di espansione SAS EF300 e EF600</block>
   <block id="8cce61d9b8e3a90145210a9516fd4eb4" category="list-text">Revisione <block ref="171e03e043e11d80ccbb4c5420424ae5" category="inline-link-macro-rx"></block>.</block>
@@ -7359,12 +7348,10 @@
   <block id="4604f841b0b16d3013cac1e2078e5b1b" category="doc">Ventole</block>
   <block id="23f3b9e3a2c47bcddba6d10506fc157b" category="summary">Esaminare i requisiti e le considerazioni prima di sostituire le ventole EF300 o EF600.</block>
   <block id="ccccec3135cfde6cfdbeb41f2c09065e" category="doc">Requisiti per la sostituzione delle ventole EF300 o EF600</block>
-  <block id="81e19282d1e4ebf8f62639f9c89c358d" category="paragraph">Prima di sostituire una ventola guasta in un array EF300 o EF600, esaminare i seguenti requisiti.</block>
   <block id="1f0e561212d6f8a00a46e7e96276d4cc" category="list-text">Si dispone di una ventola sostitutiva supportata per il modello di shelf di controller o di dischi.</block>
   <block id="f0df890160164bf2b2f1dc2577fa1273" category="admonition">Se il Recovery Guru indica che non è possibile rimuovere la ventola, contattare il supporto tecnico.</block>
   <block id="0c72a6417d4140802a553e2534452e92" category="summary">Sostituire una ventola in un EF300 o EF600.</block>
   <block id="08975a768d5ba6909e25278ac5469941" category="doc">Sostituire una ventola EF300 o EF600</block>
-  <block id="b7ad64ed9554dc2f60ac2823757adebd" category="paragraph">È possibile sostituire una ventola in un array EF300 o EF600.</block>
   <block id="0d72942e30e9c18f566da0461c8288db" category="paragraph">Ogni shelf o shelf di controller EF300 e EF600 include cinque ventole. In caso di guasto di una ventola, è necessario sostituirla il prima possibile per assicurarsi che lo shelf abbia un raffreddamento adeguato.</block>
   <block id="35ad30a0d0cb54f752269652fd523cf3" category="list-text">Una ventola sostitutiva.</block>
   <block id="3561aed7d51ffd3f85bdf2b7412b2568" category="paragraph">Posizionare il contenitore del controller offline in modo da poter sostituire in sicurezza la ventola guasta.</block>
@@ -7388,8 +7375,6 @@
   <block id="d6475123c80be4addf74127c7fdabcec" category="paragraph">La sostituzione della ventola è completata. È possibile riprendere le normali operazioni.</block>
   <block id="1eca441f881a292b05722ddcd5c7605a" category="summary">Sostituire un disco in un array EF300.</block>
   <block id="1b311fbfc664dabdc89169b6d43903d6" category="doc">Sostituire il disco in un array EF300</block>
-  <block id="59958ca616aba014e914263121b83c15" category="paragraph">È possibile sostituire un disco in un array EF300.</block>
-  <block id="61bc4bd99c5e65055b2b91cdea8b08ea" category="paragraph">EF300 supporta l'espansione SAS con shelf da 24 e 60 dischi. La procedura da seguire dipende dal fatto che si disponga di uno shelf da 24 dischi o di uno shelf da 60 dischi:</block>
   <block id="2ca85a3dda1d5669703da1eb7e07b7c2" category="list-text"><block ref="9a51b9a38de70279b358d3c9ff153239" category="inline-xref-macro-rx"></block></block>
   <block id="8073ddd7ebb4e905ea4015f335f42663" category="list-text"><block ref="f8c16ddb5f1fc7bc0310ed900e3efbe6" category="inline-xref-macro-rx"></block></block>
   <block id="d8e732631daed1812191326c689a203e" category="section-title">Sostituire l'unità in un EF300 (shelf da 24 dischi)</block>
@@ -7401,7 +7386,6 @@
   <block id="bb8565a02f47c95c2055887753d09e4f" category="paragraph">Seguire questa procedura per sostituire un disco in uno shelf da 60 dischi.</block>
   <block id="73e73c660285cf0012c92dc423418372" category="summary">Modificare il protocollo della porta host per un array EF300 o EF600.</block>
   <block id="1a268c928a90e5edb6e5a5d9cd175266" category="doc">Modificare il protocollo host per EF300 o EF600</block>
-  <block id="3143078d1b5def855687d8b871a96006" category="paragraph">Seguire questa procedura per modificare il protocollo della porta host in un array EF300 o EF600. Questa procedura si applica solo alle schede di interfaccia host (HICS) che utilizzano Infiniband (IB) o Fibre Channel (FC).</block>
   <block id="4ad13ed0f8c6dc3b675c1012c53f09d8" category="section-title">Fase 1: Ottenere la chiave del Feature Pack</block>
   <block id="95e811ea8d7fc10ecb21e53428c11d23" category="paragraph">Per ottenere la chiave del Feature Pack, è necessario il numero di serie dallo shelf del controller, un codice di attivazione della funzione e l'identificatore di abilitazione della funzione per lo storage array.</block>
   <block id="9fbea7ff3b1d63ccc2388bf9de3b06eb" category="list-text">Utilizzando l'ID del sottomodello del Feature Pack, individuare l'ID del sottomodello del controller corrispondente per la configurazione iniziale e individuare il codice di attivazione della funzione per la configurazione finale desiderata all'interno della seguente tabella. Quindi, copiare il codice di attivazione della funzione in un file di testo.</block>
@@ -7488,7 +7472,6 @@
   <block id="4340eb550bf9d82ec63ae6c684b4ce19" category="paragraph">Una scheda di interfaccia host (HIC) deve essere installata all'interno di un contenitore del controller. Il controller EF600 include porte host sull'HIC opzionale. Le porte host integrate nell'HIC sono chiamate porte HIC.</block>
   <block id="4649f22302dc58915bd0c297f379d683" category="summary">Sostituire un DIMM in un array EF300 o EF600.</block>
   <block id="fc66672be674c1a0d3c77416bba78aaf" category="doc">Sostituire i DIMM in EF300 o EF600</block>
-  <block id="3b00e6dae1c985bb3451ba742a69d556" category="paragraph">È possibile sostituire un DIMM in un array EF300 o EF600.</block>
   <block id="e8bc418a1334db89f56000cf271db6e1" category="paragraph">Per sostituire un DIMM, verificare le dimensioni della cache del controller, posizionare il controller offline, rimuovere il controller, rimuovere i DIMM e installare i nuovi DIMM nel controller. Quindi, è possibile riportare il controller online e verificare che lo storage array funzioni correttamente.</block>
   <block id="4732b406385a15d1aed763a9717a6553" category="inline-link-macro">Requisiti per la sostituzione di un modulo DIMM EF300 o EF600</block>
   <block id="41be7544de3e0a025756e0b0464afdc9" category="list-text">Revisione <block ref="13c2dbe2bfcf1cade167bfec3b040713" category="inline-link-macro-rx"></block>.</block>
@@ -7533,7 +7516,6 @@
   <block id="74adca4d72e5e007d2c87aa7750faf32" category="paragraph">La sostituzione del modulo DIMM è completata. È possibile riprendere le normali operazioni.</block>
   <block id="0473e45a7d7f9557ae9f5ca07ab2315a" category="summary">Sostituire una scheda di interfaccia host (HIC) EF300 o EF600 guasta.</block>
   <block id="821d24c9ba446ee4c7b02961af65c2df" category="doc">Sostituire la scheda di interfaccia host (HIC) guasta in EF300 o EF600</block>
-  <block id="1d26fe6e02d3739f6d0eb3a75694ed4e" category="paragraph">Seguire questa procedura per sostituire una scheda di interfaccia host (HIC) guasta in un array EF300 o EF600.</block>
   <block id="862acd5892fdfacc876441454483bc88" category="paragraph">Quando si sostituisce un HIC guasto, è necessario spegnere lo storage array, sostituire l'HIC e riapplicare l'alimentazione.</block>
   <block id="1c86ab1787822f5d802a7e5fe80c780f" category="inline-link-macro">Requisiti per gli aggiornamenti HIC EF300 o EF600</block>
   <block id="b41453ef0eae35f2df2004c1773786fb" category="list-text">Revisione <block ref="23b7aefccff24bae71374f469da3fa9d" category="inline-link-macro-rx"></block>.</block>
@@ -7566,7 +7548,6 @@
   <block id="51255c5d39d4b9a43a7f800db3b8a431" category="doc">Alimentatori</block>
   <block id="fd293cf77acfdd97249a46e8f0f881ef" category="summary">Sostituire un disco in un array EF600.</block>
   <block id="c2d869aaa5bfd00a5deb58e0c2033910" category="doc">Sostituire il disco in un array EF600</block>
-  <block id="248c1549e6f83551c44f661321efdd2d" category="paragraph">È possibile sostituire un disco in un array EF600.</block>
   <block id="090c16503867f8c38598a1963600e1f8" category="list-text">Revisione <block ref="a3053473be5cf3d84a95cd722c986422" category="inline-link-macro-rx"></block>.</block>
   <block id="8a1d026d92ef5e15588a139fbb9c0b7d" category="paragraph">Preparare la sostituzione del disco controllando il guru del ripristino in Gestione sistema di SANtricity e completando i passaggi necessari. Quindi, individuare il componente guasto.</block>
   <block id="8298fe6a63f14a594d8f2661ca314cfa" category="section-title">Fase 2: Rimuovere l'unità</block>
@@ -7575,7 +7556,6 @@
   <block id="35f7bce5970c1e898bd1906cd36d2cb4" category="paragraph">Installare un nuovo disco per sostituire quello guasto. Installare l'unità sostitutiva il prima possibile dopo aver rimosso l'unità guasta.</block>
   <block id="571b1ead863e404cb63de04e9e14c21d" category="summary">Requisiti e considerazioni per la sostituzione della batteria EF300 o EF600.</block>
   <block id="9edad8491a8585b842f4ac6201b8d622" category="doc">Requisiti per la sostituzione della batteria EF300 o EF600</block>
-  <block id="33f5fc7c0c7f3df402c75b558ca4f2b8" category="paragraph">Prima di sostituire una batteria EF300 o EF600, esaminare i requisiti e le considerazioni.</block>
   <block id="0e11944ef8baa0cd23d9027846dfb479" category="paragraph">Una batteria è inclusa in un controller e conserva i dati memorizzati nella cache in caso di interruzione dell'alimentazione CA.</block>
   <block id="e71146224fd64a6c76e83e431678c8ba" category="paragraph">Di seguito è riportata una panoramica dei passaggi per la sostituzione di una batteria nei controller EF300 o EF600:</block>
   <block id="9cfc11d4ef06463002ddc3a0df54fee8" category="list-text">Portare il controller offline.</block>
@@ -7584,7 +7564,6 @@
   <block id="e00394e86e0897378bd874e271fcd82c" category="doc">Schede di espansione SAS</block>
   <block id="8efc2bb6da7e629c408a29a1c453f118" category="summary">È possibile convertire il protocollo di un host in un protocollo diverso in modo da garantire la compatibilità e convertire il protocollo delle connessioni host in un protocollo diverso per soddisfare le esigenze dell'infrastruttura.</block>
   <block id="9fc2bc5f7d7e9f2a3f0e92f0c5b35a3a" category="summary">Esaminare i requisiti e le considerazioni prima di sostituire i dischi in EF300 o EF600.</block>
-  <block id="02551e5490f3f4380082de0056ba7479" category="paragraph">Prima di sostituire un disco in un array EF300 o EF600, esaminare i requisiti e le considerazioni.</block>
   <block id="b7f04984f163dce73778dbbca2a8c990" category="admonition">Tenere presente che i dischi dell'array di storage sono fragili; una gestione errata dei dischi è la causa principale del guasto dei dischi.</block>
   <block id="c4a87fb79210c9a2631561ef1487b358" category="section-title">Requisiti per la sostituzione del disco</block>
   <block id="968b9a541474437880dfcc7916e416e4" category="list-text">Aprire il sacchetto ESD manualmente o tagliare la parte superiore con un paio di forbici. Non inserire utensili metallici o coltelli nel sacchetto ESD.</block>
@@ -7596,7 +7575,6 @@
   <block id="038d1aa9b29ca0e8ff6cb31c36fea4fb" category="paragraph">La figura seguente mostra come eseguire lo sfalsamento dei dischi tra le due metà.</block>
   <block id="cf161815430bebc8ee6771d30a156397" category="summary">Sostituire una batteria in un array EF300 o EF600.</block>
   <block id="39ada1b1281d103dd18b2f68149694a0" category="doc">Sostituire la batteria EF300 o EF600</block>
-  <block id="e00dafa45847ab907f34044e9b23920f" category="paragraph">È possibile sostituire una batteria in un sistema storage EF300 o EF600.</block>
   <block id="2571fd5711bd2998477e5873a52d475c" category="list-text">Esaminare <block ref="ed1f9654fc9810726f2ffd62a386295a" category="inline-link-macro-rx"></block>.</block>
   <block id="d77975dd32d53783f37a0e7ba5c662bd" category="list-text">Un braccialetto ESD o altre precauzioni antistatiche.</block>
   <block id="5fe93120de4e7963e6486732f3e58e9c" category="paragraph">Eseguire il backup dei dati e posizionare il controller interessato offline.</block>
@@ -7618,7 +7596,6 @@
   <block id="3aea2395eb1945801b3ad83556c9d15a" category="list-text">Fare clic su menu:supporto[Centro aggiornamento] per verificare che sia installata la versione più recente di SANtricity OS.</block>
   <block id="fc94ac1d2bdfb27ac4210c2680f2d5fe" category="summary">Esaminare i requisiti e le considerazioni prima di convertire il protocollo host EF300 o EF600.</block>
   <block id="c901677705b5230445795815d2367528" category="doc">Requisiti per la conversione del protocollo host EF300 o EF600</block>
-  <block id="9d528dc333e33dbe25bda7c346243c3b" category="paragraph">Prima di convertire il protocollo host per un array EF300 o EF600, esaminare i seguenti requisiti.</block>
   <block id="12b88a904502434a63f50fce060243e4" category="list-text">È stata pianificata una finestra di manutenzione dei downtime per questa procedura.</block>
   <block id="03e368a22e511c58d3a3dad40e86377f" category="list-text">È necessario interrompere le operazioni di i/o host quando si esegue la conversione. Non è possibile accedere ai dati sull'array di storage fino a quando la conversione non è stata completata correttamente.</block>
   <block id="75e7f67348e4a26031725587e6fbd19c" category="list-text">Stai utilizzando la gestione fuori banda. Non è possibile utilizzare la gestione in-band per completare questa procedura.</block>
@@ -7628,7 +7605,6 @@
   <block id="f35307ec092e89906d40c7e7580fd73e" category="summary">Un controller è costituito da una scheda, firmware e software. Controlla i dischi e implementa le funzioni di System Manager. Questa sezione descrive come sostituire un singolo controller o entrambi i controller nello shelf di controller EF300 o EF600.</block>
   <block id="e9e795fffc66424c5fceeda72cc6702b" category="summary">Sostituire un singolo controller in uno shelf di controller EF300 o EF600.</block>
   <block id="317ae44d33c81077bc69598e4bf59e9f" category="doc">Sostituire il controller EF300 o EF600</block>
-  <block id="2188af472c4062f3129d65412671fd19" category="paragraph">È possibile sostituire un singolo controller nello shelf di controller EF300 o EF600.</block>
   <block id="1b6ca6cd4db8e59c76840995016904f5" category="paragraph">Quando si sostituisce un contenitore del controller guasto, è necessario rimuovere la batteria, l'alimentatore, i moduli DIMM, le ventole e la scheda di interfaccia host (HIC) dal contenitore del controller originale, quindi installarli nel contenitore del controller sostitutivo.</block>
   <block id="3d1512805f23039d65a3a0867cf2b647" category="inline-link-macro">Requisiti per la sostituzione del controller EF300 o EF600</block>
   <block id="5e28583a8af8a4bc782f82438b0b0a20" category="list-text">Revisione <block ref="e99335e3a347f599f32fcd88a9e4a4a4" category="inline-link-macro-rx"></block>.</block>
@@ -7690,25 +7666,21 @@
   <block id="f0db12742a01ba59e3fe27a8a7ddd978" category="list-text">Selezionare il controller sostituito.</block>
   <block id="08c0021d60441f8c3dd78eeb49362807" category="summary">Manutenzione dell'hardware EF300 ed EF600</block>
   <block id="3b22a7c15f94b211436d1caea39710ca" category="doc">Manutenzione dell'hardware EF300 e EF600</block>
-  <block id="042bdb0acc6382a72eab016fef01741f" category="paragraph">Per i sistemi storage EF300 ed EF600, è possibile eseguire procedure di manutenzione sui seguenti componenti.</block>
   <block id="a6173100761f25e711157a7e4aa07d21" category="paragraph">Un controller è costituito da una scheda, firmware e software. Controlla i dischi e implementa le funzioni di Gestore di sistema di SANtricity.</block>
   <block id="4ec1b0ed9e4f78833f020b2b7ed423ce" category="section-title">DIMM</block>
   <block id="a371cfb6b719fc75b3bfb1eb906d8ada" category="paragraph">È necessario sostituire un modulo DIMM (Dual in-line Memory Module) quando è presente una mancata corrispondenza di memoria o se si verifica un guasto al modulo DIMM.</block>
   <block id="620e2edf2db0c3c3cad57aeb246c6bfe" category="section-title">Alimentatori</block>
   <block id="5e1f9a9f3fe7461846141cef4f73476d" category="summary">Requisiti e considerazioni per la sostituzione del controller EF300 o EF600</block>
-  <block id="c50f07ebaae0c1c05f1a49284f9e77c9" category="paragraph">Prima di sostituire un controller EF300 o EF600, esaminare i requisiti e le considerazioni.</block>
   <block id="bfb064f41224e7af37470eb32a8ab384" category="section-title">Requisiti per la sostituzione del controller</block>
   <block id="c983c5653c1e6540544cc1b919b655a9" category="section-title">Sostituzione all'accensione</block>
   <block id="208dc6eb3d237f863dd634effc5f6751" category="paragraph">È possibile sostituire un contenitore di controller mentre lo storage array è acceso ed esegue operazioni di i/o host, se sono soddisfatte le seguenti condizioni:</block>
   <block id="4a3c8c03cdcb016f4690174be36a72be" category="summary">Prima di sostituire una scheda di espansione SAS EF300, consultare requisiti e considerazioni.</block>
-  <block id="9f5dcc5008bfb9c123def7609109a915" category="paragraph">Se si intende aggiungere una scheda di espansione SAS a un sistema EF300 o EF600, esaminare i seguenti requisiti.</block>
   <block id="3d52e0419c7f8a010e6fc5f98c25da0f" category="list-text">Seguire la <block ref="333b8feab226020b2ee6e03f5e462ace" category="inline-link-macro-rx"></block> per configurare il controller.</block>
   <block id="ae1aaca96a065fbfcfe3174c8cf8c2dd" category="list-text">È necessario aggiornare il firmware alla versione più recente. Per aggiornare il firmware, seguire le istruzioni in <block ref="bf6a098eae1df274d91ef498db89d4bb" category="inline-link-macro-rx"></block>.</block>
   <block id="1ecabc0ac3185ab833d06fb1e3de2040" category="list-text">È necessario eseguire questa attività con entrambi i canister del controller.</block>
   <block id="e4005cc04ad30971023ff0ce6398ae8e" category="list-text">Nei controller EF300 potrebbe essere installata una scheda di espansione SAS nella porta 1 per consentire l'espansione del vassoio dell'unità.</block>
   <block id="8530051dab9b284655e9ee0a33594d15" category="summary">Sostituire gli alimentatori quando si guastano nel controller EF300 o EF600.</block>
   <block id="da0fe5b0a30a5d2ccf0e0f907ffc5a0a" category="doc">Sostituire un alimentatore EF300 o EF600</block>
-  <block id="bf0f0f2eda9ccf4d28bab16ee4feba30" category="paragraph">È possibile sostituire un alimentatore in caso di guasto nel controller EF300 o EF600.</block>
   <block id="539a53ce95a48163a8ce44101d02382c" category="paragraph">In caso di guasto a un alimentatore, è necessario sostituirlo il prima possibile, in modo che lo shelf del controller disponga di una fonte di alimentazione ridondante.</block>
   <block id="e90d7aeee831e4a2cfd7fbc26b8159ad" category="list-text">Verificare che il LED di attenzione ambra sull'alimentatore sia acceso, a indicare che l'alimentatore o la ventola integrata sono guasti.</block>
   <block id="002a36010db095bc8f2c5bf6720a3b88" category="list-text">Un alimentatore sostitutivo supportato per lo shelf del controller.</block>
@@ -7718,13 +7690,10 @@
   <block id="b15fcbb0e2b660f1f1850816bf57f89b" category="list-text">Verificare che lo stato sia ottimale e controllare i LED di attenzione dello shelf di controller.</block>
   <block id="f6dc5868c20eb29c31ee714e66081346" category="list-text">Da Gestione sistemi SANtricity, fare clic su menu:supporto[Centro aggiornamento] per verificare che sia installata la versione più recente di SANtricity OS.</block>
   <block id="3445e7362b27e4ba74cabda5b497847f" category="summary">Esaminare i requisiti e le considerazioni prima di sostituire un HIC EF300 o EF600.</block>
-  <block id="bce135c4d36e87cac4fa46df29044acd" category="paragraph">Prima di aggiornare o sostituire una scheda di interfaccia host (HIC) in un array EF300 o EF600, esaminare i seguenti requisiti.</block>
   <block id="7ff977d3382830f3eff92120544b15ab" category="list-text">È stata pianificata una finestra di manutenzione dei downtime per questa procedura. Non è possibile accedere ai dati sull'array di storage fino a quando la procedura non è stata completata correttamente. Poiché entrambi i controller devono avere la stessa configurazione HIC quando vengono accesi, l'alimentazione deve essere disattivata quando si modifica la configurazione HIC. La presenza di HICS non corrispondenti causa il blocco del controller con l'HIC sostitutivo quando lo si porta online.</block>
   <block id="d2ab7f2f0a5b33496f422f7f99f93b07" category="list-text">Alcuni aggiornamenti o sostituzioni HIC potrebbero richiedere una conversione del protocollo della porta host. Seguire le istruzioni in <block ref="efdbcf8658d5853e5683d8aef1bb4491" category="inline-xref-macro-rx"></block> per questo requisito.</block>
   <block id="12d81cfc2d4212cb9a4099e19a0660cb" category="list-text">I controller EF300 devono avere la porta HIC 2 piena di un HIC per la connettività host.</block>
   <block id="b1a61a0b6874805bc03293f8b7b15c87" category="summary">Esaminare requisiti e considerazioni prima di sostituire i DIMM EF300 o EF600.</block>
-  <block id="b41535bd642ffdba4076bba7b4364713" category="paragraph">Prima di sostituire un DIMM in un array di storage EF300 o EF600, esaminare i requisiti e le considerazioni.</block>
-  <block id="e63ed0f2769c54f901255268d095c0e5" category="paragraph">È necessario sostituire un modulo DIMM in caso di mancata corrispondenza della memoria o di un modulo DIMM guasto. Verificare la configurazione del controller EF300 o EF600 per assicurarsi che vengano sostituite le dimensioni DIMM corrette.</block>
   <block id="8a9e4c00db6a24a4fb43dc345c83d072" category="admonition">Tenere presente che i DIMM dell'array di storage sono fragili; una gestione errata può causare danni.</block>
   <block id="3a53668c4902beecdd7f5dafc89b8449" category="paragraph">Attenersi alle seguenti regole per evitare di danneggiare i DIMM dell'array di storage:</block>
   <block id="7ef5d75a53c621bc3a647dc5bf5fa954" category="list-text">Conservare il modulo DIMM nel sacchetto ESD fino a quando non si è pronti per l'installazione.</block>
@@ -7737,7 +7706,6 @@
   <block id="9e82bbc678cd60ca1e23c9306295675e" category="summary">È necessario sostituire un modulo DIMM in caso di mancata corrispondenza della memoria o di un modulo DIMM guasto.</block>
   <block id="2e2090d7bf10ea829ed979fce6127fca" category="summary">Esaminare i requisiti e le considerazioni prima di sostituire un alimentatore EF300 o EF600.</block>
   <block id="b4bdfc68a2be9043c46c8629fec0e8fe" category="doc">Requisiti per la sostituzione dell'alimentatore EF300 o EF600</block>
-  <block id="d2f1edd900d2d5c61c52c428e56d8c4b" category="paragraph">Prima di sostituire un alimentatore in un array EF300 o EF600, esaminare i seguenti requisiti.</block>
   <block id="92a8e5a68dee2a2df8de1337cfd37b9c" category="list-text">È necessario disporre di un alimentatore sostitutivo supportato per il modello di shelf di controller o di dischi.</block>
   <block id="f2c505979298b93cfd8e71dc78ddd1b0" category="admonition">Non mischiare alimentatori di diversi tipi di tensione. Sostituire sempre come per come.</block>
   <block id="3f0c3171c468bf6044f31c2b3ca39357" category="doc">Conversione completa del protocollo host per EF300 o EF600</block>
@@ -7748,7 +7716,6 @@
   <block id="8684e4791c6325ef4823a50280210f99" category="doc">Upgrade della scheda di interfaccia host (HIC) EF300 o EF600</block>
   <block id="bc039edb7d55e1907c81473c3517e560" category="paragraph">È possibile aggiornare le schede di interfaccia host (HICS) per aumentare il numero di porte host o modificare i protocolli host.</block>
   <block id="bb0ded29eb0a4b47fbd60d4574760d4d" category="list-text">Quando si aggiorna HICS, è necessario spegnere lo storage array, aggiornare l'HICS e riapplicare l'alimentazione.</block>
-  <block id="a7b18eda0422ef0dfb82b129d03ac773" category="list-text">Quando si aggiorna HICS in un controller EF300 o EF600, ripetere tutti i passaggi per rimuovere il secondo controller, aggiornare l'HICS del secondo controller e reinstallare il secondo controller prima di riapplicare l'alimentazione allo shelf del controller.</block>
   <block id="489ddef5f9972cf99f31c03235ac7174" category="paragraph">Posiziona lo shelf del controller offline in modo da poter aggiornare l'HICS in tutta sicurezza.</block>
   <block id="a80f696d5266d38b421fd14ce5383f2a" category="section-title">Fase 4: Aggiornare l'HIC</block>
   <block id="f0e852db867b1df857134cadad285abc" category="paragraph">Dopo aver rimosso il vecchio HIC, installare il nuovo HIC.</block>
@@ -8483,7 +8450,6 @@
   <block id="c08a9596d55b45e7eb8325bd878b47d5" category="paragraph">Per informazioni sul cablaggio per il supporto delle funzioni di mirroring, vedere<block ref="4c6cd7be794e0089961c4cc00b012a2c" category="inline-link-rx"></block>.</block>
   <block id="3885d6d9f5a5030ec46ec3ce038af96c" category="inline-link">Knowledge base NetApp</block>
   <block id="780fe86b24958c45b0b8792fad1e9b3c" category="admonition">Per informazioni su come sostituire uno shelf di espansione e-Series DE460c, consulta la<block ref="b46c4d97d6f1694e2cd029493cdb5475" category="inline-link-rx"></block> .</block>
-  <block id="2db2ab880afe48bd41e6405e510d18a3" category="paragraph">La presente procedura si applica all'aggiunta a caldo di uno shelf di dischi DE212C EF300, E2800B EF600 o DE460C E4000 a uno shelf di controller E2800, E5700B, EF570, E5700, DE224C o EF280.</block>
   <block id="cefb29f3645d6d69acdc85d8770aa08a" category="inline-xref">Fase 2: Installare lo shelf del disco e alimentare.</block>
   <block id="346a8c796c407b91a19c527df6110dbf" category="list-text">Se sono presenti IOM collegati all'hardware, completare la seguente procedura. In caso contrario, passare a. <block ref="ced5ba5343128d91ca8bbc4aaf5b23cf" category="inline-xref-macro-rx"></block></block>
   <block id="88c9d5369051df6e8e46d78e3d1f7a01" category="image-alt">Icona IOM (ESM)</block>
@@ -8528,7 +8494,6 @@
   <block id="2163e0da7fb01e2bb8b011e0bbb5bb9a" category="paragraph">Consulta i link sottostanti per accedere ai report tecnici relativi all'hardware e al software SANtricity e-Series. I collegamenti consentono di accedere a un altro sito di documentazione.</block>
   <block id="231fee8476ab72cb095e76bba043405b" category="inline-link-macro">Serie E4000 con shelf da 12 o 60 dischi</block>
   <block id="e7898b0cd5dffab6be90aba697d20fbc" category="list-text"><block ref="e7898b0cd5dffab6be90aba697d20fbc" category="inline-link-macro-rx"></block></block>
-  <block id="b1a34a1559f9d1375a007a5b84964084" category="list-text">*Tipi di controller* - tutti i modelli E4000, E2800, EF280, EF300, E5700, EF570 e EF600.</block>
   <block id="ac04abe31dcd141500e5d9732b2ac56b" category="list-text">Serie E4000 -- ibrido entry-level</block>
   <block id="d8b8562346c10d2efbbb129845379264" category="list-text">Dimensioni dei rack</block>
   <block id="1c2bd945de8ed1b6e853b76b3def6a6d" category="image-alt">E2800 2U</block>
@@ -8538,7 +8503,6 @@
   <block id="db1f17f8825c1b566a696300d91ea1b0" category="paragraph"><block ref="db1f17f8825c1b566a696300d91ea1b0" category="inline-image-macro-rx" type="image"></block></block>
   <block id="2aa3181e7a7fa68b8f072afb1fee51cc" category="inline-image-macro">EF300 2U</block>
   <block id="ca3611d1131613ffa7a890d7f6e42416" category="paragraph"><block ref="ca3611d1131613ffa7a890d7f6e42416" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="5f324d184d0af564d12941f12dcae69f" category="list-text">Unità e HICS</block>
   <block id="9f3c652bfc849caad5b2686a7b942865" category="image-alt">E5700 2U</block>
   <block id="87d79e15bbf55dbb02286cca22f13ff0" category="image-alt">E5700 4U</block>
   <block id="3a0386059e2d44c807d709da53f78d9a" category="inline-image-macro">EF570 2U</block>
@@ -8575,7 +8539,6 @@
   <block id="de8011abde4e4344c82af51912b3ce19" category="paragraph"><block ref="2bce2265bb1e82bb0d0858adf2dafedf" category="inline-image-macro-rx" type="image"></block> *Impostazioni di sistema*</block>
   <block id="db5eb84117d06047c97c9a0191b5fffe" category="inline-image-macro">Supporto</block>
   <block id="9dcfdd4141be874fb7eb13880a5fd525" category="paragraph"><block ref="1cb7eabea009b4b9cfe98093989eadbf" category="inline-image-macro-rx" type="image"></block> *Supporto*</block>
-  <block id="0c7e65219517f5881dd4fc4cbac2dbf6" category="paragraph">Unified Manager è un software basato sul web utilizzato per gestire l'intero dominio. Da una vista centrale, puoi vedere lo stato di tutti gli array e-Series ed EF-Series più recenti, come E4000, E2800, EF280, EF300, E5700, EF570 ed EF600. È inoltre possibile eseguire operazioni batch su array di storage selezionati.</block>
   <block id="7ac1c3c4fd9181221a17809a9e2420ed" category="paragraph"><block ref="fa1a238df1b067ec5821498fc2b49a78" category="inline-image-macro-rx" type="image"></block> *Individuare gli array di storage*</block>
   <block id="9506f0fd0f7f1b07960b15b4c9e68d1a" category="inline-image-macro">Lancio</block>
   <block id="dd5912f8cf835c33b2a3b61d5e141ff0" category="paragraph"><block ref="59d02cad0b7ca821298861a148459521" category="inline-image-macro-rx" type="image"></block> *Avvia*</block>
@@ -9334,7 +9297,6 @@
   <block id="43407d291e0a258a2c0f50fea060ead5" category="image-alt">Rimuovere l'unità dallo shelf</block>
   <block id="5790149daceb0d5059957b49f27f38bc" category="image-alt">Profilo dello storage array</block>
   <block id="6eb64fbdee0c658692fc6db01e28a15a" category="image-alt">Finestra di dialogo Modifica pacchetto funzioni</block>
-  <block id="c26d5c551bc45d9cf360b6ebab870ac2" category="paragraph">Potrebbe essere necessario eseguire le procedure di manutenzione dell'hardware. In questa sezione sono riportate le procedure specifiche per la manutenzione dei componenti del sistema EF300 o EF600.</block>
   <block id="d1ff77c85f0bb81f5e031dab7a099ac2" category="paragraph">Le procedure descritte in questa sezione presuppongono che il sistema EF300 o EF600 sia già stato implementato nell'ambiente e-Series.</block>
   <block id="4228df1f41617005f9a6966cc97e2b6d" category="paragraph"><block ref="4228df1f41617005f9a6966cc97e2b6d" category="inline-link-rx"></block></block>
   <block id="2758f7dbcf963c3ec6e9b39bf3319e8f" category="paragraph"><block ref="2758f7dbcf963c3ec6e9b39bf3319e8f" category="inline-link-rx"></block></block>
@@ -9469,4 +9431,51 @@
   <block id="fdaf387b2cf2a5e0708730deae924c52" category="section-title">Nuove funzioni della versione 11.80.1R3</block>
   <block id="a372f5d0e522484d2807c2713feb9e59" category="paragraph">Questa versione contiene solo modifiche minori e nessuna nuova funzionalità o restrizioni. Per ulteriori informazioni sulle modifiche apportate a questa versione, fare riferimento al file README.</block>
   <block id="cb495aee74d8e4c14850fb4a3882a508" category="section-title">Nuove funzioni della versione 11.80.1R2</block>
+  <block id="166d62a1d721192a2058e6d8b4d89c04" category="paragraph">La presente procedura si applica all'aggiunta a caldo di uno shelf di dischi DE212C EF600C, E2800B E4000 o DE460C EF300C a uno shelf di controller E2800, E5700B, EF570, EF300, EF600, EF280, E5700 o DE224C.</block>
+  <block id="8a7e170acd5f2688800925b2b4a8d261" category="list-text"><block ref="537606410175a12a150f722cd71e55fb" category="inline-link-rx"></block> -- descrive come configurare lo storage virtuale e fisico in modo che rientri nei valori massimi consentiti supportati da ESX/ESXi.</block>
+  <block id="d088dea69b1345c1729f1c0d46d8053d" category="list-text">*Tipi di controller* - tutti i modelli E4000, E2800, EF280, EF300, E5700, EF570, EF600, EF300, EF600C e EF300C.</block>
+  <block id="4720d0b863e013bea6899b10e0989bda" category="list-text">Serie EF600C -- midrange all flash, all NVMe</block>
+  <block id="b9f7cef2dc8f05405c94daa2cb4fa6ae" category="list-text">Serie EF300C -- midrange all flash, all NVMe</block>
+  <block id="5ca6952c7c9ae5d4b8be61e6386f0222" category="open-title">Modelli EF300C</block>
+  <block id="595f8cc3ac0c1f12a0f83c3b1dad7c19" category="list-text">Supporto di dischi SSD NVMe di capacità da 30TB TB e 60TB TB</block>
+  <block id="f8a3ff8be0bd051ecc8c3ec31daa0195" category="admonition">Per SANtricity OS 11,80GA e versioni successive, EF300 supporta le configurazioni di shelf di espansione senza dischi nello slot di base Quando si utilizza questa configurazione, assicurarsi che le unità siano inserite nello shelf di espansione e collegate correttamente al vassoio di base prima di accendere il sistema. *</block>
+  <block id="14a2fa7582e1084e3800dde50d8cde03" category="open-title">Modelli EF600C</block>
+  <block id="0db8edfb04068c99ae28246efebb6d4d" category="list-text">12gb SAS</block>
+  <block id="689052b8726f00a4623e9ada4d36af90" category="list-text">EF300, EF600. Controller EF300C e EF600C</block>
+  <block id="16736d8feb91d19d335e7acdefc20ef7" category="paragraph">Unified Manager è un software basato sul web utilizzato per gestire l'intero dominio. Da una vista centrale, puoi visualizzare lo stato di tutti gli array e-Series ed EF-Series più recenti, come E4000, E2800, EF280, EF300, E5700, EF570, EF600, EF300C e EF600C. È inoltre possibile eseguire operazioni batch su array di storage selezionati.</block>
+  <block id="0fabf178487912291e67bdafbadfe77d" category="paragraph">Le seguenti informazioni si applicano al cablaggio di uno shelf di controller EF300, EF600, EF300C o EF600C a uno shelf di dischi DE212C, DE224C o DE460.</block>
+  <block id="f1c197c528faee0553e4d6ce534048a7" category="paragraph">EF300, EF600, EF300C, EF600C</block>
+  <block id="57274295d5ba7bc8f4d4ebba2d325b92" category="doc">Installare e configurare i sistemi di storage EF300, EF600, EF300C e EF600C</block>
+  <block id="915fd81c3f189c50233446daf085a8f7" category="paragraph">È possibile installare un sistema di archiviazione EF300, EF600, EF300C o EF600C in un rack a due montanti o in un cabinet di sistema NetApp.</block>
+  <block id="04ec4caf2b80e886c69cd8966d5f5c92" category="paragraph">Scopri come prepararsi per l'installazione di un sistema storage serie EF300, EF600, EF300C o EF600C.</block>
+  <block id="a466a396cacf21d3516a87d8639c5255" category="paragraph">Prima di sostituire una batteria EF300, EF600, EF300C o EF600C, rivedere i requisiti e le considerazioni.</block>
+  <block id="0b5565f493a40cc2e5ace8909a568f68" category="paragraph">È possibile sostituire una batteria in un sistema di archiviazione EF300, EF600, EF300C o EF600C.</block>
+  <block id="a3ec65b7c9b468046fdbe7dc19f94299" category="paragraph">Un controller è costituito da una scheda, firmware e software. Controlla i dischi e implementa le funzioni di System Manager. Questa sezione descrive come sostituire un controller singolo o entrambi i controller nello shelf di controller EF300, EF600, EF300C o EF600C.</block>
+  <block id="89e4ff051c9e9c60c1d21fddb84ec42a" category="paragraph">Prima di sostituire un EF300, EF600. EF300C, o EF600C controller, rivedere i requisiti e le considerazioni.</block>
+  <block id="e0b68b674b62dc6569b4275513ebdb8f" category="paragraph">Puoi sostituire un controller singolo in uno shelf di controller EF300, EF600, EF300C o EF600C.</block>
+  <block id="136b14c506b51c3fdb848576b81df5a9" category="paragraph">Prima di sostituire un modulo DIMM in un array di storage EF300, EF600, EF600C o EF300C, esaminare i requisiti e le considerazioni.</block>
+  <block id="4c9ef3b0d9ab6aa77110cf9315115626" category="paragraph">È necessario sostituire un modulo DIMM in caso di mancata corrispondenza della memoria o di un modulo DIMM guasto. Accertarsi di verificare la configurazione del controller EF300, EF600, EF300C o EF600C per assicurarsi che venga sostituita la dimensione DIMM corretta.</block>
+  <block id="c7834d39f5a9eddcdd20194da1039c37" category="paragraph">È possibile sostituire un DIMM in un array EF300, EF600, EF300C o EF600C.</block>
+  <block id="49d1f2fe6e0ad23ead3ed2632a9f74a7" category="paragraph">Prima di sostituire un'unità in un array EF300, EF600, EF300C o EF600C, esaminare i requisiti e le considerazioni.</block>
+  <block id="fce247b37d4a827b7ed5a9564626b863" category="paragraph">È possibile sostituire un'unità in un array EF300 o EF300C.</block>
+  <block id="c2554b135d504cffd8df4d719c7ebb57" category="paragraph">EF300 e EF300C supportano l'espansione SAS con shelf da 24 e 60 dischi. La procedura da seguire dipende dal fatto che si disponga di uno shelf da 24 dischi o di uno shelf da 60 dischi:</block>
+  <block id="857d3299fb961938b057413c5d00a579" category="paragraph">È possibile sostituire un'unità in un array EF600 o EF600C.</block>
+  <block id="a802c9dd2801c3a0ba58f7be36493829" category="paragraph">Prima di sostituire una ventola con guasto in un array EF300, EF600, EF300C o EF600C, esaminare i seguenti requisiti.</block>
+  <block id="7ecbec8e887541f42291f1c5ee0927e8" category="paragraph">È possibile sostituire una ventola in un array EF300, EF600, EF300C o EF600C.</block>
+  <block id="a318e7b9e1756aadd7beb97eea16e82e" category="paragraph">Prima di aggiornare o sostituire una scheda di interfaccia host (HIC) in un array EF300, EF600, EF300C o EF600C, esaminare i seguenti requisiti.</block>
+  <block id="9c440a2b6a047a7287398066cdcd91a2" category="paragraph">Seguire questa procedura per sostituire una scheda di interfaccia host (HIC) guasta in un array EF300, EF600, EF300C o EF600C.</block>
+  <block id="8a72a6ac569b2623ae7ef2e6169d9622" category="list-text">Quando si aggiorna l'HICS in un controller EF300, EF600, EF300C o EF600C, ripetere tutti i passaggi per rimuovere il secondo controller, aggiornare l'HICS del secondo controller e reinstallare il secondo controller prima di riapplicare l'alimentazione allo shelf del controller.</block>
+  <block id="df4b87988905a767129e6eea7d20dfb4" category="paragraph">Seguire questa procedura per modificare il protocollo della porta host in un array EF300, EF600, EF300C o EF600C. Questa procedura si applica solo alle schede di interfaccia host (HICS) che utilizzano Infiniband (IB) o Fibre Channel (FC).</block>
+  <block id="6105255a43d604b71a2db2ed1e1078e5" category="paragraph">Prima di convertire il protocollo host per un array EF300, EF600, EF300C o EF600C, esaminare i seguenti requisiti.</block>
+  <block id="ddfc2f522bfc9f9d65e985188108c273" category="paragraph">Potrebbe essere necessario eseguire le procedure di manutenzione dell'hardware. In questa sezione sono riportate le procedure specifiche per la manutenzione dei componenti del sistema EF300, EF600, EF300C o EF600C.</block>
+  <block id="fcde763d3b5acba51777c9f806555e8a" category="paragraph">Per i sistemi di archiviazione EF300, EF600, EF300C e EF600C, è possibile eseguire le procedure di manutenzione sui seguenti componenti.</block>
+  <block id="202d35201cc74c9968e9a40c7cc30171" category="paragraph">Prima di sostituire un alimentatore in un array EF300, EF600, EF300C o EF600C, esaminare i seguenti requisiti.</block>
+  <block id="5f8f97ec195542ed337bbddedab32598" category="paragraph">È possibile sostituire un alimentatore quando si verifica un guasto nel controller EF300, EF600, EF300C o EF600C.</block>
+  <block id="64c37d5d57b631b9fb2968c7586932f3" category="paragraph">È possibile aggiungere una scheda di espansione SAS a un controller EF300, EF600, EF300C, EF600C per consentire l'espansione del vassoio dell'unità.</block>
+  <block id="0e7081ec1cfc70b91c941e13e9fa52c5" category="paragraph">Se si prevede di aggiungere una scheda di espansione SAS a un EF300, EF600, EF300C o EF600C, consultare i seguenti requisiti.</block>
+  <block id="0b2035b979e0933fbb24230f41a4faa9" category="section-title">Nuove funzioni della versione 11.90.1</block>
+  <block id="efe2c9d7be92af10ac48d790dd8ccfed" category="paragraph">Nuovi modelli di sistemi storage: EF300C e EF600C</block>
+  <block id="7c4ed7bb875e7af6303e23e1e7df86c3" category="paragraph">Questa release introduce i sistemi storage All Flash NVMe EF300C e EF600C. I sistemi EF300C e EF600C sono tutte versioni flash a elevata capacità dei sistemi storage EF300 e EF600 esistenti. Dischi SSD NVMe a elevata capacità di dimensioni 30TB e 60TB sono supportati con EF300C e EF600C.</block>
+  <block id="c4c050a1cbe127eb24c705844a070872" category="paragraph">Supporto per interfacce SAS 12GB su EF4000</block>
+  <block id="e8b3561f4b15fa164cdd5717ae511188" category="paragraph">Il controller E4000 ora supporta 12GB schede di interfaccia host SAS.</block>
 </blocks>

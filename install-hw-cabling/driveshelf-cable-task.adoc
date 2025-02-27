@@ -54,7 +54,7 @@ image::../media/60_cabling.png[Uno shelf di controller e 60 shelf di dischi]
 
 == Cablaggio EF300 ed EF600
 
-Le seguenti informazioni si applicano al cablaggio di uno shelf di controller EF300 o EF600 su uno shelf di dischi DE212C, DE224C o DE460.
+Le seguenti informazioni si applicano al cablaggio di uno shelf di controller EF300, EF600, EF300C o EF600C a uno shelf di dischi DE212C, DE224C o DE460.
 
 .Prima di iniziare
 Prima di collegare un dispositivo EF300 o EF600, assicurarsi che il firmware sia aggiornato alla versione più recente. Per aggiornare il firmware, seguire le istruzioni in link:../upgrade-santricity/index.html["Aggiornamento del sistema operativo SANtricity"^].

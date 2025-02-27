@@ -1,7 +1,7 @@
 ---
 permalink: install-hw-ef600/overview-concept.html 
 sidebar: sidebar 
-keywords: EF300, EF600, installation process overview 
+keywords: EF300, EF600, EF300C, EF600C installation process overview 
 summary: 'Esaminare la procedura per l"installazione e la configurazione di un sistema EF300 o EF600.' 
 ---
 = Processo di installazione

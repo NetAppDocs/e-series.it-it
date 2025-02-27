@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/sas-add-supertask-task.html 
 sidebar: sidebar 
-keywords: replace EF300 SAS expansion card, replacing SAS card, drive tray expansion, expansion card 
+keywords: replace SAS expansion card, replacing SAS card, drive tray expansion, expansion card, EF300C, EF600C, EF300, EF600 
 summary: 'Aggiunta di una scheda di espansione SAS ai controller EF300 per consentire l"espansione del tray di dischi.' 
 ---
 = Aggiunta di una scheda di espansione SAS a EF300 e EF600
@@ -12,7 +12,7 @@ summary: 'Aggiunta di una scheda di espansione SAS ai controller EF300 per conse
 
 
 [role="lead"]
-È possibile aggiungere una scheda di espansione SAS a un controller EF300 o EF600 per consentire l'espansione del vassoio dell'unità.
+È possibile aggiungere una scheda di espansione SAS a un controller EF300, EF600, EF300C, EF600C per consentire l'espansione del vassoio dell'unità.
 
 .A proposito di questa attività
 Quando si aggiunge una scheda di espansione SAS, è necessario spegnere lo storage array, installare la nuova scheda di espansione SAS e rialimentare.

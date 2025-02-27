@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/batteries-replace-supertask-task.html 
 sidebar: sidebar 
-keywords: replace EF300 battery, replace EF600 battery, EF300 battery fail, EF600 battery fail 
+keywords: replace battery, battery fail, EF300C, EF600C, EF300, EF600 
 summary: Sostituire una batteria in un array EF300 o EF600. 
 ---
 = Sostituire la batteria EF300 o EF600
@@ -12,7 +12,7 @@ summary: Sostituire una batteria in un array EF300 o EF600.
 
 
 [role="lead"]
-È possibile sostituire una batteria in un sistema storage EF300 o EF600.
+È possibile sostituire una batteria in un sistema di archiviazione EF300, EF600, EF300C o EF600C.
 
 .A proposito di questa attività
 Ogni contenitore del controller include una batteria che conserva i dati memorizzati nella cache in caso di interruzione dell'alimentazione CA. Se il guru del ripristino in Gestione sistema di SANtricity segnala lo stato di batteria guasta o lo stato Sostituzione batteria richiesta, è necessario sostituire la batteria interessata.

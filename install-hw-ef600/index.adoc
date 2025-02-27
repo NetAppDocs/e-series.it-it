@@ -1,10 +1,10 @@
 ---
 permalink: install-hw-ef600/index.html 
 sidebar: sidebar 
-keywords: EF300, EF600, installation 
+keywords: EF300, EF600, EF300C, EF600C installation 
 summary: Installare e configurare gli array EF300 ed EF600. 
 ---
-= Installare e configurare i sistemi storage EF300 e EF600
+= Installare e configurare i sistemi di storage EF300, EF600, EF300C e EF600C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

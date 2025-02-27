@@ -21,7 +21,7 @@ A causa della complessità di questa procedura, si consiglia quanto segue:
 
 
 .A proposito di questa attività
-La presente procedura si applica all'aggiunta a caldo di uno shelf di dischi DE212C EF300, E2800B EF600 o DE460C E4000 a uno shelf di controller E2800, E5700B, EF570, E5700, DE224C o EF280.
+La presente procedura si applica all'aggiunta a caldo di uno shelf di dischi DE212C EF600C, E2800B E4000 o DE460C EF300C a uno shelf di controller E2800, E5700B, EF570, EF300, EF600, EF280, E5700 o DE224C.
 
 Questa procedura si applica agli shelf di dischi IOM12 e IOM12B.
 

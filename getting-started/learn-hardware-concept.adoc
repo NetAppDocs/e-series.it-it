@@ -24,6 +24,8 @@ Gli array e-Series sono disponibili nei seguenti modelli:
 * Serie E5700 -- ibrido midrange
 * Serie EF570 -- all flash midrange
 * Serie EF600 -- midrange all flash, all NVMe
+* Serie EF600C -- midrange all flash, all NVMe
+* Serie EF300C -- midrange all flash, all NVMe
 
 
 
@@ -113,7 +115,7 @@ Dimensioni dei rack::
 image:../media/ef570_front.gif["EF300 2U"]
 
 --
-Unità e HICS::
+Dischi::
 +
 --
 Supporta i seguenti dischi con una singola scheda di interfaccia host (HIC) per controller:
@@ -125,6 +127,48 @@ Supporta i seguenti dischi con una singola scheda di interfaccia host (HIC) per 
 
 
 NOTE: Per SANtricity OS 11,80GA e versioni successive, EF300 supporta le configurazioni di shelf di espansione senza dischi nello slot di base Quando si utilizza questa configurazione, assicurarsi che le unità siano inserite nello shelf di espansione e collegate correttamente al vassoio di base prima di accendere il sistema.
+
+--
+Interfacce::
++
+--
+Disponibile con le seguenti interfacce:
+
+* 25 GB iSCSI
+* 32 GB NVMe/Fibre Channel
+* SCSI/Fibre Channel da 32 GB
+* ISER/IB da 100 GB
+* 100 GB SRP/IB
+* 100 GB NVMe/IB
+* 100 GB NVMe/RoCE
+
+
+--
+
+
+--
+.Modelli EF300C
+--
+Dimensioni dei rack::
++
+--
+2U24 (2 unità rack; 24 unità)
+
+image:../media/ef570_front.gif["EF300 2U"]
+
+--
+Dischi::
++
+--
+* Supporto di dischi SSD NVMe di capacità da 30TB TB e 60TB TB
+* Unità SSD NVMe: Fino a 24 unità SSD NVMe nello shelf del controller.
+* Unità NL-SAS con shelf di espansione: Qualsiasi combinazione di shelf DE212C e DE460C non deve superare un totale di 240 slot per unità NL-SAS e 4 shelf di espansione, a meno che non si utilizzino solo shelf DE212C, sono consentiti 8 shelf DE212C. Ad esempio, 4 shelf DE460C o 8 shelf DE212C o 2 shelf DE460C più 2 shelf DE212.
+* Unità SSD SAS con shelf di espansione: Qualsiasi combinazione di shelf DE212C, DE224C e DE460C non deve superare un totale di 96 slot per unità SSD SAS e 4 shelf di espansione, a meno che non vengano utilizzati solo shelf DE212C, sono consentiti 8 shelf DE212C. Ad esempio, 1 shelf DE460C più 1 shelf DE224C più 1 shelf DE212C o 4 shelf DE224C o 8 shelf DE212C.
++
+
+NOTE: Per SANtricity OS 11,80GA e versioni successive, EF300 supporta le configurazioni di shelf di espansione senza dischi nello slot di base Quando si utilizza questa configurazione, assicurarsi che le unità siano inserite nello shelf di espansione e collegate correttamente al vassoio di base prima di accendere il sistema. *
+
+
 
 --
 Interfacce::
@@ -236,11 +280,57 @@ Dimensioni dei rack::
 image:../media/ef570_front.gif["EF600 2U"]
 
 --
-Unità e HICS::
+Dischi::
 +
 --
 Supporta i seguenti dischi con una singola scheda di interfaccia host (HIC) per controller:
 
+* Unità SSD NVMe: Fino a 24 unità SSD NVMe nello shelf del controller.
+* Unità NL-SAS con shelf di espansione: Qualsiasi combinazione di shelf DE212C e DE460C non deve superare un totale di 420 slot per unità NL-SAS e 7 shelf di espansione, a meno che non si utilizzino solo shelf DE212C, sono consentiti 8 shelf DE212C. Ad esempio, 7 shelf DE460C o 8 shelf DE212C o 5 shelf DE460C più 2 shelf DE212.
+* Unità SSD SAS con shelf di espansione: Qualsiasi combinazione di shelf DE212C, DE224C e DE460C non deve superare un totale di 96 slot per unità SSD SAS e 7 shelf di espansione, a meno che non vengano utilizzati solo shelf DE212C, sono consentiti 8 shelf DE212C. Ad esempio, 1 shelf DE460C più 1 shelf DE224C più 1 shelf DE212C o 4 shelf DE224C o 8 shelf DE212C
+
+
+
+NOTE: Per SANtricity OS 11,80GA e versioni successive, EF600 supporta le configurazioni di shelf di espansione senza dischi nello slot di base Quando si utilizza questa configurazione, assicurarsi che le unità siano inserite nello shelf di espansione e collegate correttamente al vassoio di base prima di accendere il sistema.
+
+--
+Interfacce::
++
+--
+Disponibile con le seguenti interfacce:
+
+* 25 GB iSCSI
+* 32 GB NVMe/Fibre Channel
+* SCSI/Fibre Channel da 32 GB
+* ISER/IB da 100 GB
+* 100 GB SRP/IB
+* 100 GB NVMe/IB
+* 100 GB NVMe/RoCE
+* ISER/IB da 200 GB
+* 200 GB NVMe/IB
+* 200 GB NVMe/RoCE
+
+
+--
+
+
+--
+.Modelli EF600C
+--
+Dimensioni dei rack::
++
+--
+2U24 (2 unità rack; 24 unità)
+
+image:../media/ef570_front.gif["EF600 2U"]
+
+--
+Dischi::
++
+--
+Supporta i seguenti dischi con una singola scheda di interfaccia host (HIC) per controller:
+
+* Supporto di dischi SSD NVMe di capacità da 30TB TB e 60TB TB
 * Unità SSD NVMe: Fino a 24 unità SSD NVMe nello shelf del controller.
 * Unità NL-SAS con shelf di espansione: Qualsiasi combinazione di shelf DE212C e DE460C non deve superare un totale di 420 slot per unità NL-SAS e 7 shelf di espansione, a meno che non si utilizzino solo shelf DE212C, sono consentiti 8 shelf DE212C. Ad esempio, 7 shelf DE460C o 8 shelf DE212C o 5 shelf DE460C più 2 shelf DE212.
 * Unità SSD SAS con shelf di espansione: Qualsiasi combinazione di shelf DE212C, DE224C e DE460C non deve superare un totale di 96 slot per unità SSD SAS e 7 shelf di espansione, a meno che non vengano utilizzati solo shelf DE212C, sono consentiti 8 shelf DE212C. Ad esempio, 1 shelf DE460C più 1 shelf DE224C più 1 shelf DE212C o 4 shelf DE224C o 8 shelf DE212C
@@ -306,6 +396,7 @@ Disponibile con le seguenti interfacce:
 * ISCSI da 1 GB o 10GBASE-T.
 * ISCSI da 1GB Gbit, 10Gb Gbit o 25GB Gbit
 * FC da 8GB GB, 16GB GB o 32GB GB
+* 12gb SAS
 
 
 --

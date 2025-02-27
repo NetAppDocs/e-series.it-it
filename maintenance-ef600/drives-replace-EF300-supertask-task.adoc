@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/drives-replace-EF300-supertask-task.html 
 sidebar: sidebar 
-keywords: replace EF300 drive, replace EF600 drive, drive failure 
+keywords: EF300, EF300C, replace drive, drive failure 
 summary: Sostituire un disco in un array EF300. 
 ---
 = Sostituire il disco in un array EF300
@@ -11,9 +11,9 @@ summary: Sostituire un disco in un array EF300.
 
 
 [role="lead"]
-È possibile sostituire un disco in un array EF300.
+È possibile sostituire un'unità in un array EF300 o EF300C.
 
-EF300 supporta l'espansione SAS con shelf da 24 e 60 dischi. La procedura da seguire dipende dal fatto che si disponga di uno shelf da 24 dischi o di uno shelf da 60 dischi:
+EF300 e EF300C supportano l'espansione SAS con shelf da 24 e 60 dischi. La procedura da seguire dipende dal fatto che si disponga di uno shelf da 24 dischi o di uno shelf da 60 dischi:
 
 * <<Sostituire l'unità in un EF300 (shelf da 24 dischi)>>
 * <<Sostituire l'unità in un EF300 (shelf da 60 dischi)>>

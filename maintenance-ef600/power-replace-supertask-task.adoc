@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/power-replace-supertask-task.html 
 sidebar: sidebar 
-keywords: replace EF300 power supply, replace EF600 power supply, 
+keywords: replace power supply, EF300, EF600, EF300C, EF600C 
 summary: Sostituire gli alimentatori quando si guastano nel controller EF300 o EF600. 
 ---
 = Sostituire un alimentatore EF300 o EF600
@@ -12,7 +12,7 @@ summary: Sostituire gli alimentatori quando si guastano nel controller EF300 o E
 
 
 [role="lead"]
-È possibile sostituire un alimentatore in caso di guasto nel controller EF300 o EF600.
+È possibile sostituire un alimentatore quando si verifica un guasto nel controller EF300, EF600, EF300C o EF600C.
 
 In caso di guasto a un alimentatore, è necessario sostituirlo il prima possibile, in modo che lo shelf del controller disponga di una fonte di alimentazione ridondante.
 

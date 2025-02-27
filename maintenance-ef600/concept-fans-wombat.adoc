@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/concept-fans-wombat.html 
 sidebar: sidebar 
-keywords: ef300, ef600, controller, shelf, drive, fan, cooling 
+keywords: ef300, ef600, EF300C, EF600C, controller, shelf, drive, fan, cooling 
 summary: Ogni shelf o shelf di controller EF300 o EF600 include cinque ventole per il raffreddamento del controller. 
 ---
 = Ventole

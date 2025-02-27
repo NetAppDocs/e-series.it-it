@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/drives-replace-EF600-supertask-task.html 
 sidebar: sidebar 
-keywords: replace EF300 DIMM, replace EF600 DIMM, drive failure 
+keywords: EF600, EF600C replace DIMM, drive failure 
 summary: Sostituire un disco in un array EF600. 
 ---
 = Sostituire il disco in un array EF600
@@ -11,7 +11,7 @@ summary: Sostituire un disco in un array EF600.
 
 
 [role="lead"]
-È possibile sostituire un disco in un array EF600.
+È possibile sostituire un'unità in un array EF600 o EF600C.
 
 .A proposito di questa attività
 Il guru del ripristino in Gestione di sistema di SANtricity monitora i dischi nell'array di storage e può notificare un guasto imminente del disco o un guasto effettivo del disco. In caso di guasto di un disco, il LED di attenzione di colore ambra si accende. È possibile sostituire a caldo un disco guasto mentre lo storage array riceve i/O.

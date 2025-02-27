@@ -12,7 +12,7 @@ summary: 'Sostituire una scheda di interfaccia host (HIC) EF300 o EF600 guasta.'
 
 
 [role="lead"]
-Seguire questa procedura per sostituire una scheda di interfaccia host (HIC) guasta in un array EF300 o EF600.
+Seguire questa procedura per sostituire una scheda di interfaccia host (HIC) guasta in un array EF300, EF600, EF300C o EF600C.
 
 .A proposito di questa attività
 Quando si sostituisce un HIC guasto, è necessario spegnere lo storage array, sostituire l'HIC e riapplicare l'alimentazione.

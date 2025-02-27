@@ -1,7 +1,7 @@
 ---
 permalink: maintenance-ef600/dimms-replace-supertask-task.html 
 sidebar: sidebar 
-keywords: replace EF300 DIMM, replace EF600 DIMM 
+keywords: EF300, EF600, EF300C, EF600C, replace DIMM 
 summary: Sostituire un DIMM in un array EF300 o EF600. 
 ---
 = Sostituire i DIMM in EF300 o EF600
@@ -12,7 +12,7 @@ summary: Sostituire un DIMM in un array EF300 o EF600.
 
 
 [role="lead"]
-È possibile sostituire un DIMM in un array EF300 o EF600.
+È possibile sostituire un DIMM in un array EF300, EF600, EF300C o EF600C.
 
 .A proposito di questa attività
 Per sostituire un DIMM, verificare le dimensioni della cache del controller, posizionare il controller offline, rimuovere il controller, rimuovere i DIMM e installare i nuovi DIMM nel controller. Quindi, è possibile riportare il controller online e verificare che lo storage array funzioni correttamente.
