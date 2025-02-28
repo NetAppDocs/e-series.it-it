@@ -28,4 +28,14 @@ Le installazioni di Windows utilizzano il driver nativo DSM (Device Specific Mod
 . Scaricare il pacchetto *SANtricity DSM* dal https://mysupport.netapp.com/site/products/all/details/eseries-santricityos/downloads-tab["Pagina del software del sistema operativo SANtricity"^]. Selezionare la versione del software, accettare il contratto di licenza e selezionare *SANtricity Windows DSM* sotto Download aggiuntivi.
 . Eseguire il programma di installazione *SANtricity DSM*. Fare doppio clic sul pacchetto di installazione da eseguire.
 . Utilizzare l'installazione guidata per installare il pacchetto sulla stazione di gestione.
+. Se necessario, eseguire il `mpclaim` comando per verificare l'installazione del pacchetto DSM.
++
+[source, cli]
+----
+C:\Users\Administrator>mpclaim -s -d
+----
++
+
+NOTE: Per eseguire il comando, la funzione MPIO deve essere installata sul server Windows `mpclaim`.
+
 

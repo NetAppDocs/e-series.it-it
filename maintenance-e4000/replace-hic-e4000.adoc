@@ -249,7 +249,10 @@ NOTE: Se si utilizzano le dita per allentare la vite a testa zigrinata, potrebbe
 . Reinstallare l'HIC:
 +
 .. Allineare lo zoccolo della spina HIC sostitutiva con lo zoccolo della scheda madre, quindi inserire delicatamente la scheda nello zoccolo.
-.. Serrare le tre viti a testa zigrinata sull'HIC.
+.. Serrare manualmente le tre viti a testa zigrinata sull'HIC.
++
+Non utilizzare un cacciavite per evitare di serrare eccessivamente le viti.
+
 .. Rimontare la piastra anteriore dell'HIC.
 
 

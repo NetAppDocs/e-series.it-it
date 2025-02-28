@@ -604,7 +604,11 @@ image::../media/sam1130_ss_e2800_change_feature_pack_feature_enable_identifier_c
 +
 ** Numero di serie dello chassis
 ** Codice di attivazione della funzione
-** Feature Enable Identifier NOTA: Il sito Web Premium Feature Activation include un collegamento a "`Premium Feature Activation Instructions`". Non tentare di seguire queste istruzioni per questa procedura.
+** Identificatore di abilitazione della funzione
++
+
+NOTE: Il sito Web di attivazione delle funzionalità Premium include un collegamento a "`istruzioni di attivazione delle funzioni Premium`". Non tentare di seguire queste istruzioni per questa procedura.
+
 
 
 . Scegliere se ricevere il file delle chiavi per il Feature Pack in un'e-mail o scaricarlo direttamente dal sito.

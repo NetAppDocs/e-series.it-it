@@ -69,7 +69,8 @@ Per configurare lo storage, è possibile accedere all'interfaccia basata su Web,
 Selezionare l'interfaccia che si desidera utilizzare:
 
 [role="quick-margin-list"]
-* https://docs.netapp.com/us-en/e-series-santricity/system-manager/index.html["Guida in linea di Gestore di sistema SANtricity per 11.8x"^]
+* https://docs.netapp.com/us-en/e-series-santricity/system-manager/index.html["Guida in linea di Gestore di sistema SANtricity per 11.9x"^]
+* https://docs.netapp.com/us-en/e-series-santricity-118/system-manager/index.html["Guida in linea di Gestore di sistema SANtricity per 11.8x"^]
 * https://docs.netapp.com/us-en/e-series-santricity-117/system-manager/index.html["Guida in linea di Gestione sistemi SANtricity per 11.7x"^]
 * https://docs.netapp.com/us-en/e-series-santricity-116/index.html["Guida in linea di Gestione sistemi SANtricity per 11,6x"^]
 

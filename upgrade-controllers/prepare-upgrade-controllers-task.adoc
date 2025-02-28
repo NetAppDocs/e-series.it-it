@@ -56,12 +56,7 @@ Eseguire le seguenti operazioni nell'ordine indicato:
  a| 
 Gestione esterna delle chiavi, tutti i dischi bloccati, *non* è possibile passare temporaneamente alla gestione interna delle chiavi per la sostituzione del controller.
  a| 
-Eseguire le seguenti operazioni nell'ordine indicato:
-
-.. Registrare l'indirizzo del server KMS esterno e il numero di porta. Da System Manager, andare a menu:Impostazioni[sistema > Gestione chiavi di sicurezza > Visualizza/Modifica impostazioni server di gestione chiavi].
-.. Assicurarsi che i certificati del client e del server siano disponibili sull'host locale in modo che l'array di storage e il server di gestione delle chiavi possano autenticarsi una volta terminata la sostituzione del controller. Utilizzare `save storageArray keyManagementCertificate` Comando CLI per salvare i certificati. Eseguire il comando due volte, una volta con il `certificateType` parametro impostato su `client`e l'altro con il parametro impostato su `server`.
-.. Esportare il file della chiave di sicurezza interna in una posizione nota sul client di gestione (il sistema con un browser utilizzato per accedere a System Manager). Utilizzare `export storageArray securityKey` Comando CLI. Specificare la password associata alla chiave di sicurezza e la posizione in cui si desidera salvarla.
-
+Contattare l'assistenza clienti.
 
 
 

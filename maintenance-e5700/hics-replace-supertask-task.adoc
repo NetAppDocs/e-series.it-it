@@ -19,15 +19,10 @@ Quando si sostituisce un HIC, il controller viene scollegato (per le configurazi
 
 .Prima di iniziare
 * Revisione link:hics-overview-supertask-concept.html["Requisiti per la sostituzione HIC E5700"].
-* Pianificare una finestra di manutenzione dei tempi di inattività per questa procedura. Quando si installa HICS, l'alimentazione deve essere spenta, in modo che non sia possibile accedere ai dati sullo storage array fino a quando non si è completata correttamente questa procedura. (In una configurazione duplex, entrambi i controller devono avere la stessa configurazione HIC quando vengono accesi).
 * Verificare che non siano in uso volumi o che su tutti gli host che utilizzano questi volumi sia installato un driver multipath.
 * Da Gestore di sistema di SANtricity, verificare i dettagli nel guru del ripristino per confermare che si è verificato un errore HIC e per assicurarsi che non siano necessari altri elementi prima di poter rimuovere e sostituire l'HIC.
 * Assicurarsi di disporre di quanto segue:
 +
-** Due HICS compatibili con i controller.
-+
-Per le configurazioni duplex (due controller), l'HICS installato nei due contenitori del controller deve essere identico. La presenza di HICS non corrispondenti causa il blocco del controller con l'HIC sostitutivo quando lo si porta online.
-
 ** Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
 ** Un cacciavite Phillips n. 1.
 ** Etichette per identificare ciascun cavo collegato al contenitore del controller.

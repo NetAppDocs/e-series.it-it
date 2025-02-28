@@ -471,9 +471,6 @@
   <block id="ba00ed6645f6f61df5121b8522a892a6" category="paragraph">È possibile collegare un host direttamente a un controller (topologia direct-attached) o utilizzare switch (topologia switch) per collegare un host a un controller.</block>
   <block id="adfce61987579370b99617a05cdb796d" category="section-title">Cablaggio per una topologia a collegamento diretto</block>
   <block id="5b4c9deaadbde82584c00c9a4b53caa3" category="paragraph">Una topologia direct-attached connette gli adattatori host direttamente ai controller del sistema storage.</block>
-  <block id="c06fc8a512ed8b80d194c0da0a6684c3" category="paragraph">La figura seguente mostra un esempio di connessione. Per garantire le massime prestazioni, utilizzare tutte le porte dell'adattatore host disponibili.</block>
-  <block id="860c8d8991038a1aa365aeb7a602e700" category="image-title">Due host e due controller</block>
-  <block id="5657524a813a7a96374170f5c9d4e577" category="paragraph">*(1)* _collegare ciascuna porta dell'adattatore host direttamente alle porte host dei controller._</block>
   <block id="0b26276cf7e580bcffb9356cffc5beb3" category="section-title">Cablaggio per una topologia di switch</block>
   <block id="ff3742d36338fb61499d562cd3e0228f" category="paragraph">Una topologia di switch utilizza gli switch per connettere gli host ai controller del sistema storage. Lo switch deve supportare il tipo di connessione utilizzato tra l'host e il controller.</block>
   <block id="2d057e5ead6a8fb0ff410d15d34dcdb3" category="paragraph">La figura seguente mostra un esempio di connessione. Per gli switch che offrono funzionalità di provisioning, è necessario isolare ogni coppia di iniziatori e di destinazione.</block>
@@ -2521,7 +2518,6 @@
   <block id="fdf816b9ac642abd689fd8ace0784e27" category="list-text">*Firmware del disco* -- vedere <block ref="44cf75faaf9d0b93b6ab0672c27e324d" category="inline-link-macro-rx"></block> per istruzioni separate.</block>
   <block id="3165318c5aca56aaa4c1430b7938435e" category="list-text">*Driver multipath/failover* -- come parte del processo di aggiornamento, potrebbe essere necessario aggiornare anche il driver multipath/failover dell'host in modo che l'host possa interagire correttamente con i controller. Se gli host che eseguono sistemi operativi diversi da Microsoft Windows dispongono di connessioni i/o al sistema storage, aggiornare i driver multipath per tali host. Per informazioni sulla compatibilità, fare riferimento a.<block ref="a3e2ed1651134ba8d782e5dc8287cbc1" category="inline-link-rx"></block>. Per istruzioni sull'aggiornamento, fare riferimento a. <block ref="584ba4e1f9de8bb64deb26d3ff20be27" category="inline-link-macro-rx"></block>, <block ref="2cd2251585c7977d833c133e2d86f6ab" category="inline-link-macro-rx"></block>, o. <block ref="52cf6d66e3232b062c766727a3dc70bb" category="inline-link-macro-rx"></block>.</block>
   <block id="b401d179f2d862f657dc768b9b0da629" category="inline-link-macro">Panoramica dei proxy dei servizi web SANtricity</block>
-  <block id="a573c59164533ab1f5f929a3f6fc773a" category="list-text">*Gestore unificato di SANtricity* -- Gestore unificato è il software che gestisce più sistemi storage, inclusi i modelli E2800, E5700, EF300 e EF600. Unified Manager fa parte del proxy dei servizi Web di SANtricity, un server API RESTful installato separatamente su un sistema host per gestire centinaia di sistemi storage NetApp e-Series nuovi e legacy. Per ulteriori informazioni, vedere <block ref="c92032fad30345308610610a1d1083db" category="inline-link-macro-rx"></block>.</block>
   <block id="4ee891d0ff1650fa6825828fa1b6c6d3" category="list-text">*Utility* -- altre utility di gestione richiedono aggiornamenti separati, come l'utility host Windows di SANtricity, l'utility host Linux di SANtricity e il DSM Windows di SANtricity. Per ulteriori informazioni su queste utility, fare riferimento a. <block ref="584ba4e1f9de8bb64deb26d3ff20be27" category="inline-link-macro-rx"></block>, <block ref="2cd2251585c7977d833c133e2d86f6ab" category="inline-link-macro-rx"></block>, o. <block ref="52cf6d66e3232b062c766727a3dc70bb" category="inline-link-macro-rx"></block>.</block>
   <block id="076ca2f85d1676972e577d65bc826cc1" category="list-text">*Sistemi legacy* -- se il sistema storage fa parte di una rete storage che include sistemi storage meno recenti, potrebbe essere necessario utilizzare la finestra di gestione aziendale (EMW) di SANtricity per fornire una vista aziendale di tutti i sistemi storage. In questo caso, verificare se è disponibile una versione di manutenzione più recente di Gestione storage SANtricity.</block>
   <block id="06746f611c63e10213aac3b7dcbd69bd" category="section-title">Doppi controller ed elaborazione i/O.</block>
@@ -6711,7 +6707,6 @@
   <block id="d1d60ea3b6c34d16eceec10166d7dcf4" category="section-title">Modelli EF280</block>
   <block id="dabaf1be0a9b702645c2034751bb93e4" category="paragraph">Supporta fino a 96 unità SSD da 2.5"</block>
   <block id="630bf7189f1f48a3d15afca1b43ffe75" category="section-title">Modelli EF300</block>
-  <block id="9ab5a43912057c3f252ae0aa5ffafa08" category="paragraph">Supporta i seguenti dischi con una singola scheda di interfaccia host (HIC) per controller:</block>
   <block id="d7873c5a31e9fb583fb911435316e255" category="list-text">Unità SSD NVMe: Fino a 24 unità SSD NVMe nello shelf del controller.</block>
   <block id="99017918290ad98fceaa8544139404ea" category="list-text">Unità NL-SAS con shelf di espansione: Qualsiasi combinazione di shelf DE212C e DE460C non deve superare un totale di 240 slot per unità NL-SAS e 4 shelf di espansione, a meno che non si utilizzino solo shelf DE212C, sono consentiti 8 shelf DE212C. Ad esempio, 4 shelf DE460C o 8 shelf DE212C o 2 shelf DE460C più 2 shelf DE212.</block>
   <block id="f7bdca5a10b1a8a32a0410aa51cc3658" category="list-text">Unità SSD SAS con shelf di espansione: Qualsiasi combinazione di shelf DE212C, DE224C e DE460C non deve superare un totale di 96 slot per unità SSD SAS e 4 shelf di espansione, a meno che non vengano utilizzati solo shelf DE212C, sono consentiti 8 shelf DE212C. Ad esempio, 1 shelf DE460C più 1 shelf DE224C più 1 shelf DE212C o 4 shelf DE224C o 8 shelf DE212C.</block>
@@ -7462,7 +7457,6 @@
   <block id="401d2a131f9727761f1407aca186c35a" category="paragraph">SHH-TA5-ZZYHS</block>
   <block id="c8bb878843cfc619e78e60f6997e3e30" category="admonition">Se l'ID del sottomodello del controller non è presente nell'elenco, contattare<block ref="4ce7a3cde07b85b80ee4fe046584534d" category="inline-link-rx"></block>.</block>
   <block id="8fc48164adaa0cce79cc215fef244e00" category="list-text">Numero di serie dello chassis</block>
-  <block id="8de24a1721d0c0fb0c39756c86d1e5da" category="list-text">Feature Enable Identifier NOTA: Il sito Web Premium Feature Activation include un collegamento a "`Premium Feature Activation Instructions`". Non tentare di seguire queste istruzioni per questa procedura.</block>
   <block id="31a599b44c93cb34f76edd48160898be" category="section-title">Fase 2: Arrestare l'i/o host</block>
   <block id="c09719b9c164ac95eda10fbee1bb4658" category="paragraph">Interrompere tutte le operazioni di i/o dall'host prima di convertire il protocollo delle porte host.</block>
   <block id="a1b7af0f21ad6f7da3f61feb2a734667" category="paragraph">Non è possibile accedere ai dati sull'array di storage fino a quando la conversione non viene completata correttamente.</block>
@@ -7935,20 +7929,11 @@
   <block id="8c4bd0c1a96bcaf797782a18b54daf7a" category="list-text"><block ref="8640eb68a955f6f5591f0dd1a3bd30e7" category="inline-xref-macro-rx"></block></block>
   <block id="8f0439a6f042ce457ec5d5faf91c28ea" category="paragraph">Seguire questi passaggi per la gestione interna delle chiavi quando tutti i dischi sono bloccati.</block>
   <block id="cfbb469ee896c6d8312eac3cd3f10e34" category="paragraph">I controller appena scambiati si bloccano con un codice di visualizzazione a sette segmenti *L5*. Questo blocco si verifica quando nessun disco può eseguire la sincronizzazione con codice automatico (ACS). Una volta importata la chiave di sicurezza, ACS riprende e aggiorna i nuovi controller.</block>
-  <block id="e55e81df495444ffb2639e3a7f9ef86e" category="admonition">Se non si utilizza la porta di gestione 1, provare con altri indirizzi IP predefiniti: + Ctrl A port 1: 192.168.128.101 + Ctrl A port 2: 192.168.128.102 + Ctrl B port 1: 192.168.129.101 + Ctrl B port 2: 192.168.129.102</block>
   <block id="3ed7bb77bb34146d7096e92088802232" category="list-text">Effettuare una connessione ethernet diretta e privata tra lo storage array e il laptop o PC del client SANtricity. A tale scopo:</block>
   <block id="c305cf92456cd4decb6725b96d759b94" category="list-text">Utilizzare un cavo ethernet RJ45 per collegare il laptop alla porta di gestione 1 del controller A.</block>
-  <block id="e770dd108a378a501b36f5bbae01f82a" category="list-text">Per completare la connessione, potrebbe essere necessario assegnare il portatile a un indirizzo IP nella stessa sottorete del controller A. Durante il blocco del controller, il controller A utilizza per impostazione predefinita un indirizzo di gestione 192.168.128.101. In questo modo, è possibile assegnare il portatile a una subnet come "192.168.128.201".</block>
-  <block id="9d74567b7f3c3f33bbc54f827296074f" category="list-text">Utilizzando l'indirizzo IP 192.168.128.101 con nome utente *admin* e la password vuota, importare la chiave interna utilizzando<block ref="a6f8118712fc2bcbe8cc4a0df3d41e92" prefix=" " category="inline-code"></block> Comando CLI, con la chiave di sicurezza salvata da <block ref="370683b601e29cfe5ec51edd9d49be09" category="inline-link-macro-rx"></block>. Per informazioni sull'utilizzo di questo comando, vedere<block ref="26a74644087a8cc4596955787ae55f1d" category="inline-link-rx"></block>.</block>
   <block id="fb86a1495e405ddd56a3a1c076f876aa" category="paragraph">In alternativa, è possibile importare la chiave interna tramite l'API REST tramite la seguente chiamata:<block ref="758036d11568492285b8504fb55d4d9f" prefix=" " category="inline-code"></block></block>
   <block id="02626834a548b28e809c79cc3246fbf9" category="paragraph">I controller proseguiranno con il processo di sincronizzazione del codice automatico dai dischi e si riavvieranno. Dopo il riavvio, i controller saranno accessibili attraverso la configurazione IP originale.</block>
   <block id="9208cd3893f8fbd0715f391ac0195354" category="paragraph">Seguire questi passaggi per la gestione delle chiavi esterne quando tutti i dischi sono bloccati.</block>
-  <block id="7b9f327d01db82c07c36d41b777ae840" category="admonition">Lo storage array deve essere in uno stato ottimale per recuperare i certificati client e server. Se i certificati non sono recuperabili, è necessario creare una nuova richiesta di firma del certificato (CSR) e importare il certificato del server dal server di gestione delle chiavi esterno.</block>
-  <block id="4bbb422ffd22264952cbb6eeeda41faa" category="list-text">Utilizzando l'indirizzo IP predefinito 192.168.128.101 con nome utente *admin* e la password vuota, configurare il server di gestione delle chiavi esterno utilizzando<block ref="15b894b6e4c06871df1e10de89d60168" prefix=" " category="inline-code"></block> CLI e fornire il comando<block ref="836c673259e51101a01e755a34f97359" prefix=" " category="inline-code"></block> e.<block ref="83fdf6a03b86c7990e1460cdc7d81dd1" prefix=" " category="inline-code"></block> salvato da <block ref="370683b601e29cfe5ec51edd9d49be09" category="inline-link-macro-rx"></block>. Per informazioni sull'utilizzo di questo comando, vedere<block ref="26a74644087a8cc4596955787ae55f1d" category="inline-link-rx"></block>.</block>
-  <block id="781b6e9f0e82576c9634ecfe8a61f455" category="paragraph">In alternativa, è possibile configurare il server di gestione delle chiavi esterno tramite l'API REST tramite la seguente chiamata:<block ref="03e0d1fcf5a43cf1714fcbfa1f856800" prefix=" " category="inline-code"></block></block>
-  <block id="157bc9956975fd17471f6bdcb9f966ee" category="list-text">Utilizzando l'indirizzo IP predefinito 192.168.128.101 con il nome utente *admin* e la password vuota, importare i certificati utilizzando<block ref="872d2d44d951f842ae2823eb6febd102" prefix=" " category="inline-code"></block> Comando CLI: Una volta per il certificato client e una seconda per il certificato server.</block>
-  <block id="ebf132debe07a5cd0bc888dd5078033d" category="paragraph">In alternativa, è possibile importare il certificato del keyserver tramite l'API REST tramite la seguente chiamata:<block ref="640677ffae20a0401b505d0de933e391" prefix=" " category="inline-code"></block></block>
-  <block id="bc2848514b39d7125ea7f1e0192ff80f" category="list-text">Utilizzando la chiave di sicurezza salvata da <block ref="370683b601e29cfe5ec51edd9d49be09" category="inline-link-macro-rx"></block>, Importare la chiave esterna nell'indirizzo IP 192.168.128.101 con il nome utente *admin* e la password che rimane vuota.</block>
   <block id="4097f6992eb560447325a703f31e2270" category="paragraph">In alternativa, è possibile importare la chiave esterna tramite l'API REST tramite la seguente chiamata:<block ref="758036d11568492285b8504fb55d4d9f" prefix=" " category="inline-code"></block></block>
   <block id="d223aabe6d0751ac7fb17d3493f3c6c7" category="inline-link-macro">Cablaggio</block>
   <block id="bd2cfcab24475001dd81207ac244c8a1" category="summary">Installare E2800 o E5700 in un rack a due montanti o in un cabinet di sistema NetApp.</block>
@@ -8317,7 +8302,6 @@
   <block id="a5ff5d8396bab4e857d616fc9fa06b26" category="list-title">Di cosa hai bisogno</block>
   <block id="75014b540a900a20abf83a06a6f23acc" category="paragraph">Assicurarsi di effettuare le seguenti operazioni:</block>
   <block id="d51a879a95a1f1b04438a7e672254378" category="list-text">Microsoft Edge (90 e versioni successive)</block>
-  <block id="dae6baa86f1f6e4135f2552862c8b191" category="list-text">Unità SSD SAS con shelf di espansione: Qualsiasi combinazione di shelf DE212C, DE224C e DE460C non deve superare un totale di 96 slot per unità SSD SAS e 7 shelf di espansione, a meno che non vengano utilizzati solo shelf DE212C, sono consentiti 8 shelf DE212C. Ad esempio, 1 shelf DE460C più 1 shelf DE224C più 1 shelf DE212C o 4 shelf DE224C o 8 shelf DE212C</block>
   <block id="70a5ac954926edc08c5f6fc4c248a4a6" category="section-title">SANtricity versione 11.7</block>
   <block id="f7b52729af7c7aa177e09390f0afd194" category="list-text"><block ref="f7b52729af7c7aa177e09390f0afd194" category="inline-link-rx"></block></block>
   <block id="797222f106ff986b71e9f972dd342bc3" category="list-text"><block ref="797222f106ff986b71e9f972dd342bc3" category="inline-link-rx"></block></block>
@@ -8328,7 +8312,6 @@
   <block id="2000cb1e7de82e823717ad308e491d64" category="list-text"><block ref="2000cb1e7de82e823717ad308e491d64" category="inline-link-macro-rx"></block></block>
   <block id="872316f2e40e5f7164acd94c4ac49c16" category="list-text"><block ref="872316f2e40e5f7164acd94c4ac49c16" category="inline-link-macro-rx"></block></block>
   <block id="7cac9f30e199e7ecb1c7454e8193ea25" category="inline-link">Guida in linea di Gestore di sistema SANtricity per 11.8x</block>
-  <block id="f96ffc1296cfb22e1010ea2a5c153c7d" category="list-text"><block ref="f96ffc1296cfb22e1010ea2a5c153c7d" category="inline-link-rx"></block></block>
   <block id="e310bf04394efde500bf9f4c81acb37c" category="inline-link">Guida in linea di Gestione sistemi SANtricity per 11.7x</block>
   <block id="57ceabd1bd2acd18e97acd2a27a09688" category="list-text"><block ref="57ceabd1bd2acd18e97acd2a27a09688" category="inline-link-rx"></block></block>
   <block id="cf7b3313bd605518202463f0e3fe1b45" category="inline-link">Guida in linea di Gestione sistemi SANtricity per 11,6x</block>
@@ -8389,7 +8372,6 @@
   <block id="d7ffc2406b2b1f56267e389dcea17d16" category="paragraph">Il flag di creazione del caso è ora disabilitato per gli eventi di superamento della temperatura nominale e massima che non richiedono alcuna azione.</block>
   <block id="746cf185d12f5492055c99b5dda9119d" category="paragraph">Flag di creazione priorità caso attivato per l'evento 0x1209 Mel</block>
   <block id="09c222edb73c49afd2e9ec9f75a2cd53" category="paragraph">Viene ora creato un contrassegno di creazione del caso per<block ref="768a075a6d4dc734e5397ee50957d8d8" prefix=" " category="inline-code"></block> Evento MEL.</block>
-  <block id="11f16f90266e9e59b05bab98913c351d" category="admonition">Per SANtricity OS 11,80GA e versioni successive, tutte le porte USB sono disattivate su E2800, EF280, E5700, EF570, EF600, e EF300.</block>
   <block id="fad6f3761e69d291ccde3b2351a1c961" category="admonition">Per SANtricity OS 11,80GA e versioni successive, EF300 supporta le configurazioni di shelf di espansione senza dischi nello slot di base Quando si utilizza questa configurazione, assicurarsi che le unità siano inserite nello shelf di espansione e collegate correttamente al vassoio di base prima di accendere il sistema.</block>
   <block id="cc1b53336ed5c926305dd7ad876ab1d2" category="admonition">Per SANtricity OS 11,80GA e versioni successive, EF600 supporta le configurazioni di shelf di espansione senza dischi nello slot di base Quando si utilizza questa configurazione, assicurarsi che le unità siano inserite nello shelf di espansione e collegate correttamente al vassoio di base prima di accendere il sistema.</block>
   <block id="f9c81137922296691747f3cff9a92105" category="list-text"><block ref="f9c81137922296691747f3cff9a92105" category="inline-link-rx"></block></block>
@@ -8424,10 +8406,6 @@
   <block id="e536634a787591dd23dbc618cd207ba6" category="paragraph">Proxy dei servizi Web</block>
   <block id="b2fe36d045fcd0262e37faca678d17c8" category="paragraph">Web Services Proxy è stato aggiornato alla versione 6,1 per la compatibilità con la versione 11.80.1 di e-Series.</block>
   <block id="c89b00da7202a9a153f3761208e9c04b" category="inline-link">TR-4789: Guida alla configurazione di VMware per l'integrazione iSCSI SANtricity e-Series con ESXi 6.x e 7.x</block>
-  <block id="d94b2476c52b9269fb71e09f2c273b3f" category="paragraph">*Esempio:*<block ref="55629997c44d8d81fce2f6296c8a341d" prefix=" " category="inline-code"></block></block>
-  <block id="ecac0776d163be45b9926de55b835ec4" category="paragraph">*Esempio:*<block ref="2c35a6e97cb5b6b552dd737031188e4c" prefix=" " category="inline-code"></block></block>
-  <block id="8afb7a80484f4a0c97a4ca2b1dd4f7a9" category="paragraph">*Esempio A:*<block ref="5f6fe0e54ad0da0581f1c921b9d0d2ce" prefix=" " category="inline-code"></block></block>
-  <block id="1f30cbc7228c9c1478541fac65592fdd" category="paragraph">*Esempio B:*<block ref="ce9fafaa9a800b6d0168143573308013" prefix=" " category="inline-code"></block></block>
   <block id="a3cd72e3a5590e7769cb2590ecd015eb" category="section-title">Creazione manuale dell'host</block>
   <block id="9a3eb00d2d24e24125d1dfecb99a47e1" category="paragraph">La creazione di un host è una delle operazioni necessarie per consentire all'array di storage di sapere quali host sono collegati e di consentire l'accesso i/o ai volumi. È possibile creare manualmente un host.</block>
   <block id="8cb031b774a78de2f6be4db3058da109" category="list-text">Eseguire l'utilità specifica del sistema operativo (disponibile presso un fornitore di terze parti), quindi eseguire il comando SMcli<block ref="14993f95e0d6fc04f9966b0c368a7ed6" prefix=" " category="inline-code"></block> per correlare i nomi dei volumi con i nomi degli array di archiviazione host.</block>
@@ -8581,8 +8559,6 @@
   <block id="e63d49fe11023df550eb4a2b6be77e84" category="paragraph">È possibile collegare lo shelf del controller a uno o più shelf da 12 dischi.</block>
   <block id="37684c22af451e0c6390d46e13acdfbf" category="image-alt">Uno shelf di controller e uno shelf da 12 dischi</block>
   <block id="632ca86f36c69ae91aee0bebdff85617" category="admonition">I modelli EF300, EF600 e E4000 dispongono di una sola porta di gestione ethernet out-of-band.</block>
-  <block id="f32b2376c6d50ab1fbf88f2ea80d04ed" category="image-alt">Cablaggio di due host e due controller</block>
-  <block id="a9b737d914f22bddefbbd571f66e428a" category="admonition">Per E4000, eseguire il collegamento alle porte host e0a e e0b.</block>
   <block id="d2204ecb6283608047831fca303cc5c1" category="image-alt">Cablaggio di due host e due switch</block>
   <block id="23d2013304f308363439909fd006bd4e" category="paragraph">E5724, EF570, E4012, E2812, E2824, EF280</block>
   <block id="6048408dac10f3e88fd732617c9d0ef5" category="paragraph">E4060, E2860, E5760</block>
@@ -8655,10 +8631,8 @@
   <block id="7b875024c467f9ec81be78fd845e34d3" category="doc">Setup completo del sistema storage (E4012)</block>
   <block id="9388df48e85777aba8981c9e79739824" category="inline-image-macro">E4012 topologia diretta, larghezza=1000px</block>
   <block id="9dcbe6d474a3385e1258eeebe1d96cfa" category="paragraph"><block ref="9dcbe6d474a3385e1258eeebe1d96cfa" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="605b7ce026d54baac2f33c8eee6e4572" category="list-text">Se non sono stati installati shelf di espansione, collegare ciascun adattatore host direttamente alle porte host e0a e e0b sui controller.</block>
   <block id="e5115f367ddc4b23f2a5a9dce410d220" category="inline-image-macro">Topologia del tessuto E4012, larghezza=1000px</block>
   <block id="fe5422a7f743c4750aa826cb030729eb" category="paragraph"><block ref="fe5422a7f743c4750aa826cb030729eb" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="643f201ee98aff8102118f79400d167d" category="list-text">Collegare ogni switch direttamente alle porte host e0a e e0b sui controller.</block>
   <block id="2f998d3759a46f941c16045d05799b20" category="inline-image-macro">E4000 porta di gestione del controller</block>
   <block id="419c5b2edef00ba85d62682d5ff0138c" category="paragraph"><block ref="419c5b2edef00ba85d62682d5ff0138c" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f530fae0a98563bf22e6ee7a23163588" category="list-text">Seguire le istruzioni del browser per procedere e avviare Gestione di sistema di SANtricity. Se non si riesce a stabilire una connessione, verificare di non ricevere la configurazione di rete da un server DHCP.</block>
@@ -8668,7 +8642,6 @@
   <block id="33013c1fc439b91737e74be863a12160" category="doc">Setup completo del sistema storage (E4060)</block>
   <block id="ed82e034d7d377cc12aa1d89cea33d43" category="inline-image-macro">E4060 topologia diretta, larghezza=1000px</block>
   <block id="98e6536dfa926f6bd4a1900657c27282" category="paragraph"><block ref="98e6536dfa926f6bd4a1900657c27282" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="895ec80e8ba95818a8a89dfffdc5f62b" category="list-text">Collegare ciascun adattatore host direttamente alle porte host e0a e e0b sui controller.</block>
   <block id="427b3e2ab20960e704a22e39fbcda634" category="inline-image-macro">Topologia del tessuto E4060, larghezza=1000px</block>
   <block id="72c6889744a45c86c32b640c76b2138a" category="paragraph"><block ref="72c6889744a45c86c32b640c76b2138a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="872d1df52706490eb75a1a60b57c747c" category="doc">Collegare i cavi (E4012)</block>
@@ -9387,7 +9360,6 @@
   <block id="eac74c5d17668cb0c341a5f18a69d72f" category="image-alt">Diagramma delle chiamate API dei servizi Web</block>
   <block id="95985e1a0f17b754899abdad9230ee3f" category="list-text">*Incorporato* -- Un server API RESTful è integrato in ogni controller di un sistema di storage E2800/EF280 che esegue NetApp SANtricity 11,30 o versioni successive, un E5700/EF570 che esegue SANtricity 11,40 o versioni successive, un EF300 o EF600 che esegue SANtricity 11,60 o versioni successive e un E4000 che esegue SANtricity 11,90 o versioni successive. Non è richiesta alcuna installazione.</block>
   <block id="72c3d75b0f0ad96704b8c5fc1e8252e5" category="image-alt">Panoramica proxy dei servizi Web</block>
-  <block id="d680389e96802ed400beaec0b7cba3a6" category="paragraph">La tabella seguente descrive le nuove funzioni delle ultime versioni del sistema operativo SANtricity per la gestione integrata dei controller E4000, EF300, EF600, E2800/EF280 e E5700/EF570.</block>
   <block id="a9ce161f80e5e22b8b95f7f9ca5f67ed" category="section-title">Nuove funzionalità della versione 11.90</block>
   <block id="0d49c2d5fa6db45e427d9c6ca6839ac7" category="paragraph">Nuovo modello di sistema storage – E4000</block>
   <block id="f79f2d98fb02cd051399681f3101fbb8" category="paragraph">Questa release introduce il sistema di storage a basso costo E4000. E4000 supporta unità da 12 e 60 GB e una singola scheda di interfaccia host (HIC) per controller. Per la versione iniziale, le schede di interfaccia host supportate includono iSCSI e Fibre Channel. In Unified Manager è possibile visualizzare e gestire i sistemi storage E4000 e altri sistemi storage e-Series.</block>
@@ -9435,10 +9407,7 @@
   <block id="8a7e170acd5f2688800925b2b4a8d261" category="list-text"><block ref="537606410175a12a150f722cd71e55fb" category="inline-link-rx"></block> -- descrive come configurare lo storage virtuale e fisico in modo che rientri nei valori massimi consentiti supportati da ESX/ESXi.</block>
   <block id="d088dea69b1345c1729f1c0d46d8053d" category="list-text">*Tipi di controller* - tutti i modelli E4000, E2800, EF280, EF300, E5700, EF570, EF600, EF300, EF600C e EF300C.</block>
   <block id="4720d0b863e013bea6899b10e0989bda" category="list-text">Serie EF600C -- midrange all flash, all NVMe</block>
-  <block id="b9f7cef2dc8f05405c94daa2cb4fa6ae" category="list-text">Serie EF300C -- midrange all flash, all NVMe</block>
   <block id="5ca6952c7c9ae5d4b8be61e6386f0222" category="open-title">Modelli EF300C</block>
-  <block id="595f8cc3ac0c1f12a0f83c3b1dad7c19" category="list-text">Supporto di dischi SSD NVMe di capacità da 30TB TB e 60TB TB</block>
-  <block id="f8a3ff8be0bd051ecc8c3ec31daa0195" category="admonition">Per SANtricity OS 11,80GA e versioni successive, EF300 supporta le configurazioni di shelf di espansione senza dischi nello slot di base Quando si utilizza questa configurazione, assicurarsi che le unità siano inserite nello shelf di espansione e collegate correttamente al vassoio di base prima di accendere il sistema. *</block>
   <block id="14a2fa7582e1084e3800dde50d8cde03" category="open-title">Modelli EF600C</block>
   <block id="0db8edfb04068c99ae28246efebb6d4d" category="list-text">12gb SAS</block>
   <block id="689052b8726f00a4623e9ada4d36af90" category="list-text">EF300, EF600. Controller EF300C e EF600C</block>
@@ -9478,4 +9447,52 @@
   <block id="7c4ed7bb875e7af6303e23e1e7df86c3" category="paragraph">Questa release introduce i sistemi storage All Flash NVMe EF300C e EF600C. I sistemi EF300C e EF600C sono tutte versioni flash a elevata capacità dei sistemi storage EF300 e EF600 esistenti. Dischi SSD NVMe a elevata capacità di dimensioni 30TB e 60TB sono supportati con EF300C e EF600C.</block>
   <block id="c4c050a1cbe127eb24c705844a070872" category="paragraph">Supporto per interfacce SAS 12GB su EF4000</block>
   <block id="e8b3561f4b15fa164cdd5717ae511188" category="paragraph">Il controller E4000 ora supporta 12GB schede di interfaccia host SAS.</block>
+  <block id="892b365a22314b2852ca18025911d1be" category="list-text">Se necessario, eseguire il<block ref="3e0e995eb29f6805a04d4b3ac859bc4b" prefix=" " category="inline-code"></block> comando per verificare l'installazione del pacchetto DSM.</block>
+  <block id="fb00ee175135cc78e49e873e41c6e6ad" category="admonition">Per eseguire il comando, la funzione MPIO deve essere installata sul server Windows<block ref="3e0e995eb29f6805a04d4b3ac859bc4b" prefix=" " category="inline-code"></block>.</block>
+  <block id="5f3ab4e439fcf2e4683f430d57044b3a" category="inline-link">Guida in linea di Gestore di sistema SANtricity per 11.9x</block>
+  <block id="e51c0393968b3aeac9a8857a4efc2e03" category="list-text"><block ref="e51c0393968b3aeac9a8857a4efc2e03" category="inline-link-rx"></block></block>
+  <block id="25d302c40995ad55c0ad7701261d1310" category="list-text"><block ref="25d302c40995ad55c0ad7701261d1310" category="inline-link-rx"></block></block>
+  <block id="718416bdd384ea0f59ab3278846e588d" category="list-text">Serie EF300C -- all flash entry-level, all NVMe</block>
+  <block id="2d782dd4047faa435e8a21598b64a8f9" category="admonition">Per SANtricity OS 11,80GA e versioni successive, tutte le porte USB sono disattivate sugli array E2800, EF280, E5700, EF570, EF600/EF600C e EF300/EF300C.</block>
+  <block id="145e67dd5fe93c51c814f0945a64eadf" category="list-text">Supporto per una scheda di espansione SAS opzionale, per il collegamento degli shelf di espansione SAS.</block>
+  <block id="d0becf074be26c6d978c288daba24ca4" category="list-text">Supporto di una scheda di interfaccia host per controller.</block>
+  <block id="346a8501979327018cc0ee11a3d0f1cf" category="list-text">Supporto di dischi SSD NVMe di capacità da 30TB TB o 60TB TB.</block>
+  <block id="af501aae034a5ca029c9b2b363c0f07b" category="list-text">Compatibile con l'utilizzo di Dynamic Disk Pool solo senza supporto RAID legacy.</block>
+  <block id="1525ad0ecd8f2d9b577c446044aa629c" category="list-text">Nessun supporto per le configurazioni shelf di espansione.</block>
+  <block id="b571ba80794df2a8fca4803fbae00b53" category="list-text">Un singolo pool di dischi viene creato automaticamente se non ci sono abbastanza dischi non assegnati durante l'avvio del sistema.</block>
+  <block id="538ff1eff5fd361d6f0b2adf6bbf0ed4" category="list-text">Unità SSD SAS con shelf di espansione: Qualsiasi combinazione di shelf DE212C, DE224C e DE460C non deve superare un totale di 96 slot per unità SSD SAS e 7 shelf di espansione, a meno che non vengano utilizzati solo shelf DE212C, sono consentiti 8 shelf DE212C. Ad esempio, 1 shelf DE460C più 1 shelf DE224C più 1 shelf DE212C o 4 shelf DE224C o 8 shelf DE212C.</block>
+  <block id="c80c70457709e71cfb1acdcad7d813f2" category="list-text">Supporto di due schede di interfaccia host per controller.</block>
+  <block id="f68ca88c11d5a4dbeed850ba81248db6" category="list-text">In alternativa, supporto per una scheda di interfaccia host 200GB IB per controller.</block>
+  <block id="7a26624f7fb7a22e34a299b1cb6df6c1" category="list-text">L'espansione SAS è supportata solo nelle configurazioni con una scheda di interfaccia host per controller.</block>
+  <block id="f72413fb6640f9198331e4ddac42a1b4" category="paragraph">Per garantire le massime prestazioni, utilizzare tutte le porte dell'adattatore host disponibili.</block>
+  <block id="599b309fb45a54aef0306d417582a4ad" category="paragraph-title">Un host con due HBA</block>
+  <block id="547b769f7de7cea07ea8e1809f6b68e1" category="paragraph">La figura seguente mostra un esempio di un host con due HBA installati.</block>
+  <block id="c2daf72836844565f5f371269f79e909" category="image-alt">Un host/due HBA e due cavi controller</block>
+  <block id="15c64c1bde30a480800d35c9ca63702a" category="paragraph-title">Un host con due HBA (cablaggio alternativo)</block>
+  <block id="0a189e49a12a656d00d97d420aceb46f" category="image-alt">Un host/due HBA e il cablaggio di due controller (cablaggio alternativo)</block>
+  <block id="d31563f45b72dae0e523c10c401bb20d" category="paragraph-title">Due host con due HBA per host</block>
+  <block id="a71c7f479c0caedb0629383f7ac5efeb" category="paragraph">La figura seguente mostra un esempio di due host ciascuno con due HBA installati.</block>
+  <block id="de1ab736ca66f10e42336f12175adfbb" category="image-alt">Cablaggio di due host/quattro HBA e due controller</block>
+  <block id="9ccebbb91ae504287ed8c313aab6d4fa" category="admonition">Le porte host sul lato inferiore sinistro (E1a, e1b, e1c e e1d) e sul lato superiore destro (e0a e e0b) del controller possono essere utilizzate per il cablaggio dell'host dati.</block>
+  <block id="e6f073e83b4d2d59e85f27a8f76329ce" category="list-text">Collegare ciascuna porta HBA host alle porte host sui controller (E1a, e1b, e1c, e1d o e0a e e0b).</block>
+  <block id="b445e22177e0e8f24243dcf4b44a6b65" category="inline-link">Cablaggio host</block>
+  <block id="ef3aa833ef985acdcdf1a9815ed086e2" category="admonition">Per ulteriori esempi di schemi di cablaggio, vedere<block ref="ac6f2dcd3a5364bce3c8b8b61a1abdb1" category="inline-link-rx"></block>.</block>
+  <block id="b60f0a96b3917b423c024c47968b1e95" category="list-text">Collegare ogni switch direttamente alle porte host dei controller (E1a, e1b, e1c, e1d o e0a e e0b).</block>
+  <block id="26f63d2be4d7f427507e07522f2bc27e" category="list-text">Serrare manualmente le tre viti a testa zigrinata sull'HIC.</block>
+  <block id="b561bc9ed41a67af832ede09e0c66855" category="list-text">*Gestione in banda utilizzando il volume di accesso*</block>
+  <block id="d95bb44a7a9bb7de3384211db9209371" category="list-text">E4000 non supporta la gestione in banda utilizzando il volume di accesso.</block>
+  <block id="3051db29d3e01aace9b71736b6906cb5" category="paragraph">Prima di eseguire l'aggiornamento a E4000 controller, rimuovere la mappatura del volume di accesso da tutti gli host e i cluster host definiti.</block>
+  <block id="d771f234da984ad1422ec8ffc796cf49" category="paragraph">Contattare l'assistenza clienti.</block>
+  <block id="b8166fddcc8a9bc53fb34ba8b6b40c74" category="admonition">Se non si utilizza la porta di gestione 1, provare con altri indirizzi IP predefiniti: + Ctrl A port 1: 169.254.128.101 + Ctrl A port 2: 169.254.128.102 + Ctrl B port 1: 169.254.128.101 + Ctrl B port 2: 169.254.128.102</block>
+  <block id="072d06a0d6f5c5e1085353a74332c241" category="list-text">Per completare la connessione, potrebbe essere necessario assegnare il laptop a un indirizzo IP nella stessa sottorete del controller A. durante il blocco del controller, il controller A assume per impostazione predefinita l'indirizzo di gestione 169.254.128.101. In questo modo, è possibile assegnare il portatile a una subnet come "169.254.128.201".</block>
+  <block id="71bde2f5f345db499289a50db32f08f7" category="list-text">Utilizzando l'indirizzo IP 169.254.128.101 con nome utente *admin* e la password vuota, importare la chiave interna utilizzando il<block ref="a6f8118712fc2bcbe8cc4a0df3d41e92" prefix=" " category="inline-code"></block> comando CLI, con la chiave di sicurezza salvata da <block ref="370683b601e29cfe5ec51edd9d49be09" category="inline-link-macro-rx"></block>. Per informazioni sull'utilizzo di questo comando, consultare la<block ref="26a74644087a8cc4596955787ae55f1d" category="inline-link-rx"></block>.</block>
+  <block id="49896b1b2fdda00188714463295ad34c" category="paragraph">*Esempio:*<block ref="9dfe80936c8f3826fa0f1b99e4a88b06" prefix=" " category="inline-code"></block></block>
+  <block id="31e27b7c3a23da037324302ef6196af9" category="list-text">Utilizzando la chiave di protezione salvata da <block ref="370683b601e29cfe5ec51edd9d49be09" category="inline-link-macro-rx"></block>, importare la chiave esterna all'indirizzo IP 169.254.128.101 lasciando vuoto il nome utente *admin* e la password.</block>
+  <block id="c591c8c3a8e8fbcf4843d55451e5745e" category="list-text">(Opzionale) se necessario, è possibile reimpostare il codice delle unità eseguendo le seguenti operazioni:</block>
+  <block id="0b9601abb9585618affd66f5798a16b2" category="paragraph">*Esempio:*<block ref="b77e774fa880afa2bd8c8ca91507d0ce" prefix=" " category="inline-code"></block></block>
+  <block id="73c97dd158942ee4b15d19f135952d89" category="list-text">*SANtricity Unified Manager* -- Unified Manager è il software che gestisce più sistemi storage, inclusi i modelli E4000, E2800, E5700, EF300 e EF600. Unified Manager fa parte del proxy dei servizi Web di SANtricity, un server API RESTful installato separatamente su un sistema host per gestire centinaia di sistemi storage NetApp e-Series nuovi e legacy. Per ulteriori informazioni, vedere <block ref="c92032fad30345308610610a1d1083db" category="inline-link-macro-rx"></block>.</block>
+  <block id="e5a4c2aea29b525342429c88518c7f73" category="paragraph">La tabella seguente descrive le nuove funzioni delle ultime versioni del sistema operativo SANtricity per la gestione integrata dei controller E4000, EF300/EF300C, EF600/EF600C, E2800/EF280 e E5700/EF570.</block>
+  <block id="baee5b8c18b240b4edfcc1ae3fe154f0" category="section-title">Nuove funzioni della versione 11.90R1</block>
+  <block id="0b2fb9383075b5994701c94b27e4b6ee" category="paragraph">Questa release introduce i sistemi storage All Flash NVMe EF300C e EF600C. I sistemi EF300C e EF600C sono versioni flash a elevata capacità dei sistemi storage EF300 e EF600 esistenti. I dischi SSD NVMe a elevata capacità di 30TB o 60TB dimensioni sono supportati con EF300C e EF600C. EF300C/EF600C è compatibile solo per l'utilizzo con Dynamic Disk Pool, senza supporto RAID legacy.</block>
+  <block id="8af7f744c39ae6285a380b6eb402fcb2" category="paragraph">Supporto per interfacce SAS 12GB su controller E4000</block>
 </blocks>

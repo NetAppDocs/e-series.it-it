@@ -58,6 +58,14 @@ Se si stanno sostituendo i controller per eseguire l'aggiornamento a un nuovo mo
 +
 Durante l'upgrade del controller e-Series, dovresti disabilitare tutte le funzionalità premium utilizzate sullo storage array non supportate sui nuovi controller.
 
+* *Gestione in banda utilizzando il volume di accesso*
++
+** E4000 non supporta la gestione in banda utilizzando il volume di accesso.
++
+Prima di eseguire l'aggiornamento a E4000 controller, rimuovere la mappatura del volume di accesso da tutti gli host e i cluster host definiti.
+
+
+
 
 
 
@@ -84,6 +92,7 @@ Ordinare una nuova batteria.
 * E4000 può supportare solo volumi 512
 * E4000 non supporta le configurazioni SAS
 * E4000 non supporta i volumi di archiviazione remota
+* E4000 non supporta la gestione in banda utilizzando il volume di accesso.
 
  a| 
 I controller E4000 devono utilizzare shelf SAS-3.
@@ -107,6 +116,8 @@ Ordinare una nuova batteria.
 
 * Il supporto della scheda di interfaccia host InfiniBand non è disponibile
 * E4000 non supporta le configurazioni SAS
+* E4000 non supporta i volumi di archiviazione remota
+* E4000 non supporta la gestione in banda utilizzando il volume di accesso.
 
  a| 
 I controller E4000 devono utilizzare shelf SAS-3.

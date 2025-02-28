@@ -19,15 +19,22 @@ summary: È possibile collegare un host direttamente a un controller o utilizzar
 
 Una topologia direct-attached connette gli adattatori host direttamente ai controller del sistema storage.
 
-La figura seguente mostra un esempio di connessione. Per garantire le massime prestazioni, utilizzare tutte le porte dell'adattatore host disponibili.
+Per garantire le massime prestazioni, utilizzare tutte le porte dell'adattatore host disponibili.
 
-.Due host e due controller
-image::../media/topology_host_direct_generic_web_low.png[Cablaggio di due host e due controller]
+.Un host con due HBA
+La figura seguente mostra un esempio di un host con due HBA installati.
 
-*(1)* _collegare ciascuna porta dell'adattatore host direttamente alle porte host dei controller._
+image::../media/1host_2hbas_ieops-2145.svg[Un host/due HBA e due cavi controller]
 
+.Un host con due HBA (cablaggio alternativo)
+La figura seguente mostra un esempio di un host con due HBA installati.
 
-NOTE: Per E4000, eseguire il collegamento alle porte host e0a e e0b.
+image::../media/1host_2hbas_alternate_wkflw_ieops-2147.svg[Un host/due HBA e il cablaggio di due controller (cablaggio alternativo)]
+
+.Due host con due HBA per host
+La figura seguente mostra un esempio di due host ciascuno con due HBA installati.
+
+image::../media/2hosts_4hbas_ieops-2146.svg[Cablaggio di due host/quattro HBA e due controller]
 
 
 
@@ -43,6 +50,3 @@ image::../media/topology_host_fabric_generic.png[Cablaggio di due host e due swi
 *(1)* _collegare ogni adattatore host direttamente allo switch._
 
 *(2)* _collegare ogni switch direttamente alle porte host dei controller. Per garantire le massime prestazioni, utilizzare tutte le porte dell'adattatore host disponibili._
-
-
-NOTE: Per E4000, eseguire il collegamento alle porte host e0a e e0b.

@@ -19,6 +19,9 @@ Scopri come collegare i controller alla rete e completare la configurazione e la
 
 Collegare il sistema in base alla topologia di rete.
 
+
+NOTE: Le porte host sul lato inferiore sinistro (E1a, e1b, e1c e e1d) e sul lato superiore destro (e0a e e0b) del controller possono essere utilizzate per il cablaggio dell'host dati.
+
 [role="tabbed-block"]
 ====
 .Opzione 1: Topologia a collegamento diretto
@@ -27,8 +30,11 @@ Nell'esempio seguente viene illustrato il collegamento dei cavi agli host di dat
 
 image:../media/drw_e4060_direct_topology_ieops-2048.svg["E4060 topologia diretta, larghezza=1000px"]
 
-. Collegare ciascun adattatore host direttamente alle porte host e0a e e0b sui controller.
+. Collegare ciascuna porta HBA host alle porte host sui controller (E1a, e1b, e1c, e1d o e0a e e0b).
 
+
+
+NOTE: Per ulteriori esempi di schemi di cablaggio, vedere https://docs.netapp.com/us-en/e-series/install-hw-cabling/host-cable-task.html#cabling-for-a-direct-attached-topology["Cablaggio host"^].
 
 --
 .Opzione 2: Topologia del fabric
@@ -38,7 +44,7 @@ Nell'esempio seguente viene illustrato il collegamento degli host di dati median
 image:../media/drw_e4060_fabric_topology_ieops-2049.svg["Topologia del tessuto E4060, larghezza=1000px"]
 
 . Collegare ciascun adattatore host direttamente allo switch.
-. Collegare ogni switch direttamente alle porte host e0a e e0b sui controller.
+. Collegare ogni switch direttamente alle porte host dei controller (E1a, e1b, e1c, e1d o e0a e e0b).
 
 
 --
