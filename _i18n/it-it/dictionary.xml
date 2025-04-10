@@ -819,7 +819,6 @@
   <block id="8d50e29d2dbe5c9bd78247f7b1bdb86f" category="list-text">Rimuovere la protezione antistatica.</block>
   <block id="a8280a793d4f574a1e8ec9fdeff29427" category="list-text">Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit.</block>
   <block id="1e8e67942242258fa3559bd1c3bc3ad5" category="paragraph">La sostituzione del filtro a carboni attivi della ventola è completata. È possibile riprendere le normali operazioni.</block>
-  <block id="00f9ce66241621004c58b2e973a895fd" category="summary">È possibile installare una scheda di interfaccia host (HIC) all'interno di un contenitore di controller. Il controller E2800 include porte host integrate sulla scheda controller stessa, nonché porte host sull'HIC opzionale. Le porte host integrate nel controller sono chiamate porte host baseboard. Le porte host integrate nell'HIC sono chiamate porte HIC.</block>
   <block id="bb8c12c938368d891c8a41b75b8dbff5" category="doc">Schede di interfaccia host</block>
   <block id="fcbb93bbfdd8447e24085518b94cfeb8" category="paragraph">È possibile installare una scheda di interfaccia host (HIC) all'interno di un contenitore di controller. Il controller E2800 include porte host integrate sulla scheda controller stessa, nonché porte host sull'HIC opzionale. Le porte host integrate nel controller sono chiamate porte host baseboard. Le porte host integrate nell'HIC sono chiamate porte HIC.</block>
   <block id="bfc27e941d129c6fb7e5c826d19c6fa1" category="summary">Sostituire uno shelf o uno shelf di controller E2800 a 12 o 24 dischi, che include due alimentatori con ventole integrate.</block>
@@ -1638,7 +1637,6 @@
   <block id="60e96a78f50ebc8de2193ce71c1b19b1" category="section-title">Stesso protocollo host e operazioni di mirroring</block>
   <block id="3c64d1c3424c5cab85542d4b450938f2" category="paragraph">Le operazioni di mirroring non vengono influenzate se le porte host utilizzate per il mirroring mantengono lo stesso protocollo dopo l'applicazione del Feature Pack. Tuttavia, prima di applicare il Feature Pack, è necessario verificare che tutti i gruppi di coerenza mirror siano sincronizzati.</block>
   <block id="a24170506a28aeb36784cc28c43af86d" category="paragraph">Dopo aver applicato il Feature Pack, è necessario verificare la comunicazione tra lo storage array locale e lo storage array remoto. In caso di domande su come eseguire questa operazione, consultare la guida in linea di Gestore di sistema di SANtricity.</block>
-  <block id="98c3987fb58d5d61350074733f52ec4f" category="summary">Un controller è costituito da una scheda, firmware e software. Controlla i dischi e implementa le funzioni di System Manager. Questa sezione descrive come convertire in una configurazione duplex aggiungendo un secondo controller e come sostituire un controller in una configurazione simplex e in una configurazione duplex.</block>
   <block id="cbfb14f470701bf93424d757c624369a" category="doc">Controller</block>
   <block id="aa09dd3e551b42b1f09620b7f39304a5" category="summary">Eseguire la manutenzione dei componenti E2800.</block>
   <block id="860100ace4d40ad25d222dbdacb61f7b" category="doc">Manutenzione dell'hardware E2800</block>
@@ -1817,7 +1815,6 @@
   <block id="8b4e3dcdc00b4445d079701f61415a87" category="paragraph">Il LED di attività verde per l'unità sostituita nella parte anteriore del cassetto si accende quando l'unità è inserita correttamente.</block>
   <block id="96767137a81a7de9e618dc872138fc3c" category="paragraph">Verificare che il nuovo disco funzioni correttamente.</block>
   <block id="9148c3ad76e0662ac4cda746c7b8fc25" category="summary">Ogni contenitore del controller include una batteria che conserva i dati memorizzati nella cache in caso di interruzione dell'alimentazione CA. Se il guru del ripristino in Gestione sistema di SANtricity segnala lo stato di batteria guasta o lo stato Sostituzione batteria richiesta, è necessario sostituire la batteria interessata.</block>
-  <block id="a3c03452327012e5141c33e5726e73c7" category="summary">I contenitori sono costituiti da tre tipi diversi: Alimentatori con ventole di alimentazione che forniscono una fonte di alimentazione ridondante e un raffreddamento adeguato in uno shelf o uno shelf di controller da 12 o 24 dischi; contenitori di alimentazione utilizzati per la ridondanza dell'alimentazione in uno shelf o uno shelf di controller da 60 dischi; e i contenitori per ventole utilizzati per il raffreddamento dello shelf di controller da 60 dischi o dello shelf di dischi.</block>
   <block id="b27b1feddcd0e6980fd142d167ad4000" category="summary">Installare una nuova batteria.</block>
   <block id="0d9172186f7ee4d9c0f105bc4d0ac733" category="doc">Installare una nuova batteria E2800</block>
   <block id="19a40e57f7257d4edddda3d9bdc15b5c" category="paragraph">Dopo aver rimosso la batteria guasta, è possibile installarne una nuova.</block>
@@ -2738,7 +2735,6 @@
   <block id="040ac2db3b3e7fb88d8969f3a734f436" category="paragraph">Controllare i LED del controller e il display a sette segmenti e verificare che lo stato del controller sia ottimale.</block>
   <block id="9d4f95a7f28d3af47ea4564289b7d9f8" category="paragraph">*(1)* _LED link host (ambra)_</block>
   <block id="bfe0056c6787fe62d52c9480cc0c3591" category="paragraph">*(2)* _LED di attenzione (ambra)_</block>
-  <block id="d3852022ece859a54c514fe09a6eef63" category="summary">È possibile installare una scheda di interfaccia host (HIC) all'interno di un contenitore di controller. Il controller E5700 include porte host integrate sulla scheda controller stessa, nonché porte host sull'HIC opzionale. Le porte host integrate nel controller sono chiamate porte host baseboard. Le porte host integrate nell'HIC sono chiamate porte HIC.</block>
   <block id="7a4a43ed3b8a4107c8b5916a80b9e5bf" category="paragraph">È possibile installare una scheda di interfaccia host (HIC) all'interno di un contenitore di controller. Il controller E5700 include porte host integrate sulla scheda controller stessa, nonché porte host sull'HIC opzionale. Le porte host integrate nel controller sono chiamate porte host baseboard. Le porte host integrate nell'HIC sono chiamate porte HIC.</block>
   <block id="086932e63e7e97d12e0f5f2f280c6bb7" category="summary">Sostituire un disco in uno shelf da 24 dischi E5700.</block>
   <block id="2209054aed327450a6370894127d6451" category="doc">Sostituire l'unità in E5700 (shelf da 24 dischi)</block>
@@ -3006,7 +3002,6 @@
   <block id="3af49c766fce9d39a780194ced77daf9" category="paragraph">Le operazioni di mirroring non vengono influenzate se le porte host utilizzate per il mirroring mantengono lo stesso protocollo dopo l'applicazione del Feature Pack. Tuttavia, prima di applicare il Feature Pack, è necessario verificare che tutti i gruppi di coerenza mirror siano sincronizzati. Dopo aver applicato il Feature Pack, è necessario verificare la comunicazione tra lo storage array locale e lo storage array remoto. In caso di domande su come eseguire questa operazione, consultare la guida in linea di Gestore di sistema di SANtricity.</block>
   <block id="06596e8e9f43bb4e7b519f5e74f6a1bc" category="inline-link">Disattivare la funzione di array di storage</block>
   <block id="05ce6387a0f6e2bc4bf2bbfd49e1d2b1" category="admonition">Il mirroring asincrono e sincrono non è supportato per NVMe su fabric. Per disattivare il mirroring asincrono e sincrono, è possibile utilizzare<block ref="977b548d179a968c5eaeb640e03f8649" prefix=" " category="inline-code"></block> oppure<block ref="c36f232371733272d756db46ed33c745" prefix=" " category="inline-code"></block> comandi tramite l'interfaccia della riga di comando. Fare riferimento a.<block ref="92898c1e2eb7e7d6c58dc347d1ceb12d" category="inline-link-rx"></block> Comandi di mirroring nella Guida in linea di riferimento ai comandi CLI per ulteriori informazioni su come disattivare il mirroring.</block>
-  <block id="e977f6bbcbae61c33920c421cdc41ec2" category="summary">Un controller è costituito da una scheda, firmware e software. Controlla i dischi e implementa le funzioni di System Manager. Questa sezione descrive come sostituire un controller in una configurazione duplex.</block>
   <block id="6fcb8b9672441ca691f4d85d1836833b" category="summary">Manutenzione dell'hardware E5700</block>
   <block id="626581bbf3b2966c3caac8e807f438ec" category="doc">Manutenzione dell'hardware E5700</block>
   <block id="04ae3e6aa90bb1a6ee80651a77de1468" category="paragraph">Per il sistema storage E5700, è possibile eseguire procedure di manutenzione sui seguenti componenti.</block>
@@ -5476,7 +5471,6 @@
   <block id="25f8ce0d97746c6603a4ce39527059c4" category="list-text">È necessario attivare il controllo di flusso *da fine a fine*.</block>
   <block id="33d32d0aba4531ff91372042c7bd58ae" category="list-text">Se appropriato, sono stati attivati i frame jumbo.</block>
   <block id="80c26039d6160bf38eddadb619ecf00a" category="admonition">Port channels/LACP non è supportato sulle porte switch del controller. LACP lato host non è consigliato; il multipathing offre gli stessi vantaggi e, in alcuni casi, benefici migliori.</block>
-  <block id="fe4b136586896fd70617258689052356" category="summary">SRP su InfiniBand Express Setup</block>
   <block id="43256533b4d88b90a519151bb6b8744e" category="summary">Determinare i GUID della porta host.</block>
   <block id="1d5bf206240a1f488591e627201ee603" category="doc">Determinare i GUID della porta host ed effettuare le impostazioni consigliate</block>
   <block id="dfcfc178d6edc54d8706c59b747948d5" category="list-text">Installare<block ref="3b13fc847651d5be5c89aeab4722c099" prefix=" " category="inline-code"></block> che utilizza i comandi di gestione dei pacchetti del sistema operativo.</block>
@@ -5689,11 +5683,6 @@
   <block id="a377bc45676f5d1c2a8f8219a09c9b83" category="list-text">Aggiungere le seguenti righe.</block>
   <block id="4eb5da929a8b5274983c883ec977d36a" category="list-text">Notificare al sistema il nuovo servizio.</block>
   <block id="d40e479d6bc1cf9824be2cfa7e837140" category="list-text">Attivare e avviare<block ref="6b64648adbe124ad96531f7f0dd977a4" prefix=" " category="inline-code"></block> servizio.</block>
-  <block id="7e9eed90ab06645af09e14e4688144a5" category="summary">È possibile utilizzare NVMe con il protocollo di rete RDMA over Converged Ethernet (RoCE).</block>
-  <block id="e5acd4f564771f3dbba3bdeb6b6bcfe5" category="doc">NVMe su RoCE Express Setup</block>
-  <block id="d94efd3fa425e38d7761fba32eb7bc67" category="paragraph">È possibile utilizzare NVMe con il protocollo di rete RDMA over Converged Ethernet (RoCE).</block>
-  <block id="eade6022b2fef6a4e03ff35469374cb0" category="summary">È possibile utilizzare NVMe con il protocollo Fibre Channel.</block>
-  <block id="62896be8239b3396f0ed277cf184b062" category="doc">NVMe over Fibre Channel Express Setup</block>
   <block id="2b430348ddae524592cd1c4207d8f170" category="summary">Configurare l'i/o diretto alla destinazione del dispositivo in base alla versione di SLES in uso (versione di SUSE Linux).</block>
   <block id="587b796170a9abac4701cd8aa1bb38cb" category="section-title">Output di esempio</block>
   <block id="bd97f9e0585f1ab3a70a824e4f5ffe79" category="summary">Linux Unified host Utilities 7.1 include tool per gestire lo storage NetApp, incluse policy di failover e percorsi fisici.</block>
@@ -5765,8 +5754,6 @@
   <block id="5dd9d62ce4e8e03736012f8834a6e4fd" category="summary">È possibile configurare l'i/o diretto alla destinazione del dispositivo in base alla versione di Linux in uso. DM-MP gestisce i percorsi fisici sottostanti queste destinazioni virtuali.</block>
   <block id="23a1a118541ab0d1766faa1805b06432" category="paragraph">È possibile accedere a questi dispositivi a blocchi tramite<block ref="608e7dc116de7157306012b4f0be82ac" prefix=" " category="inline-code"></block> o a.<block ref="a978acc8a7ae15f49f58f3495f0d85ba" prefix=" " category="inline-code"></block> poll<block ref="9c9f766701f811ef6f170c7a3453c53f" prefix=" " category="inline-code"></block>; ad esempio:</block>
   <block id="3e5b5608d2078b742475daf5f62b5f0c" category="summary">Un nuovo LUN non dispone di partizione o file system quando l'host Linux lo rileva per la prima volta. È necessario formattare il LUN prima di poterlo utilizzare. In alternativa, è possibile creare un file system sul LUN.</block>
-  <block id="c96c96aa9e9942faabac2551c9847a4a" category="doc">Setup Express di Iiser su InfiniBand</block>
-  <block id="1914877215ade75b06ba34ce70bb51dd" category="summary">Installazione SAS Express</block>
   <block id="be5555e7e670df8f8d0c725b9043fb16" category="summary">Gli switch vengono configurati in base alle raccomandazioni del vendor per NVMe su RoCE. Questi consigli possono includere sia direttive di configurazione che aggiornamenti del codice.</block>
   <block id="f4959eb49cd0d468fb22d0fde13f93d1" category="doc">Configurare lo switch</block>
   <block id="1016395fecd4787707233fc026c56bb5" category="paragraph">Gli switch vengono configurati in base alle raccomandazioni del vendor per NVMe su RoCE. Questi consigli possono includere sia direttive di configurazione che aggiornamenti del codice.</block>
@@ -5851,8 +5838,6 @@
   <block id="10f5dacfa6ac3fb3d44d134b3d8aa6b7" category="inline-xref">fase 4</block>
   <block id="ba2591378a65f0c927a05da1af50afb3" category="list-text">Utilizzare<block ref="14f8440b35f7d1516604c69c142bce0a" category="inline-link-rx"></block> procedura nella guida in linea per verificare se gli host sono definiti. Verificare che ogni impostazione del tipo di host sia basata sulle informazioni del kernel raccolte in <block ref="fe91593b1a1221385d96e8bb5f09f386" category="inline-xref-macro-rx"></block>.</block>
   <block id="0c3fecf1aae3fdfaeeaf18eba4ed3cfd" category="admonition">Il bilanciamento automatico del carico è disattivato per tutti i volumi mappati agli host che eseguono kernel 3.9 o versioni precedenti.</block>
-  <block id="041b8a1391f923a8043830be4a716cdd" category="summary">È possibile utilizzare NVMe con il protocollo di rete InfiniBand.</block>
-  <block id="97cdaaff2a74763683828420ccda083e" category="doc">NVMe su InfiniBand Express Setup</block>
   <block id="20c0f0097f3320f5306bdf21ab85b003" category="summary">Configurare gli switch Fibre Channel per consentire agli host di connettersi allo storage array e limitare il numero di percorsi.</block>
   <block id="e7408290c726a494ea225eebcc1cdff7" category="doc">Configurare gli switch FC</block>
   <block id="1424a7cf2a070f7dd12d78a849490f2c" category="paragraph">RHEL 7 e SLES 12 utilizzano il multipath DMMP (Device Mapper Multipath) per il multipathing quando si utilizza NVMe su Fibre Channel. RHEL 8, RHEL 9 e SLES 15 utilizzano un failover NVMe nativo integrato. A seconda del sistema operativo in esecuzione, è necessaria una configurazione aggiuntiva di multipath per il corretto funzionamento.</block>
@@ -5955,7 +5940,6 @@
   <block id="f954d52b7d356b7898493ef1309b32ba" category="list-text">Se si desidera modificare la configurazione SRP, immettere il seguente comando per creare<block ref="8f56b6fabff04f3692057bf37d3d1773" prefix=" " category="inline-code"></block> .</block>
   <block id="64ae2d65559b78b214cb7c6aeb856d9b" category="list-text">Sotto il<block ref="b140b564181d5766586db77b4613e325" prefix=" " category="inline-code"></block>, aggiungere la seguente riga.</block>
   <block id="147c2a561fc8233057480b38f1176725" category="doc">Accesso ai volumi NVMe per le destinazioni fisiche dei dispositivi NVMe</block>
-  <block id="f849cbf8f2231f3f35d369655c870a3e" category="doc">Configurazione di iSCSI Express</block>
   <block id="911540f190cfcccc8f5ea4291c4892ec" category="summary">Utilizzare questo foglio di lavoro per registrare le informazioni di configurazione dello storage SRP su Infiniband.</block>
   <block id="cb40c4858329e18198885533178c9e33" category="doc">Registrare la configurazione SRP su IB</block>
   <block id="df6101e921eeb1f62e9f9c86d20173fe" category="paragraph">È possibile generare e stampare un PDF di questa pagina, quindi utilizzare il seguente foglio di lavoro per registrare le informazioni di configurazione dello storage SRP su InfiniBand. Queste informazioni sono necessarie per eseguire le attività di provisioning.</block>
@@ -7462,7 +7446,6 @@
   <block id="a1b7af0f21ad6f7da3f61feb2a734667" category="paragraph">Non è possibile accedere ai dati sull'array di storage fino a quando la conversione non viene completata correttamente.</block>
   <block id="6ee8ffec654d692808d3c18bb0e2d3b9" category="section-title">Fase 3: Modificare il Feature Pack</block>
   <block id="7e1eb07ee4fa34bdf6f3cff4a27c0ce0" category="paragraph">Modificare il Feature Pack per convertire il protocollo host delle porte host.</block>
-  <block id="9ec28cb381dd9edd5e1a4ad5641fba96" category="summary">Una scheda di interfaccia host (HIC) deve essere installata all'interno di un contenitore di controller. Il controller EF600 include porte host sull'HIC opzionale. Le porte host integrate nell'HIC sono chiamate porte HIC.</block>
   <block id="4340eb550bf9d82ec63ae6c684b4ce19" category="paragraph">Una scheda di interfaccia host (HIC) deve essere installata all'interno di un contenitore del controller. Il controller EF600 include porte host sull'HIC opzionale. Le porte host integrate nell'HIC sono chiamate porte HIC.</block>
   <block id="4649f22302dc58915bd0c297f379d683" category="summary">Sostituire un DIMM in un array EF300 o EF600.</block>
   <block id="fc66672be674c1a0d3c77416bba78aaf" category="doc">Sostituire i DIMM in EF300 o EF600</block>
@@ -7539,7 +7522,6 @@
   <block id="a04de9b76d1a0c278d274156abe30b49" category="list-text">Selezionare il controller con la scheda di interfaccia host sostituita.</block>
   <block id="fc01077c1af24b483d9d96834b5c4d66" category="paragraph">La sostituzione della scheda di interfaccia host è completata. È possibile riprendere le normali operazioni.</block>
   <block id="963fa086e22d0159155d22af7dbcbb0a" category="summary">Un alimentatore fornisce una fonte di alimentazione ridondante in uno shelf di controller.</block>
-  <block id="51255c5d39d4b9a43a7f800db3b8a431" category="doc">Alimentatori</block>
   <block id="fd293cf77acfdd97249a46e8f0f881ef" category="summary">Sostituire un disco in un array EF600.</block>
   <block id="c2d869aaa5bfd00a5deb58e0c2033910" category="doc">Sostituire il disco in un array EF600</block>
   <block id="090c16503867f8c38598a1963600e1f8" category="list-text">Revisione <block ref="a3053473be5cf3d84a95cd722c986422" category="inline-link-macro-rx"></block>.</block>
@@ -7556,7 +7538,6 @@
   <block id="d8fdffd0fad371d1972462ffa48981cd" category="paragraph">Se si intende sostituire una batteria, è necessario disporre di:</block>
   <block id="04a3d4071a9450f7356dbc04b8b8747c" category="summary">È possibile installare una scheda di espansione SAS all'interno di un contenitore di controller. Il controller EF300 supporta l'espansione SAS.</block>
   <block id="e00394e86e0897378bd874e271fcd82c" category="doc">Schede di espansione SAS</block>
-  <block id="8efc2bb6da7e629c408a29a1c453f118" category="summary">È possibile convertire il protocollo di un host in un protocollo diverso in modo da garantire la compatibilità e convertire il protocollo delle connessioni host in un protocollo diverso per soddisfare le esigenze dell'infrastruttura.</block>
   <block id="9fc2bc5f7d7e9f2a3f0e92f0c5b35a3a" category="summary">Esaminare i requisiti e le considerazioni prima di sostituire i dischi in EF300 o EF600.</block>
   <block id="b7f04984f163dce73778dbbca2a8c990" category="admonition">Tenere presente che i dischi dell'array di storage sono fragili; una gestione errata dei dischi è la causa principale del guasto dei dischi.</block>
   <block id="c4a87fb79210c9a2631561ef1487b358" category="section-title">Requisiti per la sostituzione del disco</block>
@@ -7596,7 +7577,6 @@
   <block id="bf6487095e5ecccd756382367b6c5383" category="list-text">Hai ottenuto l'hardware necessario per la conversione, che potrebbe includere un nuovo set di HICS e/o SFP. Il tuo rappresentante commerciale NetApp può aiutarti a determinare l'hardware di cui hai bisogno e a ordinare le parti corrette.</block>
   <block id="b3f772795168df63454dec0c3e4c3e3b" category="list-text">I ricetrasmettitori SFP a doppio protocollo supportano FC da 16 GB e 8 GB, oltre a iSCSI da 10 GB. Pertanto, potrebbe non essere necessario modificare gli SFP se si dispone del protocollo doppio e si sta semplicemente passando da FC a iSCSI o viceversa.</block>
   <block id="5e7a01eefac15f1a88cbf08e764f5398" category="list-text">Alcune conversioni del protocollo della porta host potrebbero richiedere l'aggiunta o l'aggiornamento di una scheda di interfaccia host.</block>
-  <block id="f35307ec092e89906d40c7e7580fd73e" category="summary">Un controller è costituito da una scheda, firmware e software. Controlla i dischi e implementa le funzioni di System Manager. Questa sezione descrive come sostituire un singolo controller o entrambi i controller nello shelf di controller EF300 o EF600.</block>
   <block id="e9e795fffc66424c5fceeda72cc6702b" category="summary">Sostituire un singolo controller in uno shelf di controller EF300 o EF600.</block>
   <block id="317ae44d33c81077bc69598e4bf59e9f" category="doc">Sostituire il controller EF300 o EF600</block>
   <block id="1b6ca6cd4db8e59c76840995016904f5" category="paragraph">Quando si sostituisce un contenitore del controller guasto, è necessario rimuovere la batteria, l'alimentatore, i moduli DIMM, le ventole e la scheda di interfaccia host (HIC) dal contenitore del controller originale, quindi installarli nel contenitore del controller sostitutivo.</block>
@@ -7697,7 +7677,6 @@
   <block id="ff40532dff4b037ce856913e299ba082" category="list-text">Non forzare mai un modulo DIMM in uno shelf e esercitare una pressione leggera e decisa per inserire completamente il dispositivo di chiusura.</block>
   <block id="66f6bddfd3a19d26b876f64fd0a5904d" category="list-text">Per la spedizione dei moduli DIMM, utilizzare sempre confezioni approvate.</block>
   <block id="dd198dc6de0b4192b1ff66f211b2b5cf" category="list-text">Evitare i campi magnetici. Tenere i DIMM lontani dai dispositivi magnetici.</block>
-  <block id="9e82bbc678cd60ca1e23c9306295675e" category="summary">È necessario sostituire un modulo DIMM in caso di mancata corrispondenza della memoria o di un modulo DIMM guasto.</block>
   <block id="2e2090d7bf10ea829ed979fce6127fca" category="summary">Esaminare i requisiti e le considerazioni prima di sostituire un alimentatore EF300 o EF600.</block>
   <block id="b4bdfc68a2be9043c46c8629fec0e8fe" category="doc">Requisiti per la sostituzione dell'alimentatore EF300 o EF600</block>
   <block id="92a8e5a68dee2a2df8de1337cfd37b9c" category="list-text">È necessario disporre di un alimentatore sostitutivo supportato per il modello di shelf di controller o di dischi.</block>
@@ -7973,8 +7952,6 @@
   <block id="0baf6f230a3a157ff69a03f7d8f4c965" category="list-text">La disconnessione e la riconnessione devono essere necessarie solo durante la configurazione iniziale o se il vassoio viene spedito in una posizione diversa.</block>
   <block id="f0e4d108bd327aa0295d08fc98aaafd0" category="list-text">Fissare il pannello anteriore.</block>
   <block id="d9917739114ac3a4e015dfd5fd132dc7" category="admonition">Rischio di danni all'apparecchiatura -- interrompere la spinta del cassetto se si sente l'inceppamento. Utilizzare le leve di rilascio nella parte anteriore del cassetto per far scorrere il cassetto all'indietro. Quindi, reinserire con cautela il cassetto nell'alloggiamento.</block>
-  <block id="efe6d51a14336eb7344b08061d81c223" category="summary">Queste istruzioni descrivono come installare e configurare il nuovo sistema storage e forniscono collegamenti a contenuti aggiuntivi.</block>
-  <block id="098f41693365f8de503868e97f04f4c4" category="doc">Istruzioni di installazione e configurazione per E5724, EF570, EF280, E2812, E2824, DE212C e DE224C</block>
   <block id="e786e438e29d8dc368d2945b22614052" category="summary">Per installare E5724, EF570, EF280, E2812, E2824, DE212C, o DE224C, crea un account e registra l'hardware.</block>
   <block id="f0c8dd26a4545387eecf2a5210874ccc" category="paragraph">Scopri come preparare l'installazione di E5724, EF570, EF280, E2812, E2824, Sistema storage DE212C o DE224C.</block>
   <block id="4aef9ac85da2801779223aa21342d5bd" category="paragraph">Shelf con dischi installati (pannello in confezione separata)</block>
@@ -7997,7 +7974,6 @@
   <block id="e6a5accabdea286872ffbb9e1a9d23ed" category="paragraph">*Larghezza*: 17.66" (44.86 cm)</block>
   <block id="ee469072217f458e10d64df6379eca0a" category="paragraph">*Altezza*: 6.87" (17.46 cm)</block>
   <block id="de886572d93cfb540958bcd9e52245d8" category="paragraph">*Peso massimo*: 113 kg (250 lb)</block>
-  <block id="01a6b4e59365da6ed554e20bb2ab5362" category="doc">Istruzioni di installazione e configurazione per E2860, E5760 e DE460C</block>
   <block id="e26993d9962d57bd1f5f32adbbfa383f" category="doc">Cablare gli scaffali</block>
   <block id="005889eb2bd1ad96c577fc46302784e4" category="list-text">Cablare gli scaffali.</block>
   <block id="ba51d8b064560c05234bcb7cf908140c" category="paragraph">Collegare il sistema in base alla configurazione. Se sono necessarie più opzioni di cablaggio rispetto agli esempi illustrati in questa sezione, vedere <block ref="d28b440e6afa4df86a4a85820e62c38b" category="inline-link-macro-rx"></block>.</block>
@@ -8336,8 +8312,6 @@
   <block id="32e0b12538b4abe36e648446dbb8723b" category="paragraph">Miglioramenti dei pool di dischi</block>
   <block id="82faf4161a36aa8a69bd4c363e6b57cc" category="paragraph">I pool di dischi creati con i controller che eseguono la versione 11,80 o superiore saranno _pool versione 1_ anziché _pool versione 0_. Un'operazione di downgrade è limitata quando esiste un pool di dischi _versione 1_.</block>
   <block id="45e56b98136f4292dd8c522edf38b3b2" category="paragraph">La versione di un pool di dischi può essere identificata nel profilo dell'array di storage.</block>
-  <block id="82bf7451a207cfbac427edc3bb60fced" category="paragraph">Questo è un PDF stampabile di istruzioni passo-passo con collegamenti in tempo reale a contenuti aggiuntivi.</block>
-  <block id="a2f0a23d015da77ff81697442b8f6aad" category="paragraph">Queste sono le istruzioni di installazione descritte in questo sito.</block>
   <block id="746ff5a72ad1791e39c47dc0abcdffe3" category="paragraph">È necessaria una versione minima del browser prima dell'avvio di System Manager o di Unified Manager.</block>
   <block id="488c35a42ee48966247c5cc643d96708" category="paragraph">Di seguito sono riportate le versioni minime supportate:</block>
   <block id="5f7273b60d2186e7b7a65eb2cee83294" category="paragraph">Cache di lettura SSD aumentata massima</block>
@@ -8440,19 +8414,14 @@
   <block id="6a177f60e2c78aeead82deed1b7f79bd" category="image-alt">Esempio di cablaggio dello shelf di dischi</block>
   <block id="97d8dba52fc751664d17d634de384761" category="open-title">Connetti lo shelf del disco per E4000</block>
   <block id="5d48bd8c60ef301164497e794ae727ca" category="image-alt">Icona hardware IOM</block>
-  <block id="c5f2c8e37ae34577d9aa27dc0a6d9d6a" category="summary">È possibile utilizzare il protocollo Fibre Channel con un host Linux su un sistema e-Series.</block>
   <block id="a51352079fbf62de5b216fbcf5f8547f" category="image-alt">Configurazione di rete FC</block>
-  <block id="2c14a3be6c3b57db7707ac6ae99aeb97" category="summary">È possibile utilizzare il protocollo iSCSI con un host Linux su un sistema e-Series.</block>
   <block id="035b18714bc5d7aa7c3b19a557b2784d" category="image-alt">Configurazione di rete iSCSI</block>
-  <block id="279607469d0ed6f0d6a8dfabbc5b63e2" category="summary">Puoi utilizzare il protocollo iSER over Infiniband con un host Linux su un sistema e-Series.</block>
   <block id="f6d2572a98e17f547b50d07bd60a4357" category="image-alt">Configurazione di rete su IB</block>
   <block id="e25b62b71db71b440f775e632a958e5e" category="image-alt">Esempio di topologia a connessione diretta</block>
   <block id="3d673c4735715944ce52ebdb6281a20d" category="image-alt">Esempio di topologia di connessione switch</block>
   <block id="5a60c0d89257784a23a8dd439204f7f1" category="image-alt">Esempio di connessione diretta NVMe over Infiniband</block>
   <block id="37370b7d172047a016f376cc6b5258c9" category="image-alt">Esempio di connessione diretta NVME over RoCE</block>
   <block id="65311bced825a83f85718b09cc4ab673" category="image-alt">Esempio di connessione a switch NVMe over RoCE</block>
-  <block id="846fb8d171e9dfcce4fd56289d380608" category="summary">È possibile utilizzare il protocollo SAS con un host Linux su un sistema e-Series.</block>
-  <block id="ecf0c5c7f835375b8d9275312b470c82" category="summary">È possibile utilizzare SRP tramite il protocollo InfiniBand con un host Linux su un sistema e-Series.</block>
   <block id="025f0fcb18e01db2892910a53d657f57" category="image-alt">Identificatori di porta SRB over IB</block>
   <block id="a9a8836056eb3cc8d01f51eb5c6e7eec" category="list-text">Per istruzioni sulla creazione di datastore VMFS o sull'utilizzo di volumi come RDM con il client vSphere o il client web vSphere, vedere<block ref="b15a5268225569436f01a761f08cccf7" category="inline-link-rx"></block> .</block>
   <block id="ebaab7c3245c99578b7dd1e67138cccf" category="list-text">Per istruzioni su come eseguire una nuova scansione dello storage su un host ESXi, cercare l'<block ref="151d2130fd8b5e8e7d0d3b596c1bdeb5" category="inline-link-rx"></block>articolo in questo argomento.</block>
@@ -8889,7 +8858,6 @@
   <block id="2f2564b7bd12fa4c137f3761c14d73a3" category="paragraph">È possibile sostituire un cassetto dischi in uno shelf di controller E4060 o in uno shelf di dischi DE460C.</block>
   <block id="3748f377726945770a9a282453272357" category="paragraph">La procedura per sostituire un cassetto del disco guasto in uno shelf di controller E4060 o in uno shelf di dischi DE460C dipende dalla protezione dei volumi nel cassetto dalla protezione contro la perdita di cassetto. Se tutti i volumi nel cassetto si trovano in pool di dischi o gruppi di volumi con protezione perdita cassetto, è possibile eseguire questa procedura online. In caso contrario, è necessario interrompere tutte le attività di i/o dell'host e spegnere lo shelf prima di sostituire il cassetto dell'unità.</block>
   <block id="1103b7e629028daaccac02c0a8fc98d2" category="doc">Sostituire la batteria in E4000</block>
-  <block id="543025215967bae569d97988a7e97cbc" category="paragraph">È necessario sostituire la batteria interessata nell'appliance E4000 se il guru del ripristino in Gestione sistema SANtricity indica lo stato "batteria guasta" o "Sostituzione batteria richiesta". Per proteggere i dati, la batteria deve essere sostituita il prima possibile.</block>
   <block id="9af92606abb4b31a8818023a6515b3ec" category="list-text">Stazione di gestione con un browser che può accedere a Gestione di sistema SANtricity per il controller. (Per aprire l'interfaccia di System Manager, puntare il browser verso il nome di dominio o l'indirizzo IP del controller).</block>
   <block id="ec6e5e75653734bb428b87afb93f7f41" category="section-title">Fase 1: Preparazione alla sostituzione della batteria</block>
   <block id="3df752ee7e92a3dba58c1061c5d0a4a6" category="list-text">Eseguire il backup del database di configurazione dello storage array utilizzando SANtricity System Manager.</block>
@@ -8929,15 +8897,7 @@
   <block id="7eed6664ecacefe81e2b660f47a5cfaf" category="list-text">Rimontare il coperchio del contenitore della centralina e bloccarlo in posizione.</block>
   <block id="aa4ecd2631b0a57f27425bbdf9cc91b7" category="paragraph">Dopo aver sostituito i componenti nel contenitore della centralina, reinstallarlo nel telaio.</block>
   <block id="954c99d35fff8ed108602add34a47b93" category="list-text">Se non è già stato fatto, sostituire il coperchio sul contenitore della centralina.</block>
-  <block id="9c17c595e56b6b01c7d703a94b943e71" category="list-text">Capovolgere il contenitore della centralina e allineare l'estremità con l'apertura nel telaio.</block>
-  <block id="44df050c94969c9c5f783babbd55fb7e" category="list-text">Allineare l'estremità del contenitore della centralina con l'apertura nel telaio, quindi spingere delicatamente il contenitore della centralina a metà corsa nel sistema.</block>
-  <block id="40d0d24050f8aac90dc03655f2738fb3" category="admonition">Non inserire completamente il contenitore della centralina nel telaio fino a quando non viene richiesto.</block>
-  <block id="4e4cd7bd59f82bab02590366f27be3e5" category="list-text">Ricable il sistema, come necessario.</block>
   <block id="7bfce735a4505a06fb1c4b7a2d076c1e" category="list-text">Se sono stati rimossi i convertitori multimediali (QSFP o SFP), ricordarsi di reinstallarli se si utilizzano cavi in fibra ottica.</block>
-  <block id="5d971d684708429fbfc1d12fc0823b1c" category="list-text">Completare la reinstallazione del contenitore della centralina:</block>
-  <block id="b34c1b37f135bc5b382d7862f82e025c" category="list-text">Con la maniglia della camma in posizione aperta, spingere con decisione il contenitore del controller fino a quando non raggiunge la parte interna e non è completamente insediato, quindi chiudere la maniglia della camma in posizione bloccata.</block>
-  <block id="69008785977983cf8a33f9f78ff2b7c9" category="admonition">Non esercitare una forza eccessiva quando si fa scorrere il contenitore della centralina nel telaio per evitare di danneggiare i connettori.</block>
-  <block id="0332f86520cc7552e1fb152e32977600" category="paragraph">Il controller inizia ad avviarsi non appena viene inserito nello chassis.</block>
   <block id="1245c13fabc810ad6fbb6f05277ad356" category="list-text">Se non è già stato fatto, reinstallare il dispositivo di gestione dei cavi.</block>
   <block id="82cd534d691845f1af190a9df38d753d" category="list-text">Collegare i cavi al dispositivo di gestione dei cavi con il gancio e la fascetta.</block>
   <block id="91418c565341bd8a889226a195dd2fa2" category="section-title">Fase 5: Completare la sostituzione della batteria</block>
@@ -9010,10 +8970,7 @@
   <block id="f4d6345a40a4387a35c3eb6ef8f51b15" category="section-title">Fase 8: Sostituzione completa del controller</block>
   <block id="a7c932e7525739cefdfd19d17123207c" category="paragraph">Ristabilire la connessione con lo shelf di controller, raccogliere dati di supporto e riprendere le operazioni.</block>
   <block id="62241759bfd404c01951d43ae57f4bbe" category="open-title">Alimentazione su shelf controller (simplex)</block>
-  <block id="04803538074d9bd9b55f9adc380717f2" category="list-text">Installare il controller sostitutivo nell'appliance.</block>
   <block id="fe69546640a5330ecd9f461f1cdbd1ee" category="list-text">Capovolgere il controller, in modo che il coperchio rimovibile sia rivolto verso il basso.</block>
-  <block id="f5b18529473e7fbcbdcf4601ffe30597" category="list-text">Con la maniglia della camma in posizione aperta, far scorrere il controller fino in fondo nell'apparecchio.</block>
-  <block id="0dc7aaae2ab89a4fa299f4f2e42c1646" category="list-text">Spostare la maniglia della camma verso sinistra per bloccare il controller in posizione.</block>
   <block id="85caa39a88f7091fb2db841ad6b83ffd" category="list-text">Sostituire i cavi.</block>
   <block id="2afc7927e5f45cc2a3ef83b60ea186cd" category="list-text">Alimentazione sullo shelf del controller.</block>
   <block id="4b55c79852e2203088ca03f4c8fb4b3c" category="list-text">Attendere il riavvio del controller E4000.</block>
@@ -9103,7 +9060,6 @@
   <block id="1ea4267c90825f4bf9c52932b0bd8e1a" category="list-text">Rimontare il coperchio del contenitore della centralina.</block>
   <block id="48a57bdd7334ad13cd1585ba2a663c46" category="section-title">Fase 5: Reinstallare il contenitore della centralina</block>
   <block id="af32241ae4a2afd71e33a8646b775b1f" category="paragraph">Rimontare il contenitore della centralina nel telaio.</block>
-  <block id="0a5704c96cc972ac4c49e76417f83282" category="list-text">Spingere delicatamente il contenitore della centralina a metà corsa nel sistema. Allineare l'estremità del contenitore della centralina con l'apertura nel telaio, quindi spingere delicatamente il contenitore della centralina a metà corsa nel sistema.</block>
   <block id="660a0f2c7dddd5ead3b175899a5d429c" category="section-title">Fase 6: Completare la sostituzione dei DIMM</block>
   <block id="315927c4ed1f1d8b1d0b704a5a67026e" category="list-text">Quando il controller torna in linea, verificare che il suo stato sia ottimale e controllare i LED di attenzione dello shelf di controller.</block>
   <block id="805863d0c877d6358a86a2607e79ed0d" category="paragraph">Se lo stato non è ottimale o se uno dei LED attenzione è acceso, verificare che tutti i cavi siano inseriti correttamente e che il contenitore del controller sia installato correttamente. Se necessario, rimuovere e reinstallare il contenitore del controller. NOTA: Se non è possibile risolvere il problema, contattare l'assistenza tecnica.</block>
@@ -9146,7 +9102,6 @@
   <block id="fe831c9a1ec5f0798f7d995bb682d1af" category="list-text">Allentare le viti a testa zigrinata sull'HIC e sollevarlo verticalmente.</block>
   <block id="cb588a37aac0cb396a69cd9c6fa260a7" category="list-text">Reinstallare l'HIC:</block>
   <block id="eef513f5198b93971d313eb80e4da6fb" category="list-text">Reinstallare il coperchio del modulo controller e bloccarlo in posizione.</block>
-  <block id="528b8ab8a2997d60c930f6610d03301f" category="paragraph">Se si dispone di una configurazione fronte/retro, il controller inizia ad avviarsi non appena viene inserito nel telaio.</block>
   <block id="613ffef3aed34fbf482f6ca198dbe765" category="section-title">Fase 5: Completare la sostituzione dell'HIC</block>
   <block id="fd3355f16365c925e530b446f01146af" category="paragraph">Accendere il controller (simplex) o metterlo in linea (duplex), raccogliere i dati di supporto e riprendere le operazioni.</block>
   <block id="3e741422cd2bc3082e4d5328242d9d60" category="doc">Aggiornamento HIC nel E4000</block>
@@ -9419,7 +9374,6 @@
   <block id="04ec4caf2b80e886c69cd8966d5f5c92" category="paragraph">Scopri come prepararsi per l'installazione di un sistema storage serie EF300, EF600, EF300C o EF600C.</block>
   <block id="a466a396cacf21d3516a87d8639c5255" category="paragraph">Prima di sostituire una batteria EF300, EF600, EF300C o EF600C, rivedere i requisiti e le considerazioni.</block>
   <block id="0b5565f493a40cc2e5ace8909a568f68" category="paragraph">È possibile sostituire una batteria in un sistema di archiviazione EF300, EF600, EF300C o EF600C.</block>
-  <block id="a3ec65b7c9b468046fdbe7dc19f94299" category="paragraph">Un controller è costituito da una scheda, firmware e software. Controlla i dischi e implementa le funzioni di System Manager. Questa sezione descrive come sostituire un controller singolo o entrambi i controller nello shelf di controller EF300, EF600, EF300C o EF600C.</block>
   <block id="89e4ff051c9e9c60c1d21fddb84ec42a" category="paragraph">Prima di sostituire un EF300, EF600. EF300C, o EF600C controller, rivedere i requisiti e le considerazioni.</block>
   <block id="e0b68b674b62dc6569b4275513ebdb8f" category="paragraph">Puoi sostituire un controller singolo in uno shelf di controller EF300, EF600, EF300C o EF600C.</block>
   <block id="136b14c506b51c3fdb848576b81df5a9" category="paragraph">Prima di sostituire un modulo DIMM in un array di storage EF300, EF600, EF600C o EF300C, esaminare i requisiti e le considerazioni.</block>
@@ -9495,4 +9449,7 @@
   <block id="baee5b8c18b240b4edfcc1ae3fe154f0" category="section-title">Nuove funzioni della versione 11.90R1</block>
   <block id="0b2fb9383075b5994701c94b27e4b6ee" category="paragraph">Questa release introduce i sistemi storage All Flash NVMe EF300C e EF600C. I sistemi EF300C e EF600C sono versioni flash a elevata capacità dei sistemi storage EF300 e EF600 esistenti. I dischi SSD NVMe a elevata capacità di 30TB o 60TB dimensioni sono supportati con EF300C e EF600C. EF300C/EF600C è compatibile solo per l'utilizzo con Dynamic Disk Pool, senza supporto RAID legacy.</block>
   <block id="8af7f744c39ae6285a380b6eb402fcb2" category="paragraph">Supporto per interfacce SAS 12GB su controller E4000</block>
+  <block id="7a3a71e57296fe130d591f2dd4a7a06c" category="paragraph">Se il guru del ripristino in Gestione sistema di SANtricity indica lo stato "batteria guasta" o "Sostituzione batteria necessaria", è necessario sostituire la batteria interessata del sistema E4000. Per proteggere i dati, la batteria deve essere sostituita il prima possibile.</block>
+  <block id="8c34b0fdf9a967369992b78c08820091" category="list-text">Con la maniglia della camma in posizione aperta, far scorrere il controller completamente nel ripiano.</block>
+  <block id="1b6c46128dc1faef9365a16d700d5e74" category="list-text">Installare la centralina sostitutiva nel ripiano.</block>
 </blocks>

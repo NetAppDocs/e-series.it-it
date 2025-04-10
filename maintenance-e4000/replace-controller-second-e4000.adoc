@@ -242,6 +242,7 @@ Quando si rimuove la protezione del controller, un'aletta si sposta in posizione
 
 Installare un secondo contenitore del controller per modificare una configurazione simplex in una configurazione duplex.
 
+. Se non si è già collegati a terra, mettere a terra l'utente.
 . Capovolgere il contenitore del controller, in modo che il coperchio rimovibile sia rivolto verso il basso.
 . Allineare l'estremità del modulo controller con l'apertura dello chassis, quindi spingere delicatamente il modulo controller a metà nel sistema.
 . Con la maniglia della camma in posizione aperta, spingere con decisione il modulo controller fino a quando non raggiunge la scheda intermedia e non è completamente inserito, quindi chiudere la maniglia della camma in posizione di blocco.

@@ -390,12 +390,17 @@ Ristabilire la connessione con lo shelf di controller, raccogliere dati di suppo
 .Alimentazione su shelf controller (simplex)
 --
 .Fasi
-. Installare il controller sostitutivo nell'appliance.
+. Installare la centralina sostitutiva nel ripiano.
 +
+.. Se non si è già collegati a terra, mettere a terra l'utente.
 .. Capovolgere il controller, in modo che il coperchio rimovibile sia rivolto verso il basso.
-.. Con la maniglia della camma in posizione aperta, far scorrere il controller fino in fondo nell'apparecchio.
-.. Spostare la maniglia della camma verso sinistra per bloccare il controller in posizione.
+.. Con la maniglia della camma in posizione aperta, far scorrere il controller completamente nel ripiano.
 .. Sostituire i cavi.
++
+
+NOTE: Se sono stati rimossi i convertitori multimediali (QSFP o SFP), ricordarsi di reinstallarli se si utilizzano cavi in fibra ottica.
+
+.. Collegare i cavi al dispositivo di gestione dei cavi con il gancio e la fascetta.
 .. Alimentazione sullo shelf del controller.
 .. Attendere il riavvio del controller E4000.
 .. Determinare come assegnare un indirizzo IP al controller sostitutivo.
@@ -490,12 +495,18 @@ Il file viene salvato nella cartella Download del browser con il nome *support-d
 .Posizionare il controller online (duplex)
 --
 .Fasi
-. Installare il controller sostitutivo nell'appliance.
+. Installare la centralina sostitutiva nel ripiano.
 +
+.. Se non si è già collegati a terra, mettere a terra l'utente.
+.. Se non è già stato fatto, sostituire il coperchio sul contenitore della centralina.
 .. Capovolgere il controller, in modo che il coperchio rimovibile sia rivolto verso il basso.
-.. Con la maniglia della camma in posizione aperta, far scorrere il controller fino in fondo nell'apparecchio.
-.. Spostare la maniglia della camma verso sinistra per bloccare il controller in posizione.
+.. Con la maniglia della camma in posizione aperta, far scorrere il controller completamente nel ripiano.
 .. Sostituire i cavi.
++
+
+NOTE: Se sono stati rimossi i convertitori multimediali (QSFP o SFP), ricordarsi di reinstallarli se si utilizzano cavi in fibra ottica.
+
+.. Collegare i cavi al dispositivo di gestione dei cavi con il gancio e la fascetta.
 .. Se il controller originale utilizzava DHCP per l'indirizzo IP, individuare l'indirizzo MAC sull'etichetta sul retro del controller sostitutivo. Chiedere all'amministratore di rete di associare il DNS/rete e l'indirizzo IP del controller rimosso con l'indirizzo MAC del controller sostitutivo.
 +
 
