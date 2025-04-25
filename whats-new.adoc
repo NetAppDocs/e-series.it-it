@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: whats-new.html 
-keywords: whats new, new features, SANtricity 11.90 
+keywords: whats new, new features, SANtricity 11.90, SANtricity 11.80 
 summary: Nuove funzionalità di SANtricity OS. 
 ---
 = Novità di SANtricity OS
@@ -85,6 +85,12 @@ La funzione di blocco dell'accesso è ora disponibile per i servizi Web
 Configurabile solo tramite l'API REST, è ora disponibile una nuova impostazione di blocco dell'accesso per i servizi Web incorporati e proxy.
 
 |===
+
+
+== Nuove funzioni della versione 11.80.1R4
+
+Questa versione contiene solo modifiche minori e nessuna nuova funzionalità o restrizioni. Per ulteriori informazioni sulle modifiche apportate a questa versione, fare riferimento al file README.
+
 
 
 == Nuove funzioni della versione 11.80.1R3
