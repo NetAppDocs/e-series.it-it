@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configure network SRP over IB, configure Linux network, OFED, RDMA, express linux configuration, linux host, 
 summary: Se la configurazione utilizza il protocollo SRP su Infiniband, attenersi alla procedura descritta in questa sezione. 
 ---
-= Configurazione delle connessioni di rete: ​SRP su Infiniband
+= Configurare le connessioni di rete utilizzando SANtricity System Manaer - Linux (SRP su InfiniBand)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-launch-system-manager.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: 'Per gestire un singolo array, utilizzare l"opzione Launch (Avvio) per aprire System Manager in una nuova finestra del browser.' 
 ---
-= Avviare System Manager
+= Avvio di System Manager dal plug-in dello storage SANtricity per vCenter
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

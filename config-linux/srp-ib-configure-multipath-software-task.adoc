@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: 'Configurare il software multipath per fornire un percorso ridondante all"array di storage in caso di interruzione di uno dei percorsi fisici.' 
 ---
-= Configurare il software multipath
+= Configurazione del software multipath in e-Series - Linux (SRP over InfiniBand)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

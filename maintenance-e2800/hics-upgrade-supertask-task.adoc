@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: upgrading E2800 HIC, upgrade E2800 HIC, upgrade host interface card, E2800, E-Series, eseries 
 summary: 'Aggiornare una scheda di interfaccia host (HIC) in un array E2800.' 
 ---
-= Upgrade della scheda di interfaccia host (HIC) E2800
+= Aggiornare la scheda di interfaccia host (HIC) - E2800
 :allow-uri-read: 
 :experimental: 
 :icons: font

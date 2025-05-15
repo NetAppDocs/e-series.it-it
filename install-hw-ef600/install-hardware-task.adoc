@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EF300, EF600, EF300C, EF600C installation, 
 summary: Installare EF300 o EF600 in un rack a due montanti o in un cabinet di sistema NetApp. 
 ---
-= Installare l'hardware
+= Montare la bulloneria - EF300, EF600, EF300C e EF600C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

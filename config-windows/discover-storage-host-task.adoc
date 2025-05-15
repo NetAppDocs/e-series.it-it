@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: LUNs, discover LUNs, express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Rilevare lo storage per il metodo Windows Express. 
 ---
-= Rilevare lo storage sull'host
+= Rilevamento dello storage sull'host in e-Series - Windows
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

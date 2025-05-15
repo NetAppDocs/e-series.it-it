@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800 battery fail, E2800 battery, E2800 battery replacement, replace E2800 battery, replacing E2800 battery, E2800, E-Series, eseries 
 summary: Preparare la sostituzione della batteria E2800, seguendo la procedura appropriata per la stampa fronte/retro o su facciata singola. 
 ---
-= Preparare la sostituzione della batteria E2800
+= Preparare la sostituzione della batteria - E2800
 :allow-uri-read: 
 :experimental: 
 :icons: font

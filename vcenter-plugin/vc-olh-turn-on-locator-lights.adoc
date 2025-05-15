@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-turn-on-locator-lights.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: È possibile individuare le unità per identificare fisicamente tutte le unità che comprendono un pool, un gruppo di volumi o una cache SSD selezionata. Un indicatore LED si accende su ogni disco nel pool, gruppo di volumi o cache SSD selezionato. 
 ---
-= Accendere le luci di individuazione
+= Attivare gli indicatori luminosi LED su un'unità nel plugin di archiviazione SANtricity per vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

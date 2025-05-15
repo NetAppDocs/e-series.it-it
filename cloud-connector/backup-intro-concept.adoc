@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Cloud Connector backup 
 summary: 'Puoi accedere all"opzione Backup nel pannello di navigazione a sinistra dell"applicazione SANtricity Cloud Connector. L"opzione Backup visualizza la pagina Backup, che consente di creare nuovi processi di backup basati su immagine o file.' 
 ---
-= Backup
+= Utilizza SANtricity Cloud Connector per creare e gestire i backup dei volumi e-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

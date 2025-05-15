@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Verificare che la configurazione VMware sia supportata. 
 ---
-= Verificare che la configurazione VMware sia supportata
+= Verifica del supporto della configurazione VMware in e-Series
 :allow-uri-read: 
 :experimental: 
 :icons: font

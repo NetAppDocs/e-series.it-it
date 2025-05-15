@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cabling, cables, drive shelf cabling, controller shelf cabling, E-Series, eseries, E2800, E5700, EF300, EF600, E4000, DE212C, DE224C, DE460C 
 summary: 'Collegare ciascun controller nello shelf di controller a un modulo i/o (IOM) in uno shelf di dischi.' 
 ---
-= Cablaggio dello shelf di dischi
+= Collegare shelf del controller di cavi allo shelf del disco (e-Series)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

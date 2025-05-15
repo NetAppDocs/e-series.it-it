@@ -4,7 +4,7 @@ permalink: feature-tech-reports.html
 keywords: feature technical reports, e-series, hardware, santricity, os 
 summary: Report tecnici e-Series 
 ---
-= Sfoglia i report tecnici in primo piano
+= Esplora i report tecnici disponibili (e-Series)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Requisiti per la sostituzione del controller E4000
+= Requisiti per sostituire la centralina - E4000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

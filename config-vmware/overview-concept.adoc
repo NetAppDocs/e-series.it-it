@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: 'Esaminare i requisiti per l"utilizzo del metodo Express per la configurazione di un array e-Series e di un host VMware.' 
 ---
-= Presupposti
+= Presupposti (e-Series e VMware)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

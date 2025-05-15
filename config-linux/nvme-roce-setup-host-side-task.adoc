@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: 'La configurazione di NVMe Initiator in un ambiente RoCE include l"installazione e la configurazione dei pacchetti rdma-core e nvme-cli, la configurazione degli indirizzi IP dell"iniziatore e l"impostazione del layer NVMe-of sull"host.' 
 ---
-= Impostare NVMe su RoCE sul lato host
+= Configurare l'iniziatore NVMe su RoCE sull'host in e-Series - Linux
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

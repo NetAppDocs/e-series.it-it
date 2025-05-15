@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ASUP configuration Web Services, AutoSupport Web Services Proxy, WSP ASUP config 
 summary: 'È possibile configurare ASUP (AutoSupport), che raccoglie i dati e li invia automaticamente al supporto tecnico per la risoluzione dei problemi e l"analisi dei problemi in remoto.' 
 ---
-= Gestire AutoSupport utilizzando il proxy dei servizi Web
+= Gestire AutoSupport utilizzando il proxy dei servizi Web SANtricity
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

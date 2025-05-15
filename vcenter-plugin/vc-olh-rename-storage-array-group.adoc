@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-rename-storage-array-group.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Modificare il nome di un gruppo di array di storage quando il nome corrente non è più significativo o applicabile. 
 ---
-= Rinominare il gruppo di array di storage
+= Rinomina un gruppo di storage array in plugin storage SANtricity per vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-initialize-volumes.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Inizializzare manualmente un volume per eseguire il ripristino in caso di determinate condizioni di errore. 
 ---
-= Inizializzare i volumi
+= Inizializzazione dei volumi nel plug-in di storage SANtricity per vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

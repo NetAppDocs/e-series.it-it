@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E4000 replace drive drawer, replacing E4000 drive drawer, E4000 replace drive drawer, replacing E4000 drive drawer, E4000, E-Series, eseries 
 summary: Sostituire un cassetto dischi in uno shelf di controller E2860 o in uno shelf di dischi DE460C. 
 ---
-= Sostituire il cassetto del disco in E4000 (shelf da 60 dischi)
+= Sostituzione del cassetto dell'unità - E4000 (shelf da 60 dischi)
 :allow-uri-read: 
 :experimental: 
 :icons: font

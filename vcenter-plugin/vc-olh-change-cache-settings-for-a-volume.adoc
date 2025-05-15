@@ -4,7 +4,7 @@ summary: È possibile modificare le impostazioni della cache di lettura e di scr
 permalink: vcenter-plugin/vc-olh-change-cache-settings-for-a-volume.html 
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 ---
-= Modificare le impostazioni della cache per un volume
+= Modifica delle impostazioni della cache per un volume in plug-in di storage SANtricity per vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

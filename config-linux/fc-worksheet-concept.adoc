@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: FC worksheet Linux, express linux configuration, software configuration, linux host, 
 summary: Utilizzare questo foglio di lavoro per registrare le informazioni di configurazione dello storage FC. 
 ---
-= Registrare la configurazione FC
+= Registra la tua configurazione FC in e-Series - Linux
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

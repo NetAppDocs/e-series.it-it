@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800 replace 60-drive power canister, replacing E2800 power canister, E2800, E-Series, eseries 
 summary: 'Sostituire uno shelf di controller da 60 dischi o uno shelf di dischi, che include due contenitori di alimentazione per la ridondanza dell"alimentazione.' 
 ---
-= Sostituire il contenitore di alimentazione E2800 (60 dischi)
+= Sostituire il filtro a carboni attivi - E2800 (60 unità)
 :allow-uri-read: 
 :experimental: 
 :icons: font

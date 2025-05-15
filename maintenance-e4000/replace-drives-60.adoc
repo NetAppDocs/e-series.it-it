@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E4000 replace drive, replacing E4000 drive, E4000 replace drive, replacing E4000 drive, E4000 
 summary: Sostituire un disco in un E2800 con uno shelf da 60 dischi. 
 ---
-= Sostituire l'unità in E4000 (shelf da 60 dischi)
+= Sostituzione dell'unità - E4000 (shelf da 60 dischi)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

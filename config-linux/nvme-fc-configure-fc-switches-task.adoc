@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: FC switch, zoning, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: 'La configurazione degli switch Fibre Channel (FC) consente agli host di connettersi allo storage array e limita il numero di percorsi. Gli switch vengono posizionati in zone utilizzando l"interfaccia di gestione degli switch.' 
 ---
-= Configurare gli switch FC
+= Configurazione degli switch FC in e-Series - Linux (NVMe over FC)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

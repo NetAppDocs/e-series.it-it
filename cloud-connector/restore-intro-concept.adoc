@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Cloud Connector restore, 
 summary: 'È possibile accedere all"opzione Ripristina nel pannello di navigazione a sinistra dell"applicazione SANtricity Cloud Connector. L"opzione Restore (Ripristina) visualizza la pagina Restore (Ripristina), che consente di creare nuovi processi di ripristino basati su immagine o file.' 
 ---
-= Ripristini
+= Crea nuovi ripristini basati su immagini o su file in SANtricity Cloud Connector
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

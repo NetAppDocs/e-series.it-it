@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Unified Host Utilities, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries, SMcli, SMdevices 
 summary: Linux Unified host Utilities 7.1 include tool per gestire lo storage NetApp, incluse policy di failover e percorsi fisici. 
 ---
-= Installare e configurare le utility host Linux
+= Installare e configurare le utilità host unificate Linux in e-Series (SRP su InfiniBand)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

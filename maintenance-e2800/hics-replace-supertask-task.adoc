@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: replacing E2800 HIC, replace E2800 HIC, replace host interface card, E2800, E-Series, eseries 
 summary: 'Sostituire una scheda di interfaccia host (HIC) guasta.' 
 ---
-= Sostituire la scheda di interfaccia host (HIC) E2800
+= Sostituire la scheda di interfaccia host (HIC) - E2800
 :allow-uri-read: 
 :experimental: 
 :icons: font

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E5700 fan, repair E5700 fan, replace E5700 fan, failed E5700 fan 
 summary: Sostituire una ventola E5700. 
 ---
-= Sostituire il filtro della ventola E5700 (60 dischi)
+= Sostituire il filtro a carboni attivi della ventola - E5700 (60 unità)
 :allow-uri-read: 
 :experimental: 
 :icons: font

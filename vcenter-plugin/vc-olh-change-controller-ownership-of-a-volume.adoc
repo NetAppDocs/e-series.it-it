@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-change-controller-ownership-of-a-volume.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: 'Modificare la proprietà del controller preferita di un volume, in modo che l"i/o per le applicazioni host venga indirizzato attraverso il nuovo percorso.' 
 ---
-= Modificare la proprietà del controller di un volume
+= Modifica della proprietà del controller di un volume in Plug-in di storage SANtricity per vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

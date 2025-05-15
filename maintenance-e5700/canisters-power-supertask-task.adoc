@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E5700 power supply, repair E5700 power supply, replace E5700 power supply, failed E5700 power supply 
 summary: Sostituire un alimentatore da 60 dischi E5700. 
 ---
-= Sostituire il contenitore di alimentazione E5700 (60 dischi)
+= Sostituire il filtro a carboni attivi - E5700 (60 unità)
 :allow-uri-read: 
 :experimental: 
 :icons: font

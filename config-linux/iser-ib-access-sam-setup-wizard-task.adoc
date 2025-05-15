@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: access System Manager Linux, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Per configurare lo storage array, utilizzare la procedura guidata di installazione di Gestione sistema di SANtricity. 
 ---
-= Accedere a Gestore di sistema di SANtricity e utilizzare l'installazione guidata
+= Configurazione dello storage con SANtricity System Manager - Linux (iSER over InfiniBand)
 :allow-uri-read: 
 :experimental: 
 :icons: font

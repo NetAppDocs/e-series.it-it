@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E5700 24-drive, replace E5700 24-drive, failed E5700 24-drive 
 summary: Sostituire un disco in uno shelf da 24 dischi E5700. 
 ---
-= Sostituire l'unità in E5700 (shelf da 24 dischi)
+= Sostituzione dell'unità - E5700 (shelf da 24 dischi)
 :allow-uri-read: 
 :experimental: 
 :icons: font

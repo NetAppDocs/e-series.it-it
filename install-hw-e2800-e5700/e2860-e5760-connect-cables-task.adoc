@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800, E5700, connect power cables 
 summary: 'Collegare i cavi di alimentazione e l"alimentazione agli shelf di dischi.' 
 ---
-= Cablare gli scaffali
+= Collegare i cavi di alimentazione E2860, E5760 e DE460
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

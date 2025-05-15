@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Storage Manager, cli, command line interface, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: 'Quando si installa il software di gestione dello storage SANtricity sulla stazione di gestione, per impostazione predefinita vengono installate un"interfaccia utente grafica e un"interfaccia della riga di comando. Queste istruzioni presuppongono che l"utente installerà l"interfaccia grafica di gestione dello storage SANtricity su una stazione di gestione e non sull"host i/O.' 
 ---
-= Installazione di SANtricity Storage Manager per SMcli (software SANtricity versione 11.53 o precedente)
+= Installare SANtricity Storage Manager per SMcli (11,53 o versione precedente) - Linux (SRP su InfiniBand)
 :allow-uri-read: 
 :experimental: 
 :icons: font

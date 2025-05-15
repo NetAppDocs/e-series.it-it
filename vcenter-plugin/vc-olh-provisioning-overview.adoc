@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-provisioning-overview.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: 'È possibile creare container di dati, chiamati volumi, in modo che l"host possa accedere allo storage sull"array.' 
 ---
-= Panoramica sul provisioning
+= Ulteriori informazioni sul provisioning dello storage nel plug-in di storage SANtricity per vCenter
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

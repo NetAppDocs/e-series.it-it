@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E4000 replace drive, replacing E4000 drive, E4000 replace drive, replacing E4000 drive, E4000, E-Series, eseries 
 summary: Sostituisci un disco in un E4000 con uno shelf da 12 o 24 dischi. 
 ---
-= Sostituire il disco in E4000 (shelf da 12 o 24 dischi)
+= Sostituire l'unità: E4000 (shelf da 12 dischi o 24 dischi)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

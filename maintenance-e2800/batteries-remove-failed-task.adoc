@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800 battery fail, E2800 battery, E2800 battery replacement, replace E2800 battery, replacing E2800 battery, E2800, E-Series, eseries 
 summary: Dopo aver rimosso il contenitore del controller dallo shelf del controller, è possibile rimuovere la batteria. 
 ---
-= Rimuovere la batteria E2800 guasta
+= Rimuovere la batteria guasta - E2800
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-delete-pool-or-volume-group.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: 'Eliminare un pool o un gruppo di volumi per creare più capacità non assegnata, che è possibile riconfigurare per soddisfare le esigenze di storage dell"applicazione' 
 ---
-= Eliminare pool o gruppo di volumi
+= Elimina un pool o un gruppo di volumi in plugin storage SANtricity per vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

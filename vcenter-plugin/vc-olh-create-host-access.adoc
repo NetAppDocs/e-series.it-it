@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-create-host-access.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Per gestire lo storage con Storage Plugin per vCenter, è necessario individuare o definire ciascun host della rete. 
 ---
-= Creare l'accesso all'host
+= Crea accesso host in plug-in storage SANtricity per vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

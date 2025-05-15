@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: replace power supply, EF300, EF600, EF300C, EF600C 
 summary: Sostituire gli alimentatori quando si guastano nel controller EF300 o EF600. 
 ---
-= Sostituire un alimentatore EF300 o EF600
+= Sostituire l'alimentatore - EF300 e EF600
 :allow-uri-read: 
 :experimental: 
 :icons: font

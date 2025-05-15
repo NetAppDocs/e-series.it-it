@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EF300, EF600, EF300C, EF600C, replace DIMM 
 summary: Sostituire un DIMM in un array EF300 o EF600. 
 ---
-= Sostituire i DIMM in EF300 o EF600
+= Sostituire i moduli DIMM EF300 o EF600
 :allow-uri-read: 
 :experimental: 
 :icons: font

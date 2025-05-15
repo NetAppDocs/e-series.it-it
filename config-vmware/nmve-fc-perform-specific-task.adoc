@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Nvme over FC, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Per il protocollo NVME over Fibre Channel, configurare gli switch e determinare gli identificatori delle porte host. 
 ---
-= Eseguire NVMe su attività specifiche di FC
+= Eseguire task NVMe su FC specifici in e-Series - VMware
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

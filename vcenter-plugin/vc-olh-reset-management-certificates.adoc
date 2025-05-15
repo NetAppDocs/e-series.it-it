@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-reset-management-certificates.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Riportare il certificato di gestione allo stato originale autofirmato. 
 ---
-= Reimpostare i certificati di gestione
+= Reimposta i certificati di gestione nel plug-in di archiviazione SANtricity per vCenter
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

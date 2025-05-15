@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E5700 controller, repair E5700 controller, replace E5700 controller, failed E5700 controller 
 summary: Esaminare i tipi e i requisiti dei controller E5700. 
 ---
-= Requisiti per la sostituzione del controller E5700
+= Requisiti per sostituire la centralina - E5700
 :allow-uri-read: 
 :experimental: 
 :icons: font

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Scopri come collegare i controller alla rete e completare la configurazione e la configurazione del sistema storage. 
 ---
-= Setup completo del sistema storage (E4060)
+= Configurazione completa del sistema di archiviazione - E4060
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

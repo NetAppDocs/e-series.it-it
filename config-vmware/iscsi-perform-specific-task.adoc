@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: iscsi, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Per il protocollo iSCSI, configurare gli switch e la rete sul lato array e sul lato host. Quindi, verificare le connessioni di rete IP. 
 ---
-= Eseguire attività specifiche di iSCSI
+= Eseguire task specifici di iSCSI in e-Series - VMware
 :allow-uri-read: 
 :experimental: 
 :icons: font

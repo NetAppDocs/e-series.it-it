@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-enable-security-for-a-pool-or-volume-group.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: 'È possibile attivare Drive Security per un pool o un gruppo di volumi per impedire l"accesso non autorizzato ai dati sulle unità contenute nel pool o nel gruppo di volumi.' 
 ---
-= Abilitare la protezione per un pool o un gruppo di volumi
+= Abilita la sicurezza per un pool o un gruppo di volumi nel plugin storage SANtricity per vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

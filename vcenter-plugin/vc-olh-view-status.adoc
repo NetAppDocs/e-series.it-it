@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-view-status.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Visualizzare lo stato del sistema dal plug-in di storage per vCenter o dal client vSphere 
 ---
-= Visualizzare lo stato
+= Visualizza lo stato del tuo sistema storage in Plug-in di storage SANtricity per vCenter
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

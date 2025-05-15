@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-delete-volume.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Eliminare uno o più volumi per aumentare la capacità libera di un pool o di un gruppo di volumi. 
 ---
-= Elimina volume
+= Elimina volume in plug-in storage SANtricity per vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

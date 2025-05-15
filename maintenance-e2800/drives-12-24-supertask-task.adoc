@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800 replace drive, replacing E2800 drive, E2800 replace drive, replacing E2800 drive, E2800, E-Series, eseries 
 summary: Sostituisci un disco in un E2800 con uno shelf da 12 o 24 dischi. 
 ---
-= Sostituire il disco in E2800 (shelf da 12 o 24 dischi)
+= Sostituzione di un'unità E2800 (shelf da 12 dischi o 24 dischi)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ permalink: manage-storage.html
 keywords: online help, System Manager, Unified Manager 
 summary: Gestire lo storage 
 ---
-= Gestire lo storage
+= Gestire i sistemi storage e-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

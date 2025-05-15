@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-change-workload-settings.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Modificare il nome di un workload e visualizzarne il tipo di applicazione associato. 
 ---
-= Modificare le impostazioni del carico di lavoro
+= Modifica le impostazioni dei carichi di lavoro in plug-in di storage SANtricity per vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: import Remote Storage Volumes, RTV import, import remote volumes, remote storage E-Series 
 summary: 'L"importazione del dispositivo di storage remoto viene eseguita tramite la procedura guidata di importazione dello storage remoto in Gestione di sistema di SANtricity. La funzione di importazione dello storage remoto consente di spostare i dati da un dispositivo di storage remoto all"array e-Series locale.' 
 ---
-= Importa storage remoto
+= Importare l'archiviazione remota per i volumi di archiviazione remota SANtricity
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

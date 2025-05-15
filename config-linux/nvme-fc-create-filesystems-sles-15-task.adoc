@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: file systems, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Per RHEL 8 e SLES 15, si crea un file system sul dispositivo nvme nativo e si monta il file system. 
 ---
-= Creazione di file system (RHEL 8, RHEL 9, SLES 15)
+= Creare file system in e-Series - Linux RHEL 8, RHEL 9 e SLES 15 (NVMe over FC)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

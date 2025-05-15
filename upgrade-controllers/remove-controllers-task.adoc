@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E-Series, eseries, E4000, E2800, E5700, EF300, EF600, upgrade controller, upgrading controller, remove controller, removing controller, remove battery, removing battery 
 summary: 'Il primo passo nell"aggiornamento dei controller consiste nel rimuovere i vecchi controller e, facoltativamente, la batteria.' 
 ---
-= Rimuovere i controller
+= Rimuovere i controller e-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

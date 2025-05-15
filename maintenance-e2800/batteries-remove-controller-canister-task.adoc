@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800 battery fail, E2800 battery, E2800 battery replacement, replace E2800 battery, replacing E2800 battery, E2800, E-Series, eseries 
 summary: Per rimuovere la batteria, rimuovere prima il contenitore del controller dallo shelf del controller. 
 ---
-= Rimuovere il contenitore del controller E2800
+= Rimuovere il filtro a carboni attivi della centralina - E2800
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

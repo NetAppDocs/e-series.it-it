@@ -4,7 +4,7 @@ permalink: vcenter-plugin/san-spvc-ic-login-and-navigation.html
 keywords: log in vCenter plugin, login Plugin for vCenter, browsers vCenter plugin user interface, vCenter GUI, 
 summary: Accedere e navigare nel Plugin per vCenter. 
 ---
-= Accedere e navigare nel plug-in di storage per vCenter
+= Effettua l'accesso e naviga nel plugin per lo storage SANtricity per vCenter
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

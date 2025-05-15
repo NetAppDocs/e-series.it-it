@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E5700 60-drive, replace E5700 60-drive, failed E5700 60-drive 
 summary: Sostituire un disco in uno shelf da 60 dischi E5700. 
 ---
-= Sostituire l'unità in E5700 (shelf da 60 dischi)
+= Sostituzione dell'unità - E5700 (shelf da 60 dischi)
 :allow-uri-read: 
 :experimental: 
 :icons: font

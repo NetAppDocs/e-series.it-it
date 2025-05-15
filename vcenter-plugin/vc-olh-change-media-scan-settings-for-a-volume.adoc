@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-change-media-scan-settings-for-a-volume.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: 'Una scansione dei supporti è un"operazione in background che esegue la scansione di tutti i dati e delle informazioni di ridondanza nel volume. Utilizzare questa opzione per attivare o disattivare le impostazioni di scansione dei supporti per uno o più volumi o per modificare la durata della scansione.' 
 ---
-= Modificare le impostazioni di scansione dei supporti per un volume
+= Modifica delle impostazioni di scansione dei contenuti multimediali per un volume in Plug-in di storage SANtricity per vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

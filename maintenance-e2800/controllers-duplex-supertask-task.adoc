@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: replace E2800 controller, replacing E2800 controller, duplex controller replacement, E2800, E2824, E2860, EF280, E-Series, eseries 
 summary: Sostituire un contenitore del controller in una configurazione duplex. 
 ---
-= Sostituire il controller nella configurazione duplex E2800
+= Sostituire un controller nella configurazione duplex - E2800
 :allow-uri-read: 
 :experimental: 
 :icons: font

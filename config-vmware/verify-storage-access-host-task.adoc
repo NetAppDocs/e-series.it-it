@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: verify storage ESXi, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: 'Prima di utilizzare un volume, verificare che l"host sia in grado di scrivere i dati nel volume e di leggerli nuovamente.' 
 ---
-= Verificare l'accesso allo storage sull'host
+= Verifica dell'accesso allo storage sull'host in e-Series - VMware
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

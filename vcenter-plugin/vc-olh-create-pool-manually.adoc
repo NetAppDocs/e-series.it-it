@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-create-pool-manually.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: 'È possibile creare un pool manualmente se l"installazione non soddisfa i requisiti per la configurazione automatica del pool. Un pool è un insieme di dischi raggruppati in modo logico.' 
 ---
-= Creare il pool manualmente
+= Creare manualmente un pool nel plug-in di storage SANtricity per vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

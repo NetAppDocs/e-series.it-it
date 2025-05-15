@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-perform-pre-upgrade-health-check.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Un controllo dello stato di salute viene eseguito come parte del processo di aggiornamento, ma è anche possibile eseguire un controllo dello stato di salute separatamente prima di iniziare. 
 ---
-= Eseguire un controllo dello stato di salute prima dell'aggiornamento
+= Eseguire un controllo dello stato di salute pre-aggiornamento in plugin storage SANtricity per vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

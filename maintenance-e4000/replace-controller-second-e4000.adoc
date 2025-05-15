@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Aggiungere un secondo contenitore in E4000
+= Aggiungere un secondo canister - E4000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

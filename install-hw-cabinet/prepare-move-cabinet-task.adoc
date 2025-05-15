@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: 3040 40U cabinet, cabinet installation, drive tray installation, controller installation, shelf installation, E2800, E5700, EF300, EF600 
 summary: Prepararsi a spostare il cabinet. 
 ---
-= Preparazione per lo spostamento del cabinet
+= Preparazione per lo spostamento dell'armadio 3040 40U (serie e)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

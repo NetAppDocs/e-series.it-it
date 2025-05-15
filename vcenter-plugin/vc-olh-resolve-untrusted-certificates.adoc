@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-resolve-untrusted-certificates.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: 'Risolvi i certificati non attendibili importando un certificato autofirmato dall"array di storage o importando un certificato di autorità di certificazione (CA) emesso da una terza parte attendibile.' 
 ---
-= Risolvi i certificati non attendibili
+= Risolvi i certificati non attendibili in plug-in di archiviazione SANtricity per vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

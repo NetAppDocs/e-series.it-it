@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Remote Storage Volumes, RTV, remote volumes, remote storage E-Series 
 summary: 'È possibile visualizzare lo stato di ogni importazione di storage remoto dalla sezione Result list (elenco risultati) della schermata Remote Storage (archiviazione remota) di Gestione sistema SANtricity.' 
 ---
-= Gestire l'avanzamento dell'importazione
+= Gestione dell'avanzamento dell'importazione per i volumi di archiviazione remota SANtricity
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

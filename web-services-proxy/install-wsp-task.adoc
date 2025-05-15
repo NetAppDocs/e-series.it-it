@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: installation, download, install proxy, 
 summary: 'L"installazione comporta il download del file e l"installazione del pacchetto proxy su un server Linux o Windows.' 
 ---
-= Installare o aggiornare il file proxy dei servizi Web
+= Installare o aggiornare il file proxy dei servizi Web SANtricity
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

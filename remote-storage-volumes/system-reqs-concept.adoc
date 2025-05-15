@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Remote Storage Volumes requirements, RTV requirements, RTV restrictions, remote volumes, remote storage E-Series 
 summary: Il sistema deve soddisfare i requisiti di compatibilità per i volumi di storage remoto. 
 ---
-= Requisiti e restrizioni per lo storage remoto
+= Requisiti e restrizioni per l'utilizzo dei volumi di archiviazione remota SANtricity
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

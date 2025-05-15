@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Scopri come installare un sistema storage E4012, DE212C o DE224C in un rack a due montanti o in un cabinet di sistema NetApp. 
 ---
-= Installazione dell'hardware (E4012)
+= Montare la bulloneria - E4012
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

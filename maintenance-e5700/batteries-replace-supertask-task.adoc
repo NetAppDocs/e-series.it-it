@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E5700 battery, repair E5700 battery, replace E5700 battery, failed E5700 battery 
 summary: Sostituire una batteria guasta in un sistema storage E5700. 
 ---
-= Sostituire la batteria E5700
+= Sostituire la batteria - E5700
 :allow-uri-read: 
 :experimental: 
 :icons: font

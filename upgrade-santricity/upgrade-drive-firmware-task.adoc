@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E-Series, eseries, E2800, E5700, EF300, EF600, SANtricity, drive firmware, upgrade SANtricity, upgrade OS, upgrade E-Series, upgrade firmware, upgrading, upgrade IOM firmware, upgrade NVSRAM, upgrade controller 
 summary: Il firmware dei dischi viene aggiornato per assicurarsi di disporre di tutte le funzionalità più recenti e di correzioni di bug. 
 ---
-= Aggiornare il firmware del disco
+= Aggiornamento del firmware dei dischi e-Series ed EF-Series
 :allow-uri-read: 
 :experimental: 
 :icons: font

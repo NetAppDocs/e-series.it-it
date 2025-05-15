@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: 'Per il protocollo SAS, individuare gli indirizzi SAS utilizzando l"utility HBA, quindi utilizzare il BIOS HBA per definire le impostazioni di configurazione appropriate.' 
 ---
-= Determinare gli identificatori host SAS - Linux
+= Determinare gli identificatori degli host SAS in e-Series - Linux (SAS)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

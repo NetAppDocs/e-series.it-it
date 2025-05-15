@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: polling Web Services Proxy, WSP statistics, poll WSP, 
 summary: È possibile configurare il polling automatico per tutte le statistiche di dischi e volumi sui sistemi storage rilevati. 
 ---
-= Gestire il polling automatico per le statistiche del proxy dei servizi Web
+= Gestire il polling automatico per le statistiche proxy dei servizi Web SANtricity
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

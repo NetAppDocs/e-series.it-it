@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Scopri come installare un sistema di storage E4060 o DE460C in un rack a due montanti o in un cabinet di sistema NetApp. 
 ---
-= Installazione dell'hardware (E4060)
+= Montare la bulloneria - E4060
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

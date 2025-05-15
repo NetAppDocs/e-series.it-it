@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: log in API, log in Unified Manager 
 summary: 'Accesso e accesso all"API dei servizi Web e a Unified Manager.' 
 ---
-= Accedere a API e Unified Manager
+= Accedere all'API proxy dei servizi Web SANtricity e a Unified Manager
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

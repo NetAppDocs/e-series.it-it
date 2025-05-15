@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EF300, EF600, EF300C, EF600C replace fan, 
 summary: Esaminare i requisiti e le considerazioni prima di sostituire le ventole EF300 o EF600. 
 ---
-= Requisiti per la sostituzione delle ventole EF300 o EF600
+= Requisiti per la sostituzione della ventola - EF300 e EF600
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

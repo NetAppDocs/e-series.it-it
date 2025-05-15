@@ -4,7 +4,7 @@ permalink: vcenter-plugin/san-spvc-ic-installation.html
 keywords: install vCenter plugin, installing vCenter plugin, vCenter plugin, 
 summary: Installare o aggiornare il plug-in di storage SANtricity per vCenter. 
 ---
-= Installare o aggiornare il plug-in di storage per vCenter
+= Installa o aggiorna il plug-in di storage SANtricity per vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

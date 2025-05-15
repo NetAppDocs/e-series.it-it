@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: 'L"utilizzo di uno switch InfiniBand per eseguire il gestore di subnet potrebbe causare una perdita di percorso imprevista in caso di carichi elevati. Per evitare la perdita di percorso, configurare il gestore di subnet su uno o più host utilizzando opensm.' 
 ---
-= Configurare il gestore di subnet
+= Configurare il gestore di subnet in e-Series - Linux (SRP su InfiniBand)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

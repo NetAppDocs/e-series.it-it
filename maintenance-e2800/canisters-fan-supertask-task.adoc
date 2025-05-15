@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800 replace 60-drive fan canister, replacing E2800 fan canister, E2800 replace fan, E2800, E-Series, eseries 
 summary: Sostituire un contenitore della ventola in uno shelf di controller da 60 dischi o in uno shelf di dischi. 
 ---
-= Sostituire il filtro della ventola E2800 (60 dischi)
+= Sostituire il filtro a carboni attivi della ventola - E2800 (60 unità)
 :allow-uri-read: 
 :experimental: 
 :icons: font

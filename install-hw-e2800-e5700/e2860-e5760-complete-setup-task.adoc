@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2800, E5700, installation, host cabling, direct-attach topology, fabric topology, System Manager connection, management host connection, port configuration, configuring ports, DHCP, static IP 
 summary: Collegare i controller alla rete per completare la configurazione e la configurazione del sistema di storage. 
 ---
-= Configurazione e configurazione complete del sistema storage
+= Configurazione e setup completi del sistema storage: E2860, E5760 e DE460
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

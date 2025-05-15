@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EF600, EF300, EF600C, EF300C, replace fan, fan fail 
 summary: Sostituire una ventola in un EF300 o EF600. 
 ---
-= Sostituire una ventola EF300 o EF600
+= Sostituire la ventola - EF300 o EF600
 :allow-uri-read: 
 :experimental: 
 :icons: font

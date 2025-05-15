@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EF300, EF600, replace DIMM, EF300C, EF600C 
 summary: Esaminare requisiti e considerazioni prima di sostituire i DIMM EF300 o EF600. 
 ---
-= Requisiti per la sostituzione di un modulo DIMM EF300 o EF600
+= Requisiti per la sostituzione del modulo DIMM - EF300 e EF600
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

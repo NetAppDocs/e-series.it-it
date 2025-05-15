@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-create-pool-automatically.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: È possibile creare pool automaticamente quando il sistema rileva almeno 11 dischi non assegnati o rileva un disco non assegnato idoneo per un pool esistente. 
 ---
-= Crea pool automaticamente
+= Crea automaticamente un pool nel plugin storage SANtricity per vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

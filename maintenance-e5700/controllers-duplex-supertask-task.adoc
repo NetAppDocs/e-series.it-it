@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E5700 controller, repair E5700 controller, replace E5700 controller, failed E5700 controller 
 summary: Sostituire un contenitore del controller in una configurazione duplex. 
 ---
-= Sostituire il controller in configurazione duplex
+= Sostituire il controller nella configurazione duplex - E5700
 :allow-uri-read: 
 :experimental: 
 :icons: font

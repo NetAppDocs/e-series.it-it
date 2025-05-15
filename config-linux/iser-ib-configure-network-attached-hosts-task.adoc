@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configure network Linux, configure hosts linux, express linux configuration, linux host, 
 summary: 'Lo stack di driver InfiniBand OFED supporta l"esecuzione simultanea di iSER e SRP sulle stesse porte, pertanto non è necessario alcun hardware aggiuntivo.' 
 ---
-= Configurare il networking per gli host collegati allo storage
+= Configurare le connessioni di rete tra l'host e lo storage e-Series - Linux (iSER over InfiniBand)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

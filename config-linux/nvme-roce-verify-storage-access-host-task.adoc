@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: 'Prima di utilizzare lo spazio dei nomi, verificare che l"host possa scrivere i dati nello spazio dei nomi e leggerli.' 
 ---
-= Verificare l'accesso allo storage sull'host
+= Verifica dell'accesso allo storage sull'host in e-Series - Linux (NVMe over RoCE)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

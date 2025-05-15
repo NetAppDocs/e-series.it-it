@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: express Windows configuration, software configuration, Windows host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: 'Verifica dei requisiti per l"utilizzo del metodo Express per la configurazione di un array e-Series e di un host Windows.' 
 ---
-= Presupposti
+= Presupposti (e-Series e Windows)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

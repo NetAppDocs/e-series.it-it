@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E5700 host interface card, E5700 HIC, replace E5700 HIC, failed E5700 HIC 
 summary: Esaminare i requisiti per la sostituzione HIC E5700. 
 ---
-= Requisiti per la sostituzione HIC E5700
+= Requisiti per sostituire la scheda di interfaccia host (HIC) - E5700
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

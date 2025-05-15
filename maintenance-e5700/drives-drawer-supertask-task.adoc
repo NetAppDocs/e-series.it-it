@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E5700 drive drawer, DE460C drive shelf, replace E5700 drive drawer, failed E5700 drive drawer 
 summary: Sostituire un cassetto di dischi in un E5700. 
 ---
-= Sostituire il cassetto unità E5700 (60 dischi)
+= Sostituire il cassetto dell'unità - E5700 (60 unità)
 :allow-uri-read: 
 :experimental: 
 :icons: font

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E2860, E5760, DE460, installation 
 summary: 'Per installare E2860, E5760 o DE460, creare un account e registrare l"hardware.' 
 ---
-= Preparazione per l'installazione
+= Preparazione all'installazione - E2860, E5760 e DE460
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: host port GUIDs, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: Determinare i GUID della porta host. 
 ---
-= Determinare i GUID della porta host ed effettuare le impostazioni consigliate
+= Determinare gli ID univoci globali delle porte host in e-Series - Linux (NVMe over InfiniBand)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

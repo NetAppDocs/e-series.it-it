@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-import-system-settings.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Importare le impostazioni di sistema da uno storage array ad altri storage array. 
 ---
-= Importare le impostazioni di sistema
+= Importazione delle impostazioni di sistema in plug-in di archiviazione SANtricity per vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: workflow, guide, express, method, configuring, configure, storage, array, system, manager, host, understand 
 summary: Utilizzare il workflow di configurazione di WVMware Express. 
 ---
-= Comprendere il workflow VMware
+= Conoscere il flusso di lavoro VMware in e-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

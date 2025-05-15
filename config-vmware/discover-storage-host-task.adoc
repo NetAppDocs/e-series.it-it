@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: discover storage ESXi, express vmware configuration, software configuration, vmware host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: 'Dopo aver assegnato i volumi all"host, eseguire una nuova scansione in modo che l"host rilevi e configuri i volumi per il multipathing.' 
 ---
-= Rilevare lo storage sull'host
+= Rilevamento dello storage sull'host in e-Series - VMware
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

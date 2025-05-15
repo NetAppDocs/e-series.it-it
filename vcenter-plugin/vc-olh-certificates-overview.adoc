@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-certificates-overview.html
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: 'Gestione certificati consente di creare richieste di firma del certificato (CSR), importare certificati e gestire i certificati esistenti.' 
 ---
-= Panoramica dei certificati
+= Scopri come gestire i certificati nel plug-in di storage SANtricity per vCenter
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

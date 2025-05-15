@@ -4,7 +4,7 @@ permalink: vcenter-plugin/vc-olh-change-configuration-settings-for-a-volume-grou
 keywords: vCenter plugin, Plugin for vCenter, SANtricity plugin for vCenter 
 summary: Consente di modificare le impostazioni di un gruppo di volumi, inclusi il nome e il livello RAID. 
 ---
-= Modificare le impostazioni di configurazione di un gruppo di volumi
+= Modifica delle impostazioni di configurazione di un gruppo di volumi in Plug-in di storage SANtricity per vCenter
 :hardbreaks:
 :allow-uri-read: 
 :experimental: 

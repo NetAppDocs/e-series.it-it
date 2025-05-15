@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: NVMe volumes physical, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: 'Configurare l"i/o diretto alla destinazione del dispositivo in base alla versione di Linux in uso.' 
 ---
-= Accedere ai volumi NVMe per le destinazioni fisiche dei dispositivi NVMe
+= Accesso ai volumi NVMe per destinazioni fisiche di dispositivi NVMe in e-Series - Linux (NVMe over FC)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
