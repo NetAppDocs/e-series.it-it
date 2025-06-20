@@ -343,9 +343,6 @@
   <block id="f71587f568f7ede725c9078bf49743b7" category="summary">Collegare ciascun controller nello shelf di controller a un modulo i/o (IOM) in uno shelf di dischi.</block>
   <block id="24d1db435624223ea3fcfe34e7480965" category="doc">Cablaggio dello shelf di dischi</block>
   <block id="23c9c1d703a67af9b3d48c36aebc7730" category="paragraph">È necessario collegare ciascun controller nello shelf di controller a un modulo i/o (IOM) in uno shelf di dischi.</block>
-  <block id="e9983c2bf51c9aa8f38dce44157b9a2a" category="paragraph">Questa procedura si applica agli shelf di dischi IOM12 e IOM12B.</block>
-  <block id="f2ad0f8f286ab81e3d2722fa3c383e9b" category="admonition">I moduli IOM12B sono supportati solo da SANtricity OS 11.70.2 in poi. Assicurarsi che il firmware del controller sia stato aggiornato prima di installare o eseguire l'aggiornamento a IOM12B.</block>
-  <block id="2af3ffb0914986412fbce97033362ada" category="admonition">Questa procedura si applica a sostituzioni o sostituzioni IOM di shelf simili. Ciò significa che è possibile sostituire solo un modulo IOM12 con un altro modulo IOM12 o un modulo IOM12B con un altro modulo IOM12B. (Lo shelf può avere due moduli IOM12 o due moduli IOM12B).</block>
   <block id="5a1179aaa65f35de522ce2a2ea82749a" category="inline-link">Aggiunta di shelf di dischi IOM a uno shelf di controller E27XX, E56XX o EF560 esistente</block>
   <block id="a6f3f1b5a23e23fffe14cffdfdd4e3e6" category="paragraph">Se si sta cablando uno shelf di controller meno recente a DE212C, DE224C o DE460, vedere<block ref="0198df91334a412ebbcbbf86e387ec1b" category="inline-link-rx"></block>.</block>
   <block id="ae7a26030f4b035778f68ea33d2444dc" category="section-title">Cablaggio E2800 ed E5700</block>
@@ -1706,8 +1703,6 @@
   <block id="643cf53889a851d94f18e68d68887ef7" category="summary">Esaminare i requisiti e le considerazioni per la sostituzione del controller E2800.</block>
   <block id="441651ab40068dac3a602bac4db9c3cc" category="paragraph">Prima di sostituire o aggiungere un controller E2800, esaminare i requisiti e le considerazioni.</block>
   <block id="2d33b45e8b3a1d29678e5d1898be8872" category="paragraph">Ogni contenitore di controller contiene una scheda controller, una batteria e una scheda di interfaccia host (HIC) opzionale. È possibile aggiungere un secondo controller a una configurazione simplex o sostituire un controller guasto.</block>
-  <block id="d8877bd06791feeb2257a189554b10c0" category="paragraph">Queste procedure si applicano agli shelf di dischi IOM12 e IOM12B.</block>
-  <block id="9d5445db77f905ba92077d0b48806948" category="admonition">Queste procedure si riferiscono a sostituzioni o sostituzioni IOM simili a quelle degli shelf. Ciò significa che è possibile sostituire solo un modulo IOM12 con un altro modulo IOM12 o un modulo IOM12B con un altro modulo IOM12B. (Lo shelf può avere due moduli IOM12 o due moduli IOM12B).</block>
   <block id="e0b4ad5fea96a69e322520c639ff0241" category="section-title">Requisiti per l'aggiunta di un secondo controller</block>
   <block id="b5c3b2977348508969f89a874a523c3c" category="paragraph">È possibile aggiungere un secondo contenitore di controller alla versione simplex dei seguenti shelf di controller:</block>
   <block id="3a2fa91ff19a804d73a517b7fdbc6350" category="paragraph">Le figure mostrano un esempio di shelf di controller prima di aggiungere un secondo controller (un contenitore di controller e un bianco di controller) e dopo aver aggiunto un secondo controller (due contenitori di controller).</block>
@@ -1761,7 +1756,6 @@
   <block id="c92ae1b66e0ea48f905922b70c51fcc0" category="summary">Sostituire un disco in un E2800 con uno shelf da 60 dischi.</block>
   <block id="609be9ba4308b107932857f7cf158595" category="paragraph">È possibile sostituire un disco in un E2800 con uno shelf da 60 dischi.</block>
   <block id="620f2aecd1b13cc9e4943a2b50b4a8b6" category="paragraph">Il guru del ripristino in Gestione di sistema di SANtricity monitora i dischi nell'array di storage e può notificare un guasto imminente del disco o un guasto effettivo del disco. In caso di guasto di un disco, il LED di attenzione di colore ambra si accende. È possibile sostituire a caldo un disco guasto mentre lo storage array sta ricevendo le operazioni di i/O.</block>
-  <block id="ebc31fad1cf84954196a7706294df684" category="paragraph">Questa procedura si applica agli shelf di dischi DCM e DCM2.</block>
   <block id="ee7607d86da8b65c01da2ac652fe4964" category="list-text">Se necessario, utilizzare Gestore di sistema di SANtricity per individuare il disco all'interno dello storage array.</block>
   <block id="b6a12ef99e8b336ab9462d700e1e8a99" category="list-text">Se lo shelf è dotato di una cornice, rimuovetela per vedere i LED.</block>
   <block id="b5524c42961e4cb39436d596734756bc" category="list-text">Dal menu di scelta rapida del disco, selezionare *attiva indicatore di posizione*.</block>
@@ -2969,7 +2963,6 @@
   <block id="b53be48031d9644ecd27235aa60872c2" category="list-text">È necessario disporre di due HICS compatibili con i controller.</block>
   <block id="2a6f6b0e35b2bf4af51a4b0bfe47141a" category="summary">Sostituire un disco in uno shelf da 60 dischi E5700.</block>
   <block id="ff4525471962c2f80f88cc7bda612cda" category="paragraph">È possibile sostituire un disco in uno shelf da 60 dischi.</block>
-  <block id="6dc10b003bcb8e0cbbcf076e7dbcdf2f" category="paragraph">Questa attività si applica agli shelf di dischi DCM e DCM2.</block>
   <block id="eb4144f92a460ecd95ae1c09b9232c09" category="section-title">Fase 1: Preparazione alla sostituzione del disco (60 dischi)</block>
   <block id="76b188eaa0ef9d72b9512f3fe3343776" category="paragraph">Preparare la sostituzione di un disco in uno shelf da 60 dischi controllando il guru del ripristino in Gestore di sistema di SANtricity e completando i passaggi necessari. Quindi, individuare il componente guasto.</block>
   <block id="831881f71c8feafb6a34cf32fd783117" category="section-title">Fase 2: Rimozione del disco guasto (60 dischi)</block>
@@ -3186,7 +3179,6 @@
   <block id="c91bcce3104eb156b3cd15ae07870a24" category="list-text">La versione del firmware è inferiore alla 8.50.</block>
   <block id="d42c8b73b3ccc12638f610f2623a0c09" category="list-text">Lo storage array non è in linea.</block>
   <block id="05693bc32413083ba1ba81023c2fa739" category="list-text">Il sistema non è in grado di comunicare con tale array (ad esempio, l'array presenta problemi di certificato, password o rete).</block>
-  <block id="27ff4e5987307be95b847357578a7d2c" category="summary">Un controllo di ridondanza determina se i dati su un volume in un pool o un gruppo di volumi sono coerenti.</block>
   <block id="dbdb64210af00cba98b2ae65e68fc433" category="doc">Che cos'è il controllo di ridondanza?</block>
   <block id="527686381caf5b91f8b2570f0b90f7e1" category="paragraph">Un controllo di ridondanza determina se i dati su un volume in un pool o un gruppo di volumi sono coerenti. I dati di ridondanza vengono utilizzati per ricostruire rapidamente le informazioni su un disco sostitutivo in caso di guasto di uno dei dischi del pool o del gruppo di volumi.</block>
   <block id="ceb78409571f58fc00f9f8b5b24b8937" category="paragraph">È possibile eseguire questo controllo solo su un pool o su un gruppo di volumi alla volta. Un controllo della ridondanza del volume esegue le seguenti operazioni:</block>
@@ -3194,7 +3186,6 @@
   <block id="6dee74719546d8700311fdc171e6eaf5" category="list-text">Confronta i blocchi di dati sui dischi RAID 1 mirrorati.</block>
   <block id="022d29d5236acf6a0c4d3252c8c98061" category="list-text">Restituisce errori di ridondanza se i dati sono determinati come incoerenti dal firmware del controller.</block>
   <block id="a18bfa5536f6ad90a9b1127adc6ab086" category="admonition">L'esecuzione immediata di un controllo di ridondanza sullo stesso pool o gruppo di volumi potrebbe causare un errore. Per evitare questo problema, attendere da uno a due minuti prima di eseguire un altro controllo di ridondanza sullo stesso pool o gruppo di volumi.</block>
-  <block id="e28ca758b5b6384ff2daa36accced63c" category="summary">Durante la creazione del volume, vengono richieste informazioni sull'utilizzo di un carico di lavoro.</block>
   <block id="b5a3b95a88ff3f89275ca18c4736d4b8" category="doc">In che modo il carico di lavoro selezionato influisce sulla creazione di volumi?</block>
   <block id="0c6710fd70e8f6dfb7dc7c5ef665fd39" category="paragraph">Durante la creazione del volume, vengono richieste informazioni sull'utilizzo di un carico di lavoro. Il sistema utilizza queste informazioni per creare una configurazione ottimale del volume, che può essere modificata in base alle esigenze. In alternativa, è possibile saltare questo passaggio nella sequenza di creazione del volume.</block>
   <block id="ab699fec90fd6cda5e110bb5189e9178" category="paragraph">Un workload è un oggetto storage che supporta un'applicazione. È possibile definire uno o più carichi di lavoro o istanze per applicazione. Per alcune applicazioni, il sistema configura il carico di lavoro in modo che contenga volumi con caratteristiche di volume sottostanti simili. Queste caratteristiche dei volumi sono ottimizzate in base al tipo di applicazione supportata dal carico di lavoro. Ad esempio, se si crea un carico di lavoro che supporta un'applicazione Microsoft SQL Server e successivamente si creano volumi per tale carico di lavoro, le caratteristiche del volume sottostante sono ottimizzate per supportare Microsoft SQL Server.</block>
@@ -3232,7 +3223,6 @@
   <block id="f2c9f1709c532438b5ff6e0fadcdcacd" category="cell">Esporta tutto</block>
   <block id="fde2d9fa25e604e50907d87cc35ddb53" category="cell">Esporta tutte le statistiche della cache SSD in formato CSV. Il file esportato contiene tutte le statistiche disponibili per la cache SSD (nominale e dettagliata).</block>
   <block id="e363f7972627add7692858b978a427e9" category="list-text">Fare clic su *Annulla* per chiudere la finestra di dialogo.</block>
-  <block id="e995e7f7f68380b2da6f062d6f736236" category="summary">Per i sistemi EF300 e EF600, è possibile impostare un volume in modo che supporti una dimensione di blocco di 512 byte o 4 KiB (chiamata anche "dimensione del settore"). È necessario impostare il valore corretto durante la creazione del volume.</block>
   <block id="fb5754cb7d8aec1ca725e7242d365730" category="doc">Cosa occorre sapere sui requisiti relativi alle dimensioni dei blocchi host?</block>
   <block id="e5e425d8ab1cbef0e34a067f0d88d470" category="paragraph">Per i sistemi EF300 e EF600, è possibile impostare un volume in modo che supporti una dimensione di blocco di 512 byte o 4 KiB (chiamata anche "dimensione del settore"). È necessario impostare il valore corretto durante la creazione del volume. Se possibile, il sistema suggerisce il valore predefinito appropriato.</block>
   <block id="f4aa667b118a0a334c4fa467de995fc8" category="paragraph">Prima di impostare le dimensioni del blocco del volume, leggere le seguenti limitazioni e linee guida.</block>
@@ -3507,7 +3497,6 @@
   <block id="8efa2e80740bad5c7deb3f2961c4eb52" category="cell">Inizializzare un volume</block>
   <block id="f02e1af7aa228a65e6cbd4b9f527213c" category="cell">Aumentare la capacità di un volume</block>
   <block id="ca3f51df02507e9ffb10c5ac56c27a98" category="cell">Modificare le dimensioni dei segmenti di un volume</block>
-  <block id="968c500c45a669526a5ae69ef252eb12" category="summary">È necessario creare un cluster host se si desidera che due o più host condividano l'accesso allo stesso set di volumi.</block>
   <block id="36ba1dd2062be041e65d76f318fc9563" category="doc">Perché dovrei creare un cluster host?</block>
   <block id="605c94544e16797cd75e903049c8c75f" category="paragraph">È necessario creare un cluster host se si desidera che due o più host condividano l'accesso allo stesso set di volumi. In genere, i singoli host dispongono di un software di clustering installato su di essi per coordinare l'accesso ai volumi.</block>
   <block id="bc369a323e58afb1626e5dd272d88c03" category="doc">Che cos'è la protezione contro la perdita di shelf e la perdita di cassetto?</block>
@@ -3560,7 +3549,6 @@
   <block id="46c8a0fc9f60eb41ffd15e72a66874b8" category="admonition">Gli array di storage con firmware inferiore a 8.50 non sono disponibili per la selezione. Inoltre, un array non viene visualizzato in questa finestra di dialogo se il plug-in non è in grado di comunicare con tale array (ad esempio, se non è in linea o se presenta problemi di certificato, password o rete).</block>
   <block id="ea8b0ece027252dc71e8ee5dc1645b95" category="paragraph">La pagina Operations (operazioni) visualizza i risultati dell'operazione di importazione. Se l'operazione non riesce, fare clic sulla relativa riga per visualizzare ulteriori informazioni.</block>
   <block id="74e8f7e3feca9d1afae640096e0e7b60" category="paragraph">Gli array di storage di destinazione sono ora configurati per inviare avvisi agli amministratori tramite e-mail, SNMP o syslog.</block>
-  <block id="a755886af9ddc52625c98ff0c2403d42" category="summary">Una chiave di sicurezza viene condivisa da controller e dischi abilitati alla sicurezza all'interno di un array di storage.</block>
   <block id="2a0d49e5c65d1c328eea1427c45f821e" category="doc">Cosa occorre sapere prima di creare una chiave di sicurezza?</block>
   <block id="eb8e4643855758b3255653b9508bfb4a" category="paragraph">Una chiave di sicurezza viene condivisa da controller e dischi abilitati alla sicurezza all'interno di un array di storage. Se un disco abilitato alla protezione viene rimosso dall'array di storage, la chiave di sicurezza protegge i dati da accessi non autorizzati.</block>
   <block id="41f869dddf7c6279ec6063ce284c3e8e" category="paragraph">È possibile creare e gestire le chiavi di sicurezza utilizzando uno dei seguenti metodi:</block>
@@ -3599,7 +3587,6 @@
   <block id="5c82f6a54733344cb7eec2765ac13712" category="paragraph">La capacità del volume viene aumentata in base alla selezione effettuata. Tenere presente che questa operazione può essere lunga e può influire sulle prestazioni del sistema.</block>
   <block id="bd965e38a0c9cf27aa1bde099308e23f" category="paragraph-title">Al termine</block>
   <block id="4068dcbd83689810385f5bd61994998b" category="paragraph">Dopo aver espanso la capacità del volume, è necessario aumentare manualmente le dimensioni del file system per ottenere la corrispondenza. Il modo in cui si esegue questa operazione dipende dal file system in uso. Per ulteriori informazioni, consultare la documentazione del sistema operativo host.</block>
-  <block id="c7f22d49f002f26198a719f2496c2e98" category="summary">La funzione Import Settings (Impostazioni di importazione) è un'operazione batch che carica le configurazioni da un array di storage a più array di storage. Le impostazioni importate durante questa operazione dipendono dalla configurazione dell'array di storage di origine in System Manager.</block>
   <block id="6aa467b445a7d222ea7a821c8df54a08" category="doc">Quali impostazioni vengono importate?</block>
   <block id="5a336d7c8bb4d9fb626af7c0fffe68af" category="paragraph">La funzione Import Settings (Impostazioni di importazione) è un'operazione batch che carica le configurazioni da un array di storage a più array di storage.</block>
   <block id="5f54df5b09ce6e5e7ccff3fed9aea673" category="paragraph">Le impostazioni importate durante questa operazione dipendono dalla configurazione dell'array di storage di origine in System Manager. È possibile importare le seguenti impostazioni in più array di storage:</block>
@@ -3765,7 +3752,6 @@
   <block id="15ce7ef0cae5d197c3cd4b7a35535c81" category="list-text">Lasciare vuoto il campo se non si richiede l'autenticazione dell'host. Attualmente, l'unico metodo di autenticazione iSCSI utilizzato è CHAP.</block>
   <block id="97d641f1314ad1d3b18b4c69f869ace9" category="inline-link-macro">Assegnare volumi agli host</block>
   <block id="37d134df46a95726b0ecc7f59339b793" category="paragraph">È necessario assegnare un volume a un host in modo che possa essere utilizzato per le operazioni di i/O. Passare a. <block ref="1380cde45bc7272ea17859294b7eb202" category="inline-link-macro-rx"></block>.</block>
-  <block id="490911223ced9bd35d325330312a99b5" category="summary">La password viene utilizzata per crittografare e decrittare il file della chiave di sicurezza memorizzato nel client di gestione locale.</block>
   <block id="7e2fd80391cbb19f61be6028669d1143" category="doc">Perché è necessario definire una passphrase?</block>
   <block id="2f42cd01026066a070aa52e53e4d963f" category="paragraph">La password viene utilizzata per crittografare e decrittare il file della chiave di sicurezza memorizzato nel client di gestione locale. Senza la passphrase, la chiave di sicurezza non può essere decifrata e utilizzata per sbloccare i dati da un disco abilitato alla sicurezza se viene reinstallata in un altro array di storage.</block>
   <block id="c99be05276e49867c3c82a7022f31b32" category="doc">Come si fa a sapere quale tipo di sistema operativo host è corretto?</block>
@@ -3790,8 +3776,6 @@
   <block id="961886d373243f3f3f779b008441b5d2" category="cell">Supporta le versioni di Mac OS che utilizzano un driver multipathing per la tecnologia atto, Inc.</block>
   <block id="d93a7355c7e5ae529cbbd1c7386ef236" category="cell">Windows (atto)</block>
   <block id="1cef5a0ae504a39c3c685c81bb227bcc" category="cell">Supporta i sistemi operativi Windows che utilizzano un driver multipathing per la tecnologia atto, Inc.</block>
-  <block id="fae9863ad38cf7cb4abba55837a6958e" category="cell">FlexArray (ALUA)</block>
-  <block id="80a4b6a6aea0733712df8ece7feeb565" category="cell">Supporta un sistema NetApp FlexArray che utilizza ALUA per il multipathing.</block>
   <block id="448462a9364fed0f780b5871c1332348" category="cell">SVC IBM</block>
   <block id="ba5b374a9253be7b2e7ff414763a91ee" category="cell">Supporta una configurazione IBM SAN Volume Controller.</block>
   <block id="fb83a625e5852c1ba47fe358f2d50ffc" category="cell">Impostazione predefinita di fabbrica</block>
@@ -4183,7 +4167,6 @@
   <block id="7410ba837adb8d3cd0338bce62e7429c" category="list-text">Digitare reset nel campo, quindi fare clic su *Reset*.</block>
   <block id="b76721519a51191c06049d01b9160a4f" category="paragraph">Dopo l'aggiornamento del browser, il browser potrebbe bloccare l'accesso al sito di destinazione e segnalare che il sito utilizza HTTP Strict Transport Security. Questa condizione si verifica quando si torna ai certificati autofirmati. Per eliminare la condizione che sta bloccando l'accesso alla destinazione, è necessario cancellare i dati di navigazione dal browser.</block>
   <block id="0d976dc17b4640ed74e2e82306ff7154" category="paragraph">Il sistema torna a utilizzare il certificato autofirmato dal server. Di conseguenza, il sistema richiede agli utenti di accettare manualmente il certificato autofirmato per le sessioni.</block>
-  <block id="8289ad2daf4149715a39ad8d6af619b8" category="summary">I volumi Snapshot con un volume di base abilitato da non possono essere assegnati a un host che non supporta Data Assurance (da).</block>
   <block id="a75d3526ba8cd40a248e9da80d0ba8d2" category="doc">Perché non vengono visualizzati tutti i volumi, gli host o i cluster di host?</block>
   <block id="f956e41235aa6de0ef7cf1901fa9a994" category="paragraph">I volumi Snapshot con un volume di base abilitato da non possono essere assegnati a un host che non supporta Data Assurance (da). È necessario disattivare il da sul volume di base prima di poter assegnare un volume snapshot a un host che non supporta il da.</block>
   <block id="92fc66f9534d94b4859793638454d6ee" category="paragraph">Prendere in considerazione le seguenti linee guida per l'host a cui si sta assegnando il volume di snapshot:</block>
@@ -4264,7 +4247,6 @@
   <block id="8ff5f4a695ce9507f7a8849f7c3f0409" category="cell">Cache di scrittura con mirroring</block>
   <block id="5b67c058b6d18e6964825af4b766bc80" category="cell">Il caching in scrittura con mirroring si verifica quando i dati scritti nella memoria cache di un controller vengono scritti anche nella memoria cache dell'altro controller. Pertanto, se un controller si guasta, l'altro può completare tutte le operazioni di scrittura in sospeso. Il mirroring della cache di scrittura è disponibile solo se il caching di scrittura è attivato e sono presenti due controller. Il caching in scrittura con mirroring è l'impostazione predefinita alla creazione del volume.</block>
   <block id="fb7abab81bf2adb946430056dd5c13d6" category="list-text">Fare clic su *Save* (Salva) per modificare le impostazioni della cache.</block>
-  <block id="4599f147525488978c059ab5443c5a94" category="summary">I volumi di questo carico di lavoro non sono associati a un carico di lavoro specifico dell'applicazione, pertanto non è possibile eliminare il carico di lavoro.</block>
   <block id="cc41a400b6ddab31b3cc4c347ea5b96a" category="doc">Perché non è possibile eliminare il carico di lavoro selezionato?</block>
   <block id="3bfd2179043341e09a4fc1cfd720d6ff" category="paragraph">Questo carico di lavoro è costituito da un gruppo di volumi creati utilizzando l'interfaccia della riga di comando (CLI) o migrati (importati/esportati) da un array di storage diverso. Di conseguenza, i volumi di questo carico di lavoro non sono associati a un carico di lavoro specifico dell'applicazione, pertanto non è possibile eliminare il carico di lavoro.</block>
   <block id="56d7220b884749e2d64e7cf5f39cefff" category="summary">È possibile visualizzare statistiche nominali e statistiche dettagliate per la cache SSD.</block>
@@ -4862,7 +4844,6 @@
   <block id="792a5832f94546dc27bbb987ad5a096b" category="list-text">Dalla pagina Manage (Gestisci), selezionare menu:Manage Groups (Gestisci gruppi)[Create storage array group] (Crea gruppo array di storage).</block>
   <block id="4563b6510c792a9fb859f4f42ba6ab75" category="list-text">Nel campo *Nome*, digitare un nome per il nuovo gruppo.</block>
   <block id="200566636c7d43f3167fbfbd1d5663a8" category="list-text">Selezionare gli array di storage che si desidera aggiungere al nuovo gruppo.</block>
-  <block id="4618a10c402a86f34f74700b56034c0f" category="summary">Mantenere la protezione contro le perdite di shelf e cassetti per un pool o un gruppo di volumi</block>
   <block id="8a3f4e59944403d76cf4ffb618284325" category="doc">Come posso mantenere la protezione contro la perdita di scaffali e cassetti?</block>
   <block id="5f18e254e37bfef58483cda02161565b" category="paragraph">Per mantenere la protezione contro le perdite di shelf e cassetti per un pool o un gruppo di volumi, utilizzare i criteri specificati nella tabella seguente.</block>
   <block id="95d264123c7f042ece5beefb898937f2" category="cell">Criteri per la protezione contro le perdite di scaffali/cassetti</block>
@@ -6199,7 +6180,6 @@
   <block id="44fdd30cd930ac3164eb732ccfc71839" category="list-text">Scaricare il file RPM sul server in cui si desidera installare il proxy e Unified Manager.</block>
   <block id="e54922647218dba7fe35fc2a6ff27745" category="list-text">Aprire una finestra terminale.</block>
   <block id="6dcd1ebf4390170868ab9bcdfd967581" category="list-text">Immettere il seguente comando:</block>
-  <block id="832e1d3c786f0b6f9f452d072f2d4b27" category="paragraph"><block ref="354464ae661582f620680bd9feceacaa" prefix="" category="inline-code"></block></block>
   <block id="e90cc19871614d9efbaffbaffd7e2d47" category="admonition">Nel comando precedente,<block ref="699ac6f9ea1aed3b414789e971975c3a" prefix=" " category="inline-code"></block> rappresenta il numero di versione.</block>
   <block id="1751b6eae613e7e242fd94649a3089b3" category="doc">Nozioni di base sulle API</block>
   <block id="678e606371c08b5c903241fe5ee43c9e" category="paragraph">Nell'API dei servizi Web, le comunicazioni HTTP implicano un ciclo di richiesta-risposta.</block>
@@ -8068,7 +8048,6 @@
   <block id="ce3948f2b44ee14a18d362f994260727" category="sidebar">Configurare gli host</block>
   <block id="f0ba1c2df528f80a7b9482044ac9d46b" category="sidebar">Configurare pool e gruppi di volumi</block>
   <block id="37f5864db129acc269bc46cb006e8605" category="sidebar">Rimuovere il plug-in</block>
-  <block id="483a5da192f46e3cfe8391d3ef234fc4" category="sidebar">FAQ</block>
   <block id="979ea2ad56e327e601f7f385d923a6f7" category="sidebar">Soluzioni legacy</block>
   <block id="fa3d170e011f9d178479859be77bf32e" category="sidebar">Cloud Connector</block>
   <block id="acd35904a6ced15ec9eaaacc8f6dbe00" category="sidebar">Configurare Cloud Connector per la prima volta</block>
@@ -8481,9 +8460,7 @@
   <block id="5835021a0e70e0a13bc60ddff4162aca" category="paragraph"><block ref="5835021a0e70e0a13bc60ddff4162aca" category="inline-image-macro-rx" type="image"></block></block>
   <block id="17360156c8ceaa57309077e605e88697" category="image-alt">Flusso di lavoro del processo di installazione di E2800 e E5700</block>
   <block id="9388df48e85777aba8981c9e79739824" category="inline-image-macro">E4012 topologia diretta, larghezza=1000px</block>
-  <block id="9dcbe6d474a3385e1258eeebe1d96cfa" category="paragraph"><block ref="9dcbe6d474a3385e1258eeebe1d96cfa" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e5115f367ddc4b23f2a5a9dce410d220" category="inline-image-macro">Topologia del tessuto E4012, larghezza=1000px</block>
-  <block id="fe5422a7f743c4750aa826cb030729eb" category="paragraph"><block ref="fe5422a7f743c4750aa826cb030729eb" category="inline-image-macro-rx" type="image"></block></block>
   <block id="2f998d3759a46f941c16045d05799b20" category="inline-image-macro">E4000 porta di gestione del controller</block>
   <block id="419c5b2edef00ba85d62682d5ff0138c" category="paragraph"><block ref="419c5b2edef00ba85d62682d5ff0138c" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f530fae0a98563bf22e6ee7a23163588" category="list-text">Seguire le istruzioni del browser per procedere e avviare Gestione di sistema di SANtricity. Se non si riesce a stabilire una connessione, verificare di non ricevere la configurazione di rete da un server DHCP.</block>
@@ -8491,9 +8468,7 @@
   <block id="05f07938d9743df4b9673ac6e16d5eaf" category="list-text">Accedere utilizzando la password impostata in precedenza. Viene visualizzata la procedura guidata Configure Network Settings (Configura impostazioni di rete).</block>
   <block id="61c8d556c74bbd20f07d7c1565d11a11" category="list-text">Nella configurazione di rete più semplice, connettere il controller a un browser web e utilizzare SANtricity System Manager per gestire un singolo storage array serie E4000. Per accedere a System Manager, utilizzare gli stessi indirizzi IP utilizzati per configurare le porte di gestione.</block>
   <block id="ed82e034d7d377cc12aa1d89cea33d43" category="inline-image-macro">E4060 topologia diretta, larghezza=1000px</block>
-  <block id="98e6536dfa926f6bd4a1900657c27282" category="paragraph"><block ref="98e6536dfa926f6bd4a1900657c27282" category="inline-image-macro-rx" type="image"></block></block>
   <block id="427b3e2ab20960e704a22e39fbcda634" category="inline-image-macro">Topologia del tessuto E4060, larghezza=1000px</block>
-  <block id="72c6889744a45c86c32b640c76b2138a" category="paragraph"><block ref="72c6889744a45c86c32b640c76b2138a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ab2bd875f2f303555807a3b13a6b64bb" category="paragraph"><block ref="ab2bd875f2f303555807a3b13a6b64bb" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ff2e827a53ef25671ffc7469bb5208a2" category="list-title">Esempio A: Uno shelf di controller E4000 con tre shelf di dischi DE212C/DE224C in una configurazione SAS standard.</block>
   <block id="ecf826f3b05c4b630ca5e118d6536932" category="list-title">Esempio B: Shelf di controller E4000 con shelf di dischi DE212C/DE224C in una configurazione SAS standard.</block>
@@ -9711,4 +9686,22 @@
   <block id="ed389a9acb72de33be78325f147d7d8c" category="doc">Ulteriori informazioni sui servizi Web e su Unified Manager di SANtricity</block>
   <block id="f14a1a04aab620524ee87bd0fd002ab1" category="doc">Ulteriori informazioni sulla terminologia del proxy dei servizi Web SANtricity</block>
   <block id="abf831fd1f3fab9981530f2ea36177b2" category="doc">Gestire il polling automatico per le statistiche proxy dei servizi Web SANtricity</block>
+  <block id="dce708315880727f8ba7e84bab86b168" category="paragraph">Questa procedura si applica agli shelf di unità IOM12, IOM12B e IOM12C.</block>
+  <block id="3f457ff9c17714d64ba75fd9d6d618f2" category="admonition">I moduli IOM12C sono supportati solo su SANtricity OS 11.90R3 e versioni successive. Assicurarsi che il firmware del controller sia stato aggiornato prima di installare o eseguire l'aggiornamento a IOM12C.</block>
+  <block id="8d93e2013316d1241b304432f0103be5" category="admonition">Questa procedura si applica a sostituzioni o sostituzioni IOM di shelf simili. Ciò significa che è possibile sostituire solo un modulo IOM12 con un altro modulo IOM12 o un modulo IOM12C con un altro modulo IOM12C. (Lo shelf può avere due moduli IOM12 o due moduli IOM12C).</block>
+  <block id="e0f75caa67759a6c5e34cbad6ae84d57" category="admonition">I moduli IOM12C sono supportati solo da SANtricity OS 11.70.2 in poi. Assicurarsi che il firmware del controller sia stato aggiornato prima di installare o eseguire l'aggiornamento a IOM12C.</block>
+  <block id="bbfd15448c83d50ee0a4a62cc152d856" category="paragraph"><block ref="bbfd15448c83d50ee0a4a62cc152d856" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f7178ecd56d859f9f7e4878779a236ea" category="paragraph"><block ref="f7178ecd56d859f9f7e4878779a236ea" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="949ca69f081f10e2fc1938e0e24759c8" category="paragraph"><block ref="949ca69f081f10e2fc1938e0e24759c8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="142dc71d06d08da442f6fe84d80e526d" category="paragraph"><block ref="142dc71d06d08da442f6fe84d80e526d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="dea137ce87e98617e1e7f9c6f97eeeff" category="admonition">Queste procedure si riferiscono a sostituzioni o sostituzioni IOM simili a quelle degli shelf. Ciò significa che è possibile sostituire solo un modulo IOM12 con un altro modulo IOM12 o un modulo IOM12C con un altro modulo IOM12C. (Lo shelf può avere due moduli IOM12 o due moduli IOM12C).</block>
+  <block id="88db80c02306ca8e9bac2283b0d2f6bf" category="paragraph">Questa procedura si applica agli shelf di unità DCM, DCM2 e DCM3.</block>
+  <block id="b2d2940e83701ff478975b36d255b487" category="paragraph">Questa attività si applica agli shelf di unità DCM, DCM2 e DCM3.</block>
+  <block id="b1151aae9531d2f5e85d085e8878cea6" category="summary">Queste FAQ possono essere utili se stai cercando una risposta rapida a una domanda.</block>
+  <block id="a318c851f3d3c0a7eeb1313f1422c3b3" category="doc">Domande frequenti sul plugin SANtricity Storage per vCenter</block>
+  <block id="33f3664698fdab78efe7579f9849af32" category="paragraph"><block ref="b6ee0733cf8f7004d998d8fc49cc2022" prefix="" category="inline-code"></block></block>
+  <block id="a10a0fef1a8b50d16443976fedae1e16" category="section-title">Nuove funzioni della versione 11.90R3</block>
+  <block id="c78544d43a065eb825edb9e16bf0e9ad" category="paragraph">Supporto del sistema operativo SANtricity per IOM12C e DCM3</block>
+  <block id="94d90ce4793f949687897ec062d97b9c" category="paragraph">Il supporto per gli shelf SAS-3 IOM12C e DCM3 è ora disponibile per il firmware del controller 11.90R3 o superiore. Gli shelf IOM12C e DCM3 sostituiscono gli shelf IOM12B e DCM2.</block>
+  <block id="3a2a69a35a4560167d4c0478029a3f70" category="sidebar">Domande frequenti sul plugin di archiviazione per vCenter</block>
 </blocks>

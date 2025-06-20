@@ -1,0 +1,703 @@
+---
+sidebar: sidebar 
+permalink: vcenter-plugin/faq-storage-plugin-vcenter.html 
+keywords:  
+summary: Queste FAQ possono essere utili se stai cercando una risposta rapida a una domanda. 
+---
+= Domande frequenti sul plugin SANtricity Storage per vCenter
+:hardbreaks:
+:allow-uri-read: 
+:experimental: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Queste FAQ possono essere utili se stai cercando una risposta rapida a una domanda.
+
+
+
+== Quali impostazioni vengono importate?
+
+La funzione Import Settings (Impostazioni di importazione) è un'operazione batch che carica le configurazioni da un array di storage a più array di storage.
+
+Le impostazioni importate durante questa operazione dipendono dalla configurazione dell'array di storage di origine in System Manager. È possibile importare le seguenti impostazioni in più array di storage:
+
+* *Avvisi via email* -- le impostazioni includono un indirizzo del server di posta e gli indirizzi email dei destinatari degli avvisi.
+* *Syslog alerts* -- le impostazioni includono un indirizzo del server syslog e una porta UDP.
+* *SNMP alerts* -- le impostazioni includono un nome di comunità e un indirizzo IP per il server SNMP.
+* *AutoSupport* -- le impostazioni includono le funzioni separate (AutoSupport di base, AutoSupport on Demand e Diagnostica remota), la finestra di manutenzione, il metodo di erogazione, e pianificazione delle spedizioni.
+* *Directory Services* -- la configurazione include il nome di dominio e l'URL di un server LDAP (Lightweight Directory Access Protocol), oltre ai mapping dei gruppi di utenti del server LDAP ai ruoli predefiniti dell'array di storage.
+* *Configurazione dello storage* -- le configurazioni includono volumi (solo volumi thick e non repository), gruppi di volumi, pool e assegnazioni di dischi hot spare.
+* *Impostazioni di sistema* -- le configurazioni includono le impostazioni di scansione dei supporti per un volume, la cache SSD per i controller e il bilanciamento automatico del carico (non include il reporting della connettività host).
+
+
+
+
+== Perché non vengono visualizzati tutti gli array di storage?
+
+Durante l'operazione Import Settings (Impostazioni di importazione), alcuni storage array potrebbero non essere disponibili nella finestra di dialogo di selezione della destinazione.
+
+Gli array di storage potrebbero non essere visualizzati per i seguenti motivi:
+
+* La versione del firmware è inferiore alla 8.50.
+* Lo storage array non è in linea.
+* Il sistema non è in grado di comunicare con tale array (ad esempio, l'array presenta problemi di certificato, password o rete).
+
+
+
+
+== Perché questi volumi non sono associati a un carico di lavoro?
+
+I volumi non sono associati a un carico di lavoro se sono stati creati utilizzando l'interfaccia della riga di comando (CLI) o se sono stati migrati (importati/esportati) da un array di storage diverso.
+
+
+
+== In che modo il carico di lavoro selezionato influisce sulla creazione di volumi?
+
+Durante la creazione del volume, vengono richieste informazioni sull'utilizzo di un carico di lavoro. Il sistema utilizza queste informazioni per creare una configurazione ottimale del volume, che può essere modificata in base alle esigenze. In alternativa, è possibile saltare questo passaggio nella sequenza di creazione del volume.
+
+Un workload è un oggetto storage che supporta un'applicazione. È possibile definire uno o più carichi di lavoro o istanze per applicazione. Per alcune applicazioni, il sistema configura il carico di lavoro in modo che contenga volumi con caratteristiche di volume sottostanti simili. Queste caratteristiche dei volumi sono ottimizzate in base al tipo di applicazione supportata dal carico di lavoro. Ad esempio, se si crea un carico di lavoro che supporta un'applicazione Microsoft SQL Server e successivamente si creano volumi per tale carico di lavoro, le caratteristiche del volume sottostante sono ottimizzate per supportare Microsoft SQL Server.
+
+* *Specifico dell'applicazione* -- quando si creano volumi utilizzando un carico di lavoro specifico dell'applicazione, il sistema consiglia una configurazione del volume ottimizzata per ridurre al minimo i conflitti tra i/o del carico di lavoro dell'applicazione e altro traffico dall'istanza dell'applicazione. Le caratteristiche del volume come il tipo di i/o, le dimensioni del segmento, la proprietà del controller e la cache di lettura e scrittura sono automaticamente consigliate e ottimizzate per i carichi di lavoro creati per i seguenti tipi di applicazioni.
++
+** Microsoft SQL Server
+** Server Microsoft Exchange
+** Applicazioni di videosorveglianza
+** VMware ESXi (per volumi da utilizzare con Virtual Machine file System)
++
+È possibile rivedere la configurazione del volume consigliata e modificare, aggiungere o eliminare i volumi e le caratteristiche consigliate dal sistema utilizzando la finestra di dialogo Add/Edit Volumes (Aggiungi/Modifica volumi).
+
+
+
+* *Altri (o applicazioni senza supporto specifico per la creazione di volumi)* -- Altri carichi di lavoro utilizzano una configurazione del volume che è necessario specificare manualmente quando si desidera creare un carico di lavoro non associato a un'applicazione specifica o se non esiste un'ottimizzazione integrata per l'applicazione che si intende utilizzare sull'array di storage. Specificare manualmente la configurazione del volume utilizzando la finestra di dialogo Add/Edit Volumes (Aggiungi/Modifica volumi).
+
+
+
+
+== Perché non vengono visualizzati tutti i volumi, gli host o i cluster di host?
+
+I volumi Snapshot con un volume di base abilitato da non possono essere assegnati a un host che non supporta Data Assurance (da). È necessario disattivare il da sul volume di base prima di poter assegnare un volume snapshot a un host che non supporta il da.
+
+Prendere in considerazione le seguenti linee guida per l'host a cui si sta assegnando il volume di snapshot:
+
+* Un host non è in grado di supportare da se è collegato all'array di storage attraverso un'interfaccia i/o che non è in grado di supportare da.
+* Un cluster host non è in grado di supportare da se ha almeno un membro host che non è in grado di supportare da.
+
+
+
+NOTE: Non è possibile disattivare il da su un volume associato a snapshot (gruppi di coerenza, gruppi di snapshot, immagini snapshot e volumi di snapshot), copie di volumi, e specchi. Tutti gli oggetti snapshot e capacità riservata associati devono essere cancellati prima che il da possa essere disattivato sul volume di base.
+
+
+
+== Perché non è possibile eliminare il carico di lavoro selezionato?
+
+Questo carico di lavoro è costituito da un gruppo di volumi creati utilizzando l'interfaccia della riga di comando (CLI) o migrati (importati/esportati) da un array di storage diverso. Di conseguenza, i volumi di questo carico di lavoro non sono associati a un carico di lavoro specifico dell'applicazione, pertanto non è possibile eliminare il carico di lavoro.
+
+
+
+== In che modo i carichi di lavoro specifici dell'applicazione mi aiutano a gestire lo storage array?
+
+Le caratteristiche del volume del carico di lavoro specifico dell'applicazione determinano il modo in cui il carico di lavoro interagisce con i componenti dell'array di storage e aiutano a determinare le performance dell'ambiente in una determinata configurazione.
+
+Un'applicazione è un software come SQL Server o Exchange. È possibile definire uno o più workload per supportare ciascuna applicazione. Per alcune applicazioni, il sistema consiglia automaticamente una configurazione del volume che ottimizzi lo storage. Caratteristiche come il tipo di i/o, la dimensione del segmento, la proprietà del controller e la cache di lettura e scrittura sono incluse nella configurazione del volume.
+
+
+
+== Cosa devo fare per riconoscere la capacità espansa?
+
+Se si aumenta la capacità di un volume, l'host potrebbe non riconoscere immediatamente l'aumento della capacità del volume.
+
+La maggior parte dei sistemi operativi riconosce la capacità del volume espanso e si espande automaticamente dopo l'avvio dell'espansione del volume. Tuttavia, alcuni potrebbero non farlo. Se il sistema operativo non riconosce automaticamente la capacità del volume espanso, potrebbe essere necessario eseguire una nuova scansione o un riavvio del disco.
+
+Una volta espansa la capacità del volume, è necessario aumentare manualmente le dimensioni del file system per ottenere la corrispondenza. Il modo in cui si esegue questa operazione dipende dal file system in uso.
+
+Per ulteriori informazioni, consultare la documentazione del sistema operativo host.
+
+
+
+== Quando si desidera utilizzare la selezione dell'host di assegnazione in un secondo momento?
+
+Se si desidera accelerare il processo di creazione dei volumi, è possibile saltare la fase di assegnazione dell'host in modo che i volumi appena creati vengano inizializzati offline.
+
+I volumi appena creati devono essere inizializzati. Il sistema può inizializzarli utilizzando una delle due modalità, ovvero un processo di inizializzazione in background di IAF (immediate Available Format) o un processo offline.
+
+Quando si esegue il mapping di un volume a un host, tutti i volumi di inizializzazione del gruppo vengono forzati a passare all'inizializzazione in background. Questo processo di inizializzazione in background consente l'i/o host simultaneo, che a volte può richiedere molto tempo.
+
+Quando nessuno dei volumi in un gruppo di volumi viene mappato, viene eseguita l'inizializzazione offline. Il processo offline è molto più veloce del processo in background.
+
+
+
+== Cosa occorre sapere sui requisiti relativi alle dimensioni dei blocchi host?
+
+Per i sistemi EF300 e EF600, è possibile impostare un volume in modo che supporti una dimensione di blocco di 512 byte o 4 KiB (chiamata anche "dimensione del settore"). È necessario impostare il valore corretto durante la creazione del volume. Se possibile, il sistema suggerisce il valore predefinito appropriato.
+
+Prima di impostare le dimensioni del blocco del volume, leggere le seguenti limitazioni e linee guida.
+
+* Alcuni sistemi operativi e macchine virtuali (in particolare VMware, al momento) richiedono una dimensione di blocco di 512 byte e non supportano 4KiB, quindi assicurarsi di conoscere i requisiti dell'host prima di creare un volume. In genere, è possibile ottenere le migliori prestazioni impostando un volume in modo che presenti una dimensione di blocco di 4 KiB; tuttavia, assicurarsi che l'host supporti blocchi da 4 KiB (o "4 Kn").
+* Il tipo di dischi selezionati per il pool o il gruppo di volumi determina anche le dimensioni dei blocchi di volume supportate, come indicato di seguito:
++
+** Se si crea un gruppo di volumi utilizzando unità che scrivono su blocchi da 512 byte, è possibile creare solo volumi con blocchi da 512 byte.
+** Se si crea un gruppo di volumi utilizzando unità che scrivono su blocchi da 4 KiB, è possibile creare volumi con blocchi da 512 byte o 4 KiB.
+
+
+* Se l'array dispone di una scheda di interfaccia host iSCSI, tutti i volumi sono limitati a blocchi da 512 byte (indipendentemente dalla dimensione del blocco del gruppo di volumi). Ciò è dovuto a un'implementazione hardware specifica.
+* Una volta impostata, non è possibile modificare le dimensioni di un blocco. Se è necessario modificare le dimensioni di un blocco, è necessario eliminare il volume e ricrearlo.
+
+
+
+
+== Perché dovrei creare un cluster host?
+
+È necessario creare un cluster host se si desidera che due o più host condividano l'accesso allo stesso set di volumi. In genere, i singoli host dispongono di un software di clustering installato su di essi per coordinare l'accesso ai volumi.
+
+
+
+== Come si fa a sapere quale tipo di sistema operativo host è corretto?
+
+Il campo host Operating System Type (tipo di sistema operativo host) contiene il sistema operativo dell'host. È possibile selezionare il tipo di host consigliato dall'elenco a discesa.
+
+I tipi di host visualizzati nell'elenco a discesa dipendono dal modello di array di storage e dalla versione del firmware. Le versioni più recenti visualizzano prima le opzioni più comuni, che sono le più probabili. L'aspetto in questo elenco non implica che l'opzione sia completamente supportata.
+
+
+NOTE: Per ulteriori informazioni sul supporto degli host, fare riferimento a. http://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"^].
+
+Alcuni dei seguenti tipi di host potrebbero essere visualizzati nell'elenco:
+
+|===
+| Tipo di sistema operativo host | Sistema operativo e driver multipath 
+
+
+| Linux DM-MP (kernel 3.10 o successivo) | Supporta i sistemi operativi Linux che utilizzano una soluzione di failover multipath di Device Mapper con kernel 3.10 o successivo. 
+
+
+| VMware ESXi | Supporta i sistemi operativi VMware ESXi che eseguono l'architettura NMP (Native Multipathing Plug-in) utilizzando il modulo SATP_ALUA Storage Array Type Policy integrato da VMware. 
+
+
+| Windows (in cluster o non in cluster) | Supporta configurazioni in cluster o non in cluster di Windows che non eseguono il driver di multipathing atto. 
+
+
+| ATTO Cluster (tutti i sistemi operativi) | Supporta tutte le configurazioni del cluster utilizzando il driver multipathing della tecnologia atto, Inc. 
+
+
+| Linux (Veritas DMP) | Supporta i sistemi operativi Linux che utilizzano una soluzione multipathing Veritas DMP. 
+
+
+| Linux (atto) | Supporta i sistemi operativi Linux che utilizzano un driver multipathing per la tecnologia atto, Inc. 
+
+
+| Sistema operativo Mac | Supporta le versioni di Mac OS che utilizzano un driver multipathing per la tecnologia atto, Inc. 
+
+
+| Windows (atto) | Supporta i sistemi operativi Windows che utilizzano un driver multipathing per la tecnologia atto, Inc. 
+
+
+| SVC IBM | Supporta una configurazione IBM SAN Volume Controller. 
+
+
+| Impostazione predefinita di fabbrica | Riservato all'avvio iniziale dello storage array. Se il tipo di sistema operativo host in uso è impostato su Factory Default, modificarlo in modo che corrisponda al sistema operativo host e al driver multipath in esecuzione sull'host connesso. 
+
+
+| Linux DM-MP (Kernal 3.9 o precedente) | Supporta i sistemi operativi Linux che utilizzano una soluzione di failover multipath di Device Mapper con kernel 3.9 o precedente. 
+
+
+| Cluster di finestre (obsoleto) | Se il tipo di sistema operativo host è impostato su questo valore, utilizzare l'impostazione Windows (in cluster o non in cluster). 
+|===
+
+
+== Come faccio ad associare le porte host a un host?
+
+Se si crea manualmente un host, è necessario utilizzare l'utility HBA (host bus adapter) appropriata disponibile sull'host per determinare gli identificatori di porta host associati a ciascun HBA installato nell'host.
+
+Quando si dispone di queste informazioni, selezionare gli identificatori di porta host che hanno effettuato l'accesso allo storage array dall'elenco fornito nella finestra di dialogo Create host (Crea host).
+
+
+CAUTION: Assicurarsi di selezionare gli identificatori di porta host appropriati per l'host che si sta creando. Se si associano identificatori di porta host errati, potrebbe verificarsi un accesso non intenzionale da un altro host a questi dati.
+
+
+
+== Qual è il cluster predefinito?
+
+Il cluster predefinito è un'entità definita dal sistema che consente a qualsiasi identificatore di porta host non associato che abbia eseguito l'accesso all'array di storage di accedere ai volumi assegnati al cluster predefinito.
+
+Un identificatore di porta host non associato è una porta host che non è logicamente associata a un particolare host ma che è fisicamente installata in un host e collegata all'array di storage.
+
+
+NOTE: Se si desidera che gli host abbiano accesso specifico a determinati volumi nell'array di storage, non è necessario utilizzare il cluster predefinito. È invece necessario associare gli identificatori delle porte host ai rispettivi host. Questa operazione può essere eseguita manualmente durante l'operazione Create host (Crea host). Quindi, assegnare i volumi a un singolo host o a un cluster host.
+
+Utilizzare il cluster predefinito solo in situazioni speciali in cui l'ambiente di storage esterno favorisce l'accesso a tutti gli host e a tutti gli identificatori di porta host connessi allo storage array a tutti i volumi (modalità all-access) senza rendere specifici gli host noti allo storage array o all'interfaccia utente.
+
+Inizialmente, è possibile assegnare i volumi solo al cluster predefinito tramite l'interfaccia della riga di comando (CLI). Tuttavia, dopo aver assegnato almeno un volume al cluster predefinito, questa entità (chiamata cluster predefinito) viene visualizzata nell'interfaccia utente, dove è possibile gestire questa entità.
+
+
+
+== Che cos'è il controllo di ridondanza?
+
+Un controllo di ridondanza determina se i dati su un volume in un pool o un gruppo di volumi sono coerenti. I dati di ridondanza vengono utilizzati per ricostruire rapidamente le informazioni su un disco sostitutivo in caso di guasto di uno dei dischi del pool o del gruppo di volumi.
+
+È possibile eseguire questo controllo solo su un pool o su un gruppo di volumi alla volta. Un controllo della ridondanza del volume esegue le seguenti operazioni:
+
+* Esegue la scansione dei blocchi di dati in un volume RAID 3, RAID 5 o RAID 6, quindi verifica le informazioni di ridondanza per ciascun blocco. (RAID 3 può essere assegnato solo ai gruppi di volumi utilizzando l'interfaccia della riga di comando).
+* Confronta i blocchi di dati sui dischi RAID 1 mirrorati.
+* Restituisce errori di ridondanza se i dati sono determinati come incoerenti dal firmware del controller.
+
+
+
+NOTE: L'esecuzione immediata di un controllo di ridondanza sullo stesso pool o gruppo di volumi potrebbe causare un errore. Per evitare questo problema, attendere da uno a due minuti prima di eseguire un altro controllo di ridondanza sullo stesso pool o gruppo di volumi.
+
+
+
+== Che cos'è la capacità di conservazione?
+
+La capacità di conservazione è la quantità di capacità (numero di dischi) riservata in un pool per supportare potenziali guasti del disco.
+
+Quando viene creato un pool, il sistema riserva automaticamente una quantità predefinita di capacità di conservazione in base al numero di dischi nel pool.
+
+I pool utilizzano la capacità di conservazione durante la ricostruzione, mentre i gruppi di volumi utilizzano dischi hot spare per lo stesso scopo. Il metodo della capacità di conservazione è un miglioramento rispetto ai dischi hot spare perché consente una ricostruzione più rapida. La capacità di conservazione viene distribuita su un certo numero di dischi nel pool invece che su un disco nel caso di un disco hot spare, in modo da non essere limitati dalla velocità o dalla disponibilità di un disco.
+
+
+
+== Qual è il livello RAID migliore per la mia applicazione?
+
+Per massimizzare le performance di un gruppo di volumi, è necessario selezionare il livello RAID appropriato.
+
+È possibile determinare il livello RAID appropriato conoscendo le percentuali di lettura e scrittura per le applicazioni che accedono al gruppo di volumi. Utilizzare la pagina Performance (prestazioni) per ottenere queste percentuali.
+
+
+
+=== Livelli RAID e performance applicative
+
+RAID si basa su una serie di configurazioni, chiamate livelli, per determinare il modo in cui i dati di ridondanza e utente vengono scritti e recuperati dai dischi. Ogni livello RAID offre diverse funzionalità di performance. Le applicazioni con un'elevata percentuale di lettura sono in grado di funzionare correttamente utilizzando volumi RAID 5 o RAID 6, a causa delle eccezionali prestazioni di lettura delle configurazioni RAID 5 e RAID 6.
+
+Le applicazioni con una bassa percentuale di lettura (elevata intensità di scrittura) non funzionano altrettanto sui volumi RAID 5 o RAID 6. Le prestazioni degradate sono il risultato del modo in cui un controller scrive i dati e i dati di ridondanza sui dischi di un gruppo di volumi RAID 5 o RAID 6.
+
+Selezionare un livello RAID in base alle seguenti informazioni.
+
+
+
+==== RAID 0
+
+*Descrizione:*
+
+* Non ridondante, modalità striping.
+* RAID 0 esegue lo striping dei dati su tutti i dischi del gruppo di volumi.
+
+
+*Caratteristiche di protezione dei dati:*
+
+* RAID 0 non è consigliato per esigenze di alta disponibilità. RAID 0 è migliore per i dati non critici.
+* Se un singolo disco si guasta nel gruppo di volumi, tutti i volumi associati si guastano e tutti i dati vengono persi.
+
+
+*Requisiti del numero di unità:*
+
+* Per RAID livello 0 è richiesto un minimo di un disco.
+* I gruppi di volumi RAID 0 possono avere più di 30 dischi.
+* È possibile creare un gruppo di volumi che includa tutte le unità dell'array di storage.
+
+
+
+
+==== RAID 1 o RAID 10
+
+*Descrizione:*
+
+* Modalità striping/mirror.
+
+
+*Come funziona:*
+
+* RAID 1 utilizza il mirroring del disco per scrivere i dati su due dischi duplicati contemporaneamente.
+* RAID 10 utilizza lo striping dei dischi per eseguire lo striping dei dati su un set di coppie di dischi mirrorati.
+
+
+*Caratteristiche di protezione dei dati:*
+
+* RAID 1 e RAID 10 offrono performance elevate e la migliore disponibilità dei dati.
+* RAID 1 e RAID 10 utilizzano il mirroring del disco per eseguire una copia esatta da un disco a un altro.
+* Se uno dei dischi di una coppia di dischi si guasta, lo storage array può passare istantaneamente all'altro disco senza alcuna perdita di dati o di servizio.
+* Un guasto a un singolo disco causa il degrado dei volumi associati. L'unità mirror consente di accedere ai dati.
+* Un errore di coppia di dischi in un gruppo di volumi causa il malfunzionamento di tutti i volumi associati e la perdita di dati.
+
+
+*Requisiti del numero di unità:*
+
+* Per RAID 1 sono necessari almeno due dischi: Un disco per i dati dell'utente e un disco per i dati mirrorati.
+* Se si selezionano quattro o più dischi, RAID 10 viene configurato automaticamente nel gruppo di volumi: Due dischi per i dati dell'utente e due dischi per i dati mirrorati.
+* È necessario disporre di un numero pari di dischi nel gruppo di volumi. Se non si dispone di un numero pari di dischi e si dispone di altri dischi non assegnati, passare a *Pools & Volume Groups* per aggiungere ulteriori dischi al gruppo di volumi e riprovare l'operazione.
+* I gruppi di volumi RAID 1 e RAID 10 possono avere più di 30 dischi. È possibile creare un gruppo di volumi che includa tutte le unità dell'array di storage.
+
+
+
+
+==== RAID 5
+
+*Descrizione:*
+
+* Modalità i/o elevata.
+
+
+*Come funziona:*
+
+* I dati dell'utente e le informazioni ridondanti (parità) vengono sottoposti a striping tra i dischi.
+* La capacità equivalente di un disco viene utilizzata per le informazioni ridondanti.
+
+
+*Caratteristiche di protezione dei dati*
+
+* Se un singolo disco si guasta in un gruppo di volumi RAID 5, tutti i volumi associati diventano degradati. Le informazioni ridondanti consentono di accedere ai dati.
+* Se due o più dischi si guastano in un gruppo di volumi RAID 5, tutti i volumi associati si guastano e tutti i dati vengono persi.
+
+
+*Requisiti del numero di unità:*
+
+* È necessario disporre di un minimo di tre dischi nel gruppo di volumi.
+* In genere, il gruppo di volumi è limitato a un massimo di 30 dischi.
+
+
+
+
+==== RAID 6
+
+*Descrizione:*
+
+* Modalità i/o elevata.
+
+
+*Come funziona:*
+
+* I dati dell'utente e le informazioni ridondanti (doppia parità) vengono sottoposti a striping tra i dischi.
+* La capacità equivalente di due dischi viene utilizzata per le informazioni ridondanti.
+
+
+*Caratteristiche di protezione dei dati:*
+
+* Se uno o due dischi si guastano in un gruppo di volumi RAID 6, tutti i volumi associati diventano degradati, ma le informazioni ridondanti consentono di continuare ad accedere ai dati.
+* Se tre o più dischi si guastano in un gruppo di volumi RAID 6, tutti i volumi associati si guastano e tutti i dati vengono persi.
+
+
+*Requisiti del numero di unità:*
+
+* È necessario disporre di un minimo di cinque dischi nel gruppo di volumi.
+* In genere, il gruppo di volumi è limitato a un massimo di 30 dischi.
+
+
+
+NOTE: Non è possibile modificare il livello RAID di un pool. L'interfaccia utente configura automaticamente i pool come RAID 6.
+
+
+
+=== Livelli RAID e protezione dei dati
+
+RAID 1, RAID 5 e RAID 6 scrivono i dati di ridondanza sul disco per la tolleranza di errore. I dati di ridondanza possono essere una copia dei dati (mirrorati) o un codice di correzione degli errori derivato dai dati. È possibile utilizzare i dati di ridondanza per ricostruire rapidamente le informazioni su un disco sostitutivo in caso di guasto.
+
+È possibile configurare un singolo livello RAID in un singolo gruppo di volumi. Tutti i dati di ridondanza per quel gruppo di volumi vengono memorizzati all'interno del gruppo di volumi. La capacità del gruppo di volumi è la capacità aggregata dei dischi membri meno la capacità riservata ai dati di ridondanza. La quantità di capacità necessaria per la ridondanza dipende dal livello RAID utilizzato.
+
+
+
+== Perché alcuni dischi non vengono visualizzati?
+
+Nella finestra di dialogo Add Capacity (Aggiungi capacità), non tutti i dischi sono disponibili per l'aggiunta di capacità a un pool o a un gruppo di volumi esistente.
+
+I dischi non sono idonei per uno dei seguenti motivi:
+
+* Un disco deve essere non assegnato e non abilitato alla sicurezza. I dischi già parte di un altro pool, di un altro gruppo di volumi o configurati come hot spare non sono idonei. Se un disco non è assegnato ma è abilitato per la protezione, è necessario cancellarlo manualmente affinché sia idoneo.
+* Un disco in uno stato non ottimale non è idoneo.
+* Se la capacità di un disco è troppo piccola, non è idonea.
+* Il tipo di disco deve corrispondere all'interno di un pool o di un gruppo di volumi. Non è possibile combinare i seguenti elementi:
++
+** Dischi rigidi (HDD) con dischi a stato solido (SSD)
+** NVMe con unità SAS
+** Dischi con blocchi di volumi da 512 byte e 4 KiB
+
+
+* Se un pool o un gruppo di volumi contiene tutti i dischi con funzionalità di protezione, i dischi con funzionalità di protezione non sono elencati.
+* Se un pool o un gruppo di volumi contiene tutti i dischi FIPS (Federal Information Processing Standard), i dischi non FIPS non sono elencati.
+* Se un pool o un gruppo di volumi contiene tutte le unità compatibili con Data Assurance (da) e nel pool o nel gruppo di volumi è presente almeno un volume abilitato da, un'unità che non supporta da non è idonea, quindi non può essere aggiunta a tale pool o gruppo di volumi. Tuttavia, se nel pool o nel gruppo di volumi non è presente alcun volume abilitato da, è possibile aggiungere un'unità che non supporta da a a tale pool o gruppo di volumi. Se si decide di combinare questi dischi, tenere presente che non è possibile creare volumi abilitati da.
+
+
+
+NOTE: È possibile aumentare la capacità dell'array di storage aggiungendo nuove unità o eliminando pool o gruppi di volumi.
+
+
+
+== Perché non posso aumentare la mia capacità di conservazione?
+
+Se sono stati creati volumi su tutta la capacità utilizzabile disponibile, potrebbe non essere possibile aumentare la capacità di conservazione.
+
+La capacità di conservazione è la quantità di capacità (numero di dischi) riservata a un pool per supportare potenziali guasti del disco. Quando viene creato un pool, il sistema riserva automaticamente una quantità predefinita di capacità di conservazione in base al numero di dischi nel pool. Se sono stati creati volumi su tutta la capacità utilizzabile disponibile, non è possibile aumentare la capacità di conservazione senza aggiungere capacità al pool aggiungendo unità o eliminando volumi.
+
+È possibile modificare la capacità di conservazione da Pools & Volume Groups. Selezionare il pool che si desidera modificare. Fare clic su *View/Edit Settings* (Visualizza/Modifica impostazioni), quindi selezionare la scheda *Settings* (Impostazioni).
+
+
+NOTE: La capacità di conservazione viene specificata come un numero di dischi, anche se la capacità di conservazione effettiva viene distribuita tra i dischi del pool.
+
+
+
+== Cos'è Data Assurance?
+
+Data Assurance (da) implementa lo standard T10 Protection Information (PI), che aumenta l'integrità dei dati verificando e correggendo gli errori che potrebbero verificarsi quando i dati vengono trasferiti lungo il percorso di i/O.
+
+L'utilizzo tipico della funzione Data Assurance consente di controllare la parte del percorso i/o tra i controller e i dischi. Le funzionalità DA vengono presentate a livello di pool e gruppo di volumi.
+
+Quando questa funzione è attivata, l'array di storage aggiunge i codici di controllo degli errori (noti anche come CRC (Cyclic Redundancy Checks) a ciascun blocco di dati del volume. Dopo lo spostamento di un blocco di dati, l'array di storage utilizza questi codici CRC per determinare se si sono verificati errori durante la trasmissione. I dati potenzialmente corrotti non vengono scritti su disco né restituiti all'host. Se si desidera utilizzare la funzione da, selezionare un pool o un gruppo di volumi che supporti da quando si crea un nuovo volume (cercare *Sì* accanto a *da* nella tabella dei candidati del gruppo di volumi e pool).
+
+Assicurarsi di assegnare questi volumi abilitati da a un host utilizzando un'interfaccia i/o in grado di supportare da. Le interfacce i/o in grado di da includono Fibre Channel, SAS, iSCSI su TCP/IP, NVMe/FC, NVMe/IB, NVME/RoCE e iSER su InfiniBand (estensioni iSCSI per RDMA/IB). DA non è supportato da SRP su InfiniBand.
+
+
+
+== Che cos'è la sicurezza FDE/FIPS?
+
+La protezione FDE/FIPS si riferisce a dischi sicuri che crittografano i dati durante la scrittura e decrittare i dati durante la lettura utilizzando una chiave di crittografia univoca.
+
+Queste unità sicure impediscono l'accesso non autorizzato ai dati su un disco che viene fisicamente rimosso dall'array di storage. Le unità compatibili con la protezione possono essere dischi con crittografia completa del disco (FDE) o dischi FIPS (Federal Information Processing Standard). I dischi FIPS sono stati sottoposti a test di certificazione.
+
+
+NOTE: Per i volumi che richiedono il supporto FIPS, utilizzare solo dischi FIPS. La combinazione di dischi FIPS e FDE in un gruppo di volumi o in un pool comporterà il trattamento di tutti i dischi come dischi FDE. Inoltre, un disco FDE non può essere aggiunto o utilizzato come spare in un gruppo di volumi o pool all-FIPS.
+
+
+
+== Che cos'è il supporto sicuro (Drive Security)?
+
+Drive Security è una funzione che impedisce l'accesso non autorizzato ai dati su dischi abilitati alla sicurezza quando vengono rimossi dallo storage array.
+
+Questi dischi possono essere dischi FDE (Full Disk Encryption) o FIPS (Federal Information Processing Standard).
+
+
+
+== Come si visualizzano e interpretano tutte le statistiche della cache SSD?
+
+È possibile visualizzare statistiche nominali e statistiche dettagliate per la cache SSD.
+
+Le statistiche nominali sono un sottoinsieme delle statistiche dettagliate. Le statistiche dettagliate possono essere visualizzate solo quando si esportano tutte le statistiche SSD in un file .csv. Durante la revisione e l'interpretazione delle statistiche, tenere presente che alcune interpretazioni derivano da una combinazione di statistiche.
+
+
+
+=== Statistiche nominali
+
+Per visualizzare le statistiche della cache SSD, accedere alla pagina *Manage* (Gestione). Selezionare menu:Provisioning[Configure Pools & Volume Groups] (Configura pool e gruppi di volumi). Selezionare la cache SSD per cui si desidera visualizzare le statistiche, quindi selezionare menu:More[View Statistics] (Visualizza statistiche). Le statistiche nominali vengono visualizzate nella finestra di dialogo View SSD cache Statistics (Visualizza statistiche cache SSD).
+
+
+NOTE: Questa funzione non è disponibile sui sistemi storage EF600 o EF300.
+
+L'elenco include le statistiche nominali, che sono un sottoinsieme delle statistiche dettagliate.
+
+
+
+=== Statistiche dettagliate
+
+Le statistiche dettagliate sono costituite dalle statistiche nominali e da statistiche aggiuntive. Queste statistiche aggiuntive vengono salvate insieme alle statistiche nominali, ma a differenza delle statistiche nominali, non vengono visualizzate nella finestra di dialogo View SSD cache Statistics (Visualizza statistiche cache SSD). È possibile visualizzare le statistiche dettagliate solo dopo aver esportato le statistiche in un file .csv.
+
+Le statistiche dettagliate sono elencate dopo le statistiche nominali.
+
+
+
+== Che cos'è la protezione contro la perdita di shelf e la perdita di cassetto?
+
+La protezione contro le perdite di shelf e la protezione contro le perdite di cassetto sono attributi di pool e gruppi di volumi che consentono di mantenere l'accesso ai dati in caso di guasto di un singolo shelf o cassetto.
+
+
+
+=== Protezione contro la perdita di shelf
+
+Uno shelf è l'enclosure che contiene i dischi o i dischi e il controller. La protezione contro la perdita di shelf garantisce l'accessibilità ai dati sui volumi di un pool o di un gruppo di volumi se si verifica una perdita totale di comunicazione con un singolo shelf di dischi. Un esempio di perdita totale di comunicazione potrebbe essere la perdita di alimentazione dello shelf di dischi o il guasto di entrambi i moduli i/o (IOM).
+
+
+NOTE: La protezione contro la perdita di shelf non è garantita se un disco si è già guastato nel pool o nel gruppo di volumi. In questa situazione, la perdita dell'accesso a uno shelf di dischi e, di conseguenza, a un altro disco nel pool o nel gruppo di volumi causa la perdita di dati.
+
+I criteri per la protezione dalla perdita di shelf dipendono dal metodo di protezione, come descritto nella tabella seguente.
+
+|===
+| Livello | Criteri per la protezione contro la perdita di shelf | Numero minimo di shelf richiesti 
+
+
+| Piscina | Il pool deve includere dischi di almeno cinque shelf e deve essere presente un numero uguale di dischi in ogni shelf. La protezione contro la perdita di shelf non è applicabile agli shelf ad alta capacità; se il sistema contiene shelf ad alta capacità, fare riferimento alla protezione contro la perdita di cassetto. | 5 
+
+
+| RAID 6 | Il gruppo di volumi non contiene più di due dischi in un singolo cassetto. | 3 
+
+
+| RAID 3 o RAID 5 | Ogni disco del gruppo di volumi si trova in uno shelf separato. | 3 
+
+
+| RAID 1 | Ogni disco di una coppia RAID 1 deve essere collocato in uno shelf separato. | 2 
+
+
+| RAID 0 | Impossibile ottenere la protezione contro la perdita di shelf. | Non applicabile 
+|===
+
+
+=== Protezione in caso di perdita del cassetto
+
+Un cassetto è uno dei compartimenti di uno shelf che si tira per accedere ai dischi. Solo gli scaffali ad alta capacità dispongono di cassetti. La protezione contro la perdita dei cassetti garantisce l'accessibilità ai dati sui volumi di un pool o di un gruppo di volumi se si verifica una perdita totale di comunicazione con un singolo cassetto. Un esempio di perdita totale di comunicazione potrebbe essere la perdita di alimentazione del cassetto o il guasto di un componente interno del cassetto.
+
+
+CAUTION: La protezione contro la perdita di cassetto non è garantita se un disco si è già guastato nel pool o nel gruppo di volumi. In questa situazione, la perdita dell'accesso a un cassetto (e di conseguenza a un altro disco nel pool o nel gruppo di volumi) causa la perdita di dati.
+
+I criteri per la protezione dalle perdite di cassetto dipendono dal metodo di protezione, come descritto nella tabella seguente:
+
+|===
+| Livello | Criteri per la protezione contro le perdite di cassetto | Numero minimo di cassetti richiesti 
+
+
+| Piscina | I candidati al pool devono includere unità di tutti i cassetti e deve essere presente un numero uguale di unità in ciascun cassetto. Il pool deve includere dischi di almeno cinque cassetti e deve essere presente un numero uguale di dischi in ciascun cassetto. Uno shelf da 60 dischi può ottenere la protezione contro la perdita di cassetto quando il pool contiene 15, 20, 25, 30, 35, 40, 45, 50, 55 o 60 dischi. È possibile aggiungere incrementi in multipli di 5 al pool dopo la creazione iniziale. | 5 
+
+
+| RAID 6 | Il gruppo di volumi non contiene più di due dischi in un singolo cassetto. | 3 
+
+
+| RAID 3 o 5 | Ciascuna unità del gruppo di volumi si trova in un cassetto separato | 3 
+
+
+| RAID 1 | Ogni disco di una coppia mirrorata deve essere collocato in un cassetto separato. | 2 
+
+
+| RAID 0 | Impossibile ottenere la protezione perdita cassetto. | Non applicabile 
+|===
+
+
+== Come posso mantenere la protezione contro la perdita di scaffali e cassetti?
+
+Per mantenere la protezione contro le perdite di shelf e cassetti per un pool o un gruppo di volumi, utilizzare i criteri specificati nella tabella seguente.
+
+|===
+| Livello | Criteri per la protezione contro le perdite di scaffali/cassetti | Numero minimo di shelf/cassetti richiesti 
+
+
+| Piscina | Per gli shelf, il pool non deve contenere più di due dischi in un singolo shelf. Per i cassetti, il pool deve includere un numero uguale di unità da ciascun cassetto. | 6 per i ripiani 5 per i cassetti 
+
+
+| RAID 6 | Il gruppo di volumi non contiene più di due dischi in un singolo shelf o cassetto. | 3 
+
+
+| RAID 3 o RAID 5 | Ciascuna unità del gruppo di volumi si trova in uno shelf o in un cassetto separato. | 3 
+
+
+| RAID 1 | Ogni disco di una coppia mirrorata deve essere collocato in uno shelf o in un cassetto separato. | 2 
+
+
+| RAID 0 | Impossibile ottenere la protezione contro la perdita di scaffali/cassetti. | Non applicabile 
+|===
+
+NOTE: La protezione contro le perdite di shelf/cassetto non viene mantenuta se un disco si è già guastato nel pool o nel gruppo di volumi. In questa situazione, la perdita dell'accesso a uno shelf o a un cassetto di dischi e, di conseguenza, a un altro disco nel pool o nel gruppo di volumi causa la perdita di dati.
+
+
+
+== Che cos'è la capacità di ottimizzazione per i pool?
+
+I dischi SSD avranno una maggiore durata e migliori prestazioni di scrittura massime quando una parte della loro capacità non viene allocata.
+
+Per i dischi associati a un pool, la capacità non allocata è costituita dalla capacità di conservazione di un pool, dalla capacità libera (capacità non utilizzata dai volumi) e da una parte della capacità utilizzabile come capacità di ottimizzazione aggiuntiva. La capacità di ottimizzazione aggiuntiva garantisce un livello minimo di capacità di ottimizzazione riducendo la capacità utilizzabile e, come tale, non è disponibile per la creazione di volumi.
+
+Quando viene creato un pool, viene generata una capacità di ottimizzazione consigliata che offre un equilibrio tra performance, durata del disco e capacità disponibile. Il dispositivo di scorrimento Additional Optimization Capacity (capacità di ottimizzazione aggiuntiva) nella finestra di dialogo Pool Settings (Impostazioni pool) consente di regolare la capacità di ottimizzazione del pool. La regolazione del dispositivo di scorrimento garantisce migliori prestazioni e durata del disco a scapito della capacità disponibile o di capacità aggiuntiva disponibile a scapito delle prestazioni e della durata del disco.
+
+
+NOTE: Il dispositivo di scorrimento Additional Optimization Capacity (capacità di ottimizzazione aggiuntiva) è disponibile solo per i sistemi storage EF600 e EF300.
+
+
+
+== Qual è la capacità di ottimizzazione per i gruppi di volumi?
+
+I dischi SSD avranno una maggiore durata e migliori prestazioni di scrittura massime quando una parte della loro capacità non viene allocata.
+
+Per i dischi associati a un gruppo di volumi, la capacità non allocata è costituita dalla capacità libera di un gruppo di volumi (capacità non utilizzata dai volumi) e da una parte della capacità utilizzabile come capacità di ottimizzazione. La capacità di ottimizzazione aggiuntiva garantisce un livello minimo di capacità di ottimizzazione riducendo la capacità utilizzabile e, come tale, non è disponibile per la creazione di volumi.
+
+Quando viene creato un gruppo di volumi, viene generata una capacità di ottimizzazione consigliata che offre un equilibrio tra prestazioni, durata del disco e capacità disponibile. Il dispositivo di scorrimento Additional Optimization Capacity (capacità di ottimizzazione aggiuntiva) nella finestra di dialogo Volume Group Settings (Impostazioni gruppo di volumi) consente di regolare la capacità di ottimizzazione di un gruppo di volumi. La regolazione del dispositivo di scorrimento garantisce migliori prestazioni e durata del disco a scapito della capacità disponibile o di capacità aggiuntiva disponibile a scapito delle prestazioni e della durata del disco.
+
+
+NOTE: Additional Optimization Capacity Slider è disponibile solo per i sistemi storage EF600 e EF300.
+
+
+
+== Quali sono le funzionalità di provisioning delle risorse?
+
+Il provisioning delle risorse è una funzionalità disponibile negli array di storage EF300 e EF600, che consente di utilizzare immediatamente i volumi senza alcun processo di inizializzazione in background.
+
+Un volume con provisioning di risorse è un volume denso in un gruppo di volumi o pool SSD, in cui la capacità del disco viene allocata (assegnata al volume) quando viene creato il volume, ma i blocchi disco vengono disallocati (non mappati). Per confronto, in un volume thick tradizionale, tutti i blocchi di dischi vengono mappati o allocati durante un'operazione di inizializzazione del volume in background per inizializzare i campi di informazioni di protezione Data Assurance e rendere i dati e la parità RAID coerenti in ogni stripe RAID. Con un volume con provisioning di risorse, non è prevista alcuna inizializzazione in background con time-bound. Al contrario, ogni stripe RAID viene inizializzata alla prima scrittura su un blocco di volume nello stripe.
+
+I volumi con provisioning delle risorse sono supportati solo su gruppi di volumi e pool SSD, in cui tutti i dischi del gruppo o del pool supportano la funzionalità di ripristino degli errori NVMe Deallocated o Unwritten Logical Block Error Enable (DULBE). Quando viene creato un volume con provisioning di risorse, tutti i blocchi di dischi assegnati al volume vengono deallocati (non mappati). Inoltre, gli host possono deallocare i blocchi logici nel volume utilizzando il comando NVMe Dataset Management. La deallocazione dei blocchi può migliorare la durata dell'utilizzo degli SSD e aumentare le massime prestazioni di scrittura. Il miglioramento varia in base al modello e alla capacità di ciascun disco.
+
+
+
+== Cosa occorre sapere sulla funzionalità dei volumi con provisioning delle risorse?
+
+Il provisioning delle risorse è una funzionalità disponibile negli array di storage EF300 e EF600, che consente di utilizzare immediatamente i volumi senza alcun processo di inizializzazione in background.
+
+
+NOTE: La funzionalità di provisioning delle risorse non è al momento disponibile. In alcune viste, i componenti potrebbero essere segnalati come capaci di provisioning delle risorse, ma la capacità di creare volumi con provisioning delle risorse è stata disattivata fino a quando non sarà possibile riattivarli in un aggiornamento futuro.
+
+
+
+=== Volumi con provisioning delle risorse
+
+Un volume con provisioning di risorse è un volume denso in un gruppo di volumi o pool SSD, in cui la capacità del disco viene allocata (assegnata al volume) quando viene creato il volume, ma i blocchi disco vengono disallocati (non mappati). Per confronto, in un volume thick tradizionale, tutti i blocchi di dischi vengono mappati o allocati durante un'operazione di inizializzazione del volume in background per inizializzare i campi di informazioni di protezione Data Assurance e rendere i dati e la parità RAID coerenti in ogni stripe RAID. Con un volume con provisioning di risorse, non è prevista alcuna inizializzazione in background con time-bound. Al contrario, ogni stripe RAID viene inizializzata alla prima scrittura su un blocco di volume nello stripe.
+
+I volumi con provisioning delle risorse sono supportati solo su gruppi di volumi e pool SSD, in cui tutti i dischi del gruppo o del pool supportano la funzionalità di ripristino degli errori NVMe Deallocated o Unwritten Logical Block Error Enable (DULBE). Quando viene creato un volume con provisioning di risorse, tutti i blocchi di dischi assegnati al volume vengono deallocati (non mappati). Inoltre, gli host possono deallocare i blocchi logici nel volume utilizzando il comando NVMe Dataset Management. La deallocazione dei blocchi può migliorare la durata dell'utilizzo degli SSD e aumentare le massime prestazioni di scrittura. Il miglioramento varia in base al modello e alla capacità di ciascun disco.
+
+
+
+=== Attivazione e disattivazione della funzione
+
+Il provisioning delle risorse è attivato per impostazione predefinita nei sistemi in cui i dischi supportano DULBE. È possibile disattivare l'impostazione predefinita da Pools & Volume Groups. La disattivazione del provisioning delle risorse è un'azione permanente per i volumi esistenti e non può essere annullata (ad esempio, non è possibile riattivare il provisioning delle risorse per questi gruppi di volumi e pool).
+
+Tuttavia, se si desidera riattivare il provisioning delle risorse per i nuovi volumi creati, è possibile farlo dal menu:Impostazioni[sistema]. Tenere presente che quando si riattiva il provisioning delle risorse, vengono influenzati solo i gruppi di volumi e i pool appena creati. Tutti i gruppi di volumi e i pool esistenti rimarranno invariati. Se lo si desidera, è anche possibile disattivare nuovamente il provisioning delle risorse dal menu:Impostazioni[sistema].
+
+
+
+== Qual è la differenza tra la chiave di sicurezza interna e la gestione esterna delle chiavi di sicurezza?
+
+Quando si implementa la funzione Drive Security, è possibile utilizzare una chiave di sicurezza interna o una chiave di sicurezza esterna per bloccare i dati quando un disco abilitato alla protezione viene rimosso dall'array di storage.
+
+Una chiave di sicurezza è una stringa di caratteri che viene condivisa tra i dischi abilitati alla protezione e i controller di un array di storage. Le chiavi interne vengono conservate nella memoria persistente del controller. Le chiavi esterne vengono gestite su un server di gestione delle chiavi separato, utilizzando un protocollo KMIP (Key Management Interoperability Protocol).
+
+
+
+== Cosa occorre sapere prima di creare una chiave di sicurezza?
+
+Una chiave di sicurezza viene condivisa da controller e dischi abilitati alla sicurezza all'interno di un array di storage. Se un disco abilitato alla protezione viene rimosso dall'array di storage, la chiave di sicurezza protegge i dati da accessi non autorizzati.
+
+È possibile creare e gestire le chiavi di sicurezza utilizzando uno dei seguenti metodi:
+
+* Gestione interna delle chiavi nella memoria persistente del controller.
+* Gestione esterna delle chiavi su un server di gestione delle chiavi esterno.
+
+
+
+
+== Gestione interna delle chiavi
+
+Le chiavi interne vengono mantenute e "nascoste" in una posizione non accessibile sulla memoria persistente del controller. Prima di creare una chiave di sicurezza interna, eseguire le seguenti operazioni:
+
+. Installare unità sicure nell'array di storage. Questi dischi possono essere dischi FDE (Full Disk Encryption) o FIPS (Federal Information Processing Standard).
+. Assicurarsi che la funzione Drive Security sia attivata. Se necessario, contattare il fornitore dello storage per istruzioni sull'attivazione della funzione Drive Security.
+
+
+È quindi possibile creare una chiave di sicurezza interna, che implica la definizione di un identificatore e di una passphrase. L'identificatore è una stringa associata alla chiave di sicurezza e memorizzata sul controller e su tutti i dischi associati alla chiave. La password viene utilizzata per crittografare la chiave di sicurezza a scopo di backup. Al termine, la chiave di sicurezza viene memorizzata nel controller in una posizione non accessibile. È quindi possibile creare pool o gruppi di volumi abilitati per la protezione oppure attivare la protezione su gruppi di volumi e pool esistenti.
+
+
+
+=== Gestione esterna delle chiavi
+
+Le chiavi esterne vengono gestite su un server di gestione delle chiavi separato, utilizzando un protocollo KMIP (Key Management Interoperability Protocol). Prima di creare una chiave di sicurezza esterna, eseguire le seguenti operazioni:
+
+. Installare unità sicure nell'array di storage. Questi dischi possono essere dischi FDE (Full Disk Encryption) o FIPS (Federal Information Processing Standard).
+. Assicurarsi che la funzione Drive Security sia attivata. Se necessario, contattare il fornitore dello storage per istruzioni sull'attivazione della funzione Drive Security
+. Ottenere un file di certificato client firmato. Un certificato client convalida i controller dello storage array, in modo che il server di gestione delle chiavi possa considerare attendibili le richieste KMIP.
++
+.. Innanzitutto, completare e scaricare una richiesta di firma del certificato (CSR) del client. Accedere al menu:Impostazioni[certificati > Gestione chiavi > CSR completa].
+.. Successivamente, viene richiesto un certificato client firmato da una CA attendibile dal server di gestione delle chiavi. È inoltre possibile creare e scaricare un certificato client dal server di gestione delle chiavi utilizzando il file CSR scaricato.
+.. Una volta ottenuto un file di certificato client, copiarlo sull'host in cui si accede a System Manager.
+
+
+. Recuperare un file di certificato dal server di gestione delle chiavi, quindi copiarlo sull'host in cui si accede a System Manager. Un certificato del server di gestione delle chiavi convalida il server di gestione delle chiavi, in modo che lo storage array possa fidarsi del proprio indirizzo IP. È possibile utilizzare un certificato root, intermedio o server per il server di gestione delle chiavi.
+
+
+È quindi possibile creare una chiave esterna che preveda la definizione dell'indirizzo IP del server di gestione delle chiavi e del numero di porta utilizzato per le comunicazioni KMIP. Durante questo processo, vengono caricati anche i file dei certificati. Al termine, il sistema si connette al server di gestione delle chiavi con le credenziali immesse. È quindi possibile creare pool o gruppi di volumi abilitati per la protezione oppure attivare la protezione su gruppi di volumi e pool esistenti.
+
+
+
+== Perché è necessario definire una passphrase?
+
+La password viene utilizzata per crittografare e decrittare il file della chiave di sicurezza memorizzato nel client di gestione locale. Senza la passphrase, la chiave di sicurezza non può essere decifrata e utilizzata per sbloccare i dati da un disco abilitato alla sicurezza se viene reinstallata in un altro array di storage.

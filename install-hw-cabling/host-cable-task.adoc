@@ -45,7 +45,7 @@ Una topologia di switch utilizza gli switch per connettere gli host ai controlle
 La figura seguente mostra un esempio di connessione. Per gli switch che offrono funzionalità di provisioning, è necessario isolare ogni coppia di iniziatori e di destinazione.
 
 .Due host e due switch
-image::../media/topology_host_fabric_generic.png[Cablaggio di due host e due switch]
+image::../media/topology_host_fabric_generic_ieops-2152.svg[Cablaggio di due host e due switch]
 
 *(1)* _collegare ogni adattatore host direttamente allo switch._
 

@@ -28,7 +28,7 @@ NOTE: Le porte host sul lato inferiore sinistro (E1a, e1b, e1c e e1d) e sul lato
 --
 Nell'esempio seguente viene illustrato il collegamento dei cavi agli host di dati utilizzando una topologia a collegamento diretto.
 
-image:../media/drw_e4012_direct_topology_ieops-2047.svg["E4012 topologia diretta, larghezza=1000px"]
+image:../media/drw_e4012_direct_topology_ieops-2156.svg["E4012 topologia diretta, larghezza=1000px"]
 
 . Collegare ciascuna porta HBA host alle porte host sui controller (E1a, e1b, e1c, e1d o e0a e e0b).
 
@@ -41,7 +41,7 @@ NOTE: Per ulteriori esempi di schemi di cablaggio, vedere https://docs.netapp.co
 --
 Nell'esempio seguente viene illustrato il collegamento degli host di dati mediante una topologia fabric.
 
-image:../media/drw_e4012_fabric_topology_ieops-2046.svg["Topologia del tessuto E4012, larghezza=1000px"]
+image:../media/drw_e4012_fabric_topology_ieops-2157.svg["Topologia del tessuto E4012, larghezza=1000px"]
 
 . Collegare ciascun adattatore host direttamente allo switch.
 . Collegare ogni switch direttamente alle porte host dei controller (E1a, e1b, e1c, e1d o e0a e e0b).

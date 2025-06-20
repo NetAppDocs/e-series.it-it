@@ -13,13 +13,13 @@ summary: 'Collegare ciascun controller nello shelf di controller a un modulo i/o
 [role="lead"]
 È necessario collegare ciascun controller nello shelf di controller a un modulo i/o (IOM) in uno shelf di dischi.
 
-Questa procedura si applica agli shelf di dischi IOM12 e IOM12B.
+Questa procedura si applica agli shelf di unità IOM12, IOM12B e IOM12C.
 
 
-NOTE: I moduli IOM12B sono supportati solo da SANtricity OS 11.70.2 in poi. Assicurarsi che il firmware del controller sia stato aggiornato prima di installare o eseguire l'aggiornamento a IOM12B.
+NOTE: I moduli IOM12C sono supportati solo da SANtricity OS 11.70.2 in poi. Assicurarsi che il firmware del controller sia stato aggiornato prima di installare o eseguire l'aggiornamento a IOM12C.
 
 
-NOTE: Questa procedura si applica a sostituzioni o sostituzioni IOM di shelf simili. Ciò significa che è possibile sostituire solo un modulo IOM12 con un altro modulo IOM12 o un modulo IOM12B con un altro modulo IOM12B. (Lo shelf può avere due moduli IOM12 o due moduli IOM12B).
+NOTE: Questa procedura si applica a sostituzioni o sostituzioni IOM di shelf simili. Ciò significa che è possibile sostituire solo un modulo IOM12 con un altro modulo IOM12 o un modulo IOM12C con un altro modulo IOM12C. (Lo shelf può avere due moduli IOM12 o due moduli IOM12C).
 
 Se si sta cablando uno shelf di controller meno recente a DE212C, DE224C o DE460, vedere https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2859057["Aggiunta di shelf di dischi IOM a uno shelf di controller E27XX, E56XX o EF560 esistente"^].
 

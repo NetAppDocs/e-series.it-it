@@ -16,7 +16,7 @@ summary: Sostituire un disco in un E2800 con uno shelf da 60 dischi.
 .A proposito di questa attività
 Il guru del ripristino in Gestione di sistema di SANtricity monitora i dischi nell'array di storage e può notificare un guasto imminente del disco o un guasto effettivo del disco. In caso di guasto di un disco, il LED di attenzione di colore ambra si accende. È possibile sostituire a caldo un disco guasto mentre lo storage array sta ricevendo le operazioni di i/O.
 
-Questa procedura si applica agli shelf di dischi DCM e DCM2.
+Questa procedura si applica agli shelf di unità DCM, DCM2 e DCM3.
 
 .Prima di iniziare
 * Esaminare i requisiti di gestione dei dischi in link:drives-overview-supertask-concept.html["Requisiti per la sostituzione del disco E2800"].

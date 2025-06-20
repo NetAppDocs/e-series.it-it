@@ -18,7 +18,7 @@ Scopri come collegare i cavi di alimentazione e alimentare gli shelf di dischi.
 * Adottare precauzioni antistatiche.
 
 
-Questa procedura si applica agli shelf di dischi IOM12 e IOM12B.
+Questa procedura si applica agli shelf di unità IOM12, IOM12B e IOM12C.
 
 .Fasi
 . Cablare gli scaffali.

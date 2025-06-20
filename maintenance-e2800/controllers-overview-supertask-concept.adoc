@@ -15,13 +15,13 @@ Prima di sostituire o aggiungere un controller E2800, esaminare i requisiti e le
 
 Ogni contenitore di controller contiene una scheda controller, una batteria e una scheda di interfaccia host (HIC) opzionale. È possibile aggiungere un secondo controller a una configurazione simplex o sostituire un controller guasto.
 
-Queste procedure si applicano agli shelf di dischi IOM12 e IOM12B.
+Questa procedura si applica agli shelf di unità IOM12, IOM12B e IOM12C.
 
 
-NOTE: I moduli IOM12B sono supportati solo da SANtricity OS 11.70.2 in poi. Assicurarsi che il firmware del controller sia stato aggiornato prima di installare o eseguire l'aggiornamento a IOM12B.
+NOTE: I moduli IOM12C sono supportati solo su SANtricity OS 11.90R3 e versioni successive. Assicurarsi che il firmware del controller sia stato aggiornato prima di installare o eseguire l'aggiornamento a IOM12C.
 
 
-NOTE: Queste procedure si riferiscono a sostituzioni o sostituzioni IOM simili a quelle degli shelf. Ciò significa che è possibile sostituire solo un modulo IOM12 con un altro modulo IOM12 o un modulo IOM12B con un altro modulo IOM12B. (Lo shelf può avere due moduli IOM12 o due moduli IOM12B).
+NOTE: Queste procedure si riferiscono a sostituzioni o sostituzioni IOM simili a quelle degli shelf. Ciò significa che è possibile sostituire solo un modulo IOM12 con un altro modulo IOM12 o un modulo IOM12C con un altro modulo IOM12C. (Lo shelf può avere due moduli IOM12 o due moduli IOM12C).
 
 
 
