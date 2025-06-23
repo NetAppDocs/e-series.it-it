@@ -39,7 +39,6 @@ CAUTION: *Possibile perdita di accesso ai dati* -- se un volume si trova già in
 ** Accesso all'interfaccia a riga di comando (CLI) dello storage array. Se non si dispone dell'accesso alla CLI, è possibile effettuare una delle seguenti operazioni:
 +
 *** *Per Gestore di sistema SANtricity (versione 11.60 e successive)* -- Scarica il pacchetto CLI (file zip) da Gestore di sistema. Accedere al menu:Impostazioni[sistema > componenti aggiuntivi > interfaccia riga di comando]. È quindi possibile eseguire i comandi CLI da un prompt del sistema operativo, ad esempio il prompt di DOS C:.
-*** *Per Gestione storage SANtricity/finestra di gestione aziendale (EMW)* -- seguire le istruzioni nella guida rapida per scaricare e installare il software. È possibile eseguire i comandi CLI da EMW selezionando menu:Tools[Execute script] (Strumenti[Esegui script]).
 
 
 

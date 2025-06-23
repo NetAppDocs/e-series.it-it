@@ -29,10 +29,14 @@ NOTE: Questa procedura si applica a sostituzioni o sostituzioni IOM di shelf sim
 .Fasi
 . Cablare gli scaffali.
 +
-Collegare il sistema in base alla configurazione. Se sono necessarie più opzioni di cablaggio rispetto agli esempi illustrati, vedere link:../install-hw-cabling/index.html["Cablaggio"].
+Collegare il sistema in base alla configurazione.
 
 +
-Per gli esempi illustrati, sono necessari i seguenti cavi:
+
+NOTE: Se hai bisogno di più opzioni di cablaggio rispetto agli esempi forniti di seguito, vedi link:https://docs.netapp.com/us-en/e-series/install-hw-cabling/driveshelf-cable-task.html#cabling-e2800-and-e5700["Cablaggio"^] .
+
++
+Sono necessari i seguenti cavi:
 
 +
 |===
@@ -45,25 +49,22 @@ image:../media/sas_cable.png["Cavo SAS"]
 
 |===
 +
-.Esempio A: Shelf di controller E5700 con tre shelf di dischi DE212C/DE224 in una configurazione SAS standard.
-image:../media/example_a_28_57.png["Controller E5700 in configurazione SAS"]
-
+.. *Esempio A: Ripiano del controller con tre ripiani per dischi DE212C/DE224 in una configurazione SAS standard*
 +
-.. Collegare il controller a al modulo IOM A del primo shelf di dischi.
-.. Collegare IOM A del primo shelf di dischi a IOM A del secondo shelf di dischi.
-.. Collegare IOM A del secondo shelf di dischi a IOM A del terzo shelf di dischi.
-.. Collegare il controller B all'IOM B del terzo shelf di dischi.
-.. Cavo IOM B del secondo shelf di dischi a IOM B del terzo shelf di dischi.
-.. Cavo IOM B del primo shelf di dischi a IOM B del secondo shelf di dischi.
+... Collegare il controller a al modulo IOM A del primo shelf di dischi.
+... Collegare IOM A del primo shelf di dischi a IOM A del secondo shelf di dischi.
+... Collegare IOM A del secondo shelf di dischi a IOM A del terzo shelf di dischi.
+... Collegare il controller B all'IOM B del terzo shelf di dischi.
+... Cavo IOM B del secondo shelf di dischi a IOM B del terzo shelf di dischi.
+... Cavo IOM B del primo shelf di dischi a IOM B del secondo shelf di dischi.
 
 
+.. *Esempio B: Ripiano del controller con un ripiano del disco DE212C/DE224 in una configurazione SAS standard*
 +
-.Esempio B: Shelf di controller E5700 con shelf di dischi DE212C/DE224 in una configurazione SAS standard.
-image:../media/example_b_57_28.png["Controller E5700 in configurazione SAS"]
+... Collegare il controller a al modulo IOM A.
+... Cavo controller B a IOM B.
 
-+
-.. Collegare il controller a al modulo IOM A.
-.. Cavo controller B a IOM B.
+
 
 
 . Alimentare gli shelf di dischi.

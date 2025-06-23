@@ -23,10 +23,14 @@ Questa procedura si applica agli shelf di unità IOM12, IOM12B e IOM12C.
 .Fasi
 . Cablare gli scaffali.
 +
-Collegare il sistema in base alla configurazione. Se sono necessarie più opzioni di cablaggio rispetto agli esempi illustrati, vedere link:../install-hw-cabling/index.html["Cablaggio"].
+Collegare il sistema in base alla configurazione.
 
 +
-Per gli esempi illustrati, sono necessari i seguenti cavi:
+
+NOTE: Se hai bisogno di più opzioni di cablaggio rispetto agli esempi forniti di seguito, vedi link:https://docs.netapp.com/us-en/e-series/install-hw-cabling/driveshelf-cable-task.html#cabling-e4000["Cablaggio"^] .
+
++
+Sono necessari i seguenti cavi:
 
 +
 |===
@@ -39,19 +43,22 @@ image:../media/sas_cable.png["Cavo SAS"]
 
 |===
 +
-.Esempio A: Uno shelf di controller E4000 con tre shelf di dischi DE212C/DE224C in una configurazione SAS standard.
-.. Collegare il controller a al modulo IOM A del primo shelf di dischi.
-.. Collegare IOM A del primo shelf di dischi a IOM A del secondo shelf di dischi.
-.. Collegare IOM A del secondo shelf di dischi a IOM A del terzo shelf di dischi.
-.. Collegare il controller B all'IOM B del terzo shelf di dischi.
-.. Cavo IOM B del secondo shelf di dischi a IOM B del terzo shelf di dischi.
-.. Cavo IOM B del primo shelf di dischi a IOM B del secondo shelf di dischi.
-
-
+.. *Esempio A: Uno scaffale del controller E4000 con tre scaffali dei dischi DE212C/DE224C in una configurazione SAS standard*
 +
-.Esempio B: Shelf di controller E4000 con shelf di dischi DE212C/DE224C in una configurazione SAS standard.
-.. Collegare il controller a al modulo IOM A.
-.. Cavo controller B a IOM B.
+... Collegare il controller a al modulo IOM A del primo shelf di dischi.
+... Collegare IOM A del primo shelf di dischi a IOM A del secondo shelf di dischi.
+... Collegare IOM A del secondo shelf di dischi a IOM A del terzo shelf di dischi.
+... Collegare il controller B all'IOM B del terzo shelf di dischi.
+... Cavo IOM B del secondo shelf di dischi a IOM B del terzo shelf di dischi.
+... Cavo IOM B del primo shelf di dischi a IOM B del secondo shelf di dischi.
+
+
+.. *Esempio B: Uno scaffale del controller E4000 con uno scaffale del disco DE212C/DE224C in una configurazione SAS standard*
++
+... Collegare il controller a al modulo IOM A.
+... Cavo controller B a IOM B.
+
+
 
 
 . Alimentare gli shelf di dischi.

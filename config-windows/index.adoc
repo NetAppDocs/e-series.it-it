@@ -37,5 +37,4 @@ Il metodo espresso include i seguenti passaggi, descritti anche nella link:under
 * Guida in linea -- descrive come utilizzare Gestione di sistema di SANtricity per completare le attività di configurazione e gestione dello storage. È disponibile all'interno del prodotto.
 * https://kb.netapp.com/["Knowledge base di NetApp"^] (Un database di articoli) -- fornisce informazioni sulla risoluzione dei problemi, FAQ e istruzioni per un'ampia gamma di prodotti e tecnologie NetApp.
 * http://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"^] -- consente di cercare configurazioni di prodotti e componenti NetApp che soddisfino gli standard e i requisiti specificati da NetApp.
-* http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61343["Documentazione NetApp: Utility host"^] -- fornisce la documentazione per la versione corrente di Windows Unified host Utilities.
 

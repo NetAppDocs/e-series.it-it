@@ -29,10 +29,14 @@ NOTE: Questa procedura si applica a sostituzioni o sostituzioni IOM di shelf sim
 .Fasi
 . Cablare gli scaffali.
 +
-Collegare il sistema in base alla configurazione. Se sono necessarie più opzioni di cablaggio rispetto agli esempi illustrati in questa sezione, vedere link:../install-hw-cabling/index.html["Cablaggio"].
+Collegare il sistema in base alla configurazione.
 
 +
-Per gli esempi illustrati in questa sezione, sono necessari i seguenti cavi:
+
+NOTE: Se hai bisogno di più opzioni di cablaggio rispetto agli esempi forniti di seguito, vedi link:https://docs.netapp.com/us-en/e-series/install-hw-cabling/driveshelf-cable-task.html#cabling-e2800-and-e5700["Cablaggio"^] .
+
++
+Sono necessari i seguenti cavi:
 
 +
 |===
@@ -45,23 +49,20 @@ image:../media/sas_cable.png["Cavi SAS"]
 
 |===
 +
-.Esempio A: Shelf di controller E2860 con due shelf di dischi DE460C in una configurazione SAS standard.
-image:../media/example_a_2860.png["Controller E2860 in configurazione SAS"]
-
+.. *Esempio A: Ripiano del controller con due ripiani del disco DE460C in una configurazione SAS standard*
 +
-.. Collegare il controller a al modulo IOM A del primo shelf di dischi.
-.. Collegare IOM A del primo shelf di dischi a IOM A del secondo shelf di dischi.
-.. Cavo IOM B del primo shelf di dischi a IOM B del secondo shelf di dischi.
-.. Collegare il controller B all'IOM B del secondo shelf di dischi.
+... Collegare il controller a al modulo IOM A del primo shelf di dischi.
+... Collegare IOM A del primo shelf di dischi a IOM A del secondo shelf di dischi.
+... Cavo IOM B del primo shelf di dischi a IOM B del secondo shelf di dischi.
+... Collegare il controller B all'IOM B del secondo shelf di dischi.
 
 
+.. *Esempio B: Ripiano del controller con un ripiano del disco DE460C in una configurazione SAS standard*
 +
-.Esempio B: Uno shelf di controller E2860 con uno shelf di dischi DE460C in una configurazione SAS standard.
-image:../media/example_b_2860.png["Controller E2860 in configurazione SAS"]
+... Collegare il controller a al modulo IOM A.
+... Cavo controller B a IOM B.
 
-+
-.. Collegare il controller a al modulo IOM A.
-.. Cavo controller B a IOM B.
+
 
 
 . Alimentare gli shelf di dischi.
