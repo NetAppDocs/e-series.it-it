@@ -63,8 +63,7 @@ dracut --force --add multipath
 Ad esempio, per GRUB è così `/boot/grub/menu.lst` e per grub2 lo è `/boot/grub2/menu.cfg`.
 
 . Utilizzare https://docs.netapp.com/us-en/e-series-santricity/sm-storage/create-host-manually.html["Creare l'host manualmente"] procedura nella guida in linea per verificare se gli host sono definiti. Verificare che ogni impostazione del tipo di host sia basata sulle informazioni del kernel raccolte in <<step4,fase 4>>.
-
-
++
 
 NOTE: Il bilanciamento automatico del carico è disattivato per tutti i volumi mappati agli host che eseguono kernel 3.9 o versioni precedenti.
 
