@@ -79,7 +79,7 @@ Selezionare una o entrambe le opzioni per abilitare il supporto per le reti IPv4
  a| 
 Dimensione MTU (disponibile facendo clic su *Mostra altre impostazioni della porta*).
  a| 
-Se necessario, inserire una nuova dimensione in byte per l'unità di trasmissione massima (MTU). La dimensione MTU predefinita è 1500 byte per frame. Immettere un valore compreso tra 1500 e 4200.
+Se necessario, inserire una nuova dimensione in byte per l'unità di trasmissione massima (MTU). La dimensione MTU predefinita è 1500 byte per frame. Immettere un valore compreso tra 1500 e 9000.
 
 |===
 +
