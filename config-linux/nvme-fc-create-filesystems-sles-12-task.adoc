@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: partitions, file systems, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
 summary: È possibile creare una partizione sul dispositivo multipath, eventualmente creare un file system sullo spazio dei nomi e montare la partizione. 
 ---
-= Creare file system in e-Series - Linux RHEL 7 e SLES 12 (NVMe over FC)
+= Creazione di filesystem in E-Series - SLES 12 (NVMe over FC)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Per RHEL 7 e SLES 12, si crea un file system sul dispositivo dm desiderato e si monta il filesystem.
+Per SLES 12, creare un file system sul dispositivo DM desiderato e montare il file system.
 
 .Fasi
 . Eseguire `multipath -ll` per ottenere un elenco di `/dev/mapper/dm` dispositivi.

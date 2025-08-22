@@ -24,13 +24,13 @@ Per fornire un percorso ridondante all'array di storage, è possibile configurar
 NOTE: Fare riferimento a. https://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"^] Per garantire l'installazione degli aggiornamenti necessari, poiché il multipathing potrebbe non funzionare correttamente con le versioni GA di SLES o RHEL.
 
 .A proposito di questa attività
-RHEL 7 e SLES 12 utilizzano il multipath DMMP (Device Mapper Multipath) per il multipathing per NVMe su RoCE. RHEL 8, RHEL 9 e SLES 15 utilizzano un failover NVMe nativo integrato. A seconda del sistema operativo in esecuzione, è necessaria una configurazione aggiuntiva di multipath per il corretto funzionamento.
+SLES 12 utilizza Device Mapper Multipath (DMMP) per il multipathing per NVMe su RoCE. RHEL 8, RHEL 9 e SLES 15 utilizzano un failover NVMe nativo integrato. A seconda del sistema operativo in esecuzione, è necessaria una configurazione aggiuntiva di multipath per farlo funzionare correttamente.
 
 
 
-== Attiva DMMP (Device Mapper Multipath) per RHEL 7 o SLES 12
+== Abilita Device Mapper Multipath (DMMP) per SLES 12
 
-Per impostazione predefinita, DM-MP è disattivato in RHEL e SLES. Per abilitare i componenti DM-MP sull'host, attenersi alla seguente procedura.
+Per impostazione predefinita, DM-MP è disabilitato in SLES. Completare la procedura seguente per abilitare i componenti DM-MP nell'host.
 
 .Fasi
 . Aggiungere la voce NVMe e-Series Device (dispositivo NVMe e-Series) alla sezione Devices (dispositivi) di `/etc/multipath.conf` come mostrato nell'esempio seguente:

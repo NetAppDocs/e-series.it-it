@@ -2,16 +2,16 @@
 permalink: config-linux/nvme-roce-create-filesystems-sles-12-task.html 
 sidebar: sidebar 
 keywords: file systems, express linux configuration, software configuration, linux host, E2800, E5700, EF300, EF600, E-Series, eseries 
-summary: Per RHEL 7 e SLES 12, si crea un file system sullo spazio dei nomi e si monta il file system. 
+summary: Per SLES 12, si crea un file system nello spazio dei nomi e si monta il file system. 
 ---
-= Creare file system in e-Series - Linux RHEL 7 e SLES 12 (NVMe over RoCE)
+= Creazione di filesystem in E-Series - Linux SLES 12 (NVMe su RoCE)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Per RHEL 7 e SLES 12, si crea un file system sullo spazio dei nomi e si monta il file system.
+Per SLES 12, si crea un file system nello spazio dei nomi e si monta il file system.
 
 .Fasi
 . Eseguire `multipath -ll` per ottenere un elenco di `/dev/mapper/dm` dispositivi.

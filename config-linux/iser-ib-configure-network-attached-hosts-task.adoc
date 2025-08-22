@@ -24,7 +24,7 @@ Assicurarsi di disporre di quanto segue:
 .Fasi
 . Abilitare e avviare i servizi iSCSI sugli host:
 +
-*Red Hat Enterprise Linux 7, 8 e 9 (RHEL 7, RHEL 8 e RHEL 9)*
+*Red Hat Enterprise Linux 8 e 9 (RHEL 8 e RHEL 9)*
 
 +
 [listing]

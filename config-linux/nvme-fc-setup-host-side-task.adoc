@@ -14,7 +14,7 @@ summary: 'La configurazione di NVMe Initiator in un ambiente Fibre Channel inclu
 La configurazione di NVMe Initiator in un ambiente Fibre Channel include l'installazione e la configurazione del pacchetto nvme-cli e l'abilitazione di NVMe/FC Initiator sull'host.
 
 .A proposito di questa attività
-La procedura seguente riguarda RHEL 7, RHEL 8, RHEL 9, SLES 12 e SLES 15 utilizzando HBA FC Broadcom Emulex o QLogic compatibili con NVMe/FC. Per ulteriori informazioni sulle versioni supportate di questi sistemi operativi o HBA, consultare https://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"^].
+La procedura seguente è valida per RHEL 8, RHEL 9, SLES 12 e SLES 15 che utilizzano HBA FC compatibili con Broadcom Emulex o QLogic NVMe/FC. Per ulteriori informazioni sulle versioni di questi sistemi operativi o HBA supportate, consultare la https://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"^].
 
 .Fasi
 . Installare `nvme-cli` pacchetto:
@@ -28,7 +28,7 @@ La procedura seguente riguarda RHEL 7, RHEL 8, RHEL 9, SLES 12 e SLES 15 utilizz
 # zypper install nvme-cli
 ----
 +
-*RHEL 7, RHEL 8 O RHEL 9*
+*RHEL 8 o RHEL 9*
 
 +
 [listing]
@@ -37,7 +37,6 @@ La procedura seguente riguarda RHEL 7, RHEL 8, RHEL 9, SLES 12 e SLES 15 utilizz
 # yum install nvme-cli
 ----
 +
-.. Solo per RHEL 7, scaricare e installare uno script Broadcom AutoConnect esterno per le connessioni NVMe/FC tramite https://www.broadcom.com/support/download-search["Sito Web Broadcom"^]. Immettere la parola chiave *Autoconnect script file for Inbox NVMe over FC Drivers* e scegliere la versione più recente specifica per il sistema operativo in uso.
 .. Per Qlogic, modificare `/lib/systemd/system/nvmefc-boot-connections.service` Dopo aver installato lo script di connessione automatica Broadcom NVMe/FC in modo che contenga quanto segue:
 +
 [listing]

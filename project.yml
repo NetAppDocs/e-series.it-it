@@ -284,7 +284,7 @@ sidebar:
           url: "/config-linux/nvme-ib-access-virtual-targets-concept.html"
         - title: Accedere ai volumi NVMe per le destinazioni fisiche dei dispositivi
           url: "/config-linux/nvme-ib-access-physical-targets-concept.html"
-        - title: Creazione di filesystem (RHEL 7 e SLES 12)
+        - title: Creazione di filesystem (SLES 12)
           url: "/config-linux/nvme-ib-create-filesystems-sles-12-task.html"
         - title: Creazione di file system (RHEL 8, RHEL 9 e SLES 15)
           url: "/config-linux/nvme-ib-create-filesystems-sles-15-task.html"
@@ -322,7 +322,7 @@ sidebar:
           url: "/config-linux/nvme-roce-access-virtual-targets-concept.html"
         - title: Accedere ai volumi NVMe per le destinazioni fisiche dei dispositivi
           url: "/config-linux/nvme-roce-access-physical-targets-concept.html"
-        - title: Creazione di filesystem (RHEL 7 e SLES 12)
+        - title: Creazione di filesystem (SLES 12)
           url: "/config-linux/nvme-roce-create-filesystems-sles-12-task.html"
         - title: Creazione di file system (RHEL 8, RHEL 9 e SLES 15)
           url: "/config-linux/nvme-roce-create-filesystems-sles-15-task.html"
@@ -356,7 +356,7 @@ sidebar:
           url: "/config-linux/nvme-fc-access-virtual-targets-concept.html"
         - title: Accedere ai volumi NVMe per le destinazioni fisiche dei dispositivi
           url: "/config-linux/nvme-fc-access-physical-targets-concept.html"
-        - title: Creazione di filesystem (RHEL 7 e SLES 12)
+        - title: Creazione di filesystem (SLES 12)
           url: "/config-linux/nvme-fc-create-filesystems-sles-12-task.html"
         - title: Creazione di file system (RHEL 8, RHEL 9 e SLES 15)
           url: "/config-linux/nvme-fc-create-filesystems-sles-15-task.html"

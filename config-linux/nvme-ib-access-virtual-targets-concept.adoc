@@ -13,7 +13,7 @@ summary: 'Configurare l"i/o diretto alla destinazione del dispositivo in base al
 [role="lead"]
 È possibile configurare l'i/o diretto alla destinazione del dispositivo in base al sistema operativo in uso (e al metodo multipathing interno).
 
-Per RHEL 7 e SLES 12, l'i/o viene indirizzato alle destinazioni dei dispositivi virtuali dall'host Linux. DM-MP gestisce i percorsi fisici sottostanti queste destinazioni virtuali.
+Per SLES 12, l'I/O viene indirizzato alle destinazioni dei dispositivi virtuali dall'host Linux. DM-MP gestisce i percorsi fisici sottostanti queste destinazioni virtuali.
 
 
 
