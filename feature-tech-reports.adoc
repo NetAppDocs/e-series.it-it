@@ -33,7 +33,7 @@ Consulta i link sottostanti per accedere ai report tecnici relativi all'hardware
 |  |  |  
 
 
-| https://www.netapp.com/ko/media/12421-tr4652.pdf["*TR-4652: Pool di dischi dinamici SANtricity*"^] | https://www.netapp.com/pdf.html?item=/media/17144-tr4737pdf.pdf["*TR-4737: Bilanciamento automatico del carico SANtricity*"^] | https://www.netapp.com/pdf.html?item=/media/17142-tr4736pdf.pdf["*TR-4736: API dei servizi web SANtricity*"^] 
+| https://www.netapp.com/media/12421-tr-4652-santricity-os-ddp.pdf["*TR-4652: Pool di dischi dinamici SANtricity*"^] | https://www.netapp.com/pdf.html?item=/media/17144-tr4737pdf.pdf["*TR-4737: Bilanciamento automatico del carico SANtricity*"^] | https://www.netapp.com/pdf.html?item=/media/17142-tr4736pdf.pdf["*TR-4736: API dei servizi web SANtricity*"^] 
 
 
 | Descrive come gli amministratori dello storage possono raggruppare set di dischi simili in una topologia di pool in cui tutte le unità del pool partecipano al flusso di lavoro di i/O. | Viene fornita una panoramica del comportamento della funzionalità ALB, dei parametri di configurazione principali e dei miglioramenti all'interoperabilità degli host. | Viene fornita una panoramica dei servizi Web di SANtricity, un'API utilizzata per la configurazione e la gestione dei sistemi storage e-Series. 

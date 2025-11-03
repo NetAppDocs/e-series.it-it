@@ -412,6 +412,28 @@ Quando la comunicazione con l'altro controller viene ristabilita:
 
 
 
+. Portare il controller online utilizzando Gestione di sistema di SANtricity.
++
+** Da Gestore di sistema di SANtricity:
++
+... Selezionare *hardware*.
+... Se la figura mostra i dischi, selezionare *Mostra retro dello shelf*.
+... Selezionare il controller che si desidera mettere in linea.
+... Selezionare *Place Online* (Esegui online) dal menu di scelta rapida e confermare che si desidera eseguire l'operazione.
++
+Il sistema mette il controller in linea.
+
+
+
+** In alternativa, è possibile portare i controller online utilizzando i seguenti comandi CLI:
++
+*Per il controller A:* `set controller [a] availability=online;`
+
++
+*Per il controller B:* `set controller [b] availability=online;`
+
+
+
 . Controllare i codici sul display a sette segmenti del controller quando torna online. Se sul display viene visualizzata una delle seguenti sequenze di ripetizione, rimuovere immediatamente il controller.
 +
 ** *OE*, *L0*, *_blank_* (controller non corrispondenti)
