@@ -14,12 +14,12 @@ summary: 'La configurazione di NVMe Initiator in un ambiente RoCE include l"inst
 La configurazione di NVMe Initiator in un ambiente RoCE include l'installazione e la configurazione dei pacchetti rdma-core e nvme-cli, la configurazione degli indirizzi IP dell'iniziatore e l'impostazione del layer NVMe-of sull'host.
 
 .Prima di iniziare
-È necessario eseguire il sistema operativo RHEL 8, RHEL 9, SUSE Linux Enterprise Server 12 o 15 Service Pack compatibile più recente. Per un elenco completo dei requisiti più recenti, consulta la https://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"^] sezione.
+È necessario utilizzare il sistema operativo compatibile con il service pack RHEL 8, RHEL 9, RHEL 10, SLES 12, SLES 15 o SLES 16 più recente. Vedi il https://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"^] per un elenco completo dei requisiti più recenti.
 
 .Fasi
 . Installare i pacchetti rdma e nvme-cli:
 +
-*SLES 12 o SLES 15*
+*SLES 12, SLES 15 o SLES 16*
 
 +
 [listing]
@@ -29,7 +29,7 @@ La configurazione di NVMe Initiator in un ambiente RoCE include l'installazione 
 # zypper install nvme-cli
 ----
 +
-*RHEL 8 e RHEL 9*
+*RHEL 8, RHEL 9 o RHEL 10*
 
 +
 [listing]
@@ -140,7 +140,7 @@ REMOTE_IPADDR=
 STARTMODE='auto'
 ----
 +
-*RHEL 9*
+*RHEL 9, RHEL 10 o SLES 16*
 
 +
 Utilizzare `nmtui` per attivare e modificare una connessione. Di seguito è riportato un file di esempio `/etc/NetworkManager/system-connections/eth4.nmconnection` il tool genera:
