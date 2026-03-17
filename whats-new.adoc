@@ -16,10 +16,10 @@ La tabella seguente descrive le nuove funzionalità delle ultime release di SANt
 
 
 
-== Nuove funzionalità in Version 12.0
+== Nuove funzionalità in Version 12.00
 
 
-NOTE: La release SANtricity OS 12.0 è compatibile solo con i nuovi sistemi storage all-flash EF80 e EF50.
+NOTE: La release SANtricity OS 12.00 è compatibile solo con i nuovi sistemi storage all-flash EF80 e EF50.
 
 [cols="35h,~"]
 |===
