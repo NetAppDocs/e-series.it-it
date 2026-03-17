@@ -1,0 +1,55 @@
+= 
+:allow-uri-read: 
+
+
+.A proposito di questa attività
+L'illustrazione seguente mostra il funzionamento delle maniglie del controller (dal lato sinistro di un controller) durante la reinstallazione del controller e può essere utilizzata come riferimento per le fasi di reinstallazione del controller.
+
+image::../media/drw_g_and_t_handles_reinstall_ieops-1838.svg[operazione della maniglia del controller per installare un controller]
+
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout numero 1]
+ a| 
+Se hai ruotato le manopole del controller in posizione verticale (vicino alle linguette) per spostarle di lato durante la manutenzione del controller, ruotale in posizione orizzontale.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Callout numero 2]
+ a| 
+Spingere le maniglie per reinserire il controller nello chassis.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Callout numero 3]
+ a| 
+Ruotare le maniglie in posizione verticale e bloccarle in posizione con le linguette di bloccaggio.
+
+|===
+.Fasi
+. Chiudere il coperchio del controller e ruotare la vite a testa zigrinata in senso orario fino a serrarla.
+. Inserire il controller nello chassis:
++
+.. Allineare la parte posteriore del controller con l'apertura nel chassis e spingere delicatamente ma con decisione sulle maniglie finché il controller non incontra il midplane e non è completamente inserito.
++
+
+NOTE: Non esercitare una forza eccessiva durante l'inserimento del controller nel chassis; potrebbe danneggiare i connettori.
+
+.. Ruotare le manopole del controller verso l'alto e bloccarle in posizione con le linguette.
+
+
+. Ricollega il cavo di alimentazione all'alimentatore e fissa il cavo di alimentazione con il fermacavo del cavo di alimentazione.
++
+Una volta ripristinata l'alimentazione all'alimentatore, il LED di stato dovrebbe essere verde.
+
+. Ricollega tutti i cavi al controller.
++
+
+NOTE: Il ricollegamento dei cavi deve essere effettuato prima di mettere il controller online. Ciò è particolarmente importante per i collegamenti dei cavi di mirroring, poiché garantiscono la piena ridondanza del sistema e vengono utilizzati per il mirroring della cache e il trasferimento I/O.
+
+

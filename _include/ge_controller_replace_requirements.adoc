@@ -1,0 +1,34 @@
+= 
+:allow-uri-read: 
+
+
+* Verifica che sia presente un controller guasto. Puoi determinarlo in due modi:
++
+** Il Recovery Guru in SANtricity System Manager ti ha indicato di sostituire il controller.
+** Il LED di attenzione ambra sul controller è acceso, indicando che il controller ha un guasto.
+
+
+
+
+* Verifica che le seguenti condizioni del tuo sistema storage siano vere per assicurarti di poter sostituire il controller danneggiato mentre il tuo sistema storage è acceso ed esegue operazioni di I/O host:
++
+** Il secondo controller nello chassis ha stato Ottimale.
+** Il campo *OK to remove* nell'area Dettagli di Recovery Guru in SANtricity System Manager visualizza *Yes*, indicando che è sicuro rimuovere il controller danneggiato.
+
+
+* Assicurarsi di disporre di quanto segue:
++
+** Un controller di ricambio con lo stesso part number del controller che si sta sostituendo.
+** Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
+** Una superficie di lavoro piana e priva di elettricità statica.
+** Etichette per identificare ciascun cavo che verrà scollegato dal controller.
+** Una postazione di gestione con un browser che può accedere a SANtricity System Manager per il controller.
++
+È possibile aprire l'interfaccia di SANtricity System Manager puntando il browser al domain name o all'indirizzo IP del controller.
+
++
+Facoltativamente, è possibile utilizzare l'interfaccia a riga di comando (CLI) per eseguire alcune delle procedure. Scaricare il pacchetto CLI (file zip) utilizzando SANtricity System Manager: *Settings* > *System* > *Add-ons* e selezionare *Command Line Interface*. È quindi possibile impartire comandi CLI da un prompt del sistema operativo, come il prompt DOS C:.
+
+
+
+

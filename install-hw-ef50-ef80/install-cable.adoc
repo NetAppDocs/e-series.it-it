@@ -1,0 +1,332 @@
+---
+permalink: install-hw-ef50-ef80/install-cable.html 
+sidebar: sidebar 
+keywords: ef50, ef80, cabling, cable, host cabling, direct-attached topology, fabric-attached topology 
+summary: 'Dopo aver installato l"hardware del sistema storage EF50 o EF80, collega i collegamenti di mirroring tra i controller e le connessioni di rete verso gli host. (Collegherai le porte di gestione più avanti nella sezione Complete storage system setup.)' 
+---
+= Collegare l'hardware - EF50 e EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver installato l'hardware del sistema storage EF50 o EF80, collega i collegamenti di mirroring tra i controller e le connessioni di rete verso gli host. (Collegherai le porte di gestione più avanti nella sezione Complete storage system setup.)
+
+.A proposito di questa attività
+* Il termine _modulo I/O_ viene utilizzato per riferirsi alle schede di interfaccia verso gli host (HIC) in questa procedura.
+* Gli schemi di cablaggio presentano icone a forma di freccia che mostrano il corretto orientamento (verso l'alto o verso il basso) della linguetta di estrazione del connettore del cavo quando si inserisce un connettore in una porta.
++
+Quando inserisci il connettore, dovresti sentire che scatta in posizione; se non lo senti scattare, rimuovilo, capovolgilo e riprova.
+
++
+image:../media/drw_cable_pull_tab_direction_ieops-1699.svg["Direzione della linguetta di trazione del cavo"]
+
+
+
+
+
+== Passaggio 1: cablare le connessioni di mirroring tra i controller
+
+Collegare i controller tra loro per abilitare il mirroring inter-controller. Le connessioni di mirroring inter-controller garantiscono la piena ridondanza del sistema e vengono utilizzate per il mirroring della cache e il trasferimento I/O. Il cablaggio è lo stesso per i sistemi storage EF50 ed EF80.
+
+
+NOTE: Indipendentemente dalla velocità dei moduli I/O di mirroring tra controller installati nel sistema storage (100 GbE o 200 GbE, come supportato dal sistema storage), si utilizzano i cavi da 200 GbE inclusi. Se la velocità dei moduli I/O di mirroring tra controller è 100 GbE, la connessione opera alla velocità inferiore (100 GbE).
+
+.Fasi
+. Collega i controller tra loro:
++
+.. Collegare la porta e4a del controller A alla porta e4a del controller B.
+.. Collegare la porta e4b del controller A alla porta e4b del controller B.
++
+*Cavi Ethernet da 200 GbE*
+
++
+image::../media/oie_cable100_gbe_qsfp28.png[Cavo Ethernet da 100 GbE utilizzato per le connessioni di mirroring]
+
++
+image:../media/drw_ef50-ef80_mirroring_2p_100gbe_ieops-2659.svg["Cablaggio di connessione per il mirroring tra controller ef50 ed ef80"]
+
+
+
+
+
+
+
+== Passaggio 2: cabla le connessioni host
+
+Cabla le connessioni host per il tuo sistema storage in base alla topologia di rete: direct attached o fabric attached.
+
+.A proposito di questa attività
+* A seconda del modello di sistema storage, il tipo di moduli I/O host installati nel sistema storage può essere Ethernet o Fibre Channel (FC). Gli esempi di cablaggio in questa procedura mostrano entrambi i tipi di moduli I/O host supportati dai modelli di sistema storage.
+* Gli esempi di cablaggio non mostrano HBA FC a 4 porte da 64 Gb negli host 1 e host 2; tuttavia, se li avete installati, cablate ogni altra porta nello stesso modo mostrato per gli HBA a 2 porte.
+
+
+[role="tabbed-block"]
+====
+.Topologia a collegamento diretto
+--
+I seguenti esempi mostrano il cablaggio di un sistema storage agli host utilizzando una topologia direct-attached.
+
+.EF50 con due moduli I/O FC a 4 porte da 64Gb
+[%collapsible]
+=====
+.A proposito di questa attività
+* L'esempio di cablaggio mostra i moduli I/O host negli slot 1 e 2. Questo è il numero massimo di moduli I/O host supportati per il sistema storage EF50. Tuttavia, è necessario solo il modulo I/O host nello slot 1; il modulo I/O host nello slot 2 è opzionale.
++
+Se il sistema storage dispone di un modulo I/O host installato, puoi ignorare il cablaggio verso il modulo I/O host aggiuntivo e collegare solo al modulo I/O host installato.
+
+* Un sistema storage direct-attached dispone di due percorsi separati per la ridondanza: percorso A e percorso B.
++
+** Il percorso di connettività A è mostrato con cavi blu e porte blu sugli host e sui controller. Collega le porte HBA di ciascun host alle porte a e c del controller A.
+** Il percorso di connettività B è mostrato con cavi rossi e porte rosse sugli host e sui controller. Collega le porte HBA di ciascun host alle porte a e c del controller B.
+
+
+* Sebbene l'esempio di cablaggio mostri le porte a e c del modulo I/O collegate agli host, è possibile utilizzare le porte a e b oppure le porte c e d.
+
+
+.Fasi
+. Collegare gli host ai controller:
++
+.. Collega il percorso A (blu) dell'host 1 dalle porte HBA alle porte a (1a e 2a) del controller A.
+.. Collega il percorso B (rosso) dell'host 1 dalle porte HBA alle porte a (1a e 2a) del controller B.
+.. Collega il percorso host 2 A (blu) dalle porte HBA alle porte c del controller A (1c e 2c).
+.. Collega le porte HBA dell'host 2 percorso B (rosso) alle porte c del controller B (1c e 2c).
++
+*Cavi FC da 64 Gb/s*
+
++
+image:../media/oie_cable_sfp_gbe_copper.png["cavo FC da 64 Gb"]
+
++
+image:../media/drw_ef50_4p_64gb_fc_2hic_direct_ieops-2670.svg["Topologia EF50 a collegamento diretto agli host utilizzando due moduli I/O FC a 4 porte da 64 Gb."]
+
+
+
+
+
+=====
+.EF80 con tre moduli I/O a 2 porte 200 GbE
+[%collapsible]
+=====
+.A proposito di questa attività
+* L'esempio di cablaggio mostra i moduli I/O host negli slot 1, 2 e 3. Questo è il numero massimo di moduli I/O host supportati per il sistema storage EF80. Tuttavia, è necessario solo il modulo I/O host nello slot 1; i moduli I/O host negli slot 2 e slot 3 sono entrambi opzionali.
++
+Se il sistema storage dispone di un numero inferiore di moduli I/O host installati, è possibile ignorare il cablaggio verso i moduli I/O host aggiuntivi e collegare solo ai moduli I/O host installati.
+
+* Un sistema storage direct-attached dispone di due percorsi separati per la ridondanza: percorso A e percorso B.
++
+** La connettività del percorso A è mostrata con cablaggio blu e porte blu sugli host e sui controller. Collega le porte HBA di ciascun host alle porte a e b del controller A.
+** La connettività Path B è mostrata con cavi rossi e porte rosse sugli host e sui controller. Collega le porte HBA di ciascun host alle porte a e b del controller B.
+
+
+
+
+.Fasi
+. Collegare gli host ai controller:
++
+.. Collega le porte HBA del percorso A (blu) dell'host 1 alle porte a del controller A (e1a, e2a e e3a).
+.. Collega il percorso B (rosso) dell'host 1 dalle porte HBA alle porte a del controller B (e1a, e2a e e3a).
+.. Collega il cavo host 2 percorso A (blu) dalle porte HBA alle porte b del controller A (e1b, e2b e e3b).
+.. Collega le porte HBA dell'host 2 percorso B (rosso) alle porte b del controller B (e1b, e2b e e3b).
++
+*Cavi da 200 GbE*
+
++
+image::../media/oie_cable_sfp_gbe_copper.png[Cavo 200 GbE]
+
++
+image:../media/drw_ef80_2p_200gbe_ib_3hic_direct_ieops-2680.svg["Topologia EF80 ad accesso diretto agli host utilizzando tre moduli I/O ib a 2 porte 200gbe"]
+
+
+
+
+
+=====
+.EF80 con tre moduli I/O FC a 4 porte 64Gb
+[%collapsible]
+=====
+.A proposito di questa attività
+* L'esempio di cablaggio mostra i moduli I/O host negli slot 1, 2 e 3. Questo è il numero massimo di moduli I/O host supportati per il sistema storage EF80. Tuttavia, è necessario solo il modulo I/O host nello slot 1; i moduli I/O host negli slot 2 e slot 3 sono entrambi opzionali.
++
+Se il sistema storage dispone di un numero inferiore di moduli I/O host installati, è possibile ignorare il cablaggio verso i moduli I/O host aggiuntivi e collegare solo ai moduli I/O host installati.
+
+* Un sistema storage direct-attached dispone di due percorsi separati per la ridondanza: percorso A e percorso B.
++
+** Il percorso di connettività A è mostrato con cavi blu e porte blu sugli host e sui controller. Collega le porte HBA di ciascun host alle porte a e c del controller A.
+** Il percorso di connettività B è mostrato con cavi rossi e porte rosse sugli host e sui controller. Collega le porte HBA di ciascun host alle porte a e c del controller B.
+
+
+* Sebbene l'esempio di cablaggio mostri le porte a e c del modulo I/O collegate agli host, è possibile utilizzare le porte a e b oppure le porte c e d.
+
+
+.Fasi
+. Collegare gli host ai controller:
++
+.. Collega il percorso host 1 A (blu) dalle porte HBA alle porte a del controller A (1a, 2a e 3a).
+.. Collega il percorso B (rosso) dell'host 1 dalle porte HBA alle porte a del controller B (1a, 2a e 3a).
+.. Collega il cavo host 2 percorso A (blu) dalle porte HBA alle porte c del controller A (1c, 2c e 3c).
+.. Collegare le porte HBA del cavo host 2 percorso B (rosso) alle porte c (1c, 2c e 3c) del controller B.
++
+*Cavi FC da 64 Gb/s*
+
++
+image:../media/oie_cable_sfp_gbe_copper.png["cavo FC da 64 Gb"]
+
++
+image:../media/drw_ef80_4p_64gb_fc_3hic_direct_ieops-2674.svg["Topologia EF80 a collegamento diretto agli host utilizzando tre moduli I/O FC a 4 porte da 64 Gb."]
+
+
+
+
+
+=====
+--
+.Topologia collegata al fabric
+--
+Gli esempi seguenti mostrano il cablaggio di un sistema storage agli host utilizzando una topologia fabric-attached.
+
+.EF50 con due moduli I/O FC a 4 porte da 64Gb
+[%collapsible]
+=====
+.A proposito di questa attività
+* L'esempio di cablaggio mostra i moduli I/O host negli slot 1 e 2. Questo è il numero massimo di moduli I/O host supportati per il sistema storage EF50. Tuttavia, è necessario solo il modulo I/O host nello slot 1; il modulo I/O host nello slot 2 è opzionale.
++
+Se il sistema storage dispone di un modulo I/O host installato, puoi ignorare il cablaggio verso il modulo I/O host aggiuntivo e collegare solo al modulo I/O host installato.
+
+* Un sistema storage collegato a fabric dispone di due percorsi di switch separati per la ridondanza: percorso switch 1 e percorso switch 2.
++
+** La connettività del percorso dello switch 1 è mostrata con cavi blu e porte blu sugli host e sui controller. Collega le porte HBA di ciascun host tramite lo switch 1 alle porte a e c del controller A e del controller B.
+** La connettività del percorso dello switch 2 è mostrata con cavi rossi e porte rosse sugli host e sui controller. Collega le porte HBA di ciascun host tramite lo switch 2 alle porte b e d del controller A e del controller B.
+
+
+
+
+.Fasi
+. Collega gli host agli switch.
++
+È possibile utilizzare qualsiasi porta sugli switch.
+
++
+.. Collega le porte HBA del percorso switch 1 (blu) di host 1 e host 2 allo switch 1.
+.. Collegare host 1 e host 2, percorso switch 2 (rosso), porte HBA allo switch 2.
+
+
+. Collega gli switch ai controller:
++
+.. Collegare l'interruttore a cavo 1 (blu) alle porte a e c (1a, 2a, 1c e 2c) del controller A.
+.. Collegare l'interruttore a cavo 1 (blu) alle porte a e c (1a, 2a, 1c e 2c) del controller B.
+.. Collegare l'interruttore a cavo 2 (rosso) alle porte b e d (1b, 2b, 1d e 2d) del controller A.
+.. Collegare l'interruttore a cavo 2 (rosso) alle porte b e d (1b, 2b, 1d e 2d) del controller B.
++
+*Cavi FC da 64 Gb/s*
+
++
+image:../media/oie_cable_sfp_gbe_copper.png["cavo FC da 64 Gb"]
+
++
+image:../media/drw_ef50_4p_64gb_fc_2hic_fabric_ieops-2673.svg["Topologia fabric-attached EF50 che utilizza due moduli I/O FC a 4 porte da 64 Gb"]
+
+
+
+
+
+=====
+.EF80 con tre moduli I/O a 2 porte 200 GbE
+[%collapsible]
+=====
+.A proposito di questa attività
+* L'esempio di cablaggio mostra i moduli I/O host negli slot 1, 2 e 3. Questo è il numero massimo di moduli I/O host supportati per il sistema storage EF80. Tuttavia, è necessario solo il modulo I/O host nello slot 1; i moduli I/O host negli slot 2 e slot 3 sono entrambi opzionali.
++
+Se il sistema storage dispone di un numero inferiore di moduli I/O host installati, è possibile ignorare il cablaggio verso i moduli I/O host aggiuntivi e collegare solo ai moduli I/O host installati.
+
+* L'esempio di cablaggio mostra tre HBA su ciascun host. Se i tuoi host hanno meno di tre HBA, puoi ignorare il cablaggio verso le HBA aggiuntive e collegare solo alle HBA già installate.
+* Un sistema storage collegato a fabric dispone di due percorsi di switch separati per la ridondanza: percorso switch 1 e percorso switch 2.
++
+** La connettività del percorso dello Switch 1 è mostrata con cavi blu e porte blu sugli host e sui controller. Collega le porte HBA di ciascun host tramite switch 1 alle porte a del controller A e del controller B.
+** La connettività del percorso dello switch 2 è mostrata con cavi rossi e porte rosse sugli host e sui controller. Collega le porte HBA di ciascun host tramite switch 2 alle porte b del controller A e del controller B.
+
+
+
+
+.Fasi
+. Collega gli host agli switch:
++
+È possibile utilizzare qualsiasi porta sugli switch.
+
++
+.. Collega le porte HBA del percorso switch 1 (blu) di host 1 e host 2 allo switch 1.
+.. Collegare host 1 e host 2, percorso switch 2 (rosso), porte HBA allo switch 2.
+
+
+. Collega gli switch ai controller:
++
+.. Collega il cavo switch 1 (blu) alle porte a del controller A (e1a, e2a e e3a).
+.. Collegare l'interruttore del cavo 1 (blu) alle porte a del controller B (e1a, e2a e e3a).
+.. Collegare l'interruttore a cavo 2 (rosso) alle porte b (e1b, e2b e e3b) del controller A.
+.. Collegare l'interruttore a cavo 2 (rosso) alle porte b del controller B (e1b, e2b e e3b).
++
+*Cavi da 200 GbE*
+
++
+image::../media/oie_cable_sfp_gbe_copper.png[Cavo 200 GbE]
+
++
+image:../media/drw_ef80_2p_200gbe_ib_3hic_fabric_ieops-2679.svg["Topologia EF80 fabric-attached che utilizza tre moduli IO a 2 porte 200gbe"]
+
+
+
+
+
+=====
+.EF80 con tre moduli I/O FC a 4 porte 64Gb
+[%collapsible]
+=====
+.A proposito di questa attività
+* L'esempio di cablaggio mostra i moduli I/O host negli slot 1, 2 e 3. Questo è il numero massimo di moduli I/O host supportati per il sistema storage EF80. Tuttavia, è necessario solo il modulo I/O host nello slot 1; i moduli I/O host negli slot 2 e slot 3 sono entrambi opzionali.
++
+Se il sistema storage dispone di un numero inferiore di moduli I/O host installati, è possibile ignorare il cablaggio verso i moduli I/O host aggiuntivi e collegare solo ai moduli I/O host installati.
+
+* L'esempio di cablaggio mostra tre HBA su ciascun host. Se i tuoi host hanno meno di tre HBA, puoi ignorare il cablaggio verso le HBA aggiuntive e collegare solo alle HBA già installate.
+* Un sistema storage collegato a fabric dispone di due percorsi di switch separati per la ridondanza: percorso switch 1 e percorso switch 2.
++
+** La connettività del percorso dello switch 1 è mostrata con cavi blu e porte blu sugli host e sui controller. Collega le porte HBA di ciascun host tramite lo switch 1 alle porte a e c del controller A e del controller B.
+** La connettività del percorso dello switch 2 è mostrata con cavi rossi e porte rosse sugli host e sui controller. Collega le porte HBA di ciascun host tramite lo switch 2 alle porte b e d del controller A e del controller B.
+
+
+
+
+.Fasi
+. Collega gli host agli switch:
++
+È possibile utilizzare qualsiasi porta sugli switch.
+
++
+.. Collega le porte HBA del percorso switch 1 (blu) di host 1 e host 2 allo switch 1.
+.. Collegare host 1 e host 2, percorso switch 2 (rosso), porte HBA allo switch 2.
+
+
+. Collega gli switch ai controller:
++
+.. Collegare l'interruttore a cavo 1 (blu) alle porte a e c del controller A (1a, 2a, 3a, 1c, 2c e 3c).
+.. Collegare il cavo switch 1 (blu) alle porte a e c del controller B (1a, 2a, 3a, 1c, 2c e 3c).
+.. Collegare il cavo switch 2 (rosso) alle porte b e d del controller A (1b, 2b, 3b, 1d, 2d e 3d).
+.. Collegare il cavo switch 2 (rosso) alle porte b e d del controller B (1b, 2b, 3b, 1d, 2d e 3d).
++
+*Cavi FC da 64 Gb/s*
+
++
+image:../media/oie_cable_sfp_gbe_copper.png["cavo FC da 64 Gb"]
+
++
+image:../media/drw_ef80_4p_64gb_fc_3hic_fabric_ieops-2675.svg["Topologia EF80 fabric-attached che utilizza tre moduli IO FC a 4 porte da 64gb"]
+
+
+
+
+
+=====
+--
+====
+.Quali sono le prossime novità?
+Dopo aver cablato il mirroring tra controller e le connessioni host per il tuo sistema storage, link:install-power-hardware.html["Accendi il tuo sistema storage"].

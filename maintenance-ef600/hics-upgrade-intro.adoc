@@ -85,7 +85,7 @@ CAUTION: *Possibile perdita di dati* -- se si continua questa procedura mentre s
 +
 Il LED verde cache Active (cache attiva) sul retro di ciascun controller è acceso quando i dati memorizzati nella cache devono essere scritti sui dischi. Attendere che il LED si spenga.
 
-. Dalla home page di Gestione sistema SANtricity, selezionare *Visualizza operazioni in corso*. Attendere il completamento di tutte le operazioni prima di passare alla fase successiva.
+. Da SANtricity System Manager, selezionare menu:Storage[Operations in Progress]. Attendere il completamento di tutte le operazioni prima di procedere con il passaggio successivo.
 . Spegnere lo shelf del controller.
 +
 .. Etichettare e scollegare entrambi i cavi di alimentazione dallo shelf del controller.
@@ -265,7 +265,7 @@ Se lo stato non è ottimale o se uno dei LED attenzione è acceso, verificare ch
 
 NOTE: Se non si riesce a risolvere il problema, contattare il supporto tecnico.
 
-. Fare clic su menu:hardware[supporto > Centro aggiornamenti] per verificare che sia installata la versione più recente di SANtricity OS.
+. Fare clic su menu:supporto[Centro aggiornamento] per verificare che sia installata la versione più recente di SANtricity OS.
 +
 Se necessario, installare la versione più recente.
 

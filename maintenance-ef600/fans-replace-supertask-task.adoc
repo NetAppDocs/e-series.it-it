@@ -163,7 +163,7 @@ Posizionare il controller online, raccogliere i dati di supporto e riprendere le
 
 . Posizionare il controller online.
 +
-.. In System Manager, accedere alla pagina hardware.
+.. In System Manager, accedere alla pagina *hardware*.
 .. Selezionare *Mostra retro del controller*.
 .. Selezionare il controller con la ventola sostituita.
 .. Selezionare *Place online* dall'elenco a discesa.

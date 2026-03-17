@@ -1,0 +1,16 @@
+---
+section: install-hw-ef50-ef80
+title: EF50 e EF80
+entries:
+- title: Flusso di lavoro di installazione
+  url: "/install-hw-ef50-ef80/install-workflow.html"
+- title: Prepararsi all'installazione
+  url: "/install-hw-ef50-ef80/install-prepare.html"
+- title: Installare l'hardware
+  url: "/install-hw-ef50-ef80/install-hardware.html"
+- title: Hardware per cavi
+  url: "/install-hw-ef50-ef80/install-cable.html"
+- title: Accendere il sistema
+  url: "/install-hw-ef50-ef80/install-power-hardware.html"
+- title: Configurazione completa del sistema
+  url: "/install-hw-ef50-ef80/install-complete-setup.html"

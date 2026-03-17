@@ -64,8 +64,7 @@ Il file viene salvato nella cartella Download del browser con il nome *configura
 
 . Se il controller non è già offline, portalo offline usando Gestione di sistema di SANtricity.
 +
-.. Selezionare *hardware*.
-.. Se la figura mostra i dischi, selezionare *Mostra retro dello shelf* per visualizzare i controller.
+.. Selezionare menu: Hardware[Controllers and components].
 .. Selezionare il controller che si desidera mettere offline.
 .. Dal menu di scelta rapida, selezionare *posiziona offline* e confermare che si desidera eseguire l'operazione.
 +
@@ -228,7 +227,7 @@ Posizionare il controller online, raccogliere i dati di supporto e riprendere le
 .Fasi
 . Posizionare il controller online.
 +
-.. In System Manager, accedere alla pagina hardware.
+.. In System Manager, accedere alla pagina *hardware*.
 .. Selezionare *Mostra retro del controller*.
 .. Selezionare il controller con la scheda di interfaccia host sostituita.
 .. Selezionare *Place online* dall'elenco a discesa.

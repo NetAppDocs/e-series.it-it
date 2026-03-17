@@ -29,7 +29,7 @@ Viene visualizzata la finestra di dialogo Pre-Upgrade Health Check (verifica del
 +
 L'avanzamento viene visualizzato nella finestra di dialogo durante l'esecuzione del controllo dello stato di salute.
 
-. Una volta completato il controllo dello stato di salute, fare clic sui puntini di sospensione (...) a destra di ciascuna riga per visualizzare ulteriori informazioni ed eseguire altre attività.
+. Al termine del controllo dello stato di salute, puoi fare clic sull'ellissi (...) a destra di ciascuna riga per visualizzare ulteriori informazioni ed eseguire altre operazioni.
 
 
 

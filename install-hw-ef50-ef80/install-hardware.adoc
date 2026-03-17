@@ -1,0 +1,47 @@
+---
+permalink: install-hw-ef50-ef80/install-hardware.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Dopo esserti preparato per installare il tuo sistema storage EF50 o EF80, installa l"hardware per il montaggio a rack in un armadio o in un rack per telecomunicazioni, quindi installa e fissa il tuo sistema storage.' 
+---
+= Installare l'hardware - EF50 e EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo esserti preparato per installare il tuo sistema storage EF50 o EF80, installa l'hardware per il montaggio a rack in un armadio o in un rack per telecomunicazioni, quindi installa e fissa il tuo sistema storage.
+
+Se il tuo sistema storage è fornito in un cabinet, puoi saltare questa procedura e andare a link:install-cable.html["Collega l'hardware"].
+
+.Prima di iniziare
+* Preparare un'area di lavoro piana e priva di elettricità statica.
+* Procurarsi un braccialetto ESD e adottare precauzioni antistatiche.
+* Assicurati di avere le istruzioni di installazione incluse nella confezione dell'hardware per il montaggio a rack. In caso contrario, consulta link:../rackmount-hardware.html["Hardware per il montaggio in rack"^].
+* Presta attenzione alle precauzioni di sollevamento associate al peso del tuo sistema storage. Vedi link:install-prepare.html#step-2-understand-the-lifting-precautions["Comprendere le precauzioni per il sollevamento"^].
+* Comprendere che il flusso d'aria attraverso il sistema storage entra dalla parte anteriore, dove sono installati i drive, ed esce dalla parte posteriore, dove si trovano le porte.
+
+
+.Fasi
+. Installare l'hardware per il montaggio a rack del sistema storage utilizzando le istruzioni incluse con l'hardware per il montaggio a rack.
++
+
+CAUTION: Installare l'hardware di montaggio a rack nello spazio più basso disponibile nell'armadio o nel rack per evitare che il sistema storage si ribalti una volta installato.
+
+. Installa e proteggi il tuo sistema storage nell'armadio o nel rack per telecomunicazioni:
++
+.. Posiziona il sistema storage sulle guide e, sostenendo il sistema storage dal basso, fallo scorrere in posizione.
+.. Fissare il sistema storage all'armadio o al telco rack utilizzando le viti di montaggio incluse.
+
+
+. Fissare la cornice alla parte anteriore del sistema storage.
++
+.. Posizionare la ghiera davanti al sistema storage in modo che i fori alle due estremità si allineino con i dispositivi di fissaggio sul sistema storage.
+.. Far scattare il pannello in posizione.
+
+
+
+
+.Quali sono le prossime novità?
+Dopo aver installato l'hardware per il tuo sistema storage, link:install-cable.html["cablare l'hardware"].

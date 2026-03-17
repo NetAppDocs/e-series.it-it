@@ -14,7 +14,7 @@ summary: 'Se il controller include una porta NVMe su InfiniBand, è possibile co
 Se il controller include una porta NVMe su InfiniBand, è possibile configurare l'indirizzo IP di ciascuna porta utilizzando Gestione di sistema di SANtricity.
 
 .Fasi
-. Dall'interfaccia di System Manager, selezionare *hardware*.
+. Dal pannello di sinistra dell'interfaccia di System Manager, selezionare *Hardware*.
 . Se la figura mostra i dischi, fare clic su *Mostra retro dello shelf*.
 +
 Il grafico cambia per mostrare i controller invece dei dischi.

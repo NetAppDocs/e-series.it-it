@@ -69,7 +69,7 @@ NOTE: Se si sono verificati eventi critici non risolti nelle due o tre settimane
 
 . Se sono presenti IOM collegati all'hardware, completare la seguente procedura. In caso contrario, passare a. <<step2_install_drive_shelf,Fase 2: Installare lo shelf del disco e alimentare.>>
 +
-.. Selezionare *hardware*.
+.. Selezionare menu: Hardware[Controllers and components].
 .. Selezionare l'icona *IOM (ESM)*.
 +
 image::../media/sam1130_ss_hardware_iom_icon.gif[Icona IOM (ESM)]
@@ -192,7 +192,7 @@ image::../media/hot_ef_0.png[Esempio di cablaggio dello shelf di dischi]
 +
 image::../media/hot_ef_1.png[Esempio di cablaggio dello shelf di dischi]
 
-. In Gestione sistema di SANtricity, fare clic su *hardware*.
+. In SANtricity System Manager, fare clic su menu:Hardware[Controllers and components].
 +
 
 NOTE: A questo punto della procedura, si dispone di un solo percorso attivo per lo shelf del controller.
@@ -238,7 +238,7 @@ Collegare lo shelf di dischi al controller A, confermare lo stato IOM, quindi co
 +
 image::../media/hot_e4000_cabling_1.png[Cablaggio dello shelf di dischi]
 
-. In Gestione sistema di SANtricity, fare clic su *hardware*.
+. In SANtricity System Manager, fare clic su menu:Hardware[Controllers and components].
 +
 
 NOTE: A questo punto della procedura, si dispone di un solo percorso attivo per lo shelf del controller.
@@ -282,7 +282,7 @@ Per completare l'aggiunta a caldo, verificare la presenza di eventuali errori e 
 .Fasi
 . In Gestore di sistema di SANtricity, fare clic su *Home*.
 . Se il collegamento *Recover from Problems* (Ripristina da problemi) viene visualizzato al centro della pagina, fare clic sul collegamento e risolvere eventuali problemi indicati nel Recovery Guru.
-. In Gestione sistema di SANtricity, fare clic su *hardware* e scorrere verso il basso, se necessario, per visualizzare lo shelf di dischi appena aggiunto.
+. In SANtricity System Manager, fai clic su menu:Hardware[Controllers and components] e scorri verso il basso, se necessario, per visualizzare il nuovo drive shelf.
 . Per i dischi precedentemente installati in un sistema storage diverso, aggiungere un disco alla volta allo shelf di dischi appena installato. Attendere che ogni disco venga riconosciuto prima di inserire il disco successivo.
 +
 Quando un disco viene riconosciuto dal sistema di storage, la rappresentazione dello slot nella pagina *hardware* viene visualizzata come un rettangolo blu.

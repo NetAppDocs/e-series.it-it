@@ -1,0 +1,294 @@
+---
+permalink: maintenance-ef50-ef80/io-module-upgrade.html 
+sidebar: sidebar 
+keywords: ef50, ef80, upgrade io module, upgrade hic, upgrade host interface card 
+summary: È possibile aggiornare i moduli I/O nel sistema storage EF50 o EF80 per aumentare il numero di porte host, migliorare la connettività di rete ed espandere la capacità del sistema di gestire il traffico dati. 
+---
+= Aggiorna i moduli I/O - EF50 e EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile aggiornare i moduli I/O nel sistema storage EF50 o EF80 per aumentare il numero di porte host, migliorare la connettività di rete ed espandere la capacità del sistema di gestire il traffico dati.
+
+.A proposito di questa attività
+* In questa procedura, il termine _modulo I/O_ viene utilizzato al posto di schede di interfaccia verso gli host (HIC).
+* È possibile aggiornare i moduli I/O sostituendo i moduli I/O esistenti o aggiungendo moduli I/O agli slot I/O non utilizzati.
++
+Gli slot I/O non utilizzati devono essere dotati di moduli di chiusura per prevenire possibili problemi termici e per la conformità EMC.
+
+* Aggiornare i moduli I/O preparando, spegnendo entrambi i controller, aggiornando i moduli I/O in entrambi i controller, riaccendendo entrambi i controller, verificando che l'aggiornamento sia andato a buon fine e, se necessario, verificando e modificando il protocollo del modulo I/O host.
++
+Non è necessario rimuovere i controller dallo chassis perché i moduli I/O sono accessibili con i controller in posizione.
+
+* È necessario spegnere entrambi i controller prima di scollegare qualsiasi cavo del modulo I/O.
+* È possibile attivare i LED di localizzazione (blu) del sistema storage (sulla parte anteriore del sistema storage e su entrambi i controller) per facilitare l'individuazione fisica del sistema storage. Utilizzando SANtricity System Manager, selezionare *Hardware* > *Controllers and components*, selezionare la scheda *Controller shelf* e dal menu contestuale selezionare *Turn on locator light*.
+
+
+
+
+== Fase 1: Prepararsi ad aggiornare i moduli I/O
+
+Preparatevi ad aggiornare i moduli I/O pianificando una finestra di manutenzione, raccogliendo gli strumenti e le attrezzature necessarie ed eseguendo il backup del database della configurazione del sistema storage.
+
+.Fasi
+. Pianifica una finestra di manutenzione di inattività per questa procedura. Non potrai accedere ai dati sul sistema storage finché non avrai completato correttamente questa procedura. Poiché entrambi i controller devono avere la stessa configurazione dei moduli I/O quando sono accesi, l'alimentazione deve essere disattivata durante l'aggiornamento dei moduli I/O.
+. Assicurarsi di disporre di quanto segue:
++
+** I nuovi moduli I/O a cui stai eseguendo l'aggiornamento.
++
+Assicurati che i moduli I/O a cui stai eseguendo l'upgrade siano supportati dal tuo sistema storage, che tu abbia lo stesso tipo e numero di moduli I/O per ciascun controller e che tu comprenda la priorità degli slot (il nuovo modulo I/O deve essere installato nello stesso slot su ciascun controller).
+
++
+
+CAUTION: *Possibile perdita di accesso ai dati* -- La presenza di moduli I/O incompatibili o non corrispondenti provoca il blocco dei controller quando si applica l'alimentazione.
+
++
+Se necessario, è possibile verificare i moduli I/O supportati e la priorità degli slot per il sistema storage all'indirizzo  https://hwu.netapp.com["NetApp Hardware Universe"^].
+
+** Cavi per collegare i nuovi moduli I/O alla tua rete.
+** Un braccialetto ESD o hai preso altre precauzioni antistatiche.
+** Una superficie di lavoro piana e antistatica.
+** Una postazione di gestione dotata di un browser che può accedere a SANtricity System Manager per i controller.
++
+Per aprire l'interfaccia di System Manager, puntare il browser al domain name o all'indirizzo IP del controller di destinazione.
+
+
+
+. Eseguire il backup del database della configurazione del sistema storage utilizzando SANtricity System Manager:
++
+Se si verifica un problema durante la rimozione di un controller, è possibile utilizzare il file salvato per ripristinare la configurazione. Il sistema salva lo stato corrente del database di configurazione RAID, che include tutti i dati relativi ai gruppi di volumi e ai pool di dischi sul controller danneggiato.
+
++
+.. Selezionare *Support* > *Support Center* > *Diagnostics*.
+.. Selezionare *Collect Configuration Data* (raccolta dati di configurazione).
+.. Seleziona *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+
+
+
+
+== Passaggio 2: spegnere entrambi i controller
+
+Spegnere entrambi i controller nel sistema storage per poter aggiornare in sicurezza i moduli I/O in entrambi i controller.
+
+.Fasi
+. Dalla home page di SANtricity System Manager, verificare che il sistema storage abbia stato Optimal.
++
+
+NOTE: Se lo stato non è Ottimale, utilizza Recovery Guru o contatta  https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"^] per risolvere il problema.
+
+. Assicurarsi che non siano in corso operazioni di I/O tra il sistema storage e tutti gli host connessi.
++
+Ad esempio, è possibile eseguire questi passaggi:
+
++
+** Interrompere tutti i processi che coinvolgono le LUN mappate dal sistema storage agli host.
+** Assicurarsi che nessuna applicazione stia scrivendo dati su LUN mappate dal sistema storage agli host.
+** Smontare tutti i file system associati ai volumi sul storage system.
++
+
+NOTE: Le procedure esatte per arrestare le operazioni di I/O dell'host dipendono dal sistema operativo host e dalla configurazione, aspetti che esulano dall'ambito di queste istruzioni. Se non si è certi di come arrestare le operazioni di I/O dell'host nel proprio ambiente, si consiglia di spegnere l'host o di contattare  https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"^].
+
++
+
+CAUTION: *Possibile perdita di dati* -- se si continua questa procedura mentre si verificano le operazioni di i/o, l'applicazione host potrebbe perdere l'accesso ai dati perché lo storage non è accessibile.
+
+
+
+. Su ciascun controller, assicurarsi che il LED NV Caching Active (green) sia spento.
++
+Quando il LED NV Caching Active (verde) è spento, tutti i dati presenti nella cache sono stati scritti sulle unità ed è possibile rimuovere in sicurezza il controller difettoso.
+
++
+
+NOTE: Se il LED NV Caching Active (verde) è acceso, i dati memorizzati nella cache vengono scritti sulle unità. Devi attendere che il processo sia completato e che il LED NV Caching Active (verde) si spenga. Tuttavia, se il LED rimane acceso per più di cinque minuti, contatta  https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] prima di continuare con questa procedura.
+
++
+Il LED NV Caching Active (verde) si trova accanto all'icona NV sul controller.
+
++
+image::../media/drw_g_nvmem_led_ieops-1839.svg[Posizione del LED di stato NV]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout numero 1]
+ a| 
+Icona NV e LED NV Caching Active sul controller
+
+|===
+. Confermare che le operazioni sui controller siano state completate in SANtricity System Manager:
++
+.. Seleziona *Storage* > *Operations in progress* per visualizzare la schermata Overview.
+.. Attendi il completamento di tutte le operazioni e che nella schermata Overview venga visualizzato *No operations currently in progress*, prima di procedere al passaggio successivo.
+
+
+. Spegnere entrambi i controller:
++
+.. Etichetta e poi scollega il cavo di alimentazione da entrambi i controller.
+.. Attendi che tutti i LED su entrambi i controller si spengano.
+
+
+
+
+
+
+== Passaggio 3: Aggiornare i moduli I/O
+
+Scollega i cavi dai moduli I/O che desideri aggiornare (a meno che tu non disponga di moduli di copertura I/O), sostituisci i moduli I/O o i moduli di copertura I/O con i nuovi moduli I/O e quindi collega i nuovi moduli I/O.
+
+.A proposito di questa attività
+Si inizia con un controller, quindi si ripetono i passaggi per l'altro controller.
+
+.Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Su uno dei controller, scollega il cablaggio dal modulo I/O che stai rimuovendo, a meno che non si tratti di un modulo di copertura I/O.
++
+È possibile etichettare i cavi per sapere da dove provengono. Tuttavia, a seconda del tipo di modulo I/O a cui si sta eseguendo l'aggiornamento, potrebbe non essere possibile ricablare alle stesse porte o riutilizzare gli stessi cavi.
+
+. Rimuovere il modulo I/O o il modulo di blocco I/O dallo slot di destinazione.
++
+L'illustrazione seguente mostra un modulo di blocco I/O in fase di rimozione.
+
++
+image::../media/drw_g_io_blanking_module_replace_ieops-1901.svg[Rimuovere un modulo di blanking I/O]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Callout numero 1"]
+ a| 
+Sul modulo I/O o sul modulo di chiusura I/O, ruotare la vite a testa zigrinata in senso antiorario per allentarla.
+
+
+
+ a| 
+image:../media/icon_round_2.png["Callout numero 2"]
+ a| 
+Estrarre il modulo I/O o il modulo di chiusura I/O dal controller utilizzando la linguetta a sinistra e la vite a testa zigrinata.
+
+|===
+. Disimballare il nuovo modulo I/O e posizionarlo su una superficie piana e antistatica vicino al sistema storage.
+. Installare il nuovo modulo I/O:
++
+.. Allineare il modulo I/O con i bordi dell'apertura dello slot del controller.
+.. Spingere delicatamente il modulo I/O fino in fondo nello slot, assicurandosi che sia correttamente inserito nel connettore.
++
+È possibile utilizzare la linguetta a sinistra e la vite a testa zigrinata per inserire il modulo I/O.
+
+.. Ruotare la vite a testa zigrinata in senso orario per stringere.
+
+
+. Collegare il modulo I/O alla rete host.
++
+È possibile utilizzare la sezione link:../install-hw-ef50-ef80/install-cable.html["Collega l'hardware"^] del contenuto di installazione e configurazione del sistema per il cablaggio della rete host.
+
+. Ripeti questi passaggi per aggiornare un modulo I/O nell'altro controller.
+
+
+
+
+== Passaggio 4: Accendere entrambi i controller
+
+Accendere entrambi i controller.
+
+.Fasi
+. Collega il cavo di alimentazione a entrambi i controller.
++
+I controller iniziano l'avvio.
+
+. Verifica i LED sui controller per accertarti che la comunicazione tra i controller sia stata ristabilita:
++
+** Il LED di attenzione rimane acceso.
+** I LED del collegamento host potrebbero essere accesi, lampeggianti o spenti, a seconda dell'interfaccia host.
+
+
+. Quando i controller saranno di nuovo online:
++
+.. Confermate che il loro stato sia Optimal.
+.. Verificare che il LED di attenzione su ciascun controller sia spento.
++
+Se lo stato non è Optimal o se uno qualsiasi dei LED di attenzione è acceso, confermare che tutti i cavi siano inseriti correttamente.
+
++
+
+NOTE: Se non riesci a risolvere il problema, contatta https://www.netapp.com/company/contact-us/support/["Supporto NetApp"^]. Se necessario, raccogli i dati di supporto per il tuo sistema storage utilizzando SANtricity System Manager.
+
+
+
+
+
+
+
+== Passaggio 5: Completare l'aggiornamento del modulo I/O
+
+Utilizzando SANtricity System Manager, assicurati che sia installata la versione più recente di SANtricity OS, verifica che tutti i volumi siano restituiti ai rispettivi controller, raccogli i dati di supporto per poter riprendere le operazioni e, se necessario, verifica e modifica il protocollo del modulo I/O host.
+
+.Fasi
+. Assicurati che sia installata la versione più recente di SANtricity OS:
++
+.. Seleziona *Support* > *Upgrade Center*.
+.. Se necessario, installare la versione più recente.
+
+
+. Verificare che tutti i volumi siano restituiti ai rispettivi controller proprietari:
++
+.. Seleziona *Storage* > *Volumes*.
+.. Dalla pagina *All Volumes*, verificare che i volumi siano distribuiti ai controller proprietari.
+.. Seleziona *Altro* > *Modifica proprietario del volume* per visualizzare i proprietari del volume.
+
+
+. Il passo successivo dipende dal fatto che i volumi vengano restituiti o meno ai rispettivi controller proprietari:
++
+[cols="1,2"]
+|===
+| Se... | Poi... 
+
+
+ a| 
+Tutti i volumi sono di proprietà dei rispettivi controller
+ a| 
+Passa al passaggio successivo.
+
+
+
+ a| 
+Nessuno dei volumi viene restituito ai rispettivi controller proprietari
+ a| 
+Seleziona *Storage* > *Volumes* > *More* e dal menu a tendina seleziona *Redistribuisci volumi* per restituire i volumi ai controller proprietari.
+
+
+
+ a| 
+Solo alcuni dei volumi vengono restituiti ai rispettivi controller dopo la distribuzione automatica o manuale
+ a| 
+Verifica Recovery Guru per problemi di connettività host.
+
+Se non è presente un Recovery Guru o se, dopo aver seguito i passaggi del Recovery Guru, i volumi non vengono ancora restituiti ai rispettivi controller, contattare https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] prima di continuare con questa procedura.
+
+|===
+. Raccogli i dati di supporto per il tuo sistema storage:
++
+.. Selezionare *Support* > *Support Center* > *Diagnostics*.
+.. Selezionare *Collect Support Data*.
+.. Seleziona *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *support-data.7z*.
+
+
+
+. Se è necessario verificare e modificare il protocollo del modulo I/O host, utilizzare la procedura xref:io-module-change-protocol.html[Modificare il protocollo del modulo I/O host per un EF50 o EF80].
+

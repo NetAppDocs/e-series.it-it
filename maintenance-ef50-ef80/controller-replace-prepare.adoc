@@ -1,0 +1,84 @@
+---
+permalink: maintenance-ef50-ef80/controller-replace-prepare.html 
+sidebar: sidebar 
+keywords: ef50, ef80, prepare the impaired controller 
+summary: Preparatevi a sostituire il controller danneggiato nel vostro sistema storage EF50 o EF80 disimballando il controller sostitutivo, verificando che il codice del componente sia corretto ed eseguendo il backup del database di configurazione. 
+---
+= Prepararsi alla sostituzione del controller - EF50 e EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Preparatevi a sostituire il controller danneggiato nel vostro sistema storage EF50 o EF80 disimballando il controller sostitutivo, annotandone l'indirizzo MAC, verificando che il part number sia corretto ed eseguendo il backup del database della configurazione del sistema storage.
+
+.Fasi
+. Disimballa il controller di ricambio e posizionalo su una superficie piana e antistatica.
++
+Conservate il materiale di imballaggio per utilizzarlo al momento della restituzione del controller difettoso.
+
+. Prendi nota dell'indirizzo MAC sul lato del controller di ricambio.
++
+Utilizzerai l'indirizzo MAC più avanti nella procedura di sostituzione del controller.
+
+. Confermare che il codice articolo sul controller di ricambio sia lo stesso del codice articolo di ricambio del controller in SANtricity System Manager:
++
+
+CAUTION: *Possibile perdita di accesso ai dati*: Se i due codici articolo non sono uguali, non tentare questa procedura. La presenza di controller non corrispondenti causa il blocco del controller sostitutivo quando viene messo in funzione.
+
++
+.. Prendi nota del part number riportato sul lato del controller di ricambio.
+.. Individua il numero di parte di ricambio per il controller difettoso visualizzato nell'area dei dettagli di Recovery Guru.
++
+Se devi trovare questo numero manualmente, segui questi passaggi:
+
++
+... Seleziona *Hardware* > *Controllers and components*.
+... Selezionare la grafica del controller per il controller difettoso (Controller A o Controller B) per visualizzare il menu contestuale.
+... Selezionare *Visualizza impostazioni*.
+... Nella scheda *base*, annotare il *numero di parte di ricambio* del controller.
+
+
+.. Confronta i due codici articolo per confermare che siano gli stessi.
+.. Il passo successivo dipende dal fatto che i codici dei componenti siano uguali o meno:
++
+[cols="1,2"]
+|===
+| Se... | Poi... 
+
+
+ a| 
+I due codici articolo sono identici
+ a| 
+Continua al passaggio successivo.
+
+
+
+ a| 
+I due codici articolo sono diversi
+ a| 
+Non è possibile continuare con questa procedura.
+
+Contatta  https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] per assistenza.
+
+|===
+
+
+. Eseguire il backup del database della configurazione del sistema storage utilizzando SANtricity System Manager.
++
+Se si verifica un problema durante la rimozione di un controller, è possibile utilizzare il file salvato per ripristinare la configurazione. Il sistema salva lo stato corrente del RAID configuration database, che include tutti i dati relativi ai volume groups e ai disk pools presenti sul controller.
+
++
+.. Selezionare *Support › Support Center › Diagnostics*.
+.. Selezionare *Collect Configuration Data* (raccolta dati di configurazione).
+.. Seleziona *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+
+
+.Quali sono le prossime novità?
+Dopo aver preparato la sostituzione del controller, link:controller-replace-offline-controller.html["offline il controller danneggiato"].

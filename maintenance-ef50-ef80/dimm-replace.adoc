@@ -1,0 +1,441 @@
+---
+permalink: maintenance-ef50-ef80/dimm-replace.html 
+sidebar: sidebar 
+keywords: ef50, ef80, replace a dimm 
+summary: Sostituisci un modulo DIMM nel tuo sistema storage EF50 o EF80 quando è guasto, segnala di non essere in uno stato ottimale o ha una capacità non corrispondente. 
+---
+= Sostituire un DIMM - EF50 e EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sostituisci un modulo DIMM nel tuo sistema storage EF50 o EF80 quando è guasto, segnala di non essere in uno stato ottimale o ha una capacità non corrispondente.
+
+.A proposito di questa attività
+* Sostituire un DIMM determinando se è necessario sostituirlo, preparando, mettendo il controller offline, rimuovendo il controller, sostituendo il DIMM, reinstallando il controller, mettendolo online, completando la sostituzione e restituendo il componente guasto a NetApp.
+* È necessario mettere offline il controller difettoso prima di scollegare qualsiasi cavo.
+* È possibile attivare i LED di localizzazione (blu) del sistema storage (sulla parte anteriore del sistema storage e su entrambi i controller) per facilitare l'individuazione fisica del sistema storage. Utilizzando SANtricity System Manager, selezionare *Hardware* > *Controllers and components*, selezionare la scheda *Controller shelf* e dal menu contestuale selezionare *Turn on locator light*.
+
+
+
+
+== Fase 1: Determinare se è necessario sostituire un DIMM
+
+Sostituisci un DIMM quando si guasta, segnala di non essere in uno stato ottimale o ha una capacità non corrispondente.
+
+.Fasi
+. Da SANtricity System Manager, accedere al profilo del storage controller per il controller danneggiato:
++
+.. Vai su *Support* > *Support Center*.
+.. Dalla pagina Support Resources, selezionare *Storage Array Profile*.
+.. Scorrere verso il basso o utilizzare il campo Search (Cerca) per individuare le informazioni *Data cache Module* (modulo cache dati).
+
+
+. Se per un DIMM viene visualizzata una delle seguenti condizioni, annotare la posizione del DIMM e continuare con questa procedura per sostituire il DIMM.
++
+Se nessuna di queste condizioni è presente, non è necessario sostituire un DIMM. Uscire da questa procedura.
+
++
+** Un DIMM guasto
+** Un DIMM segnala *Data Cache Module* come non ottimale
+** Un DIMM con una capacità del *Data Cache Module* non corrispondente
+
+
+
+
+
+
+== Passo 2: Preparazione alla sostituzione di un DIMM
+
+Preparati a sostituire un DIMM assicurandoti che non vi siano altri problemi del sistema storage da risolvere, che i volumi siano nello stato corretto, raccogliendo gli strumenti e le attrezzature necessarie, prendendo precauzioni per prevenire scariche elettrostatiche ed eseguendo il backup del database della configurazione del sistema storage.
+
+.Fasi
+. Risolvere eventuali altri problemi del sistema storage.
++
+Utilizzando SANtricity System Manager, esamina i dettagli in Recovery Guru per vedere se ci sono altri problemi.
+
+. Assicurarsi che non siano in uso volumi o che su tutti gli host che utilizzano questi volumi sia installato un driver multipath.
+. Assicurarsi di disporre di quanto segue:
++
+** Un modulo DIMM di ricambio delle dimensioni corrette per la configurazione del tuo sistema storage.
+** Un braccialetto ESD o hai preso altre precauzioni antistatiche.
+** Una superficie di lavoro piana e antistatica.
+** Etichette per identificare ciascun cavo collegato al controller guasto.
+** Una stazione di gestione dotata di un browser che può accedere a SANtricity System Manager per il controller non funzionante.
++
+Per aprire l'interfaccia di System Manager, puntare il browser al domain name o all'indirizzo IP del controller difettoso.
+
+
+
+. Prevenire le scariche elettrostatiche (ESD) durante la manipolazione e l'installazione di un DIMM:
++
+** Conservare il modulo DIMM nel sacchetto ESD fino a quando non si è pronti per l'installazione.
+** Aprire il sacchetto ESD manualmente o tagliare la parte superiore con un paio di forbici. Non inserire utensili metallici o coltelli nel sacchetto ESD.
+** Conservare la busta ESD e tutto il materiale di imballaggio per restituire il DIMM guasto o utilizzare un imballaggio approvato quando si spedisce un DIMM.
+** Indossare sempre un braccialetto antistatico collegato a terra su una superficie non verniciata sul chassis del sistema storage.
+** Evitare i campi magnetici. Tenere i DIMM lontani dai dispositivi magnetici.
+
+
+. Eseguire il backup del database della configurazione del sistema storage utilizzando SANtricity System Manager:
++
+Se si verifica un problema durante la rimozione di un controller, è possibile utilizzare il file salvato per ripristinare la configurazione. Il sistema salva lo stato corrente del database di configurazione RAID, che include tutti i dati relativi ai gruppi di volumi e ai pool di dischi sul controller danneggiato.
+
++
+.. Selezionare *Support* > *Support Center* > *Diagnostics*.
+.. Selezionare *Collect Configuration Data* (raccolta dati di configurazione).
+.. Seleziona *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+
+
+
+
+== Passaggio 3: Mettere il controller offline
+
+Metti il controller difettoso offline in modo da poter eseguire in sicurezza il resto di questa procedura.
+
+.A proposito di questa attività
+Ogni volta che si mette un controller offline, è necessario attendere almeno un minuto prima di riportare il controller online. Questo periodo di attesa consente al sistema storage di aggiornare lo stato del controller e di garantire che tutti i dati memorizzati nella cache vengano scritti sulle unità.
+
+.Fasi
+. Se il controller danneggiato non è già offline, mettilo offline utilizzando SANtricity System Manager:
++
+.. Seleziona *Hardware* > *Controllers and components* per visualizzare i controller.
+.. Seleziona il controller che desideri mettere offline per visualizzare il suo menu dei contenuti.
+.. Seleziona *Place offline* e poi conferma di voler eseguire l'operazione.
++
+
+NOTE: Se si accede a SANtricity System Manager utilizzando il controller che si sta tentando di mettere offline, viene visualizzato un messaggio "SANtricity System Manager non disponibile". Selezionare *Connetti a una connessione di rete alternativa* per accedere automaticamente a SANtricity System Manager utilizzando l'altro controller.
+
+
+
+. Attendere che Gestore di sistema di SANtricity aggiorni lo stato del controller su offline.
++
+
+CAUTION: Non iniziare altre operazioni fino a quando lo stato non è stato aggiornato.
+
+. Conferma che sia sicuro rimuovere il componente difettoso utilizzando il Recovery Guru:
++
+.. Seleziona *Recheck*.
+.. Confermare che il campo *OK to remove* nell'area Dettagli visualizzi *Sì*.
++
+
+CAUTION: Se nel campo *OK per rimuovere* non viene visualizzato *Sì*, non procedere con la rimozione del componente difettoso. Invece, risolvi il problema utilizzando il Recovery Guru.
+
+
+
+
+
+
+
+== Passaggio 4: Rimuovere il controller
+
+Verificare che tutti i dati presenti nella cache siano stati scritti sulle unità, scollegare tutti i cavi dal controller difettoso e quindi rimuovere il controller difettoso dallo chassis.
+
+.Fasi
+. Sul controller difettoso, assicurarsi che il LED NV Caching Active (verde) sia spento.
++
+Quando il LED NV Caching Active (verde) è spento, tutti i dati presenti nella cache sono stati scritti sulle unità ed è possibile rimuovere in sicurezza il controller difettoso.
+
++
+
+NOTE: Se il LED NV Caching Active (verde) è acceso, i dati memorizzati nella cache vengono scritti sulle unità. Devi attendere che il processo sia completato e che il LED NV Caching Active si spenga. Tuttavia, se il LED rimane acceso per più di cinque minuti, contatta https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] prima di continuare con questa procedura.
+
++
+Il LED NV Caching Active (verde) si trova accanto all'icona NV sul controller.
+
++
+image::../media/drw_g_nvmem_led_ieops-1839.svg[Posizione del LED di stato NV]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout numero 1]
+ a| 
+Icona NV e LED NV Caching Active sul controller
+
+|===
+
+
+. Indossare un braccialetto ESD o adottare altre precauzioni antistatiche.
+. Etichetta ciascun cavo collegato al controller guasto.
+. Scollegare il cavo di alimentazione dall'alimentatore sul controller guasto.
++
+
+NOTE: L'alimentatore (PSU) non ha un interruttore di alimentazione.
+
+. Scollega tutti i cavi dal controller difettoso.
+. Rimuovere il controller danneggiato:
++
+L'illustrazione seguente mostra il funzionamento delle maniglie del controller (dal lato sinistro del controller) durante la rimozione di un controller:
+
++
+image::../media/drw_g_and_t_handles_remove_ieops-1837.svg[operazione della maniglia del controller per rimuovere un controller]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout numero 1]
+ a| 
+Alle due estremità del controller, spingere verso l'esterno le linguette di bloccaggio verticali per riportare le impugnature in posizione orizzontale.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Callout numero 2]
+ a| 
+** Tirare le maniglie verso di sé per sganciare il controller dal midplane.
++
+Mentre tiri, le maniglie si estendono dal controller e poi senti una certa resistenza, continua a tirare.
+
+** Fai scorrere il controller fuori dallo chassis sostenendone la parte inferiore e posizionalo su una superficie di lavoro piana e antistatica.
+
+
+
+
+ a| 
+image::../media/icon_round_3.png[Callout numero 3]
+ a| 
+Se necessario, ruotare le maniglie in posizione verticale (accanto alle linguette) per spostarle da parte.
+
+|===
+. Aprire il coperchio del controller ruotando la vite a testa zigrinata in senso antiorario per allentarla, quindi aprire il coperchio.
+
+
+
+
+== Passaggio 5: Sostituire un DIMM
+
+Individua il DIMM difettoso all'interno del controller danneggiato e sostituiscilo.
+
+.Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Individua il DIMM difettoso.
++
+
+NOTE: Consultare la  https://hwu.netapp.com["Netapp Hardware Universe"] o la mappa FRU sulla copertura del controller per le esatte posizioni dei DIMM.
+
+. Rimuovere il DIMM difettoso:
++
+image::../media/drw_g_dimm_ieops-1873.svg[Sostituzione DIMM]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout numero 1]
+ a| 
+Numerazione e posizioni degli slot DIMM.
+
+
+NOTE: A seconda del modello del sistema storage, saranno presenti due o quattro DIMM.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Callout numero 2]
+ a| 
+** Nota l'orientamento del DIMM nello slot in modo da poter inserire il DIMM sostitutivo utilizzando lo stesso orientamento.
+** Espellere il modulo DIMM difettoso spingendo lentamente verso l'esterno le due linguette di espulsione del DIMM situate a entrambe le estremità dello slot DIMM.
+
+
+
+IMPORTANT: Afferrare con cura il DIMM dagli angoli o dai bordi per evitare di esercitare pressione sui componenti del circuito stampato del DIMM.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Callout numero 3]
+ a| 
+Sollevare il DIMM ed estrarlo dallo slot.
+
+Le linguette di espulsione rimangono in posizione aperta.
+
+|===
+. Disimballare il DIMM sostitutivo e posizionarlo su una superficie piana e antistatica vicino al sistema storage.
++
+Conserva il materiale di imballaggio da utilizzare quando restituisci il DIMM difettoso.
+
+. Installare il DIMM sostitutivo:
++
+.. Assicurarsi che le linguette di espulsione dei DIMM sul connettore siano in posizione aperta.
+.. Tenere il DIMM per gli angoli e inserirlo perfettamente nello slot.
++
+L'incavo nella parte inferiore del DIMM, tra i pin, deve allinearsi con la linguetta nello slot.
+
++
+Se inserito correttamente, il DIMM entra facilmente ma si fissa saldamente nello slot. Reinserisci il DIMM se ritieni che non sia inserito correttamente. Non forzare mai un DIMM in uno slot.
+
+.. Verificare visivamente che il DIMM sia allineato correttamente e completamente inserito nello slot.
+.. Premere con cautela, ma con decisione, sul bordo superiore del DIMM finché le linguette di espulsione non si incastrano nelle tacche presenti alle due estremità del DIMM.
+
+
+
+
+
+
+== Passaggio 6: Reinstallare il controller
+
+Reinstallare il controller nel chassis, ricollegare il suo cavo di alimentazione e tutti i suoi cavi.
+
+.A proposito di questa attività
+L'illustrazione seguente mostra il funzionamento delle maniglie del controller (dal lato sinistro di un controller) durante la reinstallazione del controller e può essere utilizzata come riferimento per le fasi di reinstallazione del controller.
+
+image::../media/drw_g_and_t_handles_reinstall_ieops-1838.svg[operazione della maniglia del controller per installare un controller]
+
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout numero 1]
+ a| 
+Se hai ruotato le manopole del controller in posizione verticale (vicino alle linguette) per spostarle di lato durante la manutenzione del controller, ruotale in posizione orizzontale.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Callout numero 2]
+ a| 
+Spingere le maniglie per reinserire il controller nello chassis.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Callout numero 3]
+ a| 
+Ruotare le maniglie in posizione verticale e bloccarle in posizione con le linguette di bloccaggio.
+
+|===
+.Fasi
+. Chiudere il coperchio del controller e ruotare la vite a testa zigrinata in senso orario fino a serrarla.
+. Inserire il controller nello chassis:
++
+.. Allineare la parte posteriore del controller con l'apertura nel chassis e spingere delicatamente ma con decisione sulle maniglie finché il controller non incontra il midplane e non è completamente inserito.
++
+
+NOTE: Non esercitare una forza eccessiva durante l'inserimento del controller nel chassis; potrebbe danneggiare i connettori.
+
+.. Ruotare le manopole del controller verso l'alto e bloccarle in posizione con le linguette.
+
+
+. Ricollega il cavo di alimentazione all'alimentatore e fissa il cavo di alimentazione con il fermacavo del cavo di alimentazione.
++
+Una volta ripristinata l'alimentazione all'alimentatore, il LED di stato dovrebbe essere verde.
+
+. Ricollega tutti i cavi al controller.
++
+
+NOTE: Il ricollegamento dei cavi deve essere effettuato prima di mettere il controller online. Ciò è particolarmente importante per i collegamenti dei cavi di mirroring, poiché garantiscono la piena ridondanza del sistema e vengono utilizzati per il mirroring della cache e il trasferimento I/O.
+
+
+
+
+
+== Passaggio 7: Mettere il controller online
+
+Rimetti online il controller guasto.
+
+.Fasi
+. Metti online il controller utilizzando SANtricity System Manager:
++
+.. Seleziona *Hardware* > *Controllers and components* per visualizzare i controller.
+.. Seleziona il controller che desideri mettere online per visualizzare il suo menu contestuale.
+.. Seleziona *Place online* e poi conferma di voler eseguire l'operazione.
++
+Il sistema mette il controller in linea.
+
+
+
+. All'avvio del controller, controllare i LED del controller.
++
+Quando la comunicazione con l'altro controller viene ristabilita:
+
++
+** Il LED di attenzione di colore ambra rimane acceso.
+** I LED del collegamento host potrebbero essere accesi, lampeggianti o spenti, a seconda dell'interfaccia host.
+
+
+. Quando il controller torna online:
++
+.. Conferma che il suo stato sia Optimal.
+.. Verificare che il LED di attenzione sul controller sia spento.
++
+Se lo stato non è Optimal o se uno qualsiasi dei LED di attenzione è acceso, verificare che tutti i cavi siano inseriti correttamente e che il controller sia installato correttamente. Se necessario, rimuovere e reinstallare il controller.
+
++
+
+NOTE: Se non riesci a risolvere il problema, contatta https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"^] prima di continuare con questa procedura. Se necessario, raccogli i dati di supporto per il tuo sistema storage utilizzando SANtricity System Manager.
+
+
+
+
+
+
+
+== Passaggio 8: Completare la sostituzione del DIMM
+
+Utilizzando SANtricity System Manager, assicurati che sia installata la versione più recente di SANtricity OS, verifica che tutti i volumi siano restituiti ai rispettivi controller e raccogli i dati di supporto in modo da poter riprendere le operazioni.
+
+.Fasi
+. Assicurati che l'ultima versione di SANtricity OS sia installata sul sistema storage:
++
+.. Seleziona *Support* > *Upgrade Center*
+.. Se necessario, installare la versione più recente.
+
+
+. Verificare che tutti i volumi siano restituiti ai rispettivi controller proprietari:
++
+[cols="1,2"]
+|===
+| Se... | Poi... 
+
+
+ a| 
+Recovery Guru è presente e indica che i volumi non si trovano sul percorso preferito (non sono stati restituiti ai controller proprietari)
+ a| 
+.. Redistribuire i volumi ai rispettivi controller selezionando *Archiviazione* > *Volumi* > *Altro* e dal menu a discesa selezionare *Ridistribuisci volumi*.
+.. Verifica che tutti i volumi siano stati ridistribuiti ai rispettivi controller controllando se Recovery Guru è presente e indica ancora che i volumi non si trovano sul percorso preferito.
+
+
+
+NOTE: Se i volumi non sono ancora stati restituiti ai rispettivi controller, contattare https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"].
+
+
+
+ a| 
+Recovery Guru non è presente (sembra che tutti i volumi siano restituiti ai rispettivi controller proprietari)
+ a| 
+Verifica che tutti i volumi siano stati restituiti ai rispettivi controller proprietari selezionando *Storage* > *Volumes* > *More* e, dal menu a discesa, seleziona *Change volume ownership* per visualizzare i proprietari dei volumi.
+
+|===
+. Raccogli i dati di supporto per il tuo sistema storage:
++
+.. Selezionare *Support* > *Support Center* > *Diagnostics*.
+.. Selezionare *Collect Support Data*.
+.. Seleziona *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *support-data.7z*.
+
+
+
+
+
+
+
+== Passaggio 9: restituire la parte difettosa a NetApp
+
+Restituire il componente difettoso a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Consultare la  https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzioni dei pezzi"] pagina per ulteriori informazioni.

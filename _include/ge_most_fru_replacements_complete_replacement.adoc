@@ -1,0 +1,49 @@
+= 
+:allow-uri-read: 
+
+
+Utilizzando SANtricity System Manager, assicurati che sia installata la versione più recente di SANtricity OS, verifica che tutti i volumi siano restituiti ai rispettivi controller e raccogli i dati di supporto in modo da poter riprendere le operazioni.
+
+.Fasi
+. Assicurati che l'ultima versione di SANtricity OS sia installata sul sistema storage:
++
+.. Seleziona *Support* > *Upgrade Center*
+.. Se necessario, installare la versione più recente.
+
+
+. Verificare che tutti i volumi siano restituiti ai rispettivi controller proprietari:
++
+[cols="1,2"]
+|===
+| Se... | Poi... 
+
+
+ a| 
+Recovery Guru è presente e indica che i volumi non si trovano sul percorso preferito (non sono stati restituiti ai controller proprietari)
+ a| 
+.. Redistribuire i volumi ai rispettivi controller selezionando *Archiviazione* > *Volumi* > *Altro* e dal menu a discesa selezionare *Ridistribuisci volumi*.
+.. Verifica che tutti i volumi siano stati ridistribuiti ai rispettivi controller controllando se Recovery Guru è presente e indica ancora che i volumi non si trovano sul percorso preferito.
+
+
+
+NOTE: Se i volumi non sono ancora stati restituiti ai rispettivi controller, contattare https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"].
+
+
+
+ a| 
+Recovery Guru non è presente (sembra che tutti i volumi siano restituiti ai rispettivi controller proprietari)
+ a| 
+Verifica che tutti i volumi siano stati restituiti ai rispettivi controller proprietari selezionando *Storage* > *Volumes* > *More* e, dal menu a discesa, seleziona *Change volume ownership* per visualizzare i proprietari dei volumi.
+
+|===
+. Raccogli i dati di supporto per il tuo sistema storage:
++
+.. Selezionare *Support* > *Support Center* > *Diagnostics*.
+.. Selezionare *Collect Support Data*.
+.. Seleziona *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *support-data.7z*.
+
+
+
+

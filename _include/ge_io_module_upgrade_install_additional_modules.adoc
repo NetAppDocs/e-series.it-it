@@ -1,0 +1,55 @@
+= 
+:allow-uri-read: 
+
+
+.A proposito di questa attività
+Si inizia con un controller, quindi si ripetono i passaggi per l'altro controller.
+
+.Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Su uno dei controller, scollega il cablaggio dal modulo I/O che stai rimuovendo, a meno che non si tratti di un modulo di copertura I/O.
++
+È possibile etichettare i cavi per sapere da dove provengono. Tuttavia, a seconda del tipo di modulo I/O a cui si sta eseguendo l'aggiornamento, potrebbe non essere possibile ricablare alle stesse porte o riutilizzare gli stessi cavi.
+
+. Rimuovere il modulo I/O o il modulo di blocco I/O dallo slot di destinazione.
++
+L'illustrazione seguente mostra un modulo di blocco I/O in fase di rimozione.
+
++
+image::../media/drw_g_io_blanking_module_replace_ieops-1901.svg[Rimuovere un modulo di blanking I/O]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Callout numero 1"]
+ a| 
+Sul modulo I/O o sul modulo di chiusura I/O, ruotare la vite a testa zigrinata in senso antiorario per allentarla.
+
+
+
+ a| 
+image:../media/icon_round_2.png["Callout numero 2"]
+ a| 
+Estrarre il modulo I/O o il modulo di chiusura I/O dal controller utilizzando la linguetta a sinistra e la vite a testa zigrinata.
+
+|===
+. Disimballare il nuovo modulo I/O e posizionarlo su una superficie piana e antistatica vicino al sistema storage.
+. Installare il nuovo modulo I/O:
++
+.. Allineare il modulo I/O con i bordi dell'apertura dello slot del controller.
+.. Spingere delicatamente il modulo I/O fino in fondo nello slot, assicurandosi che sia correttamente inserito nel connettore.
++
+È possibile utilizzare la linguetta a sinistra e la vite a testa zigrinata per inserire il modulo I/O.
+
+.. Ruotare la vite a testa zigrinata in senso orario per stringere.
+
+
+. Collegare il modulo I/O alla rete host.
++
+È possibile utilizzare la sezione link:../install-hw-ef50-ef80/install-cable.html["Collega l'hardware"^] del contenuto di installazione e configurazione del sistema per il cablaggio della rete host.
+
+. Ripeti questi passaggi per aggiornare un modulo I/O nell'altro controller.
+

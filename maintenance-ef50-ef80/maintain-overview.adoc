@@ -1,0 +1,75 @@
+---
+permalink: maintenance-ef50-ef80/maintain-overview.html 
+sidebar: sidebar 
+keywords: ef50, ef80 maintenance, maintenance, repairing ef50, ef80, replace ef50, ef80 components 
+summary: 'Mantieni l"hardware del tuo sistema storage EF50 o EF80 per garantire affidabilità a lungo termine e prestazioni ottimali. Esegui regolarmente attività di manutenzione, come la sostituzione dei componenti difettosi, poiché ciò aiuta a prevenire tempi di inattività e perdita di dati.' 
+---
+= Panoramica delle procedure di manutenzione - EF50 e EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mantieni l'hardware del tuo sistema storage EF50 o EF80 per garantire affidabilità a lungo termine e prestazioni ottimali. Esegui regolarmente attività di manutenzione, come la sostituzione dei componenti difettosi, poiché ciò aiuta a prevenire tempi di inattività e perdita di dati.
+
+Le procedure di manutenzione presuppongono che il sistema storage EF50 o EF80 sia già stato implementato nell'ambiente SANtricity.
+
+
+
+== Componenti del sistema
+
+Per il vostro sistema storage EF50 o EF80, potete eseguire procedure di manutenzione sui seguenti componenti.
+
+[cols="25,65"]
+|===
+
+
+ a| 
+link:controller-replace-workflow.html["Controller"]
+ a| 
+Un controller è costituito da una scheda, firmware e software. Controlla le unità disco ed esegue il software del sistema operativo SANtricity.
+
+
+
+ a| 
+link:dimm-replace.html["DIMM"]
+ a| 
+Un modulo di memoria dual in-line (DIMM) è un tipo di memoria per computer. Vengono installati per aggiungere memoria di sistema a una scheda madre del controller.
+
+
+
+ a| 
+link:drive-replace.html["Unità"]
+ a| 
+Un drive è un dispositivo che fornisce lo storage fisico necessario per i dati.
+
+
+
+ a| 
+link:fan-replace.html["Ventola"]
+ a| 
+Una ventola raffredda il controller e i drive.
+
+
+
+ a| 
+link:io-module-overview.html["Modulo I/O"]
+ a| 
+Il modulo I/O (Input/Output module) è un componente hardware che funge da intermediario tra il controller e i vari dispositivi o sistemi che necessitano di scambiare dati con il controller.
+
+
+
+ a| 
+link:nvdimm-battery-replace.html["batteria NV"]
+ a| 
+La batteria NVMEM è responsabile di fornire alimentazione ai componenti NVMEM mentre i dati in transito vengono trasferiti alla memoria flash dopo un'interruzione di corrente.
+
+
+
+ a| 
+link:power-supply-replace.html["Alimentatore"]
+ a| 
+Un alimentatore fornisce una fonte di alimentazione ridondante in un controller.
+
+|===

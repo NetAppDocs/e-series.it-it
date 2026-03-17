@@ -66,6 +66,25 @@ Prima di eseguire l'aggiornamento a E4000 controller, rimuovere la mappatura del
 
 
 
+* *Cablaggio mirror EF50 e EF80*
++
+I sistemi EF80 e EF50 utilizzano connessioni esterne ad alta velocità 200GbE/100GbE per abilitare la comunicazione tra controller tra i due controller. Ciascun controller è dotato di una scheda di interfaccia dedicata installata nello slot 4. Questa scheda fornisce due porte e include due cavi 200GbE da 0,5 m con il sistema.
+
++
+Utilizzare questi cavi per collegare le porte del controller come segue:
+
++
+** Porta e4a sul controller A alla porta e4a sul controller B
+** Porta e4b sul controller A alla porta e4b sul controller B
++
+
+NOTE: È fondamentale collegare i cavi esattamente come descritto. Per ulteriori informazioni, vedere https://docs.netapp.com/us-en/e-series/install-hw-ef50-ef80/install-cable.html#step-1-cable-the-inter-controller-mirroring-connections["Collegare i cavi di mirroring tra i controller - EF50 e EF80"].
+
+
+
++
+Non utilizzare altre porte host (slot 1, slot 2 o slot 3) per la comunicazione tra i controller, in quanto non è supportata. Un corretto cablaggio tra i controller è essenziale per il corretto funzionamento sia degli array EF50 che EF80.
+
 
 
 
@@ -76,6 +95,60 @@ Esaminare i percorsi di aggiornamento supportati per ciascun modello di array di
 
 [role="tabbed-block"]
 ====
+.Compatibilità dell'aggiornamento dei controller EF50 e EF80
+--
+[cols="h,d,d,d"]
+|===
+| Percorso di aggiornamento | Batteria | Supporto delle funzioni | Shelf SAS-3 
+
+
+| Da EF300 a EF50 o EF80  a| 
+Ordinare una nuova batteria.
+ a| 
+* EF50 e EF80 supportano solo configurazioni duplex
+* EF50 ed EF80 supportano schede di interfaccia verso gli host Fibre Channel da 64Gb.
+* EF80 supporta schede di interfaccia verso gli host dual-200Gbe NVMe su RoCE e NVMe su Infiniband
+* EF50 e EF80 supportano fino a 24 unità NVMe per controller
+* EF50 ed EF80 supportano le configurazioni di drive NVMe TLC e QLC
+* EF50 e EF80 non supportano le porte host baseboard
+* EF50 ed EF80 non supportano il mirroring sincrono o asincrono
+* EF50 e EF80 non supportano Remote Storage Volumes
+* EF50 e EF80 non supportano i volumi Thin Provisioned
+* EF50 supporta fino a 2 Host Interface Cards, ed EF80 supporta fino a 3 Host Interface Cards.
+
+
+
+NOTE: Quando si esegue l'aggiornamento da EF300 a EF50 o EF80, è possibile configurare il protocollo host tramite l'interfaccia utente di SANtricity System Manager. Per ulteriori informazioni, vedere  https://docs.netapp.com/us-en/e-series/maintenance-ef50-ef80/io-module-change-protocol.html["Modifica il protocollo del modulo I/O host - EF50 e EF80"].
+ a| 
+* EF50 e EF80 non supportano l'espansione SAS.
+
+
+
+
+| Da EF600 a EF80  a| 
+Ordinare una nuova batteria.
+ a| 
+* EF80 supporta solo configurazioni duplex
+* EF80 supporta schede di interfaccia verso gli host Fibre Channel da 64 Gb
+* EF80 supporta schede di interfaccia verso gli host dual-200Gbe NVMe su RoCE e NVMe su Infiniband
+* EF80 supporta fino a 24 unità NVMe per controller
+* EF50 ed EF80 supportano le configurazioni di drive NVMe TLC e QLC
+* EF80 non supporta le porte host della scheda base
+* EF80 non supporta il mirroring sincrono o asincrono
+* EF80 non supporta Remote Storage Volumes
+* EF80 non supporta i volumi con Thin Provisioning
+* EF80 supporta fino a 3 Host Interface Cards.
++
+
+NOTE: Quando si esegue l'aggiornamento da EF600 a EF80, è possibile configurare il protocollo host tramite l'interfaccia utente di SANtricity System Manager. Per ulteriori informazioni, consultare  https://docs.netapp.com/us-en/e-series//maintenance-ef50-ef80/io-module-change-protocol.html["Modifica il protocollo del modulo I/O host - EF50 e EF80"].
+
+
+ a| 
+* EF80 non supporta l'espansione SAS.
+
+
+|===
+--
 .Compatibilità di aggiornamento del controller E4000
 --
 [cols="h,d,d,d"]
@@ -191,7 +264,7 @@ Ordinare una nuova batteria.
  a| 
 Gli snapshot legacy non sono supportati su E2700.
  a| 
-I controller 5400, E5500 e E5600 non devono essere posizionati negli shelf SAS-3.
+I controller E5400, E5500 e E5600 non devono essere posizionati negli shelf SAS-3.
 
 
 

@@ -27,7 +27,7 @@ Per aprire il file esportato, è necessario disporre di un'applicazione per il v
 ** *Trusted* -- Mostra i certificati ai quali il plug-in può accedere per gli array di storage e altri server remoti, come un server LDAP. I certificati possono essere emessi da un'autorità di certificazione (CA) o autofirmati.
 
 
-. Selezionare un certificato dalla pagina, quindi fare clic sui puntini di sospensione alla fine della riga.
+. Seleziona un certificato dalla pagina, quindi fai clic sull'ellissi alla fine della riga.
 . Fare clic su *Esporta*, quindi salvare il file del certificato.
 . Aprire il file nell'applicazione di visualizzazione dei certificati.
 

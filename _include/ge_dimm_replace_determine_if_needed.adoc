@@ -1,0 +1,23 @@
+= 
+:allow-uri-read: 
+
+
+.Fasi
+. Da SANtricity System Manager, accedere al profilo del storage controller per il controller danneggiato:
++
+.. Vai su *Support* > *Support Center*.
+.. Dalla pagina Support Resources, selezionare *Storage Array Profile*.
+.. Scorrere verso il basso o utilizzare il campo Search (Cerca) per individuare le informazioni *Data cache Module* (modulo cache dati).
+
+
+. Se per un DIMM viene visualizzata una delle seguenti condizioni, annotare la posizione del DIMM e continuare con questa procedura per sostituire il DIMM.
++
+Se nessuna di queste condizioni è presente, non è necessario sostituire un DIMM. Uscire da questa procedura.
+
++
+** Un DIMM guasto
+** Un DIMM segnala *Data Cache Module* come non ottimale
+** Un DIMM con una capacità del *Data Cache Module* non corrispondente
+
+
+

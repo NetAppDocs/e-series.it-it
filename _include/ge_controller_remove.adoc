@@ -1,0 +1,81 @@
+= 
+:allow-uri-read: 
+
+
+Verificare che tutti i dati presenti nella cache siano stati scritti sulle unità, scollegare tutti i cavi dal controller difettoso e quindi rimuovere il controller difettoso dallo chassis.
+
+.Fasi
+. Sul controller difettoso, assicurarsi che il LED NV Caching Active (verde) sia spento.
++
+Quando il LED NV Caching Active (verde) è spento, tutti i dati presenti nella cache sono stati scritti sulle unità ed è possibile rimuovere in sicurezza il controller difettoso.
+
++
+
+NOTE: Se il LED NV Caching Active (verde) è acceso, i dati memorizzati nella cache vengono scritti sulle unità. Devi attendere che il processo sia completato e che il LED NV Caching Active si spenga. Tuttavia, se il LED rimane acceso per più di cinque minuti, contatta https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] prima di continuare con questa procedura.
+
++
+Il LED NV Caching Active (verde) si trova accanto all'icona NV sul controller.
+
++
+image::../media/drw_g_nvmem_led_ieops-1839.svg[Posizione del LED di stato NV]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout numero 1]
+ a| 
+Icona NV e LED NV Caching Active sul controller
+
+|===
+
+
+. Indossare un braccialetto ESD o adottare altre precauzioni antistatiche.
+. Etichetta ciascun cavo collegato al controller guasto.
+. Scollegare il cavo di alimentazione dall'alimentatore sul controller guasto.
++
+
+NOTE: L'alimentatore (PSU) non ha un interruttore di alimentazione.
+
+. Scollega tutti i cavi dal controller difettoso.
+. Rimuovere il controller danneggiato:
++
+L'illustrazione seguente mostra il funzionamento delle maniglie del controller (dal lato sinistro del controller) durante la rimozione di un controller:
+
++
+image::../media/drw_g_and_t_handles_remove_ieops-1837.svg[operazione della maniglia del controller per rimuovere un controller]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout numero 1]
+ a| 
+Alle due estremità del controller, spingere verso l'esterno le linguette di bloccaggio verticali per riportare le impugnature in posizione orizzontale.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Callout numero 2]
+ a| 
+** Tirare le maniglie verso di sé per sganciare il controller dal midplane.
++
+Mentre tiri, le maniglie si estendono dal controller e poi senti una certa resistenza, continua a tirare.
+
+** Fai scorrere il controller fuori dallo chassis sostenendone la parte inferiore e posizionalo su una superficie di lavoro piana e antistatica.
+
+
+
+
+ a| 
+image::../media/icon_round_3.png[Callout numero 3]
+ a| 
+Se necessario, ruotare le maniglie in posizione verticale (accanto alle linguette) per spostarle da parte.
+
+|===
+. Aprire il coperchio del controller ruotando la vite a testa zigrinata in senso antiorario per allentarla, quindi aprire il coperchio.
+

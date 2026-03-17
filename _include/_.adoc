@@ -1,0 +1,52 @@
+= 
+:allow-uri-read: 
+
+
+Sostituire i moduli I/O o i moduli I/O vuoti in entrambi i controller.
+
+.A proposito di questa attività
+Si inizia con un controller, quindi si ripetono i passaggi per l'altro controller.
+
+.Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Su uno dei controller, rimuovere il modulo I/O o il modulo di blocco I/O dallo slot di destinazione.
++
+L'illustrazione seguente mostra un modulo di blocco I/O in fase di rimozione.
+
++
+image::../media/drw_g_io_blanking_module_replace_ieops-1901.svg[Rimuovere un modulo di blanking I/O]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["Callout numero 1"]
+ a| 
+Sul modulo I/O o sul modulo di chiusura I/O, ruotare la vite a testa zigrinata in senso antiorario per allentarla.
+
+
+
+ a| 
+image:../media/icon_round_2.png["Callout numero 2"]
+ a| 
+Estrarre il modulo I/O o il modulo di chiusura I/O dal controller utilizzando la linguetta a sinistra e la vite a testa zigrinata.
+
+|===
+. Installare il nuovo modulo I/O:
++
+.. Allineare il modulo I/O con i bordi dell'apertura dello slot del controller.
+.. Spingere delicatamente il modulo I/O fino in fondo nello slot, assicurandosi che sia correttamente inserito nel connettore.
++
+È possibile utilizzare la linguetta a sinistra e la vite a testa zigrinata per inserire il modulo I/O.
+
+.. Ruotare la vite a testa zigrinata in senso orario per stringere.
+
+
+. Collegare il modulo I/O alla rete host.
++
+È possibile utilizzare la sezione link:../install-hw-ef50-ef80/install-cable.html["Collega l'hardware"] dei contenuti relativi all'installazione e alla configurazione del sistema per il cablaggio della rete host.
+
+. Ripeti questi passaggi per aggiungere un modulo I/O all'altro controller.
+

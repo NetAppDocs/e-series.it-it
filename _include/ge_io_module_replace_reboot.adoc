@@ -1,0 +1,28 @@
+= 
+:allow-uri-read: 
+
+
+Dopo aver sostituito un modulo I/O, è necessario riavviare il controller.
+
+.Fasi
+. Riavvia il controller dal prompt LOADER:
++
+`bye`
+
++
+
+NOTE: Il riavvio del controller danneggiato reinizializza anche i moduli di I/O e altri componenti.
+
+. Ripristina il normale funzionamento del controller danneggiato restituendogli lo storage:
++
+`storage failover giveback -ofnode _impaired_node_name_`
+
+. Ripristina la restituzione automatica dalla console del controller funzionante:
++
+`storage failover modify -node local -auto-giveback true`
+
+. Se AutoSupport è abilitata, ripristina la creazione automatica dei casi:
++
+`system node autosupport invoke -node * -type all -message MAINT=END`
+
+

@@ -55,6 +55,10 @@ La configurazione di NVMe Initiator in un ambiente RoCE include l'installazione 
 ----
 # yum install NetworkManager-initscripts-updown
 ----
++
+
+NOTE: Gli script di rete non sono disponibili per RHEL 10.
+
 . Ottenere l'NQN host, che verrà utilizzato per configurare l'host in un array.
 +
 [listing]

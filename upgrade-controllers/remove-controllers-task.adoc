@@ -17,6 +17,15 @@ Una volta completata la preparazione per l'aggiornamento, è possibile rimuovere
 
 == Fase 1: Rimuovere il controller
 
+[role="tabbed-block"]
+====
+.Modelli di controller EF280 e EF50
+--
+Per informazioni sulla rimozione dei controller dai sistemi storage EF280 e EF50, vedere link:https://docs.netapp.com/us-en/e-series/maintenance-ef50-ef80/controller-replace-move-hardware.html#step-1-remove-the-controller["EF50 e EF80 - Fase 1: Rimuovere il controller"^].
+
+--
+.Altri modelli di controller E-Series
+--
 Rimuovere il contenitore del controller in modo da poterlo aggiornare con uno nuovo. Scollegare tutti i cavi e rimuovere eventuali ricetrasmettitori SFP. Quindi, far scorrere il contenitore del controller fuori dallo shelf del controller.
 
 .Prima di iniziare
@@ -63,10 +72,11 @@ image:../media/28_dwg_e2824_remove_controller_canister_upg-hw.gif["Rimuovere il 
 
 . Posizionare il vecchio contenitore del controller su una superficie piana e priva di elettricità statica vicino al vassoio del disco del controller con le leve di rilascio verso l'alto. Posizionare il contenitore del controller in modo da poter accedere al coperchio superiore.
 . (Condizionale) se si stanno aggiornando i controller in un vassoio del disco del controller duplex, ripetere tutti i passaggi per rimuovere il secondo contenitore del controller.
+. Se si intende utilizzare la batteria del vecchio controller nel nuovo controller, passare alla parte successiva della sezione; in caso contrario, passare a. link:install-controllers-task.html["Installare nuovi controller"].
 
 
-Se si intende utilizzare la batteria del vecchio controller nel nuovo controller, passare alla parte successiva della sezione; in caso contrario, passare a. link:install-controllers-task.html["Installare nuovi controller"].
-
+--
+====
 
 
 == Fase 2: Rimuovere la batteria

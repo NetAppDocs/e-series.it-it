@@ -1,0 +1,24 @@
+---
+permalink: maintenance-ef50-ef80/io-module-overview.html 
+sidebar: sidebar 
+keywords: ef50, ef80, replace io module, upgrade io module, io module overview 
+summary: 'I sistemi storage EF50 e EF80 offrono flessibilità nell"aggiornamento o nella sostituzione dei moduli I/O per migliorare la connettività di rete e le prestazioni.' 
+---
+= Panoramica sulla manutenzione del modulo I/O - EF50 e EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+I sistemi storage EF50 e EF80 offrono flessibilità nella sostituzione o nell'aggiornamento dei moduli I/O per migliorare la connettività di rete e le prestazioni.
+
+* link:io-module-replace.html["Sostituire un modulo I/O"]
++
+Quando un modulo I/O del sistema storage si guasta, è possibile sostituirlo con un modulo I/O dello stesso tipo per ripristinare il sistema storage al suo stato operativo ottimale.
+
+* link:io-module-upgrade.html["Aggiornare un modulo I/O"]
++
+È possibile aggiornare i moduli I/O nel sistema storage per aumentare il numero di porte host per una connettività di rete migliorata ed espandere la capacità del sistema di gestire il traffico dati.
+
+

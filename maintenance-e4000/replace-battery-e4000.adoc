@@ -142,7 +142,7 @@ Il file viene salvato nella cartella Download del browser con il nome support-da
 ** Da Gestore di sistema di SANtricity:
 +
 ... Selezionare *hardware*.
-... Se la figura mostra le unità, selezionare *Controller & Components* (Controller e componenti) per visualizzare le unità di controllo.
+... Se il grafico mostra le unità, selezionare *Controller & Components* per visualizzare i controller
 ... Selezionare il controller che si desidera mettere offline.
 ... Dal menu di scelta rapida, selezionare *posiziona offline* e confermare che si desidera eseguire l'operazione.
 +
@@ -341,8 +341,8 @@ NOTE: Se non si riesce a risolvere il problema, contattare il supporto tecnico. 
 
 . Verificare che tutti i volumi siano stati restituiti al proprietario preferito.
 +
-.. Selezionare *archiviazione › volumi*. Dalla pagina *tutti i volumi*, verificare che i volumi siano distribuiti ai proprietari preferiti. Selezionare *Altro › Cambia proprietà* per visualizzare i proprietari di volumi.
-.. Se tutti i volumi sono di proprietà del proprietario preferito, passare al punto 5.
+.. Seleziona *Storage › Volumi*. Dalla pagina *All Volumes*, verifica che i volumi siano distribuiti ai rispettivi proprietari. Seleziona *More › Change ownership* per visualizzare i proprietari dei volumi
+.. Se tutti i volumi sono di proprietà del proprietario preferito, procedere al passaggio 4.
 .. Se nessuno dei volumi viene restituito, è necessario restituire manualmente i volumi. Vai a *More › redistribuisci volumi*.
 .. Se solo alcuni dei volumi vengono restituiti ai proprietari preferiti dopo la distribuzione automatica o manuale, è necessario controllare il Recovery Guru per verificare la presenza di problemi di connettività host.
 .. Se non è presente Recovery Guru o se, dopo aver seguito i passaggi del Recovery Guru, i volumi non vengono ancora restituiti ai proprietari preferiti, contattare l'assistenza.

@@ -1,0 +1,38 @@
+= 
+:allow-uri-read: 
+
+
+.Fasi
+. Se non si conosce il protocollo sui moduli I/O host nel proprio sistema storage, verificarlo utilizzando SANtricity System Manager.
++
+.. Seleziona *Settings* > *System*.
+.. Nella sezione *Impostazioni aggiuntive*, selezionare *Modifica protocollo I/O host* per aprire quella pagina.
+.. Consulta il protocollo predefinito visualizzato nel campo *Host I/O Protocol*.
++
+
+NOTE: Se desideri visualizzare l'elenco dei protocolli disponibili per i tuoi moduli I/O host, seleziona il menu a discesa nel campo *Host I/O Protocol*. L'elenco dei protocolli si basa sui moduli I/O host attualmente installati.
+
+
+
+. Il passaggio successivo dipende dal fatto che il protocollo predefinito sia quello che desideri o meno:
++
+[cols="1,2"]
+|===
+| Se... | Poi... 
+
+
+ a| 
+Il protocollo predefinito è il protocollo che desideri
+ a| 
+Non è richiesta alcuna azione. È possibile uscire da questa procedura.
+
+
+
+ a| 
+Il protocollo predefinito non è il protocollo che desideri
+ a| 
+Continua con questa procedura per modificare il protocollo.
+
+|===
+. Pianificare una finestra di manutenzione downtime per questa procedura.
+

@@ -74,7 +74,6 @@ Il file viene salvato nella cartella Download del browser con il nome *support-d
 ** Da Gestore di sistema di SANtricity:
 +
 ... Selezionare *hardware*.
-... Se la figura mostra i dischi, selezionare *Mostra retro dello shelf* per visualizzare i controller.
 ... Selezionare il controller che si desidera mettere offline.
 ... Dal menu di scelta rapida, selezionare *posiziona offline* e confermare che si desidera eseguire l'operazione.
 +

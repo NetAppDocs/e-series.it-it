@@ -1,0 +1,30 @@
+= 
+:allow-uri-read: 
+
+
+.Fasi
+. Identifica la ventola che devi sostituire controllando i messaggi di errore della console.
+. Rimuovere la ventola guasta:
++
+image::../media/drw_g_fan_replace_ieops-1903.svg[Sostituzione ventola]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout numero 1]
+| Tenere entrambi i lati della ventola nei punti di contatto blu. 
+
+
+ a| 
+image::../media/icon_round_2.png[Callout numero 2]
+| Tirare la ventola verso l'alto e estrarla dalla sua sede. 
+|===
+. Disimballare la ventola di ricambio e posizionarla su una superficie piana e antistatica vicino al sistema storage.
++
+Conservate i materiali di imballaggio da utilizzare quando restituite la ventola difettosa.
+
+. Inserire la ventola di ricambio allineandola all'interno delle guide, quindi spingere verso il basso finché il connettore della ventola non è completamente inserito nella presa.
+

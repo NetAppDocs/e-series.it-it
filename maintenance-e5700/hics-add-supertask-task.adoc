@@ -108,6 +108,9 @@ image::../media/e5700_ib_hic_w_cache_led_callouts_maint-e5700.gif[LED cache atti
 *(1)* _LED cache attiva_
 
 . Dalla home page di Gestione sistema SANtricity, selezionare *Visualizza operazioni in corso*. Attendere il completamento di tutte le operazioni prima di passare alla fase successiva.
++
+Attendere il completamento di tutte le operazioni prima di passare alla fase successiva.
+
 . Spegnere lo shelf del controller.
 +
 .. Spegnere entrambi gli interruttori di alimentazione sullo shelf del controller.

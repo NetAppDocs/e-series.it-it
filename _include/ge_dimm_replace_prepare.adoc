@@ -1,0 +1,45 @@
+= 
+:allow-uri-read: 
+
+
+.Fasi
+. Risolvere eventuali altri problemi del sistema storage.
++
+Utilizzando SANtricity System Manager, esamina i dettagli in Recovery Guru per vedere se ci sono altri problemi.
+
+. Assicurarsi che non siano in uso volumi o che su tutti gli host che utilizzano questi volumi sia installato un driver multipath.
+. Assicurarsi di disporre di quanto segue:
++
+** Un modulo DIMM di ricambio delle dimensioni corrette per la configurazione del tuo sistema storage.
+** Un braccialetto ESD o hai preso altre precauzioni antistatiche.
+** Una superficie di lavoro piana e antistatica.
+** Etichette per identificare ciascun cavo collegato al controller guasto.
+** Una stazione di gestione dotata di un browser che può accedere a SANtricity System Manager per il controller non funzionante.
++
+Per aprire l'interfaccia di System Manager, puntare il browser al domain name o all'indirizzo IP del controller difettoso.
+
+
+
+. Prevenire le scariche elettrostatiche (ESD) durante la manipolazione e l'installazione di un DIMM:
++
+** Conservare il modulo DIMM nel sacchetto ESD fino a quando non si è pronti per l'installazione.
+** Aprire il sacchetto ESD manualmente o tagliare la parte superiore con un paio di forbici. Non inserire utensili metallici o coltelli nel sacchetto ESD.
+** Conservare la busta ESD e tutto il materiale di imballaggio per restituire il DIMM guasto o utilizzare un imballaggio approvato quando si spedisce un DIMM.
+** Indossare sempre un braccialetto antistatico collegato a terra su una superficie non verniciata sul chassis del sistema storage.
+** Evitare i campi magnetici. Tenere i DIMM lontani dai dispositivi magnetici.
+
+
+. Eseguire il backup del database della configurazione del sistema storage utilizzando SANtricity System Manager:
++
+Se si verifica un problema durante la rimozione di un controller, è possibile utilizzare il file salvato per ripristinare la configurazione. Il sistema salva lo stato corrente del database di configurazione RAID, che include tutti i dati relativi ai gruppi di volumi e ai pool di dischi sul controller danneggiato.
+
++
+.. Selezionare *Support* > *Support Center* > *Diagnostics*.
+.. Selezionare *Collect Configuration Data* (raccolta dati di configurazione).
+.. Seleziona *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+

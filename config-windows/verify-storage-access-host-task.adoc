@@ -31,7 +31,7 @@ Il LUN deve essere stato inizializzato e formattato con un file system.
 ----
 . Per verificare il funzionamento di multipath, modificare la proprietà del volume.
 +
-.. Dalla GUI di Gestione di sistema di SANtricity, andare a *Storage* > *Volumes*, quindi selezionare *More* > *Change ownership*.
+.. Dal SANtricity System Manager, vai su *Storage* > *Volumes*, quindi seleziona l'*ellipsis icon* > *Change volume ownership*.
 .. Nella finestra di dialogo Change Volume Ownership (Modifica proprietà volume), utilizzare l'elenco a discesa *Preferred Owner* (Proprietario preferito) per selezionare l'altro controller per uno dei volumi nell'elenco, quindi confermare l'operazione.
 .. Verificare che sia ancora possibile accedere ai file sul LUN.
 +

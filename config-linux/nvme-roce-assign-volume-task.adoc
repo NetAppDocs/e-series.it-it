@@ -41,7 +41,7 @@ Vengono visualizzati tutti i volumi non assegnati, ma le funzioni per gli host c
 
 
 .Fasi
-. Selezionare menu:Storage[Hosts] (Storage[host]).
+. Dal pannello di sinistra dell'interfaccia di SANtricity System Manager, selezionare menu:Storage[Hosts].
 . Selezionare l'host o il cluster host a cui si desidera assegnare i volumi, quindi fare clic su *Assign Volumes* (Assegna volumi).
 +
 Viene visualizzata una finestra di dialogo che elenca tutti i volumi che è possibile assegnare. È possibile ordinare qualsiasi colonna o digitare qualcosa nella casella *Filter* per semplificare la ricerca di volumi specifici.

@@ -2,16 +2,18 @@
 sidebar: sidebar 
 permalink: rackmount-hardware.html 
 keywords: rackmount, rack-mount, install in rack, rails 
-summary: 'Montare l"hardware in rack.' 
+summary: 'L"hardware per il montaggio a rack viene utilizzato per installare l"hardware in un rack o cabinet. Le istruzioni di installazione dovrebbero essere incluse nella confezione dell"hardware per il montaggio a rack. Tuttavia, se è necessario accedere alle istruzioni di installazione, utilizzare il collegamento appropriato qui sotto.' 
 ---
-= Hardware montato su rack (e-Series)
+= Hardware per montaggio a rack - E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Utilizzare i collegamenti riportati di seguito per accedere alla documentazione che descrive come installare l'hardware per il montaggio su rack.
+L'hardware per il montaggio a rack viene utilizzato per installare il sistema storage in un rack o in un armadio. Le istruzioni di installazione dovrebbero essere incluse nella confezione dell'hardware per il montaggio a rack. Tuttavia, se è necessario accedere alle istruzioni di installazione, utilizzare il collegamento appropriato qui sotto.
+
+Per i sistemi storage più recenti, puoi verificare l'hardware rack-mount supportato consultando il NetApp Hardware Universe su  https://hwu.netapp.com["NetApp Hardware Universe"^].
 
 
 
@@ -40,4 +42,4 @@ Accesso https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2484194["Install
 
 == Rack a quattro montanti - SuperRail
 
-Accesso https://docs.netapp.com/us-en/ontap-systems/platform-supplemental/superrail-install.html["Installazione di SuperRail in un rack a quattro montanti (shelf DE224C/DE460C)"^].
+Accesso https://docs.netapp.com/us-en/ontap-systems/platform-supplemental/superrail-install.html["Installare SuperRail in un rack a quattro montanti"^].

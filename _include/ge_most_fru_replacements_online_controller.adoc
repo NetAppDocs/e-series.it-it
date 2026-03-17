@@ -1,0 +1,40 @@
+= 
+:allow-uri-read: 
+
+
+Rimetti online il controller guasto.
+
+.Fasi
+. Metti online il controller utilizzando SANtricity System Manager:
++
+.. Seleziona *Hardware* > *Controllers and components* per visualizzare i controller.
+.. Seleziona il controller che desideri mettere online per visualizzare il suo menu contestuale.
+.. Seleziona *Place online* e poi conferma di voler eseguire l'operazione.
++
+Il sistema mette il controller in linea.
+
+
+
+. All'avvio del controller, controllare i LED del controller.
++
+Quando la comunicazione con l'altro controller viene ristabilita:
+
++
+** Il LED di attenzione di colore ambra rimane acceso.
+** I LED del collegamento host potrebbero essere accesi, lampeggianti o spenti, a seconda dell'interfaccia host.
+
+
+. Quando il controller torna online:
++
+.. Conferma che il suo stato sia Optimal.
+.. Verificare che il LED di attenzione sul controller sia spento.
++
+Se lo stato non è Optimal o se uno qualsiasi dei LED di attenzione è acceso, verificare che tutti i cavi siano inseriti correttamente e che il controller sia installato correttamente. Se necessario, rimuovere e reinstallare il controller.
+
++
+
+NOTE: Se non riesci a risolvere il problema, contatta https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"^] prima di continuare con questa procedura. Se necessario, raccogli i dati di supporto per il tuo sistema storage utilizzando SANtricity System Manager.
+
+
+
+

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cabling, cables, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C 
 summary: Collegare un host direttamente a un controller o utilizzare gli switch. 
 ---
-= Cablaggio del sistema di storage (e-Series)
+= Cablaggio del sistema storage - E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -22,6 +22,9 @@ Le informazioni sui cavi sono destinate a un installatore dell'hardware o a un a
 == Modello hardware applicabile
 
 Le informazioni sul cablaggio si applicano ai seguenti modelli hardware.
+
+
+NOTE: Se il tuo chassis controller (sistema storage) non è presente nell'elenco sottostante, consulta link:../getting-started/getup-run-concept.html["Guida rapida per e-Series"^] e fai clic sul link relativo al tuo specifico sistema storage per accedere alle informazioni sul cablaggio.
 
 |===
 | *Ripiano controller* | *Shelf di dischi* 
@@ -51,7 +54,7 @@ DE460C
 
 == Ulteriori informazioni sul cablaggio
 
-Se si utilizzano cavi per la seguente configurazione, vedere https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2859057["Aggiunta di shelf di dischi IOM a uno shelf di controller E27XX, E56XX o EF560 esistente."^]
+Se stai eseguendo il cablaggio per una delle seguenti configurazioni, consulta https://mysupport.netapp.com/ecm/ecm_download_file/ECMLP2859057["Aggiunta di shelf di dischi IOM a uno shelf di controller E27XX, E56XX o EF560 esistente."^]
 
 |===
 | *Ripiano controller* | *Shelf di dischi* 

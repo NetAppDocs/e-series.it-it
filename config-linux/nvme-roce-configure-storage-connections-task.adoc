@@ -28,7 +28,7 @@ Assicurarsi di disporre di quanto segue:
 NOTE: Le impostazioni e le funzioni NVMe over RoCE vengono visualizzate solo se il controller dello storage array include una porta NVMe over RoCE.
 
 .Fasi
-. Dall'interfaccia di System Manager, selezionare *hardware*.
+. Dal pannello di sinistra dell'interfaccia di System Manager, selezionare *Hardware*.
 . Fare clic sul controller con la porta NVMe over RoCE che si desidera configurare.
 +
 Viene visualizzato il menu di scelta rapida del controller.

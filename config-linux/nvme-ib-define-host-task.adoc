@@ -24,7 +24,7 @@ Tenere presenti queste linee guida quando si definisce un host:
 
 
 .Fasi
-. Selezionare menu:Storage[Hosts] (Storage[host]).
+. Dal pannello di sinistra, selezionare menu:Storage[Hosts].
 . Fare clic sul menu:Create[host] (Crea[host]).
 +
 Viene visualizzata la finestra di dialogo Create host (Crea host).

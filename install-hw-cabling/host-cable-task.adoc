@@ -14,6 +14,9 @@ summary: È possibile collegare un host direttamente a un controller o utilizzar
 È possibile collegare un host direttamente a un controller (topologia direct-attached) o utilizzare switch (topologia switch) per collegare un host a un controller.
 
 
+NOTE: Le seguenti informazioni non si applicano a tutti i sistemi storage, per il cablaggio host specifico del tuo sistema storage, consulta link:../getting-started/getup-run-concept.html["Guida rapida per e-Series"^] e fai clic sul link relativo al tuo sistema storage.
+
+
 
 == Cablaggio per una topologia a collegamento diretto
 

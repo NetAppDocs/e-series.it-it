@@ -72,7 +72,7 @@ Se necessario, è necessario risolvere eventuali problemi di certificato prima d
 Durante il rilevamento, se uno degli array di storage mostra lo stato "certificati non attendibili", viene visualizzata la finestra di dialogo Risolvi certificati autofirmati. In questa finestra di dialogo è possibile risolvere i certificati non attendibili oppure importare i certificati CA (vedere link:vc-olh-import-certificates-for-arrays.html["Importare certificati per gli array"]).
 
 .Fasi
-. Se viene visualizzata la finestra di dialogo Risolvi certificati autofirmati, esaminare le informazioni visualizzate per i certificati non attendibili. Per ulteriori informazioni, fare clic sui puntini di sospensione all'estremità della tabella e selezionare *View* (Visualizza) dal menu a comparsa.
+. Se si apre la finestra di dialogo Resolve Self-Signed Certificates, esamina le informazioni visualizzate relative ai certificati non attendibili. Per ulteriori informazioni, puoi anche fare clic sui puntini di sospensione all'estremità della tabella e selezionare *View* dal menu a comparsa.
 . Effettuare una delle seguenti operazioni:
 +
 ** Se le connessioni agli array di storage rilevati sono attendibili, fare clic su *Avanti*, quindi su *Sì* per confermare e passare alla scheda successiva della procedura guidata. I certificati autofirmati verranno contrassegnati come attendibili e gli array di storage verranno aggiunti al plug-in.

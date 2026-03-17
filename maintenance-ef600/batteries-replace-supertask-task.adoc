@@ -122,7 +122,7 @@ Se questo LED verde è acceso, il controller sta ancora utilizzando l'alimentazi
 . Individuare la scheda 'PRESS' sul lato del controller.
 . Sganciare la batteria premendo la linguetta e premendo l'alloggiamento della batteria.
 +
-image::../media/batt_3.png["Premere la linguetta per sbloccare la batteria]
+image::../media/batt_3.png[Premere tab per sbloccare la batteria]
 
 . Premere delicatamente il connettore che ospita il cablaggio della batteria. Tirare verso l'alto, scollegando la batteria dalla scheda.
 +

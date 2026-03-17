@@ -1,0 +1,54 @@
+---
+permalink: maintenance-ef50-ef80/controller-replace-offline-controller.html 
+sidebar: sidebar 
+keywords: ef50, ef80, offline the impaired controller 
+summary: Metti il controller guasto offline nel tuo sistema storage EF50 o EF80 per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione del controller. 
+---
+= Offline il controller difettoso - EF50 e EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Metti il controller guasto offline nel tuo sistema storage EF50 o EF80 per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione del controller.
+
+.Prima
+* È necessario soddisfare i link:controller-replace-requirements.html["requisiti"] per questa procedura.
+* È necessario aver completato la link:controller-replace-prepare.html["preparazione"] per questa procedura.
+
+
+.A proposito di questa attività
+Ogni volta che si mette un controller offline, è necessario attendere almeno un minuto prima di riportare il controller online. Questo periodo di attesa consente al sistema storage di aggiornare lo stato del controller e di garantire che tutti i dati memorizzati nella cache vengano scritti sulle unità.
+
+.Fasi
+. Se il controller danneggiato non è già offline, mettilo offline utilizzando SANtricity System Manager:
++
+.. Seleziona *Hardware* > *Controllers and components* per visualizzare i controller.
+.. Seleziona il controller che desideri mettere offline per visualizzare il suo menu dei contenuti.
+.. Seleziona *Place offline* e poi conferma di voler eseguire l'operazione.
++
+
+NOTE: Se si accede a SANtricity System Manager utilizzando il controller che si sta tentando di mettere offline, viene visualizzato un messaggio "SANtricity System Manager non disponibile". Selezionare *Connetti a una connessione di rete alternativa* per accedere automaticamente a SANtricity System Manager utilizzando l'altro controller.
+
+
+
+. Attendere che Gestore di sistema di SANtricity aggiorni lo stato del controller su offline.
++
+
+CAUTION: Non iniziare altre operazioni fino a quando lo stato non è stato aggiornato.
+
+. Conferma che sia sicuro rimuovere il componente difettoso utilizzando il Recovery Guru:
++
+.. Seleziona *Recheck*.
+.. Confermare che il campo *OK to remove* nell'area Dettagli visualizzi *Sì*.
++
+
+CAUTION: Se nel campo *OK per rimuovere* non viene visualizzato *Sì*, non procedere con la rimozione del componente difettoso. Invece, risolvi il problema utilizzando il Recovery Guru.
+
+
+
+
+
+.Quali sono le prossime novità?
+Dopo aver messo il controller guasto offline, link:controller-replace-move-hardware.html["sostituire il controller danneggiato"].

@@ -1,0 +1,32 @@
+= 
+:allow-uri-read: 
+
+
+.Fasi
+. Verifica se Recovery Guru indica che non è possibile rimuovere la ventola difettosa. In tal caso, contatta  https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] prima di continuare con questa procedura.
+. Assicurarsi di disporre di quanto segue:
++
+** Una ventola sostitutiva.
+** Un braccialetto ESD o hai preso altre precauzioni antistatiche.
+** Una superficie di lavoro piana e antistatica.
+** Etichette per identificare ciascun cavo collegato al controller guasto.
+** Una stazione di gestione dotata di un browser che può accedere a SANtricity System Manager per il controller non funzionante.
++
+Per aprire l'interfaccia di System Manager, puntare il browser al domain name o all'indirizzo IP del controller difettoso.
+
+
+
+. Eseguire il backup del database della configurazione del sistema storage utilizzando SANtricity System Manager:
++
+Se si verifica un problema durante la rimozione di un controller, è possibile utilizzare il file salvato per ripristinare la configurazione. Il sistema salva lo stato corrente del database di configurazione RAID, che include tutti i dati relativi ai gruppi di volumi e ai pool di dischi sul controller danneggiato.
+
++
+.. Selezionare *Support* > *Support Center* > *Diagnostics*.
+.. Selezionare *Collect Configuration Data* (raccolta dati di configurazione).
+.. Seleziona *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+

@@ -1,0 +1,256 @@
+---
+permalink: maintenance-ef50-ef80/io-module-replace.html 
+sidebar: sidebar 
+keywords: ef50, ef80 replace io module, replace hic, replace host interface card 
+summary: Sostituire un modulo I/O guasto nel sistema storage EF50 o EF80 con un modulo I/O dello stesso tipo per ripristinare il sistema storage al suo stato operativo ottimale. 
+---
+= Sostituire un modulo I/O - EF50 e EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sostituire un modulo I/O guasto nel sistema storage EF50 o EF80 con un modulo I/O dello stesso tipo per ripristinare il sistema storage al suo stato operativo ottimale.
+
+.A proposito di questa attività
+* Sostituire un modulo I/O preparando, mettendo il controller offline, sostituendo il modulo I/O guasto, rimettendo online il controller e restituendo la parte guasta a NetApp.
+* In questa procedura, il termine _modulo I/O_ viene utilizzato al posto di schede di interfaccia verso gli host (HIC).
+* I LED di segnalazione guasti del modulo I/O (per tutti e quattro gli slot) non sono funzionanti. Rimangono spenti in ogni momento; pertanto, non possono essere utilizzati per verificare una condizione di guasto.
++
+I LED di errore sono posizionati sui controller: i LED di errore degli slot 1 e 2 si trovano a destra dello slot 2. I LED di errore degli slot 3 e 4 si trovano a sinistra dello slot 4.
+
+* Non è necessario rimuovere il controller danneggiato dallo chassis perché i moduli I/O sono accessibili con il controller in posizione.
+* È necessario mettere il controller compromesso offline prima di scollegare qualsiasi cavo del modulo I/O.
+* È possibile attivare i LED di localizzazione (blu) del sistema storage (sulla parte anteriore del sistema storage e su entrambi i controller) per facilitare l'individuazione fisica del sistema storage. Utilizzando SANtricity System Manager, selezionare *Hardware* > *Controllers and components*, selezionare la scheda *Controller shelf* e dal menu contestuale selezionare *Turn on locator light*.
+
+
+
+
+== Fase 1: Prepararsi a sostituire un modulo I/O
+
+Preparatevi a sostituire un modulo I/O raccogliendo gli strumenti e le attrezzature necessarie ed eseguendo il backup del database della configurazione del sistema storage.
+
+.Fasi
+. Assicurarsi di disporre di quanto segue:
++
+** Il modulo I/O di ricambio.
++
+Assicurati di sostituire il modulo I/O guasto con un modulo I/O dello stesso tipo. Non è possibile installare un tipo diverso di modulo I/O.
+
++
+È necessario avere lo stesso tipo e numero di moduli I/O in ciascun controller nel sistema storage.
+
++
+
+CAUTION: *Possibile perdita di accesso ai dati* -- La presenza di moduli I/O incompatibili o non corrispondenti provoca il blocco dei controller quando si applica l'alimentazione.
+
+** Un braccialetto ESD o hai preso altre precauzioni antistatiche.
+** Una superficie di lavoro piana e antistatica.
+** Etichette per identificare ciascun cavo che è collegato al modulo I/O difettoso.
+** Una stazione di gestione dotata di un browser che può accedere a SANtricity System Manager per il controller non funzionante.
++
+Per aprire l'interfaccia di System Manager, puntare il browser al domain name o all'indirizzo IP del controller difettoso.
+
+
+
+. Eseguire il backup del database della configurazione del sistema storage utilizzando SANtricity System Manager:
++
+Se si verifica un problema durante la rimozione di un controller, è possibile utilizzare il file salvato per ripristinare la configurazione. Il sistema salva lo stato corrente del database di configurazione RAID, che include tutti i dati relativi ai gruppi di volumi e ai pool di dischi sul controller danneggiato.
+
++
+.. Selezionare *Support* > *Support Center* > *Diagnostics*.
+.. Selezionare *Collect Configuration Data* (raccolta dati di configurazione).
+.. Seleziona *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+
+
+
+
+== Passaggio 2: Mettere il controller offline
+
+Metti il controller difettoso offline in modo da poter eseguire in sicurezza il resto di questa procedura.
+
+.A proposito di questa attività
+Ogni volta che si mette un controller offline, è necessario attendere almeno un minuto prima di riportare il controller online. Questo periodo di attesa consente al sistema storage di aggiornare lo stato del controller e di garantire che tutti i dati memorizzati nella cache vengano scritti sulle unità.
+
+.Fasi
+. Se il controller danneggiato non è già offline, mettilo offline utilizzando SANtricity System Manager:
++
+.. Seleziona *Hardware* > *Controllers and components* per visualizzare i controller.
+.. Seleziona il controller che desideri mettere offline per visualizzare il suo menu dei contenuti.
+.. Seleziona *Place offline* e poi conferma di voler eseguire l'operazione.
++
+
+NOTE: Se si accede a SANtricity System Manager utilizzando il controller che si sta tentando di mettere offline, viene visualizzato un messaggio "SANtricity System Manager non disponibile". Selezionare *Connetti a una connessione di rete alternativa* per accedere automaticamente a SANtricity System Manager utilizzando l'altro controller.
+
+
+
+. Attendere che Gestore di sistema di SANtricity aggiorni lo stato del controller su offline.
++
+
+CAUTION: Non iniziare altre operazioni fino a quando lo stato non è stato aggiornato.
+
+. Conferma che sia sicuro rimuovere il componente difettoso utilizzando il Recovery Guru:
++
+.. Seleziona *Recheck*.
+.. Confermare che il campo *OK to remove* nell'area Dettagli visualizzi *Sì*.
++
+
+CAUTION: Se nel campo *OK per rimuovere* non viene visualizzato *Sì*, non procedere con la rimozione del componente difettoso. Invece, risolvi il problema utilizzando il Recovery Guru.
+
+
+
+
+
+
+
+== Passaggio 3: Sostituire il modulo I/O
+
+Scollega i cavi dal modulo I/O guasto, sostituiscilo con il modulo I/O di ricambio e poi collega il modulo I/O di ricambio.
+
+.Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Scollegare i cavi dal modulo I/O guasto.
++
+Assicurati di etichettare i cavi così saprai da dove provengono.
+
+. Rimuovere il modulo I/O guasto dal controller:
++
+image::../media/drw_g_io_module_replace_ieops-1900.svg[Rimuovi modulo I/O]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout numero 1]
+ a| 
+Ruotare la vite a testa zigrinata del modulo I/O in senso antiorario per allentare.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Callout numero 2]
+ a| 
+Estrarre il modulo I/O dal controller utilizzando la linguetta con l'etichetta della porta sul lato sinistro e la vite a testa zigrinata.
+
+|===
+. Disimballare il modulo I/O di ricambio e posizionarlo su una superficie piana antistatica vicino al sistema storage.
++
+Conservate il materiale di imballaggio da utilizzare quando restituite il modulo I/O difettoso.
+
+. Installare il modulo I/O sostitutivo nello slot di destinazione:
++
+.. Allinea il modulo I/O con i bordi dello slot.
+.. Spingere delicatamente il modulo I/O fino in fondo nello slot, assicurandosi che sia correttamente inserito nel connettore.
++
+È possibile utilizzare la linguetta a sinistra e la vite a testa zigrinata per inserire il modulo I/O.
+
+.. Ruotare la vite a testa zigrinata in senso orario per stringere.
+
+
+. Collegare il modulo I/O.
+
+
+
+
+== Passaggio 4: Mettere il controller online
+
+Rimetti online il controller guasto.
+
+.Fasi
+. Metti online il controller utilizzando SANtricity System Manager:
++
+.. Seleziona *Hardware* > *Controllers and components* per visualizzare i controller.
+.. Seleziona il controller che desideri mettere online per visualizzare il suo menu contestuale.
+.. Seleziona *Place online* e poi conferma di voler eseguire l'operazione.
++
+Il sistema mette il controller in linea.
+
+
+
+. All'avvio del controller, controllare i LED del controller.
++
+Quando la comunicazione con l'altro controller viene ristabilita:
+
++
+** Il LED di attenzione di colore ambra rimane acceso.
+** I LED del collegamento host potrebbero essere accesi, lampeggianti o spenti, a seconda dell'interfaccia host.
+
+
+. Quando il controller torna online:
++
+.. Conferma che il suo stato sia Optimal.
+.. Verificare che il LED di attenzione sul controller sia spento.
++
+Se lo stato non è Optimal o se uno qualsiasi dei LED di attenzione è acceso, verificare che tutti i cavi siano inseriti correttamente e che il controller sia installato correttamente. Se necessario, rimuovere e reinstallare il controller.
+
++
+
+NOTE: Se non riesci a risolvere il problema, contatta https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"^] prima di continuare con questa procedura. Se necessario, raccogli i dati di supporto per il tuo sistema storage utilizzando SANtricity System Manager.
+
+
+
+
+
+
+
+== Passaggio 5: Completare la sostituzione del modulo I/O
+
+Utilizzando SANtricity System Manager, assicurati che sia installata la versione più recente di SANtricity OS, verifica che tutti i volumi siano restituiti ai rispettivi controller e raccogli i dati di supporto in modo da poter riprendere le operazioni.
+
+.Fasi
+. Assicurati che l'ultima versione di SANtricity OS sia installata sul sistema storage:
++
+.. Seleziona *Support* > *Upgrade Center*
+.. Se necessario, installare la versione più recente.
+
+
+. Verificare che tutti i volumi siano restituiti ai rispettivi controller proprietari:
++
+[cols="1,2"]
+|===
+| Se... | Poi... 
+
+
+ a| 
+Recovery Guru è presente e indica che i volumi non si trovano sul percorso preferito (non sono stati restituiti ai controller proprietari)
+ a| 
+.. Redistribuire i volumi ai rispettivi controller selezionando *Archiviazione* > *Volumi* > *Altro* e dal menu a discesa selezionare *Ridistribuisci volumi*.
+.. Verifica che tutti i volumi siano stati ridistribuiti ai rispettivi controller controllando se Recovery Guru è presente e indica ancora che i volumi non si trovano sul percorso preferito.
+
+
+
+NOTE: Se i volumi non sono ancora stati restituiti ai rispettivi controller, contattare https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"].
+
+
+
+ a| 
+Recovery Guru non è presente (sembra che tutti i volumi siano restituiti ai rispettivi controller proprietari)
+ a| 
+Verifica che tutti i volumi siano stati restituiti ai rispettivi controller proprietari selezionando *Storage* > *Volumes* > *More* e, dal menu a discesa, seleziona *Change volume ownership* per visualizzare i proprietari dei volumi.
+
+|===
+. Raccogli i dati di supporto per il tuo sistema storage:
++
+.. Selezionare *Support* > *Support Center* > *Diagnostics*.
+.. Selezionare *Collect Support Data*.
+.. Seleziona *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *support-data.7z*.
+
+
+
+
+
+
+
+== Passaggio 6: restituire la parte difettosa a NetApp
+
+Restituire il componente difettoso a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Consultare la  https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzioni dei pezzi"] pagina per ulteriori informazioni.

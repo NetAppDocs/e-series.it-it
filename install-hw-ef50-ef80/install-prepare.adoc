@@ -1,0 +1,129 @@
+---
+permalink: install-hw-ef50-ef80/install-prepare.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Preparatevi all"installazione del vostro sistema storage EF50 o EF80 predisponendo il sito, comprendendo le precauzioni di sollevamento specifiche per il vostro sistema storage, disimballando gli scatoloni e confrontando il contenuto con la bolla di accompagnamento, e registrando il sistema storage per accedere ai vantaggi dell"assistenza.' 
+---
+= Prepararsi all'installazione - EF50 e EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Preparatevi all'installazione del vostro sistema storage EF50 o EF80 predisponendo il sito, comprendendo le precauzioni di sollevamento specifiche per il vostro sistema storage, disimballando gli scatoloni e confrontando il contenuto con la bolla di accompagnamento, e registrando il sistema storage per accedere ai vantaggi dell'assistenza.
+
+
+
+== Fase 1: prepara il sito
+
+Assicurati che il luogo e l'armadio o il rack che intendi utilizzare soddisfino le specifiche del tuo sistema storage.
+
+.Fasi
+. Usa  https://hwu.netapp.com["NetApp Hardware Universe"^] per confermare che il sito soddisfa i requisiti ambientali ed elettrici per il sistema storage.
+. Assicurati di avere spazio sufficiente nell'armadio o nello spazio rack per il tuo sistema storage e per eventuali switch.
++
+Se necessario, consultare  https://hwu.netapp.com["NetApp Hardware Universe"^] per le dimensioni esatte del sistema storage.
+
++
+** 2U per un sistema storage
+** 1U per la maggior parte degli switch
+
+
+. Installare gli switch di rete necessari.
+. Assicurati di avere un browser supportato per il software di gestione:
++
+** Google Chrome (versione 89 e successive)
+** Microsoft Edge (versione 90 e successive)
+** Mozilla Firefox (versione 80 e successive)
+** Safari (versione 14 e successive)
+
+
+. Procuratevi le seguenti attrezzature e strumenti necessari per l'installazione:
++
+** Cinturino di scarica elettrostatica (ESD)
+** Cacciavite a croce Philips #2
+** Torcia
+
+
+
+
+
+
+== Fase 2: Comprendere le precauzioni di sollevamento
+
+Prima di disimballare gli scatoloni e, successivamente, durante l'installazione del sistema storage, è importante conoscerne il peso per poter adottare le precauzioni necessarie durante il sollevamento e lo spostamento.
+
+Un sistema storage EF50 o EF80 può pesare fino a 61,5 libbre (27,9 kg). Per sollevare il sistema storage, utilizzare due persone o un sollevatore idraulico.
+
+image::../media/drw_g_lifting_weight_ieops-1831.svg[AFF A20 A30 A50 e C30 e C60 icona di avvertenza sul peso]
+
+
+
+== Fase 3: disimballare le scatole
+
+Dopo esservi assicurati che il sito e l'armadio o il rack che intendete utilizzare soddisfino le specifiche per il vostro sistema storage, e dopo aver compreso le precauzioni per il sollevamento, disimballate tutte le scatole e confrontate il contenuto con gli articoli indicati nella bolla di accompagnamento.
+
+.Fasi
+. Aprire con attenzione tutte le scatole e disporre i contenuti in modo ordinato.
+. Confronta il contenuto che hai disimballato con la packing slip.
++
+Puoi ottenere la bolla di accompagnamento scansionando il codice QR sul lato della scatola di spedizione.
+
++
+
+NOTE: Se si riscontrano discrepanze, annotarle per ulteriori azioni.
+
++
+I seguenti elementi sono alcuni dei contenuti che potresti vedere nelle scatole.
+
++
+Se necessario, vedere  https://hwu.netapp.com/["NetApp Hardware Universe"^] per altri cavi supportati e identificarne l'uso.
+
++
+[cols="9,9,5"]
+|===
+
+
+| *Hardware* | *Cavi* |  
+
+
+ a| 
+** Sistema storage con unità
+** Switch
+** Hardware per montaggio a rack con istruzioni
+** Lunetta
+
+ a| 
+** cavi Ethernet di mirroring tra controller
+** Cavi Ethernet di gestione (cavi RJ-45)
+** Cavi di rete
+** Cavi di alimentazione
+
+|  
+|===
+
+
+
+
+== Passaggio 4: Registra il tuo sistema storage
+
+Dopo aver verificato che il sito soddisfi le specifiche per il sistema storage e che siano presenti tutte le parti ordinate, è necessario registrare il sistema storage.
+
+. Creare un account e registrare l'hardware all'indirizzo http://mysupport.netapp.com/["Supporto NetApp"^].
++
+La procedura di registrazione richiede il numero di serie (SN) di ciascun controller. È possibile trovare il numero di serie nelle seguenti posizioni:
+
++
+** Su ciascun controller
+** Sulla bolla di accompagnamento
+** Nella tua email di conferma
++
+image::../media/drw_ef50-ef80_sn_label_ieops-2689.svg[esempio di etichetta del numero di serie]
+
+
+
+
+
+.Quali sono le prossime novità?
+Dopo esserti preparato per installare il tuo sistema storage, link:install-hardware.html["installare l'hardware"].

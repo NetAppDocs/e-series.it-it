@@ -1,0 +1,48 @@
+---
+permalink: maintenance-ef50-ef80/controller-replace-requirements.html 
+sidebar: sidebar 
+keywords: ef50, ef80, prerequisite, replace the controller module 
+summary: Prima di sostituire il controller nel sistema storage EF50 o EF80, assicurarsi di soddisfare i requisiti per una sostituzione corretta. Ciò include la verifica della presenza di un controller guasto, la verifica dello stato del sistema storage, il reperimento degli strumenti necessari per la procedura e la disponibilità di una stazione di gestione e di un browser per accedere a SANtricity System Manager. 
+---
+= Requisiti per la sostituzione di un controller - EF50 e EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di sostituire il controller nel sistema storage EF50 o EF80, assicurarsi di soddisfare i requisiti per una sostituzione corretta. Ciò include la verifica della presenza di un controller guasto, la verifica dello stato del sistema storage, il reperimento degli elementi necessari per la procedura e la disponibilità di una postazione di gestione e di un browser per accedere a SANtricity System Manager.
+
+* Verifica che sia presente un controller guasto. Puoi determinarlo in due modi:
++
+** Il Recovery Guru in SANtricity System Manager ti ha indicato di sostituire il controller.
+** Il LED di attenzione ambra sul controller è acceso, indicando che il controller ha un guasto.
+
+
+
+
+* Verifica che le seguenti condizioni del tuo sistema storage siano vere per assicurarti di poter sostituire il controller danneggiato mentre il tuo sistema storage è acceso ed esegue operazioni di I/O host:
++
+** Il secondo controller nello chassis ha stato Ottimale.
+** Il campo *OK to remove* nell'area Dettagli di Recovery Guru in SANtricity System Manager visualizza *Yes*, indicando che è sicuro rimuovere il controller danneggiato.
+
+
+* Assicurarsi di disporre di quanto segue:
++
+** Un controller di ricambio con lo stesso part number del controller che si sta sostituendo.
+** Un braccialetto antistatico o sono state adottate altre precauzioni antistatiche.
+** Una superficie di lavoro piana e priva di elettricità statica.
+** Etichette per identificare ciascun cavo che verrà scollegato dal controller.
+** Una postazione di gestione con un browser che può accedere a SANtricity System Manager per il controller.
++
+È possibile aprire l'interfaccia di SANtricity System Manager puntando il browser al domain name o all'indirizzo IP del controller.
+
++
+Facoltativamente, è possibile utilizzare l'interfaccia a riga di comando (CLI) per eseguire alcune delle procedure. Scaricare il pacchetto CLI (file zip) utilizzando SANtricity System Manager: *Settings* > *System* > *Add-ons* e selezionare *Command Line Interface*. È quindi possibile impartire comandi CLI da un prompt del sistema operativo, come il prompt DOS C:.
+
+
+
+
+
+.Quali sono le prossime novità?
+Dopo aver soddisfatto i requisiti per la sostituzione del controller, link:controller-replace-prepare.html["prepararsi alla sostituzione del controller"].

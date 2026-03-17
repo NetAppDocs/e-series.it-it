@@ -15,26 +15,27 @@ Consulta i link sottostanti per accedere ai report tecnici relativi alle piattaf
 
 
 
-== TR della piattaforma
+== TR delle piattaforme EF50, EF80 ed E4000
 
 [cols="9,9,9"]
 |===
 
 
-| https://www.netapp.com/pdf.html?item=/media/17026-tr4725pdf.pdf["*TR-4725: Panoramica delle funzionalità degli array E2800*"^] | https://www.netapp.com/pdf.html?item=/media/17120-tr4724pdf.pdf["*+++TR-4724: Panoramica delle funzionalità degli array E5700++*"^] | https://www.netapp.com/pdf.html?item=/media/21363-tr-4877.pdf["*+++TR-4877: Panoramica delle funzionalità degli array EF300++*"^] 
+| https://www.netapp.com/pdf.html?item=/media/116236-tr-5001-intro-to-netapp-e4000-arrays-with-santricity.pdf["*TR-5001: Panoramica delle funzionalità degli array E4000*"^] | https://www.netapp.com/pdf.html?item=/media/161852-tr-5017-introduction-to-netapp-ef80-array.pdf["*TR-5017: Panoramica delle funzionalità degli array EF80*"^] | https://www.netapp.com/pdf.html?item=/media/161736-tr-5018-introduction-to-netapp-ef50-array.pdf["*TR-5018: Panoramica delle funzionalità degli array EF50*"^] 
 
 
-| Descrive le funzionalità hardware e software dell'array ibrido E2800 e le più recenti funzionalità del sistema operativo SANtricity. | Descrive le informazioni sul prodotto E5700, incluse le nuove funzionalità hardware e software introdotte con la versione più recente di SANtricity. | Descrive le funzionalità hardware e software dell'array all-flash EF300 e le nuove funzionalità del sistema operativo SANtricity. 
+| Descrive le funzionalità hardware e software dell'array ibrido E4000 e le più recenti funzionalità del sistema operativo SANtricity. | Descrive le caratteristiche hardware e software dell'array all-flash EF80 e le funzionalità più recenti del sistema operativo SANtricity. | Descrive le caratteristiche hardware e software dell'array all-flash EF50 e le ultime funzionalità del sistema operativo SANtricity. 
+|===
 
 
-|  |  |  
+== TR della piattaforma legacy
+
+[cols="9,9,9,9"]
+|===
 
 
-|  |  |  
+| https://www.netapp.com/pdf.html?item=/media/17009-tr4800pdf.pdf["*TR-4800: Panoramica delle funzionalità degli array EF600*"^] | https://www.netapp.com/pdf.html?item=/media/21363-tr-4877.pdf["*+++TR-4877: Panoramica delle funzionalità degli array EF300++*"^] | https://www.netapp.com/pdf.html?item=/media/17026-tr4725pdf.pdf["*TR-4725: Panoramica delle funzionalità degli array E2800*"^] | https://www.netapp.com/pdf.html?item=/media/17120-tr4724pdf.pdf["*+++TR-4724: Panoramica delle funzionalità degli array E5700++*"^] 
 
 
-| https://www.netapp.com/pdf.html?item=/media/17009-tr4800pdf.pdf["*TR-4800: Panoramica delle funzionalità degli array EF600*"^] | https://www.netapp.com/pdf.html?item=/media/116236-tr-5001-intro-to-netapp-e4000-arrays-with-santricity.pdf["*TR-5001: Panoramica delle funzionalità degli array E4000*"^] |  
-
-
-| Descrive le caratteristiche hardware e software dell'array all-flash EF600 e le nuove funzionalità del sistema operativo SANtricity. | Descrive le funzionalità hardware e software dell'array ibrido E4000 e le più recenti funzionalità del sistema operativo SANtricity. |  
+| Descrive le caratteristiche hardware e software dell'array all-flash EF600 e le nuove funzionalità di SANtricity OS. | Descrive le caratteristiche hardware e software dell'array all-flash EF300 e le nuove funzionalità del sistema operativo SANtricity. | Descrive le caratteristiche hardware e software dell'array ibrido E2800 e le funzionalità più recenti del sistema operativo SANtricity. | Descrive le informazioni sul prodotto E5700, incluse le nuove funzionalità hardware e software introdotte con l'ultima versione di SANtricity. 
 |===

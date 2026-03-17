@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cabling, cables, ethernet cabling, ethernet cable, out of band, direct topology, fabric topology, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C 
 summary: Connessione del sistema storage a una rete Ethernet per la gestione out-of-band. 
 ---
-= Cablaggio Ethernet per una stazione di gestione (e-Series)
+= Cablaggio Ethernet per una stazione di gestione - E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,9 +13,13 @@ summary: Connessione del sistema storage a una rete Ethernet per la gestione out
 [role="lead"]
 È possibile collegare il sistema storage a una rete Ethernet per la gestione out-of-band degli array di storage. È necessario utilizzare cavi Ethernet per tutte le connessioni di gestione degli array di storage.
 
+[NOTE]
+====
+Alcuni sistemi storage dispongono di una sola porta di gestione Ethernet out-of-band su ciascun controller.
 
-NOTE: I modelli EF300, EF600 e E4000 dispongono di una sola porta di gestione ethernet out-of-band.
+Per le istruzioni di cablaggio specifiche per il tuo sistema storage, consulta link:../getting-started/getup-run-concept.html["Guida rapida per e-Series"^] e fai clic sul collegamento relativo al tuo sistema storage.
 
+====
 
 
 == Topologia diretta

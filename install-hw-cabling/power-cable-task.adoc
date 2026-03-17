@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cabling, cables, power cable, power cabling, power supply cabling, E-Series, eseries, E2800, E5700, EF300, EF600, DE212C, DE224C, DE460C 
 summary: Collegare gli alimentatori di ciascun componente a circuiti di alimentazione separati. 
 ---
-= Cablaggio dell'alimentazione del sistema storage (e-Series)
+= Cablaggio di alimentazione del sistema storage - E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -24,9 +24,9 @@ La fonte di alimentazione del sistema storage deve essere in grado di soddisfare
 .Fase
 . Collegare un cavo di alimentazione a ciascuna unità di alimentazione del sistema di archiviazione.
 . Collegare i due cavi di alimentazione per ogni shelf a diverse unità di distribuzione dell'alimentazione (PDU) nell'armadio o nel rack.
-. Accendere entrambi gli interruttori di alimentazione.
+. Accendere entrambi gli alimentatori.
 +
 
-NOTE: I sistemi di archiviazione EF300 e EF600 non sono dotati di interruttori di alimentazione. Si accenderanno non appena i cavi saranno collegati.
+NOTE: A seconda del sistema storage, gli alimentatori sono dotati di interruttori di alimentazione oppure non sono presenti interruttori di alimentazione e in tal caso è necessario collegare i cavi di alimentazione per accenderli.
 
 

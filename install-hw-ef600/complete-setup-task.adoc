@@ -137,6 +137,7 @@ La figura seguente mostra un esempio della posizione della porta di gestione del
 image:../media/ethernet_callout.png["Porte di gestione EF600"]
 
 |===
+. Collegare il controller B alla rete.
 . Aprire un browser e utilizzare l'indirizzo IP predefinito (169.254.128.101) per stabilire una connessione al controller. Il controller restituisce un certificato autofirmato. Il browser informa che la connessione non è sicura.
 +
 
@@ -164,7 +165,6 @@ NOTE: Se si perde la connessione al controller A, è possibile collegare un cavo
 Viene visualizzata la procedura guidata Configure Network Settings (Configura impostazioni di rete).
 
 . Utilizzare le impostazioni di rete fornite dall'amministratore di rete nella procedura guidata *Configura impostazioni di rete* per configurare le impostazioni di rete del controller B, quindi selezionare *fine*.
-. Collegare il controller B alla rete.
 . Convalidare le impostazioni di rete del controller B immettendo l'indirizzo IP configurato del controller B in un browser.
 +
 

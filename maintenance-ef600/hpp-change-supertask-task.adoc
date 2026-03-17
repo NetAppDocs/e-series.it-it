@@ -34,7 +34,7 @@ image::../media/sam1130_ss_e2800_storage_array_profile_sn_smid_copy_maint-ef600.
 . Individuare l'ID del sottomodello *Feature Pack*.
 +
 .. In Gestione sistema di SANtricity, selezionare *supporto*.
-.. Selezionare il riquadro *Support Center*.
+.. Seleziona il riquadro *Support Resources*.
 .. Nella scheda Support Resources (risorse di supporto), individuare e selezionare il collegamento *Storage Array Profile* (Profilo array di storage).
 .. Digitare *Feature Pack submodel ID* nella casella di testo e fare clic su *Find* (trova).
 .. Individuare l'ID del sottomodello del Feature Pack per la configurazione iniziale.
@@ -642,7 +642,7 @@ CAUTION: *Possibile perdita di dati* -- se si continua questa procedura mentre s
 +
 Il LED verde cache Active (cache attiva) sul retro di ciascun controller è acceso quando i dati memorizzati nella cache devono essere scritti sui dischi. Attendere che il LED si spenga.
 
-. Dalla home page di Gestione sistema SANtricity, selezionare *Visualizza operazioni in corso*.
+. Dalla Home page di SANtricity System Manager, selezionare menu:Storage[Operations in Progress].
 . Attendere il completamento di tutte le operazioni prima di passare alla fase successiva.
 
 

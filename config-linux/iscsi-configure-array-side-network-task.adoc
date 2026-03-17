@@ -22,7 +22,7 @@ Assicurarsi di disporre di quanto segue:
 
 
 .A proposito di questa attività
-Questa attività descrive come accedere alla configurazione della porta iSCSI dalla pagina hardware di System Manager. È inoltre possibile accedere alla configurazione dal menu:sistema[Impostazioni > Configura porte iSCSI].
+Questa procedura descrive come accedere alla configurazione della porta iSCSI dalla pagina Hardware di System Manager. È inoltre possibile accedere alla configurazione dal menu:System[Settings > System > Configure iSCSI ports].
 
 .Fasi
 . Dal browser, immettere il seguente URL: `+https://<DomainNameOrIPAddress>+`
@@ -40,11 +40,7 @@ L'installazione guidata viene avviata se non sono configurati pool, gruppi di vo
 +
 La procedura guidata verrà utilizzata in seguito per completare ulteriori attività di installazione.
 
-. Selezionare *hardware*.
-. Se la figura mostra i dischi, fare clic su *Mostra retro dello shelf*.
-+
-Il grafico cambia per mostrare i controller invece dei dischi.
-
+. Dal pannello di sinistra, selezionare menu:Hardware[Controllers and components].
 . Fare clic sul controller con le porte iSCSI che si desidera configurare.
 +
 Viene visualizzato il menu di scelta rapida del controller.

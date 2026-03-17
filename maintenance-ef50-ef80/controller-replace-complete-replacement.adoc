@@ -1,0 +1,73 @@
+---
+permalink: maintenance-ef50-ef80/controller-replace-complete-replacement.html 
+sidebar: sidebar 
+keywords: ef50, ef80, how to complete the controller replacement process 
+summary: Per completare la sostituzione del controller per il sistema storage EF50 o EF80, assicurarsi che il firmware del sistema storage sia aggiornato, verificare che i volumi siano stati restituiti ai rispettivi proprietari, raccogliere i dati di supporto del sistema e restituire la parte guasta a NetApp. 
+---
+= Completare la sostituzione del controller - EF50 e EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per completare la sostituzione del controller per il tuo sistema storage EF50 o EF80, assicurati che sia installata la versione più recente di SANtricity OS, verifica che i volumi siano stati restituiti ai rispettivi controller proprietari, raccogli i dati di supporto del sistema e restituisci la parte guasta a NetApp.
+
+
+
+== Passaggio 1: Assicurarsi di utilizzare la versione più recente di SANtricity OS, verificare la proprietà del volume e raccogliere i dati di supporto
+
+Utilizzando SANtricity System Manager, assicurati che sia installata la versione più recente di SANtricity OS, verifica che tutti i volumi siano restituiti ai rispettivi controller e raccogli i dati di supporto in modo da poter riprendere le operazioni.
+
+.Fasi
+. Assicurati che l'ultima versione di SANtricity OS sia installata sul sistema storage:
++
+.. Seleziona *Support* > *Upgrade Center*
+.. Se necessario, installare la versione più recente.
+
+
+. Verificare che tutti i volumi siano restituiti ai rispettivi controller proprietari:
++
+[cols="1,2"]
+|===
+| Se... | Poi... 
+
+
+ a| 
+Recovery Guru è presente e indica che i volumi non si trovano sul percorso preferito (non sono stati restituiti ai controller proprietari)
+ a| 
+.. Redistribuire i volumi ai rispettivi controller selezionando *Archiviazione* > *Volumi* > *Altro* e dal menu a discesa selezionare *Ridistribuisci volumi*.
+.. Verifica che tutti i volumi siano stati ridistribuiti ai rispettivi controller controllando se Recovery Guru è presente e indica ancora che i volumi non si trovano sul percorso preferito.
+
+
+
+NOTE: Se i volumi non sono ancora stati restituiti ai rispettivi controller, contattare https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"].
+
+
+
+ a| 
+Recovery Guru non è presente (sembra che tutti i volumi siano restituiti ai rispettivi controller proprietari)
+ a| 
+Verifica che tutti i volumi siano stati restituiti ai rispettivi controller proprietari selezionando *Storage* > *Volumes* > *More* e, dal menu a discesa, seleziona *Change volume ownership* per visualizzare i proprietari dei volumi.
+
+|===
+. Raccogli i dati di supporto per il tuo sistema storage:
++
+.. Selezionare *Support* > *Support Center* > *Diagnostics*.
+.. Selezionare *Collect Support Data*.
+.. Seleziona *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *support-data.7z*.
+
+
+
+
+
+
+
+== Passaggio 2: restituire la parte difettosa a NetApp
+
+Restituire il componente difettoso a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Consultare la  https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzioni dei pezzi"] pagina per ulteriori informazioni.
+
+.Quali sono le prossime novità?
+La sostituzione del controller è completata. È possibile riprendere le normali operazioni.

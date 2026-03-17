@@ -1,0 +1,34 @@
+---
+permalink: install-hw-ef50-ef80/install-workflow.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Per installare e configurare il tuo sistema storage EF50 o EF80, è necessario preparare il sito, installare e cablare i componenti hardware, accendere il sistema storage e completare la configurazione e l"impostazione del sistema storage.' 
+---
+= Installazione e configurazione - EF50 e EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per installare e configurare il tuo sistema storage EF50 o EF80, è necessario preparare il sito, installare e cablare i componenti hardware, accendere il sistema storage e completare la configurazione e l'impostazione del sistema storage.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"]link:install-prepare.html["Preparazione per l'installazione"]
+[role="quick-margin-para"]
+Per prepararsi all'installazione, predisporre il sito, informarsi sulle precauzioni di sollevamento relative al sistema storage, disimballare le scatole e confrontare il contenuto con la bolla di accompagnamento, e registrare il sistema storage per accedere ai vantaggi dell'assistenza.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"]link:install-hardware.html["Installare l'hardware"]
+[role="quick-margin-para"]
+Per installare l'hardware, installate l'hardware per il montaggio a rack nell'armadio o nel rack, quindi installate e fissate il vostro sistema storage.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tre"]link:install-cable.html["Collega l'hardware"]
+[role="quick-margin-para"]
+Per collegare l'hardware, collega i controller tra loro per abilitare il mirroring inter-controller, che garantisce la piena ridondanza del sistema ed è utilizzato per il mirroring della cache e l'inoltro I/O, quindi collega i controller alla rete host.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quattro"]link:install-power-hardware.html["Accendere il sistema storage"]
+[role="quick-margin-para"]
+Per accendere il tuo sistema storage, collega un cavo di alimentazione a ciascun alimentatore del controller e poi collegali a fonti di alimentazione su circuiti diversi
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinque"]link:install-complete-setup.html["Completare la configurazione del sistema storage"]
+[role="quick-margin-para"]
+Per completare la configurazione del sistema storage, collega e configura le porte di gestione sui controller, configura e gestisci il sistema storage e poi verifica che il protocollo del modulo I/O host sia corretto.

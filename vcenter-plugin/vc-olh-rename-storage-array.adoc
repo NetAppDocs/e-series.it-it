@@ -18,6 +18,6 @@ summary: 'Modificare il nome dello storage array visualizzato nella pagina Manag
 
 .Fasi
 . Nella pagina *Manage* (Gestisci), selezionare la casella di controllo a sinistra del nome dello storage array.
-. Selezionare i puntini di sospensione all'estrema destra della riga, quindi selezionare *Rename storage array* dal menu a comparsa.
+. Seleziona i tre puntini all'estrema destra della riga, quindi seleziona *Rinomina storage array* dal menu a comparsa.
 . Inserire il nuovo nome e fare clic su *Save* (Salva).
 

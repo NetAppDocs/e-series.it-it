@@ -25,7 +25,7 @@ Utilizzare Gestore di sistema SANtricity per determinare il tipo di ricetrasmett
 .Fasi
 . Da Gestore di sistema di SANtricity, selezionare *supporto*.
 . Selezionare il riquadro *Support Center*.
-. Nella scheda Support Resources (risorse di supporto), individuare e selezionare il collegamento *Storage Array Profile* (Profilo array di storage).
+. Nella pagina Support Resources, individuare e selezionare il collegamento *Storage Array Profile*.
 . Digitare *SFP* nella casella di testo e fare clic su *Find* (trova).
 . Per ogni SFP elencato nel profilo dell'array di storage, individuare la voce *velocità dati supportata*.
 +

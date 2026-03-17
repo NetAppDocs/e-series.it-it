@@ -1,0 +1,5 @@
+= 
+:allow-uri-read: 
+
+
+Restituire il componente difettoso a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Consultare la  https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzioni dei pezzi"] pagina per ulteriori informazioni.

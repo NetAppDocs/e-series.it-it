@@ -1,0 +1,41 @@
+= 
+:allow-uri-read: 
+
+
+.Fasi
+. Assicurarsi di disporre di quanto segue:
++
+** Il modulo I/O di ricambio.
++
+Assicurati di sostituire il modulo I/O guasto con un modulo I/O dello stesso tipo. Non è possibile installare un tipo diverso di modulo I/O.
+
++
+È necessario avere lo stesso tipo e numero di moduli I/O in ciascun controller nel sistema storage.
+
++
+
+CAUTION: *Possibile perdita di accesso ai dati* -- La presenza di moduli I/O incompatibili o non corrispondenti provoca il blocco dei controller quando si applica l'alimentazione.
+
+** Un braccialetto ESD o hai preso altre precauzioni antistatiche.
+** Una superficie di lavoro piana e antistatica.
+** Etichette per identificare ciascun cavo che è collegato al modulo I/O difettoso.
+** Una stazione di gestione dotata di un browser che può accedere a SANtricity System Manager per il controller non funzionante.
++
+Per aprire l'interfaccia di System Manager, puntare il browser al domain name o all'indirizzo IP del controller difettoso.
+
+
+
+. Eseguire il backup del database della configurazione del sistema storage utilizzando SANtricity System Manager:
++
+Se si verifica un problema durante la rimozione di un controller, è possibile utilizzare il file salvato per ripristinare la configurazione. Il sistema salva lo stato corrente del database di configurazione RAID, che include tutti i dati relativi ai gruppi di volumi e ai pool di dischi sul controller danneggiato.
+
++
+.. Selezionare *Support* > *Support Center* > *Diagnostics*.
+.. Selezionare *Collect Configuration Data* (raccolta dati di configurazione).
+.. Seleziona *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+

@@ -1,0 +1,38 @@
+---
+permalink: maintenance-ef50-ef80/controller-replace-workflow.html 
+sidebar: sidebar 
+keywords: ef50, ef80, replace the controller workflow 
+summary: È possibile sostituire un controller danneggiato nel sistema storage EF50 o EF80 soddisfacendo i requisiti del sistema storage, preparando il sistema, mettendo offline il controller danneggiato, sostituendo il controller, mettendo online il nuovo controller e completando la procedura di sostituzione. 
+---
+= Procedura di sostituzione del controller - EF50 e EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile sostituire un controller danneggiato nel sistema storage EF50 o EF80 soddisfacendo i requisiti del sistema storage, preparando il sistema, mettendo offline il controller danneggiato, sostituendo il controller, mettendo online il nuovo controller e completando la procedura di sostituzione.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"]link:controller-replace-requirements.html["Esaminare i requisiti per la sostituzione del controller"]
+[role="quick-margin-para"]
+Verifica che il tuo sistema storage abbia un controller guasto, verifica lo stato del tuo sistema storage, procurati gli strumenti per la procedura e disponi di una postazione di gestione e di un browser per accedere a SANtricity System Manager.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"]link:controller-replace-prepare.html["Prepararsi alla sostituzione del controller"]
+[role="quick-margin-para"]
+Disimballare il controller sostitutivo, annotare il suo indirizzo MAC, verificare che il part number sia corretto ed eseguire il backup del database della configurazione del sistema storage.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tre"]link:controller-replace-offline-controller.html["Disattivare il controller danneggiato"]
+[role="quick-margin-para"]
+Disattivare il controller danneggiato per evitare la perdita di dati e garantire la stabilità del sistema durante la sostituzione del controller danneggiato.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quattro"]link:controller-replace-move-hardware.html["Sostituire il controller danneggiato"]
+[role="quick-margin-para"]
+Verificare che tutti i dati presenti nella cache siano stati scritti sulle unità, scollegare tutti i cavi dal controller danneggiato, rimuovere il controller, trasferire i componenti sul controller sostitutivo, installare il controller sostitutivo e ricollegare tutti i cavi.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinque"]link:controller-replace-online-controller.html["Online il controller di ricambio"]
+[role="quick-margin-para"]
+Confermare l'indirizzo IP del controller sostitutivo, attivare il controller e verificare che lo stato del sistema storage sia Ottimale.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Sei"]link:controller-replace-complete-replacement.html["Completare la sostituzione del controller"]
+[role="quick-margin-para"]
+Assicurarsi che sia installata la versione più recente di SANtricity OS, verificare che i volumi siano stati restituiti ai rispettivi controller, raccogliere i dati di supporto del sistema e restituire la parte guasta a NetApp.

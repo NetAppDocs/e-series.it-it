@@ -65,7 +65,7 @@ Se si desidera importare i certificati firmati dalla CA, annullare la procedura 
 
 È necessario risolvere eventuali problemi di certificato prima di procedere con il processo di rilevamento.
 
-. Se viene visualizzata la finestra di dialogo Risolvi certificati autofirmati, esaminare le informazioni visualizzate per i certificati non attendibili. Per ulteriori informazioni, fare clic sui puntini di sospensione all'estremità della tabella e selezionare *View* (Visualizza) dal menu a comparsa.
+. Se si apre la finestra di dialogo Resolve Self-Signed Certificates, esamina le informazioni visualizzate relative ai certificati non attendibili. Per ulteriori informazioni, puoi anche fare clic sui puntini di sospensione all'estremità della tabella e selezionare *View* dal menu a comparsa.
 . Effettuare una delle seguenti operazioni:
 +
 ** Se le connessioni agli array di storage rilevati sono attendibili, fare clic su *Avanti*, quindi su *Sì* per confermare e passare alla finestra di dialogo successiva della procedura guidata. I certificati autofirmati sono contrassegnati come attendibili e gli array di storage vengono aggiunti al plug-in.

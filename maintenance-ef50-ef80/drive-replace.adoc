@@ -1,0 +1,219 @@
+---
+permalink: maintenance-ef50-ef80/drive-replace.html 
+sidebar: sidebar 
+keywords: ef50, ef80, replace the drives 
+summary: 'Sostituisci un"unità nel tuo sistema storage EF50 o EF80 quando un"unità si guasta o necessita di un aggiornamento.' 
+---
+= Sostituire un'unità - EF50 e EF80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sostituisci un'unità guasta mentre il tuo sistema storage EF50 o EF80 sta ricevendo I/O per garantire la continuità dell'accesso ai dati e le prestazioni del sistema.
+
+.A proposito di questa attività
+* Sostituire un'unità preparandola, sostituendola, completando la sostituzione e quindi restituendo la parte guasta a NetApp.
+* La funzione Recovery Guru in SANtricity System Manager monitora le unità nel sistema storage e può notificarti un imminente guasto dell'unità o un guasto effettivo dell'unità. Quando un'unità si guasta, il relativo LED di attenzione (ambra) si illumina.
+
+
+
+
+== Passaggio 1: Prepararsi alla sostituzione dell'unità
+
+Per prepararsi alla sostituzione dell'unità, è necessario accertarsi che l'unità sia effettivamente guasta, verificare di disporre di un'unità sostitutiva supportata, assicurarsi di avere accesso a SANtricity System Manager, adottare le precauzioni contro le scariche elettrostatiche e individuare fisicamente l'unità guasta.
+
+.Fasi
+. Se il guru del ripristino in Gestione sistema di SANtricity ha notificato un _imminente guasto al disco_, ma il disco non è ancora guasto, seguire le istruzioni nel guru del ripristino per eseguire il guasto al disco.
+. Assicurati di avere un'unità di ricambio adatta alla configurazione del tuo sistema storage.
++
+Se necessario, è possibile utilizzare SANtricity System Manager per confermare:
+
++
+.. Seleziona *Hardware* > *Drives*.
+.. Seleziona l'unità guasta nel grafico per visualizzare il relativo menu contestuale, quindi seleziona *View settings*.
+.. Verificare che l'unità sostitutiva abbia una capacità uguale o superiore a quella dell'unità che si sta sostituendo e che disponga delle funzioni previste.
++
+Ad esempio, se si sostituisce un'unità con funzionalità di sicurezza, assicurarsi che anche l'unità sostitutiva sia con funzionalità di sicurezza.
+
+
+
+. Assicurati di disporre di una postazione di gestione con un browser che possa accedere a SANtricity System Manager per uno dei controller.
++
+Per aprire l'interfaccia di System Manager, puntare il browser al domain name o all'indirizzo IP del controller.
+
+. Prevenire le scariche elettrostatiche (ESD) durante la manipolazione e l'installazione di un drive:
++
+** Assicurati di avere un braccialetto per la scarica elettrostatica (ESD).
++
+Indossare sempre un braccialetto ESD collegato a terra su una superficie non verniciata sullo chassis del sistema storage. Se non si dispone di un braccialetto ESD, toccare una superficie non verniciata sullo chassis del sistema storage prima di maneggiare l'unità.
+
+** Tenere l'unità nella busta ESD fino a quando non si è pronti per l'installazione.
+** Aprire il sacchetto ESD manualmente o tagliare la parte superiore con un paio di forbici. Non inserire utensili metallici o coltelli nel sacchetto ESD.
+** Assicurati di avere una superficie di lavoro piana e priva di elettricità statica.
+** Conservare la busta ESD e qualsiasi materiale di imballaggio per restituire l'unità guasta o utilizzare un imballaggio approvato quando si spedisce un'unità.
+** Evitare i campi magnetici. Tenere le unità lontano da dispositivi magnetici.
++
+I campi magnetici possono distruggere tutti i dati presenti sul disco e causare danni irreparabili ai circuiti del disco.
+
+
+
+. Evitare danni fisici durante la movimentazione e l'installazione di un drive:
++
+
+CAUTION: Le unità disco sono fragili; una manipolazione impropria delle unità disco è una delle principali cause di guasto delle unità disco.
+
++
+** Utilizzare sempre due mani per rimuovere, installare o trasportare un disco.
+** Non forzare mai un'unità nell'alloggiamento dell'unità. Utilizzare sempre una pressione delicata ma decisa per innestare completamente il fermo dell'unità.
+** Posizionare i dischi su superfici imbottite e non impilare mai i dischi uno sopra l'altro.
+** Non urtare i dischi contro altre superfici.
+
+
+. È possibile attivare i LED di localizzazione (blu) del sistema storage (sulla parte anteriore del sistema storage e su entrambi i controller) per facilitare l'individuazione fisica del sistema storage. Utilizzando SANtricity System Manager, selezionare *Hardware* > *Controllers and components*, selezionare la scheda *Controller shelf* e dal menu contestuale selezionare *Turn on locator light*.
+. Se necessario, puoi individuare fisicamente l'unità guasta all'interno del sistema storage facendo lampeggiare il relativo LED di attenzione (ambra). Utilizzando SANtricity System Manager, seleziona *Hardware* > *Drives*, seleziona l'unità guasta nella rappresentazione grafica per visualizzare il menu contestuale e quindi seleziona *Turn on locator light*.
++
+
+NOTE: Per visualizzare i LED delle unità, è necessario rimuovere la cornice dalla parte anteriore del sistema storage.
+
+
+
+
+
+== Passaggio 2: sostituire l'unità
+
+Sostituisci l'unità guasta con una nuova.
+
+
+NOTE: È necessario installare l'unità di ricambio il prima possibile dopo aver rimosso l'unità guasta.
+
+.Fasi
+. Se non è già stata rimossa, rimuovere la cornice dalla parte anteriore del sistema storage.
+. Rimuovere il disco guasto:
++
+
+NOTE: Se si rimuove accidentalmente un disco attivo, attendere almeno 60 secondi, quindi reinstallarlo. Per la procedura di ripristino, fare riferimento al software di gestione dello storage.
+
++
+image::../media/drw_nvme_drive_replace_ieops-1904.svg[Rimuovere l'unità NVMe]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout numero 1]
+ a| 
+Premere il pulsante di sblocco nero sulla superficie dell'unità per aprire la maniglia della camma.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Callout numero 2]
+ a| 
+Ruotare la maniglia della camma verso il basso per disinnestare l'unità dal midplane.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Callout numero 3]
+ a| 
+.. Far scorrere parzialmente l'unità fuori dal vano drive utilizzando la maniglia a camma.
+.. Attendi 60 secondi affinché l'unità deceleri.
+.. Utilizzando entrambe le mani, rimuovere completamente l'unità dal drive bay.
+
+
+|===
+. Posizionare l'unità su una superficie antistatica imbottita lontano da campi magnetici.
+. Attendi 60 secondi affinché il software di sistema riconosca che l'unità è stata rimossa.
+. Disimballare l'unità sostitutiva e posizionarla su una superficie piana e antistatica vicino al sistema storage.
++
+Conservate il materiale di imballaggio per utilizzarlo al momento della restituzione del drive guasto.
+
+. Inserire l'unità di ricambio:
++
+.. Aprire la maniglia della camma.
+.. Utilizzando entrambe le mani, inserire l'unità di ricambio nell'alloggiamento libero, spingendo con decisione fino a quando l'unità si ferma.
+.. Chiudere la maniglia a camma in modo che l'unità sia completamente inserita nel midplane e la maniglia a camma scatti in posizione.
++
+Assicurarsi di chiudere lentamente la maniglia della camma in modo che si allinei correttamente con la superficie dell'unità.
+
++
+Il LED verde sull'unità si illumina quando l'unità è inserita correttamente.
+
+
+
+
+
+
+
+== Passaggio 3: Completare la sostituzione dell'unità
+
+Conferma che l'unità sostitutiva funzioni correttamente e assicurati che la ricostruzione dell'unità sia iniziata.
+
+.Fasi
+. Confermate che l'unità di ricambio funzioni correttamente controllando il comportamento del LED e, in caso contrario, adottate le opportune azioni correttive.
++
+
+NOTE: Quando si inserisce un'unità per la prima volta, il relativo LED di attenzione potrebbe essere acceso. Tuttavia, il LED dovrebbe spegnersi entro un minuto se l'unità sostitutiva funziona correttamente.
+
++
+[cols="1,2"]
+|===
+| Se il comportamento del LED dell'unità di ricambio mostra... | Poi... 
+
+
+ a| 
+Il LED di alimentazione è acceso o lampeggiante e il LED di attenzione è spento
+ a| 
+L'unità di ricambio funziona correttamente.
+
+Passa al passaggio successivo.
+
+
+
+ a| 
+Il LED di alimentazione è spento
+ a| 
+L'unità potrebbe non essere installata correttamente.
+
+.. Rimuovi l'unità, attendi 60 secondi e poi reinstallala.
+.. Se il guru del ripristino in Gestione sistema di SANtricity continua a mostrare un problema, selezionare *ricontrollare* per assicurarsi che il problema sia stato risolto.
+
+
+
+
+ a| 
+Il LED di attenzione è acceso
+ a| 
+La nuova unità potrebbe essere difettosa.
+
+.. Sostituire la nuova unità con un'altra nuova unità.
+.. Se il guru del ripristino in Gestione sistema di SANtricity continua a mostrare un problema, selezionare *ricontrollare* per assicurarsi che il problema sia stato risolto.
+
+
+|===
+. Se il Recovery Guru in SANtricity System Manager indica che la ricostruzione dell'unità non è iniziata automaticamente, avvia la ricostruzione manualmente, quando richiesto da NetApp Support o dal Recovery Guru e utilizza i seguenti passaggi:
++
+
+NOTE: A seconda della configurazione, il controller potrebbe ricostruire automaticamente i dati sulla nuova unità. Se il sistema storage utilizza hot spare, il controller potrebbe dover eseguire una ricostruzione completa sull'hot spare prima di poter copiare i dati sull'unità sostitutiva. Questo processo di ricostruzione aumenta il tempo necessario per completare questa procedura.
+
++
+.. Seleziona *Hardware* > *Drive*.
+.. Seleziona l'unità sostitutiva nella grafica per visualizzare il relativo menu contestuale, quindi seleziona *Ricostruisci*.
+.. Confermare che si desidera eseguire questa operazione.
++
+Al termine della ricostruzione del disco, il gruppo di volumi si trova in uno stato ottimale.
+
+
+
+. Reinstallare la ghiera.
+
+
+
+
+== Passaggio 4: restituire la parte difettosa a NetApp
+
+Restituire il componente difettoso a NetApp, come descritto nelle istruzioni RMA fornite con il kit. Consultare la  https://mysupport.netapp.com/site/info/rma["Restituzione e sostituzioni dei pezzi"] pagina per ulteriori informazioni.

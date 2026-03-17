@@ -1,0 +1,42 @@
+= 
+:allow-uri-read: 
+
+
+.Fasi
+. Pianifica una finestra di manutenzione di inattività per questa procedura. Non potrai accedere ai dati sul sistema storage finché non avrai completato correttamente questa procedura. Poiché entrambi i controller devono avere la stessa configurazione dei moduli I/O quando sono accesi, l'alimentazione deve essere disattivata durante l'aggiornamento dei moduli I/O.
+. Assicurarsi di disporre di quanto segue:
++
+** I nuovi moduli I/O a cui stai eseguendo l'aggiornamento.
++
+Assicurati che i moduli I/O a cui stai eseguendo l'upgrade siano supportati dal tuo sistema storage, che tu abbia lo stesso tipo e numero di moduli I/O per ciascun controller e che tu comprenda la priorità degli slot (il nuovo modulo I/O deve essere installato nello stesso slot su ciascun controller).
+
++
+
+CAUTION: *Possibile perdita di accesso ai dati* -- La presenza di moduli I/O incompatibili o non corrispondenti provoca il blocco dei controller quando si applica l'alimentazione.
+
++
+Se necessario, è possibile verificare i moduli I/O supportati e la priorità degli slot per il sistema storage all'indirizzo  https://hwu.netapp.com["NetApp Hardware Universe"^].
+
+** Cavi per collegare i nuovi moduli I/O alla tua rete.
+** Un braccialetto ESD o hai preso altre precauzioni antistatiche.
+** Una superficie di lavoro piana e antistatica.
+** Una postazione di gestione dotata di un browser che può accedere a SANtricity System Manager per i controller.
++
+Per aprire l'interfaccia di System Manager, puntare il browser al domain name o all'indirizzo IP del controller di destinazione.
+
+
+
+. Eseguire il backup del database della configurazione del sistema storage utilizzando SANtricity System Manager:
++
+Se si verifica un problema durante la rimozione di un controller, è possibile utilizzare il file salvato per ripristinare la configurazione. Il sistema salva lo stato corrente del database di configurazione RAID, che include tutti i dati relativi ai gruppi di volumi e ai pool di dischi sul controller danneggiato.
+
++
+.. Selezionare *Support* > *Support Center* > *Diagnostics*.
+.. Selezionare *Collect Configuration Data* (raccolta dati di configurazione).
+.. Seleziona *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+

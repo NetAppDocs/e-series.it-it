@@ -169,10 +169,16 @@ Rimuovere la batteria dal contenitore del controller guasto in modo da poterla i
 . Individuare la scheda 'PRESS' sul lato del controller.
 . Sganciare la batteria premendo la linguetta e premendo l'alloggiamento della batteria.
 +
-image::../media/batt_3.png["Premere la linguetta per sbloccare la batteria]
+image::../media/batt_3.png[Premere tab per sbloccare la batteria]
 
-. Premere delicatamente il connettore che ospita il cablaggio della batteria. Tirare verso l'alto, scollegando la batteria dalla scheda.image:../media/batt_2.png["Rimuovere il connettore che ospita il cablaggio della batteria"]
-. Estrarre la batteria dal controller e posizionarla su una superficie piana e priva di elettricità statica.image:../media/batt_4.png["Estrarre la batteria dalla centralina"]
+. Premere delicatamente il connettore che ospita il cablaggio della batteria. Tirare verso l'alto, scollegando la batteria dalla scheda.
++
+image:../media/batt_2.png["Rimuovere il connettore che ospita il cablaggio della batteria"]
+
+. Estrarre la batteria dal controller e posizionarla su una superficie piana e priva di scariche elettrostatiche.
++
+image:../media/batt_4.png["Estrarre la batteria dalla centralina"]
+
 
 
 

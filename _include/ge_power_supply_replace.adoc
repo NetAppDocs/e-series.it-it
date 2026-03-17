@@ -1,0 +1,82 @@
+= 
+:allow-uri-read: 
+
+
+.Fasi
+. Se non si è già collegati a terra, mettere a terra l'utente.
+. Scollega il cavo di alimentazione dall'alimentatore aprendo il fermo del cavo di alimentazione, quindi stacca il cavo di alimentazione dall'alimentatore.
++
+
+NOTE: L'alimentatore non ha un interruttore di alimentazione.
+
+. Rimuovere l'alimentatore:
++
+image::../media/ef50-ef80_psu_ac_orange_tab_replace_ieops-2611.svg[Sostituire l'alimentatore CA]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[Callout numero 1]
+ a| 
+Ruotare la maniglia dell'alimentatore verso l'alto, fino alla posizione orizzontale, e quindi afferrarla.
+
+
+
+ a| 
+image::../media/icon_round_2.png[Callout numero 2]
+ a| 
+Con il pollice, premi la linguetta di bloccaggio arancione per sganciare la PSU dal controller.
+
+
+
+ a| 
+image::../media/icon_round_3.png[Callout numero 3]
+ a| 
+Estrai l'alimentatore dal controller mentre con l'altra mano ne sostieni il peso.
+
+
+CAUTION: L'alimentatore è corto. Utilizzare sempre entrambe le mani per sostenerlo quando lo si rimuove dal controller, in modo che non si stacchi improvvisamente dal controller e possa causare lesioni.
+
+|===
+. Disimballare l'alimentatore sostitutivo e posizionarlo su una superficie piana vicino al sistema storage.
++
+Conservare tutti i materiali di imballaggio per l'utilizzo quando si restituisce l'alimentatore guasto.
+
+. Installare l'alimentatore sostitutivo:
++
+.. Utilizzando entrambe le mani, supporta e allinea i bordi dell'alimentatore con l'apertura nel controller.
+.. Spingere delicatamente l'alimentatore nel controller finché la linguetta di bloccaggio arancione non scatta in posizione.
++
+Un PSU si innesta correttamente con il connettore interno e si blocca in posizione solo in un modo.
+
++
+
+NOTE: Per evitare di danneggiare il connettore interno, non esercitare una forza eccessiva quando si inserisce l'alimentatore nel controller.
+
+.. Ruotare la maniglia verso il basso, in modo che sia fuori dal percorso delle normali operazioni.
+
+
+. Ricollega il cavo di alimentazione all'alimentatore e fissa il cavo di alimentazione con il fermacavo del cavo di alimentazione.
++
+Una volta ripristinata l'alimentazione al PSU, il LED di stato dovrebbe essere verde.
+
+. Confermare che lo stato dell'alimentatore (PSU) sia Ottimale e che i LED di attenzione del sistema storage siano spenti.
++
+Se lo stato non è Ottimale o se uno qualsiasi dei LED di Attenzione è acceso, verificare che il power cord sia inserito correttamente e che il PSU sia installato correttamente. Se necessario, rimuovere e reinstallare il PSU.
+
++
+
+NOTE: Se non riesci a risolvere il problema, contatta https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] prima di continuare con questa procedura.
+
+. Da SANtricity System Manager, fai clic su *Supporto > Centro aggiornamenti* per assicurarti che sia installata la versione più recente di SANtricity OS.
++
+Se necessario, installare la versione più recente.
+
+. Restituire la parte guasta a NetApp, come descritto nelle istruzioni RMA fornite con il kit.
++
+Contatta il supporto tecnico al  https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"], 888-463-8277 (Nord America), 00-800-44-638277 (Europa) o +800-800-80-800 (Asia/Pacifico) se hai bisogno del numero RMA o di ulteriore assistenza con la procedura di sostituzione.//2025-11-17 ontap-systems-internal/issues/1391
+
+

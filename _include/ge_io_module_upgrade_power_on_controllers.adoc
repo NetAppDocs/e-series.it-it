@@ -1,0 +1,29 @@
+= 
+:allow-uri-read: 
+
+
+.Fasi
+. Collega il cavo di alimentazione a entrambi i controller.
++
+I controller iniziano l'avvio.
+
+. Verifica i LED sui controller per accertarti che la comunicazione tra i controller sia stata ristabilita:
++
+** Il LED di attenzione rimane acceso.
+** I LED del collegamento host potrebbero essere accesi, lampeggianti o spenti, a seconda dell'interfaccia host.
+
+
+. Quando i controller saranno di nuovo online:
++
+.. Confermate che il loro stato sia Optimal.
+.. Verificare che il LED di attenzione su ciascun controller sia spento.
++
+Se lo stato non è Optimal o se uno qualsiasi dei LED di attenzione è acceso, confermare che tutti i cavi siano inseriti correttamente.
+
++
+
+NOTE: Se non riesci a risolvere il problema, contatta https://www.netapp.com/company/contact-us/support/["Supporto NetApp"^]. Se necessario, raccogli i dati di supporto per il tuo sistema storage utilizzando SANtricity System Manager.
+
+
+
+

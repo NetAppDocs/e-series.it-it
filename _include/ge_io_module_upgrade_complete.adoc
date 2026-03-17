@@ -1,0 +1,59 @@
+= 
+:allow-uri-read: 
+
+
+.Fasi
+. Assicurati che sia installata la versione più recente di SANtricity OS:
++
+.. Seleziona *Support* > *Upgrade Center*.
+.. Se necessario, installare la versione più recente.
+
+
+. Verificare che tutti i volumi siano restituiti ai rispettivi controller proprietari:
++
+.. Seleziona *Storage* > *Volumes*.
+.. Dalla pagina *All Volumes*, verificare che i volumi siano distribuiti ai controller proprietari.
+.. Seleziona *Altro* > *Modifica proprietario del volume* per visualizzare i proprietari del volume.
+
+
+. Il passo successivo dipende dal fatto che i volumi vengano restituiti o meno ai rispettivi controller proprietari:
++
+[cols="1,2"]
+|===
+| Se... | Poi... 
+
+
+ a| 
+Tutti i volumi sono di proprietà dei rispettivi controller
+ a| 
+Passa al passaggio successivo.
+
+
+
+ a| 
+Nessuno dei volumi viene restituito ai rispettivi controller proprietari
+ a| 
+Seleziona *Storage* > *Volumes* > *More* e dal menu a tendina seleziona *Redistribuisci volumi* per restituire i volumi ai controller proprietari.
+
+
+
+ a| 
+Solo alcuni dei volumi vengono restituiti ai rispettivi controller dopo la distribuzione automatica o manuale
+ a| 
+Verifica Recovery Guru per problemi di connettività host.
+
+Se non è presente un Recovery Guru o se, dopo aver seguito i passaggi del Recovery Guru, i volumi non vengono ancora restituiti ai rispettivi controller, contattare https://mysupport.netapp.com/site/global/dashboard["Supporto NetApp"] prima di continuare con questa procedura.
+
+|===
+. Raccogli i dati di supporto per il tuo sistema storage:
++
+.. Selezionare *Support* > *Support Center* > *Diagnostics*.
+.. Selezionare *Collect Support Data*.
+.. Seleziona *Collect*.
++
+Il file viene salvato nella cartella Download del browser con il nome *support-data.7z*.
+
+
+
+. Se è necessario verificare e modificare il protocollo del modulo I/O host, utilizzare la procedura xref:io-module-change-protocol.html[Modificare il protocollo del modulo I/O host per un EF50 o EF80].
+

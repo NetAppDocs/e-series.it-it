@@ -4,14 +4,16 @@ sidebar: sidebar
 keywords: 3040 40U cabinet, cabinet installation, drive tray installation, controller installation, shelf installation, E2800, E5700, EF300, EF600, 
 summary: 'Panoramica dell"installazione dei vassoi delle unità in cabinet e-Series 3040 40U' 
 ---
-= Installazione dei vassoi nel cabinet 3040 40U (serie e)
+= Installare i vassoi nell'armadio 3040 40U - E-Series
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Nel cabinet e-Series 3040 40U è possibile installare i seguenti vassoi del controller e dei dischi di espansione:
+È possibile installare i seguenti alloggiamenti per unità controller e alloggiamenti per unità di espansione nel cabinet E-Series 3040 da 40U.
+
+Se i cassetti per le unità controller o per le unità di espansione non sono elencati di seguito, vedere  https://hwu.netapp.com["NetApp Hardware Universe"^] per verificare se i cassetti per le unità controller o per le unità di espansione sono supportati.
 
 * Tray di dischi controller E2612, E2624 e E2660
 * Tray di dischi controller E2712, E2724 e E2760
