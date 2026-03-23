@@ -43,7 +43,7 @@ image:../media/install_rails_inst-hw-e2800-e5700.png["Installare le guide"]
 . Installare lo shelf.
 +
 
-CAUTION: Un ripiano vuoto pesa circa 60 kg (132 lb). Per spostare in sicurezza uno scaffale vuoto, sono necessari un sollevatore meccanico o quattro persone che utilizzano le maniglie di sollevamento.
+CAUTION: Uno scaffale vuoto pesa circa 134 lb (61 kg). Per spostare uno scaffale vuoto in sicurezza è necessario un carrello elevatore meccanizzato o quattro persone che utilizzino le maniglie di sollevamento.
 
 +
 .. Se si solleva il ripiano manualmente, collegare le quattro maniglie di sollevamento. Spingere verso l'alto ciascuna maniglia fino a farla scattare in posizione.
