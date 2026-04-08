@@ -19,9 +19,9 @@ Una volta completata la preparazione per l'aggiornamento, è possibile rimuovere
 
 [role="tabbed-block"]
 ====
-.Modelli di controller EF280 e EF50
+.Modelli di controller EF80 e EF50
 --
-Per informazioni sulla rimozione dei controller dai sistemi storage EF280 e EF50, vedere link:https://docs.netapp.com/us-en/e-series/maintenance-ef50-ef80/controller-replace-move-hardware.html#step-1-remove-the-controller["EF50 e EF80 - Fase 1: Rimuovere il controller"^].
+Per informazioni sulla rimozione dei controller dai sistemi storage EF80 e EF50, vedere link:https://docs.netapp.com/us-en/e-series/maintenance-ef50-ef80/controller-replace-move-hardware.html#step-1-remove-the-controller["EF50 e EF80 - Fase 1: Rimuovere il controller"^].
 
 --
 .Altri modelli di controller E-Series

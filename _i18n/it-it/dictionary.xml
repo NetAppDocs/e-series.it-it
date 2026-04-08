@@ -10640,7 +10640,6 @@
   <block id="0265b5dbf554054dde3a98afc886c622" category="admonition">Quando si esegue l'aggiornamento da EF600 a EF80, è possibile configurare il protocollo host tramite l'interfaccia utente di SANtricity System Manager. Per ulteriori informazioni, consultare <block ref="b4bee00978fbe62a1f735b787be3116c" category="inline-link-rx"></block>.</block>
   <block id="353b820726dde980fadda7f3d579a641" category="list-text">EF80 non supporta l'espansione SAS.</block>
   <block id="dafff188f3a06d1fdaa68a607c17f832" category="inline-link-macro">EF50 e EF80 - Fase 1: Rimuovere il controller</block>
-  <block id="a5e57f188bcd8ee5650622c76daaf7ef" category="paragraph">Per informazioni sulla rimozione dei controller dai sistemi storage EF280 e EF50, vedere <block ref="29089e25df4bea78aa196aee147175c2" category="inline-link-macro-rx"></block>.</block>
   <block id="d789ee5d8d5244777090beeda7a82875" category="list-text">Al termine del controllo dello stato di salute, puoi fare clic sull'ellissi (...) a destra di ciascuna riga per visualizzare ulteriori informazioni ed eseguire altre operazioni.</block>
   <block id="ac5947d69f7ee9f8d3f2e9ee0483a85b" category="list-text">Se si apre la finestra di dialogo Resolve Self-Signed Certificates, esamina le informazioni visualizzate relative ai certificati non attendibili. Per ulteriori informazioni, puoi anche fare clic sui puntini di sospensione all'estremità della tabella e selezionare *View* dal menu a comparsa.</block>
   <block id="f95817b2bc0b41d0e6a92b658b3204e4" category="list-text">Seleziona un certificato dalla pagina, quindi fai clic sull'ellissi alla fine della riga.</block>
@@ -10690,4 +10689,6 @@
   <block id="631e6d7ea44751bbf0471574f75f550e" category="admonition">La release SANtricity OS 12.00 è compatibile solo con i nuovi sistemi storage all-flash EF80 e EF50.</block>
   <block id="dcf1521fe2188852a3d1ae5493b83c24" category="sidebar">SANtricity System Manager 12.00</block>
   <block id="24fe914c4c521099e3e5332138db4935" category="admonition">Uno scaffale vuoto pesa circa 134 lb (61 kg). Per spostare uno scaffale vuoto in sicurezza è necessario un carrello elevatore meccanizzato o quattro persone che utilizzino le maniglie di sollevamento.</block>
+  <block id="9e70d8ecbcfbe7711ec544e1649bcd7e" category="open-title">Modelli di controller EF80 e EF50</block>
+  <block id="982b4a8532b7c0f3dfe46d6bac4642d5" category="paragraph">Per informazioni sulla rimozione dei controller dai sistemi storage EF80 e EF50, vedere <block ref="29089e25df4bea78aa196aee147175c2" category="inline-link-macro-rx"></block>.</block>
 </blocks>
